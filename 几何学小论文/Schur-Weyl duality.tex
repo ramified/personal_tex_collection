@@ -1,0 +1,425 @@
+
+\documentclass[11pt,oneside]{amsart}
+
+%\usepackage{color,graphicx}
+%\usepackage{mathrsfs,amsbsy}
+
+\usepackage{CJK}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{bbm}
+\usepackage[unicode, bookmarksnumbered]{hyperref}	% 启动超链接和 PDF 文档信息所需
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage[mathscr]{eucal}
+\usepackage{mathrsfs}
+\usepackage{verbatim}
+\usepackage{tikz-cd}
+\usepackage{mathtools}
+\usepackage{geometry} %调整页面的页边距
+\geometry{top=3cm,bottom=3cm}
+%\usepackage[notcite,notref]{showkeys}
+\usepackage{url}
+% showkeys  make label explicit on the paper
+
+\makeatletter
+\@namedef{subjclassname@2010}{%
+	\textup{2010} Mathematics Subject Classification}
+\makeatother
+
+\numberwithin{equation}{section}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{defn}[theorem]{Definition}
+\newtheorem*{fact}{Fact}
+\newtheorem*{idea}{Idea}
+
+\theoremstyle{plain}
+\newtheorem{thmsub}{Theorem}[subsection]
+\newtheorem{lemmasub}[thmsub]{Lemma}
+\newtheorem{corollarysub}[thmsub]{Corollary}
+\newtheorem{propositionsub}[thmsub]{Proposition}
+\newtheorem{defnsub}[thmsub]{Definition}
+
+\numberwithin{equation}{section}
+
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}{Remarks}
+
+
+\newcommand{\elli}{,\ldots,}
+\newcommand{\exist}{ there exists }
+\newcommand{\st}{ such that }
+\newcommand{\rad}{\operatorname{rad}}
+\newcommand{\nil}{\operatorname{nil}}
+\newcommand{\Max}{\operatorname{Max}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\im}{\operatorname{Im}\;}
+\renewcommand\thefootnote{\fnsymbol{footnote}}
+%dont use number as footnote symbol, use this command to change
+
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\tr}{tr}
+
+\begin{document}
+	\date{}
+	
+	\title
+	{Schur-Weyl Duality}
+	
+	
+\author{Xiaoxiang Zhou, 1901930052}
+\address{School of Mathematical Sciences\\
+University of Science and Technology of China\\
+Hefei, 230026\\ P.R. China\\} 
+\email{email:xx352229@mail.ustc.edu.cn}
+
+	
+	
+	
+	
+	
+	\begin{abstract}
+		This article mainly concerns about the Schur-Weyl Duality. We will prove it by using the Double Centralizer Theorem. After that, we will give some commentary about the relations to other field including the Invariant Theory.
+		
+	\end{abstract}
+	
+	
+	
+	\maketitle
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+			Suppose $V$ is a $\mathbb{C}$-linear space, we consider two group actions on $V^{\otimes n}$:
+	$$\hspace{-1cm}GL(V) \text{ \rotatebox[origin=c]{270}{$\circlearrowleft$} } V^{\otimes n} \qquad \hspace{1cm} \mathcal{A}(v_1\elli v_n) =(\mathcal{A}v_1\elli \mathcal{A}v_n)$$
+	$$\hspace{1.5cm}V^{\otimes n}\text{ \rotatebox[origin=c]{90}{$\circlearrowleft$} }S_n\qquad g(v_1\elli v_n) =(v_{g^{-1}(1)}\elli v_{g^{-1}(n)})$$
+	Notice that these two actions commutes each other, we can abbriviate it as
+	\begin{center}
+	\begin{tikzcd}
+		GL(V) \arrow[r, "\rho_1"] & \End (V^{\otimes n}) & S_n \arrow[l, "\rho_2"']
+	\end{tikzcd}
+	\end{center}
+
+	
+	We state the central theorem, which connects the irreducible representations of these two groups:
+	\begin{theorem}
+		For $V^{\otimes n}$, we have the decomposition
+		$$V^{\otimes n} \cong \bigoplus_{\lambda \in \Lambda} V_{\lambda} \otimes \mathbb{S}_{\lambda}V$$
+		where $V_{\lambda}$ runs over all irreducible representations of $S_n$, 
+		$$\mathbb{S}_{\lambda}V:=\Hom_{\mathbb{C}[S_n]}(V_{\lambda},V^{\otimes n}) $$
+		is 0 or the irreducible representation of $GL(V)$.
+	\end{theorem}
+	We will need some knowledges from the Representation Theory, which can be founded in \cite{alperin2012groups}
+	
+	And recall the following theorems:
+	\begin{lemma}\label{lemma:perp}
+		Suppose $G$ is a finite group(or compact Lie group), $V$ is a representation of $G$, while $W$ is its subrepresentation. Then\exist a subrepresentation $W^{\perp}$ of $V$, \st 
+		$$V\cong W \oplus W^{\perp}$$
+		is the isomorphism of representations. 
+	\end{lemma}
+ 
+ \begin{theorem}[Maschke’s Theorem]
+ 	Suppose $A$ is finite dimensional $\mathbb{C}$-algebra, then $A$ has finitely many irreducible finite dimensional representations $V_i$ up to isomorphism, then
+ 	$$A \cong \bigoplus_{i=1}^n \End_{\mathbbm{C}}(V_i)$$
+ \end{theorem}
+	\noindent\underline{\bf{Acknowledgement}}: This essay roughly follows notes from the reading group \cite{SWduality}. I would like to thank Prof. Zuoqin Wang for inviting me the book \cite{howe1995perspectives}. I also thank Prof. Xiaowu Chen, Ye Ma, Zhiyuan Chen and the anonymous referee for giving me some corrections and helping me to get through some details in the proof.
+	\section{The Double Centralizer Theorem}
+	
+	Denote
+	\begin{itemize}
+		\item $A$ is a semisimple $\mathbbm{k}$-algebra with $dim_{\mathbbm{k}}A < + \infty$.
+		\item $E$ is an $A$-module of $dim_{\mathbbm{k}}E < + \infty$.
+		\item $B:=\End_A(E)=\{\mathcal{B}:E\longrightarrow E \mid \mathcal{B} \text{ is an $A$-invariant map}\}$
+		\item $V_1 \elli V_k$ are all the irreducible representations of $A$. 
+	\end{itemize}
+then we have
+\begin{itemize}
+	\item $B$ is semisimple.
+	\item the space
+	$$W_i:=\Hom_A (V_i,E) \qquad (1\leqslant i \leqslant k)$$ 
+	are irreducible representations of $B$ or 0.\\
+	Moreover, we have the decompositions of $E$:
+	$$E = \bigoplus_{i=1}^k (V_i \otimes W_i)$$
+	and a description of $B$:
+	$$B=\bigoplus_{i=1}^k \End(W_i).$$
+\end{itemize}
+	\begin{remark}
+		When the representation
+		$$\rho:A\longrightarrow \End_{\mathbbm{k}}(E)$$
+		is faithful (i.e. $\rho$ is injective), then we can view $A$ as a subspace of $\End_{\mathbbm{k}}(E)$, and $B$ as the centralizer of $A$. In this condition we can show even more: $W_i$ is never 0, and $A=\End_B(E)$ where
+		$$\End_B(E):=\{\mathcal{A}:E\longrightarrow E \mid \mathcal{A} \text{ is a $B$-invariant map}\}$$
+		this is why we call it the ``Double Centralizer Theorem".
+		
+		This special case ($\rho$ is faithful) of the Double Centralizer Theorem is well illustrated in \cite[6]{SWduality}. In this situation, the decomposition
+		$$E = \bigoplus_{i=1}^k V_i \otimes W_i$$
+		gives a bijection between the irreducible representations of $A$ and the irreducible representations of $B$.
+		
+		However, this version of theorem is not strong enough to prove the Schur-Weyl theorem. In the proof of Schur-Weyl theorem, we study the representation of $\mathbb{C}[S_n]$, and this representation is not faithful.
+		
+		 For example, the representation $\mathbb{C}[S_n]\longrightarrow \End_{\mathbb{C}}(\mathbb{C}^n)$ is not faithful when $n>3$, for
+		$$\dim_{\mathbb{C}}\mathbb{C}[S_n]=n! \quad \text{while} \quad \dim_{\mathbb{C}}\End_{\mathbb{C}}(\mathbb{C}^n) =n^2$$
+	\end{remark}
+	\begin{proof}
+		We divide it into two steps.
+		\subsection*{\underline{Step1}}
+		We will show that, for a fixed $i$, if $W_i\neq 0$ ,then $W_i$ is an irreducible representation of $B$.
+	
+		We define the (left)$B$-action:
+		$$B \text{ \rotatebox[origin=c]{270}{$\circlearrowleft$} } W_i=\Hom_A (V_i,E) \qquad \mathcal{B}(f)=\mathcal{B} \circ f.$$
+		This is well-defined because of the following diagram:
+		\begin{center}
+			\begin{tikzcd}
+				V_i \arrow[d, "\mathcal{A}"'] \arrow[r, "f"] & E \arrow[d, "\mathcal{A}"'] \arrow[r, "\mathcal{B}"] & E \arrow[d, "\mathcal{A}"'] \\
+				V_i \arrow[r, "f"]                           & E \arrow[r, "\mathcal{B}"]                           & E                          
+			\end{tikzcd}
+		\end{center}
+		 To show that $W_i$ is irreducible, we only need:
+		 \begin{fact}
+		 	Suppose $f_1,f_2 \in W_i, f_1\neq 0.$ Then \exist $\mathcal{B} \in B$ \st 
+		 	$$f_2=\mathcal{B}(f_1)=\mathcal{B} \circ f_1$$
+		 \end{fact}
+	 \begin{idea}
+	 	When $w=f_1(v), \mathcal{B}(w)$ can be only defined by
+	 	$$\mathcal{B}(w)=\mathcal{B}(f_1(v)) = \mathcal{B} \circ f_1(v)=f_2(v)$$
+	 	So we only need to worry about elements not in $\im f_1$.
+	 \end{idea}
+ \begin{proof}[Proof of the fact]
+ 	Choose $v\neq 0 \in V_i,$ then $Av=V_i$ because $V_i$ is irreducible representation of $A$. From this,
+ 	\begin{itemize}
+ 		\item $f_1,f_2$ is uniquely defined by $f_1(v), f_2(v)$.
+ 		\item $f_1 \neq 0 \Longrightarrow f_1(v) \neq 0$.
+ 		\item $\im f_1=f_1(V_i)=f_1(Av)=A(f_1(v))$ is $A$-invariant.
+ 	\end{itemize}
+ By the lemma \ref{lemma:perp}, we can decompose $E$ into
+ $$E=\im f_1 \oplus (\im f_1)^{\perp}$$
+ \end{proof}
+then we can easily define
+$$\mathcal{B}:E \longrightarrow E \qquad f_1(v) \longmapsto f_2(v) \quad v' \in (\im f_1)^{\perp} \longmapsto v'$$
+Now $\mathcal{B} \in B, f_2=\mathcal{B} \circ f_1$.
+		\subsection*{\underline{Step2}} 
+		What remains are the simple but interesting algebraic calculations. We will show them step by step:
+		\begin{itemize}
+			\item $E \cong \bigoplus_{i=1}^n (V_i \otimes_{\mathbbm{k}}W_i)$.
+			\item $B \cong \bigoplus_{i=1}^n \End(W_i)$, thus semisimple.
+			\item When $\rho$ is faithful, $W_i$ is nonzero and $A \cong \End_B(E)$
+		\end{itemize}
+	\begin{minipage}[t]{.39\textwidth}
+	\begin{equation*}
+\begin{aligned}
+&\\
+E&\cong A \otimes_A E\\
+&\cong \bigoplus_{i=1}^n (\End_{\mathbbm{k}}(V_i) \otimes_A E)\\
+&\cong \bigoplus_{i=1}^n (V_i \otimes_{\mathbbm{k}} V_i^* \otimes_A E)\\
+&\cong \bigoplus_{i=1}^n (V_i \otimes_{\mathbbm{k}} \Hom_A (V_i,E))\\
+&\cong\bigoplus_{i=1}^n (V_i \otimes_{\mathbbm{k}}W_i)\\
+\end{aligned}
+\end{equation*}
+	\end{minipage}
+	\begin{minipage}[t]{.01\textwidth}
+		 \begin{equation*}
+	\begin{array}{c||c}
+	&	\\
+	&\\
+	&\\
+	
+		&	\\
+	&\\
+	&\\
+		&	\\
+	&\\
+	&\\
+		&	\\
+	&\\
+	&\\
+		&	\\
+	&\\
+	&\\
+	\end{array}
+	\end{equation*}
+\end{minipage}
+	\begin{minipage}[t]{.55\textwidth}
+	\begin{equation*}
+	\begin{aligned}
+	&\\[-0.2cm]
+	B&\cong \End_A(E)\\
+	&\cong \Hom_A(E,E)\\
+	&\cong \Hom_A(\textstyle\bigoplus_{i=1}^n V_i \otimes_{\mathbbm{k}}W_i,E)\\
+	&\cong \bigoplus_{i=1}^n\Hom_A( V_i \otimes_{\mathbbm{k}}W_i,E)\\
+	&\mathop{\cong}\limits^{(*)}\bigoplus_{i=1}^n\Hom_A( W_i \otimes_{\mathbbm{k}}V_i,E)\\
+	&\cong\bigoplus_{i=1}^n\Hom_{\mathbbm{k}}( W_i, \Hom_A(V_i,E))\\
+	&\cong\bigoplus_{i=1}^n\Hom_{\mathbbm{k}}( W_i, W_i)\cong\bigoplus_{i=1}^n\End_{\mathbbm{k}}(W_i)\\
+	\end{aligned}
+	\end{equation*}
+\end{minipage}
+
+\begin{remark}
+	Though $W_i=\Hom_A (V_i,E)$, $V_i\neq\Hom_A (W_i,E)$ in general. So we can't skip (*) to get ``$B\cong \bigoplus_{i=1}^n\Hom_A( V_i \otimes_{\mathbbm{k}}W_i,E) \cong A$". But we do have $V_i \cong \Hom_B(W_i,E)$ when $W_i \neq 0$ because of the isomorphism
+	$$E \cong \bigoplus_{i=1}^{n}(W_{i} \otimes \operatorname{Hom}_{B}(W_{i}, E)) \cong \bigoplus_{i=1}^{n}(W_{i} \otimes V_{i})$$
+\end{remark}	
+Now let us suppose $\rho$ is faithful. Because $V$ is a faithful representation of $A$, it must contain all irreducible representations of $A$. So there is always a nonzero map $V_i \longrightarrow V$, i.e. $W_i \neq 0$.
+
+In a similar way, we calculate
+	\begin{equation*}
+\begin{aligned}
+A&\cong\bigoplus_{i=1}^n\End_{\mathbbm{k}}(V_i)\\
+&\cong\bigoplus_{i=1}^n\Hom_{\mathbbm{k}}( V_i, V_i)\\
+&\cong\bigoplus_{i=1}^n\Hom_{\mathbbm{k}}( V_i, \Hom_B(W_i,E))\\
+&\mathop{\cong}\bigoplus_{i=1}^n\Hom_B( V_i \otimes_{\mathbbm{k}}W_i,E)\\
+&\cong \End_B(E)\\
+\end{aligned}
+\end{equation*}
+	\end{proof}
+
+	
+	
+	\section{proof of the Schur-Weyl Duality} 
+	Recall the statement of the theorem:
+		\begin{theorem}
+		For $V^{\otimes n}$, we have the decomposition
+		$$V^{\otimes n} \cong \bigoplus_{\lambda \in \Lambda} V_{\lambda} \otimes \mathbb{S}_{\lambda}V$$
+		where $V_{\lambda}$ runs over all irreducible representations of $S_n$, 
+		$$\mathbb{S}_{\lambda}V:=\Hom_{\mathbb{C}[S_n]}(V_{\lambda},V^{\otimes n}) $$
+		is 0 or an irreducible representation of $GL(V)$.
+	\end{theorem}
+\begin{proof}
+	We will use the Double Centralizer Theorem by applying
+	\begin{itemize}
+		\item $E=V^{\otimes n}$
+		\item $A=\mathbb{C}[S_n]\quad$ (semisimple by the Maschke's Theorem)\\[-0.4cm]
+		\item $B= \tilde{\rho}\big(\mathcal{U}(\mathfrak{gl}(V))\big)$ where $\tilde{\rho}$ is induced by the group action
+		$$\rho:GL(V) \text{ \rotatebox[origin=c]{270}{$\circlearrowleft$} } V^{\otimes n}$$
+		through the following isomorphism:
+		\begin{equation*}
+		\begin{aligned}
+		\Hom_{Grp}(GL(V),(\End(V^{\otimes n})^{\times}))& \cong \Hom_{LieAlg}(\mathfrak{gl}(V),\End(V^{\otimes n}))\\
+		& \cong 
+		\Hom_{Alg}(\mathcal{U}(\mathfrak{gl}(V)),\End(V^{\otimes n}))\\
+		\end{aligned}
+		\end{equation*}
+	\end{itemize}
+		What remains to prove is listed as follows.
+		\begin{itemize}
+			\item $$\End_{\mathbb{C}[S_n]}(V^{\otimes n})= \im \tilde{\rho} =\left<\im \rho\right>_{Alg}$$\\[-0.2cm]
+			\item Any irreducible representation of $B$ is a irreducible representation of $GL(V)$.
+		\end{itemize}
+	
+	\noindent\underline{$\End_{\mathbb{C}[S_n]}(V^{\otimes n})= \im \tilde{\rho}=\tilde{\rho}\big(\mathcal{U}(\mathfrak{gl}(V))\big)$}\\[0cm]
+	
+	$``\supseteq"$: For any $X \in \mathfrak{gl}(V)$, the action of $X$ on $V^{\otimes n}$ is 
+	$$X(v_1 \otimes \cdots \otimes v_n)=\sum_{i=1}^{n}v_1 \otimes \cdots \otimes Xv_i\otimes \cdots \otimes v_n$$
+	thus
+	$$\tilde{\rho}(X)=\sum_{i=1}^{n} Id \otimes \cdots \otimes X\otimes \cdots \otimes Id \in \End_{\mathbb{C}[S_n]}(V^{\otimes n})$$
+	We get $\im \tilde{\rho} \subseteq \End_{\mathbb{C}[S_n]}(V^{\otimes n})$.\\
+	
+	$``\subseteq"$: Abbrieviate
+	$$X^{\otimes n} = X \otimes X \otimes \cdots \otimes X \in \End_{\mathbb{C}[S_n]}(V^{\otimes n})$$
+	We know that any elementary symmetric polynomial can be expressed as the polynomial of 
+	$$p_j=x_1^j+x_2^j+\cdots +x_n^j.$$
+	Especially, \exist a polynomial $\mathcal{P}$\st 
+	$$\prod_{i=1}^{n}x_i=\mathcal{P}(p_1\elli p_n).$$
+	Then we have
+	$$X^{\otimes n}= \mathcal{P}\big(\,\tilde{\rho}(X),\tilde{\rho}(X^2)\elli \tilde{\rho}(X^n)\,\big) \in \im \tilde{\rho}$$
+	Moreover, the set $\{X^{\otimes n}\mid X\in \End(V)\}$ span
+	$$\operatorname{Sym}^{n} \End(V) \simeq\left(\End(V)^{\otimes n}\right)^{S_{n}} \simeq\left(\End\left(V^{\otimes n}\right)\right)^{S_{n}}=\End_{\mathbb{C}\left[S_{n}\right]}\left(V^{\otimes n}\right)$$
+	So we get $\End_{\mathbb{C}[S_n]}(V^{\otimes n})\subseteq \im \tilde{\rho}$.\\
+	
+	(The fact that $\operatorname{Sym}^{n} \End(V)$ was spanned by $\{X^{\otimes n}\}$ is due to the polarization theorem, the technique similar to the construction of the inner product from a normed vector space with the parallelogram law.)\\
+	
+	\noindent\underline{$\im \tilde{\rho} =\left<\im \rho\right>_{Alg}$}\\
+	
+	$``\supseteq"$: \\[-0.8cm]
+	\begin{equation*}
+	\begin{aligned}
+	\,& \text{for any $g \in GL(V)$, $g$ commutes with $S_n$}\\
+		\Rightarrow\,& \rho(g) \in \End_{\mathbb{C}[S_n]}(V^{\otimes n}) =\im \tilde{\rho}\\
+		\Rightarrow\,& \left<\im \rho\right>_{Alg} \subseteq \im \tilde{\rho}\\
+	\end{aligned}
+	\end{equation*}\\
+	
+	$``\subseteq"$: For any $X \in \End(V),$ we want to show $X^{\otimes n} \in \left<\im \rho\right>_{Alg}$.
+	\begin{equation*}
+	\begin{aligned}
+	& \det (X+tI) \neq 0 \text{ for all but finite } t \in \mathbb{C}\\
+	\Rightarrow&(X+tI)^{\otimes n} \in \im \rho \text{ for all but finite } t \in \mathbb{C}\\
+	\Rightarrow&(X+tI)^{\otimes n} \in \left<\im \rho\right>_{Alg} \text{ for all } t \in \mathbb{C}\\
+	\Rightarrow&X^{\otimes n} \in \left<\im \rho\right>_{Alg}\\
+	\end{aligned}
+	\end{equation*}\\
+	
+	\noindent\underline{Any irreducible representation of $B$ is a irreducible representation of $GL(V)$.}\\[0.2cm]
+	$B=\left<\im \rho\right>_{Alg} = \rho(\mathbb{C}[GL(V)])$, so
+	\begin{itemize}
+		\item Any representation of $B$ is a representation of $GL(V)$.
+		\item Any irreducible representation of $B$ is a irreducible representation of $GL(V)$.
+	\end{itemize}
+\end{proof}
+	As a Corrollary,
+	\begin{corollary}[]\cite[Thm 2.4.2]{howe1995perspectives}
+		The algebras spanned by the images of $G L(V)$ and of $S_{k},$ each acting on $V^{\otimes n}$ as described in the beginning of this essay, are mutual centralizer in $\End(V^{\otimes n})$.
+	\end{corollary}
+	
+	\section{Commentary} 
+	\begin{remark}
+		This theorem is of much interest because it connects the representation of symmetic group and the representation of general linear group.
+		
+		For the symmetric group part, we have an algorithm (though finicky) To obtain all its irreducible representations Using the Young tableau.(This gives us many examples of the Schur-Weyl Duality, for reference,\cite[Example 7.0.3]{SWduality}. The algorithm can be founded in \cite[5]{SWduality}) For a vivid introduction about the Young tableau, you can see \cite{对称群表示}.
+		
+		For the general linear group part, we can generalize it to other classical groups including $O_n, Sp_{2n}$.(for reference,\cite[3.4]{SWduality2})
+	\end{remark}
+	The Schur-Weyl duality is closely connected to the invariant theory. In \cite{calderon1989local}, the author gives an equivalent propositions of the Schur-Weyl duality Theorem:
+	\begin{theorem}[$(GL_{n}, GL_{m})$-duality]
+		Let $U,V$ be two linear spaces of dimension $n,m$. 
+		we consider two group actions on $U \times V$:
+		$$\hspace{-1cm}GL(U) \text{ \rotatebox[origin=c]{270}{$\circlearrowleft$} } U \times V \qquad \hspace{1cm} g(u \otimes v)=g(u) \otimes v$$
+		$$\hspace{-1cm}GL(V) \text{ \rotatebox[origin=c]{270}{$\circlearrowleft$} } U \times V \qquad \hspace{1cm} g(u \otimes v)=u \otimes g(v)$$
+		Notice that these two actions commutes each other.
+		
+		Denote $\mathcal{S}(U \otimes V)$ to be the symmetric algebra of $U \otimes V$, then we have a decomposition
+		$$\mathcal{S}(U \otimes V)=\sum_{D} \rho_{U}^{D} \otimes \rho_{V}^{D}$$
+		of $GL(U) \otimes GL(V)$-modules where $\rho_{U}^{D}$ is some representaion of $GL(U)$, $\rho_{V}^{D}$ is some representaion of $GL(V)$.
+	\end{theorem}
+	You can see the equivalence from \cite[2.4.5]{howe1995perspectives}.
+	
+	These theories are related to the invariant theory because the invariant theory studies the invariants of a group action, and the decomposition offers a method to find these invariants.
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	
+	
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	
+	
+	
+	
+	
+	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	
+	
+\bibliography{../reference}	
+\bibliographystyle{plain}
+\nocite{howe1995perspectives}
+\nocite{weyl1946classical}
+\nocite{对称群表示}
+\nocite{humphreys2012introduction}
+	
+\end{document}
+
+
+
+

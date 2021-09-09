@@ -1,0 +1,271 @@
+
+\documentclass{ctexart}
+%此处以后，可以开始用\usepackage{*}添加要用的各类Latex宏包
+\usepackage{amsmath} %推荐使用的数学公式宏包，因为可以用align环境更好地排版行间公式
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{geometry} %调整页面的页边距
+\geometry{left=2.5cm,right=2.5cm,top=2cm,bottom=3cm}%具体的页边距设置
+%\usepackage{graphicx} %插入图片的宏包
+%\usepackage{lineno,hyperref}  % 显示行号，超链接
+%\usepackage{multirow} %插入表格时需要用的合并行的功能
+%\usepackage{amsthm} %插入定理、证明的宏包
+%\usepackage{enumerate} %插入列表的宏包
+%\usepackage{enumitem} %插入列举项目的宏包
+%\usepackage[linesnumbered,lined,boxed]{algorithm2e} %插入算法的宏包
+\newcommand{\myiint}{\int\hspace{-0.3cm}\int}
+\newtheorem{re}{注}
+\newtheorem{jie}{【解答】}
+\begin{document}
+	%正文部分，包括：题目、摘要、关键字、脚注、章节、参考文献，等等
+	
+	\title{微分几何复习} %添加标题
+	
+	\author{周潇翔} %添加作者
+	
+	%\date{} %LaTeX会自动生成日期，如果不需要就加这一步将日期去掉
+	
+	
+	\maketitle %制作封面
+	
+	%	\tableofcontents %加入目录，包括页码（非必需）
+	
+	
+\section{期中}
+\begin{enumerate}
+	
+
+	\item	$$(\log \det (A))' = Tr (A^{-1} \frac{dA}{dt})$$
+		
+	\item	$$\frac{A(\Sigma \cap B_x(r))}{\pi r^2}=c_1+c_2 r+c_3 r^2+o(r^2)$$
+
+\item 曲率为常数的平面曲线 \\
+(1)$k(s)\equiv 0 \Leftrightarrow \vec{r}(s)$是直线\\
+(2)$k(s)\equiv a \neq 0 \Leftrightarrow \vec{r}(s)$是半径为$|\frac{1}{a}|$的圆
+
+\item$\vec{r}(s)(k>0)$落在某平面上的充要条件为$\tau =0$
+
+\item 必考：利用Frenet公式导出某些简单的几何命题
+
+例：法平面过定点$\rightarrow$球面曲线
+
+例：一般螺线：切向量与某固定方向成定角的非直线螺线$(k>0)$.
+
+证明：非直线曲线为一般螺线$\Leftrightarrow \frac{\tau}{k}=c
+$
+
+\item 考虑$\vec{r}(s):[a,b]\rightarrow E^4$(Minkowski空间),有
+$$\begin{pmatrix}
+e_1\\ \vdots\\ \vdots \\ e_n
+\end{pmatrix}=\begin{pmatrix}
+0 & k_1(s) & & 0\\
+-k_1(s) &&\ddots&\\
+& \ddots &&k_{n-1}(s)\\
+0& & -k_{n-1}(s)& 0
+\end{pmatrix}
+\begin{pmatrix}
+e_1\\ \vdots\\ \vdots \\ e_n
+\end{pmatrix}$$
+
+\item 等温参数网 直纹面推可展曲面：$k=0; (a',b,b')=0;$切平面重合
+
+\item 全脐点曲面的分类.例：$E^3$中全为平点的曲面只能是平面.
+
+\item 渐进方向与渐近曲线：$L(du)^2+2Mdudv+N(dv)^2=0$
+
+\item 曲率线与曲率线网：($F=M=0$)
+$$\frac{d\vec{n}}{ds}=-\lambda(s)\frac{d\vec{r}}{ds}$$
+$$\left|\begin{matrix}
+(du^2)^2 & -du^1du^2 & (du^1)^2 \\
+g_{11} & g_{12} & g_{22}\\
+h_{11} & h_{12} & h_{22}
+\end{matrix}\right|=0$$
+曲面$\Sigma$的参数曲线网为曲率线网的充要条件：$F=M=0$
+
+\item 命题：\uppercase\expandafter{\romannumeral1}、\uppercase\expandafter{\romannumeral2}、\uppercase\expandafter{\romannumeral3}不是独立的，有
+$\uppercase\expandafter{\romannumeral3}-2H\uppercase\expandafter{\romannumeral2}+K\uppercase\expandafter{\romannumeral1}$
+
+\item 可展曲面：直纹面+
+\begin{itemize}
+	\item 直母线上各点的切平面重合（即法向量平行）
+	\item Gauss曲率为0
+	\item 与平面等距
+\end{itemize}
+Gauss曲率为0且无脐点，则$\Sigma$必为可展曲面\\
+可展曲面的分类：柱面、锥面、切线面\\
+例：曲面$\Sigma$, $\vec{r}(u,v)$上的曲线$C$为曲率线$\Leftrightarrow C$上每点曲面法线所生成的直纹面$\tilde{\Sigma}$为可展曲面
+\end{enumerate}
+\section{期末}
+\begin{itemize}
+	\item 曲率、挠率
+	\item 第一、二基本形式、Christoffel符号
+	\item Weingarden变换
+	\item Gauss映射的像集
+	\item Gauss曲率、平均曲率、法曲率、主曲率、测地曲率
+	\item 椭圆点、抛物点、平点、脐点
+	\item 渐近线、曲率线、测地线
+	\item 旋转面、直纹面、可展曲面、全脐点曲面、极小曲面
+	\item 等温参数系、曲率线网、测地法坐标系、测地极坐标系、测地平行坐标系
+	\item 协变导数、协变微分、平行移动、向量平移产生的角差
+	\item 曲面上的Laplace算子及其局部坐标表示
+	\item Gauss-Bonnet公式
+	\item 弧长泛函、能量泛函、面积泛函\\
+	将上述的概念在正交活动标架下再算一遍。
+	
+\end{itemize}
+关于整体曲线：
+\begin{itemize}
+	\item 旋转指数 $\displaystyle\quad \frac{1}{2\pi} \int_{0}^{l}k(s)ds=\pm1$
+	\item 等周不等式$\displaystyle\quad \left(\frac{L^2}{4\pi}-A\right)\geqslant 0$
+	\item 凸曲线
+	\item 支撑函数，Minkowski问题
+\end{itemize}
+关于整体曲面：
+\begin{itemize}
+	\item Gauss-Bonnet $\displaystyle\quad \int_{D}KdA+\int_{\partial D}k_g ds +\sum \alpha_i =2\pi \chi(D)$\\[0.3cm]
+	应用：指数定理 $\quad I(\nu) =\chi (\Sigma) =2(1-g)$\\[0.15cm]
+	\phantom{应用：}Jacobi定理 $\displaystyle\quad \int_{D}dA=\int_{\partial D} d(\arctan \frac{\tau}{k})=\int_{\partial D}k_gd\rho =2\pi$
+	\item 紧致曲面的Gauss映射
+	\begin{itemize}
+		\item $\displaystyle \int_{\Sigma}KdA=4\pi(1-g)$
+		\item $\displaystyle\int_{\Sigma_+}KdA \geqslant 4\pi \quad \Rightarrow \quad \int_{C}kds \geqslant 2\pi$
+		\item $\displaystyle\int_{\Sigma}|K|dA \geqslant 4\pi(1+g)$
+		\item $\displaystyle\int_{\Sigma}H^2dA \geqslant 4\pi$
+		\item $\displaystyle\int_{T^2}H^2dA \geqslant 2\pi^2$
+	\end{itemize}
+	\item 凸曲面(卵形面)
+	\begin{itemize}
+		\item Gauss映射与卵形面
+		\begin{itemize}
+			\item 紧致曲面存在点$p, K(p)>0$
+			\item 凸 $\Rightarrow K \geqslant 0$恒
+			\item $K>0$恒 $\Rightarrow$ 凸，且Gauss映射为一一映射
+		\end{itemize}
+		\item 积分公式
+		\begin{itemize}
+			\item $\displaystyle\int_{\Sigma}HdA=\int_{\Sigma}K\varphi dA \qquad \int_{\Sigma}dA=\int_{\Sigma}H\varphi dA$
+			\item 此外，$\displaystyle\int_{\Sigma}ndA=\int_{\Sigma}HndA=\int_{\Sigma}KndA=0$
+			\item $\displaystyle H \equiv C \Rightarrow \int_{\Sigma}(H^2-K)\varphi dA=0 \qquad \frac{H}{K} \equiv C \Rightarrow \int_{\Sigma}\frac{H^2-K}{K}dA=0$
+		\end{itemize}
+		\item 刚性
+		$$\det (h_{\alpha\beta}-\bar{h}_{\alpha\beta})=2K-(\bar{h}_{11}h_{22}+h_{11}\bar{h}_{22}-2h_{12}\bar{h}_{12})$$
+		$$0\leqslant \int \varphi \det(h_{\alpha\beta}-\bar{h}_{\alpha\beta})dA =2 \int(H-\bar{H})dA$$
+	\end{itemize}
+\end{itemize}
+
+
+	\begin{minipage}[t]{.5\textwidth}
+	\centering
+\begin{equation*}
+\begin{aligned}
+&r(u,v)\\
+\Rightarrow&r_u,r_v,E,F,G\\
+\Rightarrow&r_u \wedge r_v,n\\
+\Rightarrow&r_{uu},r_{uv},r_{vv},L,M,N\\
+\Rightarrow&b_1^1,b_1^2,b_2^1,b_2^2\\
+\Rightarrow&K,H,k_1,k_2,W(e_i)=k_ie_i\\
+\Rightarrow&\text{渐近线：}L(du)^2+2Mdudv+N(dv)^2=0\\
+&\text{曲率线：}\left|\begin{matrix}
+(du^2)^2 & -du^1du^2 & (du^1)^2 \\
+g_{11} & g_{12} & g_{22}\\
+h_{11} & h_{12} & h_{22}
+\end{matrix}\right|=0
+\end{aligned}
+\end{equation*}
+\begin{equation*}
+\begin{aligned}
+&de_1=w_1^2e_2+w_1^3e_3\\
+&\vec{k}=\frac{de_1}{ds}=\frac{w_1^2}{ds}e_2+\frac{w_1^3}{ds}e_3=k_ge_2+k_ne_3\\
+&\frac{d^2r}{ds^2}=\left(\frac{d^2u^{\gamma}}{ds^2}+\Gamma_{\alpha \beta}^{\gamma}\frac{du^{\alpha}}{ds}\frac{du^{\beta}}{ds}\right)r_{\gamma}+b_{\alpha \beta}\frac{du^{\alpha}}{ds}\frac{du^{\beta}}{ds}n\\
+\Rightarrow&\frac{d^2u^{\gamma}}{ds^2}+\Gamma_{\alpha \beta}^{\gamma}\frac{du^{\alpha}}{ds}\frac{du^{\beta}}{ds}=0\\
+\end{aligned}
+\end{equation*}
+\begin{equation*}
+\begin{aligned}
+k_g&=\frac{d\theta}{ds}+\frac{w_1^2}{ds}\\
+&=\frac{d\theta}{ds}+(k_g)_u \cos \theta+(k_g)_v \sin \theta\\
+&=\frac{d\theta}{ds}-\frac{(\sqrt{E})_v}{\sqrt{EG}}\cos \theta + \frac{(\sqrt{G})_u}{\sqrt{EG}}\sin \theta
+\end{aligned}
+\end{equation*}
+\begin{equation*}
+\begin{aligned}
+&I=w^1w^1+w^2w^2\\
+\Rightarrow&w^1,w^2,w^1 \wedge w^2 (\Rightarrow dA)\\
+\Rightarrow&dw^1,dw^2\\
+\Rightarrow&w_1^2=\frac{dw^1}{w^1 \wedge w^2}w^1+\frac{dw^2}{w^1 \wedge w^2}w^2\\
+\Rightarrow&K=-\frac{dw_1^2}{w^1 \wedge w^2}\\
+\Rightarrow&KdA=-dw_1^2\\
+\Rightarrow&\displaystyle \myiint_{D}KdA=-\oint_{\partial D}w_1^2 = \oint_{\partial D} d\theta - \oint_{\partial D}k_g ds \\
+\text{角差}:&\beta(l)-\beta(0)=\oint_{\partial D}d\beta =-\oint_{\partial D}w_1^2=\myiint_DKdA\\
+\text{一般}:&\myiint_{D}KdA+\oint_{\partial D}k_gds + \sum \alpha_i =2\pi \chi(D)\\
+&\myiint_{\Sigma}KdA=2\pi \chi(\Sigma) \qquad \chi=2(1-g)
+\end{aligned}
+\end{equation*}
+
+
+
+\end{minipage}
+	\begin{minipage}[t]{.5\textwidth}
+	\centering
+\begin{equation*}
+\begin{aligned}
+&\text{自然标架运动方程}
+\begin{dcases}
+\frac{\partial \vec{r}}{\partial u^{\alpha}}=\vec{r}_{\alpha}\\
+\frac{\partial \vec{r}_{\alpha}}{\partial u^{\beta}}=\Gamma_{\alpha \beta}^{\gamma}\vec{r}_{\gamma}+b_{\alpha \beta} \vec{n}\\
+\frac{\partial \vec{n}}{\partial u^{\alpha}}=-b_{\alpha}^{\phantom{1}\beta}\vec{r}_{\beta}
+\end{dcases}\\
+&\text{外微分法}
+\begin{dcases}
+d\vec{r}=\vec{r}_{\alpha}du^{\alpha}\\
+d\vec{r}_{\alpha}=\Gamma_{\alpha \beta}^{\gamma}du^{\beta}\vec{r}_{\gamma}+b_{\alpha \beta}du^{\beta}\vec{n}\\
+d\vec{n}=-b_{\alpha}^{\phantom{1}\beta}du^{\alpha}\vec{r}_{\beta}
+\end{dcases}\\
+&\text{运动方程：}\begin{cases}
+dr=w^{\alpha}e_{\alpha}\\
+de_i=w_i^j e_j
+\end{cases}\\
+&\text{结构方程：}\begin{cases}
+dw^{\alpha}=w^{\beta} \wedge w_{\beta}^{\alpha}\\
+dw_i^j=w_i^k \wedge w_k^j
+\end{cases}\\
+&\displaystyle \Gamma_{\alpha \beta}^{\gamma}=\frac{1}{2} g^{\gamma \delta} \left\{ \frac{\partial g_{\alpha \delta}}{\partial u_{\beta}}+\frac{\partial g_{\beta \delta}}{\partial u_{\alpha}}-\frac{\partial g_{\alpha\beta }}{\partial u_{\delta}} \right\}\\
+&D\vec{r}_{\alpha}=\Gamma_{\alpha \beta}^{\gamma}du^{\beta} \vec{r}_{\gamma}\\
+&D_{\vec{r}_{\beta}}\vec{r}_{\alpha}=\Gamma_{\alpha \beta}^{\gamma}\vec{r}_{\gamma}\\
+&\begin{cases}
+\nabla f=\sum_{\alpha} f_{\alpha} e_{\alpha}\\
+df=f_{\alpha} w^{\alpha}\\
+D\nabla f:=Df_1e_1+Df_2e_2\\
+\phantom{11111}=(df_1-f_2 w_1^2)e_1+(df_2+f_1 w_1^2)e_2\\
+??=Df_{\alpha}w^{\alpha}
+\end{cases}\\
+\end{aligned}
+\end{equation*}
+
+$$
+\begin{pmatrix}
+Df_1\\Df_2
+\end{pmatrix}
+\begin{pmatrix}
+f_{11} & f_{12} \\
+f_{21} & f_{22}
+\end{pmatrix}
+\begin{pmatrix}
+w^1\\w^2
+\end{pmatrix}
+$$
+
+\begin{equation*}
+\begin{aligned}
+\Delta f=&f_{11}+f_{22}\\
+\Delta_{\Sigma}f=&\frac{1}{\sqrt{\det g}}\frac{\partial}{\partial u^{\alpha}}\left(\sqrt{\det g} \frac{\partial f}{\partial u^{\beta}}g^{\alpha\beta}\right)\\
+div_{\mu}X=&\sum \frac{1}{f} \partial_i(fX^i)\\
+\mu=&\sqrt{\det g}\; du^1\!\!\wedge du^2\\
+\Delta_{\Sigma}f=& div_{\Sigma} \nabla f
+\end{aligned}
+\end{equation*}
+
+\end{minipage}
+\end{document}

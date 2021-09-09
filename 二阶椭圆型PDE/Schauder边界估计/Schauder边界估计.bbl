@@ -1,0 +1,35 @@
+\begin{thebibliography}{1}
+
+\bibitem{陈亚浙1991}
+吴兰成 陈亚浙.
+\newblock {\em 二阶椭圆型方程与椭圆型方程组}.
+\newblock 北京: 科学出版社, 1991.
+
+\bibitem{周蜀林2005PDE}
+周蜀林.
+\newblock {\em 本科生数学基础课教材 偏微分方程}.
+\newblock 北京大学出版社, 2005.
+
+\bibitem{周蜀林2019Schauder}
+周蜀林.
+\newblock 位势方程的schauder理论, March 2019.
+
+\bibitem{ahlfors1979complex}
+Lars~Valerian Ahlfors.
+\newblock {\em Complex analysis: an introduction to the theory of analytic
+  functions of one complex variable}.
+\newblock McGraw-Hill, 1979.
+
+\bibitem{calderon1989local}
+Alberto~P Calder{\'o}n and Antoni Zygmund.
+\newblock Local properties of solutions of elliptic partial differential
+  equations.
+\newblock In {\em Selected Papers of Antoni Zygmund}, pages 285--339. Springer,
+  1989.
+
+\bibitem{gilbarg2015elliptic}
+David Gilbarg and Neil~S Trudinger.
+\newblock {\em Elliptic partial differential equations of second order}.
+\newblock springer, 2015.
+
+\end{thebibliography}

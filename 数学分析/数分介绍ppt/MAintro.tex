@@ -1,0 +1,402 @@
+\documentclass[pdf]{beamer}
+\mode<presentation>{
+	\usetheme{Ilmenau}
+
+}
+	\usecolortheme{dolphin}
+%\usepackage{color,graphicx}
+%\usepackage{mathrsfs,amsbsy}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage[UTF8,noindent]{ctexcap}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{hhline}
+%\usepackage[unicode, bookmarksnumbered]{hyperref}	% 启动超链接和 PDF 文档信息所需
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{indentfirst}
+\usepackage{enumerate}
+\usepackage[mathscr]{eucal}
+\usepackage{mathrsfs}
+\usepackage{verbatim}
+\usepackage{wrapfig}
+%\usepackage{geometry} %调整页面的页边距
+\usepackage{pifont}
+%\geometry{left=2.5cm,right=2.5cm,top=2cm,bottom=2.5cm}%具体的页边距设置
+%\usepackage[notcite,notref]{showkeys}
+
+% showkeys  make label explicit on the paper
+
+%\makeatletter
+%\@namedef{subjclassname@2010}{%
+%  \textup{2010} Mathematics Subject Classification}
+%\makeatother
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+\usetikzlibrary{er}
+
+\numberwithin{equation}{section}
+
+\theoremstyle{plain}
+%\newtheorem{theorem}{Theorem}[section]
+%\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+%\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{defn}[theorem]{Definition}
+%\newtheorem{example}[theorem]{Example}
+
+\theoremstyle{plain}
+\newtheorem{exercise}{Exercise}[section]
+
+\theoremstyle{plain}
+\newtheorem{thmsub}{Theorem}[subsection]
+\newtheorem{lemmasub}[thmsub]{Lemma}
+\newtheorem{corollarysub}[thmsub]{Corollary}
+\newtheorem{propositionsub}[thmsub]{Proposition}
+\newtheorem{defnsub}[thmsub]{Definition}
+
+%\numberwithin{equation}{section}
+
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}{Remarks}
+\newtheorem{ex}[theorem]{Exercise}
+\newtheorem{question}[theorem]{Question}
+
+\newcommand*{\thick}[1]{\text{\boldmath$#1$}}
+\newcommand*{\cir}[1]{\;$\ding{19#1}$\;}%临时使用
+\newcommand*{\norm}[1]{\lVert#1\rVert}
+
+%\renewcommand\thefootnote{\fnsymbol{footnote}}
+%dont use number as footnote symbol, use this command to change
+
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\tr}{tr}
+\setlength{\parindent}{2em}
+
+
+
+\title{数学分析讲座}
+\author{周潇翔}
+\institute[USTC]{University of Science and Technology of China}
+\date{\today}
+\subject{Q\&A}
+\keywords{数学分析,介绍,考试}
+
+\begin{document}
+	\begin{frame}
+	\titlepage
+	\end{frame}
+\begin{frame}
+\begin{abstract}
+这是12月8号数学分析讲座的ppt (不包含A2,A3).主要借鉴了USTC基础数学修课指南(\url{https://www.zhangjy9610.me/USTC/ustcmathplan1.pdf}).
+\end{abstract}
+
+讲座中的内容仅代表本人在最近的观点，仅做参考。另外文中的大部分信息均无严格调查，均不严谨，许多应该加“大部分”等修饰语的地方，为了行文的方便没有加。
+
+本讲座与中法班无关，因为中法班上的是《分析》。
+\end{frame}
+\begin{frame}
+我叫周潇翔,来自福建,目前是大四基础数学方向,近期准备申请(所以没有认真做这份ppt).
+\begin{itemize}
+	\item QQ:1051686409
+	\item 主页:\url{http://home.ustc.edu.cn/~xx352229}
+	\item 邮箱:xx352229@mail.ustc.edu.cn
+\end{itemize}
+\end{frame}
+\begin{frame}{目录}
+	这个讲座的目的，说得直白些，就是这三个问题：
+	\tableofcontents
+	这几个问题的难度是层层下降的。
+\end{frame}
+
+
+
+
+\section{如何学懂}
+\begin{frame}{目录}
+\tableofcontents[currentsection]
+\end{frame}
+\begin{frame}{原因}
+	我到现在也没有完全学懂，就只从个人角度谈谈。
+	
+	为什么学不懂：
+	\begin{itemize}
+		\item \textbf{局部}：从未见过的定义和定理
+		\item \textbf{整体}：无法理解全课逻辑，离散的知识点
+		\item \textbf{前置}课程缺失：逻辑语言、代数语言
+		\item 在\textbf{后继}课程中不断被使用和推广
+	\end{itemize}
+\end{frame}
+\begin{frame}{数分在基础课程中的地位}
+\tikzstyle{startstop} = [rectangle,rounded corners, minimum width=1.5cm,minimum height=0.5cm,text centered, draw=black,fill=red!30]
+\tikzstyle{io} = [trapezium, trapezium left angle = 70,trapezium right angle=110,minimum width=1.5cm,minimum height=0.5cm,text centered,draw=black,fill=blue!30]
+\tikzstyle{process} = [rectangle,minimum width=1.5cm,minimum height=0.5cm,text centered,text width =1.7cm,draw=black,fill=orange!30]
+\tikzstyle{process2} = [rectangle,minimum width=1.7cm,minimum height=0.7cm,text centered,text width =1.7cm,draw=black,fill=green!50]
+\tikzstyle{process3} = [rectangle,minimum width=1.5cm,minimum height=0.5cm,text centered,text width =1.7cm,draw=black,fill=yellow!70]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\tikzstyle{arrow2} = [thick,<->,>=stealth]
+\hspace*{-2em}
+\begin{tikzpicture}[node distance=1cm]
+\node (start) [startstop] {Start};
+\node (input1) [io,below of=start] {分析};
+\node (input2) [io,below of=input1,yshift=-0.6cm] {几何};
+\node (input3) [io,below of=input2,yshift=-0.6cm] {代数};
+\node (process1) [process2,right of=input1,xshift=1cm] {数学分析};
+\node (process2a) [process3,right of=process1,yshift=-0.8cm,xshift=1.4cm] {微分几何};
+\node (process2b) [process3,below of=process2a,yshift=0.2cm] {拓扑学};
+\node (process3a) [process,below of=process2b,yshift=-0.6cm] {近世代数};
+\node (process1a) [process3,right of=process1,xshift=3.8cm,yshift=0.8cm] {实分析};
+\node (process1b) [process3,below of=process1a,yshift=0.2cm] {复分析};
+\node (process2c) [process,below of=process1b,yshift=0.2cm] {黎曼几何};
+\node (process2d) [process,below of=process2c,yshift=0.2cm] {微分流形};
+\node (process3b) [process,below of=process2d,yshift=0.2cm] {交换代数};
+\node (process3c) [process,below of=process3b,yshift=0.2cm] {代数数论};
+\node (process3d) [process,below of=process3c,yshift=0.2cm] {表示论};
+\node (process2) [process3,below of=process1,yshift=-1.4cm] {线性代数};
+\node (process1c) [process,right of=process1a,xshift=1.8cm] {泛函分析};
+\node (process1d) [process,below of=process1c,yshift=0.2cm] {微分方程};
+\node (process2e) [process,below of=process1d,yshift=0.2cm] {黎曼面};
+\node (process2f) [process,below of=process2e,yshift=-0.6cm] {代数几何};
+\node (process3e) [process,below of=process2f,yshift=0.2cm] {同调代数};
+\draw [arrow2] (process2e) -- (process2f);
+\draw [arrow2] (process1) -- (process2);
+\draw [arrow2] (process2) |- (process3a);
+\draw [arrow] (process1) |- (process1a);
+\draw [arrow] (process1) -- (process1b);
+\draw [arrow] (process1) -- (process2a);
+\draw [arrow] (2.3cm,-1.4cm) |- (process2b);
+\draw [arrow] (process2a) -- (process2c);
+\draw [arrow] (process2b) -- (process2d);
+\draw [arrow] (process2d) -- (process2c);
+\draw [arrow] (process3a) -- (process3b);
+\draw [arrow] (process3a) -- (process3c);
+\draw [arrow] (process3a) -- (process3d);
+\draw [arrow] (process1a) -- (process1c);
+\draw [arrow] (process1c) -- (process1d);
+\draw [arrow] (process1b) -- (process2e);
+\draw [arrow] (process2d) -- (process2e);
+\draw [arrow] (process2d) -- (process2f);
+\draw [arrow] (process3e) -- (process2f);
+\draw [arrow] (process3b) -- (process2f);
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{解决方案}
+
+\begin{itemize}
+	\item 抠\textbf{细节}，“新生需要学会的第一件事就是用严格的数学语
+言去刻画证明中的任何结论”
+	\item 观\textbf{大略}，画流程框图等
+	\item 选好合适的习题集，如谢惠民
+	\item 多\textbf{交流}，不要把同学当成纯粹的竞争对手
+	\item 保持好\textbf{心态}，“无论遇到什么困难都不要怕，加油，奥利给！”
+	\item 有自己的理解(不求与众不同)，并在学习过程中不断改进自己的理解。
+\end{itemize}
+\end{frame}
+
+\begin{frame}{如何问助教}
+\begin{itemize}
+	\item \textbf{不会就问}，不要自卑(又不会扣你平时分，怕什么怕)
+	\item 主动找助教约答疑/在答疑课上\textbf{当面}问，线上回答非常耗时
+	\item 问的时候顺便讲讲自己对这个问题理解到了什么程度(做到哪一步)，让助教清楚了解到你的\textbf{需求}(节省大家的时间)
+	\item 助教做不出来/不能当面做出来都很正常，不要因此瞧不起助教
+	\item 若是助教讲完了自己还不懂，就直接说，让助教\textbf{再讲一遍}/给别的建议(掌握知识才是最重要的)
+\end{itemize}
+\end{frame}
+\begin{frame}{问什么样的问题？}
+助教答出的概率：问题类型
+\begin{itemize}
+\item 90\%:作业题(助教不愿意回答的话就让他讲一个思路相同的变形)
+\item 85\%:史济怀上的题
+\item 60\%:其他数分书上的题
+\item 30\%:高级课程题,道听途说的题，自己瞎编的题(不属于助教的答疑范围，所以问的时候要讲究策略，不要期待能得到答案)
+\end{itemize}
+\end{frame}
+
+\section{如何做题}
+\begin{frame}{目录}
+\tableofcontents[currentsection]
+\end{frame}
+\begin{frame}{定义与定理}
+
+定义：框架+限定性条件(+目的)
+\begin{example}
+	一个实数列$\{x_n\}$称为\textbf{Cauchy列}，如果对任意$\varepsilon >0$,存在$N \in \mathbb{N}$,使得对任意的$m,n >N$,有$|x_m-x_n| < \varepsilon$
+	\begin{itemize}
+		\item 框架:实数列$\{x_n\}$
+		\item 限定性条件:任意$\varepsilon >0$,存在$N \in \mathbb{N}$,使得对任意的$m,n >N$,有$|x_m-x_n| < \varepsilon$
+		\item 目的：尝试内蕴地定义数列的收敛
+	\end{itemize}
+\end{example}
+
+
+\end{frame}
+\begin{frame}
+ 定理：对象+(本质)条件+(技术性)条件+结论
+ 
+ \phantom{定理：}(+\textbf{应用}+证明+背景)
+	\begin{example}
+	设函数$f$在有限区间$[a,b]$上有界，则$f$在$[a,b]$上Riemann可积当且仅当$D(f)$是零测集。
+	
+	\begin{itemize}
+		\item 对象:$[a,b]$上函数$f$
+		\item (技术性)条件：$f$有界
+		\item (本质)条件+结论：$f$ Riemann可积、$D(f)$是零测集
+		\item 应用：对具体的函数计算$D(f)$得到(不)可积性
+		\item 理解：对Riemann可积的性质有了清晰的刻画
+		\item 证明思路：连续部分的振幅小+震荡部分的测度小$\rightarrow$收敛
+	\end{itemize}
+\end{example}
+\end{frame}
+\begin{frame}{"大定理"}
+\begin{itemize}
+	\item Taylor展开
+	\item Lebesgue可积性定理
+	\item 隐函数/逆映射定理
+	\item Fourier分析的结论
+\end{itemize}
+这是我觉得的最重要，也是最难证的几个定理吧。别的定理请大部分做到能自己手推
+\end{frame}
+\begin{frame}{作业题}
+\begin{itemize}
+	\item 直接硬肝
+	\item (有思路)自己的尝试中漏了什么条件？
+	\item[] \phantom{(有思路)}没有这个条件有什么后果？(找反例)
+	\item (完全没思路)画个图，对某个具体的函数思考 
+	\item[] \phantom{(完全没思路)}返回本节课本，看下该节讲了什么内容
+	\item (完成)这个结论漂亮吗？漂亮在何处？
+	\item[] \phantom{(完全)}简洁性、应用广、内涵深刻…
+\end{itemize}
+\end{frame}
+\begin{frame}
+\begin{example}
+用实数完备性的六个等价命题证明有界闭区间上连续函数的性质(有界、介值、最值)
+\begin{itemize}
+	\item 有界闭区间改成无界？开区间？$\longrightarrow$ (不对)找反例
+	\item 直观上为什么找不到反例？(画图)你的图被什么束缚住了？
+	\item 你的思路有哪些？$\longrightarrow$区间套点、Lebesgue膨胀胀点(上确界/单调收敛)、反证对每一点找开邻域(构成开覆盖)、找一列点取子列$\longrightarrow$这些思路为何只对有界闭区间成立？
+	\item 连续函数的性质有什么推广？(有界闭区间$\rightarrow$紧+连通)
+	\item[] 实数完备性的六个等价命题有什么推广？
+	
+\end{itemize}
+\end{example}
+
+
+\end{frame}
+
+\begin{frame}{A1经典例子}
+常见的例子：
+\begin{itemize}
+	\item Riemann函数、Dirichlet函数
+	\item $x^{\alpha}\sin \frac{1}{x^{\beta}}$
+	\item $e^{-1/x^2}$
+	\item $\sqrt{x}, (1+\frac{1}{x})^x$
+	\item 单调函数，凸函数
+\end{itemize}
+\end{frame}
+
+\begin{frame}{如何掌握例子？}
+\begin{figure}[th]
+	\begin{minipage}[t]{.1\textwidth}
+	\end{minipage}
+	\begin{minipage}[t]{.85\textwidth}
+		\begin{itemize}
+			\setlength{\itemindent}{-3em}
+			\item \textbf{直观}：这些例子是什么函数，图像如何
+			\item \textbf{性质}：这个例子具有...性质
+			\item[] \phantom{作用：}例如，$[A,B]$上的单调函数至多只有可数个间断点，且每一个间断点处都是跳跃间断点。
+			\item \textbf{作用}：例子满足A条件，但不满足B条件，说明A不能推B
+			\item[] \phantom{作用：}例子不满足定理中的结论B.这是因为例子不满足定理中的A条件，故不能应用该定理推出结论B.
+			
+			\item \textbf{再造}：构造正确的几何直观，用以替代之前有偏差的直观
+			\item[]\phantom{作用：}例如，如何在图像上理解函数在某一点处极限存在、连续、可导？
+		\end{itemize}
+	\end{minipage}
+\end{figure}
+
+\end{frame}
+
+
+
+\section{如何考试}
+\begin{frame}{目录}
+\tableofcontents[currentsection]
+\end{frame}
+\begin{frame}{自我评估}
+\begin{itemize}
+	\item 2.0:及时完成作业，及时交作业(态度)
+	\item 3.3:史济怀课后习题
+	\item 3.6:史济怀课后问题
+	\item 4.0:谢惠民、应试技能
+	\item 4.3:运气和应试技能
+\end{itemize}
+没有必要强求4.3的结果，但一定要有学习的态度！
+\end{frame}
+\begin{frame}{小测反思}
+上一次的数分考试，自己考得如何？在哪个环节出了问题，是否可以在之后改进？“缺啥补啥”
+\begin{itemize}
+	\item 基本概念不熟
+	\item 计算粗心
+	\item 定理不记得
+	\item 没有及时交作业，考前补作业/作业题忘记如何做了
+	\item 时间来不及/没有细心检查
+	\item 心态爆炸
+\end{itemize}
+
+\end{frame}
+\begin{frame}{期末考前，考中，考后}
+\begin{itemize}
+	\item 考前1-2周：作业交齐后领回，开始复习，把平时成绩问清楚
+	\item 考前3天：做个整体的总结(抓大放小)，有问题问助教和老师
+	\item 考前1天：把之前做过的题看看，包括书上例题、作业、小测题、习题课的题
+	\item 考试时：心态放平，允许自己失分，认真即可
+	\item 考后：及时查卷，总结失误(不要在自己确实不对的地方去缠助教给分)
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Q \& A}
+\begin{center}
+	Thank you!
+	
+	Questions \& Answers?
+\end{center}
+
+
+
+\end{frame}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+\end{document}
+
+
+
+

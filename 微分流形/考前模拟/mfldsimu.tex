@@ -1,0 +1,147 @@
+
+\documentclass{ctexart}
+
+%\usepackage{color,graphicx}
+%\usepackage{mathrsfs,amsbsy}
+\usepackage{CJK}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage[mathscr]{eucal}
+\usepackage{mathrsfs}
+\usepackage{verbatim}
+
+%\usepackage[notcite,notref]{showkeys}
+
+% showkeys  make label explicit on the paper
+
+\makeatletter
+\@namedef{subjclassname@2010}{%
+  \textup{2010} Mathematics Subject Classification}
+\makeatother
+
+\numberwithin{equation}{section}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{defn}[theorem]{Definition}
+
+\theoremstyle{plain}
+\newtheorem{thmsub}{Theorem}[subsection]
+\newtheorem{lemmasub}[thmsub]{Lemma}
+\newtheorem{corollarysub}[thmsub]{Corollary}
+\newtheorem{propositionsub}[thmsub]{Proposition}
+\newtheorem{defnsub}[thmsub]{Definition}
+
+\numberwithin{equation}{section}
+
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}{Remarks}
+
+
+\renewcommand\thefootnote{\fnsymbol{footnote}}
+%dont use number as footnote symbol, use this command to change
+
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\tr}{tr}
+
+\begin{document}
+\date{}
+
+\title
+{微分流形模拟题}
+
+
+\author{周潇翔}
+%\address{School of Mathematical Sciences\\
+%University of Science and Technology of China\\
+%Hefei, 230026\\ P.R. China\\} 
+%\email{email:xx352229@mail.ustc.edu.cn}
+\maketitle
+
+
+
+
+\begin{abstract}
+微分流形考前准备的一些模拟题,和老师的考题还是有很大区别的.
+\end{abstract}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{判断题}
+
+\begin{enumerate}
+	\item (F) $f:\mathbb{R}\rightarrow \mathbb{R}$为光滑单射,则$f$为微分同胚.
+	\item (F) $(-1,1) \times (-1,1)$ 与 $B(0,1)$ 不微分同胚.
+	\item (F) $X_1,X_2$ 为完备向量场,则 $X_1+X_2$为完备向量场.
+	\item (T) $S^5$上存在处处非零的向量场.
+	\item (F) 若$f:M\rightarrow N, \Gamma_f$为$M \times N$的光滑子流形,则$f$为光滑映射.
+	\item (F) 存在$S^1 \times S^1$的等距嵌入.
+	\item (F) 若$G_1, G_2$为Lie群,且有微分同胚$\tau : G_1 \rightarrow G_2$,则$\tau$为Lie群同态.
+	\item (F) $S^1,S^2,S^3$均为Lie群.(事实上,在$S^n$中,只有$S^1,S^3,S^7$)
+	\item (F) 设$\mathfrak{g}$为$G$的Lie代数,则$\mathfrak{g}$的Lie子代数同$G$的Lie子群一一对应.
+	\item (F) 若连通Lie群同态$\varphi:G \rightarrow H$满足$d\varphi :\mathfrak{g} \rightarrow \mathfrak{h}$为同构,则$\varphi$为Lie群同构.
+	\item (F) 若$G,H$均为连通Lie群, $\mathfrak{g},\mathfrak{h}$为其对应的Lie代数,且$\mathfrak{g},\mathfrak{h}$为同构的Lie代数,则$G,H$为群同构.
+	\item (T) $\exp$是$su(n),so(n),u(n),gl(n)$分别到其Lie群上的满射.
+	\item (F) 若$\mathcal{V}$为involutive,则对任意$X,Y \in \mathcal{V}, [X,Y]=0$.
+	\item (F) 若$X_1, \ldots,X_k$为$U$上的向量场,且于每一点处线性无关,且$\mathcal{V}$为involutive,则对任意$p \in U$,存在$p$的附近的一个局部坐标卡$(\varphi_p, U_p, V_p), $使得$X_i=\partial_i$ on $U_p$.
+	\item (T) 微分同胚$\rho :M \rightarrow M$保定向$\Leftrightarrow \deg \rho >0$.
+	\item (T) 若$\rho:M \rightarrow N$有正则值$q \in N$, 则$\rho^{-1}(q)$为可定向子流形。
+	\item (F) $M$为连通的$n$维流形，则$M$可定向 $\Leftrightarrow H_{dR}^n(M) \simeq \mathbb{R}$.(需加条件$M$紧或将$H_{dR}^n(M)$替换成$H_{c}^n(M)$)
+	\item (F) 设$M$为带边流形，则$\partial M$为可定向流形。
+	\item (F) M\"{o}bius带不为带边流形的边界。
+	\item (F) 若$M$与$N$同伦等价且维数相同，则$for \forall k, H^k_c(M)=H^k_c(N)$.
+	\item (?)设$M$为无边光滑流形，$\Omega \subseteq M$为domain, $\bar{\Omega}$紧，$X$为$M$上的完备向量场，生成的流为$\phi (t)$,且$\Omega_t = \phi_t(\Omega)$始终为光滑带边流形，则$\partial \Omega_t$与$\partial \Omega_0$微分同胚。
+	\item (T) 设$M$为紧的可定向流形，维数为$n$, $4 \nmid n$,则$\chi(M)$为偶数。
+	\item (T) 对任意流形$M$, $TM$与$T^*M$均可定向。($E$可定向$\Rightarrow E*$可定向)
+	\item (T) $S^k$存在处处非0的向量场$\Leftrightarrow k$为奇数。
+	\item (F) 设$M$为紧致无边流形，$X \in \Gamma^{\infty}(TM), $则对$\forall f,g \in C^{\infty}, $有
+	$$\int_{M}X(f)g \mu =-\int_{M}fX(g)\mu$$
+\end{enumerate}
+   
+             
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ 
+   
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\end{document}
+
+
+
+

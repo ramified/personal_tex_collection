@@ -1,0 +1,403 @@
+\documentclass[UTF8]{ctexart}
+   \author{大二新生}
+   \title{代数语言的初步认识}
+   \usepackage{amsmath}
+   \usepackage{amssymb}
+   \usepackage{pifont}
+   \usepackage[all]{xy}
+   \usepackage{mathrsfs}
+   \usepackage{tikz}
+   \usepackage{CJK}
+    \usetikzlibrary{positioning}
+    \tikzset{>=stealth}
+    \newcommand{\tikzmark}[3][]
+  {\tikz[remember picture, baseline]
+    \node [anchor=base,#1](#2) {#3};}
+
+\begin{document}
+    \maketitle
+    \tableofcontents
+本篇毒性较弱，请放心食用！
+
+我们从集合和映射开始入手。
+
+ 会不会感觉整个代数方向，几乎所有的东西都是集合 or 映射？他们的普遍性注定了自身的不平凡。集合是静态的，而映射是动态的，之间关系错综复杂。
+
+ (假定已知“$\in$”、“$\notin$”、“$\subseteq$”、“$\varsubsetneqq$”、“$\not\subseteq$”、“$\cap$”、“$\cup$”)
+
+\section{集合}
+
+单独来看集合，我们主要看两点。\ding{172}元素的个数，\ding{173}集合构成的集合，谓之族。
+
+\subsection{定义}
+
+先不考虑集合的完备性，考虑朴素的集合观点，即“袋子”。一个“袋子”用“$\lbrace\ \rbrace$” 表示，如：$A=\lbrace 1,2,3, \varnothing\rbrace$表示$A$ 中有元素。还有一个什么也没有装的袋子，另一种为描述法，如$\lbrace x\in A \big| x \not= 2\rbrace$，竖线左边为“取元素的总范围（$A$中）”及“元素在右边的表示方法（$x$）”，右边为“元素满足的条件”。
+
+\subsection{集合的势}
+
+“数数”是大多数人小时候就学会的东西。其抽象化，即为“皮亚诺公理”——你的数都是一个个数出来的。来数$\mathbb{N}$ 的元素个数：无限个，和地球上的沙子一样多，还是与天上的星星一样？我不知道，但我知道数学家们数数时就拿$\mathbb{N}$作标准，如果这个集合中有一种方法，使得每个元素都有唯一（$\exists !$）的$\mathbb{N}$中的元素一一对应，就说它是可数集。为了让大家听不懂，他们把集合的元素个数称做集合的势。$\mathbb{N}$的势为$\aleph^0$，$\mathbb{R}$的势为$2^{\aleph^0} = \aleph^1$（见后）
+
+\paragraph{小练习}
+
+验证$\mathbb{N}^+$为可数集（见后），$\mathbb{Z}$、$\mathbb{Q}$、$\mathbb{A}$ 为可数集。
+
+已知：$|A|=t \in \mathbb{N}^+$，求$B=\{X \big| X \subseteq A \}$的势。
+
+\subsection{集合构成集合}
+
+看这么一个集合:$$A=\Big\{ \varnothing , \big\{ \varnothing\big\} ,\big\{\{ \varnothing\}\big\} , \big\{ \varnothing , \{ \varnothing\} \big\}\Big\}$$ 糊涂了？其实就是“袋子套袋子”的小游戏。这个集合有四个元素：$ \varnothing , \big\{ \varnothing\big\} ,\big\{\{ \varnothing\}\big\} , \big\{ \varnothing , \{ \varnothing\} \big\}$；其中一个是空袋子；一个是套着空袋子的袋子，等等。若$A=\big\{ \{0\} , 2 \big\}$，则$0 \notin A$，因为0 不在“”袋子里”，不是它的元素，就算装着0的袋子是$A$的元素，即$ \{0\} \in A$。
+
+已知$A=\{ 0, 1\}$,写出$B=\{X \big| X\varsubsetneqq A \}$、$C=\{Y \big| Y \subseteq B \}$。
+
+这么着，看这个：
+$$
+A=\Big\{ \varnothing , \big\{ \varnothing\big\} , \big\{ \varnothing , \{ \varnothing\} \big\} , \big\{ \varnothing ,\{ \varnothing\} , \{ \varnothing , \{ \varnothing\}\} \big\} \Big\}
+$$
+
+有这个: $x\in A \Rightarrow x \subseteq A$，有意思吧！
+
+构造一个集合$A$满足$|A|=5$ 且$x\in A \Rightarrow x \subseteq A$，也不再那么的困难了。
+
+\subsection{补充}
+
+构造集合的方式：
+
+人们常说的“数”，即数学家们习惯于操纵的“对象”，已经不断扩充致复数域：
+$$
+\xymatrix{
+ & & & & & \mathbb{A} \ar[rd] & \\
+\varnothing \ar[r]^{\exists} & \lbrace 0 \rbrace \ar[r]^{+ \ \times} & \mathbb{N} \ar[r]^{-} & \mathbb{Z} \ar[r]^{\div} & \mathbb{Q} \ar[r]^{lim} \ar[ru] & \mathbb{R} \ar[r]^{root} & \mathbb{C}
+}
+$$
+这其中每一步都成为后人不断发展的源泉，作为读者，应对各个扩充（后两个除外）有一些直观的了解。
+
+另外，还可以通过取笛卡尔积（其中$(a,b)=(c,d) \Leftrightarrow a=c,c=d$）
+$$
+A \times B= \big\{(a,b)\big|a\in A,b\in B \big\}
+$$
+
+取商模掉等价类($A/_\sim$)
+
+\section{映射}
+
+接着来看映射，即两组集合间的关系。
+
+\subsection{表示方式}
+
+看些例子。
+\begin{center}
+    \begin{tabular}{rcl}
+   “加1映射” $\mathscr{A}:\mathbb{N}$&$\rightarrow$&$\mathbb{N}$  \\
+    $i$&$\mapsto$ &$i+1$ \\
+    ($\mathscr{A}(i)$&=&$i+1$ )
+    \end{tabular}
+\end{center}
+
+高中学的大部分函数。因为这里不知道什么映射方式，记为$f(x)$。
+\begin{center}
+    \begin{tabular}{rcl}
+    $f:D \subseteq \mathbb{R}$&$\rightarrow$&$\mathbb{R}$  \\
+    $x$ &$\mapsto$&$f(x)$
+    \end{tabular}
+\end{center}
+
+来看一下对此的解释。
+\begin{center}
+        \begin{tabular}{crcl}
+            映射名称&定义域&&映到的可能范围    \\
+            \rotatebox[origin=c]{90}{$\Rsh$}&$\mathscr{A}:\mathbb{N}$&$\rightarrow$&$\mathbb{N}$  \\
+            &i&$\mapsto$ &i+1
+        \end{tabular}
+\end{center}
+
+也可以举例：
+\begin{center}
+    \begin{tabular}{rcl}
+    $\mathscr{A}:\{ 0,1,2 \}$&$\rightarrow$&$\{ 0,1,2 \}$  \\
+    0 &$\mapsto$&1\\
+    1 &$\mapsto$&0\\
+    2 &$\mapsto$&1
+    \end{tabular}
+\end{center}
+
+注意符号：
+单射（\rotatebox[origin=c]{180}{$\hookleftarrow$}）、满射（$\twoheadrightarrow$）、一一映射（$\leftrightarrow$）。
+
+\subsection{映射运算}
+
+映射的复合：
+$$
+\xymatrix @R=0.2pc{
+**[l]g \circ f:A \ar[r]^-{f} & B \ar[r]^{g} & C \\
+x \ar @{|->}[r] & f(x) \ar @{|->}[r]& g\big(f(x)\big)
+}
+$$
+
+如果这两组集合是同一个，那自然可以有多次映射，即映射的幂次。
+$$
+\xymatrix @C=2pc@R=0.2pc{
+**[l]\mathscr{A}^3:\mathbb{N} \ar[r]^-{\mathscr{A}} & \mathbb{N} \ar[r]^{\mathscr{A}} & \mathbb{N} \ar[r]^{\mathscr{A}} & \mathbb{N} \\
+i \ar @{|->}[r]& i+1 \ar @{|->}[r]& (i+1)+1 \ar @{|->}[r]& i+3
+}
+$$
+
+\section{集合与映射}
+
+\subsection{补充}
+
+补充关于群、环、域的知识。（希望去看Artin，比较详细）
+
+\begin{tabular}{lll}
+集合&$A$&$(A)$\\
+群&$G$&$(G,\circ)$\\
+环&$R$&$(R,+,-,\times ,1)$\\
+域&$F$&$(F,+,-,\times,\div)$\\
+R-模&$M$&$(M,+,·)$\\
+线性空间&$V$&$(V,+,·)$
+\end{tabular}
+
+\subsection{映射构成的集合}
+
+映射可以构成集合。（其实不止）而有时，我们会选择满足一定条件的映射构成集合。
+
+\begin{tabular}{l l}
+$f:A \rightarrow B$&所有的$f$构成集合$A^B$。\\
+
+$\mathscr{A}:\mathbb{F}^m\rightarrow\mathbb{F}^n$&所有的线性映射构成集合。\\
+
+$f:A \leftrightarrow A$&所有的一一映射构成集合。
+\end{tabular}
+
+以上的这种集合可能出现在另一个映射的定义域或者值域中。
+
+抽象群$G \rightarrow GL(V)$ 群表示
+
+\subsection{代数结构}
+
+一个集合自身到自身的映射，可以看成集合自身的性质（比较好的 or 映射满足一些性质的）
+（有时是自身的笛卡尔积）
+
+从此，集合$\xrightarrow{\text{升级}}$代数结构，集合的各元素之间开始产生了一些关系，集合动起来了。
+
+而这些些集合的子集，由于满足了一定的运算封闭性，自然满足代数结构的运算律，成为了子群、子环、子空间、子模。
+子集至原集合有一个自然的嵌入映射：
+\begin{center}
+    \begin{tabular}{rcl}
+    $i:A \subseteq B$&$\rotatebox[origin=c]{180}{$\hookleftarrow$}$&$B$  \\
+    $a$ &$\mapsto$&$a$
+    \end{tabular}
+\end{center}
+
+子结构往往容易构造（生成元生成），不需要多余的$\exists !$性的定理，故遇到它、利用它往往是幸福的、简单的。就仿佛已经搭好了框架，在大框架内部处理比较轻松愉快。
+
+然而新的东西、构造、外推、扩充往往是困难的。
+为愚蠢的我们着想，在许多时候（一般大一时），数学家已经给出了一个大框架，如$\mathbb{C}$：这货对加减乘除封闭，非常数多项式还一定有根，可以很方便的处理问题啦！
+
+\subsection{等价}
+
+什么是等价？天上有层云、层积云、雨层云、雾、高积云、高层云、卷云、卷层云，它们都是云。有钢笔、圆珠笔、橡皮、水彩笔、圆规，它们都属于文具，但当谈到笔时，橡皮和圆规就和其他的不一样。水彩笔也有各个色系、各种品牌的。一样事物，拥有数不清的信息，但是我们真正需求的信息并不多。单无视部分差异，两种物品无本质差别时，我们就称它们是“等价的”。等价的东西放在一起就称为一个“等价类”。
+
+跑跑题，先来看特征函数。
+
+设$A\subseteq K$
+
+\begin{center}
+    \begin{tabular}{rcl}
+    $f:K$&$\rightarrow$&$\{ 0, 1\}$  \\
+    $a$ &$\mapsto$&1$\ $若$a \in A$  \\
+    $a$ &$\mapsto$&0$\ $若$a \notin A$
+    \end{tabular}
+\end{center}
+
+一个子集唯一定义了一个特征函数，你可以看得到$K$的子集与特征函数的一一对应。
+
+等价关系：
+\begin{center}
+    \begin{tabular}{rcl}
+    $f:A \times A$&$\rightarrow$&$\{ 0, 1\}$  \\
+    $(a,b)$&$\mapsto$&$f(a,b)$\\
+    \end{tabular}
+\end{center}
+\begin{center}
+$f(a,b)=1 \Leftrightarrow a \sim b$
+\end{center}
+满足：
+\begin{center}
+    \begin{tabular}{|l|l|l|}
+    \hline
+自反性&$f(a,a)=1$&$a \sim a$\\
+\hline
+对称性&$f(a,b)=f(b,a)$&$a \sim b\Rightarrow b \sim a$\\
+\hline
+传递性&$f(a,b)=f(b,c)=1 \Rightarrow f(a,c)=1$&$a \sim b,b \sim c \Rightarrow a \sim c$\\
+\hline
+    \end{tabular}
+\end{center}
+
+等价关系确定了一个等价类，等号为最精确的等价类。
+
+一般而言，在同一个等价类中的两个数有一些共同的性质，换言之，它们的本质是一样的。
+
+很容易看出：（$X$、$Y$的元素才是本质）
+\begin{equation}
+\begin{split}
+f^{-1} (X \cap Y)=f^{-1} (X) \cap f^{-1} (Y)\\
+f^{-1} (X \cup Y)=f^{-1} (X) \cup f^{-1} (Y)
+\end{split}
+\end{equation}
+
+等价类构成了一个集合$\overline{A}$。关于这个集合，有一个自然的映射关系（是满射！）：
+\begin{center}
+    \begin{tabular}{rcl}
+    $\pi:A$&$\twoheadrightarrow$&$\overline{A}$  \\
+    $a$&$\mapsto$&$\overline{a}$
+    \end{tabular}
+\end{center}
+
+下面来看一个一般映射所诱导出来的等价关系。
+\begin{center}
+    \begin{tabular}{rcl}
+    $f:A$&$\rightarrow$&$B$  \\
+    a &$\mapsto$&$f(a)$
+    \end{tabular}
+\end{center}
+
+考虑定义：$a \sim b \Leftrightarrow f(a) = f(b)$。例如：$f$为取余数的映射。这样做的原因是：如果我们关心的是$f$映射后得到的结果，那么是$a$是$b$ 就变的不再那么重要。
+
+这个等价关系诱导出一个单射$\Rightarrow$化为一一映射
+$$
+\xymatrix @=4pc{
+A \ar[r]^{f} \ar @{->>}[d]_{\pi}& B \\
+\overline{A} \ar @{_{(}->}[ru]^{\exists !}_{f'} \ar @{<->}[r]_{\overline{a}} & im f \ar@{_{(}->}[u]_{\text{包含}}
+}
+$$
+
+当$f$为群同态、环同态、模同态、线性映射时，此即第一同构定理。（事实上，集合的同态即为一一对应）
+
+有了等价类我们自然会关心以下问题：
+\ding{172}等价类的个数？
+\ding{173}两元素是否等价？
+
+对于\ding{172}，$B$集合往往易知，此时只要对$B$集合进行分析即可。有时从每个等价类中各取出一个特殊、容易处理的元素，（有意而为之，称为标准型）处理问题就以其为模板。
+
+反过来，当有了等价关系后，我们下意识就会去尝试去找其所隐含的函数的显式表达。找到后即可宣称\ding{173}问题的解决。
+
+来放一个小毒：
+在$C[0,1]$（定义在$[0,1]$上的连续实值函数）上定义等价关系
+\begin{center}
+$f \sim g \Leftrightarrow \big( \exists\ \ \delta > 0 \ \ s.t.$对$\ \ \forall x \in (a- \delta, a+ \delta)$，有$f(x)=g(x) \big)$
+\end{center}
+
+该等价类是一个含幺交换环，称作连续函数芽环。目前我还没有见到所隐含的函数的显式表达。这是曲助教放的毒……
+
+\subsection{应用：作用}
+
+一直在大谈特谈理论性的东西，我们来看上述的几个实例吧：
+
+先来看笛卡尔积自然包含的映射：
+
+$$
+\xymatrix{
+A \ar@{_{(}->}[rd]_{i}&  & A\\
+ & A \times B \ar @{->>}[ru]_{p} \ar @{->>}[rd]_{p'}& \\
+B \ar@{_{(}->}[ru]_{i} &  & B
+}
+$$
+
+其中$i$、$i'$是嵌入，$p$、$p'$是投影。注意：$p \circ i = id_{A}$，而一般情况下，$i \circ p \not= id_{A \times B}$。
+
+来看“二元运算”作为定义域的映射。
+
+\begin{center}
+    \begin{tabular}{rcl}
+    $f:A \times B$&$\rightarrow$&$C$  \\
+    $(a,b)$ &$\mapsto$&$ab$
+    \end{tabular}
+\end{center}
+
+固定$a \in A$，此映射诱导出一个新的映射：
+
+\begin{center}
+    \begin{tabular}{rcl}
+    $\varphi_a:B$&$\rightarrow$&$C$  \\
+    $b$ &$\mapsto$&$ab$
+    \end{tabular}
+\end{center}
+
+$\varphi_A:=\big\{\varphi_a \big| a \in A \big\}$构成一个新的集合。自然有同构：$A \leftrightarrow \varphi_A$,映$a \mapsto \varphi_a$。
+
+当$C=B$时，即可以称作$A$对集合$B$的作用。
+
+单$A=G$为群时，若满足：\ding{172}（单位元）$\varphi_1 =id_B$
+\ding{173}（结合律），则称之为群$G$对集合$B$的作用。
+
+\section{后记}
+
+本小说历时5日，现在终于烂尾了，也算是完成我学\LaTeX 的一个小练笔吧。说明自己对数学的深入理解还有很长的一段路要走。
+
+向我的各位数学助教致敬。没有你们，我不会了解到这样丰富有情趣的小世界。
+
+另外，文中必有不正确，欠妥当的地方，请不吝赐教。
+
+之后补充作用部分；摘要；加参考文献；加图片；对符号总览分栏。
+
+符号总览
+
+\begin{tabular}{c  l}
+    \ding{172}&项目列表\\
+
+    $\exists !$&存在唯一 \\
+
+    $\Rightarrow$&推出\\
+
+    $\Leftrightarrow$&互推\\
+
+    $\varnothing$&空集 \\
+
+    $x \in A$&属于 \\
+
+    $x \notin A$&不属于 \\
+
+    $X \subseteq A$&子集 \\
+
+    $X \not\subseteq A$&非子集\\
+
+    $X \not\subseteq A$&真子集\\
+
+    $A \cap B$&集合的交\\
+
+    $A \cup B$&集合的并\\
+
+    $A \sqcup B$&集合的无交并\\
+
+    $A \bigotimes B$&笛卡尔积\\
+
+    $\rightarrow$&一般映射\\
+
+    $\mapsto$&一般映射2\\
+
+    \rotatebox[origin=c]{180}{$\hookleftarrow$}& 单射\\
+
+    $\twoheadrightarrow$& 满射\\
+
+    $\leftrightarrow$&一一映射\\
+
+    $\circ$&复合运算\\
+
+    $\mathbb{N}$&字体1\\
+
+    $\mathscr{A}$&字体2\\
+
+    $a \sim b$&等价关系\\
+
+    $\overline{a}$&等价类\\
+
+    $\times$&乘法\\
+
+    $\div$&除法\\
+
+    $\pi$&圆周率（此刻用作典范映射）\\
+
+    $\varepsilon - \delta$&语言
+\end{tabular}
+\end{document}

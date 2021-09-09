@@ -1,0 +1,8 @@
+\beamer@sectionintoc {1}{自我介绍}{4}{0}{1}
+\beamer@sectionintoc {2}{课程介绍}{7}{0}{2}
+\beamer@subsectionintoc {2}{1}{大一上的数学课}{8}{0}{2}
+\beamer@subsectionintoc {2}{2}{升级课}{13}{0}{2}
+\beamer@sectionintoc {3}{专业选择}{16}{0}{3}
+\beamer@sectionintoc {4}{基础方向同学的建议}{20}{0}{4}
+\beamer@subsectionintoc {4}{1}{17届以前}{21}{0}{4}
+\beamer@subsectionintoc {4}{2}{18届}{23}{0}{4}

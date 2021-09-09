@@ -1,0 +1,17 @@
+\contentsline {section}{\numberline {1}集合}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}定义}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}集合的势}{2}{subsection.1.2}
+\contentsline {paragraph}{小练习}{2}{section*.2}
+\contentsline {subsection}{\numberline {1.3}集合构成集合}{2}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}补充}{3}{subsection.1.4}
+\contentsline {section}{\numberline {2}映射}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}表示方式}{4}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}映射运算}{4}{subsection.2.2}
+\contentsline {section}{\numberline {3}集合与映射}{5}{section.3}
+\contentsline {subsection}{\numberline {3.1}补充}{5}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}映射构成的集合}{5}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}代数结构}{5}{subsection.3.3}
+\contentsline {subsection}{\numberline {3.4}等价}{6}{subsection.3.4}
+\contentsline {subsection}{\numberline {3.5}应用：作用}{8}{subsection.3.5}
+\contentsline {section}{\numberline {4}后记}{8}{section.4}
+\contentsline {section}{\numberline {A}符号总览}{9}{appendix.A}

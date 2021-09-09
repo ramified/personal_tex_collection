@@ -1,0 +1,95 @@
+
+\documentclass{ctexart}
+%此处以后，可以开始用\usepackage{*}添加要用的各类Latex宏包
+\usepackage{amsmath} %推荐使用的数学公式宏包，因为可以用align环境更好地排版行间公式
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{geometry} %调整页面的页边距
+\geometry{left=2.5cm,right=2.5cm,top=2cm,bottom=3cm}%具体的页边距设置
+%\usepackage{graphicx} %插入图片的宏包
+%\usepackage{lineno,hyperref}  % 显示行号，超链接
+%\usepackage{multirow} %插入表格时需要用的合并行的功能
+%\usepackage{amsthm} %插入定理、证明的宏包
+%\usepackage{enumerate} %插入列表的宏包
+%\usepackage{enumitem} %插入列举项目的宏包
+%\usepackage[linesnumbered,lined,boxed]{algorithm2e} %插入算法的宏包
+
+\newtheorem{re}{注}
+\begin{document}
+%正文部分，包括：题目、摘要、关键字、脚注、章节、参考文献，等等
+
+\title{小测参考题目} %添加标题
+
+\author{周潇翔} %添加作者
+
+%\date{} %LaTeX会自动生成日期，如果不需要就加这一步将日期去掉
+
+
+	\maketitle %制作封面
+	
+%	\tableofcontents %加入目录，包括页码（非必需）
+
+	
+
+	\section{Exercise1} 
+可以从以下任选一题.
+\begin{enumerate}
+	\item 用极限来定义函数：
+	$f(x)=\lim\limits_{n \rightarrow \infty} e^{-x^n}$
+
+请\textbf{直接}给出$f$的定义域,并画出它的图像.
+\item 填空：设$a>1$,计算：$$\lim\limits_{x \rightarrow 0^+} \ln(x \ln a) \ln \bigg(\frac{\ln(ax)}{\ln(x/a)}\bigg)=\underline{\hbox to 10mm{}}$$
+$$\lim\limits_{N \rightarrow \infty} \sum_{n=1}^N \frac{\displaystyle \sum\limits_{k=1}^n \frac{1}{k\,!}}{(n+1)(n+2)}=\underline{\hbox to 10mm{}}$$
+$$\lim\limits_{n \rightarrow \infty}   \left\{\frac{\displaystyle \cosh \frac{1}{n+ \sqrt{ \pi}}}{ \displaystyle \cos \frac{1}{ \sqrt{n+ \pi}}}\right\}^{\displaystyle [\pi n] {\bigg[\frac{12}{\pi} \arctan n\bigg]}}=\underline{\hbox to 10mm{}}$$	
+其中$[x]$表示不超过$x$的最大整数, $\displaystyle \cosh x=\frac{e^x+e^{-x}}{2}$为双曲余弦.
+
+	\item 	1)已知数列$\{2x_n+x_{n+1}\}$收敛,证明$\{x_n\}$收敛.
+	
+			2)已知数列$\{x_n+2x_{n+1}\}$与$\{x_n+2x_{n+2}\}$收敛,证明$\{x_n\}$收敛.
+	\item	设$f \in C[0,1],$且存在两两互异的点$x_1,x_2,x_3,x_4 \in (0,1)$,使得 $$\alpha = \frac{f(x_1)-f(x_2)}{x_1-x_2}<\frac{f(x_3)-f(x_4)}{x_3-x_4}= \beta$$
+	求证:对任意的$\gamma \in (\alpha , \beta)$,存在互异的两点$x_5,x_6 \in (0,1)$,使得
+$$\gamma = \frac{f(x_5)-f(x_6)}{x_5-x_6}$$	
+\end{enumerate}
+
+	\section{Exercise2} 
+	
+\begin{enumerate}
+	
+	\item
+
+设$f \in C(\mathbb{R})$为周期为$2 \pi$的连续函数,证明:
+存在$x \in \mathbb{R}$,使得$f(x+ \pi)=f(x)$.
+	
+		\item
+	
+设$f \in C(\mathbb{R})$,满足:
+$$\lim\limits_{x \rightarrow \infty}f(x)= 0 \qquad f(0)= 1 $$
+证明:
+	
+	1)存在$x \in \mathbb{R} \smallsetminus
+	 \{0\}$,使得$f(\frac{1}{x})=f(-x)$.
+	
+	2)存在$x \in \mathbb{R}$,使得$f(x+ \pi)=f(x)$.
+	
+			\item
+	
+	若对给定的$f \in C[0,20],$定义集合
+	$$A_f=\{|x-y| \mid x,y \in [0,20], f(x)=f(y)\}$$
+	请问:
+	
+	1)是否存在某个连续函数$f \in C[0,20]$,它所对应的集合为
+	$A_f=[0,\pi)$?
+	如果是,请举出具体例子；如果不是,请证明之.
+	
+	2)是否存在某个连续函数$f \in C[0,20]$,它所对应的集合为
+	$A_f=[0,3] \cup [4,6] \cup [9,12]$?
+	如果是,请举出具体例子；如果不是,请证明之.
+	
+	3)(附加题)若$f(0)=f(\pi)=0$,是否一定有$1 \in A_f$?如果不是,请举出具体例子；如果是,请证明之.
+\end{enumerate}
+\begin{re}
+	第二题的出发点来自代数拓扑中的$Borsuk-Ulam$定理,想强调$\mathbb{R}\rightarrow S^1$的复叠映射和球极投影,还有构造辅助函数的技巧.3.1)的标准方法是找$\{x_n\}$的收敛子列$\{x_{k_n}\}$以及$\{y_{k_n}\}$的收敛子列$\{y_{l_n}\}$.第3问第3小问我还没想出来对不对.
+	建议考试的时候将第1问及问第3问第3小问删去.
+\end{re}
+
+\end{document}

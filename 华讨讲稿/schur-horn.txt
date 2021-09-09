@@ -1,0 +1,305 @@
+
+\documentclass[11pt]{amsart}
+
+%\usepackage{color,graphicx}
+%\usepackage{mathrsfs,amsbsy}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage[mathscr]{eucal}
+\usepackage{mathrsfs}
+\usepackage{verbatim}
+
+%\usepackage[notcite,notref]{showkeys}
+
+% showkeys  make label explicit on the paper
+
+\makeatletter
+\@namedef{subjclassname@2010}{%
+  \textup{2010} Mathematics Subject Classification}
+\makeatother
+
+\numberwithin{equation}{section}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{defn}[theorem]{Definition}
+\newtheorem{ques}[theorem]{Question}
+\newtheorem*{fact}{Facts}
+\newtheorem{eg}[theorem]{Example}
+
+\theoremstyle{plain}
+\newtheorem{thmsub}{Theorem}[subsection]
+\newtheorem{lemmasub}[thmsub]{Lemma}
+\newtheorem{corollarysub}[thmsub]{Corollary}
+\newtheorem{propositionsub}[thmsub]{Proposition}
+\newtheorem{defnsub}[thmsub]{Definition}
+
+\numberwithin{equation}{section}
+
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}{Remarks}
+
+\newcommand*\widebar[1]{%
+	\hbox{%
+		\vbox{%
+			\hrule height 0.5pt % The actual bar
+			\kern0.6ex%         % Distance between bar and symbol
+			\hbox{%
+				\kern 0em%      % Shortening on the left side
+				\ensuremath{#1}%
+				\kern 0em%      % Shortening on the right side
+			}%
+		}%
+	}%
+}
+\renewcommand\thefootnote{\fnsymbol{footnote}}
+%dont use number as footnote symbol, use this command to change
+
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\tr}{tr}
+
+\begin{document}
+\date{}
+
+\title
+{Schur-Horn theorem}
+
+
+\author{Xiaoxiang Zhou}
+\address{School of Mathematical Sciences\\
+University of Science and Technology of China\\
+Hefei, 230026\\ P.R. China\\} 
+\email{email:xx352229@mail.ustc.edu.cn}
+
+
+
+
+
+\begin{abstract}
+Briefly describe the topic.
+\end{abstract}
+
+
+
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Introduction}
+
+Given a Hermitian matrix $A=(a_{ij})\in \mathbb{C}^n$
+with eigenvalues
+$$\bm{\lambda} = (\lambda_1,\lambda_2,\ldots,\lambda_n)^T \in \mathbb{R}^n$$
+We want to see:
+
+%\fbox{
+%\parbox{\textwidth}{
+%}
+%}
+
+Question:What do the diagonal elements
+$$(a_{11},a_{22},\ldots,a_{nn})$$  
+look like?
+
+\begin{fact}(Obvious)
+	\begin{itemize}
+		\item $A^H=A \Rightarrow a_{11},a_{22},\ldots,a_{nn} \in \mathbb{R}$
+		\item $A$ is \textbf{unitary similar} to $\diag(\lambda_1,\ldots,\lambda_n)$ \\
+		$\Rightarrow \Sigma_{i=1}^n a_{ii} = \tr A = tr (\diag(\lambda_1,\ldots,\lambda_n))= \Sigma_{i=1}^n \lambda_i$
+		\item $\forall \tau \in S_n, \diag (\lambda_1,\ldots,\lambda_n)$ is unitary similar to
+		$\diag (\lambda_{\tau(1)},\ldots,\lambda_{\tau(n)})$ \\
+		$\Rightarrow$ WLOG, we can rearrange $(\lambda_1,\ldots,\lambda_n)$ s.t.
+		$$\lambda_1 \geqslant \lambda_2\geqslant\ldots\geqslant\lambda_n$$
+		NOTICE:After that we will assume $\lambda_1 \geqslant \lambda_2\geqslant\ldots\geqslant\lambda_n$.
+	\end{itemize}
+\end{fact}
+
+	Issai Schur (Russian) proved the above-mentioned
+inequalities in 1923.
+
+
+\begin{fact}(Not Obvious)
+	\begin{itemize}
+		\item $\forall i \in \{1,\ldots, n\}, \lambda_n \leqslant a_{ii} \leqslant \lambda_1$
+		\item $\forall k \in \{1,\ldots, n\}, \Sigma_{i=1}^k a_{ii} \leqslant \Sigma_{i=1}^k \lambda_i$ \\
+		Issai Schur (Russian) proved the above-mentioned
+		inequalities in 1923.
+	\end{itemize}
+\end{fact}
+Denote
+\begin{align*}
+	&\bm{\lambda} =(\lambda_1,\lambda_2,\ldots,\lambda_n)^T \in \mathbb{R}^n \\
+	&\Lambda =\diag (\lambda_1,\lambda_2,\ldots,\lambda_n)^T \in \mathbb{R}^{n \times n} \\
+	&\mathcal H (n)=\{A \in \mathbb{C}^{n \times n} \mid A^H=A\} \\
+	&\mathcal H_\lambda=\{A \in \mathcal H (n) \mid A \text{ is unitary similar to } \Lambda\} \\
+	\end{align*}
+\begin{equation*}
+	\begin{aligned}	
+		\pi \colon & \qquad \mathcal H (n) &\longrightarrow &\hspace{1.3cm}  \mathbb{R}^n \\
+		&A=(a_{ij})_{i,j=1}^n &\mapsto \hspace{0.3cm}&(a_{11},a_{22},\ldots,a_{nn})^T
+	\end{aligned}
+\end{equation*}
+
+\begin{theorem}(Schur-Horn)
+	$\pi (\mathcal H_\lambda)$ is a \textbf{convex polyhedron} in $\mathbb{R}^n$ whose vertices are
+	$$(\lambda_{\tau(1)},\ldots,\lambda_{\tau(n)})^T \in \mathbb{R}^n$$
+	where $\tau \in S_n$.
+\end{theorem}
+Alfred Horn (Amerian, UCLA) proved it in 1954.
+
+With these facts in mind, we will first discuss some examples.
+\begin{eg}(trivial)
+	when $\bm{\lambda} =(\lambda_0,\lambda_0,\ldots,\lambda_0)^T$, we have
+\begin{align*}
+	\Lambda \,\,&= \lambda_0 I \\
+	\mathcal H_\lambda &= \{A \in \mathbb{C}^{n \times n} \mid 
+	\exists U \in U(n), A=U(\lambda_0 I)U^H = \lambda_0 I\} \\
+	 &=\{\lambda_0 I\} \hspace{4.5cm} \text{has only one element!}
+\end{align*}	
+\end{eg}
+ We leave 2-dimension example at last because it¡¯s computable.
+\begin{eg}(3-dimension condition)
+	when $\bm{\lambda} =(\lambda_1,\lambda_2,\lambda_3)^T$, it's almost impossible to calculate, so we only draw out the final result: 
+	$$(\lambda_1,\lambda_2,\lambda_3)^T=(5,2,1)^T;(\lambda_1,\lambda_2,\lambda_3)^T=(6,1,1)^T$$
+	"degenerate"
+\end{eg}
+
+\begin{eg}(2-dimension condition)
+	we have
+	$$A= \begin{pmatrix}
+	a_{11} & a_{12} \\
+	a_{21} & a_{22}
+	\end{pmatrix}
+	 \in \mathcal H_\lambda \Leftrightarrow \exists \;
+	 U=\begin{pmatrix}
+	 u_{11} & u_{12} \\
+	 u_{21} & u_{22}
+	 \end{pmatrix}
+	 \in U(2),$$
+\begin{equation*}
+ 	\begin{aligned}
+ 	A&= U\Lambda U^H \\ 	
+ 	&=\begin{pmatrix}
+ 	u_{11} & u_{12} \\
+ 	u_{21} & u_{22}
+ 	\end{pmatrix}
+ 	\begin{pmatrix}
+ 	\lambda_1 &  \\
+ 	& \lambda_2
+ 	\end{pmatrix}
+ 	\begin{pmatrix}
+ 	\widebar{u_{11}} & \widebar{u_{21}} \\
+ 	\widebar{u_{12}} & \widebar{u_{22}}
+ 	\end{pmatrix} \\
+ 	&=\begin{pmatrix}
+ 	\lambda_1|u_{11}|^2+\lambda_2 |u_{12}|^2 & \lambda_1  u_{11} \widebar{u_{21}}+\lambda_2 u_{12} \widebar{u_{21}} \\
+ 	\lambda_1 u_{21} \widebar{u_{11}}+\lambda_2 u_{22} \widebar{u_{12}} & \lambda_1|u_{21}|^2+\lambda_2 |u_{22}|^2
+ 	\end{pmatrix} \\
+ 	&=\lambda_2 I + (\lambda_1 - \lambda_2)
+ 	\begin{pmatrix}
+ 	|u_{11}|^2 & u_{11} \widebar{u_{21}} \\
+ 	\lambda_1 u_{21} \widebar{u_{11}} & \lambda_1|u_{21}|^2
+ 	\end{pmatrix}
+ 	\end{aligned}
+\end{equation*}
+Denote the line segment drawed in the figure as $\Gamma$,then
+\begin{itemize}
+	\item $\pi (\mathcal H_\lambda) \subseteq \Gamma$ because 
+	$\lambda_1|u_{11}|^2+\lambda_2 |u_{12}|^2$ is the convex combination of $\lambda_1, \lambda_2$.
+	\item $\Gamma \subseteq \pi (\mathcal H_\lambda)$ because we can take
+	$$\begin{pmatrix}
+	\widebar{u_{11}} & \widebar{u_{21}} \\
+	\widebar{u_{12}} & \widebar{u_{22}}
+	\end{pmatrix}=
+	\begin{pmatrix}
+	\cos \theta & -\sin \theta \\
+	\sin \theta & \cos \theta
+	\end{pmatrix}$$.
+\end{itemize}
+\begin{comment}
+Issai Schur ,1875-1941
+worked in Germany for most of his life
+student of Frobenius (SYLOW Thm Proofed)
+
+Doubly stochastic matrices. £¦ the diagonal of a rotation matrix
+lattice theory £¦ univeral algebra¡úlogic programming.
+
+
+\end{comment}
+	 Actually one can compute more:
+	 
+	WLOG(or take the coordinate trasformation), we only consider the condition when 
+\begin{itemize}
+	\item $\bm{\lambda} =(\lambda_1,\lambda_2)^T=(1,0)^T$ 
+	\item 
+	$A=\begin{pmatrix}
+	|u_{11}|^2 & u_{11} \widebar{u_{21}} \\
+	\lambda_1 u_{21} \widebar{u_{11}} & \lambda_1|u_{21}|^2
+	\end{pmatrix}$.
+\end{itemize}	
+
+\end{eg}
+\section{Simple Tools}
+
+
+
+
+\section{Section 3 title} 
+
+ Blablablablablablabla....
+             
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ 
+   
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\begin{thebibliography}{99}
+
+ 
+%\bibitem{AF12}%
+%Antunes, P., Freitas, P.: Optimal spectral rectangles and lattice ellipses. \emph{Proc. Royal Soc. London Ser. A.} \textbf{469} (2012), 20120492.
+
+
+  
+
+\end{thebibliography}
+
+
+\end{document}
+
+
+
+

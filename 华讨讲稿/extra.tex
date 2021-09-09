@@ -1,0 +1,246 @@
+
+\documentclass[11pt]{amsart}
+
+%\usepackage{color,graphicx}
+%\usepackage{mathrsfs,amsbsy}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{bbding}
+\usepackage{extarrows}
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage[mathscr]{eucal}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage{verbatim}
+\usepackage[a4paper,left=3cm,right=2cm]{geometry}
+%\usepackage[notcite,notref]{showkeys}
+
+% showkeys  make label explicit on the paper
+
+\makeatletter
+\@namedef{subjclassname@2010}{%
+  \textup{2010} Mathematics Subject Classification}
+\makeatother
+
+\numberwithin{equation}{section}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{defn}[theorem]{Definition}
+
+\theoremstyle{plain}
+\newtheorem{thmsub}{Theorem}[subsection]
+\newtheorem{lemmasub}[thmsub]{Lemma}
+\newtheorem{corollarysub}[thmsub]{Corollary}
+\newtheorem{propositionsub}[thmsub]{Proposition}
+\newtheorem{defnsub}[thmsub]{Definition}
+
+\numberwithin{equation}{section}
+
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}{Remarks}
+
+
+\renewcommand\thefootnote{\fnsymbol{footnote}}
+%dont use number as footnote symbol, use this command to change
+
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\tr}{tr}
+
+\begin{document}
+\date{}
+
+\title
+{Extra Knowledge}
+
+
+\author{Xiaoxiang Zhou}
+\address{School of Mathematical Sciences\\
+University of Science and Technology of China\\
+Hefei, 230026\\ P.R. China\\} 
+\email{email:xx352229@mail.ustc.edu.cn}
+
+
+
+
+
+\begin{abstract}
+We will talk about some actions induced by the Lie group structure.
+\end{abstract}
+
+
+
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Lie Group Action}
+$G \text{ \rotatebox[origin=c]{270}{$\circlearrowleft$} } M$ is a group + smooth action. Now suppose $g \in G; X,Y \in \mathfrak{g}; \beta \in \mathfrak{g}^*.$
+
+\begin{minipage}[t]{.5\textwidth}
+	%\centering
+	
+	\begin{equation*}
+	\begin{aligned}
+		c_g:G&\longrightarrow G\\
+		a &\mapsto gag^{-1}
+	\end{aligned}
+	\end{equation*}
+	
+	\begin{equation*}
+	\rightsquigarrow \left[
+	\begin{lgathered}
+	\begin{aligned}
+		Ad_g\hat{=}(dc_g)_e:T_eG&\longrightarrow T_eG\\
+		(\;\mathfrak{g}&\longrightarrow \mathfrak{g}\;)
+	\end{aligned}\\
+	\begin{aligned}
+	Ad:G&\longrightarrow Aut(\mathfrak{g})\hspace{0.5cm}(G \text{ \rotatebox[origin=c]{270}{$\circlearrowleft$} } \mathfrak{g})\\
+	g &\;\mapsto \hspace{0.4cm} Ad_g
+	\end{aligned}
+	\end{lgathered} \right.
+	\end{equation*}
+	
+	\begin{equation*}
+	\rightsquigarrow \left[
+	\begin{lgathered}
+	\begin{aligned}
+	Ad_g^*:\mathfrak{g}^*&\longrightarrow \hspace{0.4cm} \mathfrak{g}^*\\
+	\beta \;&\mapsto \left[
+		\begin{aligned}
+			Ad_g^* \beta : \mathfrak{g} &\longrightarrow  \hspace{0.5cm} \mathbb{R}\\
+			X &\mapsto \beta (Ad_{g^{-1}}X)
+		\end{aligned}
+	\right]
+	\end{aligned}\\
+	\begin{aligned}
+	Ad:G&\longrightarrow Aut(G)\hspace{0.5cm}(G \text{ \rotatebox[origin=c]{270}{$\circlearrowleft$} } \mathfrak{g})\\
+	g &\;\mapsto \hspace{0.4cm} Ad_g
+	\end{aligned}
+	\end{lgathered} \right. 
+	\end{equation*}
+		 $\text{\FiveStarOpen} : \left<Ad_g^* \beta, X\right>=\left<\beta, Ad_{g^{-1}}X\right>$
+\\
+\\
+	$$Ad^*: G \text{ \rotatebox[origin=c]{270}{$\circlearrowleft$} } \mathfrak{g}^*$$
+	\begin{itemize}
+		\item Coadjoint orbit of $\beta \in \mathfrak{g}^*:$\\
+		$\mathcal{O}_{\beta}=\{Ad_g^* \beta \mid g \in G\} \subseteq \mathfrak{g}^*$
+		\item Stabilizer of $\beta \in \mathfrak{g}^*:$\\
+		$G_{\beta}=\{g \in G \mid Ad_g^* \beta = \beta\} \subseteq G$
+		\item $\mathcal{O}_{\beta}= \left.G \middle/ G_{\beta}\right.$
+	\end{itemize}
+
+	
+	
+\end{minipage}
+\begin{minipage}[t]{.5\textwidth}
+
+\begin{equation*}
+\begin{aligned}
+[\;\,,\;]:\mathfrak{g} \times \mathfrak{g}&\longrightarrow \mathfrak{g}\\
+(X,Y) &\mapsto [X,Y]
+\end{aligned}
+\end{equation*}
+
+\begin{equation*}
+\rightsquigarrow \left[
+\begin{lgathered}
+\begin{aligned}
+ad_X:\mathfrak{g}&\longrightarrow \mathfrak{g}\\
+Y&\longrightarrow [X,Y]
+\end{aligned}\\
+\begin{aligned}
+ad:\mathfrak{g}&\longrightarrow Aut(\mathfrak{g})\hspace{0.5cm}(\mathfrak{g} \text{ \rotatebox[origin=c]{270}{$\circlearrowleft$} } \mathfrak{g})\\
+X &\;\mapsto \hspace{0.4cm} ad_X
+\end{aligned}
+\end{lgathered} \right.
+\end{equation*}
+
+\begin{equation*}
+\rightsquigarrow \left[
+\begin{lgathered}
+\begin{aligned}
+ad_X^*:\mathfrak{g}^*&\longrightarrow \hspace{0.4cm} \mathfrak{g}^*\\
+\beta \;&\mapsto \left[
+\begin{aligned}
+ad_X^* \beta : \mathfrak{g} \longrightarrow & \hspace{0.5cm} \mathbb{R}\\
+Y \mapsto\;\; &\beta (ad_{-X}Y)\\
+=-&\beta([X,Y])
+\end{aligned}
+\right]
+\end{aligned}\\
+\begin{aligned}
+ad^*:\mathfrak{g}&\longrightarrow Aut(\mathfrak{g})\hspace{0.5cm}(\mathfrak{g} \text{ \rotatebox[origin=c]{270}{$\circlearrowleft$} } \mathfrak{g})\\
+X &\;\mapsto \hspace{0.4cm} ad_X^*
+\end{aligned}
+\end{lgathered} \right. 
+\end{equation*}
+$\text{\FiveStarOpen} : \left<ad_X^* \beta, Y\right>=\left<\beta, ad_{-X}(Y)\right>=-\beta([X,Y])$
+
+$$ad^*: \mathfrak{g} \text{ \rotatebox[origin=c]{270}{$\circlearrowleft$} } \mathfrak{g}^*$$
+\begin{itemize}
+	\item Orbit of $\beta \in \mathfrak{g}^*:$\\
+	$\mathfrak{g} \cdot \beta=\{ad_X^* \beta \mid X \in \mathfrak{g}\}\xlongequal{Verify} T_{\beta} \mathcal{O}_{\beta}$
+	\item Stabilizer of $\beta \in \mathfrak{g}^*:$\\
+	$\mathfrak{g}_{\beta}=\{X \in \mathfrak{g} \mid ad_X^* \beta = 0\}$
+	\item $T_{\beta} \mathcal{O}_{\beta}= \left.\mathfrak{g} \middle/ \mathfrak{g}_{\beta}\right.$
+\end{itemize}
+
+
+\end{minipage}
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ 
+   
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\begin{thebibliography}{99}
+
+ 
+%\bibitem{AF12}%
+%Antunes, P., Freitas, P.: Optimal spectral rectangles and lattice ellipses. \emph{Proc. Royal Soc. London Ser. A.} \textbf{469} (2012), 20120492.
+
+
+  
+
+\end{thebibliography}
+
+
+\end{document}
+
+
+
+

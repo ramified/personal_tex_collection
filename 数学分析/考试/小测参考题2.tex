@@ -1,0 +1,94 @@
+
+\documentclass{ctexart}
+%此处以后,可以开始用\usepackage{*}添加要用的各类Latex宏包
+\usepackage{amsmath} %推荐使用的数学公式宏包,因为可以用align环境更好地排版行间公式
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{geometry} %调整页面的页边距
+\geometry{left=2.5cm,right=2.5cm,top=2cm,bottom=3cm}%具体的页边距设置
+%\usepackage{graphicx} %插入图片的宏包
+%\usepackage{lineno,hyperref}  % 显示行号,超链接
+%\usepackage{multirow} %插入表格时需要用的合并行的功能
+%\usepackage{amsthm} %插入定理、证明的宏包
+%\usepackage{enumerate} %插入列表的宏包
+%\usepackage{enumitem} %插入列举项目的宏包
+%\usepackage[linesnumbered,lined,boxed]{algorithm2e} %插入算法的宏包
+\usepackage{CJKfntef} %汉字加点
+\newtheorem{re}{注}
+\begin{document}
+%正文部分,包括：题目、摘要、关键字、脚注、章节、参考文献,等等
+
+\title{小测参考题目2} %添加标题
+
+\author{周潇翔} %添加作者
+
+%\date{} %LaTeX会自动生成日期,如果不需要就加这一步将日期去掉
+
+
+	\maketitle %制作封面
+	
+%	\tableofcontents %加入目录,包括页码（非必需）
+
+	
+
+	\section{Exercise1} 
+可以从以下任选一题.
+\begin{enumerate}
+	\item 设$\mathbb{R}$上的Lipchitz函数$f(x)$满足性质：对任意$x \in \mathbb{R}$,
+	$$\lim\limits_{n \rightarrow \infty}n[f(x+\frac{1}{n})-f(x)]=0$$
+	证明$f(x)$在$\mathbb{R}$上右可导.
+\item 设$f(x)$在$[a,b]$上可导.若$f(a)=0,\forall x \in (a,b), f(x)>0$,则对任意的$n,m \in \mathbb{N}$,存在$\xi,\eta \in (a,b)$,使得
+$$\frac{f'(\xi)}{f(\xi)}=\frac{m}{n}\frac{f'(\eta)}{f(\eta)}$$
+\item 设$f(x)$在$\mathbb{R}$上可导.记Dirichlet函数：
+\begin{equation*}\label{eq:dirichlet}
+	D(x)=
+	\begin{cases}
+	1, & \text{if } x \in \mathbb{Q}; \\
+	0, & \text{if } x \notin \mathbb{Q};
+	\end{cases}
+\end{equation*}
+试求函数$g(x):=f(x)D(x)$的连续点集与可导点集.
+
+你可使用如下记号：($a \in \mathbb{R}$)
+$$f^{-1}(a)=\{x \in \mathbb{R}|f(x)=a\}$$
+$$(f')^{-1}(a)=\{x \in \mathbb{R}|f'(x)=a\}$$
+\begin{re}
+	考试时$f(x)$可取成某些具体的例子,比如说
+	$$f(x)=x^3(x+1)^2(x+2)$$
+\end{re}
+\item 判断正误:若$\mathbb{R}$上的可导函数$f$满足$f'(0)\neq 0$,则
+存在$\delta>0$,使得$f(x)$于$(-\delta,\delta)$单调.\\
+如果命题正确,请说明理由；若不正确,请举出具体例子.
+\begin{re}
+	若补充条件“导函数连续”,则命题成立.
+\end{re}
+\end{enumerate}
+
+	\section{Exercise2} 
+		我们在这里考虑方程$\tan x=x$的解.
+\begin{enumerate}
+
+	\item
+
+证明:
+
+对$\forall n \in \mathbb{N}$,方程$\tan x=x$于$(n\pi-\pi /2, n\pi+\pi /2)$有且恰好只有一个解.
+
+记这个解为$x_n$.
+	
+		\item
+证明:
+	
+	$$\lim\limits_{n \rightarrow \infty}x_n-n\pi=\pi/2$$
+	
+			\item
+	
+计算极限:
+
+$$\lim\limits_{n \rightarrow \infty}n(x_n-n\pi-\pi/2)$$
+\end{enumerate}
+\begin{re}
+想考Sard定理的简化版本的,但是还没有简单的做法.
+\end{re}
+
+\end{document}

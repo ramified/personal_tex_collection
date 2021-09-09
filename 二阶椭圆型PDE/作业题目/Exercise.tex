@@ -1,0 +1,269 @@
+
+\documentclass{ctexart}
+
+%\usepackage{color,graphicx}
+%\usepackage{mathrsfs,amsbsy}
+\usepackage{CJK}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage[mathscr]{eucal}
+\usepackage{mathrsfs}
+\usepackage{verbatim}
+\usepackage{geometry} %调整页面的页边距
+\geometry{top=3cm,bottom=3cm}
+%\usepackage[notcite,notref]{showkeys}
+
+% showkeys  make label explicit on the paper
+
+\makeatletter
+\@namedef{subjclassname@2010}{%
+  \textup{2010} Mathematics Subject Classification}
+\makeatother
+
+\numberwithin{equation}{section}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{defn}[theorem]{Definition}
+
+\theoremstyle{plain}
+\newtheorem{thmsub}{Theorem}[subsection]
+\newtheorem{lemmasub}[thmsub]{Lemma}
+\newtheorem{corollarysub}[thmsub]{Corollary}
+\newtheorem{propositionsub}[thmsub]{Proposition}
+\newtheorem{defnsub}[thmsub]{Definition}
+
+\numberwithin{equation}{section}
+
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}{Remarks}
+\newtheorem{hint}{hint}
+
+\renewcommand\thefootnote{\fnsymbol{footnote}}
+%dont use number as footnote symbol, use this command to change
+
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator*{\osc}{\operatorname{osc}}
+\newcommand*{\norm}[1]{\lVert#1\rVert}
+\newcommand*\widebar[1]{%
+	\hbox{%
+		\vbox{%
+			\hrule height 0.5pt % The actual bar
+			\kern0.35ex%         % Distance between bar and symbol
+			\hbox{%
+				\kern -0.1em%      % Shortening on the left side
+				\ensuremath{#1}%
+				\kern 0em%      % Shortening on the right side
+			}%
+		}%
+	}%
+}
+\CTEXsetup[name={练习\;,}]{subsection}
+
+\begin{document}
+\date{}
+
+\title
+{二阶椭圆PDE作业}
+
+
+\author{每一周}
+%\address{School of Mathematical Sciences\\
+%University of Science and Technology of China\\
+%Hefei, 230026\\ P.R. China\\} 
+%\email{email:xx352229@mail.ustc.edu.cn}
+\maketitle
+
+
+
+
+\begin{abstract}
+	该作业集主要是方便问大家作业题怎么做打出来的,因为之前很多作业都没有搞懂,错误没有及时更正.有漏的题目或者typoes感谢帮忙指出！
+\end{abstract}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{$L^2$ Estimate}
+\subsection{}
+$n=2$时,叙述和证明方程
+$$
+\begin{cases}
+\mathcal{L}(u)=-D_j(a_{ij}(x)D_i(u))+c(x)u=f-D_if^i& \text{ in }\Omega\\
+u=g&\text{ on }\partial\.\Omega
+\end{cases}$$
+的弱极值原理.
+\begin{hint}
+	可以使用Sobolev嵌入$H_0^1(\Omega) \hookrightarrow L^q(\Omega)$
+\end{hint}
+\subsection{}
+说明$$u(x)=|x|^{-\alpha} \in W^{1,p}(B_1) \Longleftrightarrow \alpha < \frac{n-p}{p}$$
+\subsection{}
+ 设$u \in H^1(\mathbb{R}^n)$且具有紧支集,$u$是方程
+$$-\Delta u+c(u)=f \qquad \text{ in } \mathbb{R}^n$$
+的弱解,其中$f \in L^2(\mathbb{R}^n)$,$c$是光滑函数且$c(0)=0,c'(0)\geqslant 0$.证明$u \in H^2(\mathbb{R}^n)$
+\begin{hint}
+	当$c(u)=e^u-1$时尝试解答,再对其进行推广.
+\end{hint}
+\subsection{}
+对于任意$\varepsilon>0$,存在$c=c(\varepsilon)>0$使得对于任意$u \in H^2(\Omega)$,有 $$\|u\|_{H^{1}(\Omega)} \leq \varepsilon\|u\|_{H^{2}(\Omega)}+c(\varepsilon)\|u\|_{L^{2}(\Omega)}$$
+\begin{hint}
+	只需证
+	$$\|Du\|_{L^{2}(\Omega)} \leq \varepsilon\|D^2u\|_{L^{2}(\Omega)}+c(\varepsilon)\|u\|_{L^{2}(\Omega)}$$
+	使用反证法.若不对,则对其进行规范化后取收敛的子序列.
+\end{hint}
+\section{Schauder Estimate}
+\subsection{}
+ 
+设$u \in C_0^{\infty}(B_R)$且在$B_R$上有$\Delta u=f$,则
+\begin{enumerate}[(1)]
+	\item $$\|u\|_{L^{\infty}(B_R)} \leqslant \frac{R^2}{2n} \|f\|_{L^{\infty}(B_R)}$$
+	\item $$\|D_nu\|_{L^{\infty}(B_R)} \leqslant R \|f\|_{L^{\infty}(B_R)}$$
+\end{enumerate}
+\subsection{}
+ 设$u \in C^{\infty}(\mathbb{R}^n)$且在$\mathbb{R}^n$上有$-\Delta u=f$,则对于任意$R>0$,有
+$$|D_iu(x)| \leqslant \frac{n}{R}\osc_{B_R(x)} u+R\osc_{B_R(x)} f$$
+其中
+$$\osc_{B_R(x)}f=\sup_{B_R(x)}f-\inf_{B_R(x)}f$$
+\begin{hint}
+	使用极值原理.
+\end{hint}
+
+\subsection{}
+设$\varphi \in C^{\alpha}(\partial B_1) \quad(0<\alpha < 1)$.证明
+$$
+\begin{cases}
+\Delta u=0 & \text{ in }B_1\\
+	u=\varphi & \text{ on }\partial\.B_1
+\end{cases}
+$$
+在$C^2(B_1) \cap C^{\alpha}(\widebar{B}_1)$上存在唯一解.
+\begin{hint}
+	请直接使用Poisson公式验证.(后改为考虑$n=2$ or $3$的情况.考虑使用匣函数.)
+\end{hint}
+\subsection{}
+取$\beta>>1$使$W(x)=\rho^{-\beta}-|x-y|^{-\beta}$为闸函数.
+\subsection{}
+阅读第九章,利用Campanato空间推导Dirichlet问题
+$$\begin{cases}
+-\Delta u=f, &x\in B_1\\
+\phantom{u=}u=0, & x\in \partial B_1
+\end{cases}$$的Schauder内估计,其中$f \in C^{\alpha}(\bar{B}_1)$
+\section{$L^p$ Estimate}
+
+\subsection{}
+设$\phi:\mathbb{R}^+ \longrightarrow \mathbb{R}^+$的$C^1$函数,$\phi(0)=0$.\\
+$f:\Omega \longrightarrow \mathbb{R}$为可测函数,设$\phi(|f(x)|)$在$\Omega$上可积,利用$\lambda_f(t)$表示积分$$\int_{\Omega}\phi(|f(x)|)dx$$
+\subsection{}
+延拓$T:L^1\longrightarrow L^1_{\omega}$使得$T$为弱$(1,1)$型.
+\subsection{}
+设$T$是弱$(p,\bar{p})$型,弱$(q,\bar{q})$型,其中
+$$1<p<q<+\infty \qquad 1<\bar{p}<\bar{q}<+\infty$$
+证明$T$是强$(r,\bar{r})$型,其中
+$$\frac{1}{r}=\frac{\theta}{p}+\frac{1-\theta}{q} \qquad \frac{1}{\bar{r}}=\frac{\theta}{\bar{p}}+\frac{1-\theta}{\bar{q}} \qquad \theta \in (0,1)$$
+\subsection{}
+设$u \in W^{2,p}(B_1^+)\cap W_0^{1,p}(B_1^+)$,令
+$$\tilde{u}(x)= \begin{cases}
+u(x',x_n), &x_n \geqslant 0\\
+-u(x',-x_n), &x_n < 0\\
+\end{cases}$$
+试证:$\tilde{u} \in W_0^{2,p} (B_1).$
+\subsection{}
+证明：如果$u \in W^{2,p}(\Omega)\;(1<p<\infty)$,$\Omega$具有内球性质/锥性质/$\Omega=B_0(1)$,则
+$$\norm{Du}_{L^p(\Omega)}\leqslant \varepsilon\norm{D^2u}_{L^p(\Omega)} +\frac{C}{\varepsilon^{\alpha}}\norm{u}_{L^p(\Omega)}$$
+并指出$\alpha$可能的一个取值.
+\subsection{}
+设$u \in H^1(\Omega) \cap L^{\infty}(\Omega)$是方程
+$$-\Delta u+u^3-u=0$$
+的解.证明：$u \in C^{\infty}(\Omega)$.
+
+\section{De Giorgi-Nash Estimate}
+\subsection{}
+设$b^i \in L^{\infty},c \in L^{\infty},c \geqslant 0 .$对方程
+$$-D_j(a^{ij}D_iu)+b^iD_iu+cu=f+D_if^i$$
+导出定理2.3的估计.
+\subsection{}
+设$u \in W^{1,p}(B_R)(p>1)$是方程
+$$\nabla \cdot(a(x)|\nabla u|^{p-2}\nabla u)=0$$
+$(\lambda \leqslant a(x) \leqslant \Lambda)$的弱解,证明局部极值原理.
+\subsection{}
+当$n=2$时,证明引理4.2.
+\subsection{}
+假设$u \in C^2(\mathbb{R}^n)$是$\mathbb{R}^n$上的调和函数,且对某个$p>0$满足
+$$\int_{\mathbb{R}^n}|u|^p\,dx<+\infty$$
+则在$\mathbb{R}^n$上$u\equiv 0$.
+\subsection{}
+证明定理3.4.
+\section{Krylov-Safonov Estimate}
+\subsection{}
+在定理1.9中设$f \leqslant 0$,直接证明$\sup_{\Omega}u \leqslant \sup_{\partial\Omega}u^+$
+\subsection{}
+设$A \subset B \subset Q_1$满足
+\begin{enumerate}
+	\item $|A|< \delta <1$
+	\item 对于$K_R(y) \subset Q_1$,若$$|A \cap K_R(y)|\geqslant \delta|K_R(y)|,$$则$$K_{3R}(y) \cap Q_1 \subset B$$
+\end{enumerate}
+证明：$|A| \leqslant \delta |B|$
+\begin{equation*}
+\begin{aligned}
+内容...
+\end{aligned}
+\end{equation*}
+             
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ 
+   
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%\begin{thebibliography}{99}
+
+ 
+%\bibitem{AF12}%
+%Antunes, P., Freitas, P.: Optimal spectral rectangles and lattice ellipses. \emph{Proc. Royal Soc. London Ser. A.} \textbf{469} (2012), 20120492.
+
+
+  
+
+%\end{thebibliography}
+
+
+\end{document}
+
+
+
+

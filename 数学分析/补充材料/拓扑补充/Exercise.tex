@@ -1,0 +1,172 @@
+
+\documentclass{ctexart}
+
+%\usepackage{color,graphicx}
+%\usepackage{mathrsfs,amsbsy}
+\usepackage{color}
+\usepackage{CJK}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage[mathscr]{eucal}
+\usepackage{mathrsfs}
+\usepackage{verbatim}
+\usepackage{mathtools}
+\usepackage{geometry} %调整页面的页边距
+\geometry{top=2cm,bottom=3cm,left=5cm,right=5cm}
+%\usepackage[notcite,notref]{showkeys}
+
+% showkeys  make label explicit on the paper
+
+\makeatletter
+\@namedef{subjclassname@2010}{%
+  \textup{2010} Mathematics Subject Classification}
+\makeatother
+
+\numberwithin{equation}{section}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{defn}[theorem]{Definition}
+
+\theoremstyle{plain}
+\newtheorem{thmsub}{Theorem}[subsection]
+\newtheorem{lemmasub}[thmsub]{Lemma}
+\newtheorem{corollarysub}[thmsub]{Corollary}
+\newtheorem{propositionsub}[thmsub]{Proposition}
+\newtheorem{defnsub}[thmsub]{Definition}
+
+\numberwithin{equation}{section}
+
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}{Remarks}
+
+
+\renewcommand\thefootnote{\fnsymbol{footnote}}
+%dont use number as footnote symbol, use this command to change
+
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\tr}{tr}
+
+\begin{document}
+\date{}
+
+\title
+{拓扑与近世代数补充：PSet2}
+
+
+\author{2019.3.24}
+%\address{School of Mathematical Sciences\\
+%University of Science and Technology of China\\
+%Hefei, 230026\\ P.R. China\\} 
+%\email{email:xx352229@mail.ustc.edu.cn}
+\maketitle
+
+
+
+
+%\begin{abstract}
+%\end{abstract}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{有趣的群作用}
+设$\{u,v\} \in \mathbb{C}$为$\mathbb{C}$的一组$\mathbb{R}$-基，考虑$G:=\mathbb{Z}u \oplus \mathbb{Z}v$在$\mathbb{C}$上的群作用：
+$$G \times \mathbb{C} \longrightarrow \mathbb{C} \qquad (g,z) \longmapsto g+z$$
+另外，考虑
+$$SL(2,\mathbb{Z}):=\left\{\;\gamma=\begin{pmatrix}
+a & b\\
+c & d
+\end{pmatrix}\Bigg|ad-bc=1\right\}$$
+在上半平面
+$$\mathcal{H}:=\{z \in \mathbb{C} \mid Im z>0\}$$
+上的作用：
+$$SL(2,\mathbb{Z}) \times \mathcal{H}\longrightarrow \mathcal{H} \qquad (\gamma,z) \longmapsto \frac{az+b}{cz+d}$$
+试问这些作用对某个元素的稳定子群、作用的基本区域、商掉这些作用后得到的商空间（取商拓扑）拓扑同胚于什么？是否是紧的？
+\begin{remark}
+	这两个群作用有一些关系，如果有机会的话可以讲一下。另外可以讲一下格点的性质（近世代数）。
+\end{remark}
+\section{矩阵群的性质}
+填表：\\[1cm]
+\begin{tabular}{|c|c|c|c|c|c|}
+	\hline 
+$G$	& 连通分支个数 & 紧性 & 中心 & \textcolor{red}{$G/Z(G)$是否为单群} & \textcolor{red}{极大环面}\\ 
+	\hline 
+$GL_n(\mathbb{R})$	&  &  &  & & \\ 
+	\hline 
+$SL_n(\mathbb{R})$	&  &  &  & & \\ 
+	\hline 
+$O(n)$	&  &  &  &  &\\ 
+	\hline 
+$SO(n)$	&  &  &  &  &\\ 
+	\hline 
+$U(n)$	&  &  &  &  &\\ 
+	\hline 
+$SU(n)$	&  &  &  &  &\\ 
+	\hline 
+\textcolor{red}{$GL_n(\mathbb{C})$}	&  &  &  &  &\\ 
+\hline 
+\textcolor{red}{$SL_n(\mathbb{C})$}	&  &  &  &  &\\ 
+\hline 
+\end{tabular} 
+\\[1cm]
+注：红色的是可补充内容。横向还可以加：标准型、切空间维数等。纵向可以加：$Sp(n,\mathbb{C}),Sp(n,\mathbb{R}),O(p,q),SL_n(Z),PSL_n(\mathbb{R})$等等。
+
+
+
+
+             
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ 
+   
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%\begin{thebibliography}{99}
+
+ 
+%\bibitem{AF12}%
+%Antunes, P., Freitas, P.: Optimal spectral rectangles and lattice ellipses. \emph{Proc. Royal Soc. London Ser. A.} \textbf{469} (2012), 20120492.
+
+
+  
+
+%\end{thebibliography}
+
+
+\end{document}
+
+
+
+

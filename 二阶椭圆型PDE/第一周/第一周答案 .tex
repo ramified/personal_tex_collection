@@ -1,0 +1,196 @@
+
+\documentclass{ctexart}
+
+%\usepackage{color,graphicx}
+%\usepackage{mathrsfs,amsbsy}
+\usepackage{CJK}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage[mathscr]{eucal}
+\usepackage{mathrsfs}
+\usepackage{verbatim}
+
+%\usepackage[notcite,notref]{showkeys}
+
+% showkeys  make label explicit on the paper
+
+\makeatletter
+\@namedef{subjclassname@2010}{%
+  \textup{2010} Mathematics Subject Classification}
+\makeatother
+
+\numberwithin{equation}{section}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{defn}[theorem]{Definition}
+
+\theoremstyle{plain}
+\newtheorem{thmsub}{Theorem}[subsection]
+\newtheorem{lemmasub}[thmsub]{Lemma}
+\newtheorem{corollarysub}[thmsub]{Corollary}
+\newtheorem{propositionsub}[thmsub]{Proposition}
+\newtheorem{defnsub}[thmsub]{Definition}
+
+\numberwithin{equation}{section}
+
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}{Remarks}
+
+
+\renewcommand\thefootnote{\fnsymbol{footnote}}
+%dont use number as footnote symbol, use this command to change
+
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\tr}{tr}
+
+\begin{document}
+\date{}
+
+\title
+{二阶椭圆PDE作业}
+
+
+\author{第一周}
+%\address{School of Mathematical Sciences\\
+%University of Science and Technology of China\\
+%Hefei, 230026\\ P.R. China\\} 
+%\email{email:xx352229@mail.ustc.edu.cn}
+\maketitle
+
+
+
+
+%\begin{abstract}
+%\end{abstract}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Exercise 1}
+取$H=H_0^2(\Omega), u \in H_0^2(\Omega),$则$\lVert u \rVert_{H}=\lVert \Delta u \rVert_{L^2(\Omega)}$.再取
+$$a(u,v):=\int_{\Omega} \Delta u \Delta v dx$$
+$$F:H_0^1(\Omega)\longrightarrow \mathbb{R} \qquad v \longmapsto \int_{\Omega}fvdx$$
+  则有
+  \begin{itemize}
+  	\item $F \in H^{-1}(\Omega)$
+  	\item \begin{equation*}
+  		\begin{aligned}
+  			|a(u,v)| &\leqslant \int_{\Omega} |\Delta u||\Delta v| dx\\
+  			&\leqslant C \lVert\Delta u\rVert_{L^2}\lVert\Delta v\rVert_{L^2}\\
+  			&\leqslant \tilde{C} \lVert u\rVert_{H_0^2(\Omega)}\lVert v\rVert_{H_0^2(\Omega)}
+  		\end{aligned}
+  	\end{equation*}
+  	  	\item \begin{equation*}
+  	\begin{aligned}
+  	a(u,u) &=\int_{\Omega} \Delta u \Delta u dx\\
+  	&= \lVert\Delta u\rVert_{L^2(\Omega)}\\
+  	&\geqslant C'\lVert u\rVert_{H_0^2(\Omega)}
+  	\end{aligned}
+  	\end{equation*}
+  \end{itemize}
+则由lax-milgram引理,我们有唯一的$u \in H,$使得
+$a(u,v)=\left<F,v\right>$,i.e.
+$$\int_{\Omega} \Delta u \Delta v dx=\int_{\Omega}fvdx \text{ for any } v \in H_0^2(\Omega)$$
+故此双调和方程存在唯一的弱解.
+\section{Exercise 2}
+回忆
+$$W^{1,p}(B_1)=\{u \in L^p(B_1) \mid u_{x_i} \in L^p(B_1)\}$$
+我们有
+
+\begin{minipage}[t]{.4\textwidth}
+\centering
+\begin{equation*}
+\begin{aligned}
+	& u(x)=|x|^{-\alpha} \in L^p(B_1)\\
+	\Leftrightarrow & \int_{B_1}|x|^{-\alpha}dV < +\infty\\
+	\Leftrightarrow & \int_{0}^{1}r^{n-1}r^{-\alpha p}dr < +\infty\\
+	\Leftrightarrow & (n-1)-\alpha p >-1\\
+	\Leftrightarrow & \alpha < \frac{n}{p}
+\end{aligned}
+\end{equation*}
+\begin{equation*}
+\begin{aligned}
+u_{x_i}(x)&=-\frac{\alpha}{2}|x|^{-\alpha-2}\frac{\partial |x|^2}{\partial x_i}\\
+&=-\alpha |x|^{-\alpha-2}x_i
+\end{aligned}
+\end{equation*}
+\end{minipage}
+\begin{minipage}[t]{.6\textwidth}
+\centering
+\begin{equation*}
+\begin{aligned}
+& u_{x_i}(x)=-\alpha |x|^{-\alpha-2}x_i \in L^p(B_1)\\
+\Leftrightarrow & \int_{B_1} \alpha^p (|x|^{-2\alpha -4}|x_i|^2)^{p/2} dV< +\infty\\
+\Leftrightarrow & \sum_{i=1}^{n}\int_{B_1} (|x|^{-2\alpha -4}|x_i|^2)^{p/2} dV< +\infty\\
+\Leftrightarrow & \int_{B_1} (|x|^{-\alpha -1})^p dV< +\infty\\
+\Leftrightarrow	& u(x)=|x|^{-\alpha-1} \in L^p(B_1)\\
+\Leftrightarrow & \alpha < \frac{n-p}{p}
+\end{aligned}
+\end{equation*}
+\end{minipage}
+故
+$$u(x)=|x|^{-\alpha} \in W^{1,p}(B_1) \Longleftrightarrow \alpha < \frac{n-p}{p}$$
+
+\begin{equation*}
+\begin{aligned}
+内容...
+\end{aligned}
+\end{equation*}
+             
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ 
+   
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%\begin{thebibliography}{99}
+
+ 
+%\bibitem{AF12}%
+%Antunes, P., Freitas, P.: Optimal spectral rectangles and lattice ellipses. \emph{Proc. Royal Soc. London Ser. A.} \textbf{469} (2012), 20120492.
+
+
+  
+
+%\end{thebibliography}
+
+
+\end{document}
+
+
+
+

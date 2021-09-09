@@ -1,0 +1,67 @@
+
+\documentclass{ctexart}
+%此处以后，可以开始用\usepackage{*}添加要用的各类Latex宏包
+\usepackage{amsmath} %推荐使用的数学公式宏包，因为可以用align环境更好地排版行间公式
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{geometry} %调整页面的页边距
+\geometry{left=2.5cm,right=2.5cm,top=2cm,bottom=3cm}%具体的页边距设置
+%\usepackage{graphicx} %插入图片的宏包
+%\usepackage{lineno,hyperref}  % 显示行号，超链接
+%\usepackage{multirow} %插入表格时需要用的合并行的功能
+%\usepackage{amsthm} %插入定理、证明的宏包
+%\usepackage{enumerate} %插入列表的宏包
+%\usepackage{enumitem} %插入列举项目的宏包
+%\usepackage[linesnumbered,lined,boxed]{algorithm2e} %插入算法的宏包
+
+\newtheorem{re}{注}
+\newtheorem{jie}{【解答】}
+\begin{document}
+	%正文部分，包括：题目、摘要、关键字、脚注、章节、参考文献，等等
+	
+	\title{4.2 例10修正} %添加标题
+	
+	\author{周潇翔} %添加作者
+	
+	%\date{} %LaTeX会自动生成日期，如果不需要就加这一步将日期去掉
+	
+	
+	\maketitle %制作封面
+	
+	%	\tableofcontents %加入目录，包括页码（非必需）
+	
+	
+	
+\subsection*{例题}
+		
+		证明极限
+		$$\lim\limits_{n\rightarrow \infty}\sum_{k=1}^{n} \ln \cos \frac{k}{n^{3/2}}=-\frac{1}{6}$$
+\subsection*{[解答]}
+	利用等式$\ln \cos x=-\frac{1}{2}x^2+o(x^2)$，得
+		$$\lim\limits_{x\rightarrow 0}\frac{\displaystyle \ln \cos x+\frac{1}{2}x^2}{x^2}=0$$
+		此时记$\displaystyle a_n^{(k)}=\ln \cos \frac{k}{n^{3/2}}+\frac{1}{2} \frac{k^2}{n^3}$,则有
+		$$\lim\limits_{\frac{k}{n^{3/2}}\rightarrow 0}\frac{\displaystyle \ln \cos \frac{k}{n^{3/2}}+\frac{1}{2} \frac{k^2}{n^3}}{\displaystyle \frac{k^2}{n^3}}=0$$
+		
+		\fbox{
+		\parbox{\textwidth}{
+			这里的意思是，对任意的数列$(n_j,k_j)$满足$\displaystyle\lim\limits_{j\rightarrow \infty}\frac{k_j}{n_j^{3/2}}=0$，我们有
+			$$\lim\limits_{j\rightarrow \infty}\frac{\displaystyle \ln \cos \frac{k_j}{n_j^{3/2}}+\frac{1}{2} \frac{k_j^2}{n_j^3}}{\displaystyle \frac{k_j^2}{n_j^3}}=0$$
+		}
+}
+		$$\Rightarrow\lim\limits_{n\rightarrow \infty} \max_{1\leqslant k\leqslant n}
+		\left\lbrace 
+		\frac{\displaystyle \ln \cos \frac{k}{n^{3/2}}+\frac{1}{2}
+			\frac{k^2}{n^3}}{\displaystyle \frac{k^2}{n^3}}
+		\right\rbrace =0
+		\qquad
+\Rightarrow\lim\limits_{n\rightarrow \infty}\frac{\displaystyle \max_{1\leqslant k\leqslant n} a_n^{(k)}}{\displaystyle \frac{1}{n}}=0$$
+		$$\Rightarrow\lim\limits_{n\rightarrow \infty} \max_{1\leqslant k\leqslant n} n a_n^{(k)}=0
+		\qquad
+	\Rightarrow\lim\limits_{n\rightarrow \infty} \sum_{k=1}^n a_n^{(k)}=0$$
+	所以有
+	$$\lim\limits_{n\rightarrow \infty}\sum_{k=1}^{n} \ln \cos \frac{k}{n^{3/2}}=-\frac{1}{2n^3}\sum_{k=1}^{n}k^2 +\sum_{k=1}^n a_n^{(k)}
+	=-\frac{1}{2n^3}\sum_{k=1}^{n}k^2 +o(1)
+	=-\frac{1}{6}
+	$$
+\end{document}

@@ -1,0 +1,76 @@
+
+\documentclass{ctexart}
+%此处以后，可以开始用\usepackage{*}添加要用的各类Latex宏包
+\usepackage{amsmath} %推荐使用的数学公式宏包，因为可以用align环境更好地排版行间公式
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{geometry} %调整页面的页边距
+\geometry{left=2.5cm,right=2.5cm,top=2cm,bottom=3cm}%具体的页边距设置
+%\usepackage{graphicx} %插入图片的宏包
+%\usepackage{lineno,hyperref}  % 显示行号，超链接
+%\usepackage{multirow} %插入表格时需要用的合并行的功能
+%\usepackage{amsthm} %插入定理、证明的宏包
+%\usepackage{enumerate} %插入列表的宏包
+%\usepackage{enumitem} %插入列举项目的宏包
+%\usepackage[linesnumbered,lined,boxed]{algorithm2e} %插入算法的宏包
+
+\newtheorem{re}{注}
+\newtheorem{jie}{【解答】}
+\begin{document}
+	%正文部分，包括：题目、摘要、关键字、脚注、章节、参考文献，等等
+	
+	\title{练习题2.11 2参考格式} %添加标题
+	
+	\author{周潇翔} %添加作者
+	
+	%\date{} %LaTeX会自动生成日期，如果不需要就加这一步将日期去掉
+	
+	
+	\maketitle %制作封面
+	
+	%	\tableofcontents %加入目录，包括页码（非必需）
+	
+	
+	
+\subsection*{例题}
+		
+		设$A,B \in \mathbb{R},A<B$, $f$ 是 $(a,b)$ 上的连续函数,值在$(a,b)$中的数列$\{x_n\},\{y_n\}$满足
+		$$\lim\limits_{n\rightarrow \infty}x_n=\lim\limits_{n\rightarrow \infty}y_n=b,\lim\limits_{n\rightarrow \infty}f(x_n)=A,\lim\limits_{n\rightarrow \infty}f(y_n)=B$$
+		证明：对于每一个$\eta \in (A,B),$ 存在值在$(a,b)$中的数列$\{z_n\}$满足
+		$$\lim\limits_{n\rightarrow \infty}z_n=b,\lim\limits_{n\rightarrow \infty}f(z_n)=\eta$$
+\subsection*{[解答]}
+		对$\forall \eta \in (A,B)$,固定$m \in \mathbb{N},$我们寻找$\displaystyle z_m \in (b- \frac{1}{m},b)$:
+		
+		$\forall \varepsilon>0$(这里令$\displaystyle \varepsilon = \min \{ \frac{B-\eta}{2},\frac{\eta-A}{2}\}$),
+\begin{alignat*}{2}
+			&\lim\limits_{n\rightarrow \infty}f(x_n)=A \colon \exists N_1 \in \mathbb{N}, s.t.\; \forall n>N_1, |f(x_n)-A|< \varepsilon & \Rightarrow &  f(x_n)< A+ \varepsilon\\
+	&\lim\limits_{n\rightarrow \infty}f(y_n)=B \colon \exists N_2 \in \mathbb{N}, s.t.\; \forall n>N_2, |f(y_n)-B|< \varepsilon & \Rightarrow &  f(y_n)> B- \varepsilon		\\
+	&\lim\limits_{n\rightarrow \infty}x_n=b \colon \exists N_3 \in \mathbb{N}, s.t.\; \forall n>N_3, |x_n-b|< \frac{1}{m} & \Rightarrow &  b-\frac{1}{m}<x_n< b		\\
+	&\lim\limits_{n\rightarrow \infty}y_n=b \colon \exists N_4 \in \mathbb{N}, s.t.\; \forall n>N_4, |y_n-b|< \frac{1}{m} & \Rightarrow &  b-\frac{1}{m}<y_n< b
+\end{alignat*}
+令$n_m=N_1+N_2+N_3+N_4+1$,则
+	
+\begin{align*}
+\left\{
+\begin{aligned}
+b-\frac{1}{m}<\;x_{n_m}< b\\
+b-\frac{1}{m}<\;y_{n_m}< b
+\end{aligned}
+\right.
+&& \qquad f(x_{n_m})<A+\varepsilon<\eta <B-\varepsilon< f(y_{n_m})
+\end{align*}
+
+则由介值定理，存在$z_m$落于$x_{n_m}$与$y_{n_m}$之间($\Rightarrow z_m \in (b-\frac{1}{m},b)$),而$f(z_m)=\eta$,
+
+故我们找到了数列$\{z_m\}$满足$$\lim\limits_{n\rightarrow \infty}z_n=b,\lim\limits_{n\rightarrow \infty}f(z_n)=\eta$$.
+\end{document}		
+		
+		
+		
+		
+		
+
+	
+	
+\end{document}

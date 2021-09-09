@@ -1,0 +1,138 @@
+\documentclass[11pt,A4paper,oneside]{amsart}
+
+%\usepackage{color,graphicx}
+%\usepackage{mathrsfs,amsbsy}
+\usepackage{ctex}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{fancyhdr}
+\usepackage[unicode, bookmarksnumbered]{hyperref}	% 启动超链接和 PDF 文档信息所需
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage[mathscr]{eucal}
+\usepackage{mathrsfs}
+\usepackage{verbatim}
+
+%\usepackage[notcite,notref]{showkeys}
+
+% showkeys  make label explicit on the paper
+
+\makeatletter
+\@namedef{subjclassname@2010}{%
+  \textup{2010} Mathematics Subject Classification}
+\makeatother
+
+\numberwithin{equation}{section}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{defn}[theorem]{Definition}
+
+\theoremstyle{plain}
+\newtheorem{thmsub}{Theorem}[subsection]
+\newtheorem{lemmasub}[thmsub]{Lemma}
+\newtheorem{corollarysub}[thmsub]{Corollary}
+\newtheorem{propositionsub}[thmsub]{Proposition}
+\newtheorem{defnsub}[thmsub]{Definition}
+
+\numberwithin{equation}{section}
+
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}{Remarks}
+
+
+%\renewcommand\thefootnote{\fnsymbol{footnote}}
+%dont use number as footnote symbol, use this command to change
+
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\tr}{tr}
+
+
+\begin{document}
+
+\title[]{\LARGE 补A3：常用积分}
+
+
+\author[]{\large 周潇翔}
+\address{School of Mathematical Sciences\\
+University of Science and Technology of China\\
+Hefei, 230026\\ P.R. China\\}
+\email{xx352229@mail.ustc.edu.cn}
+\maketitle
+
+
+
+
+\begin{abstract}
+列一下A3中证明的非平凡的积分公式供概率论临时使用。
+\end{abstract}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\begin{itemize}
+	\item Gauss积分：$\displaystyle \int_{0}^{+\infty} e^{-x^2}dx= \frac{\sqrt{\pi}}{2}$\\
+	概率论记忆法：$\displaystyle \int_{-\infty}^{+\infty} \frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}dx= 1$
+	\item Dirichlet积分：$\displaystyle \int_{0}^{+\infty} \frac{\sin x}{x} dx=\frac{\pi}{2}$
+	\item Laplace积分：$\displaystyle I(\beta):=\int_{0}^{+\infty} \frac{\cos \beta x}{x^2+\alpha^2} dx\qquad 
+	J(\beta):=\int_{0}^{+\infty} \frac{x\sin \beta x}{x^2+\alpha^2} dx$
+	\item Fresnel积分：$\displaystyle \int_{0}^{+\infty} \sin x^2dx= \int_{0}^{+\infty} \cos x^2dx=\frac{1}{2}\sqrt{\frac{\pi}{2}}$
+	\item $\Gamma$函数：$\Gamma(p)\Gamma(1-p)=\frac{\pi}{\sin p\pi},\quad \Gamma(1/2)=\sqrt{\pi},\quad \lim\limits_{x \rightarrow +\infty} \frac{x^a \Gamma(x)}{\Gamma(x+a)}=1$\\
+	$B$函数：$B(p,q)=\frac{\Gamma(p+q)}{\Gamma(p)\Gamma(q)}$
+\end{itemize}
+就我个人经历，概率论中我用到的主要是Gauss积分、$\Gamma$函数与$B$函数。
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%\begin{thebibliography}{99}
+
+
+%\bibitem{AF12}%
+%Antunes, P., Freitas, P.: Optimal spectral rectangles and lattice ellipses. \emph{Proc. Royal Soc. London Ser. A.} \textbf{469} (2012), 20120492.
+
+
+
+
+
+%\end{thebibliography}
+
+
+\end{document}
+
+
+
+

@@ -1,0 +1,163 @@
+\documentclass[11pt,A4paper,oneside]{amsart}
+
+%\usepackage{color,graphicx}
+%\usepackage{mathrsfs,amsbsy}
+\usepackage{ctex}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{fancyhdr}
+\usepackage[unicode, bookmarksnumbered]{hyperref}	% 启动超链接和 PDF 文档信息所需
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage[mathscr]{eucal}
+\usepackage{mathrsfs}
+\usepackage{verbatim}
+
+%\usepackage[notcite,notref]{showkeys}
+
+% showkeys  make label explicit on the paper
+
+\makeatletter
+\@namedef{subjclassname@2010}{%
+  \textup{2010} Mathematics Subject Classification}
+\makeatother
+
+\numberwithin{equation}{section}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{defn}[theorem]{Definition}
+
+\theoremstyle{plain}
+\newtheorem{thmsub}{Theorem}[subsection]
+\newtheorem{lemmasub}[thmsub]{Lemma}
+\newtheorem{corollarysub}[thmsub]{Corollary}
+\newtheorem{propositionsub}[thmsub]{Proposition}
+\newtheorem{defnsub}[thmsub]{Definition}
+
+\numberwithin{equation}{section}
+
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}{Remarks}
+
+
+%\renewcommand\thefootnote{\fnsymbol{footnote}}
+%dont use number as footnote symbol, use this command to change
+
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\tr}{tr}
+
+
+\begin{document}
+
+\title[]{\LARGE 思考题}
+
+
+\author[]{\large 周潇翔}
+\address{School of Mathematical Sciences\\
+University of Science and Technology of China\\
+Hefei, 230026\\ P.R. China\\}
+\email{xx352229@mail.ustc.edu.cn}
+\maketitle
+
+
+
+
+\begin{abstract}
+寒假列一些思考题.
+\end{abstract}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\section{Lie代数方向}
+设$E$为$n$维内积空间.我们称$E$中的容许集$M$为$E$中满足下列条件的集合：
+\begin{itemize}
+	\item $M=\{e_1,\ldots,e_n\}$为$E$的一组基,且$\lVert e_i\rVert = 1$.
+	\item 对任意$1 \leqslant i<j\leqslant n$,我们有$4(e_i,e_j)^2 \in \{0,1,2,3\}$.
+\end{itemize}
+现对$E$中的某一个容许集$M$,我们可以按照如下方式构建图$\Gamma_M$：
+\begin{itemize}
+	\item 图的顶点取为$M$中的元素
+	\item 两个顶点$e_i,e_j$之间的边数$=4(e_i,e_j)^2$
+\end{itemize}
+试确定所有可能的$\Gamma_M$（更精确地说,是在图的同构意义下确定.思考：如何定义图的同构？）
+\begin{remark}\
+	\begin{enumerate}
+		\item 这道题需要你至少知道内积空间的知识（习题课讲过,可见李尚志的最后一章）,但是这道题较为开放,且背后隐含着有限维半单Lie代数的分类理论,完整的解答详见\cite[p58]{Hum78}.
+		\item 你可以试着从$n=1,2,3$开始做起.这部分直观且结论相当漂亮.
+		\item 这是毛天乐助教在线代习题课上给我们出的思考题,留给我们寒假思考.我还没有完整思考出来.
+	\end{enumerate}
+\end{remark}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{发红包的题}
+打算给做出来下面这道题的同学一点小奖励。
+
+\subsection{近世代数+线性代数}
+记
+$$SL(2,\mathbb{Z}):=\left\{
+\begin{pmatrix}
+a & b \\
+c & d
+\end{pmatrix}\bigg| a,b,c,d \in \mathbb{Z}, ad-bc=1 \right\}$$
+$$A:=\left\{
+\begin{pmatrix}
+24a+1 & b \\
+24c & 24d+1
+\end{pmatrix} \in SL(2,\mathbb{Z}) \bigg| a,b,c,d \in \mathbb{Z} \right\}$$
+证明$A$为$SL(2,\mathbb{Z})$的子群,并求$(SL(2,\mathbb{Z}):A)$的值.
+
+请将此值转换为中文并在其后添加“科大红包”即为支付宝的吱口令.
+
+例如：如这个值为2018,则吱口令就为“二零一八科大红包”.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\begin{thebibliography}{99}
+
+
+\bibitem{Hum78}%
+James E. Humphreys, Introduction to Lie algebras and representation theory, Graduate
+Texts in Mathematics, vol. 9, Springer-Verlag, New York-Berlin, 1978, Second printing,
+revised. MR 499562
+
+
+
+
+
+\end{thebibliography}
+
+
+\end{document}
+
+
+
+
