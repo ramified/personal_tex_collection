@@ -1,0 +1,5 @@
+\beamer@sectionintoc {1}{Belyi fct}{5}{0}{1}
+\beamer@sectionintoc {2}{What is a dessin d'enfants? / Quel est un dessin d'enfants ?}{9}{0}{2}
+\beamer@sectionintoc {3}{Extract informations from the correspondence}{29}{0}{3}
+\beamer@subsectionintoc {3}{1}{basic information}{29}{0}{3}
+\beamer@subsectionintoc {3}{2}{monodromy}{32}{0}{3}

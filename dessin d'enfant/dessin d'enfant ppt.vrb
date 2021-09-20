@@ -1,0 +1,11 @@
+\frametitle{Correspondence}
+\begin{remark}
+^^I$$\{(X,D)\}/_{\sim} \longleftrightarrow \{  (\sigma_0,\sigma_1) \in \Sigma_N \}/_{\text{conj}}$$
+\end{remark}
+\begin{figure}[th]
+^^I\begin{minipage}[b]{\textwidth}
+^^I^^I\centering
+^^I^^I\includegraphics[width=1\textwidth]{figures/table.png}
+^^I\end{minipage}
+\end{figure}
+

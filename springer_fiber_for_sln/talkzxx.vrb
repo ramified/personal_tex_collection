@@ -1,0 +1,47 @@
+\frametitle{Return!}
+\begin{overlayarea}{\linewidth}{\textheight}
+^^IFor $\lambda=(2,1)$, $B_{\lambda} \cong \mathbb{P}^1 \vee \mathbb{P}^1$:
+%^^I^^I^^I\includegraphics[width=\linewidth]{figure/shadow/case(2,1)new.png}
+\only<1,2>{^^I^^I^^I\includegraphics[width=\linewidth]{figure/shadow/case(2,1)series1.png}
+}
+\only<3>{^^I^^I^^I\includegraphics[width=\linewidth]{figure/shadow/case(2,1)series2.png}
+}
+\only<4>{^^I^^I^^I\includegraphics[width=\linewidth]{figure/shadow/case(2,1)series3.png}
+}
+\only<1>{
+^^I^^I^^I\begin{equation*}
+^^I^^I^^I\begin{aligned}
+^^I^^I^^I^^I\pi^{-1}([e_1])=&\left\{ 0 \subseteq \left<e_1\right> \subseteq \left<\ques, \ques\right> \subseteq \mathbb{C}^3 \right\} \ignore{\curvearrowleft \left[\begin{smallmatrix}
+^^I^^I^^I^^I^^I0 & 1 & \\ & 0 & \\ & & 0
+^^I^^I^^I^^I^^I\end{smallmatrix}\right]}&& \\
+^^I^^I^^I^^I\cong & \left\{ 0 \subseteq \left<\ques\right> \subseteq  \mathbb{C}^2 \right\} \ignore{\curvearrowleft \left[\begin{smallmatrix}
+^^I^^I^^I^^I^^I0 &  \\ & 0
+^^I^^I^^I^^I^^I\end{smallmatrix}\right]}&& = B_{1,1}\\
+^^I^^I^^I^^I\pi^{-1}([e_3])=&\left\{ 0 \subseteq \left<e_3\right> \subseteq \left<\ques, \ques\right> \subseteq \mathbb{C}^3 \right\} \ignore{\curvearrowleft \left[\begin{smallmatrix}
+^^I^^I^^I^^I^^I0 & 1 & \\ & 0 & \\ & & 0
+^^I^^I^^I^^I^^I\end{smallmatrix}\right]}&& \\
+^^I^^I^^I^^I\cong & \left\{ 0 \subseteq \left<\ques\right> \subseteq  \mathbb{C}^2 \right\} \ignore{\curvearrowleft \left[\begin{smallmatrix}
+^^I^^I^^I^^I^^I0 & 1 \\ & 0
+^^I^^I^^I^^I^^I\end{smallmatrix}\right]}&& =  B_{2}\\
+^^I^^I^^I^^I\pi^{-1}([e_2]) =&\left\{ 0 \subseteq \left<e_2\right> \subseteq \left<\ques, \ques\right> \subseteq \mathbb{C}^3 \right\} \ignore{\curvearrowleft \left[\begin{smallmatrix}
+^^I^^I^^I^^I^^I0 & 1 & \\ & 0 & \\ & & 0
+^^I^^I^^I^^I^^I\end{smallmatrix}\right]} && = \varnothing \\
+^^I^^I^^I\end{aligned}
+^^I^^I^^I\end{equation*}
+}
+\only<2-4>{
+^^I$$\pi^{-1}([e_1])\cong B_{1,1} \qquad \pi^{-1}([e_3])\cong B_{2}\qquad \pi^{-1}([e_2])\cong \varnothing$$
+\only<3-4>{^^I^^I^^I^^I\begin{equation*}
+^^I\begin{aligned}
+^^I\pi^{-1}([ae_1+e_3])=&\left\{ 0 \subseteq \left<ae_1+e_3\right> \subseteq \left<\ques, \ques\right> \subseteq \mathbb{C}^3 \right\} \ignore{\curvearrowleft \left[\begin{smallmatrix}
+^^I^^I0 & 1 & \\ & 0 & \\ & & 0
+^^I^^I\end{smallmatrix}\right]} \\
+^^I\cong & \left\{ 0 \subseteq \left<f_3\right> \subseteq \left<\ques, \ques\right> \subseteq \mathbb{C}^3 \right\} \ignore{\curvearrowleft \left[\begin{smallmatrix}
+^^I^^I0 & 1 & \\ & 0 & \\ & & 0
+^^I^^I\end{smallmatrix}\right]} \\
+^^I\end{aligned}
+^^I\end{equation*}
+%By this way, $\pi^{-1}(\mathbb{P}^1 \setminus \{[e_1] \}) \cong B_2 \times \mathbb{C}$ induces an affine paving.
+}
+}
+\end{overlayarea}

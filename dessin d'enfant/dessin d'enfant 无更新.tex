@@ -1,0 +1,276 @@
+
+\documentclass[reqno,11pt]{amsart}
+
+%\usepackage{color,graphicx}
+%\usepackage{mathrsfs,amsbsy}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage[mathscr]{eucal}
+\usepackage{float}
+\usepackage{longtable}
+\usepackage{mathrsfs}
+\usepackage{multicol}
+\usepackage[all,pdf]{xy}
+\usepackage[a4paper,left=3cm,right=3cm]{geometry}
+
+%\usepackage[notcite,notref]{showkeys}
+
+% showkeys  make label explicit on the paper
+
+\makeatletter
+\@namedef{subjclassname@2010}{%
+  \textup{2010} Mathematics Subject Classification}
+\makeatother
+
+\numberwithin{equation}{section}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{defn}[theorem]{Definition}
+\newtheorem{ques}[theorem]{Question}
+\newtheorem*{fact}{Facts}
+\newtheorem{eg}[theorem]{Example}
+
+\theoremstyle{plain}
+\newtheorem{thmsub}{Theorem}[subsection]
+\newtheorem{lemmasub}[thmsub]{Lemma}
+\newtheorem{corollarysub}[thmsub]{Corollary}
+\newtheorem{propositionsub}[thmsub]{Proposition}
+\newtheorem{defnsub}[thmsub]{Definition}
+
+\numberwithin{equation}{section}
+
+
+\theoremstyle{remark}
+
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}{Remarks}
+\newcommand*\widebar[1]{%
+	\hbox{%
+		\vbox{%
+			\hrule height 0.5pt % The actual bar
+			\kern0.6ex%         % Distance between bar and symbol
+			\hbox{%
+				\kern 0em%      % Shortening on the left side
+				\ensuremath{#1}%
+				\kern 0em%      % Shortening on the right side
+			}%
+		}%
+	}%
+}
+\renewcommand\thefootnote{\fnsymbol{footnote}}
+%dont use number as footnote symbol, use this command to change
+
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Gal}{\operatorname{Gal}}
+
+\begin{document}
+\date{}
+
+\title
+{Dessin d'enfant: an Introduction}
+
+
+\author{Xiaoxiang Zhou}
+\address{School of Mathematical Sciences\\
+University of Science and Technology of China\\
+Hefei, 230026\\ P.R. China\\} 
+\email{email:xx352229@mail.ustc.edu.cn}
+
+
+
+
+
+\begin{abstract}
+In this talk, we will talk about the relation between Belyi map and dessin d'enfant, and than extract imformations from the dessin.
+
+Contents: section 4.1-4.3 and some examples from section 4.6.
+\end{abstract}
+
+
+
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ Last time, we talked about the Belyi's Theorem:
+\begin{theorem}[Thm 3.1]
+	Let $S$ be a cpt RS, then $S$ is defined over $\bar{\mathbb{Q}}$ iff $S$ admits a Belyi fct.
+\end{theorem}
+   
+This time, we talked a specific Belyi fct (ramified at $0,1,\infty$), and
+\begin{itemize}
+	\item combine it with a kind of special graph (on $S$);
+	\item extract information from this graph.
+\end{itemize}
+
+A black box is useful for us to familiar with Belyi fct (But not actually used in this talk):
+\begin{center}
+	\fbox{\textbf{Prop 3.34:} Belyi fcts are defined over $\bar{\mathbb{Q}}$.}
+	%%%%更逼真的盒子
+\end{center}
+\begin{remark}
+	We can talk about the Galois group $\Gal(\bar{\mathbb{Q}} / \mathbb{Q})$ acts on $\{S \longrightarrow \mathbb{P}^1 \}$.
+	%%%%%%%%画图
+\end{remark}
+\begin{eg}
+	When $S=\mathbb{P}^1$, then an Belyi fct $f(z)$ is an rational fct with coefficient in $\bar{\mathbb{Q}}$ such that $f$ maps any zero or pole of $f'(z)$ to $0,1,\infty$. In short,
+	
+	\begin{enumerate}[1.]
+		\item  $f(z) \in \bar{\mathbb{Q}}(z)$;
+		\item For any $z_0$ such that $f'(z_0)=0 \text{ or } \infty$, $f(z_0)=0,1 \text{ or } \infty$.
+	\end{enumerate}
+
+For example,
+\begin{itemize}
+	\item $f(z)=z^n$;
+	\item $\displaystyle f(z)=-\frac{256}{27}z^3(z-1)$;
+	\item $\displaystyle f(z)=\frac{3+i}{5}z^3(z-1)^2 \left(z-\frac{4}{25}(4+3i) \right)$;
+	\item $\displaystyle f(z)=\frac{4}{27} \frac{(1-z+z^2)^3}{z^2(z-1)^2}$;
+	\item $\displaystyle f(z)=C\frac{z^4 (z-1)^2}{z+\frac{9+2\sqrt{10}}{18}}$.
+\end{itemize}
+\end{eg}
+\section{What is a dessin d'enfants? / Quel est un dessin d'enfants ?}
+
+We postponed the abstract definition of the dessin d'enfant. A better question: How to draw a dessin d'enfants from a Belyi fct?
+%%%%%%%%Picture
+
+\begin{proposition}
+	\item the graph $D$ is drawed on the RS $S$;
+	\item $D$ is bicolored;
+	\item $X \smallsetminus D$ is union of finitely many topo discs;
+	\item $D$ is connected.
+\end{proposition}
+
+Abstractly, we have the following concept:
+\begin{defn}[Def 4.1]
+	 A dessin d'enfant, or simply a dessin, is a pair
+	 $(X, \mathcal{D})$ where $X$ is an oriented compact topological surface, and
+	 $\mathcal{D} \subset X$ is a finite graph such that: 
+	 	\begin{enumerate}[(i)]
+	 		\item  $\mathcal{D}$ is connected.
+	 		\item  $\mathcal{D}$ is bicoloured, i.e. the vertices have been given either white or black colour and vertices connected by an edge have different colours.
+	 		\item  $X \smallsetminus \mathcal{D}$ is the union of finitely many topological discs, which we call faces of  $\mathcal{D}$.
+	 	\end{enumerate}
+\end{defn}
+\begin{eg}
+	example pictures
+\end{eg}
+\begin{proposition}[Prop 4.20]
+	%%%%%%Pictures
+\end{proposition}
+\begin{eg}
+	example pictures
+\end{eg}
+\begin{remark}
+	Belyi maps have some kind of rigid: they're decided by dessins (be viewed as skeleton of Belyi fcts)
+\end{remark}
+\begin{proof}[Proof of Prop.]
+	\begin{enumerate}[1.]
+		\item Given a pair $(X,D)$, we need
+		\begin{itemize}
+			\item give a RS structure of $X$;
+			\item give a fct $f:X\longrightarrow \mathbb{P}^1$.
+		\end{itemize}
+	$f$ gives a RS structure of X (Riemann extension)
+	\item  compability
+	\item $$(S,f) \rightarrow (S,D_f) \rightarrow (S,f_{D_f}) \qquad (S,f) \sim (S,f_{D_f})?$$
+	$$(X,D) \rightarrow (X_D,f_D) \rightarrow (X_D,D_{f_D}) \qquad (X,D) \sim (X_D,D_{f_D})?$$
+	\end{enumerate}
+\end{proof}
+\section{Extract informations from the correspondence}
+\subsection{basic information}
+	\begin{longtable}{c|c}
+	\hline
+	$\{\text{Belyi fct}\}/\sim$ & $\{\text{Dessin d'enfants}\}/\sim$	\\
+	
+	\hline
+	\endhead
+	\hline
+	$\{\text{Belyi fct}\}/\sim$ & $\{\text{Dessin d'enfants}\}/\sim$	\\
+	
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+	\caption{Correspondence}
+	\endlastfoot
+	
+	$\# f^{-1}(0) + \# f^{-1}(1)$ & $v$\\
+	$\# f^{-1}(\infty)$ & $f$ \\
+	$\deg f$ & $e$\\
+	$2-2g(S)$ & $v+f-e$\\
+	Ram index of $x \in f^{-1}(0)$ & $\#$ black dots adjecent to $x$\\
+	Ram index of $x \in f^{-1}(1)$ & $\#$ white dots adjecent to $x$\\
+	Ram index of $x \in f^{-1}(\infty)$ & $\frac{1}{2}$ $\#$ sides of face\\
+	
+	
+	
+	\hline								
+\end{longtable}
+\newpage
+\begin{longtable}{c|c|c}
+	\hline
+	$\{\text{Belyi fct}\}/\sim$ & $\{\text{Dessin d'enfants}\}/\sim$	& $\{\text{perm rep pair}\}/\sim $\\
+	
+	\hline
+	\endhead
+	\hline
+	$\{\text{Belyi fct}\}/\sim$ & $\{\text{Dessin d'enfants}\}/\sim$	& $\{\text{perm rep pair}\}/\sim $\\
+	
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+	%		\caption{Correspondence}
+	\endlastfoot
+	
+	$\# f^{-1}(0) $ & $\#$ $\{$white dots$\}$ &$\#$ $\{$cycles of  $\sigma_0\}$\\
+	$ \# f^{-1}(1)  $ & $\#$ $\{$black dots$\}$&$\#$ $\{$cycles of  $\sigma_1\}$\\
+	$\# f^{-1}(\infty)$ & $f$ &$\#$ $\{$cycles of  $\sigma_1\sigma_0\}$\\
+	$\deg f$ & $e$ & $N=\#$ $\{$ cycles of  $Id\}$\\
+	$2-2g(S)$ & $v+f-e$ & $\#\{\ldots \sigma_0\}$+$\#\{\ldots \sigma_1\}$+$\#\{\ldots \sigma_1\sigma_0\}$-N\\
+	Ram index of $x \in f^{-1}(0)$ & $\#$ $\{$black dots adjacent to $x\}$ & length of a cycle on $\sigma_0$\\
+	Ram index of $x \in f^{-1}(1)$ & $\#$ $\{$white dots adjacent to $x\}$ & length of a cycle on $\sigma_1$\\
+	Ram index of $x \in f^{-1}(\infty)$ & $\frac{1}{2}$ $\#$ $\{$sides of face$\}$ & length of a cycle on $\sigma_0\sigma_1$\\
+	\hline
+	
+\end{longtable}
+\subsection{monodromy}
+\subsection{Galois action}
+\subsection{construct new from old}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+ 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+\end{document}
+
+
+
+

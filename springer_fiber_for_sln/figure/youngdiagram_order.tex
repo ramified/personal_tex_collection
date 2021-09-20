@@ -1,0 +1,56 @@
+\documentclass[]{article}
+\usepackage{tikz-cd,tikz-3dplot} 
+\usetikzlibrary{shapes.geometric, arrows, backgrounds,external,decorations}
+\usepackage{TooYoung}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{calc}
+\usepackage{geometry}
+\geometry{paperwidth=9.2in,paperheight=5.2in,left=0cm,right=0cm,top=1in,bottom=0cm}%具体的页边距设置
+
+%include other needed packages here   
+
+\makeatletter
+\newcommand{\mycommand}[2][\@empty]{%
+	    \ifx\@empty#1\relax%如果非空
+		#2
+		\else%另一种情况
+		\let\myla\relax%防止禁止重定义
+		\newlength{\myla}
+		\settowidth{\myla}{$1$}
+		\let\mylb\relax
+		\newlength{\mylb}
+		\settowidth{\mylb}{$1^{\scriptscriptstyle#1}$}
+		\newcommand*{\mylc}{\dimexpr -\myla + \mylb\relax}%计算额外长度
+		#2^{\hspace{-0.5\mylc}\scriptscriptstyle#1\hspace{-0.5\mylc}}
+		\fi}%消解额外长度
+\makeatother
+
+\usetikzlibrary{decorations.pathreplacing,fit,shapes.geometric}
+
+\begin{document}
+
+% https://tikzcd.yichuanshen.de/#N4Igdg9gJgpgziAXAbVABwnAlgFyxMJZADgBoAGAXVJADcBDAGwFcYkQAdDgTzAHMAFAEYAlCAC+pdJlz5CKAOykh1Ok1bsuvQQCYxk6djwEiATmWqGLNok49+w5fqkgMRuUQBspHZfU27bQEAZmdDWRMUMl8aKw1bLQcdJwkXNwj5ZCFyHz9rTXtBIWUUg1cZY0yAFlIqvPjAhyqw8vdI5GTPeoDEwQBWFvTKohziboKgz0GKjxQhZLrY-wmHYrXStJn2oRqupfyEwsd1tem2zKFvMf2G3uOSk7OMr1rxw6DgjfDhlF23xsENVEqW+sw6pGuagOAIEfS+rWecxyiyhtyOyVOIIRPyynX+dwxDyeOJ2EPx6IeRKxQzBZBRcR6FL01K2mW8e1RjI+PmJYJqkIZK0BPJZ5yIZA5gveDk+mLKNPa3lM5KCQPhCrZpAUKplpFCosRWRykuW0t0PnVrKI2S1OvNyWZ8qtUTJNy5uoxvO2OWVbqFIUpwKdYrmyQFpphDqp4lUMCgfHgRFAADMAE4QAC2SByIBwECQQjKacz2ZoeaQOiL6aziGSufziCqVZLiGK9aQTZcxZrbfLiGCzZrdb7fUHBZzfaEha71aQ5nbrfIY8QcIXpmXnwXnmX3gXCmXSgXxA3ZYb82XNQX55nLcvk+PN5rd7Po8fSFXk9fKdniF3k4Hb6tsOZ4Ad+LbzKeBbroBEELjo05gT2ZBXtBiEFshfY6J2aGth+DbwcuQh4RW2EgN2BbEa226AfOk7UThh6TqR5GtpuTGEWx+FLjBtH4aBZE-kIvEVtxOFCJxFaVjxkG1vRAktvBMk6FJOGKXBcksWpmH7oBWFKRpP56XBX7yUOz4Vg+Yl-vhOlWUplmmQW1kFrZjmtoxZ5LpQ4hAA
+%\arrow[from=lluu, crossing over]
+%\arrow[]{}[above=1mm]{2}
+%\begin{tikzpicture}
+%\draw (0,0) rectangle (0,20);
+%\end{tikzpicture}\\
+\begin{center}
+	\begin{tikzcd}[row sep={0.9cm,between origins}, column sep={0.9cm,between origins},nodes={inner sep=3pt}]
+		&&	&  &                                 &  &                                                   &  &                                                  &                               & |[inner sep=0cm]|\mycommand[]{\yng(1)} \arrow[ld] \arrow[rd]                      &                                   &                                              &  &                                                       &  &                                &  &                     &&\\&&
+		&  &                                 &  &                                                   &  &                                                  & |[inner sep=0cm]|\mycommand[]{\yng(2)} \arrow[rd] \arrow[ld] &                    \trianglelefteq                                  & |[inner sep=0cm]|{\mycommand[]{\yng(1,1)}} \arrow[ld] \arrow[rd] &                                                    &  &                                                       &  &                                &  &                     &&\\&&
+		&  &                                 &  &                                                   &  & \mycommand[]{\yng(3)} \arrow[lldd] \arrow[dd]                  &          \trianglelefteq                     & {\mycommand[]{\yng(2,1)}} \arrow[lldd] \arrow[dd] \arrow[rrdd]     &       \trianglelefteq                            & {\mycommand[]{\yng(1,1,1)}} \arrow[rrdd] \arrow[dd]              &  &                                                       &  &                                &  &                     &&\\&&
+		&  &                                 &  &                                                   &  &                                                  &                               &                                                      &                                   &                                                    &  &                                                       &  &                                &  &                     &&\\&&
+		&  &                                 &  & \mycommand[]{\yng(4)} \arrow[lldd] \arrow[dd]                   & \trianglelefteq & |[]|{\mycommand[]{\yng(3,1)}} \arrow[lldd] \arrow[dd] \arrow[rrdd] &           \trianglelefteq                    & {\mycommand[]{\yng(2,2)}} \arrow[lldd, crossing over]                &             \trianglelefteq                      & {\mycommand[]{\yng(2,1,1)}} \arrow[lldd] \arrow[dd] \arrow[rrdd] & \trianglelefteq & {\mycommand[]{\yng(1,1,1,1)}} \arrow[rrdd] \arrow[dd]               &  &                                &  &                     &&\\&&
+		&  &                                 &  &                                                   &  &                                                  &                               &                                                      &                                   &                                                    &  &                                                       &  &                                &  &                     &&\\&&
+		&  & \mycommand[]{\yng(5)} \arrow[lldd] \arrow[dd] & \trianglelefteq & {\mycommand[]{\yng(4,1)}} \arrow[lldd] \arrow[dd] \arrow[rrddd] & \trianglelefteq & {\mycommand[]{\yng(3,2)}} \arrow[d] \arrow[lldd, crossing over]   &                   \trianglelefteq            & {\mycommand[]{\yng(3,1,1)}} \arrow[llddd] \arrow[dd] \arrow[rrddd] &                     \trianglelefteq              & {\mycommand[]{\yng(2,2,1)}}\arrow[from=lluu, crossing over]  \arrow[lldd, crossing over] \arrow[d]   &\trianglelefteq  & {\mycommand[]{\yng(2,1,1,1)}} \arrow[llddd] \arrow[dd] \arrow[rrdd] & \trianglelefteq & {\mycommand[]{\yng(1,1,1,1,1)}} \arrow[rrdd]\arrow[dd] &  &                     &&\\&&
+		&  &                                 &  &                                                   &  & |[yshift=-0.5cm,overlay]|{\mycommand[]{\yng(3,3)}}  \arrow[rrd,phantom, "\trianglelefteq"{anchor=center, rotate=-25} description]          \arrow[dd,phantom, "\leqslant"{anchor=center, rotate=-90} description]                            &                               &                                                      &                                   & |[yshift=-0.5cm,overlay]|{\mycommand[]{\yng(2,2,2)}} \arrow[rrd,phantom, "\trianglelefteq"{anchor=center, rotate=-25} description]  \arrow[dd,phantom, "\leqslant"{anchor=center, rotate=-90} description]                                     &  &                                                       &  &                                &  &                     &&\\&&
+		\mycommand[]{\yng(6)} & \trianglelefteq & {\mycommand[]{\yng(5,1)}}                     & \trianglelefteq & {\mycommand[]{\yng(4,2)}} \arrow[rru,phantom, "\trianglelefteq"{anchor=center, rotate=25} description] \arrow[rrd,phantom, "\trianglelefteq"{anchor=center, rotate=-25} description]                                      &  &                                                  &                               & {\mycommand[]{\yng(3,2,1)}} \arrow[from=lluu, crossing over] \arrow[rru,phantom, "\trianglelefteq"{anchor=center, rotate=25} description] \arrow[rrd,phantom, "\trianglelefteq"{anchor=center, rotate=-25} description]                                      &                                   &                                                    &  & {\mycommand[]{\yng(2,2,1,1)}}  \arrow[from=lluu, crossing over]                                     & \trianglelefteq & {\mycommand[]{\yng(2,1,1,1,1)}}    & \trianglelefteq & \mycommand[]{\yng(1,1,1,1,1,1)} &&\\&&
+		&  &                                 &  &                                                   &  & |[yshift=0.3cm,overlay]|{\mycommand[]{\yng(4,1,1)}} \arrow[rru,phantom, "\trianglelefteq"{anchor=center, rotate=25} description]                                   &                               &                                                      &                                   & |[yshift=0.3cm,overlay]|{\mycommand[]{\yng(3,1,1,1)}}    \arrow[rru,phantom, "\trianglelefteq"{anchor=center, rotate=25} description]                                &  &                                                       &  &                                &  &        &&
+	\end{tikzcd}
+\end{center}
+
+
+
+\end{document}
