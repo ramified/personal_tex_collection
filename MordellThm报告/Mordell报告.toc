@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{熟知的代数数论结论}{4}{0}{1}
+\beamer@sectionintoc {2}{对象:椭圆曲线}{8}{0}{2}
+\beamer@sectionintoc {3}{算术几何基本定理}{11}{0}{3}
+\beamer@sectionintoc {4}{BSD猜想:简介}{16}{0}{4}

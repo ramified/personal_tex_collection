@@ -1,0 +1,20 @@
+
+\documentclass[border={0pt 0pt 0pt 0pt}]{standalone}
+\usepackage{tikz-cd,tikz-3dplot} 
+\usetikzlibrary{calc,intersections,through,backgrounds,decorations.pathmorphing, decorations.shapes,decorations.markings,patterns,fadings}
+%include other needed packages here   
+\begin{document}
+\pgfdeclareradialshading{myshading}{\pgfpointorigin}
+{
+	color(0mm)=(pgftransparent!0);
+	color(7mm)=(pgftransparent!0);
+	color(8mm)=(pgftransparent!100);
+	color(15mm)=(pgftransparent!100)
+}
+\pgfdeclarefading{fading3}{\pgfuseshading{myshading}}
+\begin{tikzpicture}
+
+\pgfsetfading{fading3}{\pgftransformshift{\pgfpoint{1cm}{1cm}}}
+\fill [red] (0,0) rectangle (1,1);
+\end{tikzpicture}
+\end{document}

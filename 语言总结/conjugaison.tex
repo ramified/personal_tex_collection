@@ -1,0 +1,257 @@
+\documentclass[12pt,A4paper,oneside,reqno]{amsart}
+
+
+%\usepackage{color,graphicx}
+%\usepackage{mathrsfs,amsbsy}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{ctex}
+\usepackage{colortbl}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{hhline}
+\usepackage[unicode, bookmarksnumbered]{hyperref}	% 启动超链接和 PDF 文档信息所需
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+\usepackage[mathscr]{eucal}
+\usepackage{mathrsfs}
+%\usepackage{mathtools}
+\usepackage{verbatim}
+\usepackage{wrapfig}
+\usepackage{geometry} %调整页面的页边距
+\usepackage{pifont}
+\usepackage{longtable}
+\usepackage{multirow,makecell}
+\usepackage{multicol}
+\geometry{left=2.5cm,right=2.5cm,top=1cm,bottom=1cm}%具体的页边距设置
+\usepackage{titletoc}
+%\usepackage[notcite,notref]{showkeys}
+
+% showkeys  make label explicit on the paper
+
+%\makeatletter
+%\@namedef{subjclassname@2010}{%
+%  \textup{2010} Mathematics Subject Classification}
+%\makeatother
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+\numberwithin{equation}{section}
+\definecolor{yellow}{cmyk}{0.2,0,0,0}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{defn}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+
+\theoremstyle{plain}
+\newtheorem{exercise}{Exercise}[section]
+
+\theoremstyle{plain}
+\newtheorem{thmsub}{Theorem}[subsection]
+\newtheorem{lemmasub}[thmsub]{Lemma}
+\newtheorem{corollarysub}[thmsub]{Corollary}
+\newtheorem{propositionsub}[thmsub]{Proposition}
+\newtheorem{defnsub}[thmsub]{Definition}
+
+\numberwithin{equation}{section}
+
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}[theorem]{Remarks}
+\newtheorem{tip}[theorem]{Tip}
+\newtheorem{tips}[theorem]{Tips}
+\newtheorem{ex}[theorem]{Exercise}
+\newtheorem{eg}[theorem]{Example}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{hint}[theorem]{Hint}
+
+\newcommand*{\thick}[1]{\text{\boldmath$#1$}}
+\newcommand*{\cir}[1]{\;$\ding{19#1}$\;}%临时使用
+\newcommand*{\norm}[1]{\lVert#1\rVert}
+%\renewcommand\thefootnote{\fnsymbol{footnote}}
+%dont use number as footnote symbol, use this command to change
+
+
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\cha}{\operatorname{char}}
+\DeclareMathOperator{\Proj}{\operatorname{Proj}}
+\DeclareMathOperator{\rank}{\operatorname{rank}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\End}{\operatorname{End}}
+
+\begin{document}
+
+\begin{multicols}{2}       % 分两栏 若花括号中为3则是分三列
+% \dottedcontents{<section>}[<left>]{<above-code>}
+% {<label width>}{<leader width>}
+
+\dottedcontents{subsection}[75pt]{}{3.3em}{0pt}
+
+% center the toc heading
+
+\end{multicols}
+
+
+
+	\begin{longtable}{c|l|l|l|l|l|l}
+	\hline
+	&	\textcolor{red}{\^{e}}tre	&	\textcolor{red}{a}voir	&	aller	&	-er	&	-ir	&	-dre	\\
+	\hline
+	\endhead
+	\hline
+	&	\textcolor{red}{\^{e}}tre	&	\textcolor{red}{a}voir	&	aller	&	-er	&	-ir	&	-dre	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+		\caption{法语动词现在式变位}
+	\endlastfoot
+je/j'	&	\textcolor{red}{s}uis	&	j'\textcolor{red}{a}i	&	vais	&	-e	&	-is	&	-ds	\\
+tu	&	\textcolor{red}{e}s	&	\phantom{j'}\textcolor{red}{a}s	&	vas	&	-es	&	-is	&	-ds	\\
+il/elle	&	\textcolor{red}{e}st	&	\phantom{j'}\textcolor{red}{a}	&	va	&	-e	&	-it	&	-d	\\
+nous	&	\textcolor{red}{s}ommes	&	\phantom{j'}\textcolor{red}{a}vons	&	allons	&	-ons	&	-ons	&	-dons	\\
+vous	&	\textcolor{red}{\^{e}}tes	&	\phantom{j'}\textcolor{red}{a}vez	&	allez	&	-ez	&	-ez	&	-dez	\\
+ils/elles	&	\textcolor{red}{s}ont	&	\phantom{j'a}ont	&	vont	&	-ent	&	-ent	&	-dent	\\
+
+		
+			\hline								
+			\end{longtable}
+
+	\begin{longtable}{c|l|l||l|l|l|l}
+	\hline
+	&	pouvoir	&	vouloir	&	devoir	&	recevoir	&	voir	&	savoir	\\
+
+	\hline
+	\endhead
+	\hline
+	&	pouvoir	&	vouloir	&	devoir	&	recevoir	&	voir	&	savoir	\\
+
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+	\caption{法语变位:oir}
+	\endlastfoot
+
+																				
+je/j'	&	peux	&	veux	&	dois	&	reçois	&	vois	&	sais	\\
+tu	&	peux	&	veux	&	dois	&	reçois	&	vois	&	sais	\\
+il/elle	&	peut	&	veut	&	doit	&	reçoit	&	voit	&	sait	\\
+nous	&	pouvons	&	voulons	&	devons	&	recevons	&	vo\textcolor{red}{y}ons	&	savons	\\
+vous	&	pouvez	&	voulez	&	devez	&	recevez	&	vo\textcolor{red}{y}ez	&	savez	\\
+ils/elles	&	peuvent	&	veulent	&	doivent	&	reçoivent	&	\textcolor{red}{voi}ent	&	\textcolor{red}{sav}ent	\\
+
+	
+	\hline								
+\end{longtable}
+	\begin{longtable}{c|l|l|l||l}
+	\hline
+	&	par\textcolor{gray}{tir}	&	dor\textcolor{gray}{mir}	&	fini\textcolor{gray}{r}	&	ouvrir	\\
+
+
+	\hline
+	\endhead
+	\hline
+	&	par\textcolor{gray}{tir}	&	dor\textcolor{gray}{mir}	&	fini\textcolor{gray}{r}	&	ouvrir	\\
+
+
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+	\caption{法语变位:ir}
+	\endlastfoot
+	
+je/j'	&	pars	&	dors	&	finis	&	ouvre	\\
+tu	&	pars	&	dors	&	finis	&	ouvres	\\
+il/elle	&	part	&	dort	&	finit	&	ouvre	\\
+nous	&	partons	&	dormons	&	fini\textcolor{red}{ss}ons	&	ouvrons	\\
+vous	&	partez	&	dormez	&	fini\textcolor{red}{ss}ez	&	ouvrez	\\
+ils/elles	&	partent	&	dorment	&	fini\textcolor{red}{ss}ent	&	ouvrent	\\
+
+
+	\hline								
+\end{longtable}
+	\begin{longtable}{c|l|l|l}
+	\hline
+	&	prendre	&	attendre	&	répondre	\\
+	
+	\hline
+	\endhead
+	\hline
+	&	prendre	&	attendre	&	répondre	\\
+
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+	\caption{法语变位:dre}
+	\endlastfoot
+								
+je/j'	&	prends	&	attends	&	réponds	\\
+tu	&	prends	&	attends	&	réponds	\\
+il/elle	&	prend	&	attend	&	répond	\\
+nous	&	\textcolor{red}{pren}ons	&	attendons	&	répondons	\\
+vous	&	\textcolor{red}{pren}ez	&	attendez	&	répondez	\\
+ils/elles	&	\textcolor{red}{prenn}ent	&	attendent	&	répondent	\\
+
+	
+	
+	
+	\hline								
+\end{longtable}
+	\begin{longtable}{c|l|l|l|l||l|l|l}
+	\hline
+	&	écrire	&	boire	&	faire	&	plaire	&	vivre	&	mettre	&	conna\textcolor{red}{î}tre	\\
+
+	\hline
+	\endhead
+	\hline
+	&	écrire	&	boire	&	faire	&	plaire	&	vivre	&	mettre	&	conna\textcolor{red}{î}tre	\\
+
+
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+	\caption{法语变位:re}
+	\endlastfoot
+je/j'	&	écris	&	bois	&	fais	&	plais	&	vis	&	mets	&	connais	\\
+tu	&	écris	&	bois	&	fais	&	plais	&	vis	&	mets	&	connais	\\
+il/elle	&	écrit	&	boit	&	fait	&	pla\textcolor{red}{î}t	&	vit	&	met	&	conna\textcolor{red}{î}t	\\
+nous	&	écrivons	&	b\textcolor{red}{u}vons	&	fai\textcolor{red}{s}ons	&	plai\textcolor{red}{s}ons	&	vivons	&	mettons	&	connai\textcolor{red}{ss}ons	\\
+vous	&	écrivez	&	b\textcolor{red}{u}vez	&	fai\textcolor{red}{tes}	&	plai\textcolor{red}{s}ez	&	vivez	&	mettez	&	connai\textcolor{red}{ss}ez	\\
+ils/elles	&	écrivent	&	b\textcolor{red}{oi}vent	&	f\textcolor{red}{ont}	&	plai\textcolor{red}{s}ent	&	vivent	&	mettent	&	connai\textcolor{red}{ss}ent	\\
+
+	
+	
+	\hline								
+\end{longtable}
+
+
+
+
+\end{document}
+
+
+
+

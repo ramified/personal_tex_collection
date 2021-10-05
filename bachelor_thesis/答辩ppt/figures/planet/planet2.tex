@@ -1,0 +1,60 @@
+
+\documentclass[border={0pt 0pt 0pt 0pt}]{standalone}
+\usepackage{tikz-cd,tikz-3dplot} 
+\usetikzlibrary{calc,intersections,through,backgrounds,decorations.pathmorphing, decorations.shapes,decorations.markings}
+%include other needed packages here   
+\begin{document}
+	\makeatletter
+	\tikzset{nomorepostaction/.code={\let\tikz@postactions\pgfutil@empty}}
+	\makeatother
+	\begin{tikzpicture}[thick,inner sep=0pt,label distance=0.1cm,
+	one/.style={
+		postaction={nomorepostaction,decorate,
+			decoration={markings,mark=at position 0.7 with {\arrow[very thick]{Latex}}}
+		}
+	},
+	three/.style={
+		postaction={nomorepostaction,decorate,
+			decoration={markings,mark=at position 0.5 with {\arrow[very thick]{>}}}
+		}
+	},
+	two/.style={
+		postaction={nomorepostaction,decorate,
+			decoration={markings,mark=at position 0.67 with {\arrow[very thick]{Latex}}},
+			decoration={markings,mark=at position 0.57 with {\arrow[very thick]{Latex}}}
+	}}]
+	\coordinate [] (A) at (1,0);
+	\coordinate [] (B) at (-1,0);
+	
+	\coordinate [] (E) at
+	($ (A) ! 1 ! 108:(B) $) {};
+	\coordinate [label=below:$0$] (D) at
+	($ (E) ! 1 ! 108:(A) $) {};
+	\coordinate [] (C) at
+	($ (D) ! 1 ! 108:(E) $) {};
+	\coordinate [] (d) at
+	($ (A) ! .5 ! (B) $) {};
+	\coordinate [] (e) at
+	($ (B) ! .5 ! (C) $) {};
+	\coordinate [] (a) at
+	($ (C) ! .5 ! (D) $) {};
+	\coordinate [label={below right}:$1$] (b) at
+	($ (D) ! .5 ! (E) $) {};
+	\coordinate [] (c) at
+	($ (E) ! .5 ! (A) $) {};
+	\coordinate [label=left:$\infty$] (T) at
+	($ (d) ! tan(54) ! -90:(A) $) {};
+\begin{pgfonlayer}{background}
+\fill[ultra thick, blue!55] (D) -- (E) -- (T) -- (D);
+\end{pgfonlayer}
+	\draw[ultra thick, one] (b) -- (D);
+	\draw[ultra thick, one] (b) -- (E);
+	\draw[ultra thick, two] (D) -- (T);
+	\draw[ultra thick, two] (E) -- (T);
+	\draw[dashed, thick] (E) -- (A) -- (B) -- (C) -- (D);
+	\foreach \point in {A,B,C,D,E,T}
+	\fill [black,opacity=1] (\point) circle (1.5pt);
+	\foreach \point in {a,b,c,d,e}
+	\fill [red,opacity=1] (\point) circle (1.5pt);
+	\end{tikzpicture}
+\end{document}

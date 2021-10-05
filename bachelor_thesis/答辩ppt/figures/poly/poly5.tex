@@ -1,0 +1,52 @@
+\documentclass[border={-10pt 0pt 0pt 0pt}]{standalone}
+\usepackage{tikz-cd,tikz-3dplot} 
+\usetikzlibrary{shapes.geometric, arrows, backgrounds,external}
+%include other needed packages here   
+\begin{document}
+\tdplotsetmaincoords{65}{100}
+\begin{tikzpicture}[tdplot_main_coords,scale=1,line join=round]
+\pgfmathsetmacro\a{0.6}
+\pgfmathsetmacro{\phi}{\a*(1+sqrt(5))/2}
+\path 
+coordinate(A) at (0,\phi,\a)
+coordinate(B) at (0,\phi,-\a)
+coordinate(C) at (0,-\phi,\a)
+coordinate(D) at (0,-\phi,-\a)
+coordinate(E) at (\a,0,\phi)
+coordinate(F) at (\a,0,-\phi)
+coordinate(G) at (-\a,0,\phi)
+coordinate(H) at (-\a,0,-\phi)
+coordinate(I) at (\phi,\a,0)
+coordinate(J) at (\phi,-\a,0)
+coordinate(K) at (-\phi,\a,0)
+coordinate(L) at (-\phi,-\a,0); 
+\draw[dashed, thick]    (B) -- (H) -- (F) 
+(D) -- (L) -- (H) --cycle 
+(K) -- (L) -- (H) --cycle
+(K) -- (L) -- (G) --cycle
+(C) -- (L) (B)--(K) (A)--(K)
+;
+
+\draw[ultra thick]
+(A) -- (I) -- (B) --cycle 
+(F) -- (I) -- (B) --cycle 
+(F) -- (I) -- (J) --cycle
+(F) -- (D) -- (J) --cycle
+(C) -- (D) -- (J) --cycle
+(C) -- (E) -- (J) --cycle
+(I) -- (E) -- (J) --cycle
+(I) -- (E) -- (A) --cycle
+(G) -- (E) -- (A) --cycle
+(G) -- (E) -- (C) --cycle
+; 
+%\foreach \point/\position in {A/right,B/below,C/above,D/left,E/{above right},F/below,G/above,H/left,I/below,J/right,K/below,L/left}
+%{
+%\fill (\point) circle (1.5pt);
+%\node[\position=3pt] at (\point) {$\point$};
+%}
+%\begin{pgfonlayer}{background}
+%\filldraw [line width=3mm,join=round,black!10,,opacity=0]
+%(G.north -| A.east) rectangle (F.south -| D.west);
+%\end{pgfonlayer}
+\end{tikzpicture}
+\end{document}

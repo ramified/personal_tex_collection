@@ -1,0 +1,101 @@
+\documentclass{ctexart}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{delarray}%编排数组、矩阵
+\usepackage{mathtools}
+\usepackage{extarrows}
+\usepackage{xcolor}
+\usepackage{geometry} %调整页面的页边距
+\geometry{left=2.5cm,right=2.5cm,top=3cm,bottom=3cm}
+\title{我看过的书单}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows, arrows.meta, fit, backgrounds, decorations.pathmorphing, petri, calc}
+\date{\today}
+
+\DeclareMathOperator{\Id}{\operatorname{Id}}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\cha}{\operatorname{char}}
+\DeclareMathOperator{\Proj}{\operatorname{Proj}}
+\DeclareMathOperator{\rank}{\operatorname{rank}}
+\DeclareMathOperator{\Ker}{\operatorname{Ker}}
+\DeclareMathOperator{\coker}{\operatorname{Coker}}
+\DeclareMathOperator{\Img}{\operatorname{Im}}
+\DeclareMathOperator{\tor}{\operatorname{tor}}
+
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\Pic}{\operatorname{Pic}}
+\newcommand{\Jac}{\operatorname{Jac}}
+\newcommand{\MaxSpec}{\operatorname{MaxSpec}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\Mod}{\operatorname{\textbf{Mod}}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Grp}{\operatorname{\textbf{Grp}}}
+\newcommand{\Set}{\operatorname{\textbf{Set}}}
+\newcommand{\Stab}{\operatorname{Stab}}
+\newcommand{\ord}{\operatorname{ord}}
+\definecolor{rede}{rgb}{1,0.97647,0.97647}
+\definecolor{browne}{rgb}{0.619608,0.258824,0}
+\begin{document}
+	\author{周潇翔}
+\maketitle
+\section{already}
+2020年4月21日时做，按熟悉程度降序
+
+\begin{itemize}
+\item \cite[Chap 1-6]{ahlfors1979complex}:复分析
+\item \cite[Chap 1-18.7]{vakil2017rising}:代数几何(大量跳步)
+\item \cite{humphreys2012introduction}:Naive的理论
+\item 课程讲义：王作勤老师的微分流形和刘世平老师的微分几何,还有王作勤老师的辛几何前4节
+\item 古老的无法摆上台面的书：数学分析教程,谢惠民,李尚志等...
+\item \cite{bott2013differential}:大部分直观理解解决了\\[0cm]
+\item \cite[1-8]{morandi2012field}:Galois理论
+\item \cite{tate1974the}:椭圆曲线的算术,只看了Mordell定理证明需要的部分作为大研,还速读了\cite{silverman1992rational}
+\item \cite[Chap 1-5]{fermat2013dream}:好书,就是经常卡
+\item \cite[Chap 1,2]{周蜀林2005PDE}:补过的材料
+\item \cite[Chap 1-4,7,8]{Li2019modularform}:模形式入门书
+\item ?[Chap 10]GTM133.J.Harris.-.Algebraic.Geometry.a.first.course
+\item \cite[Chap 1-4]{冯克勤2000代数数论}:代数数论(一日速成)
+\end{itemize}
+\section{fully forgotten}
+按熟悉度降序.
+\begin{itemize}
+	\item \cite{梅加强2000黎曼曲面讲义,forster2012lectures,springer1981introduction,anvari2009automorphisms}:黎曼面的材料看的很杂,基本没有覆盖过某一本的证明细节
+	\item \cite[6]{alperin2012groups}:上课教材
+	\item \cite[Chap 1-4,6]{陈亚浙1991}:上课教材,追过细节,不记得了.类似的有\cite{周蜀林2019Schauder}
+	\item \cite{atiyah2018introduction}:题目没做,内容看过.\cite[1-5]{altman2013term}
+	\item \cite{bump1998automorphic}:自守形式,旁听过课以这本书为教材,没看
+	\item \cite{howe1995perspectives}:不变量理论,当时需要的部分(Schur-Weyl对偶)没看懂
+\end{itemize}
+\section{ongoing}
+强烈的毕设需求。。。
+\begin{itemize}
+	\item \cite[Chap 1-4]{bruinier20081}:正在看第6章.大量跳步.
+	\item \cite{klein2003lectures,klein1892vorlesungen}毕设的书
+	\item \cite{mumford1974abelian}:目标是看懂$\sigma$函数的基本性质
+	\item \cite{shimura1971introduction}:老师推荐的,目标是看懂模方程
+	\item \cite{shurman1997geometry}:对应的补充材料，看到第2章。学习如何用现代语言描述Klein的理论。
+	\item \cite{mumford1995algebraic}\cite{reid1988undergraduate}:目标是看懂27条直线。
+	
+\end{itemize}
+\section{in future}
+按渴望程度排序
+\begin{itemize}
+	\item \cite{moduli1991mathematical},想知道Klein四次曲线的知识.
+	\item \cite{bruinier20081}:\cite{bruinier20081}的后续.
+	\item \cite{fricke1897vorlesungen}:毕设相关,据说写的不好
+	\item Mline教授的数论全家桶:\cite{milne2006elliptic,milne1986jacobian,milne2005introduction}
+\end{itemize}
+
+\renewcommand\refname{{\textbf{参考文献}}}
+\bibliography{reference}	
+\bibliographystyle{ieeetr}
+
+
+\end{document}

@@ -1,0 +1,109 @@
+\documentclass[border={-10pt 0pt 0pt 0pt}]{standalone}
+\usepackage{tikz-cd,tikz-3dplot} 
+\usetikzlibrary{shapes.geometric, arrows, backgrounds,external,bending,decorations.pathmorphing, decorations.shapes,decorations.markings}
+%include other needed packages here   
+
+\begin{document}
+	\makeatletter
+\tikzset{nomorepostaction/.code={\let\tikz@postactions\pgfutil@empty}}
+\makeatother
+	\tdplotsetmaincoords{108}{100}
+	\begin{tikzpicture}[tdplot_main_coords,scale=0.2,line join=round,
+		one/.style={
+		postaction={nomorepostaction,decorate,
+			decoration={markings,mark=at position 0.6 with {\arrow[very thick]{Latex}}}
+		}
+	},
+	three/.style={
+		postaction={nomorepostaction,decorate,
+			decoration={markings,mark=at position 0.5 with {\arrow[very thick]{>}}}
+		}
+	},
+	two/.style={
+		postaction={nomorepostaction,decorate,
+			decoration={markings,mark=at position 0.65 with {\arrow[very thick]{Latex}}},
+			decoration={markings,mark=at position 0.57 with {\arrow[very thick]{Latex}}}
+	}}]
+	\pgfmathsetmacro\a{4}
+	\pgfmathsetmacro{\phi}{\a*(1+sqrt(5))/2}
+	\pgfmathsetmacro{\phd}{\a*(3+sqrt(5))/2}
+	\pgfmathsetmacro\ab{1}
+%	\coordinate (O1) at (0,0,0);
+%	\draw[thick,->] (0,0,0) -- (\a,0,0) node[anchor=north east]{$x$};
+%	\draw[thick,->] (0,0,0) -- (0,\a,0) node[anchor=north west]{$y$};
+%	\draw[thick,->] (0,0,0) -- (0,0,\a) node[anchor=south]{$z$};
+	\path 
+	coordinate [label={above right}:$C$] (A) at (\phi,\phi,\phi)
+	coordinate [label={below}:$B$] (B) at (\phi,\phi,-\phi)
+	coordinate(C) at (\phi,-\phi,\phi)
+	coordinate [label={above left}:$C$] (D) at (\phi,-\phi,-\phi)
+	coordinate(E) at (-\phi,\phi,\phi)
+	coordinate(F) at (-\phi,\phi,-\phi)
+	coordinate(G) at (-\phi,-\phi,\phi)
+	coordinate(H) at (-\phi,-\phi,-\phi)
+	coordinate(I) at (0,\phd,\a)
+	coordinate(J) at (0,\phd,-\a)
+	coordinate(K) at (0,-\phd,\a)
+	coordinate(L) at (0,-\phd,-\a)
+	coordinate [label={right}:$A$] (M) at (\phd,\a,0)
+	coordinate(N) at (\phd,-\a,0)
+	coordinate(MN) at (\phd,0,0)
+	coordinate(O) at (-\phd,\a,0)
+	coordinate(P) at (-\phd,-\a,0)
+	coordinate(Q) at (\a,0,\phd)
+	coordinate(R) at (-\a,0,\phd)
+	coordinate(S) at (\a,0,-\phd)
+	coordinate(T) at (-\a,0,-\phd)
+	coordinate(MN') at (\ab*\phd,0,0)
+	coordinate(B') at (\ab*\phi,\ab*\phi,-\ab*\phi)
+	; 
+	\draw[dashed, thick]    
+	(G) -- (P) -- (O) -- (E)
+	(O) -- (F) -- (J)
+	(L) -- (H) -- (P)
+	(H) -- (T) -- (F)
+	(T) -- (S)
+	(A) -- (Q) -- (R) -- (E) -- (I) --cycle
+	(A) -- (M) -- (B) -- (J) -- (I) --cycle
+	(R) -- (G) -- (K) -- (C) -- (Q) --cycle
+	(C) -- (N) -- (M) 
+	(K) -- (L) -- (D) -- (N)
+	(D) -- (S) -- (B)
+	;
+
+	\draw[ultra thick, one] (MN) -- (A);
+	\draw[ultra thick, one] (MN) -- (D);
+	\draw[ultra thick, two] (B) -- (A);
+	\draw[ultra thick, two] (B) -- (D);
+	\foreach \point in {A,B,D,M}
+	{
+	\fill (\point) circle (7pt);
+	}	
+	
+
+%	\foreach \point/\position in {A/right,B/below,C/above,D/left,E/{above right},F/below,G/above,H/left,I/below,J/right,K/below,L/left,M/left,N/left,O/left,P/left,Q/left,R/left,S/left,T/left}
+%	{
+%	\fill (\point) circle (1.5pt);
+%	\node[\position=3pt] at (\point) {$\point$};
+%	}
+\begin{pgfonlayer}{background}
+\fill[ultra thick, blue!50] (N) -- (M) -- (B) -- (S) -- (D) -- (N) -- (N);
+\fill[ultra thick, gray!30] (MN) -- (M) -- (A) -- cycle;
+\fill[ultra thick, gray!70] (B) -- (M) -- (A) -- cycle;
+\end{pgfonlayer}
+%箭头
+\tdplotsetrotatedcoords{0}{90}{0}
+\tdplotsetrotatedcoordsorigin{(MN')}
+\tdplotdrawarc[tdplot_rotated_coords, thick,color=orange!30!red,arrows = {-Stealth[length=10pt, inset=2pt,flex]}]{(0,0,0)}{\a/1.5}{105}%
+{295}{}{}
+
+\tdplotsetrotatedcoords{-45}{90}{0}
+\tdplotsetrotatedcoordsorigin{(B')}
+\tdplotdrawarc[tdplot_rotated_coords, thick,color=orange!30!red,arrows = {-Stealth[length=10pt, inset=2pt,flex]}]{(0,0,0)}{1.95*\a}{200}%
+{270}{anchor=south west,color=black}{$\theta’$}
+%	\begin{pgfonlayer}{background}
+%	\filldraw [line width=3mm,join=round,black!10,opacity=0]
+%	(R.north -| L.east) rectangle (S.south -| J.west);
+%	\end{pgfonlayer}
+	\end{tikzpicture}
+\end{document}

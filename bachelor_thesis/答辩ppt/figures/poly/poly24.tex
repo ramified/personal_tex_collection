@@ -1,0 +1,68 @@
+\documentclass[border={-10pt 0pt 0pt 0pt}]{standalone}
+\usepackage{tikz-cd,tikz-3dplot} 
+\usetikzlibrary{shapes.geometric, arrows, backgrounds,external}
+%include other needed packages here   
+\begin{document}
+			\tdplotsetmaincoords{60}{100}
+\begin{tikzpicture}[tdplot_main_coords,scale=2,line join=round]
+\pgfmathsetmacro\a{0.4}
+\pgfmathsetmacro{\phi}{\a*(1+sqrt(5))/2}
+\pgfmathsetmacro{\phd}{\a*(3+sqrt(5))/2}
+\path 
+coordinate(A) at (\phi,\phi,\phi)
+coordinate(B) at (\phi,\phi,-\phi)
+coordinate(C) at (\phi,-\phi,\phi)
+coordinate(D) at (\phi,-\phi,-\phi)
+coordinate(E) at (-\phi,\phi,\phi)
+coordinate(F) at (-\phi,\phi,-\phi)
+coordinate(G) at (-\phi,-\phi,\phi)
+coordinate(H) at (-\phi,-\phi,-\phi)
+coordinate(I) at (0,\phd,\a)
+coordinate(J) at (0,\phd,-\a)
+coordinate(K) at (0,-\phd,\a)
+coordinate(L) at (0,-\phd,-\a)
+coordinate(M) at (\phd,\a,0)
+coordinate(N) at (\phd,-\a,0)
+coordinate(O) at (-\phd,\a,0)
+coordinate(P) at (-\phd,-\a,0)
+coordinate(Q) at (\a,0,\phd)
+coordinate(R) at (-\a,0,\phd)
+coordinate(S) at (\a,0,-\phd)
+coordinate(T) at (-\a,0,-\phd)
+; 
+\draw[dashed, thick]    
+(G) -- (P) -- (O) -- (E)
+(O) -- (F) -- (J)
+(L) -- (H) -- (P)
+(H) -- (T) -- (F)
+(T) -- (S)
+;
+\draw[dashed, ultra thick, blue]    
+(G) -- (H) -- (D)
+(H) -- (F)
+;
+\draw[ultra thick, blue]
+(C) -- (G) -- (E) -- (A) --cycle
+(C) -- (D) -- (B) -- (A)
+(E) -- (F) -- (B)
+;
+\draw[thick]
+(A) -- (Q) -- (R) -- (E) -- (I) --cycle
+(A) -- (M) -- (B) -- (J) -- (I) --cycle
+(R) -- (G) -- (K) -- (C) -- (Q) --cycle
+(C) -- (N) -- (M) 
+(K) -- (L) -- (D) -- (N)
+(D) -- (S) -- (B)
+; 
+%\foreach \point/\position in {A/right,B/below,C/above,D/left,E/{above right},F/below,G/above,H/left,I/below,J/right,K/below,L/left,M/left,N/left,O/left,P/left,Q/left,R/left,S/left,T/left}
+%{
+%\fill (\point) circle (1.5pt);
+%\node[\position=3pt] at (\point) {$\point$};
+%}
+%\begin{pgfonlayer}{background}
+%\filldraw [line width=3mm,join=round,black!10,opacity=0]
+%(R.north -| L.east) rectangle (S.south -| J.west);
+%\end{pgfonlayer}
+%\end{tikzpicture}
+\end{tikzpicture}
+\end{document}

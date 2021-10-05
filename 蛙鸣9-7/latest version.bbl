@@ -1,0 +1,117 @@
+\begin{thebibliography}{10}
+
+\bibitem{wanglin2014}
+汪林.
+\newblock {\em 实分析中的反例}.
+\newblock 高等教育出版社, 2014.
+
+\bibitem{wang2021topo}
+王作勤.
+\newblock {\em 拓扑学讲稿}.
+\newblock 2020.
+\newblock url:
+  \url{http://staff.ustc.edu.cn/~wangzuoq/Courses/20S-Topology/index.html}.
+
+\bibitem{Li2019modularform}
+李文威.
+\newblock {\em 模形式初步}.
+\newblock 科学出版社, 2020.
+\newblock url: \url{https://wwli.asia/downloads/books/Modulform.pdf}.
+
+\bibitem{beauville1996complex}
+Arnaud Beauville and Beauville Arnaud.
+\newblock {\em Complex algebraic surfaces}.
+\newblock Number~34. Cambridge University Press, 1996.
+
+\bibitem{freedman1982topology}
+Michael~Hartley Freedman et~al.
+\newblock The topology of four-dimensional manifolds.
+\newblock {\em J. Differential Geom}, 17(3):357--453, 1982.
+\newblock url:
+  \url{https://maths.dur.ac.uk/users/mark.a.powell/1982_The\%20topology\%20of\%20four-dimensional\%20manifolds.pdf}.
+
+\bibitem{hartshorne2013algebraic}
+Robin Hartshorne.
+\newblock Algebraic geometry.
+\newblock volume~52. Springer Science \& Business Media, 2013.
+
+\bibitem{kodaira1964structure}
+Kunihiko Kodaira.
+\newblock On the structure of compact complex analytic surfaces, i.
+\newblock {\em American Journal of Mathematics}, 86(4):751--798, 1964.
+
+\bibitem{kodaira1966structure}
+Kunihiko Kodaira.
+\newblock On the structure of compact complex analytic surfaces, ii.
+\newblock {\em American Journal of Mathematics}, 88(3):682--721, 1966.
+
+\bibitem{kodaira1968compact}
+Kunihiko Kodaira.
+\newblock On compact analytic surfaces, iii.
+\newblock {\em Annals of Mathematics}, pages 1--40, 1968.
+
+\bibitem{kodaira1968structure}
+Kunihiko Kodaira.
+\newblock On the structure of complex analytic surfaces, iv.
+\newblock {\em American Journal of Mathematics}, 90(4):1048--1066, 1968.
+
+\bibitem{kollar2009lectures}
+J{\'a}nos Koll{\'a}r.
+\newblock {\em Lectures on resolution of singularities (AM-166)}.
+\newblock Princeton University Press, 2009.
+
+\bibitem{milnor1962unique}
+John Milnor.
+\newblock A unique decomposition theorem for 3-manifolds.
+\newblock {\em American Journal of Mathematics}, 84(1):1--7, 1962.
+\newblock url:
+  \url{https://www.ams.org/journals/tran/1969-142-00/S0002-9947-1969-0246303-2/S0002-9947-1969-0246303-2.pdf}.
+
+\bibitem{perelman2002entropy}
+Grisha Perelman.
+\newblock The entropy formula for the ricci flow and its geometric
+  applications.
+\newblock {\em arXiv preprint math/0211159}, 2002.
+\newblock url: \url{https://arxiv.org/pdf/math/0211159v1.pdf}.
+
+\bibitem{perelman2003ricci}
+Grisha Perelman.
+\newblock Ricci flow with surgery on three-manifolds.
+\newblock {\em arXiv preprint math/0303109}, 2003.
+\newblock url: \url{https://arxiv.org/pdf/math/0303109v1.pdf}.
+
+\bibitem{Schm2021moduli}
+Johannes Schmitt.
+\newblock {\em The moduli space of curves}.
+\newblock 2021.
+\newblock url:
+  \url{https://www.math.uni-bonn.de/people/schmitt/ModCurves/Script.pdf}.
+
+\bibitem{serre1956geometrie}
+Jean-Pierre Serre.
+\newblock G{\'e}om{\'e}trie alg{\'e}brique et g{\'e}om{\'e}trie analytique.
+\newblock 6:1--42, 1956.
+\newblock url: \url{http://archive.numdam.org/article/AIF_1956__6__1_0.pdf}.
+
+\bibitem{vakil2004algsurf}
+Ravi Vakil.
+\newblock Math 245a topics in algebraic geometry: Introduction to intersection
+  theory in algebraic geometry.
+\newblock {\em preprint}, 2004.
+\newblock url: \url{http://math.stanford.edu/~vakil/245/}.
+
+\bibitem{vakil2017rising}
+Ravi Vakil.
+\newblock The rising sea: Foundations of algebraic geometry.
+\newblock {\em preprint}, 2017.
+\newblock url:
+  \url{http://math.stanford.edu/~vakil/216blog/FOAGnov1817public.pdf}.
+
+\bibitem{john2014geometrization}
+John Zhang.
+\newblock A discussion of {Thurston}’s geometrization conjecture.
+\newblock {\em preprint}, 2014.
+\newblock url:
+  \url{https://sites.math.washington.edu/~morrow/papers/john-thesis.pdf}.
+
+\end{thebibliography}

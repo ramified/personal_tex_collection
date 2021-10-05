@@ -1,0 +1,23 @@
+\contentsline {section}{\tocsection {}{1}{预备知识}}{1}{section.1}% 
+\contentsline {section}{\tocsection {}{2}{椭圆曲线的定义}}{4}{section.2}% 
+\contentsline {section}{\tocsection {}{3}{椭圆曲线上的群结构}}{6}{section.3}% 
+\contentsline {section}{\tocsection {}{4}{简要思路与无穷递降法}}{10}{section.4}% 
+\contentsline {section}{\tocsection {}{5}{弱Mordell定理的证明}}{14}{section.5}% 
+\contentsline {subsection}{\tocsubsection {}{5.1}{Galois上同调的引入(工具)}}{15}{subsection.5.1}% 
+\contentsline {subsection}{\tocsubsection {}{5.2}{m=2的情况}}{17}{subsection.5.2}% 
+\contentsline {subsection}{\tocsubsection {}{}{\relax $\@@underline {\hbox {Step1}}\mathsurround \z@ $\relax }}{17}{section*.2}% 
+\contentsline {subsection}{\tocsubsection {}{}{\relax $\@@underline {\hbox {Step2}}\mathsurround \z@ $\relax }}{18}{section*.3}% 
+\contentsline {subsection}{\tocsubsection {}{}{\relax $\@@underline {\hbox {Step3}}\mathsurround \z@ $\relax }}{18}{section*.4}% 
+\contentsline {subsection}{\tocsubsection {}{}{\relax $\@@underline {\hbox {Step4}}\mathsurround \z@ $\relax }}{19}{section*.5}% 
+\contentsline {subsection}{\tocsubsection {}{}{\relax $\@@underline {\hbox {Step5}}\mathsurround \z@ $\relax }}{20}{section*.6}% 
+\contentsline {subsection}{\tocsubsection {}{5.3}{一般情况,使用域扩张}}{21}{subsection.5.3}% 
+\contentsline {subsection}{\tocsubsection {}{5.4}{弱Mordell定理与Sha群,Selmer群}}{27}{subsection.5.4}% 
+\contentsline {subsection}{\tocsubsection {}{}{\relax $\@@underline {\hbox {Step1}}\mathsurround \z@ $\relax }}{28}{section*.7}% 
+\contentsline {subsection}{\tocsubsection {}{}{\relax $\@@underline {\hbox {Step2}}\mathsurround \z@ $\relax }}{29}{section*.8}% 
+\contentsline {subsection}{\tocsubsection {}{}{\relax $\@@underline {\hbox {Step3}}\mathsurround \z@ $\relax }}{30}{section*.9}% 
+\contentsline {subsection}{\tocsubsection {}{}{\relax $\@@underline {\hbox {Step4}}\mathsurround \z@ $\relax }}{31}{section*.10}% 
+\contentsline {section}{\tocsection {}{6}{Mordell定理的证明}}{32}{section.6}% 
+\contentsline {section}{\tocsection {}{7}{Mordell-Weil定理的陈述}}{42}{section.7}% 
+\contentsline {section}{\tocsection {}{8}{BSD猜想的陈述}}{43}{section.8}% 
+\contentsline {section}{\tocsection {}{9}{致谢}}{46}{section.9}% 
+\contentsline {section}{\tocsection {}{}{{\textbf {参考文献}}}}{46}{section*.11}% 

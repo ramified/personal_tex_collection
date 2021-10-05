@@ -1,0 +1,14 @@
+\documentclass{standalone}
+
+\usepackage{amsmath,tikz}
+\usetikzlibrary{cd,decorations.pathreplacing}
+
+\begin{document}
+\begin{tikzcd}[column sep=tiny]
+	Kk(b_1)                                                  &                                                     \\
+	{} \arrow[rd]                                            & K \arrow[dd, "\Gamma", no head] \arrow[lu, no head] \arrow[dd, start anchor=north, end anchor=south, no head, xshift=2.5em, decorate, decoration={brace}, "G" right=3pt]\\
+	K(b_1) \arrow[rd, no head] \arrow[uu, "\Gamma", no head] & {}                                                  \\
+	& k(b_1) \cap K \arrow[d, no head]                    \\
+	& k                                                  
+\end{tikzcd}
+\end{document}

@@ -1,0 +1,41 @@
+\documentclass[border={-10pt 0pt 0pt 0pt}]{standalone}
+\usepackage{tikz-cd,tikz-3dplot} 
+\usetikzlibrary{shapes.geometric, arrows, backgrounds,external}
+%include other needed packages here   
+\begin{document}
+\tdplotsetmaincoords{70}{100}
+\begin{tikzpicture}[tdplot_main_coords,scale=1,line join=round]
+\pgfmathsetmacro\a{1.5}
+\pgfmathsetmacro{\phi}{\a*(1+sqrt(5))/2}
+\path 
+coordinate(A) at (0,0,0)
+coordinate(B) at (0,0,\a)
+coordinate(C) at (0,\a,0)
+coordinate(D) at (0,\a,\a)
+coordinate(E) at (-\a,0,0)
+coordinate(F) at (-\a,0,\a)
+coordinate(G) at (-\a,\a,0)
+coordinate(H) at (-\a,\a,\a);
+\draw[dashed, thick]    (A) -- (E) -- (F) 
+(E) -- (G)
+
+;
+
+\draw[ultra thick]
+(A) -- (B) -- (D) -- (C) --cycle
+(B) -- (F) -- (H) -- (D)
+(H) -- (G) -- (C)
+; 
+%\foreach \point/\position in {A/right,B/below,C/above,D/left,E/{above right},F/below,G/above,H/left}
+%{
+%	\fill (\point) circle (1.5pt);
+%	\node[\position=3pt] at (\point) {$\point$};
+%}
+%\begin{pgfonlayer}{background}
+%\filldraw [line width=3mm,join=round,black!10,opacity=0]
+%(H.north -| G.east) rectangle (A.south -| B.west);
+%\end{pgfonlayer}
+\end{tikzpicture}
+
+	
+\end{document}

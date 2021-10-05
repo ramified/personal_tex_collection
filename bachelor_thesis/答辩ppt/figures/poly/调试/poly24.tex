@@ -1,0 +1,24 @@
+\documentclass[border={-10pt 0pt 0pt 0pt}]{standalone}
+\usepackage{tikz-cd,tikz-3dplot} 
+\usetikzlibrary{shapes.geometric, arrows, backgrounds,external,decorations.pathmorphing, decorations.shapes,decorations.markings}
+
+%include other needed packages here   
+\begin{document}
+\makeatletter
+\tikzset{nomorepostaction/.code={\let\tikz@postactions\pgfutil@empty}}
+\makeatother
+
+\begin{tikzpicture}[
+every path/.style={
+	very thick,
+	postaction={nomorepostaction,decorate,
+		decoration={markings,mark=at position 0.5 with {\arrow{>}}}
+	}
+}
+]
+\draw (-4,0)--(4,0);
+\draw (4,0)--(4,2);
+\draw (4,2)--(-4,2);
+\draw (-4,2)--(-4,0);
+\end{tikzpicture}
+\end{document}

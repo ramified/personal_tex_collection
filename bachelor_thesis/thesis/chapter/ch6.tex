@@ -1,0 +1,266 @@
+\chapter{一般公式}
+本章给出$\L$态射$T_{poly}(\R^d)\ra D_{poly}(\R^d)$,\,推广了第三章的星积.首先做一些预备工作.
+
+\section{容许图}
+
+称(有向无环)图$\G$为容许图,\,若
+
+(1)点集$V_\G=\{1,\dots,n\}\sqcup \{{\overline 1},\dots,{\overline m}
+      \}$,\,其中$n,m\in \Z_{\ge 0}$,\,\,$2n+2-m\ge 0$.\, $\{1,\dots ,n\}$中的点称为第一类点,\,$\{ {\overline 1},\dots,{\overline m}\}$中的点称为第二类点.
+
+(2)每条边$(v_1,v_2)\in E_\G$始于第一类点,\,即$v_1\in \{1,\dots,n\}$.
+
+(3)对每个第一类点$k\in\{1,\dots,n\}$,\,始于$k$的边
+$$Star(k)=\{(v_1,v_2)\in E_\G| \,v_1=k\}$$
+为$(e_k^1,\dots,e_k^{\# Star(k)})$.
+
+第三章中考虑的图为$m=2$且每个始于第一类点的边数为$2$的特例.
+
+
+
+\section{构形空间上的微分形式}
+
+$\OC_{2,0}$同伦等价于$S^1\simeq\R/2\pi\Z$.\,$C_2=\OC_2$作为其边界分量之一自然等同于$S^1$.其他边界分量为两个闭区间($\OC_{1,1}$)粘结端点.
+
+称光滑映射$\phi: \OC_{2,0}\ra S^1$为角映射,\,若$\phi$限制到$C_2\simeq S^1$上为从正上方逆时针旋转的角度,\,且$\phi$将下半区间$\OC_{1,1}\simeq [0,1]$映为$S^1$中一点.
+
+将$\phi([(x,y)])$简记为$\phi(x,y)$,\,其中$x\ne y\in \H\sqcup \R$.由定义若$x$恒在$\R$上,\,则$d\phi(x,y)=0$.第三章中使用的$\phi^{h}$为一个角映射的例子.一般情况下$\phi$不必是调和的.
+
+设$\Gamma$为有$n,m$个(第一类与第二类)点和$2n+m-2$条边的容许图.定义$\Gamma$的权
+$$W_\G={1\over (2\pi)^{2n+m-2}}
+       \prod_{k=1}^n {1\over
+(\# Star (k))!} 
+        \int\limits_{\OC_{n,m}^+}\,\bigwedge _{e\in E_G} 
+        d\phi_e.$$
+这里$\OC_{n,m}^+$为$C_{n,m}$中$\R$上的点按升序$q_1<\dots<q_m$排列的连通分支的闭包.
+
+$Conf_{n,m}$的定向为坐标空间$\R^m\supset \{(q_1,\dots,q_m)|\,q_j\in \R\}$的标准定向与$p_i\in\H \subset \R^2$对应的平面$\R^2$的标准定向之积.群$G^{(1)}$是偶数维的,\,且装备了自然定向,\,由其自由传递作用于复流形$\H$.商空间$C_{n,m}=Conf_{n,m}/G^{(1)}$装备了自然定向.
+
+$\G$的每条边$e$定义了$\OC_{n,m}$到$\OC_{2,0}$或$\OC_{1,1}\subset \OC_{2,0}$的遗忘映射.这里将$\OC_{1,1}$等同于$\OC_{2,0}$的下半区间\,.$\phi$通过$\OC_{n,m}\ra \OC_{2,0}$拉回到$\OC_{n,m}$上,\,记作$\phi_e$.
+
+$W_\G$中的积分为紧带角流形上光滑微分形式的积分,\,故绝对收敛.
+
+
+
+\section{图的Pre-$\L$态射}
+
+对有$n,m$个点和$2n+m-2+l$条边的容许图$\Gamma$,\,定义线性映射
+$$\U_\G:\otimes
+        ^n T_{poly}(\R^d)\ra D_{poly}(\R^d)[1+l-n].$$
+$\U_\G$仅有一个非零分量$(\U_\G)_{(k_1,\dots,k_n)}$,\,其中$k_i=\# Star(i)-1,\,i=1,\dots,n$.若$l=0$,\,反对称化$\U_\G$后我们得到了一个pre-$\L$态射.
+
+设$\ga_1,\dots,\ga_n$为$\R^d$上次数为$(k_1+1),\dots,(k_n+1)$的多向量场,\,$f_1,\dots, f_m$为$\R^d$上的函数.我们将给出$\R^d$上的函数
+$$\Phi=\left(
+             { \U}_\G(\ga_1\otimes\dots\otimes
+             \ga_n)\right)(f_1\otimes
+             \dots \otimes f_m).$$
+设$I:E_\G\ra \{1,\dots,d\}$.对每个第一类点$i$,\,定义($\R^d$上的函数)
+$$\psi_i=\langle \ga_i, dx^{I(e^1_i)}\otimes\dots
+                \otimes dx^{I(e^{k_i+1}_i)}\rangle$$
+为多向量场$\ga_i$的系数.这里等同
+$$\xi_1\wedge\dots\wedge\xi_{k+1}\ra
+                 \sum_{\sigma\in S_{k+1}} sgn(\sigma)\,
+                  \xi_{\sigma_1}\otimes\dots
+                  \otimes \xi_{\sigma_{k+1}
+                  }\in \G(\R^d,T^{\otimes(k+1)}).$$
+对每个第二类点$\overline j$,\,定义$\psi_{\overline j}=f_j$.\,
+$\G$的每个点对应$\R^d$上的函数$\psi_i$或$\psi_{\overline j}$.每条边对应指标$I(e)$.定义
+$$\Phi_I=\left(\prod_{e\in E_\G,\,e=(*,v)}
+               \p_{I(e)}\right) \psi_v$$
+及
+$$\Phi=\sum_{I:E_\G\ra \{1,\dots,d\}}\Phi_I.$$
+$\Phi$在$\R^d$的仿射变换群作用下不变.
+
+
+
+\section{$X=\R^d$时的主定理及证明}
+
+定义pre-$\L$态射$\U:T_{poly}(\R^d)\ra D_{poly}(\R^d)$.\,Taylor系数\\
+$\U_n:\otimes
+        ^n T_{poly}(\R^d)\to D_{poly}(\R^d)[1-n]$由
+$$\U_n=\sum_{m\ge 0} \,\, 
+\sum_{\G\in G_{n,m}} 
+W_\G \times \U_\G$$
+给出,\,\,$n\ge 1$.这里$G_{n,m}$表示有$n,m$个点及$2n+m-2$条边的的容许图之集.我们自动有$2n+m-2\ge 0$.
+
+\begin{thm}
+$\U$为$\L$态射,\,且为拟同构.
+\end{thm}
+
+$\U$为$\L$态射的条件为
+$$
+    f_1\cdot\left(\U_n(\ga_1\wedge\dots\wedge \ga_n)\right)
+    (f_2\otimes\dots\otimes f_m)\pm \left(\U_n(\ga_1\wedge\dots\wedge 
+    \ga_n)\right)
+    (f_1\otimes\dots\otimes f_{m-1})\cdot f_m+$$
+    
+    $$\sum_{i=1}^{m-1} \pm\left(\U_n(\ga_1\wedge\dots\wedge \ga_n)\right)
+      (f_1\otimes\dots \otimes (f_i f_{i+1})\otimes\dots\otimes f_m)
+      +$$
+      
+    $$\sum_{i\ne j}\pm 
+  \left(\U_{n-1}([\ga_i,\ga_j]\wedge \ga_1\wedge\dots\wedge \ga_n)
+  \right)(f_1\otimes\dots\otimes f_m)+$$
+  $$
+ {1\over 2}
+  \sum_{k,l\ge 1,\,\,k+l=n} {1\over k! l!}\sum_{\sigma\in S_n}
+\pm \left[\U_k(\ga_{\sigma_1}\wedge\dots\wedge\ga_{\sigma_k}),
+\U_l(\ga_{\sigma_{k+1}}\wedge
+\dots\wedge \ga_{\sigma_n})\right](f_1\otimes \dots\otimes f_m)=0.$$
+这里$\ga_i$为多向量场,\,$f_i$为函数,\,\,$\U_n$为$\U$的齐次分量.
+
+我们重写这些公式.\,\,$\U_0:\otimes ^0(
+      T_{poly}(\R^d))\ra D_{poly}(\R^d)[1]$将$\R\simeq
+     \otimes ^0(
+      T_{poly}(\R^d))$\\
+的生成元$1$映到代数$A=C^{\infty}(\R^d)$的乘法$m_A\in D^1_{poly}(\R^d)$.这里将$m_A:f_1\otimes f_2\mapsto f_1 f_2$视为双微分算子.
+
+$\U$为$\L$态射等价于
+$$\sum_{i\ne j}\pm 
+  \left(\U_{n-1}((\ga_i\bullet \ga_j)\wedge \ga_1\wedge\dots\wedge \ga_n)
+  \right)(f_1\otimes\dots\otimes f_m)+$$
+  $$
+  \sum_{k,l\ge 0,\,\,k+l=n} {1\over k! l!}\sum_{\sigma\in S_n}
+\pm \left(\U_k(\ga_{\sigma_1}\wedge\dots\wedge\ga_{\sigma_k})\,
+\circ \,\U_l(\ga_{\sigma_{k+1}}\wedge
+\dots\wedge \ga_{\sigma_n})\right)(f_1\otimes \dots\otimes f_m)=0.$$
+这里使用了所有多线性映射$\U_n$,\,包括$n=0$的情形	.\,$D_{poly}$与$T_{poly}$上的$\circ$与$\bullet$分别定义于4.4.2节与5.6.1节.记上式左边为$(F)$.
+
+$\U+\U_0$并非pre-$\L$态射,\,由其将$0$映到非平凡的点$m_A$.但$(F)$意味着\\$\U+\U_0$,\,从形式$Q$-流形$T_{poly}(\R^d)[1]\bigr)_{formal}$到分次向量空间$D_{poly}(\R^d)[1]$中点$m_A$形式邻域的映射为$Q$-等变映射.这里后者装备了$D_{poly}(\R^d)$上的括号给出的纯二次奇向量场$Q$.
+
+$\U_0$来自$\U$定义中唯一缺失的$\G_0$,\,对应$n,m=0,2$及边数$0$.显然有$W_{\G_0}=1$及$\U_{\G_0}=\U_0$.
+
+对所有可能的维数$d$考虑$(F)$.其可写为线性组合
+$$\sum_\G c_\G \cdot\U_\G\bigl(\ga_1\otimes\dots\otimes\ga_n)\bigr)(
+  f_1\otimes\dots\otimes f_m),$$
+其中$\U_\G$为有$n,m$个点和$2n+m-3$条边的容许图,\,这里$n\ge 0$,\,\,$m\ge 0$,\,\,$2n+m-3\ge 0$.设$c_\G=\pm c_{\G'}$,\,若图$\G'$来自$\G$的第一类点交换顺序及对$Star(v)$中的边重新编号.符号将于下一节给出.
+
+线性组合的系数$c_\G$为某些图$\G'$的权$\W_{\G'}$和与这样两个权的积的(符号)和.特别地,\,其与维数$d$无关.更好的描述方式可能是使用刚性张量范畴.
+
+下面对每个$\G$验证$c_\G$消没.基本想法是将$c_\G$等同于$\G$对应的闭微分形式在边界$\p \OC_{n,m}$上的积分.这里与7.2节的唯一区别在于图的边数为$2n+m-3$.\,Stokes定理给出
+$$
+     \int\limits_{\p \OC_{n,m}}\bigwedge_{e\in E_\G}d\phi_e
+     =\int\limits_{\OC_{n,m}}d\left(\bigwedge_{e\in E_\G}d\phi_e\right)
+     =0.$$
+下面计算微分形式$\wedge_{e\in E_\G}d\phi_e$限制到$\p \OC_{n,m}$所有可能边界项上的积分,\,并证明其与$c_\G$相等.\,6.2.1节给出了两种边界项S1和S2.我们有
+$$0=\,\int\limits_{\p \OC_{n,m}}\bigwedge_{e\in E_\G}d\phi_e
+      =\sum_{S}  \int\limits_{\p_S \OC_{n,m}}\bigwedge_{e\in E_\G}d\phi_e
+      + \sum_{S, S'}  \int\limits_{\p_{S,S'}
+       \OC_{n,m}}\bigwedge_{e\in E_\G}d\phi_e.$$
+
+
+
+\subsection{S1的情形}
+点$p_i\in\H$互相靠近,\,其中$i\in S\subset\{1,\dots,n\}$,\,$\#S\ge 2$.\,$\p_S \OC_{n,m}$上的积分等于$C_{n_1,m}$上的积分与$C_{n_2}$上的积分之积.这里$n_2=\#S$,\,\,$n_1=n-n_2+1$.由于维数原因积分消没,\,除非图$\G$中连接$S$的点的边数为$2n_2-3$.
+
+\subsubsection{第一种情形:\,$n_2=2$}
+$S_1$的两个点由唯一的边$e$连接.\,(在权$W_{\G}$的公式中除以$2\pi$后)$C_2$上的积分为$\pm 1$.边界项的总积分等于缩并$e$得到的图$\G_1$上的积分.这对应$(F)$的第一项.
+
+\subsubsection{第二种情形:\,$n_2\ge 3$}
+这是最不平凡的一项.边界项对应的积分消没,\,由于$C_{n_2}$上任意$2n_2-3$个角形式之积的积分消没,\,$n_2\ge 3$.我们将在7.6节证明这个结果.
+
+\subsection{S2的情形}
+点$p_i$与$q_j$互相靠近且靠近$\R$,\,其中$i\in S_1\subset\{1,\dots,n\}$,\,${\overline j}\in S_2\subset\{{\overline 1},\dots,{\overline m}\}$.这里$2n_2+m_2-2\ge 0$,\,$n_2+m_2\le n+m-1$,\,其中$n_2=\#S_1$,\,$m_2=\#S_2$.对应的边界项同构于$C_{n_1,m_1}\times C_{n_2,m_2}$,\,其中$n_1=n-n_2$,\,$m_1=m-m_2+1$.边界项上的积分为两个积分之积.若$\G$中连接$S_1\sqcup S_2$的点的边数不等于$2n_2+m_2-2$,\,则积分消没.
+
+\subsubsection{第一种情形:\,无坏边}
+设$\G$中不存在边$(i,j)$使得$i\in S_1, j\in \{1,\dots,n\}
+                \setminus S_1$.
+边界项上的积分等于$W_{\G_1}\times W_{\G_2}$,\,其中$\G_2$为$\G$限制到子集$S_1\sqcup S_2\subset \{1,\dots, n\}\sqcup\{{\overline 1},\dots, {\overline m}\}=V_\G$上,\,$\G_1$由$V_\G$缩并$S_1\sqcup S_2$的点得到.$\G_1$为容许图.这对应$(F)$的第二项.
+
+\subsubsection{第二种情形:\,存在坏边}
+设$\G$中存在边$(i,j)$使得$i\in S_1, j\in \{1,\dots,n\}
+                \setminus S_1$.
+由于$x$恒在$\R$上,\,$d\phi(x,y)=0$.故积分为$0$.
+
+图有多重边时,\,微分形式中含有某个$1$-形式的平方故为$0$.这在$(F)$中也不出现.
+这样,\,我们证明了对任何图$\G$均有$c_{\G}=0$,\,从而$\U$为$\L$态射.
+
+\subsection{完成定理7.4.1的证明}
+为得到$\U$为拟同构,\,尚需说明分量$\U_1$与5.6.1节中的$\U_1^{(0)}$一致.每个有$n=1,m\ge 0$个点及$m$条边的容许图为一个树,\,对应积分为$(2\pi)^m /m!$.多向量场到多微分算子的映射${\widetilde U}_\G$为5.6.1节的
+$$\xi_1\wedge\dots\wedge\xi_m\ra 
+         {1\over m!}
+         \sum_{\sigma\in S_m}
+          sgn(\sigma)\cdot \xi_{\sigma_1}\otimes\dots \otimes \xi_{\sigma_m},
+          \,\,\xi_i\in\G(\R^d,T).$$
+定理7.4.1证毕.
+
+\subsection{与第三章公式的对比}
+第三章定义的权$w_\G$与7.2节定义的$W_\G$相差因子$2^n/n!$.另一方面,\,双微分算子$B_{\G,\a}(f,g)$为$\U_\G(\a\wedge\dots
+  \wedge \a)(f\otimes g)$的$2^{-n}$倍.
+$1/n!$出现在Taylor系数中.我们得到了第三章的公式.
+
+\section{分次,\,定向,\,阶乘与符号}
+$\U+\U_0$的Taylor系数为分次空间的映射
+$$Sym^n((\bigoplus_{k\ge 0} \G(\R^d,\wedge^k T)[-k])[2])\ra (\underline{Hom}
+ (A[1]^{\otimes m}, A[1]))[1],$$
+其中$\underline{Hom}$表张量范畴$Graded^{\k}$的内Hom.记上式为$(E)$.\,$(E)$中每个多向量场$\ga_i\in \G(\R^d,\wedge^{k_i}T)$有移位$2-k_i$.\,$\U$的公式中同样的$\ga_i$给出了$k_i$条边,\,从而需对$k_i$个$1$-形式积分.其为积分区域$\OC_{n,m}$给出了两个维数.每个函数$f_j\in A$在$(E)$中伴随移位$1$出现,\,给出了一个维数.\,$(E)$中还有两个移位$1$,\,来自群$G^{(1)}$的两个维数.由此,\,\,$\U$与$\Z$-分次相容.
+
+公式中的符号来自$\OC_{n,m}$的定向,\,$1$-形式$d\phi_e$相乘的顺序,\,以及$(E)$中向量空间的$\Z$-分次,\,自然分为一些对.这意味着$\G$中点的顺序与$Star(v)$中边的顺序并未真正用到.这样,\,$\U_n$为反对称的.
+
+$1/(\# Star(v)!)$与$Star(v)$中交换边顺序的求和互相抵消.最终的公式中$1/n!$并未出现,\,由我们考虑高阶导数.
+
+最后只需检验使用Stokes定理时的符号.
+
+\section{积分的消没}
+本节考虑欧式平面上构形$G^{(2)}$-等价类的空间$C_n$,\,$n\ge 3$.任意两个指标$i,j$,\\$i\ne j$,\,$1\le i,j\le n$给出了遗忘映射$C_n\ra C_2\simeq S^1$.记$d\phi_{i,j}$为单位圆上标准$1$-形式$d(angle)$的拉回,\,这是$C_n$上的闭$1$-形式.我们对$Conf_n$使用相同记号.
+
+\begin{lemma}
+设$n\ge 3$为整数.\,$C_n$上任意$2n-3=dim(C_n)$个闭$1$-形式$d\phi_{i_\a,j_\a}$,\,$\a=1,\dots, 2n-3$之积的积分为$0$.
+\end{lemma}
+证明.将$C_n$等同于$Conf_n$中点$p_{i_1}$为$0\in \C$且$p_{j_1}$在单位圆$S^1\subset \C$上的构形组成的子集$C_n'$.将被积形式写为
+$$\bigwedge_{\a=1}^{2n-3}d\phi_{i_\a,j_\a}
+       =d\phi_{i_1,j_1}\wedge \bigwedge_{\a=2}
+       ^{2n-3} d(\phi_{i_\a,j_\a}-\phi_{i_1,j_1}).$$
+绕$0$旋转将$C_n'$映为$p_{i_1}=0$且$p_{j_1}=1$的构形之集$C''_n\subset Conf_n$.\,$C_n'$上的微分形式$d(\phi_{i_\a,j_\a}-\phi_{i_1,j_1})$为$C_n''$上微分形式$d\phi_{i_\a,j_\a}$的拉回.\,$2n-3$个闭$1$-形式$d\phi_{i_\a,j_\a}$,\,$\a=1,\dots ,2n-3$之积在$C'_n$上的积分等于$\pm 2\pi$倍的$2n-4$个闭$1$-形式$d\phi_{i_\a,j_\a}$,\,$\a=2,\dots ,2n-3$之积在$C''_n$上的积分.
+
+$C''_n$为复流形.我们需要计算形如
+$$\int\limits_{C''_n} \prod_{\alpha} d Arg(Z_{\alpha})$$
+的绝对收敛的积分,\,其中$Z_{\alpha}$为$C''_n$上可逆的全纯函数(构形中各点复坐标之差).下节将证明积分消没.
+
+
+\subsection{对数技巧}
+
+\begin{thm}
+设$X$为$N\ge 1$维复代数簇,\,$Z_1,\dots,Z_{2N}$为$X$上不恒为$0$的有理函数,\,$U$为$X$的一个仅含光滑点的Zariski开子集,\,使得$Z_\a$在$U$上有定义且不取$0$.则积分
+$$\int\limits_{U(\C)} \wedge_{\a=1}^{2N} d(Arg\,Z_\a)$$
+绝对收敛且等于$0$.
+\end{thm}
+
+证明.首先,\,在$U(\C)$上微分形式$\wedge_{\a=1}^{2N} d Arg(Z_\a)=\wedge_{\a=1}^{2N}
+         d Log\,|Z_\a|$.
+将$d Arg(Z_\a)$写为全纯部分与反全纯部分的线性组合
+$${1\over  2 i}\left(d(Log\,Z_{\a})-d(Log\,{\overline Z}_\a)
+  \right).$$
+在$U(\C)$上被积形式形如一些全纯与反全纯形式之积的和.全纯形式与反全纯形式的次数不同的项积分为$0$,\,由$U(\C)$为复流形.同样的项在
+$$\bigwedge_{\a=1}^{2N} d\,Log\,{|Z_\a|}=
+         \bigwedge_{\a=1}^{2N} {1\over  2}
+         \left(d(Log\,Z_{\a})+d(Log\,{\overline Z}_\a)
+         \right)$$
+中保留下来.
+
+选取$U$的紧化${\overline U}$,\,使得${\overline U}\setminus U$为正则相交除子.若$\phi$为$U(\C)$上的光滑微分形式,\,且$\phi$的系数在${\overline U}(\C)$上局部可积,\,则记${\cal I} (\phi)$为${\overline U}(\C)$上对应的分布值微分形式.
+
+
+设$U(\C)$上的形式$\omega$为函数$Log\,|Z_\a|$与$1$-形式$d\,Log\,|Z_\a|$之积的线性组合,\,其中$Z_\a\in {\cal O}^{\times}(U)$为$U$上的正则可逆函数.则$\omega$与$d\omega$的系数为${\overline U}(\C)$上的局部$L^1$函数,\,${\cal I} (d \omega)=d({\cal I}(\omega))$,\,且积分$\int\limits_{U(\C)}\omega$绝对收敛且等于$\int\limits_{{\overline U}(\C)}{\cal I}(\omega)$.
+
+由Stokes定理,\,定理中的积分消没:\,
+$$\int\limits_{U(\C)}\bigwedge_{\a=1}^{2N}
+                d\,Arg\,(Z_\a)
+                =\int\limits_{U(\C)}\bigwedge_{\a=1}^{2N}
+                d\,Log\,|Z_\a|=\int\limits_{{\overline U}(\C)} {\cal I}\left(
+                d\left(Log\,|Z_1|\,
+                \bigwedge_{\a=2}^{2N}
+                d\,Log\,|Z_\a|\right)\right)=$$
+                $$\int\limits_{{\overline U}(\C)}
+                 d\left({\cal I}\left(
+               Log\,|Z_1|\,
+                \bigwedge_{\a=2}^{2N}
+                d\,Log\,|Z_\a|\right)\right)=0.$$
+定理7.6.1证毕.
+
+事实上,\,积分$\int\limits_{U(\C)}\bigwedge_{\a=1}^{2N}d\,Arg\,(Z_\a)$的收敛为纯几何的事实,\,即$U(\C)$在映射$x\mapsto (Log|Z_1(x)|,...,Log|Z_{2N}(x)|)$下的像体积有限,\,且通过比较$U(\C)$和$\R^{2n}$的定向考虑原像中点的符号可知像中每个非临界点出现的次数为$0$.
+
+\subsection{注记}
+
+引理7.6.1中积分的消没在微扰Chern-Simons理论中有高维类似.维数$\ge 3$时,\,由于存在几何上的对合,\,积分等于自身的$-1$倍故消没.
+

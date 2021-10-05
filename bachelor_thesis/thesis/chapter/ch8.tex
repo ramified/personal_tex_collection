@@ -1,0 +1,154 @@
+\chapter{杯积}
+
+\section{切上同调的杯积}
+微分分次李代数$T_{poly}$,\,\,$D_{poly}$\,\,以及(更一般地)结合代数的移位Hochschild复形均带有一个类似于同伦Gerstenhaber代数的额外结构.此结构一个明显的部分为Maurer-Cartan方程任意解处切空间上同调上次数$+2$的交换结合乘积.对上述之一的微分分次李代数$\g$及满足$d\ga+{1\over 2}[\ga,\ga]=0$的$\ga \in (\g\otimes \m)^1$,\,切空间$T_{\ga}$定义为装备微分$d+[\ga,\cdot]$的复形$\g \otimes\m[1]$,\,其中$\m$为有限维幂零无幺微分分次交换结合代数.此微分的上同调$H_{\ga}$为分次代数$H(\m)$上的分次模.若$\ga_1$与$\ga_2$为规范等价的解,\,则$H_{\ga_1}$与$H_{\ga_2}$为(不必典范地)等价的$H(\m)$-模.
+
+现在对这三个微分分次李代数定义杯积.\,\,$T_{poly}(X)$的杯积定义为多向量场通常的杯积.其与微分$d+[\ga,\cdot]$相容,\,且为分次交换结合乘积.对结合代数$A$的Hochschild复形,\,$H_{\ga}$的杯积在复形上定义为
+$$(t_1\cup t_2)(a_0\otimes\dots\otimes a_n)=$$
+$$ \sum_{0\le k_1\le k_2\le k_3\le k_4\le n} \pm \ga^{n-(k_2-k_1+k_4-k_3)}(a_0\otimes\dots \otimes t_1(a_{k_1}\otimes\dots)\otimes a_{k_2}\otimes\dots\otimes t_2(a_{k_3}\otimes\dots)\otimes a_{k_4} \otimes\dots),$$
+其中$\ga^{l}\in (\k[0] \cdot 1\oplus\m)^{1-l}\otimes Hom(A^{\otimes (l+1)},A)$为$\ga+1\otimes m_A$的齐次分量.
+
+Hochschild复形的杯积与微分相容,\,交换,\,结合,\,且在上同调上为规范等价.若读者纸张存量与时间均充足,\,不妨直接计算Hochschild上链以证明之.移位Hochschild复形关联的形变理论可以解释为三角范畴(或更好地,\,$A_{\infty}$范畴)的形变理论.
+
+限制到$C^{\bullet}(A,A)$,\,我们得到了$D_{poly}(X)$的杯积.
+
+
+\section{$\,\U$与杯积的相容性}
+
+\begin{thm}
+第七章的拟同构$\U$将$T_{poly}(X)$的杯积映到$D_{poly}(X)$的杯积.
+\end{thm}
+
+以图与积分的语言诠释.切映射由在某个被标记的第一类点放置了$[t]\in H_{\gamma}$的代表元$t$的积分给出.其余第一类点处均放置$\ga$,\,作为$\m$系数的多向量场.应用Leibniz律于$\U$的Taylor系数即得前面描述的规则.
+
+我们对切映射在装备了双线性运算的切空间上的表现感兴趣.这意味着存在两个被标记的第一类点.
+
+
+\subsection{多向量场杯积的情景}
+
+$T_{poly}(X)$的杯积对应$\H$上无限接近的两个点的情景,\,在这两个点放置$H_{\ga}$中我们想要相乘的两个元素.更精确地说,\,这意味着我们在$\R/2\pi \Z \simeq C_2\subset \OC_{2,0}$中的点$\alpha$在遗忘映射$\OC_{n,m}\ra\OC_{2,0}$下的原像$P_{\alpha}$上积分.易见$P_{\alpha}$在$\OC_{n,m}$中余维为$2$且不包含余维$2$的边界项,\,这意味着作为奇异链$P_{\alpha}$为$\OC_{n,m}$中非紧超曲面的闭包
+$P_{\alpha}\cap \p_S(\OC_{n,m})$与$P_{\alpha}\cap \p_{S_1,S_2}(\OC_{n,m})$之和.易见$P_{\alpha}\cap \p_{S_1,S_2}(\OC_{n,m})$为空集且$P_{\alpha}\cap \p_S(\OC_{n,m})$非空当且仅当$S\supseteq \{1,2\}$.
+
+换言之,\,$\H$上包含$p_1$与$p_2$的一些点互相接近.这些点间不应有边连接,\,否则积分消没.且若$\#S\ge 3$,\,\,由7.6.1节的讨论积分消没.唯一非平凡的例子为$S=\{1,2\}$且点$p_1,\,p_2$间无边连通.
+
+
+\subsection{Hochschild复形的情景}
+
+$D_{poly}(X)$上杯积的情景由两个无限接近$\R$且分开的点给出.同样地,\,精确的定义为在点$[(0,1)]\in \OC_{0,2}\subset \OC_{2,0}$的原像$P_{0,1}$上积分.\,$P_{0,1}$与$\OC_{n,m}$的边界项无交.故作为余维$2$的链,\,$P_{0,1}$即为$C_T\subseteq P_{0,1}$的余维$2$的诸$C_T$闭包之并.任何这样的项给出了没有始于缩聚的点的边的情景.我们得到了上面描述的Hochschild复形切上同调的杯积.
+
+\subsection{两情景间的同伦}
+
+选取$\H$上两个点(极限)构形间的一条道路,\,我们得到两个乘积在上同调上一致.
+
+
+\section{应用其一:\,\,Duflo-Kirillov同构}
+
+\subsection{Kirillov-Poisson括号的量子化}
+设$\g$为$\R$上的有限维李代数.\,$\g$的对偶空间$\g^*$装备了所谓的Kirillov-Poisson括号:\,对点$p\in \g^*$及函数$f,\,g$,\,定义$\{f,g\}_{|p}=\langle p,[df_{|p},dg_{|p}]\rangle$,\,其中$f,\,g$在$p$处的微分视为$\g\simeq (\g^*)^*$中的元素.这使得$\g^*$成为一个泊松流形.\,Kirillov-Poisson括号的系数均为$\g^*$上的线性函数.
+
+\begin{thm}
+泊松流形$\g^*$的典范量子化同构于$\g$装备括号$\hbar[\,,\,]$的泛包络代数$\U_{\hbar}(\g)$.
+\end{thm}
+
+证明.\,\,7.4节在装备泊松结构的有限维仿射空间的函数代数上构造了典范的星积.此处即为$C^{\infty}(\g^*)$上的典范星积.我们断言$\g^*$上任意两个多项式之积为$\g^*$上多项式系数的$\h$的多项式,\,原因在于星积的构造与坐标选取无关.设张量$\beta \in \g^*\otimes\g^*  \otimes \g$给出了$\g$上的李括号.可定义为指标缩并及与$\beta $做(某些次)张量积的非零自然运算$Sym^k(\g)\otimes Sym^l(\g)\ra Sym^m(\g)$仅在$m\le k+l$时存在.对每个$m$只有有限种方式缩并指标.故取$\h=1$有意义.我们在$Sym(\g)=\oplus_{k\ge 0} Sym^k(\g)$上得到了乘积$\star$.
+
+易见对$\ga_1,\ga_2\in\g$有
+$$\ga_1\star\ga_2-\ga_2\star\ga_1=[\ga_1,\ga_2].$$
+此外,\,$\star$的最高次分量$Sym^k (\g)\otimes Sym^l(\g)\to Sym^{k+l}(\g)$即为$Sym(\g)$上标准的乘积.我们得到唯一同构
+$$I_{alg}:\,\,(\,\U\g,\cdot)\,\,\ra \,\,(Sym(\g),\star)$$
+使得对任意的$\ga\in \g$均有$I_{alg}(\ga)=\ga$.此处$\cdot$表示李代数$\g$的泛包络代数的标准乘积.由此容易重新得到$\hbar$及定理的陈述.
+
+\begin{cor}
+泛包络代数的中心作为代数典范同构于$\g^*$上的$\g$-不变多项式$\bigl(Sym(\g)\bigr)^{\g}$.
+\end{cor}
+
+证明.\,\,$\U\g$的中心为$\U\g$装备标准杯积的(局部)\,\,Hochschild复形的$0$阶上同调.代数$\bigl(Sym(\g)\bigr)^{\g}$为装备微分$[\a,\cdot]$的$\g^*$上的多向量场代数的$0$阶上同调,\,其中$\a$为Kirillov-Poisson括号.由定理9.2.1知以$\U$的切映射作用,\,我们得到了代数同构.
+
+
+\subsection{三个同构}
+定理9.3.1的证明中引入了代数同构$I_{alg}$\,.
+
+记$I_{PBW}$为向量空间的同构$Sym(\g)\,\,\ra\,\, \U  \g$\,,\,\,\,\,$\ga_1\ga_2\dots\ga_n\,\,\ra $\\$ {1\over n!}\sum_{\sigma\in S_n}  \ga_ {\sigma_1}  \cdot\ga_{\sigma_2}  \cdot\dots\cdot \ga_{\sigma_n}$.\,\,$I_{PBW}$的下标来自Poincar\'e-Birkhoff-Witt定理.
+
+类似前面的论证,\,$\g^*$上的多向量场到量子化代数Hochschild复形的切映射可对$\h=1$及多项式系数定义.记$I_T$为将$\g^*$上的多项式$0$-向量场(即$Sym(\g)$的元素)映到代数$(Sym(\g),\star)$的Hochschild复形$0$-上链的分量.\,\,$I_T:Sym(\g)\ra Sym(\g)$为向量空间的同构.限制到$\g^*$上的$ad(\g)^*$-不变多项式代数,\,我们得到了代数同构
+$$Sym(\g)^\g\,\,\ra\,\, Center((Sym(\g),\star)).$$
+
+我们有向量空间同构
+$$Sym(\g)\,\,{\buildrel I_T\over  \raa }\,\,  Sym(\g )  \,\,{\buildrel I_{alg} \over \laa}\,\,\U\g  \,\,{\buildrel I_{PBW} \over\laa }\,\, Sym(\g).$$
+这些同构均为$ad(\g)$-不变的,\,故有同构
+$$ (Sym(\g))^\g\buildrel {I_T}_{|\dots} \over \raa  Center(Sym(\g),\star)\buildrel  {I_{alg}}_{|\dots}\over \laa  Center(\U\g)\buildrel {I_{PBW}}_{|\dots}\over  \laa (Sym(\g))^\g\,,$$
+其中下标$|\dots$表示限制到$ad(\g)$-不变子空间上.前两个同构为代数同构.\,我们得到了
+
+\begin{thm}
+映射$\bigl(I_{alg}\bigr)^{-1}\circ I_T:Sym(\g)\,\,\ra \,\,\U\g$限制到$(Sym(\g))^\g$上给出了代数同构$(Sym(\g))^\g\,\,\ra \,\, Center(\U\g)$.
+\end{thm}
+
+\subsection{$Sym(\g)$的自同构}
+本节计算向量空间$Sym(\g)$上的自同构$I_T$与$I_{alg}\circ I_{PBW}$.我们断言这两个自同构为$\g^*$上的多项式空间$Sym(\g)$上的平移不变算子.
+
+向量空间$V$的多项式空间上的平移不变算子典范同构于$V$生成的形式幂级数代数,\,其生成元的作用为沿$V$上的常系数向量场求导.故这样的算子可视为对偶空间$V^*$在$0$处的形式幂级数.将本段的讨论应用于$V=\g^*$.
+
+\begin{thm}
+算子$I_T$与$I_{alg}\circ I_{PBW}$为$\g$上$0$处形如
+$$S_1(\ga)=exp\left(\sum_{k\ge 1} c_{2k}^{(1)}\,Tr\,(ad( \ga)^{2k})\right),\,\, S_2(\ga)=exp\left(\sum_{k\ge 1}   c_{2k}^{(2)}\,Tr\,(ad( \ga)^{2k})\right)  $$
+的形式幂级数$S_1(\ga)$与$S_2(\ga)$确定的平移不变算子,\,其中$c_2^{(1)},c_4^{(1)},\dots$与$c_2^{(2)},c_4^{(2)},\dots$是两个指标为正偶数的实数列.
+\end{thm}
+
+证明.分别考察两种情况:\,
+
+\subsubsection{同构$I_T$}
+$I_T$由对应无第二类点,\,存在一个被标记的第一类点$v$使得无边始于$v$,\,且其余点均发出两条边,\,进入不超过一条边的容许图$\G$的求和给出.\,将$Sym(\g)$的某个元素视为切上同调的元素放置于$v$.其他点放置$\g^*$上的Poisson-Kirillov双向量场,\,即$\g$上换位子对应的张量.我们得到了一个$0$-微分算子,\,即$Sym(\g)$中的元素.
+
+易见此类图均同构于一些形如轮子的图$Wh_n$之并等同标记点$v$,\,$n\ge 2$.
+
+由群$G^{(1)}$传递作用于$\H$,\,无妨设积分中对应$v$的点固定取$i\cdot 1+0\in\H$.\,对应$Wh_n$的算子$Sym(\g)\ra Sym(\g)$为$\g^*$上的常系数微分算子,\,且对应$\g$上的多项式$\ga\mapsto \,Tr\,(ad(\ga)^n)$.对应一些$Wh_n$之接合的算子为每个$Wh_n$对应算子之积,\,对应的积分为每个$Wh_n$对应积分之积.由对称性全算子为$Wh_n$对应算子加权和的指数,\,其中权为对应的积分.考虑到$z\mapsto -\overline{z}$的对称性,\,$n$为奇数时$Wh_n$对应的积分消没.
+
+
+\subsubsection{同构$I_{alg}\circ I_{PBW}$}
+
+$I_{alg}\circ I_{PBW}$将$\ga^n$映到$\ga\star\ga\star\ga\dots\star\ga$.\,由$\ga^n$生成了$Sym(\g)$作为向量空间,\,这确定了$I_{alg}\circ I_{PBW}$.
+
+为对量子化代数的$m\ge 2$个元素做乘法,\,将其按升序放置于$\R$的$m$个固定点上,\,并考虑有$m$个第二类点的容许图及对应的权.由星积结合,\,结果与$\R$上点的顺序无关.若对$\star$计算某个元素的幂,\,可将这些点以任意顺序放置.取$\R$上的某个概率密度,\,可以对$\R$上$m$个点的构形取平均,\,其中各点互相独立地随机分布.我们将考虑某个光滑对称(在$x\mapsto -x$下)密度$\rho(x)$在$\R$上确定的分布.一并假设$\rho(x)dx$为某个$\OC_{1,1}\simeq \{-\infty\}\sqcup \R\sqcup \{+\infty\}$上的光滑$1$-形式在$\R\simeq C_{1,1}$上的限制.\,\,$m$个点两两不同的概率为$1$.此时积分顺序可以交换.我们得到了量子化代数中一个元素的$m$次幂为对所有有$m$个第二类点的图求和,\,权为构形空间上$d\phi$与$\rho(x_i)dx_i$乘积的积分.
+
+这里有两种基本的图.第一种形如没有轴的轮子.第二种形如$\Lambda$,\,由对称性积分消没.一般的图为这两种图的组合.由此,\,\,$I_{alg}\circ I_{PBW}$为常系数$Sym(\g)$的微分算子,\,等于所有对应单个轮子的算子之和的指数.这些算子与$\g$上幂级数伴随的算子$\ga \ra \,Tr\,(ad(\ga)^n)$成比例.由同样的对称性原因$n$为奇数时积分消没.
+
+
+
+\subsection{与Duflo-Kirillov同构的对比}
+
+在半单李代数$\g$的情形,\,代数$\bigl(Sym(\g)\bigr)^{\g}$与$Center(\U\g)$间存在所谓的Harish-Chandra同构.\,\,Kirillov将其推广到一般的有限维李代数上.\,\,Duflo证明了Kirillov得到的映射仍为同构.
+
+Duflo-Kirillov同构$I_{DK}:\bigl(Sym(\g)\bigr)^{\g}\simeq \,Center( \U(\g))$为
+$$I_{DK}= {I_{PBW}}_{|(Sym(\g))^{\g}}\circ {I_{strange}}_{|(Sym(\g))^{\g}},$$
+其中$I_{strange}$为$Sym(\g)$上可逆的平移不变算子,\,伴随$\g$在$0$处的形式幂级数
+$$\ga\mapsto \,{\rm exp}\,  \left(\sum_{k\ge 1} {B_{2k}\over 4 k (2k)!}\, Tr \, (ad(\ga)^{2k})\right) ,$$
+其中诸$B_{2k}$为Bernoulli数.形式地,\,可将右侧写为$det(q(ad(\ga)))$,\,其中
+$$q(x)=\sqrt{ {e^{x/2}-e^{-x/2}\over x}}.$$
+
+现断言前面的同构与Duflo-Kirillov同构一致.我们说明
+$$I_{alg}^{-1}\circ I_T=I_{PBW}\circ I_{strange}.$$
+若不成立,\,我们得到了非零级数$Err\in t^2\R[[t^2]]$使得$\ga\mapsto I_{det(exp(ad\ga)))}$伴随的$Sym(\g)$上的平移不变算子给出了$(Sym(\g))^\g$的自同构.设$2k>0$为$Err$展开式首个非平凡项的次数.\,\,$Sym(\g)$上伴随多项式$\ga\mapsto Trace(ad(\ga)^{2k}$的算子限制到$(Sym(\g))^\g$上为导子.这对李代数$\g=gl(n)$与大的$n$并不成立,\,故我们得到了矛盾并证明了$Err=0$.
+
+注记.若将级数$q(x)$换成$\left({x\over 1-e^{-x}}\right)^{-{1\over 2}}$,\,我们仍然得到一个代数同构,\,原因是级数$\ga\ra {\rm exp} (constant \cdot Tr(ad(\ga)))$伴随的$Sym(\g)$的单参数自同构群保持$\g^*$的泊松代数结构.这个单参数群同样以自同构作用于$\U\g$.这类似于von Neumann代数的Tomita-Takesaki模自同构群.
+
+
+\subsection{刚性张量范畴中的结果}
+本文的许多证明可以照搬到更一般的刚性$\Q$-线性张量范畴(即装备了类似于有限维向量空间上对偶函子的Abel对称幺半范畴)上.
+
+首先,\,可将Poincar\'e-Birkhoff-Witt定理推广到带有无穷和与投射子之核的$\bf Q$-线性加性对称幺半范畴上,\,如$A$-模范畴,\,对交换结合$\Q$-代数$A$.\,我们从而可以讨论泛包络代数与同构$I_{PBW}$.
+
+$\k$为特征$0$域时可对$\k$-线性刚性张量范畴中的李代数定义Duflo-Kirillov态射,\,由Bernoulli数为有理数.这对无穷维李代数不再成立,\,因为我们用到了伴随表示中算子乘积的迹.
+
+
+\section{应用其二:\,\,$Ext$}
+设$X$为复流形或特征$0$域$\k$上的光滑代数簇.我们定义两个分次向量空间.第一个空间$HT^\b(X)=\bigoplus_{k,l\ge 0} H^k(X,\wedge^l T_X)[-k-l]$.第二个空间$HH^\b(X)=\bigoplus_{k\ge 0} Ext^k_{Coh(X\times X)} ({\cal O}_{diag}, {\cal O}_{diag})[-k]$为$X\times X$上拟凝聚层范畴中的$Ext$-群.\,\\$HH^\b(X)$可视为$X$的Hochschild上同调,\,由任何代数$A$的Hochschild上同调可在$(A,A)$-双模范畴中定义为$Ext^\b_{A-mod-A}(A,A)$.
+
+$HH^\b(X)$与$HT^\b(X)$均带有自然的乘积.前者为米田复合,\,后者为上同调与多向量场的杯积.
+
+断言.分次代数$HH^\b(X)$与$HT^\b(X)$自然同构,\,且此同构对平展映射是函子性的.
+
+断言为定理9.2.1的推论.其在镜像对称中起到了重要作用.
+
+
+
+

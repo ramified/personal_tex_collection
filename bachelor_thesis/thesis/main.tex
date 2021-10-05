@@ -1,0 +1,204 @@
+\documentclass[bachelor,twoside,openright]{ustcthesis}
+% 默认twoside 双面打印
+% 将master修改为bachelor, doctor or master
+% 要使用adobe字体，添加adobefonts选项
+% 要使用Mac系统的字体，添加macfonts选项
+% 使用euler数学字体，如不愿使用，去掉euler
+% 使用外文写作，请添加notchinese
+
+% 设置图形文件的搜索路径
+\graphicspath{{figures/}}
+
+%仅用于本示例文档中显示特殊字符串
+\usepackage{xltxtra}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+%zxx的宏包
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{array}
+\usepackage{extpfeil}
+\usepackage{hhline}
+\usepackage{dsfont}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage{ulem}
+\usepackage{wrapfig}
+\usepackage{pifont}
+\usepackage{pgfplots}
+\usepackage{graphicx}
+\usepackage{tikz-cd,tikz-3dplot} 
+\usetikzlibrary{shapes.geometric, arrows, backgrounds,external}
+
+
+\numberwithin{equation}{section}
+
+\theoremstyle{definition}
+\newtheorem{defn}[theorem]{定义}
+
+
+\theoremstyle{plain}
+\newtheorem{exercise}{练习}[section]
+\newtheorem{example1}{例}[section]
+\newtheorem{remarks}[theorem]{注解}
+
+
+
+\renewcommand\thefootnote{\arabic{footnote}}
+%dont use number as footnote symbol, use this command to change
+
+\DeclareMathOperator{\Id}{\operatorname{Id}}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\divi}{\operatorname{div}}
+\DeclareMathOperator{\cha}{\operatorname{char}}
+\DeclareMathOperator{\Proj}{\operatorname{Proj}}
+\DeclareMathOperator{\rank}{\operatorname{rank}}
+\DeclareMathOperator{\Ker}{\operatorname{Ker}}
+\DeclareMathOperator{\coker}{\operatorname{Coker}}
+\DeclareMathOperator{\Img}{\operatorname{Im}}
+\DeclareMathOperator{\tor}{\operatorname{tor}}
+\DeclareMathOperator{\prim}{\operatorname{prim}}
+\DeclareMathOperator{\Perm}{\operatorname{Perm}}
+
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\Spec}{\operatorname{Spec}}
+\newcommand{\Pic}{\operatorname{Pic}}
+\newcommand{\Jac}{\operatorname{Jac}}
+\newcommand{\MaxSpec}{\operatorname{MaxSpec}}
+\newcommand{\End}{\operatorname{End}}
+\newcommand{\Mod}{\operatorname{\textbf{Mod}}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Grp}{\operatorname{\textbf{Grp}}}
+\newcommand{\Set}{\operatorname{\textbf{Set}}}
+\newcommand{\Stab}{\operatorname{Stab}}
+\newcommand{\ord}{\operatorname{ord}}
+\newcommand{\PSL}{\operatorname{\mathbb{P}SL}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%zxx的神奇编译
+
+
+%%%%%%%%新定义的符号
+\newcommand{\homopoly}{[z_1\hspace{-3pt}:\hspace{-3pt}z_2]}
+\newcommand{\homopoli}{{\hspace{-3pt}:\hspace{-3pt}}}
+\newcommand*{\bigchi}{\mbox{\Large$\chi$}}% big chi
+\allowdisplaybreaks[4]
+
+\makeatletter
+\newcommand{\raisemath}[1]{\mathpalette{\raisem@th{#1}}}
+\newcommand{\raisem@th}[3]{\raisebox{#1}{$#2#3$}}
+\makeatother
+
+\newcommand{\character}[2]{\left[\begin{array}{c}{#1} \\ {#2}\end{array}\right]}
+\newcommand{\normalcharacter}{\character{\epsilon}{\epsilon'}}
+\newcommand{\summ}{\mathop{\mathord{\sum}'}}
+\newcommand{\thetaaa}[2]{\theta^{#1}_{11}(#2)}
+\newcommand{\thetaaatau}[1]{\theta^{#1}_{11}(\tau)}
+\makeatletter
+\newcommand*{\Relbarfill@}{\arrowfill@\Relbar\Relbar\Relbar}
+\newcommand*{\xeq}[2][]{\ext@arrow 0055\Relbarfill@{#1}{#2}}
+\makeatother%longarrows
+%%%%%%%难受的下标,以后修改
+\newcommand{\Cnoln}{{Z_1}^{\hspace{-0.18em}(n)}}
+\newcommand{\Cnolll}{{Z_2}^{\hspace{-0.18em}(2)}}
+\newcommand{\Cln}{\mathbb{C}({Z_1}^{\hspace{-0.18em}(n)})}
+\newcommand{\Clln}{\mathbb{C}({Z_2}^{\hspace{-0.18em}(n)})}
+\newcommand{\Clll}{\mathbb{C}({Z_2}^{\hspace{-0.18em}(2)})}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 封面部分
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+  % 中文封面内容
+  \title{模形式和五次方程的解}%一般情况下扉页和封皮、书脊共用一个标题文本，可以不用定义\spinetitle（仅硕博有用）, \covertitle（本硕博均有用）和\encovertitle（仅本科有用）。特殊情况见下。
+  %\spinetitle{\small{中国科学技术大学本硕博毕业论文模板示例文档\raisebox{-3pt}{(Beta)}}}
+  %特殊情况1：本例中\title命令里含有换行控制字符，这会导致制作书脊的时候出现错误，例如如果你注释掉\spinetitle{...}这一行就会报错。这时需要定义一个不含换行等命令的\spinetitle，这并不表示\spinetitle里不能有任何命令——只能使用有限的命令。
+  %特殊情况2：本例中标题过长，所以需要缩小书脊标题的字号。
+  %特殊情况3：本例中中英文混排，由于tex竖排的原理限制，中英文基线不重合，所以需要人工调整英文的基线。具体调整量根据不同字体有所不同。
+  %\covertitle{中国科学技术大学本硕博毕业\\论文模板示例文档(Beta)}
+  %\covertitle{中文题目第一行\\中文题目第二行}
+  %不要在此调整封皮字体大小！ Do not set Cover Page font size here!
+  %特殊情况4：本例中\title中含有多个换行，导致标题超过了两行。根据制本厂规定，封皮标题不能超过两行。因此需要定义封皮使用的标题\covertitle. 如果你注释掉这一行，就会发现封皮不符合规定。
+  \encovertitle{~ Modular Forms and\\Equation of degree $5$}
+  %\encovertitle{English Title Line 1\\English Title Line 2\\English Title Line 3}
+  %不要在此调整封皮字体大小！ Do not set Cover Page font size here!
+  %特殊情况5:仅本科生有用。本科封皮中有英文标题，不超过三行。与上类似。
+  
+  \author{周\ 潇\ 翔}
+  \depart{少年班学院}
+  \major{基础数学}%专业，硕博请用全称，本科不需要
+  \advisor{许金兴\ 副教授}
+  %\coadvisor{\ 教授}%第二导师，没有请注释掉
+  \studentid{PB16001709}%For bachelor only
+  \submitdate{二〇二〇年五月}
+
+  % 英文封面内容
+  \entitle{Modular Forms and\\Equation of degree $5$}
+  \enauthor{Xiaoxiang Zhou}
+  \endepart{School of the Gifted Young}
+  \enadvisor{Prof. Jinxing Xu}
+  %\encoadvisor{Prof. }%另外一个导师
+  \ensubmitdate{May, 2020}
+  
+
+\begin{document}
+
+  % 封面
+\maketitle
+
+%特别注意，以下述顺序为准，在对应部分添加文档部件，切勿颠倒顺序：
+%本科论文的文档部件顺序是：
+%    frontmatter：致谢、目录、中文摘要、英文摘要、
+%    mainmatter： 正文章节
+%    backmatter： 参考文献或资料注释、附录
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 前言部分
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\frontmatter
+\makeatletter
+
+\include{chapter/thanks}
+
+\tableofcontents
+
+\include{chapter/abstract}%此文件中含有中英文摘要
+
+
+\makeatother
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 正文部分
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\mainmatter
+
+  \include{chapter/ch1}
+  \include{chapter/ch2}
+  %自行添加
+  %\include{chapter/...}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 附件部分
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\backmatter
+
+\renewcommand\refname{{\textbf{参考文献}}}
+\bibliography{reference}	
+\bibliographystyle{ieeetr}
+
+
+\end{document}

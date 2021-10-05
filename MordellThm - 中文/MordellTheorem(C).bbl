@@ -1,0 +1,112 @@
+\begin{thebibliography}{10}
+
+\bibitem{冯克勤2000代数数论}
+冯克勤, {\em 代数数论}.
+\newblock 科学出版社, 2000.
+
+\bibitem{yichaolectures}
+T.~Yichao, ``Lectures on algebraic number theory,'' {\em preprint}, 2014.
+
+\bibitem{morandi2012field}
+P.~Morandi, {\em Field and Galois Theory}, vol.~167.
+\newblock Springer Science \& Business Media, 2012.
+
+\bibitem{dummit2004richard}
+D.~Dummit, {\em Richard M}.
+\newblock 2004.
+
+\bibitem{Li2019modularform}
+李文威, {\em 模形式初步}.
+\newblock 科学出版社, 2019.
+
+\bibitem{vakil2017rising}
+R.~Vakil, ``The rising sea: Foundations of algebraic geometry,'' {\em
+  preprint}, 2017.
+
+\bibitem{silverman1992rational}
+J.~H. Silverman and J.~T. Tate, {\em Rational Points on Elliptic Curves},
+  vol.~9.
+\newblock Springer, 1992.
+
+\bibitem{fermat2013dream}
+加藤和也, {\em 数论I——Fermat的梦想和类域论}.
+\newblock Higher Education Press, 2009.
+
+\bibitem{tate1974the}
+J.~Tate, ``The arithmetic of elliptic curves,'' {\em Inventiones Mathematicae},
+  vol.~23, pp.~179--206, 1974.
+
+\bibitem{milne2006elliptic}
+J.~S. Milne, {\em Elliptic Curves}.
+\newblock BookSurge, 2006.
+
+\bibitem{kani2014jacobians}
+E.~Kani, ``Jacobians isomorphic to a product of two elliptic curves and ternary
+  quadratic forms,'' {\em Journal of Number Theory}, vol.~139, pp.~138--174,
+  2014.
+
+\bibitem{breuil2001modularity}
+C.~Breuil, B.~Conrad, F.~Diamond, and R.~Taylor, ``On the modularity of
+  elliptic curves over {$Q$}: Wild 3-adic exercises,'' {\em Journal of the
+  American Mathematical Society}, vol.~14, no.~4, pp.~843--939, 2001.
+
+\bibitem{bump1998automorphic}
+D.~Bump, {\em Automorphic forms and representations}, vol.~55.
+\newblock Cambridge university press, 1998.
+
+\bibitem{zhang2013birch}
+W.~Zhang, ``The {Birch-Swinnerton-Dyer} conjecture and {Heegner} points: A
+  survey,'' {\em Current Developments in Mathematics}, vol.~2013, no.~1,
+  pp.~169--203, 2013.
+
+\bibitem{miller2011proving}
+R.~L. Miller, ``Proving the {Birch and Swinnerton-Dyer} conjecture for specific
+  elliptic curves of analytic rank zero and one,'' {\em LMS Journal of
+  Computation and Mathematics}, vol.~14, pp.~327--350, 2011.
+
+\bibitem{johnson2015introduction}
+B.~Johnson, ``An introduction to the {Birch and Swinnerton-Dyer} conjecture,''
+  {\em Rose-Hulman Undergraduate Mathematics Journal}, vol.~16, no.~1, p.~15,
+  2015.
+
+\bibitem{serre1989lectures}
+J.-P. Serre, M.~Brown, and M.~Waldschmidt, {\em Lectures on the {Mordell-Weil}
+  Theorem}.
+\newblock Springer, 1989.
+
+\bibitem{poonen1999selmer}
+B.~Poonen, ``The {Selmer} group, the {Shafarevich-Tate} group, and the weak
+  {Mordell-Weil} theorem,'' {\em Preprint}, 1999.
+
+\bibitem{milne1986abelian}
+J.~S. Milne, ``Abelian varieties,'' in {\em Arithmetic Geometry}, pp.~103--150,
+  Springer, 1986.
+
+\bibitem{milne1986jacobian}
+J.~S. Milne, ``Jacobian varieties,'' in {\em Arithmetic Geometry},
+  pp.~167--212, Springer, 1986.
+
+\bibitem{milne2005introduction}
+J.~S. Milne, ``Introduction to shimura varieties,'' {\em Harmonic Analysis, the
+  Trace Formula, and Shimura Varieties}, vol.~4, pp.~265--378, 2005.
+
+\bibitem{cassels1986mordell}
+J.~Cassels, ``{Mordell's} finite basis theorem revisited,'' in {\em
+  Mathematical Proceedings of the Cambridge Philosophical Society}, vol.~100,
+  pp.~31--41, Cambridge University Press, 1986.
+
+\bibitem{coates2016conjecture}
+J.~Coates, ``The conjecture of {Birch and Swinnerton-Dyer},'' in {\em Open
+  Problems in Mathematics}, pp.~207--223, Springer, 2016.
+
+\bibitem{li2000birch}
+D.~Li and Y.~Tian, ``On the {Birch-Swinnerton-Dyer} conjecture of elliptic
+  curves {$E_D: y^2=x^3-D^2x$},'' {\em Acta Mathematica Sinica}, vol.~16,
+  no.~2, pp.~229--236, 2000.
+
+\bibitem{zagier1984series}
+D.~Zagier, ``L-series of elliptic curves, the {Birch-Swinnerton-Dyer}
+  conjecture, and the class number problem of gauss,'' {\em Notices Amer. Math.
+  Soc}, vol.~31, no.~7, pp.~739--743, 1984.
+
+\end{thebibliography}

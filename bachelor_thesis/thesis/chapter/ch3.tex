@@ -1,0 +1,113 @@
+\chapter{形变理论}
+
+\section{张量范畴}
+本节引入一些标准的定义以解释公式中的符号.
+
+代数几何学研究交换(结合)环以替代空间,\,至少在局部上如此.更一般地,\,我们在张量范畴中考虑交换结合代数.这样可以抽象实现代数学和微分几何中的许多构造.
+
+一个基本的例子是所谓超数学,\,即特征$0$域$\k$上$\Z/2\Z$-分次向量空间范畴$Super^\k$上的数学.\,$Super^\k$装备了标准的张量积,\,结合子和交换子(符号由Koszul规则给出).记$\Pi$为$Super^\k$上反转奇偶性的函子,\,其在对象上的作用为$\Pi V=V \otimes \k^{0|1}$.将$Vect^\k$等同于$Super^\k$中偶次空间组成的满子范畴.
+
+拓扑学与同调代数中经常出现$\Z$-分次超向量空间的一个满子范畴,\,其对象为无穷和${\cal E}=\oplus_{n\in \Z} {\cal E}^{(n)}$,\,使得${\cal E}^{(n)}$对偶数的$n$是纯偶次的,\,对奇数的$n$是纯奇次的.我们仍称其为分次向量空间范畴,\,记作$Graded^\k$.记${\cal E}^n$为${\cal E}^{(n)}$所在的$k$-向量空间.遗忘${\cal E}$的$\Z$-分次,\,我们得到了超向量空间$\bigoplus_{n\in \Z} \Pi^n({\cal E}^n)$.
+
+类似地,\,我们会考虑分次流形,\,即(函数层)装备了$\Z$-分次且在奇偶性上满足相同条件的超流形.
+
+移位函子$[1]:Graded^\k\ra Graded^\k$\,(作用于右侧)定义为与分次向量空间$\k[1]$张量积,\,其中$\k[1]^{-1}\simeq \k$, $\k[1]^{\ne -1}=0$.其$n$次幂记作$[n]$.本文有关分次流形与分次李代数的结果对超流形与超李代数也成立.
+
+
+
+
+\section{Maurer-Cartan方程}
+
+这部分是标准的内容.回忆特征$0$域$\k$上的一个微分分次李代数意指以下结构:\,
+
+(1) $\k$上的分次向量空间$\g=\bigoplus_{k\in \Z} \g^k[-k]$,\,
+
+(2) 李括号$[\,\,,\,\,]:\g^k\otimes \g^l\ra \g^{k+l}$,\,
+
+(3) 微分$d:\g^k\ra \g^{k+1}$,\,
+
+满足
+$$d(d(\ga))=0,\,\,\,d[\ga_1,\ga_2]=[d\ga_1,\ga_2]+(-1)^{\overline{\ga_1}}
+[\ga_1,d\ga_2],\,\,\,[\ga_2,\ga_1]=-(-1)^{\overline{\ga_1}
+\cdot\overline{\ga_2}}
+[\ga_1,\ga_2],$$
+$$[\ga_1,[\ga_2,\ga_3]]+(-1)^{\overline{\ga_3}\cdot(\overline{\ga_1}+
+\overline{\ga_2})}[\ga_3,[\ga_1,\ga_2]]+
+(-1)^{\overline{\ga_1}\cdot(\overline{\ga_2}+
+\overline{\ga_3})}[\ga_2,[\ga_3,\ga_1]]=0,$$
+
+其中$\ga_i\in \g^{\overline{\ga_i}}$.换言之,\,$\g$是$\k$上链复形范畴的李代数对象.如果遗忘微分和分次,\,我们将得到一个李超代数.
+
+微分分次李代数$\g$给出$\k$上有限维交换结合代数范畴到集合范畴的函子$Def_{\g}$.首先设$\g$为幂零李超代数.记$\MC(\g)$为Maurer-Cartan的解集模去规范等价:\,
+ $$\MC(\g)=\left\{\ga\in \g^1| \,\,d\ga+{1\over  2}[\ga,\ga]=0\right\}\big/\,
+  \Gamma^0,$$
+其中$\Gamma^0$为幂零李代数$\g^0$确定的幂零群,\,通过仿射变换作用于向量空间$\g^1$.\,$\Gamma^0$的作用为李代数无穷小作用的指数
+$$\alpha\in \g^0\,\mapsto \,\left(\dot\ga=d\alpha+[\alpha,\ga]\right).$$
+现在定义$Def_\g$.首先考虑有限维幂零交换结合无幺代数范畴.对于这样的$\m$,\,\\$\g\otimes \m$为幂零李超代数.定义
+$$Def_\g(\m)=\MC(\g\otimes \m).$$
+通常的进路中$\m$为有限维含幺Artin代数$\m'=\m\oplus 
+   \k\cdot {\rm 1}$的极大理想.一般地,\,可以将无幺交换结合代数视为对偶于带基点空间的对象.带基点空间对应的代数即为在基点处取值为$0$的函数组成的代数.
+
+一般情况下可对有限维幂零代数的投射极限定义形变函子.形变量子化中我们使用$\R$-代数
+$$\m=\hbar\R[[\hbar]]=\lim_{\from}\,\h\R[\h]/\h^k\R[\h].$$
+
+
+
+\section{注记}
+$Def_\g(\m)$也可视为某个群胚对象的等价类.形变理论中通常仅考虑负数次平凡的微分分次李代数.我们主要的例子移位Hochschild复形作为微分分次李代数时在$-1$次有非平凡分量,\,此时$Def_\g(\m)$对应某个$2$-群胚.一般地,\,若考虑存在负数次非平凡分量的微分分次李代数,\,我们将遇到多范畴与幂零同伦型,\,且无法处理高次项.更好的方法可能是将形变函子定义到微分分次幂零交换结合代数范畴上.
+
+
+
+\section{一些例子}
+
+\subsection{切复形}
+设$X$为复流形.定义$\C$上的微分分次李代数
+$$\g=\bigoplus_{k\in \Z} \g^k[-k],\,\,\,
+  \g^k=\Gamma(X,\Omega^{0,k}_X\otimes T^{1,0}_X),\,\,
+  k\ge 0,\,\,\,\,\g^{<0}=0,$$
+微分为$\overline{\partial}$,\,李括号为在$\overline{\partial}$-形式上取杯积并在全纯向量场上取泊松括号.
+
+$\g$的形变函子为$X$上复结构的形变函子.\,$Def_\g(\m)$自然对应于装备平坦映射$p:\widetilde{X}\,\ra\, Spec\,(\m')$以及$i:
+     \widetilde{X}\times_{Spec(\m')} Spec( \C)\simeq X$将$p$上的纤维等同于$X$的解析空间$\widetilde{X}$的等价类.
+
+\subsection{Hochschild复形}
+设$A$为特征$0$域$\k$上的结合代数.作为$(A,A)$-双模,\,$A$的$A$系数Hochschild上链复形为
+$$C^{\bullet}(A,A)=\bigoplus_{k\ge 0}
+     C^k(A,A)[-k],\,\,\,C^k(A,A)=Hom_{Vect^\k}(A^{\otimes k},A).$$
+定义微分分次李代数$\g=C^{\bullet}(A,A)[1]$.我们有
+$$\g=\bigoplus_{k\in \Z} \g^k[-k],\,\,\,\,\g^k= Hom(A^{\otimes 
+  (k+1)},A),\,\,\,k\ge -1,
+  \,\,\,\,\,
+  \g^{<(-1)}=0.$$
+微分与李括号为
+$$(d\Phi)(a_0\otimes\dots \otimes a_{k+1})=a_0\Phi(a_1\otimes\dots
+   \otimes a_{k+1})-\sum_{i=0}^{k} (-1)^i \Phi(a_0\otimes\dots
+   \otimes (a_i\cdot a_{i+1})\otimes\dots \otimes a_{k+1})
+   +$$
+   $$(-1)^{k}\Phi(a_0\otimes\dots\otimes a_{k})a_{k+1}
+     ,\,\,\,\Phi\in \g^k,$$
+   $$[\Phi_1,\Phi_2]=\Phi_1\circ\Phi_2-(-1)^{k_1 k_2} \Phi_2\circ\Phi_1,
+   \,\,\,\,\Phi_i\in \g^{k_i},$$
+其中(非结合的)乘积$\circ$满足
+   $$(\Phi_1\circ\Phi_2)(a_0\otimes\dots\otimes a_{k_1+k_2})=$$
+   $$
+   \sum_{i=0}^{k_1} (-1)^{i k_2}\Phi_1(a_0\otimes\dots\otimes
+    a_{i-1}\otimes(\Phi_2(a_i\otimes\dots\otimes a_{i+k_2}))\otimes
+    a_{i+k_2+1}\otimes\dots\otimes a_{k_1+k_2}).$$
+
+我们给出一种更抽象的定义.记$F$为分次向量空间$A[1]$余生成的含余幺余自由余结合分次余代数$F=\bigoplus_{n\ge 1}
+   \otimes^n(A[1])$.
+
+分次李代数$\g$为张量范畴$Graded^\k$中$F$余导子的李代数.\,$A$上的结合乘积给出了$\g^1$中的元素$m_A:A\otimes A\ra A$,\,满足$[m_A,m_A]=0$.\,$\g$的微分定义为$ad(m_A)$.
+
+$\g$的形变函子等价于代数结构通常的形变函子.\,$A$上的结合乘积对应于$\g$中Maurer-Cartan方程的解.集合$Def_\g(\m)$自然对应于有序对$({\widetilde A},i)$的等价类,\,其中${\widetilde A}$为$\m'=\m\oplus 
+   \k\cdot {\rm 1}$上的结合代数且作为$\m'$-模自由,\,$i$给出了$\k$-代数同构${\widetilde A}\otimes_{\m'}\k\simeq
+        A$.
+
+Hochschild复形的上同调为
+$$HH^k(A,A)=Ext^k_{A-mod-A}(A,A).$$
+无移位的Hochschild复形在形变理论中也有意义:\,其也具有典范的微分分次李代数结构,\,控制了$A$作为$(A,A)$-双模的形变.
+
+
+
+

@@ -1,0 +1,361 @@
+\chapter{同伦李代数与拟同构}
+本节引入一种描述微分分次李代数的同伦论与形变理论更方便的语言.基域$\k$均为特征$0$域.
+\section{形式流形}
+设$V$为向量空间.记$C(V)=\bigoplus_{n\ge 1}\bigl( \otimes^n V\bigr)^{S_n}
+\subset \bigoplus_{n\ge 1}\bigl( \otimes^n V\bigr)$为$V$余生成的无余幺余自由余交换余结合余代数,\,这里$S_n$为$n$个元素的对称群.我们将$C(V)$视为对应于一个(可能是无穷维的)带基点形式流形的对象
+
+$(V_{formal},$基点$)\,:=\,(0$在$V$中的形式邻域$,0)$.
+
+dim $V<\infty $时,\,$C(V)$的对偶空间$C(V)^*$为$V$上在$0$处消没的形式幂级数代数.
+
+定义一个形式流形为对应于某个余代数$\c$的对象,\,其中$\c$同构于某个$C(V)$,\,\\$V$为向量空间.\,$\c$与$C(V)$具体同构的选取不在定义考虑的范围内.
+
+一个余代数$A$的本原元是满足$\Delta (a)=0$的元素,\,其中$\Delta :A\to A\otimes A$为$A$的余乘法.作为余代数$\c$的本原元,\,我们可以从$M$重新得到$V$.
+
+以几何角度观之,\,$V$为$M$在基点处的切空间.\,$\c$与$C(V)$间同构的选择可以视为$M$上的仿射结构.
+
+设$V_1$,\,$V_2$为向量空间.\,$V_1$,\,$V_2$对应的形式带点流形间的映射$f$定义为余代数同态$f_*:C(V_1)\ra C(V_2)$.可以视其为支集在$0$处的分布值密度的推出.由余自由余代数的泛性质,\,$f$由某个线性映射$C(V_1)\ra V_2$唯一决定.这个线性映射为$f_*$与典范投影$C(V_2)\ra V_2$的复合.
+
+$f_*$的齐次分量$f^{(n)}:\bigl(\otimes^n(V_1)\bigr)^{S_n}\ra V_2$可以考虑为$f$的Taylor系数.精确地说,\,定义对称多项式映射$\partial ^n f: Sym^n(V_1)\ra V_2$:\,
+$$\partial ^n f(v_1,\dots, v_n)=
+        {\p^n\over \p t_1\dots \p t_n}
+    _{|t_1=\dots=t_n=0} \left(f(t_1 v_1+\dots+t_n v_n)\right).$$
+其本质是$Sym^n(V_1)$到$V_2$的映射.我们将等同$\otimes^n V_1$的子空间$\bigl( \otimes^n V_1\bigr)^{S_n}\subset \otimes^n V_1$与商空间$Sym^n(V_1)=\bigl( \otimes^n V_1\bigr)_{S_n}$,\,此时线性映射$f^{(n)}$自然等同于$\partial ^n f$.
+
+逆映射定理:\,非线性映射$f$可逆当且仅当第一Taylor系数$f^{(1)}:V_1\ra V_2$可逆.
+
+以上构造可在$Super^{\k}$与$Graded^{\k}$等张量范畴中类似实现.
+
+
+
+\section{pre-$\L$态射}
+
+设$\g_1$与$\g_2$为分次向量空间.
+
+$\g_1$到$\g_2$的pre-$\L$态射为形式流形间的映射
+$$\F:\bigl((\g_1[1])_{formal},0\bigr)\ra \bigl((\g_2[1])_{formal},0\bigr).$$
+$\F$由其Taylor系数
+$$\p^1 \F:\g_1\ra \g_2,$$
+$$\p^2 \F:\wedge^2(\g_1)\ra \g_2[-1],$$
+$$\p^3 \F:\wedge^3(\g_1)\ra \g_2[-2],$$
+ $$\dots$$
+定义.\,\,$\p^n \F$均为分次向量空间间的线性映射.这里使用了自然同构\\
+$Sym^n(\g_1[1])\simeq 
+\bigl(\wedge ^n(\g_1)\bigr)[n]$.换言之,\,$\F$由线性映射
+$$\F_{(k_1,\dots,k_n)}: \g_1^{k_1}\otimes\dots\otimes \g_1^{k_n}\ra 
+   \g_2^{k_1+\dots+k_n+(1-n)},$$
+给出,\,并满足对称性
+$$\F_{(k_1,\dots,k_n)}(\ga_1\otimes\dots\otimes \ga_n)=
+   (-1)^{k_i k_{i+1}+1}
+   \F_{(k_1,\dots,k_{i+1},k_i,\dots,k_n)}(\ga_1\otimes\dots \otimes\ga_{i+1}
+   \otimes\ga_i\otimes\dots\otimes \ga_n).$$
+对$\ga_i\in \g_1^{k_i},i=1,\dots,n$,\,记
+$$\p^n \F(\ga_1\wedge\dots\wedge\ga_n)=
+   \F_{(k_1,\dots,k_n)}(\ga_1\otimes\dots\otimes \ga_n).$$
+将$\p^n \F$简记为$\F_n$.
+
+
+
+\section{$\L$代数与$\L$态射}
+
+设形式分次流形$(\g[1]_{formal},0)$上有一个次数为$1$的奇向量场$Q$,\,使得$Q$诸系数的Taylor级数只有次数$1$和$2$的项.第一Taylor系数$Q_1$给出了次数为$1$的线性映射$\g\ra \g$\,(即$\g\ra \g[1]$).第二Taylor系数$Q_:\wedge ^2\g\ra \g$给出了$\g$上次数为$0$的反对称双线性运算.
+
+由$Q$的次数为$1$,\,$[Q,Q]_{super}=2Q^2$.\,$[Q,Q]=0$等价于$\g$为微分分次李代数,\,装备了微分$Q_1$和李括号$Q_2$.
+
+将装备了满足$[Q,Q]=0$的奇向量场$Q$的超流形称为$Q$-流形.类似地,\,我们将讨论形式分次带点$Q$-流形.
+
+定义$\L$代数为有序对$(\g,Q)$,\,其中$\g$为分次向量空间,\,$Q$为余代数$C(\g [1])$上次数为$1$的余导子,\,满足$Q^2=0$.通常将$\L$代数$(\g,Q)$简记为$\g$.\,$\L$代数在其他文献中也被称为(强)同伦李代数或Sugawara代数.
+
+在分次向量空间$\g$上,\,$\L$代数的结构由($C(\g [1])$上的余导子)奇向量场$Q$的Taylor系数$Q_i$
+\\
+ $$Q_1: \g\ra \g[1],$$
+     $$Q_2: \wedge^2(\g)\ra \g,$$
+     $$Q_3:\wedge^3(\g)\ra \g[-1],$$
+      $$\dots$$
+给出.\,$Q^2=0$即为多项式映射$Q_i$满足一些二次约束:\,第一项为$(\g, Q_1)$是分次向量空间$\g$上的微分.第二项为$Q_2$是$\g$上的反对称二次运算,\,且对$Q_1$满足Leibniz律.第三项为$Q_2$在相差一个含$Q_3$的同伦项的意义下满足Jacobi恒等式.\,$Q_3=Q_4=\dots=0$时,\,$\L$代数$\g$即为一个微分分次李代数.
+
+定义$\L$代数$\g_1$与$\g_2$间的$\L$态射为一个pre-$\L$态射$\F$,\,使得$\F$诱导的分次余交换余代数间的映射$\F_*
+ :C(\g_1[1])\ra C(\g_2[1])$与余导子交换.
+
+几何上看,\,$\L$态射给出了带点形式分次流形间的$Q$-等变映射.
+
+对微分分次李代数,\,pre-$\L$态射$\F$为$\L$态射当且仅当对$n\ge 0$及齐次元素$\ga_i\in \g_1$满足
+
+$$ d\F_n(\ga_1\wedge \ga_2\wedge\dots\wedge\ga_n)-\sum_{i=1}^n \pm \F_n(
+\ga_1\wedge\dots \wedge d\ga_i\wedge\dots \wedge \ga_n)=$$
+$${1\over 2}\sum_{k,l\ge 1,\,\,k+l=n} {1\over k!l!}\sum_{\sigma\in 
+S_n}
+\pm [\F_k(\ga_{\sigma_1}\wedge\dots\wedge\ga_{\sigma_k}),\F_l(\ga_
+{\sigma_{k+1}}\wedge
+\dots\wedge \ga_{\sigma_n})]+$$$$\sum_{i<j}\pm \F_{n-1}([\ga_i,\ga_j]
+\wedge\ga_1
+\wedge\dots\wedge\ga_n).$$
+这些方程的前两个为
+$$d \F_1(\ga_1)=\F_1(d\ga_1)\,,$$
+$$d\F_2(\ga_1\wedge\ga_2)-\F_2(d\ga_1\wedge\ga_2)-(-1)^{\overline{\ga_1}}\F_2
+(\ga_1\wedge d\ga_2)=
+\F_1([\ga_1,\ga_2])-[\F_1(\ga_1),\F_1(\ga_2)].$$
+
+这样,\,$\F_1$为链映射.这对一般的$\L$代数也成立.\,$\L$代数$(\g,Q)$的分次空间$\g$可以视为对应的形式分次流形在基点处的切空间$\otimes \,\k[-1]$.\,$\g$的微分$Q_1$来自奇向量场$Q$在流形上的作用.
+
+设$\g_1$与$\g_2$为微分分次李代数,\,$\F$为$\g_1$到$\g_2$的$\L$态射.对幂零(无幺)代数$\m$,\,Maurer-Cartan方程任意的解$\ga\in\g_1\otimes \m$给出了$\g_2\otimes\m$中Maurer-Cartan方程的解:\,
+
+$$d\ga+{1\over 2}[\ga,\ga]=0
+      \Longrightarrow
+       d\widetilde{\ga}+{1\over 2}
+     [\widetilde{\ga},\widetilde{\ga}]=0,$$
+其中
+$$
+      \widetilde{\ga}=\sum_{n=1}^{\infty} {1\over n!} \F_n(\ga
+     \wedge\dots\wedge\ga)\in
+     \g_2^1\otimes\m.$$
+
+应用到含有形式参数$\hbar$的Maurer-Cartan方程的解$\ga(\hbar)=\ga_1\hbar+\gamma_2\hbar^2+\dots\\
+\in \g_1^1[[\hbar]]$上,\,有
+$$d\ga(\hbar)+{1\over 2}
+     [\ga(\hbar),\ga(\hbar)]=0\Longrightarrow
+      d\widetilde{\ga(\h)}+{1\over 2}
+     [\widetilde{\ga(\h)},\widetilde{\ga(\h)}]=0.$$
+我们可以形式地检验上面的公式.几何上看,\,这是由于微分分次李代数$\g$上的Maurer-Cartan方程对应定义形式流形$\g[1]_{formal}$中$Q$的零点集组成的子概形的方程:\,
+$$d\ga+{1\over 2}[\ga,\ga]=0
+      \,\rightarrow \,Q_{|\gamma}=0.$$
+
+$\L$态射将$Q$的零点映到$Q$的零点,\,由其与$Q$交换.我们在5.5节将看到$\L$态射诱导了形变函子间的自然变换.
+
+
+
+
+\section{拟同构}
+
+$\L$态射推广了微分分次李代数间的映射.特别地,\,$\g_1$到$\g_2$的$\L$态射的第一Taylor系数为链复形$(\g_1,Q_1^{(\g_1)})\ra(\g_2,Q_1^{(\g_2)})$间的映射,\,其中$Q_1^{(\g_i)}$为向量场$Q^{(\g_i)}$的第一Taylor系数(我们简记为$Q$).
+
+定义$\L$代数$\g_1$与$\g_2$间的拟同构为一个$\L$态射$\F$,\,使得$\F_1$诱导链复形$(\g_1,Q_1^{(\g_1)})$与$(\g_2,Q_1^{(\g_2)})$间上同调的同构.
+
+类似地,\,可以定义形式分次带点$Q$-流形间的拟同构为诱导基点处切空间上同调同构的映射.这里切空间装备的微分为向量场$Q$的线性化.
+
+同伦论,\,或者形变理论的本质在于
+
+\begin{thm}
+设$\g_1$,\,$\g_2$为$\L$代数,\,$\F$为$\g_1$到$\g_2$的$\L$态射.若$\F$为拟同构,\,则存在一个$\g_2$到$\g_1$的$\L$态射,\,诱导复形$(\g_i,Q_1^{(\g_i)}),\,\,i=1,2$上同调的反向同构.
+\\
+\\
+对于微分分次李代数的情形,\,$\L$态射$\F$诱导$\g_i$形变函子的同构.
+\end{thm}
+定理的第一部分说明拟同构是等价关系.形变函子的同构由5.3节最后的公式给出.
+
+
+
+
+\section{定理5.4.1,\,证明概略}
+\subsection{$\L$代数的同伦分类}
+
+每个向量空间的复形可以分解为一个微分平凡的复形和一个可缩(上同调平凡)复形的直和.在非线性的情形,\,也存在类似的分解.
+
+称$\L$代数$(\g,Q)$极小,\,若$Q$的第一Taylor系数$Q_1=0$.
+
+称$\L$代数$(\g,Q)$线性可缩,\,若高阶Taylor系数$Q_{\ge 2}=0$且微分$Q_1$的上同调平凡.
+
+$\L$同构不影响极小性,\,但可能改变线性可缩性.称一个形式分次带点$Q$-流形可缩,\,若其对应的微分分次余代数$\L$同构于某个线性可缩的对象.
+
+\begin{lem}
+任一$\L$代数$(\g,Q)$\,$\L$同构于一个极小$\L$代数与一个线性可缩$\L$代数的直和.
+\end{lem}
+
+换言之,\,我们可以在形式分次带点流形上选取适当的仿射结构,\,使得奇向量场$Q$为一个极小向量场和一个线性可缩向量场的直和.我们可以对Taylor展式的次数归纳构造这样的仿射结构.
+
+注记.奇点理论中有类似的定理:\,我们可以选取适当的局部坐标$(x^1,\dots,x^k,$
+$y^1,\dots,y^l)$,\,使得解析函数在临界点处的芽形如$f=const+Q_2(x)+Q_{\ge 3}(y)$,\,其中$Q_2$为$x$的非退化二次型,\,$Q_{\ge 3}(y)$的Taylor展式最低次数至少为$3$.
+
+设$\g$为$\L$代数,\,$\g^{min}$为$\g$在引理中对应的极小$\L$代数.我们有$\L$态射(投影和嵌入)
+$$(\g[1]_{formal},0)\ra (\g^{min}[1]_{formal},0),\,\,\,
+             (\g^{min}
+             [1]_{formal},0)\ra (\g[1]_{formal},0),$$
+二者均为拟同构.由此,\,若
+$$(\g_1[1]_{formal},0)
+             \ra (\g_2[1]_{formal},0)$$
+为拟同构,\,我们有极小$\L$代数的拟同构
+$$(\g_1^{min}
+             [1]_{formal},0)\ra (\g_2^{min}[1]_{formal},0).$$
+极小$\L$代数的拟同构诱导了余生成元的同构,\,由逆映射定理其可逆.我们证明了定理5.4.1的第一部分,\,顺带得出$\L$代数的拟同构等价类自然对应于极小$\L$代数的拟同构等价类.
+
+
+
+\subsection{$Q$不动点处的形变函子}
+
+形变函子可以定义在带点形式分次$Q$-流形上.记基点为$0$.对有限维幂零代数$\m$,\,$\m$系数Maurer-Cartan方程的解集定义为$Q$的零点组成的形式概形的$\m$-点
+$$Maps\left(\bigl(
+                  Spec(\m\oplus \k\cdot 1), \,{\rm base\,\,\,point}\,\bigr),
+                  \bigl(Zeroes(Q),0\bigr)\right)$$$$\subset
+                  Maps\left(\bigl(
+                  Spec(\m\oplus \k\cdot 1), \,{\rm base\,\,\,point}\,\bigr),
+                  \bigl(M,0\bigr)\right).$$
+
+以$M$对应的余代数$\c$描述,\,这对应像被$Q$零化的余代数同态$\m^*\ra \c$的集合.另一种描述方法为引入整体(即非形式的)带点$Q$-流形并考虑整体向量场$Q$的零点.
+
+称Maurer-Cartan方程的两个解$p_0$和$p_1$规范等价,\,若存在一族次数$-1$的以$Spec(\m\oplus\k\cdot 1)$为参数的$M$上的奇向量场$\xi(t)$的多项式及
+$${d p(t)\over dt}= [Q,\xi(t)]_{|p(t)},\,\,\,
+                    p(0)=p_0,\,\,p(1)=p_1$$
+的一个多项式解,\,其中$p(t)$是带点形式分次流形上$M$-点的一个多项式族.
+
+以$\L$代数角度观之,\,多项式路径$\{p(t)\}$的集合与$\g^1\otimes \m\otimes \k[t]$自然对应.多项式依赖于$t$的向量场$\xi(t)$不必在基点$0$处消没.
+
+规范等价定义了一个等价关系.对形式分次带点流形$M$,\,定义集合
+$Def_M(\m)$,\,\\其对象为Maurer-Cartan方程解的规范等价类.\,$\m\mapsto Def_M(\m)$自然延拓为一个函子,\,我们仍记为$Def_M$.类似地,\,对$\L$代数$\g$,\,记对应的形变函子为$Def_\g$.以下性质近乎显然:\,
+
+(1)\,对微分分次李代数$\g$,\,$(\g[1]_{formal},0)$定义的形变函子自然等价于4.2节定义的形变函子.
+
+(2)\,$\L$态射给出了形变函子的自然变换.
+
+(3)\,$Def_{\g_1\oplus\g_2}$自然等价于$Def_{\g_1}\times Def_{\g_2}$.
+
+(4)\,线性可缩$\L$代数给出的形变函子平凡: $\#Def_\g(\m)=1$.
+\\
+故微分分次李代数间的拟同构诱导了形变函子的同构.定理5.6证毕.
+
+注记.定义形变函子时,\,我们可以考虑形式带点超$Q$-流形(即非分次的)和有限维幂零微分超交换结合(无幺)代数$\m$.
+
+
+
+\section{形式性}
+
+\subsection{两个微分分次李代数}
+
+设$X$为光滑流形,\,$A=C^\infty (X)$.下面定义$\R$上的微分分次李代数$D_{poly}(X)$和$T_{poly}(X)$.
+
+$D_{poly}(X)$为$A$的移位Hochschild复形的子代数.对$n\ge -1$,\,$D^n_{poly}(X)$的元素为多微分算子给出的Hochschild上链$A^{\otimes (n+1)}\ra A$.在局部坐标$(x^i)$下$D^n_{poly}$的元素形如
+$$f_0\otimes\dots\otimes f_n\mapsto\sum_{(I_0,\dots,I_n)} 
+   C^{I_0,\dots,I_n}(x)\cdot 
+   \partial_{I_0}(f_0)
+   \dots\partial_{I_n}(f_n),$$
+其中求和为有限和.这里$I_k$表示多指标,\,$\partial_{I_k}$表示$I_k$对应的偏导,\,$f_k$与$C^{I_0,\dots,I_n}$为$(x_i)$的函数.
+
+$T_{poly}(X)$为$X$上多向量场的微分分次李代数
+$$T^n_{poly}(X)=\Gamma(X,\wedge^{n+1} T_X),n\ge -1$$
+装备了Schouten-Nijenhuis括号与微分$d=0$.
+
+回忆Schouten-Nijenhuis括号:\,
+$$[\xi_0\wedge\dots\wedge\xi_k,\eta_0\wedge\dots\wedge\eta_l]=\sum_{i=0}^k\sum_{j=0}^l (-1)^{i+j+k}$$
+   $$
+   [\xi_i,\eta_j]\wedge\xi_0\wedge
+   \dots\wedge\xi_{i-1}\wedge\xi_{i+1}\wedge\dots\wedge
+   \xi_k\wedge\eta_0\wedge\dots\wedge \eta_{j-1}\wedge\eta_{j+1}\wedge\dots
+   \wedge\eta_l,
+   $$
+   $$[\xi_0\wedge\dots\wedge\xi_k,h]=
+   \sum_{i=0}^k (-1)^i \xi_i(h)\cdot\bigl(\xi_0\wedge
+   \dots\wedge\xi_{i-1}\wedge\xi_{i+1}\wedge\dots\wedge
+   \xi_k\bigr).$$
+   
+在局部坐标$(x^1,\dots ,x ^d)$下,\,若以奇变量$\psi_i$代替$\p/\p x^i$并将多向量场写为$(x^1,\dots,x^d|\psi_1,\dots,\psi_d)$的函数,\,Schouten-Nijenhuis括号为
+$$[\ga_1,\ga_2]=\ga_1\bullet \ga_2-(-1)^{k_1 k_2} \ga\bullet \ga_1,$$
+其中
+$$\ga_1\bullet \ga_2= \sum_{i=1}^d
+     {\p \ga_1\over\p \psi_i}{\p\ga_2\over \p x^i},\,\ga_i\in
+      T^{k_i}(\R^d).$$
+
+
+
+\subsubsection{一个$D_{poly}(X)$到$T_{poly}(X)$的映射}
+我们有显然的映射$\U_1^{(0)}:T_{poly}(X)\ra D_{poly}(X)$,\,
+$$(\xi_0\wedge\dots\wedge \xi_n)\mapsto\left(f_0\otimes\dots 
+\otimes f_n\mapsto {1\over (n+1)!}
+\sum_{\sigma\in S_{n+1}} sgn(\sigma) \prod_{i=0}^{n} \xi_{\sigma_i}
+(f_i)\right),\,n\ge 0,$$
+$$h\mapsto \bigl(1\mapsto h\bigr)\,,\,\,\,h\in\G(X,{\cal O}_X).$$
+
+\begin{thm}
+$\U_1^{(0)}$为复形的拟同构.
+\end{thm}
+
+代数簇版本的Hochschild-Kostant-Rosenberg定理断言对于特征$0$域$\k$上的光滑仿射代数簇$Y$,\,${\cal O}(Y)$的Hochschild上同调同构于$Y$上的代数多向量场\\
+$\oplus_{k\ge 0}\,
+   \G(X,\wedge ^k T_Y)[-k]$.
+
+容易验证$\U_1^{(0)}$的像被$D_{poly}(X)$的微分零化,\,即$\U_1^{(0)}$为复形间的映射.
+
+复形$D_{poly}(X)$上多微分算子的总次数确定了一个滤链.\,$T_{poly}(X)$上则按多向量场的次数定义.\,\,$\U_1^{(0)}$与这两个滤链相容.我们有
+$$Gr\bigl(\U_1^{(0)}\bigr):\,Gr\bigl(T_{poly}(X)\bigr)
+        \ra \,Gr\bigl(D_{poly}(X)\bigr)$$
+为拟同构.在分次复形$Gr\bigl(D_{poly}(X)\bigr)$中,\,所有分量均为某些自然的向量丛的截面,\,且微分为$C^{\infty}(X)$-线性的.同样的事情对$T_{poly}(X)$显然成立.这样,\,我们只需逐纤维地检验$Gr\bigl(\U_1^{(0)}\bigr)$为拟同构.
+
+设$x$为$X$上一点,\,$T$为$x$处的切空间.\,$x$处多微分算子的主符号属于向量空间
+$$Sym(T)\otimes\dots\otimes Sym(T),$$
+其中$Sym(T)$为$T$生成的自由多项式代数.我们将其等同于$T$余生成的无余幺余自由余交换余结合余代数
+$$\c=C(T)\oplus (\k\cdot 1)^*. $$
+$Sym(T)$自然同构于$T$上常系数微分算子组成的空间.这样的算子$D$定义了$0\in T$处形式幂级数代数上的连续线性泛函
+$$f\mapsto \bigl(D(f)\bigr)(0),$$
+即余代数$\c$中的一个元素.
+
+记$\c$的余乘法为$\Delta$.易见$Gr\bigl(D_{poly}(X)\bigr)$在$x$处纤维上的微分为
+$$d: \otimes ^{n+1}\c\ra \otimes^{n+2}\c,\,\,\,
+                 d=1^*\otimes
+                 id_{\otimes^{n+1}\c}
+                 -\sum_{i=0}^n \,(-1)^i\,id\otimes\dots\otimes 
+                 \Delta_i\otimes
+                 \dots\otimes id+(-1)^n id_{\otimes^{n+1}\c}\otimes 1^*$$
+其中$\Delta_i$为在第$i$个分量处取$\Delta$.
+
+\begin{lem}
+设$\c$为向量空间$T$余生成的含余幺余自由余交换余结合余代数,则自然同态
+$\bigl(\wedge ^{n+1} T,$微分$=0\bigr)
+              \ra \bigl(\otimes ^{n+1} \c,$微分如上$)$
+为拟同构.
+\end{lem}
+
+引理的证明.不妨设$T$的维数有限.将复形$\bigl(\otimes ^{n+1} \c\bigr)$分解为含有固定总维数张量的子复形的无穷直和.我们的论述意味着这些子复形的上同调仅在有限个维数非平凡.故引理成立当且仅当将直和改为直积也成立.上述复形的分量为$Hom(A^{\otimes (n+1)},\k)$,\,其中$A$为$T$上的多项式代数.易见其计算了$Ext^{n+1}_{A-mod}(\k,\k)=\wedge^{n+1} T$,\,其中$\k$通过取多项式在$0$处的值作为$A$-模,\,并有自由消解\\
+$\dots\ra A\otimes A\ra A\ra 0\ra\dots$.
+\\
+\\
+注意到将$\c$换成一般的无余幺余自由余代数并从微分中去掉含$1^*$的项时引理仍然成立.以Hochschild上链角度观之,\,这意味着约化上链构成的子复形拟同构于全复形.
+
+引理说明$Gr\bigl(\U_1^{(0)}\bigr)$逐纤维拟同构.应用谱序列,\,我们完成了定理5.6.1的证明.
+
+
+
+\subsection{主定理}
+不幸地是,\,\,\,$\U_1^{(0)}$与李括号不交换,\,从而不是$\L$态射.但我们有
+
+\begin{thm}
+存在$T_{poly}(X)$到$D_{poly}(X)$的$\L$态射$\U$,\,使得$\U_1=\U_1^{(0)}$.
+\end{thm}
+
+换言之,\,$T_{poly}(X)$与$D_{poly}(X)$为拟同构的微分分次李代数.在有理同伦论中,\,我们称一个微分分次交换代数为形式的,\,若其拟同构于其上同调(后者装备平凡微分).此即5.6节标题的由来.
+
+定理中的拟同构$\U$并非典范的.我们将显式构造一族拟同构,\,由一个(某种意义下)可缩的空间参数化.这意味着我们的构造在相差高阶同伦的意义下是典范的.
+
+$T_{poly}(X)$中Maurer-Cartan方程的解为$X$上的泊松结构
+$$\alpha
+      \in T_{poly}^1(X)=\G(X,\wedge^2 T_X),\,\,\,[\alpha,\alpha]=0.$$
+任何这样的$\alpha$给出一个形式依赖于$\h$的解
+$$\ga(\hbar)=\alpha\h\in T_{poly}^1(X)[[\h]]\,,\,\,\,
+        [\ga(\hbar),\ga(\hbar)]=0.$$
+
+规范群作用为微分同胚群的共轭作用.
+
+$D_{poly}(X)$中Maurer-Cartan方程形式依赖于$\h$的解,\,至少在$\U_1^{(0)}$的像中,\,为星积.作为推论我们得到了$X$上的每个泊松结构给出了星积的一个典范等价类,\,以及定理2.3.1.
+
+
+
+\subsection{不唯一性}
+存在与我们将在第七八章构造的拟同构$\U$本质不同(即不会在某个自然的意义下同伦)的自然的拟同构$T_{poly}(X)\ra D_{poly}(X)$.现在解释这里提到的同伦.两个$\L$代数间的$\L$态射等同于映射的(无穷维)超流形上$Q$的不动点.模仿5.5.2节的定义和构造,\,可以定义一个$\L$态射间的等价关系(同伦等价).
+
+乘法群$\R^{\times}$作用于$T_{poly}(X)$,\,$\lambda $在$\ga\in T_{poly}(X)^k$上的作用为乘$\lambda ^k$.与$\U$复合我们得到了拟同构的一个单参数族.对$X=\R^d$,\,$T_{poly}(X)$上存在一个奇异的无穷小$\L$自同态,\,且有可能定义到一般流形上.特别地,\,其在泊松结构的空间上诱导了一个向量场.其对时间$t$的(非线性)演化方程为
+$${d\alpha\over dt}=\sum_{i,j,k,l,m,k',l',m'}{\partial^3\alpha^{ij}
+        \over \partial x^k\partial x^l\partial x^m} 
+        {\partial\alpha^{k k'}\over \partial x^{l'}}
+        {\partial\alpha^{l l'}\over \partial x^{m'}}
+         {\partial\alpha^{m m'}\over \partial x^{k'}}
+         \left({ \partial_i}
+         \wedge { \partial_j}\right),$$
+其中$\alpha=\sum_{i,j} \alpha^{ij}(x){\partial_i}
+         \wedge {\partial_j}$为$\R^d$上的双向量场.
+
+先验地,\,我们仅能对小的$t$与实解析的初始数据得到演化解的存在性.\,但我们可以证明
+
+(1)演化保持(实解析)泊松结构类,\,
+
+(2)若两个泊松结构相差一个实解析微分同胚,\,则这对演化也对.
+
+由此,\,我们的演化算子本质是内蕴的,\,且与坐标的选择无关.
+
+一并考虑$\R^{\times}$的作用,\,我们得到直线$\R^1$的无穷小仿射变换李代数$aff(1,\R)$非平凡作用于$T_{poly}(X)$与$D_{poly}(X)$间拟同构同伦类的空间.\,$T_{poly}(X)$上也可能存在其他奇异的$\L$自同态.尚不清楚我们选取的$\U$是否优于其他拟同构.

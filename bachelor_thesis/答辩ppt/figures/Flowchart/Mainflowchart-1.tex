@@ -1,0 +1,33 @@
+\documentclass[border={0pt 0pt 0pt 0pt}]{standalone}
+\usepackage{tikz-cd,tikz-3dplot} 
+\usepackage{ctex}
+\usepackage{CJKfntef}
+\usetikzlibrary {calc,positioning,shapes.misc,graphs}
+\begin{document}
+\begin{tikzpicture}[
+double distance between line centers=3pt,
+node distance=15mm,
+terminal/.style={
+	% The shape:
+	rectangle,minimum size=6mm,rounded corners=3mm,
+	% The rest
+	very thick,draw=black!50,
+	top color=white,bottom color=black!20,
+	font=\ttfamily},
+every new ->/.style={shorten >=1pt},
+>={Implies},thick,black!50,text=black,
+%arrows = {-Latex[length=5pt 3 0]}
+]
+
+\node (mod) [terminal] {模方程的解};
+\node (shier) [terminal,below=of mod,yshift=0.5cm] {正二十面体方程的解};
+\node (Bri) [coordinate,below=of shier] {};
+\node (Bri1) [terminal,left=of Bri,xshift=1.7cm] {Brioschi预解式};
+\node (qua) [terminal,below=of Bri] {五次方程解};
+\node (jie) [terminal,right=of Bri1] {(6.2)的解};
+\path (mod) edge [->,double] (shier);
+\path (shier) edge [<->,double]node[left]{\parbox{1.5cm}{\small 辅助方程}} ($(Bri1.north)+(10mm,0)$);
+\path ($(Bri1.south)+(10mm,0)$) edge [<->,double]node[left]{\parbox{2.5cm}{\small Tschirnhaus变换}} (qua);
+\path (jie.south west) edge [<->,double]node[right]{\parbox{1.5cm}{\small J-B约化}} (qua.north east);
+\end{tikzpicture}
+\end{document}

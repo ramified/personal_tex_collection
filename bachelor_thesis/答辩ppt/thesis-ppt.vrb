@@ -1,0 +1,17 @@
+\frametitle{模方程解正二十面体方程}
+$$\text{记 \;}\Gamma(N):=\left\{ \begin{pmatrix}
+a &b \\ c & d
+\end{pmatrix} \in SL_2(\mathbb{Z}) \;\middle|\; \begin{pmatrix}
+a &b \\ c & d
+\end{pmatrix} \equiv \begin{pmatrix}
+1 &0 \\ 0 & 1
+\end{pmatrix} \mod N  \right\}$$
+则有交换图
+\only<1-2>{}
+\begin{center}
+^^I\begin{tikzcd}
+^^I^^I\mathcal{H}^* \arrow[r, "r"] & \mathcal{H}^*/\Gamma(5) \arrow[r, "\pi_1"] \arrow[d, "\hat{j}_5","\sim"'] & \mathcal{H}^*/\Gamma(1) \arrow[d, "\hat{j}","\sim"'] \\
+^^I^^I& \mathbb{PC}^1 \arrow[r, "\varPhi"]                                      & \mathbb{PC}^1/\Gamma
+^^I\end{tikzcd}
+\end{center}
+$$\big(\Gamma(1)/\Gamma(5) \cong PSL_2(\mathbb{F}_5) \cong \Gamma\big)$$

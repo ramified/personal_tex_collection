@@ -1,0 +1,61 @@
+\documentclass[border={0pt 0pt 0pt 0pt}]{standalone}
+\usepackage{tikz-cd,tikz-3dplot} 
+\usetikzlibrary{calc,intersections,through,backgrounds,decorations.pathmorphing, decorations.shapes,decorations.markings}
+%include other needed packages here   
+\begin{document}
+	\makeatletter
+	\tikzset{nomorepostaction/.code={\let\tikz@postactions\pgfutil@empty}}
+	\makeatother
+\begin{tikzpicture}[thick,inner sep=0pt,label distance=0.1cm,
+		one/.style={
+	postaction={nomorepostaction,decorate,
+		decoration={markings,mark=at position 0.7 with {\arrow[very thick]{Latex}}}
+	}
+},
+		three/.style={
+	postaction={nomorepostaction,decorate,
+		decoration={markings,mark=at position 0.5 with {\arrow[very thick]{>}}}
+	}
+},
+two/.style={
+	postaction={nomorepostaction,decorate,
+		decoration={markings,mark=at position 0.67 with {\arrow[very thick]{Latex}}},
+		decoration={markings,mark=at position 0.57 with {\arrow[very thick]{Latex}}}
+	}}]
+\coordinate [label=right:$A$] (A) at (1,0);
+\coordinate [label=left:$A$] (B) at (-1,0);
+
+\coordinate [label=right:$B$] (E) at
+($ (A) ! 1 ! 108:(B) $) {};
+\coordinate [label=below:$A$] (D) at
+($ (E) ! 1 ! 108:(A) $) {};
+\coordinate [label=left:$C$] (C) at
+($ (D) ! 1 ! 108:(E) $) {};
+\coordinate [label={[label distance=0.1cm]above:$a$}] (d) at
+($ (A) ! .5 ! (B) $) {};
+\coordinate [label={above left}:$b$] (e) at
+($ (B) ! .5 ! (C) $) {};
+\coordinate [label={below left}:$b$] (a) at
+($ (C) ! .5 ! (D) $) {};
+\coordinate [label={below right}:$c$] (b) at
+($ (D) ! .5 ! (E) $) {};
+\coordinate [label={above right}:$c$] (c) at
+($ (E) ! .5 ! (A) $) {};
+\coordinate [label={above right}:$T$] (T) at
+($ (d) ! tan(54) ! -90:(A) $) {};
+\draw[very thick, one] (d) -- (A);
+\draw[very thick, one] (d) -- (B);
+\draw[very thick, three] (A) -- (E);
+\draw[very thick, two] (B) -- (C);
+\draw[very thick, three] (D) -- (E);
+\draw[very thick, two] (D) -- (C);
+\draw[dashed, thick] (D) -- (T) -- (E);
+\begin{pgfonlayer}{background}
+\fill[ultra thick, blue!30] (D) -- (E) -- (A) -- (B) -- (C) -- (D);
+\end{pgfonlayer}
+\foreach \point in {A,B,C,D,E,T}
+\fill [black,opacity=1] (\point) circle (1.5pt);
+\foreach \point in {a,b,c,d,e}
+\fill [red,opacity=1] (\point) circle (1.5pt);
+\end{tikzpicture}
+\end{document}

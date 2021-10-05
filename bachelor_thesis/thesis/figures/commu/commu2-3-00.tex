@@ -1,0 +1,12 @@
+\documentclass[border={0pt 0pt 0pt 0pt}]{standalone}
+\usepackage{tikz-cd,tikz-3dplot} 
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usetikzlibrary{shapes.geometric, arrows, backgrounds,external}
+%include other needed packages here   
+\begin{document}
+\begin{tikzcd}[column sep=tiny, row sep=large]
+	\mathbb{PC}^1 \arrow[d, "60"]    & {\textcolor{blue}{A,B,\cdots(12)}} \arrow[d, "3"] & {c,\cdots(20)} \arrow[d, "2"] & {O,\cdots(30)} \arrow[d, "5"] \\
+	{\mathbb{PC}^1/\Gamma} & 0                               & 1                             & \infty                       
+\end{tikzcd}
+\end{document}

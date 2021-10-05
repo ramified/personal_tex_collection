@@ -1,0 +1,24 @@
+
+\documentclass[border={0pt 0pt 0pt 0pt}]{standalone}
+\usepackage{tikz-cd,tikz-3dplot} 
+\usetikzlibrary{calc,intersections,through,backgrounds,decorations.pathmorphing, decorations.shapes,decorations.markings,patterns,fadings}
+%include other needed packages here   
+\begin{document}
+\pgfdeclareradialshading{myshading}{\pgfpointorigin}
+{
+	color(0mm)=(pgftransparent!0);
+	color(30mm)=(pgftransparent!0);
+	color(40mm)=(pgftransparent!100);
+	color(99mm)=(pgftransparent!100)
+}
+\pgfdeclarefading{fading3}{\pgfuseshading{myshading}}
+	\begin{tikzpicture}[scale=2]
+	\coordinate [label=below right:{$\omega$}] (A) at (cos 60,sin 60);
+
+	\coordinate [label=below:{$i$}] (B) at (0,1);
+	\coordinate [label=235:{$\omega^2$},xshift=0.1cm] (C) at (-cos 60,sin 60);
+	\pgfsetfading{fading3}{\pgftransformshift{\pgfpoint{0}{0}}}
+	\filldraw[pattern=north east lines, pattern color=gray,thick] (cos 60,2) -- (A) arc [start angle=60, end angle=120, radius=1]  -- (-cos 60,2);
+
+	\end{tikzpicture}
+\end{document}

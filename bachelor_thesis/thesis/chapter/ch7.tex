@@ -1,0 +1,191 @@
+\chapter{一般流形上的形式性猜想}
+
+本章对一般流形建立形式性猜想.本质上所有工作已在之前完成,\,唯一的新解析结果为构形空间上某些积分的消没,\,类似于引理7.6.1.
+
+向量空间$\R^d$在$0$处的形式完备化$\R^d_{formal}$有很多性质与普通流形类似.我们可以定义微分分次李代数$D_{poly}(\R^d_{formal})$与$T_{poly}(\R^d_{formal})$.李代数$W_d=$\\$Vect(\R^d_{formal})$为标准的形式向量场的李代数.视$W_d$为微分分次李代数,\,装备平凡分次与微分.将向量场视为多向量场与多微分算子,\,有微分分次李代数的自然同态
+$$m_T: W_d\ra T_{poly}
+               (\R^d_{formal}),\,\,\,m_D:W_d\ra D_{poly}
+               (\R^d_{formal}).$$
+我们将用到7.4节中拟同构$\U$的以下性质:\,
+
+(P1)\,\,$\U$也可定义于$\R^d_{formal}$.
+
+(P2)\,对任何$\xi\in W_d$,\,$\U_1(m_T(\xi))=m_D(\U_1(\xi))$.
+
+(P3)\,\,$\U$为$GL(d,\R)$-等变态射.
+
+(P4)\,对任意的$k\ge 2$及$\xi_1,\dots,\xi_k\in W_d$,\,$\U_k(m_T(\xi_1)\otimes\dots\otimes
+            m_T(\xi_k))=0$.
+
+(P5)\,对任意的$k\ge 2$,\,$\xi\in gl(d,\R)\subset W_d$,\,及$\eta_2,\dots,\eta_k\in T_{poly}
+               (\R^d_{formal})$,\,有$\U_k(m_T(\xi)\otimes\eta_2
+                \otimes\dots\otimes\eta_k)=0$.
+
+我们将对任意的$d$维流形$X$构造拟同构$T_{poly}(X)\to D_{poly}(X)$,\,仅用到$\U$的性质P1\,-\,P5.\,\,P1,\,P2与P3是自明的,\,\,P4与P5将在8.3.1.1与8.3.3.1节给出.
+
+本节使用形式分次流形的几何语言较$\L$代数的代数语言更为方便.固定维数$d\in \N$,\,定义不带基点的形式分次$Q$-流形$\T,\D,\W$分别为微分分次李代数$T_{poly}(R^d_{formal})$,\,$D_{poly}(R^d_{formal})$,\,$W_d$对应的形式流形遗忘基点.
+
+
+\section{形式几何}
+设$X$为$d$维形式流形.我们定义两个无穷维流形$X^{coor}$和$X^{aff}$.\,$X^{coor}$的元素为有序对$(x,f)$,\,其中$x$为$X$中一点,\,$f$为$X$在$x$处坐标系的无穷阶芽,\,即
+$$f:(\R^d_{formal},0)\hookrightarrow (X,x).$$
+将$X^{coor}$视为有限维流形(坐标系有限阶芽的空间)的投射极限.\,$\R^d$保持基点$0$的形式微分同胚(pro-李)群$G_d$作用于$X^{coor}$.自然投影$X^{coor}\ra X$为$G_d$-主丛.
+
+定义流形$X^{aff}$为商空间$X^{coor}/GL(d,\R)$,\,其可视为$X$上点的形式仿射结构空间.引入$X^{aff}$的主要原因为自然投影$X^{aff}\ra X$的纤维可缩.
+
+群$G_d$的李代数为$W_d$余维$d$的子代数,\,其元素为$0$处消没的形式向量场,\,故$Lie(G_d)$作用于$X^{coor}$.易见$W_d$作用于$X^{coor}$并在每点同构于后者的切空间.形式地,\,视无穷维流形$X^{coor}$为李代数$W_d$对应的(不存在的)群的主齐性空间.
+
+形式几何的主要想法在于以$W_d$的``主齐性空间''代替$d$维流形.\,$X^{coor}$上微分几何的构造可从$W_d$的李代数构造得到.我们首先处理$X^{coor}$的情形,\,而后返回$X^{aff}$.以李代数诠释,\,这对应绝对与相对上同调的区别.
+
+
+\section{平坦联络与$Q$-等变映射}
+
+设$M$为光滑流形(或复解析流形,\,代数流形,\,pro-流形等).记$M$切丛纤维反转奇偶性所得的超流形为$\Pi T M$.\,$\Pi T M$上的函数为$M$上的微分形式.\,$\Pi TM$的$Q$-流形结构由de Rham微分$d_M$给出.作为分次流形,\,更精确的记号可能是$T[1] M$\,(分次向量丛$T_M[1]$视为分次流形).
+
+设$N\ra M$为流形$M$上的丛,\,其纤维为流形或向量空间等,\,装备了平坦联络$\nabla$.记$E$为丛$B=\Pi TM$沿$N\ra M$的拉回.联络$\nabla$给出了$B$上的向量场$Q_B=d_M$到$E$上的向量场$Q_E$的提升.这可对任意联络施行,\,但仅对平坦联络成立$[Q_E,Q_E]=0$.
+
+底空间与全空间均为$Q$-流形的$Q$-等变丛为装备平坦联络的(非线性)丛的一种推广.\,$Q$-等变映射推广了丛的协变平坦映射.
+
+定义$Q$-流形$B$上的平坦族为有序对$(p:E\ra B,\sigma)$,\,其中$p:E\ra B$为纤维是形式流形的$Q$-等变丛,\,$\sigma :B\ra E$为$Q$-等变截面.
+
+$B$为单点集时,\,$B$上的平坦族即为带基点的形式流形.对于一个$Q$-流形,\,其上的平坦族构成一个范畴.
+
+这里的平坦族实为``带点形式流形上的平坦族''的简称.
+
+类似地,\,可以在分次$Q$-流形上定义平坦分次族.
+
+
+
+\section{形变量子化中的平坦族}
+
+本节给出$\Pi TX$上的两个平坦族及其间的一个映射.
+
+
+\subsection{$\W$上的平坦族}
+
+$\W$上的第一个丛$\T\times\W\ra \W$作为$Q$-等变丛平凡,\,但装备了非平凡截面${\sigma}_\T$.\,${\sigma}_\T$为微分分次李代数的同态$m_T:W_d\ra T_{poly}(\R^d_{formal})$对应的$Q$-等变映射$\W\ra \T$的图像.类似地,\,第二个丛为平凡的$Q$-等变丛$\D\times\W\ra \W$,\,装备了\\$m_D:W_d\ra D_{poly}(\R^d_{formal})$对应的截面$\s_\D$.
+
+7.4节的公式给出了$Q$-等变映射$\U:\T\ra \D$.
+
+\begin{lem}
+映射$(\U\times id_{\W}):\T\times\W\ra
+             \D \times \W$为$\W$上平坦族的映射.
+\end{lem}
+证明.我们需要验证$\U\times id_{\W}$将截面${\sigma}_\T$映到$\s_\D$,\,即
+$$(\U\times id_{\W})\circ \s_\T=
+              \s_D\in Maps(\W,\D\times \W).$$ 
+比较Taylor系数.\,\,$\U$的线性部分$\U_1$将一个向量场(视为多向量场)映到自身,\,视为微分算子(性质P2).分量$\U_k(\xi_1,\dots
+                 , \xi_k)$对$k\ge 2$,\,\,\,$\xi_i\in T^0(\R^d)=
+                 \G(\R^d,T)$消没\\(性质P4).
+
+\subsubsection{性质P4的证明}
+计算$\U_k(\xi_1,\dots  , \xi_k)$时出现的图有$k,m$个点,\,$k$条边,\,其中$2k+m-2=k$.\\由$m\ge 0$,\,$k\leq 2$.仅$k=2,m=0$时非平凡.
+
+$\U_2$限制到向量场上为非平凡二次映射
+$$\xi\mapsto \sum_{i,j=1}^d   \p_i(\xi^j)\p_j(\xi^i)\in\G(\R^d,  {\cal O}),\,\,\,\, \xi=\sum_i \xi^i\p_i\in\G(\R^d,T),$$
+其权为
+$$\int\limits_{C_{2,0}} d\phi_{(12)} d\phi_{(21)}=\int
+                \limits_{\H\setminus
+                 \{z_0\}} d\phi(z,z_0)\wedge d\phi(z_0,z),$$
+其中$z_0$为$\H$中任意一点.
+
+\begin{lem}
+对任何角映射$\phi$,\,\,$\int\limits_{\H\setminus
+                 \{z_0\}} d\phi(z,z_0)\wedge d\phi(z_0,z)=0$.
+\end{lem}
+证明.考虑映射$\phi:\OC_{2,0}\ra S^1\times S^1,\,[(x,y)]\mapsto (\phi(x,y),\phi(y,x))$,\,并计算二维环面上标准体积元素拉回的积分.易见这不依赖于$\phi$的选取,\,由积分区域的边界$\p \OC_{2,0}$在$S^1\times S^1$中与自身的反射消去,\,这里$S^1\times S^1$中的对合为$(\phi_1,\phi_2)\mapsto (\phi_2,\phi_1)$.设$\phi=\phi^h$及$z_0=0+1\cdot i$.由于对合$z\mapsto -{\overline z}$反转$\H$的定向且保持$d\phi(z,z_0)\wedge d\phi(z_0,z)$不变,\,积分消没.\,
+
+
+
+\subsection{$\Pi T(X^{coor})$上的平坦族}
+
+设$X$为$d$维流形,\,则存在$Q$-流形间的自然映射$\Pi T(X^{coor})\,\ra \,\W$\\(Maurer-Cartan形式).若$G$为李群,\,则$G$自由左作用于自身,\,从而$\Pi TG$.商$Q$-流形$\Pi TG/G$等同于$\Pi \g$,\,其中$\g=Lie(G)$.这样,\,我们有$Q$-等变映射$\Pi TG\ra \Pi \g$.类似的构造对$G$上的主齐性空间也成立.我们将其应用到$X^{coor}$上,\,视后者为李代数$W_d$对应的不存在的群的主齐性空间.
+
+8.3.1节中$\W$上形式流形平坦族的拉回为$\Pi T ( X^{coor})$上的两个平坦族
+$$\T\times \Pi T (X^{coor})\ra \Pi T (X^{coor}),\,\,\D\times \Pi T (X^{coor})\ra \Pi T (X^{coor}),$$
+作为$Q$-等变丛皆平凡.
+截面$\sigma_\T$与$\sigma_\D$的拉回给出了上述丛的截面,\,仍记为$\sigma_\T$与$\sigma_\D$.\,\,$\U\times id_\W$的拉回仍为平坦族的映射.
+
+
+
+\subsection{$\Pi T (X^{aff})$上的平坦族}
+
+回忆$X^{aff}$为$X^{coor}$在$GL(d,\R)$作用下的商空间.由$\Pi T$ ($=\underline{Maps}(\R^{0|1},\cdot)$)的函子性,\,\,$\Pi T (X^{aff})$为$Q$-流形$\Pi T (X^{coor})$在$Q$-群$\Pi T (GL(d,\R))$作用下的商空间.我们将构造$\Pi T (GL(d,\R))$在$\Pi T (X^{coor})$上的平坦族$\T\times \Pi T (X^{coor})$与$\D\times \Pi T (X^{coor})$上的作用.两个平坦族间的映射在此作用下不变.其商族与商映射为$\Pi T (X^{aff})$上的两个平坦族与其间的映射.
+
+若$G$为有李代数$\g$的李群,\,则$\Pi T G$通过等同$\Pi \g=\Pi TG/G$\,\,$Q$-等变作用于$\Pi \g$.类似地,\,若有$\g\hra\g_1$及在$\g_1$上给定与$\g\hra\g_1$相容的$G$-作用,\,则$\Pi T G$作用于$\Pi \g_1$.将上述构造应用于$G=GL(n,\R)$及$\g_1=T_{poly}(\R^d_{formal})$或$\g_1=D_{poly}(\R^d_{formal})$,\,我们得到了$\Pi T (GL(d,\R))$在$\T$与$\W$上的作用.
+
+$\Pi T (X^{coor})$的截面$\sigma_\T$与$\sigma_\D$均为$\Pi T (GL(d,\R))$-等变截面.我们得到了\\$\Pi T( X^{aff})$上的两个平坦族.
+
+尚需验证平坦族间的映射
+$$\U\times   id_{\Pi T (X^{coor})}:\T \times  \Pi T (X^{coor})\ra  \D\times \Pi T (X^{coor})$$
+为$\Pi T (GL(d,\R))$-等变映射.以李代数语言诠释,\,即$\U$为$GL(d,\R)$-等变态射(P3),\,\,\\以及$\U_{\ge 2}$被$gl(d,\R)\subset  W_d$零化(P5).
+
+
+\subsubsection{性质(P5)}
+
+这也归结为计算积分.设将某个$gl(d,\R)$的元素(向量场)置于$\G$的点$v$.恰有一条边始于$v$.若无边终于$v$,\,则积分消没,\,由于积分域有所有形式消没于其上的线组成的叶状结构.这些线来自$\phi(z,w)$固定$w\in \H\sqcup  \R$对$\H$上对应$v$的点$z$的一维等值面.
+
+若有至少两条边终于$v$,\,则对应的多微分算子为$0$,\,由线性向量场系数的二阶导数消没.
+
+现在考虑进出$v$的边数均为$1$的情形.若两条边将$v$与$\G$的另一个点连接,\,前面的引理保证了积分消没.否则,\,考虑到始于$v$的边的终点可能位于$\H$或$\R$上,\,我们有以下两个引理
+
+\begin{lemma}
+设$z_1\ne z_2\in\H$.积分
+$$\int\limits_{z\in \H\setminus\{z_1,z_2\}} d\phi(z_1,z) \wedge d\phi(z,z_2)$$
+消没.
+\end{lemma}
+
+\begin{lemma}
+设$z_1\in \H,\, z_2\in\R$.积分
+$$\int\limits_{z\in \H\setminus\{z_1,z_2\}} d\phi(z_1,z)  \wedge d\phi(z,z_2)$$
+消没.
+\end{lemma}
+
+证明.类似前面的引理,\,积分与角映射与点$z_1,\,z_2$的选择无关.在$\phi=\phi^h$及$z_1,z_2$为纯虚数时,\,对合$z\mapsto -{\overline z}$导致积分消没.
+
+
+\subsection{$X$上的平坦族}
+
+选取丛$X^{aff}\ra X$的某个截面$s^{aff}$.由纤维可缩,\,这样的截面总是存在.例如,\,$X$切丛上的任意无挠联络$\nabla$通过在每点处取指数映射给出截面$X\ra X^{aff}$.
+
+$s^{aff}$定义了形式分次$Q$-流形间的映射$\Pi TX\ra \Pi T (X^{aff})$.拉回后我们得到了$\Pi TX$上的平坦族$\T_{s^{aff}}$与$\D_{s^{aff}}$及其间的映射$m_{s^{aff}}$.我们断言$\T_{s^{aff}}$和$\D_{s^{aff}}$与$s^{aff}$的选取无关.
+
+考虑$X$上微分分次李代数的无穷维纤维丛$jets_{\infty} T_{poly}$与$jets_{\infty} D_{poly}$,\,其在$x\in X$处的纤维为$x$处多向量场或多微分算子的无穷jet空间.这两个丛装备了jet空间自然的平坦联络.故我们得到了$\Pi TX$上的两个平坦族.
+
+\begin{lem}
+平坦族$\T_{s^{aff}}$与$\D_{s^{aff}}$典范同构于上述平坦族.
+\end{lem}
+
+证明.丛$jets_{\infty} T_{poly}$与$jets_{\infty} D_{poly}$从$X$到$X^{coor}$的拉回有典范平凡化.\,$X^{coor}$上取值于分次李代数$T_{poly}(\R^d_{formal})$与$D_{poly}(\R^d_{formal})$的Maurer-Cartan\,$1$-形式来自无穷jet丛上平坦联络的拉回.故我们等同了$\Pi T(X^{coor})$上的平坦族与拉回.同样的事情对$X^{aff}$也成立.
+
+
+\subsection{转向整体截面}
+
+若$(p:E\ra B,\sigma)$为平坦族,\,则丛$E\ra B$的截面空间在点$\sigma$处的形式完备化
+$$\left( \Gamma(E\ra B)_{formal},\sigma\right)$$
+为(无穷维)形式带点$Q$-超流形.\,$\Gamma(E\ra B)$上$Q$-流形的结构由超李群$\R^{0|1}$作用于$E\ra B$给出.
+
+\begin{lem}
+平坦族$\T_{s^{aff}}$与$\D_{s^{aff}}$整体截面的形式完备化自然拟同构于$T_{poly}(X)$与$D_{poly}(X)$.
+\end{lem}
+
+证明.若$E\ra X$为向量丛,\,则$X$上无穷维平坦丛$jets_{\infty} E$系数的de Rham上同调仅在次数$0$非平凡且同构于向量空间$\G(X,E)$.自然同态
+$$\bigl(\G(X,E)[0],{\rm\,d}=0\bigr)  \,\ra \,\bigl(\Omega^*(X,jets_{\infty}(E))  ,{\rm \, de\,Rham  \,differential}\bigr)$$
+为拟同构.使用这个事实,\,上一节的引理以及适当滤链的选取(以应用谱序列),\,我们得到了形式$Q$-流形间自然的$Q$-等变映射
+$$( T_{poly}(X)_{formal}[1],0) \,\ra \,(\G( \T_{s^{aff}}\ra T[1]X)_{formal},\sigma_\T)$$
+(以及对$D_{poly}$类似的映射)为拟同构.
+
+由以上引理与5.6.1.1节的结果,\,我们有拟同构
+$$T_{poly}(X)[1]_{formal} \ra
+            \G( \T_{s^{aff}}\ra T[1]X)_{formal} \ra 
+            \G( \D_{s^{aff}}\ra T[1]X)_{formal} \leftarrow 
+            T_{poly}(X)[1]_{formal},$$
+故微分分次李代数$T_{poly}(X)$与$D_{poly}(X)$拟同构.\,\,5.6.2节的主定理证毕.
+
+丛$X^{aff}\ra X$的截面空间可缩,\,故以上拟同构在同伦的意义下良定.
+
+
+
+
+
+

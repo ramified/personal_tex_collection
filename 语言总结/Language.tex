@@ -1,0 +1,2987 @@
+\documentclass[12pt,A4paper,oneside,reqno]{amsart}
+
+
+%\usepackage{color,graphicx}
+%\usepackage{mathrsfs,amsbsy}
+\usepackage{bm}
+\usepackage{booktabs}
+\usepackage{ctex}
+\usepackage{colortbl}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{array}
+\usepackage{fancyhdr}
+\usepackage{hhline}
+\usepackage[unicode, bookmarksnumbered]{hyperref}	% 启动超链接和 PDF 文档信息所需
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{enumerate}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+\usepackage[mathscr]{eucal}
+\usepackage{mathrsfs}
+%\usepackage{mathtools}
+\usepackage{verbatim}
+\usepackage{wrapfig}
+\usepackage{geometry} %调整页面的页边距
+\usepackage{pifont}
+\usepackage{longtable}
+\usepackage{multirow,makecell}
+\usepackage{multicol}
+\geometry{left=2.5cm,right=2.5cm,top=1cm,bottom=1cm}%具体的页边距设置
+\usepackage{titletoc}
+%\usepackage[notcite,notref]{showkeys}
+
+% showkeys  make label explicit on the paper
+
+%\makeatletter
+%\@namedef{subjclassname@2010}{%
+%  \textup{2010} Mathematics Subject Classification}
+%\makeatother
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows}
+\numberwithin{equation}{section}
+\definecolor{yellow}{cmyk}{0.2,0,0,0}
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{defn}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+
+\theoremstyle{plain}
+\newtheorem{exercise}{Exercise}[section]
+
+\theoremstyle{plain}
+\newtheorem{thmsub}{Theorem}[subsection]
+\newtheorem{lemmasub}[thmsub]{Lemma}
+\newtheorem{corollarysub}[thmsub]{Corollary}
+\newtheorem{propositionsub}[thmsub]{Proposition}
+\newtheorem{defnsub}[thmsub]{Definition}
+
+\numberwithin{equation}{section}
+
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}[theorem]{Remarks}
+\newtheorem{tip}[theorem]{Tip}
+\newtheorem{tips}[theorem]{Tips}
+\newtheorem{ex}[theorem]{Exercise}
+\newtheorem{eg}[theorem]{Example}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{hint}[theorem]{Hint}
+
+\newcommand*{\thick}[1]{\text{\boldmath$#1$}}
+\newcommand*{\cir}[1]{\;$\ding{19#1}$\;}%临时使用
+\newcommand*{\norm}[1]{\lVert#1\rVert}
+%\renewcommand\thefootnote{\fnsymbol{footnote}}
+%dont use number as footnote symbol, use this command to change
+
+
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\cha}{\operatorname{char}}
+\DeclareMathOperator{\Proj}{\operatorname{Proj}}
+\DeclareMathOperator{\rank}{\operatorname{rank}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\End}{\operatorname{End}}
+
+\begin{document}
+
+\title[]{\LARGE 语言练习}
+
+
+\author[]{\large 周潇翔}
+\address{School of Mathematical Sciences\\
+University of Science and Technology of China\\
+Hefei, 230026\\ P.R. China\\}
+\email{xx352229@mail.ustc.edu.cn}
+\maketitle
+
+\begin{multicols}{2}       % 分两栏 若花括号中为3则是分三列
+% \dottedcontents{<section>}[<left>]{<above-code>}
+% {<label width>}{<leader width>}
+
+\dottedcontents{subsection}[75pt]{}{3.3em}{0pt}
+
+% center the toc heading
+\renewcommand{\contentsname}{\fontsize{18pt}{\baselineskip}\selectfont \textbf{Content}}
+\tableofcontents
+\end{multicols}
+
+
+\begin{abstract}
+瞎打的材料啊！可参考\url{http://www.languageguide.org/}.
+\end{abstract}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{德法字母发音及单词发音规则}
+我不会打音标，放弃。。
+
+Il est six houres. J'ai six euros. Je suis heureux.
+\section{国家名和语言名对照}
+\begin{table}[th]
+	\begin{tabular}{r|c|c|c|c}								
+\Xhline{1pt}  									
+中文	&	English	&	Deutsch	&	français	&	にほんご	\\
+\Xhline{1pt}  									
+国家	&	country	&	der Staat -en	&	le pays	&		\\
+\hline									
+中国	&	China	&	China	&	la Chine	&		\\
+英国	&	the United Kingdom	&	Gro\ss britannien	&	le Royaume-Uni	&		\\
+美国	&	the USA	&	die USA	&	les \'{E}tats Unis	&		\\
+法国	&	France	&	Frankreich	&	la France	&		\\
+德国	&	Germany	&	Deutschland	&	l'Allemagne(f.)	&		\\
+日本	&	Japan	&	Japan	&	le Japon	&		\\
+\Xhline{1pt}  									
+语言	&	language	&	die Sprache -n	&	la langue	&		\\
+\hline									
+汉语	&	Chinese	&	Chinesisch	&	le chinois	&		\\
+英语	&	English	&	Englisch	&	l'anglais	&		\\
+法语	&	French	&	Franz\"{o}sisch	&	le français	&		\\
+德语	&	German	&	Deutsch	&	l'allemand	&		\\
+日语	&	Japanese	&		&	le japonais	&		\\
+\Xhline{1pt}  									
+国籍	&	nationality	&	die Nationalit\"{a}t -en	&	la nationalit\'{e}	&		\\
+\hline									
+中国人	&	Chinese	&	der Chinesische -n	&	chinois(e)	&		\\
+英国人	&	British	&		&		&		\\
+美国人	&	American	&		&	am\'{e}ricain(e)	&		\\
+法国人	&	French	&	der Franz\"{o}sische -n	&	français(e)	&		\\
+德国人	&	German	&	der Deutsche -n	&	allemand(e)	&		\\
+日本人	&	Japanese	&		&	japonais(e)	&		\\
+\Xhline{1pt}  									
+									
+	
+							
+	\end{tabular}
+
+	\vspace{0.5cm}
+	\caption{国家名和语言名对照}
+	\label{fig:country}
+\end{table}
+对德语的国家名，一般是中性；形容词(中国的，汉语的)名词化后成为语言(中国)和国籍(中国人)。
+对法语的国家名，所有s结尾冠词用les, e结尾用la, 其他用le.(例外：le Cambodge, le Mexique)而语言永远是阳性。
+
+\section{字符}
+\begin{longtable}{|l|l|}
+	\hline
+	例子	&	称呼	\\							
+	\hline
+	\endhead
+	\hline
+	例子	&	称呼	\\													
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline
+	\caption{特殊字符}
+	\endlastfoot				
+	
+\'{e}	&	accent aigu	\\
+\^{e},\^{o},\^{a}	&	accent grave	\\
+\`{e},\`{i},\`{a},\`{u}	&	accent circonflexe	\\
+\"{e},\"{i},\"{o}	&	tr\'{e}ma	\\
+\c{c}	&	c\'{e}dille	\\
+\hline			
+A	&	majuscule	\\
+a	&	minuscule	\\
+ll	&	deux l	\\
+l'	&	apostrophe	\\
+&	sans espace	\\
+.	&	point	\\
+-	&	tiret	\\
+\_	&	tiret bas	\\
+/	&	slash	\\
+
+	
+	
+\end{longtable}
+\begin{longtable}{l|c|l|l|l}
+	\hline
+	&	运算符	&	operator	&		&		\\
+							
+	\hline
+	\endhead
+	\hline
+	&	运算符	&	operator	&		&		\\
+												
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline
+	\caption{四则运算}
+	\endlastfoot				
+$+$	&	加	&	add	&	plus/und	&	plus	\\
+$-$	&	减	&	minus	&	minus/weniger	&	moins	\\
+$\times$	&	乘	&	multiply	&	multipliziert mit/mal	&	multipli\'{e}	\\
+$\div$	&	除	&	divide	&	durch/geteilt durch/dividiert durch	&	divis\'{e}	\\
+$=$	&	等于	&	equal	&	ist/gleich/macht	&	{e}gale	\\
+$7^2$	&	次方	&		&	7 hoch 2	&		\\
+
+	
+	
+	
+	
+\end{longtable}
+\section{模板}
+\subsection{自我介绍}$\,$
+
+Je me pr\'{e}sente: je m'applle Xiaoxiang Zhou, j'ai 20 ans.
+
+Je suis chinois. J'habite \`{a} Hefei, en Chine. Je suis n\'{e} en Chine.
+
+Je parler un peu français, mais je ne parler pas tr\`{e}s bien français.
+
+Je suis \'{e}tudiant. J'\'{e}tudie les math\'{e}matiques. J'aime l'alg\`{e}bre et la g\'{e}om\'{e}trie. J'ai une passion: avoir une offre d'une \'{e}cole de Paris. Merci!
+
+\begin{itemize}
+	\item Wie hei\ss en Sie? Ich hei\ss e Zhou.
+	\item Wie ist Ihr Name? Mein Name ist Xiaoxiang Zhou.
+\end{itemize}
+\subsection{打招呼}\hspace{1cm}
+\subsection{评价好/不好}\hspace{1cm}
+\begin{table}[th]
+	\centering
+	\begin{tabular}{c|c|c|c}
+		\hline
+中文	&	English	&	Deutsch	&	français	\\
+\hline							
+是	&	yes	&	ja	&	oui	\\
+不是	&	no	&	nein	&	non	\\
+既是也不是	&		&	jein	&		\\
+不	&	not	&	nicht/kein	&	ne...pas	\\
+对	&	true	&	richtig	&	vrai	\\
+错	&	false	&	falsch	&	faux	\\
+
+		\hline
+	\end{tabular}
+	\vspace{0.5cm}
+	\caption{肯/否定}
+\end{table}
+\section{课堂用语}
+\begin{longtable}{|l|l|l|l|}
+	\hline
+中文	&	English	&	Deutsch	&	français	\\							
+	\hline
+	\endhead
+	\hline
+中文	&	English	&	Deutsch	&	français	\\							
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline
+	\caption{课堂用语}
+	\endlastfoot				
+							
+读	&	read	&	lesen	&	lisez	\\
+听	&	listen	&	h\"{o}ren	&	ecoutez	\\
+说	&	speak	&	sprechen	&	parlez	\\
+写	&	write	&	schreiben	&	ecrivez	\\
+\hline							
+学习	&	learn	&	lernen	&	apprenez	\\
+学习;主修	&	study	&	studieren	&		\\
+复习	&	review	&		&	r\'{e}visez	\\
+看	&	look	&	sehen	&	regardez	\\
+重复	&	repeat	&		&	r\'{e}p\'{e}tez	\\
+翻译	&	translate	&		&	traduisez	\\
+讲	&	say	&	sagen	&		\\
+讨论	&	talk	&	reden	&		\\
+拼写	&	spell	&		&	\'{e}pelerez	\\
+想象	&	imagine	&		&	imaginez	\\
+提问	&		&	fragen	&		\\
+回答	&	answer	&	antworten	&	r\'{e}pondez	\\
+\hline							
+补充完整	&	complete	&		&	compl\'{e}tez	\\
+画下划线	&	underline	&		&	soulignez	\\
+打钩	&	check	&		&	cochez	\\
+删除	&	delete	&		&	barrez	\\
+圈起来	&	enclose	&		&	entourez	\\
+联系	&	associate	&		&	associez	\\
+计数	&	count	&		&	comptez	\\
+画	&	draw	&		&	dessinez	\\
+
+
+\end{longtable}
+%\section{标点符号}
+%%%\chapter{虚词}
+\section{数字与时间}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+毕竟中文没有那么花里胡哨的，年月日星期都是直接用数字。
+
+\begin{longtable}{c|c|r|r|r|c}
+	\hline
+	&	数字	&	number	&	die Nummer	&	le nombre	&	かず	\\						
+	\hline
+	\endhead
+	\hline
+	&	数字	&	number	&	die Nummer	&	le nombre	&	かず	\\							
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline
+	\caption{数字}
+	\endlastfoot											
+\hline											
+0	&	零	&	zero	&	null	&	zéro	&		\\
+1	&	一	&	one	&	eins	&	un	&	いち	\\
+2	&	二	&	two	&	zwei	&	deux	&	に	\\
+3	&	三	&	three	&	drei	&	trois	&	さん	\\
+4	&	四	&	four	&	vier	&	quatre	&	よん	\\
+5	&	五	&	five	&	fünf	&	cinq	&	ご	\\
+6	&	六	&	six	&	sechs	&	six	&	ろく	\\
+7	&	七	&	seven	&	sieben	&	sept	&	なな	\\
+8	&	八	&	eight	&	acht	&	huit	&	はち	\\
+9	&	九	&	nine	&	neun	&	neuf	&	きゅう	\\
+10	&	十	&	ten	&	zehn	&	dix	&	じゅう	\\
+11	&	十一	&	eleven	&	elf	&	onze	&		\\
+12	&	十二	&	twelve	&	zwölf	&	douze	&		\\
+13	&	十三	&	thirteen	&	dreizehn	&	treize	&		\\
+14	&	十四	&	fourteen	&	vierzehn	&	quatorze	&		\\
+15	&	十五	&	fifteen	&	fünfzehn	&	quinze	&		\\
+16	&	十六	&	sixteen	&	sechzehn	&	seize	&		\\
+17	&	十七	&	seventeen	&	siebzehn	&	dix-sept	&		\\
+18	&	十八	&	eighteen	&	achtzehn	&	dix-huit	&		\\
+19	&	十九	&	nineteen	&	neunzehn	&	dix-neuf	&		\\
+20	&	二十	&	twenty	&	zwanzig	&	vingt	&		\\
+30	&	三十	&	thirty	&	drei\ss ig	&	trente	&		\\
+40	&	四十	&	forty	&	vierzig	&	quarante	&		\\
+50	&	五十	&	fifty	&	f\"{u}nfzig	&	cinquante	&		\\
+60	&	六十	&	sixty	&	sechzig	&	soixante	&		\\
+70	&	七十	&	seventy	&	siebzig	&	soixante-dix	&		\\
+80	&	八十	&	eighty	&	achtzig	&	quatre-vingts	&		\\
+90	&	九十	&	ninety	&	neunzig	&	quatre-vingt-dix	&		\\
+100	&	一百	&	one hundred	&	hundert	&	cent	&		\\
+1,000	&	一千	&	one thousand	&	tausend	&	mille	&		\\
+$10^6$	&	一百万	&	one million	&	eine Million	&	un million	&		\\
+$10^9$	&	十亿	&	one billion	&	eine Milliarde	&	un milliard	&		\\
+$10^{12}$	&	万亿	&	one trillion	&	eine Billion	&	un trillion	&		\\
+
+
+\hline
+\end{longtable}
+
+\begin{table}[th]
+	\begin{tabular}{c|r|r|c|r|r|c|r|r}
+		\hline
+zero	&		&		&	null	&		&		&	zéro	&		&		\\
+one	&	eleven	&		&	ein\textcolor{red}{s}	&	elf	&		&	un	&	onze	&		\\
+two	&	twelve	&	twenty	&	zwei	&	zwölf	&	zwanzig	&	deux	&	douze	&	vingt	\\
+\Xhline{0.3pt}																	
+th\textcolor{red}{ree}	&	thirteen	&	thirty	&	drei	&	dreizehn	&	drei\textcolor{red}{\ss ig}	&	trois	&	treize	&	trente	\\
+four	&	fourteen	&	\textcolor{red}{for}ty	&	vier	&	vierzehn	&	vierzig	&	quatre	&	quatorze	&	quarante	\\
+fi\textcolor{red}{ve}	&	fifteen	&	fifty	&	fünf	&	fünfzehn	&	f\"{u}nfzig	&	cinq	&	quinze	&	cinquante	\\
+six	&	sixteen	&	sixty	&	sech\textcolor{red}{s}	&	sechzehn	&	sechzig	&	six	&	seize	&	soixante	\\
+seven	&	seventeen	&	seventy	&	sieb\textcolor{red}{en}	&	siebzehn	&	siebzig	&	sept	&		&		\\
+eight	&	eighteen	&	eighty	&	acht	&	achtzehn	&	achtzig	&	huit	&		&		\\
+nine	&	nineteen	&	ninety	&	neun	&	neunzehn	&	neunzig	&	neuf	&		&		\\
+ten	&		&		&	zehn	&		&		&	dix	&		&		\\
+
+
+		
+		\hline
+	\end{tabular}
+	\vspace{0.5cm}
+	\caption{基数词横向比较}
+	\label{fig:number2}
+\end{table}
+
+\begin{tips}\
+	\begin{enumerate}[1.]
+		\item 法语中有时第二也可称second，只有premier/second有性数变化；其他序数词只有数的变化，性的变化不体现。如：le premier jour, la premi\`{e}re ann\'{e}e, les premi\`{e}res classes.
+		\item 德语中的序数词按形容词的变格方式。
+	\end{enumerate}
+	
+\end{tips}
+
+\begin{longtable}{c|r|rll|r}
+	\hline
+	中文	&	English	&	\multicolumn{3}{c|}{Deutsch}	&	français	\\
+	\hline
+	\endhead
+	\hline
+	中文	&	English	&	\multicolumn{3}{c|}{Deutsch}	&	français	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{时间}
+	\endlastfoot				
+世纪	&	century	&	das	&	Jahrhundert	&	-e	&	le siècle	\\
+年	&	year	&	das	&	Jahr	&	-e	&	l'ann\'{e}e(f.)	\\
+季	&	season	&	die	&	Jahreszeit	&	-en	&	la saison	\\
+月	&	month	&	der	&	Monat	&	-e	&	le mois 	\\
+周	&	week	&	die	&	Woche	&	-n	&	la semaine	\\
+日	&	day	&	der	&	Tag	&	-e	&	le jour	\\
+时	&	hour	&	die	&	Stunde	&	-n	&	l'heure(f.)	\\
+分	&	minute	&	die	&	Minute	&	-n	&	la minute	\\
+秒	&	second	&	die	&	Sekunde	&	-n	&	la seconde 	\\
+
+
+	
+\end{longtable}
+\begin{longtable}{r|l|rll|l|l}
+	\hline
+中文	&	English	&	\multicolumn{3}{c|}{Deutsch}	&	français	&		\\
+	\hline
+	\endhead
+	\hline
+中文	&	English	&	\multicolumn{3}{c|}{Deutsch}	&	français	&		\\
+
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{一日内}
+	\endlastfoot				
+							
+清晨	&	dawn	&	der	&	Morgen	&	-	&	l'aube(f.)	&		\\
+上午	&	morning	&	der	&	Vormittag	&	-e	&	le matin	&	en matin\'{e}e	\\
+中午	&	noon	&	der	&	Mittag	&	-e	&	le midi	&		\\
+下午	&	afternoon	&	der	&	Nachmittag	&	-e	&	l'apr\`{e}s-midi(f.)	&		\\
+傍晚	&	evening	&	der	&	Abend	&	-e	&	le soir	&	en soir\'{e}e	\\
+晚上	&	night	&	die	&	Nacht	&	-e	&	la nuit	&		\\
+黄昏	&	dusk	&		&		&		&	le cr\'{e}puscule	&		\\
+\hline													
+早饭	&	breakfast	&	das	&	Fr\"{u}hst\"{u}ck	&	-e	&	le petit d\'{e}jeuner	&		\\
+午饭	&	lunch	&	das	&	Mittagessen	&	-	&	le d\'{e}jeuner	&		\\
+晚饭	&	dinner	&	das	&	Abendessen	&	-	&	le d\^{i}ner	&		\\
+
+
+
+	
+\end{longtable}
+例：am Morgen, in der Nacht. 加-s成为副词表示经常性的动作，如morgens.(明天/早晨)
+\begin{longtable}{r|l|l|l}
+	\hline
+	中文	&	English	&	Deutsch	&	français			\\
+	\hline
+	\endhead
+	\hline
+	中文	&	English	&	Deutsch	&	français			\\
+	
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{昨天，今天与明天}
+	\endlastfoot				
+前天	&	the day before yesterday	&	vorgestern	&	avant-hier	\\
+昨天	&	yesterday	&	gestern	&	hier	\\
+今天	&	today	&	heute	&	aujourd'hui	\\
+明天	&	tomorrow	&	morgen	&	demain	\\
+后天	&	the day after tomorrow	&	\"{u}bermorgen	&	apr\`{e}s-demain	\\
+过去	&	past	&	das Pr\"{a}teritum -rita	&	le pass\'{e}	\\
+现在	&	present	&	das Pr\"{a}sens -sentia	&	le pr\'{e}sent	\\
+将来	&	future	&	das Futur -e	&	le future	\\
+
+	
+\end{longtable}
+\begin{longtable}{c|r|r|r}
+	\hline
+日期	&	date	&	das Datum -ten	&	la date	\\
+	\hline
+	\endhead
+	\hline
+日期	&	date	&	das Datum -ten	&	la date	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{星期}
+	\endlastfoot				
+星期一	&	Monday	&	Montag	&	lundi	\\
+星期二	&	Tuesday	&	Dienstag	&	mardi	\\
+星期三	&	Wednesday	&	Mittwoch	&	mercredi	\\
+星期四	&	Thursday	&	Donnerstag	&	jeudi	\\
+星期五	&	Friday	&	Freitag	&	vendredi	\\
+星期六	&	Saturday	&	Samstag/Sonnabend	&	samedi	\\
+星期日	&	Sunday	&	Sonntag	&	dimanche	\\
+工作日	&	weekday	&	der Wochentag -e	&		\\
+工作日	&	workday	&	der Arbeitstag -e	&		\\
+周末	&	weekend	&	das Wochenende -n	&		\\
+
+\end{longtable}
+例： der Montag -e: am Montag
+\begin{longtable}{r|l|l|l}
+	\hline
+月份	&	month	&	der Monat	&	le mois de l'ann\'{e}e(f.)	\\
+	\hline
+	\endhead
+	\hline
+月份	&	month	&	der Monat	&	le mois de l'ann\'{e}e(f.)	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{月份}
+	\endlastfoot				
+1月	&	January	&	der Januar	&	janvier	\\
+2月	&	February	&	der Februar	&	f\'{e}vrier	\\
+3月	&	March	&	der M\"{a}rz	&	mars	\\
+4月	&	April	&	der April	&	avril	\\
+5月	&	May	&	der Mai	&	mai	\\
+6月	&	June	&	der Juni	&	juin	\\
+7月	&	July	&	der Juli	&	juillet	\\
+8月	&	August	&	der August	&	ao\^{u}t	\\
+9月	&	September	&	der September	&	septembre	\\
+10月	&	October	&	der Oktober	&	octobre	\\
+11月	&	November	&	der November	&	novembre	\\
+12月	&	December	&	der Dezember	&	d\'{e}cembre	\\
+
+\end{longtable}
+法语中除premier外，序数词不用于日期。
+\begin{table}[th]
+	\centering
+	\begin{tabular}{c|l|rll|l}
+		\hline
+四季	&	four seasons	&	die	&	Jahreszeit	&	-en	&	quatre saisons(m.)	\\
+\hline											
+春	&	spring	&	der	&	Fr\"{u}hling	&	-e	&	le printemps	\\
+夏	&	summer	&	der	&	Sommer	&	-	&	l'\'{e}t\'{e}	\\
+秋	&	autumn/fall	&	der	&	Herbst	&	-e	&	l'automne	\\
+冬	&	winter	&	der	&	Winter	&	-	&	l'hiver	\\
+
+
+		\hline
+	\end{tabular}
+	\vspace{0.5cm}
+	\caption{季节}
+\end{table}
+\begin{itemize}
+	\item []-Qual jour/mois sommes nous aujourd'hui? 
+	\item []-Nous sommes ...
+\end{itemize}
+
+待补充：电话号码
+
+几点几分就是比如8点25：nuit heure vingt cinq
+
+
+
+
+
+
+\section{代词}
+代词，是代替名词或一句话的一种词类。大多数代词具有名词和形容词的功能。代词大致分为：人称代词+、物主代词+、指示代词、反身代词+?、相互代词、疑问代词+、关系代词、连接代词、不定代词+和替代词十种。
+\begin{table}[th]
+\begin{minipage}[t]{0.48\textwidth}
+		\centering
+	\begin{tabular}{c|c|c|c}
+		\hline									
+中文	&	English	&	Deutsch	&	français	\\
+\hline							
+我	&	I	&	ich	&	je	\\
+你	&	you	&	du	&	tu	\\
+您	&	you	&	Sie	&	vous	\\
+他她它	&	he/she/it	&	er/sie/es	&	il/elle	\\
+我们	&	we	&	wir	&	nous	\\
+你们	&	you	&	ihr	&	vous	\\
+他们	&	they	&	sie	&	ils/elles	\\
+
+
+		\hline									
+		
+	\end{tabular}
+	\vspace{0.5cm}
+	\caption{人称代词(主)}
+	\label{fig:prep}
+\end{minipage}
+\begin{minipage}[t]{0.48\textwidth}
+	\centering
+	\begin{tabular}{c|c|c|c}
+		\hline									
+		中文	&	English	&	Deutsch	&	français	\\
+		\hline
+		我	&	I	&	ich	&	je	\\
+		我们	&	we	&	wir	&	nous	\\
+		你	&	you	&	du	&	tu	\\
+		您	&	you	&	Sie	&	vous	\\
+		你们	&	you	&	ihr	&	vous	\\
+		他她它	&	he/she/it	&	er/sie/es	&	il/elle	\\
+		他们	&	they	&	sie	&	ils/elles	\\
+		
+		\hline									
+		
+	\end{tabular}
+	\vspace{0.5cm}
+	\caption{人称代词(主)2}
+	\label{fig:prep2}
+\end{minipage}
+\end{table}
+
+\begin{table}[th]
+	\begin{tabular}{|c|cc|ccc|cc|cc|}
+		\hline
+N	&	ich	&	du	&	e\textcolor{red}{r}	&	e\textcolor{red}{s}	&	s\textcolor{red}{ie}	&	wir	&	ihr	&	sie	&	Sie	\\
+D	&	mir	&	dir	&	ih\textcolor{red}{m}	&	ih\textcolor{red}{m}	&	ih\textcolor{red}{r}	&	uns	&	euch	&	ihnen	&	Innen	\\
+A	&	mich	&	dich	&	ih\textcolor{red}{n}	&	e\textcolor{red}{s}	&	s\textcolor{red}{ie}	&	uns	&	euch	&	sie	&	Sie	\\
+\hline																			
+G	&	mein	&	dein	&	sein	&	sein	&	ihr	&	unser	&	euer	&	Ihr	&	Ihr	\\
+
+
+
+
+		
+		\hline
+	\end{tabular}
+	\vspace{0.5cm}
+	\caption{人称代词、物主代词变格}
+\end{table}	
+\begin{table}[ht]
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\begin{tabular}{|r|r|r|r|r|}
+			\hline													
+I	&	me	&	my	&	mine	&	myself	\\
+you	&	you	&	your	&	yours	&	yourself/ves	\\
+he	&	him	&	his	&	his	&	himself	\\
+she	&	her	&	her	&	hers	&	herself	\\
+it	&	it	&	its	&	its	&	itself	\\
+we	&	us	&	our	&	ours	&	ourselves	\\
+they	&	them	&	their	&	theirs	&	themselves	\\
+
+			\hline									
+			
+		\end{tabular}
+		\vspace{0.5cm}
+		\caption{代词(英)}
+	\end{minipage}
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\begin{tabular}{|r|r|}
+			\hline									
+ich	&	mir/mich	\\
+du	&	dir/dich	\\
+er/sie/es	&	sich	\\
+wir	&	uns	\\
+ihr	&	euch	\\
+sie/Sie	&	sich	\\
+
+			\hline									
+			
+		\end{tabular}
+		\vspace{0.5cm}
+		\caption{反身代词(德)}
+	\end{minipage}
+
+\end{table}
+	\begin{longtable}{c|c|c|c|c}
+	\hline
+&	\multicolumn{3}{c|}{l'adjectif possessif}					&	\multirowcell{2}{le pronon\\ tonique}	\\
+\cline{2-4} 									
+&	masculin	&	f\'{e}minin	&	pluriel	&		\\
+	\hline
+	\endhead
+	\hline
+&	\multicolumn{3}{c|}{l'adjectif possessif}					&	\multirowcell{2}{le pronon\\ tonique}	\\
+\cline{2-4} 									
+&	masculin	&	f\'{e}minin	&	pluriel	&		\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+	\caption{代词(法)}
+	\endlastfoot																	
+je	&	mon	&	ma	&	mes	&	moi	\\
+tu	&	ton	&	ta	&	tes	&	toi	\\
+il/elle	&	son	&	sa	&	ses	&	lui/elle	\\
+nous	&	notre	&	notre	&	nos	&	nous	\\
+vous	&	votre	&	votre	&	vos	&	vous	\\
+ils/elles	&	leur	&	leur	&	leurs	&	eux/elles	\\
+
+
+
+		\hline
+\end{longtable}	
+
+\begin{tips}\
+	\begin{enumerate}
+		\item 德语中称谓对等。
+		\item 按上述分划记比较方便(e.g. er的第四格变ihn是因为阳性der的第四格为den!)
+		\item G中只写出了其后名词为阳性单数第一格时的情况，请自行按照表\ref{fig:biange2}变格。euer变格时第二个e可以省略。
+	\end{enumerate}
+\end{tips}
+
+\begin{longtable}{c|c|c}
+	\hline
+English	&	Deutsch	&	français	\\
+	\hline
+	\endhead
+	\hline
+English	&	Deutsch	&	français	\\	
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+	\caption{疑问代词}
+	\endlastfoot								
+how	&	wie	&	comment	\\
+who/whom	&	wer/wessen/wem/wen	&	qui	\\
+what	&	was	&	quoi/que	\\
+which	&	welch-	&	quel(s,le,les)	\\
+what kind of	&	was f\"{u}r	&		\\
+where	&	wo/woher/wohin	&	o\`{u}	\\
+when	&	wann	&	quand	\\
+why	&	warum	&	pourquoi	\\
+\hline					
+how old	&	wie alt	&		\\
+how large	&	wie gro\ss	&		\\
+how high	&	wie hoch	&		\\
+how much/many	&	wie viel(e)	&	combien	\\
+how long	&	wie lange	&		\\
+how often	&	wie oft	&		\\
+
+
+		
+		
+		
+		\hline
+\end{longtable}
+
+\begin{tips}\
+	\begin{enumerate}[1.]
+		\item Wer的动词用三单(就像英文一样)。
+		\item -Wo sind Sie? Woher kommen Sie? Wohin gehen Sie?
+		\item []-Ich komme aus China/der Pronvinz Anhui/Hefei/der Studt Hefei.
+		\item []-Ich gehe zur Uni/nach Hause.
+		\item []-her:来; -hin:去。
+		\item pourquoi $\approx$ for-what
+		\item -Was f\"{u}r ein Kleid m\"{o}chten Sie?
+		\item []-Ich m\"{o}chte eine d\"{u}nne Jacke.
+		\item []-Hier sind d\"{u}nne Jacken. Welche (Jacke) m\"{o}chten Sie?
+		\item []-Ich m\"{o}chte die rote (Jacke).
+	\end{enumerate}
+\end{tips}
+\begin{longtable}{c|c|c|c}
+	\hline
+	$\exists$	&	$\forall$	&	every & none	\\
+	\hline
+	\endhead
+	\hline
+	$\exists$	&	$\forall$	&	every & none	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+	\caption{不定代词等}
+	\endlastfoot								
+someone	&	anyone	&	everyone	&	no one	\\
+somebody	&	anybody	&	everybody	&	nobody	\\
+something	&	anything	&	everything	&	nothing	\\
+somewhere	&	anywhere	&	everywhere	&	nowhere	\\
+\hline							
+&		&		&		\\
+&		&		&	niemand	\\
+&		&		&	nichts	\\
+&		&		&		\\
+\hline							
+&		&		&		\\
+&		&		&		\\
+&		&		&		\\
+&		&		&		\\
+
+	
+	
+	
+	
+	
+	\hline
+\end{longtable}
+Nein, das ist nicht nichts.
+\begin{longtable}{c|l|l|l}
+	\hline
+	中文	&	English(England)	&	Deutsch	&	français	\\
+	\hline
+	\endhead
+	\hline
+	中文	&	English(England)	&	Deutsch	&	français	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{指示代词}
+	\endlastfoot				
+这个	&	this/these	&	diese	&	cette	\\
+那个	&	that/those	&	jene	&		\\
+这样一个	&	such	&	solche	&		\\
+每一个	&	each	&	jede	&	chaque	\\
+
+	
+	
+\end{longtable}
+\newpage
+\section{连词}
+\begin{longtable}{c|c|c|c|c}
+	\hline
+	&	连词	&		&	die Konjunktion -en	&		\\
+
+	
+	\hline
+	\endhead
+	\hline
+	&	连词	&		&	die Konjunktion -en	&		\\
+
+	
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+	\caption{连词}
+	\endlastfoot				
+\hline									
+															
+\multirow{2}*{强转折}	&	然而	&	but	&	\textbf{aber/doch}	&	mais	\\
+\cline{2-5} 									
+&	尽管	&	although	&	trotzdem/obwohl	&		\\
+\hline									
+\multirow{2}*{强因果}	&	因为	&	because	&	\textbf{denn/weil}	&	parce que	\\
+\cline{2-5} 									
+&	所以	&	so	&	\textbf{so}	&		\\
+\hline									
+\multirow{2}*{强对比}	&	不像	&	unlike	&		&		\\
+\cline{2-5} 									
+&		&		&		&		\\
+\hline									
+\multirow{2}*{并列连词}	&	和	&	and	&	\textbf{und}	&	et	\\
+\cline{2-5} 									
+&	也	&	also	&	auch	&		\\
+\hline									
+\multirow{2}*{递进}	&	而且	&	moreover	&	\textbf{sondern}	&		\\
+\cline{2-5} 									
+&	不是...而是	&		&	nicht...\textbf{sondern}	&		\\
+\hline									
+\multirow{2}*{选择}	&	或	&	or	&	\textbf{oder}	&		\\
+\cline{2-5} 									
+&	不是...就是	&		&	entweder...oder	&		\\
+\hline									
+时间概念	&	然后	&	then	&	dann	&	puis	\\
+
+
+	
+	
+\end{longtable}
+Peter kommt nicht heute, sondern morgen.
+
+Nicht ich, sondern er lernt Deutsch.
+
+德语的连词，加粗体的连词不占位。
+\begin{longtable}{c|l|l|l}
+	\hline
+	中文	&	English(England)	&	Deutsch	&	français	\\
+	\hline
+	\endhead
+	\hline
+	中文	&	English(England)	&	Deutsch	&	français	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{惯用语}
+	\endlastfoot				
+例如	&	for example	&	zum Beispiel	&	par exemple	\\
+等等	&	and so on	&	und so weiter	&		\\
+
+	
+\end{longtable}
+
+\section{介词}
+\begin{longtable}{l|l|l|l}
+	\hline
++G		&	+D	&	+A	&	+D/A	\\
+	\hline
+	\endhead
+	\hline
++G		&	+D	&	+A	&	+D/A	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{德语介词搭配}
+	\endlastfoot				
+						
+au\ss erhalb	在…之外	&	zu	&	bis	&	\"{u}ber	\\
+innerhalb	在…之内	&	nach	&	f\"{u}r	&	auf	\\
+trotz	尽管	&	mit	&	um	&	in	\\
+w\"{a}hrend	在…期间	&	von	&	durch	&	unter	\\
+wegen	因为	&	aus	&	gegen	&	an	\\
+&	bei	&	ohne	&	neben	\\
+&	seit	&	per	&	vor	\\
+&	ab	&		&	hinter	\\
+&	au\ss er	&		&	zwischen	\\
+&	genen\"{u}ber	&		&		\\
+
+	
+\end{longtable}
+\subsection{介词与时间}
+\renewcommand\labelitemi{\normalfont\bfseries \textendash}
+\begin{itemize}
+	\item um:几点
+	\item an:某天/上午等(除Nacht)
+	\item in: in der Nacht/月-世纪
+	\item vor/nach:前后
+	\item bei:在...时候
+	\item am Sonntag \& in die Woche
+\end{itemize}
+\renewcommand\labelitemi{\textbullet}
+\subsection{搭配三四格的介词，静三动四}
+\footnote{静：sein, sitzen, lernen; 动:gehen, fahren.}
+\begin{enumerate}[1.]
+	\item in (in dem $\rightarrow$ im, in das $\rightarrow$ ins)
+	\item [] Ich lese im Lesesaal./Ich gehe in den Lesesaal.
+	\item an 在...旁，在...天,给...写信(an dem $\rightarrow$ am, an das $\rightarrow$ ans)
+	\item [] Peter stent am Fenster./Peter geht ans Fenster.
+	\item [] Ich m\"{o}chte einen platz am Fenster/Gang.
+	\item [] Briefe an Freunde schreiben
+	\item auf (auf das $\rightarrow$ aufs)
+		\item [] an/rufen (A) 打电话
+	\item [] 
+	\begin{itemize}
+		\item 在...之上[on]
+		\item [] Das buch liegt auf dem Tisch./Ich lege das Buch auf den Tisch.
+		\item 以...方式，方法(A)
+		\item [] auf Deutsch [in German]
+		\item [] auf diese Art und weise [in this way]
+		\item [] aufwarten 等待 Rolf warted vor dem Haupteingang des Heims auf einen Freund.
+	\end{itemize}	
+	\item vor 在...之前，到...之前
+\renewcommand\labelitemi{\normalfont\bfseries \textendash}
+\begin{itemize}
+	\item von dem Unterricht/Essen
+	\item Es ist 7 Uhr 50. = Es ist 10 vor 8 (Uhr).
+\end{itemize}
+	\item \"{u}ber 在...上方；过...上方，途径，关于[about](A);超过
+\renewcommand\labelitemi{\normalfont\bfseries \textendash}
+\begin{itemize}
+	\item Sie sprechen \"{u}ber den Tisch.
+	\item Er is \"{u}ber 30. 他过了30岁了
+\end{itemize}
+		\item unter 在...下方，低于，少于
+	\renewcommand\labelitemi{\normalfont\bfseries \textendash}
+	\begin{itemize}
+		\item Kinder unter 12 Jahren haben keinen Zutritt.
+		\item Es ist minus 4. = Es ist 4 unter Null.
+		\item Unter einer Stunde komme ich nicht zur\"{u}ck.
+	\end{itemize}
+		\item neben 在...旁边;到...旁边,除了...还有(D)
+\renewcommand\labelitemi{\normalfont\bfseries \textendash}
+\begin{itemize}
+	\item Kinder unter 12 Jahren haben keinen Zutritt.
+	\item Es ist minus 4. = Es ist 4 unter Null.
+	\item Unter einer Stunde komme ich nicht zur\"{u}ck.
+\end{itemize}
+\end{enumerate}
+\subsection{搭配三格的介词}
+\begin{enumerate}[1.]
+	\item zu (zu dem $\rightarrow$ zum, zu der $\rightarrow$ zur)[to]
+		\begin{itemize}\renewcommand\labelitemi{\normalfont\bfseries \textendash}
+			\item zu Fu\ss gehen 步行
+			\item zu Mittag essen 去吃午饭
+			\item zum Gl\"{u}ck 幸亏
+			\item zu Hause 在家
+			\item Ich gehe zum Arzt/Essen/Unterricht. Ich gehe zur Arbeit/Bibliothek/Uni/Mensa.
+			\item zu Ende 结束$\approx$ Das Licht/Die Sitzung ist aus.
+		\end{itemize}	
+	\item bei (bei dem $\rightarrow$ beim) 在...方面
+	\renewcommand\labelitemi{\normalfont\bfseries \textendash}
+	\begin{itemize}
+		\item Ich helfe Inge beim Studium.
+		\item Ich wohne bei Frau Schmidt.(房东房客关系)
+		\item beim Arzt 在看病
+		\item bei uns in China/der Klasse
+		\item bei in der Firma 在公司
+		\item bei Berlin 在...郊区
+		\item beim Essen/Lesen 在...时
+	\end{itemize}
+	\item aus 来自[from]
+			\begin{itemize}\renewcommand\labelitemi{\normalfont\bfseries \textendash}
+				\item Ama kommt aus einer Arbeiterfamilie.
+				\item bestehen aus (D) 由...构成
+			\end{itemize}
+	\item von (von dem $\rightarrow$ vom)
+	\begin{itemize}
+		\item 时空[from,从...方向来]
+		\item []von ... nach(地); von ... bis(地,时)[from... to]
+		\begin{itemize}
+			\item Der Zug f\"{a}hrt von HF(\"{u}ber SH) nach/bis HZ.(开往...方向/开至)
+			\item von Montag bis Freitag
+			\item von 8 bis 10(Uhr)
+		\end{itemize}
+		\item 所属关系[of]
+		\item [] Berlin/Wien/Bern ist die Hauptstadt von Deutschland/\"{O}sterreich/\textbf{der} Schweiz.
+		\item 惯用词组
+		\begin{itemize}
+			\item von heute an/ab 从今天开始
+			\item von zu Hause 从家里
+		\end{itemize}
+	\end{itemize}
+	\item nach
+	\begin{itemize}
+		\item 时空(只有中性国家)
+			\begin{itemize}
+				\item Er f\"{a}hrt nach Deutschland. Sie f\"{a}hrt in die Schweiz.
+				\item nach比zu远,但有惯用短语nach H\"{a}user.
+				\item Es ist 8 Uhr 10 / Es ist 10 nach 8(Uhr).
+			\end{itemize}	
+		\item 按照
+		\item [] Meiner Meinung nach ist das richtig/falsch.宾语前置
+	\end{itemize}
+\renewcommand\labelitemi{\normalfont\bfseries \textendash}	
+	\item mit
+	\begin{itemize}
+		\item 和...一起，用...工具[with]	
+		\item 乘...交通工具(zu Fu\ss$\,$gehen)
+		\item [] Er f\"{a}hrt mit ... nach Hause.
+		\item 带有，含有
+		\item [] Ich trinke gern Kaffee mit/ohne Milch.
+	\end{itemize}
+	\item seit [since] 自...以来
+\begin{itemize}
+	\item seit 4 Jahren
+	\item Seit wann studierst du an der USTC?
+\end{itemize}
+\end{enumerate}
+
+\subsection{搭配四格的介词}
+\begin{enumerate}[1.]
+	\item f\"{u}r 为了，对于[for]
+	\begin{itemize}
+		\item Das ist f\"{u}r Sie/dich/euch.
+		\item Deutsch ist nicht schwer f\"{u}r mich.
+		\item Ich bin f\"{u}r deine Meinung./Ich bin daf\"{u}r.
+	\end{itemize}
+	\item um [at]+围绕
+	\begin{itemize}
+		\item um 8 Uhr
+		\item Tag um Tag, Jahr um Jahr./Auge um Auge, Zahn um Zahn.
+	\end{itemize}
+	\item bis [until]
+\begin{itemize}
+	\item Der Zug f\"{a}hrt von HF \"{u}ber SH nach/bis HZ.
+	\item von 8 bis 10 Uhr
+	\item von Montag bis Freitag
+	\item Von wann bis wann bleibst du in HF?
+	\item Bis dann/bald/gleich/sp\"{a}ter!待会儿见！
+\end{itemize}
+	\item per 用，以，经由，搭乘
+\begin{itemize}
+	\item per Anhalter 搭顺风车
+	\item per Luft(post)/Schiff/Express/Einschreiben
+\end{itemize}
+\end{enumerate}
+
+%%%\chapter{语法}
+\section{德语名词变格，法语冠词}
+德语的名词：三性两数四格。这里要祭出德语最最重要的定冠词变格表！(变态三等级1)
+\begin{table}[th]
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\begin{tabular}{c|l|l|l|l}
+			\hline							
+			&	阳性	&	中性	&	阴性	&	pl	\\
+			\hline									
+			N	&	der	&	das	&	die	&	die	\\
+			G	&	des	&	des	&	der	&	der	\\
+			D	&	dem	&	dem	&	der	&	den	\\
+			A	&	den	&	das	&	die	&	die	\\
+			
+			
+			\hline						
+		\end{tabular}
+		\vspace{0.5cm}
+		\caption{定冠词变格表}
+	\end{minipage}
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\begin{tabular}{c|l|l|l|l}
+			\hline									
+			&	阳性	&	中性	&	阴性	&	pl	\\
+			\hline									
+			N	&	ein	&	ein	&	ein\textcolor{red}{e}	&		\\
+			G	&	ein\textcolor{red}{es}	&	ein\textcolor{red}{es}	&	ein\textcolor{red}{er}	&		\\
+			D	&	ein\textcolor{red}{em}	&	ein\textcolor{red}{em}	&	ein\textcolor{red}{er}	&		\\
+			A	&	ein\textcolor{red}{en}	&	ein	&	ein\textcolor{red}{e}	&		\\
+			
+			
+			\hline									
+			
+		\end{tabular}
+		
+		\vspace{0.5cm}
+		\caption{不定冠词变格表}
+	\end{minipage}
+\end{table}
+\begin{table}[th]
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\begin{tabular}{c|l|l|l|l}
+			\hline									
+	&	阳性	&	中性	&	阴性	&	pl	\\
+\hline									
+N	&		&	(-es)	&	-e	&	-e	\\
+G	&	\multicolumn{1}{>{\columncolor{yellow}}l|}{-es}	&	\multicolumn{1}{>{\columncolor{yellow}}l|}{-es}	&	-er	&	-er	\\
+D	&	-em	&	-em	&	-er	&	\multicolumn{1}{>{\columncolor{yellow}}l}{-en}	\\
+A	&	-en	&	(-es)	&	-e	&	-e	\\
+
+			
+			
+			
+			
+			\hline									
+			
+		\end{tabular}
+		\vspace{0.5cm}
+		\caption{kein,物主代词变格表}
+		\label{fig:biange2}
+	\end{minipage}
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\begin{tabular}{r|l|l|l}
+			\hline									
+			&	阳性	&	阴性	&	pl	\\
+			\hline							
+			定冠词	&	le	&	la	&	les	\\
+			不定冠词	&	un	&	une	&	des	\\
+			
+			
+			
+			\hline									
+			
+		\end{tabular}
+		\vspace{0.5cm}
+		\caption{法语冠词}
+	\end{minipage}
+\end{table}
+
+可以看出，这里的定冠词变格表可以推导出不定冠词变格表(只要对应的定冠词不是das或一格的der)。
+\begin{tips}\
+	\begin{enumerate}[1.]
+		\item N,G,D,A分别为一、二、三、四格(按照字母表倒序排序！)，可简记为主格、所有格、间宾、直宾。
+		\item “物四人三”引自成语“物是人非”。“动四静三”关系到介词的用法。
+		\item 简记法：die -heit/keit/ung -en.
+		\item 德语第二格：
+		\begin{enumerate}
+			\item  人名一般加-s;以-s/z/\ss/x等结尾，加'.(加'时一般不在名词之后).人名或带有称呼的名词，第二格可放在被修饰的名词之前。
+			\item 地名：德语地理名词三性都有，大多为中性，不带冠词，变格时加-s.
+		\end{enumerate}
+		\item 在原因发音前le与la简记l'.
+	\end{enumerate}
+
+\end{tips}
+德语中动词名词化后为中性；形容词名词化后人为阴阳，物为中性。
+搭配三格宾语的动词：
+\begin{enumerate}[1.]
+	\item autworten (jm. auf die Frage $\sim$)回答
+	\item [] Er antwortet mir auf mein Frage.
+	\item danken (jm. f\"{u}r (A)$\sim$)感谢
+	\item [] Er dankt dir f\"{u}r dein Hilfe.
+	\item helfen (hilfst, hilft, jm. bei (D) $\sim$)
+	\item [] Er hilft mir beim Studium.
+	\item geh\"{o}ren (etw. geh\"{o}rt jm.)属于
+	\item []Das Buch geh\"{o}rt mir.
+	\item [] Wem geh\"{o}rt das Buch?
+	\item [] Ich geh\"{o}re nur mir.
+	\item gefallen (gef\"{a}llst, gef\"{a}llt, etw. gef\"{a}llt jm.)令……喜欢
+	\item [] Das Buch gef\"{a}llt mir (sehr gut/gut/ganz gut/nicht gut/nicht/gar nicht)
+	\item [] Wie gef\"{a}llt dir/Ihnen Deutschland?
+	\item [] Wie gef\"{a}llt es dir/Ihnen in Deutschland?
+	\item gratulieren (jm. zu (D) $\sim$)祝贺
+	\item []Ich gratuliere dir/Ihnen herzlich zum Geburtstag.
+	\item [] Herzlichen Gl\"{u}ckwunsch zum Geburtstag.
+	\item schmecken (etw. schmeckt jm.)感觉味道如何
+	\item [] Der Fisch schmeckt mir sehr gut.
+	\item [] Wie schmeckt dir der Fisch?
+	\item passen (etw. passt jm.) 适合，合适
+	\item []Die Jacke passt dir sehr gut.
+\end{enumerate}
+\section{动词变位}
+动词变位是难点啊！
+\begin{table}[th]
+	\begin{minipage}[t]{0.48\textwidth}
+		\centering
+		\begin{tabular}{c|l|l|l}
+			\hline							
+	&	sein	&	haben	&	-en	\\
+\hline							
+ich	&	bin	&	habe	&	-e	\\
+du	&	bist	&	ha\phantom{b}st	&	-st	\\
+er/sie/es	&	\phantom{b}ist	&	ha\phantom{b}t	&	-t	\\
+wir	&	sind	&	haben	&	-en	\\
+ihr	&	seid	&	habt	&	-t	\\
+sie/Sie	&	sind	&	haben	&	-en	\\
+
+
+
+			
+			\hline									
+			
+		\end{tabular}
+		\vspace{0.5cm}
+		\caption{sein \& haben\protect\\
+		\indent\hspace{1.3cm}动词现在式词尾表}
+		\label{fig:Fa:be&have}
+	\end{minipage}
+\end{table}
+	\begin{longtable}{c|l|l|l|l|l|l}
+	\hline
+	&	\textcolor{red}{\^{e}}tre	&	\textcolor{red}{a}voir	&	aller	&	-er	&	-ir	&	-dre	\\
+	\hline
+	\endhead
+	\hline
+	&	\textcolor{red}{\^{e}}tre	&	\textcolor{red}{a}voir	&	aller	&	-er	&	-ir	&	-dre	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+		\caption{法语动词现在式变位}
+	\endlastfoot
+je/j'	&	\textcolor{red}{s}uis	&	j'\textcolor{red}{a}i	&	vais	&	-e	&	-is	&	-ds	\\
+tu	&	\textcolor{red}{e}s	&	\phantom{j'}\textcolor{red}{a}s	&	vas	&	-es	&	-is	&	-ds	\\
+il/elle	&	\textcolor{red}{e}st	&	\phantom{j'}\textcolor{red}{a}	&	va	&	-e	&	-it	&	-d	\\
+nous	&	\textcolor{red}{s}ommes	&	\phantom{j'}\textcolor{red}{a}vons	&	allons	&	-ons	&	-ons	&	-dons	\\
+vous	&	\textcolor{red}{\^{e}}tes	&	\phantom{j'}\textcolor{red}{a}vez	&	allez	&	-ez	&	-ez	&	-dez	\\
+ils/elles	&	\textcolor{red}{s}ont	&	\phantom{j'a}ont	&	vont	&	-ent	&	-ent	&	-dent	\\
+
+		
+			\hline								
+			\end{longtable}
+
+	\begin{longtable}{c|l|l||l|l|l|l}
+	\hline
+	&	pouvoir	&	vouloir	&	devoir	&	recevoir	&	voir	&	savoir	\\
+
+	\hline
+	\endhead
+	\hline
+	&	pouvoir	&	vouloir	&	devoir	&	recevoir	&	voir	&	savoir	\\
+
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+	\caption{法语变位:oir}
+	\endlastfoot
+
+																				
+je/j'	&	peux	&	veux	&	dois	&	reçois	&	vois	&	sais	\\
+tu	&	peux	&	veux	&	dois	&	reçois	&	vois	&	sais	\\
+il/elle	&	peut	&	veut	&	doit	&	reçoit	&	voit	&	sait	\\
+nous	&	pouvons	&	voulons	&	devons	&	recevons	&	vo\textcolor{red}{y}ons	&	savons	\\
+vous	&	pouvez	&	voulez	&	devez	&	recevez	&	vo\textcolor{red}{y}ez	&	savez	\\
+ils/elles	&	peuvent	&	veulent	&	doivent	&	reçoivent	&	\textcolor{red}{voi}ent	&	\textcolor{red}{sav}ent	\\
+
+	
+	\hline								
+\end{longtable}
+	\begin{longtable}{c|l|l|l||l}
+	\hline
+	&	par\textcolor{gray}{tir}	&	dor\textcolor{gray}{mir}	&	fini\textcolor{gray}{r}	&	ouvrir	\\
+
+
+	\hline
+	\endhead
+	\hline
+	&	par\textcolor{gray}{tir}	&	dor\textcolor{gray}{mir}	&	fini\textcolor{gray}{r}	&	ouvrir	\\
+
+
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+	\caption{法语变位:ir}
+	\endlastfoot
+	
+je/j'	&	pars	&	dors	&	finis	&	ouvre	\\
+tu	&	pars	&	dors	&	finis	&	ouvres	\\
+il/elle	&	part	&	dort	&	finit	&	ouvre	\\
+nous	&	partons	&	dormons	&	fini\textcolor{red}{ss}ons	&	ouvrons	\\
+vous	&	partez	&	dormez	&	fini\textcolor{red}{ss}ez	&	ouvrez	\\
+ils/elles	&	partent	&	dorment	&	fini\textcolor{red}{ss}ent	&	ouvrent	\\
+
+
+	\hline								
+\end{longtable}
+	\begin{longtable}{c|l|l|l}
+	\hline
+	&	prendre	&	attendre	&	répondre	\\
+	
+	\hline
+	\endhead
+	\hline
+	&	prendre	&	attendre	&	répondre	\\
+
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+	\caption{法语变位:dre}
+	\endlastfoot
+								
+je/j'	&	prends	&	attends	&	réponds	\\
+tu	&	prends	&	attends	&	réponds	\\
+il/elle	&	prend	&	attend	&	répond	\\
+nous	&	\textcolor{red}{pren}ons	&	attendons	&	répondons	\\
+vous	&	\textcolor{red}{pren}ez	&	attendez	&	répondez	\\
+ils/elles	&	\textcolor{red}{prenn}ent	&	attendent	&	répondent	\\
+
+	
+	
+	
+	\hline								
+\end{longtable}
+	\begin{longtable}{c|l|l|l|l||l|l|l}
+	\hline
+	&	écrire	&	boire	&	faire	&	plaire	&	vivre	&	mettre	&	conna\textcolor{red}{î}tre	\\
+
+	\hline
+	\endhead
+	\hline
+	&	écrire	&	boire	&	faire	&	plaire	&	vivre	&	mettre	&	conna\textcolor{red}{î}tre	\\
+
+
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+	\caption{法语变位:re}
+	\endlastfoot
+je/j'	&	écris	&	bois	&	fais	&	plais	&	vis	&	mets	&	connais	\\
+tu	&	écris	&	bois	&	fais	&	plais	&	vis	&	mets	&	connais	\\
+il/elle	&	écrit	&	boit	&	fait	&	pla\textcolor{red}{î}t	&	vit	&	met	&	conna\textcolor{red}{î}t	\\
+nous	&	écrivons	&	b\textcolor{red}{u}vons	&	fai\textcolor{red}{s}ons	&	plai\textcolor{red}{s}ons	&	vivons	&	mettons	&	connai\textcolor{red}{ss}ons	\\
+vous	&	écrivez	&	b\textcolor{red}{u}vez	&	fai\textcolor{red}{tes}	&	plai\textcolor{red}{s}ez	&	vivez	&	mettez	&	connai\textcolor{red}{ss}ez	\\
+ils/elles	&	écrivent	&	b\textcolor{red}{oi}vent	&	f\textcolor{red}{ont}	&	plai\textcolor{red}{s}ent	&	vivent	&	mettent	&	connai\textcolor{red}{ss}ent	\\
+
+	
+	
+	\hline								
+\end{longtable}
+
+\begin{tip}\
+	\begin{enumerate}[1.]
+		\item 	曾有一位德国友人向老师诉苦，说一位中国人老是以Sie相称。老师从语言学的角度安慰她，说中国人学动词变位比较困难，\textbf{用Sie的话动词都是原形}，不容易出错。(另外Tu的部分动词还是不规则变化的)
+		\item 动词变位时词尾注意事项：
+		\begin{enumerate}
+			\item 不以-en结尾的动词，如verbessern, dauern, l\"{a}cheln(ich l\"{a}chle),词尾为-n,将-en替换为-n(原形)。
+			\item 在动词词干以-d/t, -dm/tm, -chn, -ffn结尾时，在-st/t前加e.例如：befinden, bilden, warten, antworten, rechnen, \"{o}ffnen.
+			\item 在动词词干以-s/z/tz/\ss 结尾时，将-st替换为-t,如setzen, sitzen, hei\ss en.
+		\end{enumerate}
+		\item  	德语情态动词变位，详见表\ref{tb:情态动词}.
+	\end{enumerate}
+\end{tip}
+	\begin{longtable}{|l|l|}
+	\hline
+	\^{e}tre	&	avoir		\\
+	\hline
+	\endhead
+	\hline
+	\^{e}tre	&	avoir		\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+	\caption{\^{e}tre和avoir的常用搭配}
+	\endlastfoot				
+\^{e}tre triste/fatigu\'{e}/heureux	&	avoir faim/soif/sommei/peur	\\
+\^{e}tre pr\^{e}t	&	avoir chaud/froid	\\
+\^{e}tre d'accord	&	avoir envie/besoin	\\
+\^{e}tre +le nom/le pr\'{e}nom/la nationalit\'{e}/la profession	&	avoir raison	\\
+\^{e}tre en avance/retard/vacances	&		\\
+\^{e}tre chez moi/toi	&		\\
+
+
+\end{longtable}
+	\begin{longtable}{|l|l|}
+	\hline
+	\endhead
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+	\caption{强变化动词的现在时变位}
+	\endlastfoot				
+fahren	(	f\"{a}hrst	,	f\"{a}hrt	)	&	搭乘，行驶，驾驶	\\
+gefallen	(	gef\"{a}llst	,	gef\"{a}llt	)	&	讨人喜欢，使中意	\\
+unterhalten	(	unterh\"{a}l\textcolor{red}{tst}	,	unterh\"{a}l\textcolor{red}{t}	)	&	聊天	\\
+laufen	(	l\"{a}ufst	,	l\"{a}uft	)	&	跑，走	\\
+lesen	(	liest	,	liet	)	&	读	\\
+sehen	(	siehst	,	sieht	)	&	看	\\
+essen	(	isst	,	isst	)	&	吃	\\
+geben	(	gibst	,	gibt	)	&	给	\\
+helfen	(	hilfst	,	hilft	)	&	帮助，有益	\\
+nehmen	(	n\textcolor{red}{im}mst	,	n\textcolor{red}{im}mt	)	&	拿[take]	\\
+sprechen	(	sprichst	,	spricht	)	&	说	\\
+werden	(	wir\textcolor{red}{st}	,	wir\textcolor{red}{d}	)	&	成为，变成	\\
+
+
+
+	
+\end{longtable}
+%%%\chapter{实词}
+\section{动词}
+\subsection{特殊动词}\hspace{1cm}
+\begin{longtable}{l|l|l|l}
+	\hline
+	English	&Deutsch &ich/er...&	français  	\\
+	\hline
+	\endhead
+	\hline
+	English	&Deutsch &ich/er...&	français  	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+	\caption{情态动词}
+	\label{tb:情态动词}
+	\endlastfoot				
+	
+must	&	m\"{u}ssen	&	muss	&		\\
+should	&	sollen	&	soll	&	devoir	\\
+can	&	k\"{o}nnen	&	kann	&	pouvoir	\\
+may	&	d\"{u}rfen	&	darf	&		\\
+will	&	wollen	&	will	&		\\
+\multirow{2}{10mm}{\thead{would\\ like}}	&	m\"{o}gen	&	mag	&		\\
+&	m\"{o}chten	&	m\"{o}chte	&		\\
+want to	&		&		&	vouloir	\\
+
+	
+	
+\end{longtable}
+\section{名词}
+\subsection{学习生活}\hspace{1cm}
+\begin{longtable}{c|l|rll|l}
+	
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	
+	
+	
+	\hline
+	\endhead
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	
+	
+	
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+	\caption{学校}
+	\endlastfoot				
+	
+小学	&		&	die	&	Grundschule	&	-n	&		\\
+中学	&		&		&		&		&		\\
+大学(综合性)	&	university	&	die	&	Universit\"{a}t	&	-en	&	l'universit\'{e}(f.)	\\
+技校	&		&		&		&		&		\\
+年级	&	grade	&	die	&	Klasse	&	-n	&		\\
+班级	&	class	&	die	&	Klasse	&	-n	&		\\
+讲座课	&		&	die	&	Vorlesung	&	-en	&		\\
+讨论班	&	seminar	&	das	&	Seminar	&	-e	&		\\
+习题课	&		&	die	&	\"{U}bung	&	-en	&		\\
+
+	
+	
+	
+	
+	
+\end{longtable}
+
+\noindent USTC = University of Science and Technology of China\\
+\phantom{USTC} = Universit\"{a}t f\"{u}r Wissensehaft und Technik Chinas
+
+
+	\begin{longtable}{c|l|rll|l}
+			\hline
+中文	&	English	 & \multicolumn{3}{c|}{Deutsch}&	français	\\		
+		\hline
+		\endhead
+		\hline
+中文	&	English	 & \multicolumn{3}{c|}{Deutsch}&	français	\\		
+		\hline
+		\endfirsthead	
+		\hline
+		\endfoot
+		\hline		
+	\caption{教室内的物品}
+		\endlastfoot			
+
+					
+文具	&	school materials	&		&		&		&	mat\'{e}riel scolaire	\\
+书包	&	backpack	&	der	&	Rucksack	&	\"{--}e	&	le cartable	\\
+包	&	bag	&		&		&		&	le sac	\\
+手提包	&	handbag	&	die	&	Handtasche	&	-n	&		\\
+书	&	book	&	das	&	Buch	&	\"{--}er	&	le livre	\\
+笔记簿	&	notebook	&		&		&		&	le cahier	\\
+活页簿	&	loose-leaf file	&		&		&		&	le classeur	\\
+活页	&	loose-leaf paper	&		&		&		&	des intercalaires	\\
+片/叶子	&	sheet/leaves	&		&		&		&	des feuilles	\\
+字典/词典	&	dictionary	&		&		&		&	le dictionnaire	\\
+计算器	&	calculator	&		&		&		&	la calculatrice	\\
+笔袋	&	pencil case	&		&		&		&	la trousse	\\
+直尺	&	ruler	&		&		&		&	la règle	\\
+圆规	&	compass	&		&		&		&	le compas	\\
+橡皮	&	eraser	&		&		&		&	la gomme	\\
+削笔刀	&	pencil sharpener	&		&		&		&	le taille-crayon	\\
+铅笔	&	pencil	&		&		&		&	le crayon	\\
+笔	&	pen	&		&		&		&	le stylo	\\
+钢笔	&	fountain pen	&		&		&		&	le stylo \`{a} plume	\\
+胶水	&	glue	&		&		&		&	la colle	\\
+一管胶水	&	a tube of glue	&		&		&		&	la tube de colle 	\\
+剪刀	&	scissors	&		&		&		&	le ciseaux	\\
+\hline											
+教室	&	classroom	&		&		&		&	la salle de classe	\\
+黑板	&	blackboard	&		&		&		&	le tableau noir	\\
+屏幕	&	screen	&		&		&		&	l'\'{e}cran	\\
+电脑	&	computer	&	der 	&	Computer	&	-	&	l'ordinateur	\\
+桌子	&	table	&	der	&	Tisch	&	-e	&	le bureau	\\
+椅子	&	chair	&	der	&	Stuhl	&	\"{--}e	&	la chaice	\\
+
+
+\hline		
+\end{longtable}
+\begin{longtable}{c|l|rll|l}
+	\hline
+中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	
+	
+	
+	\hline
+	\endhead
+	\hline
+中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	
+	
+	
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+	\caption{文本}
+	\endlastfoot				
+	
+课程	&	curriculum	&	der	&	Unterricht	&		&		\\
+文字	&	text	&	der	&	Text	&	-e	&		\\
+问题	&	question	&	die	&	Frage	&	-n	&	la question	\\
+错误	&	mistake	&	der	&	Fehler	&	-	&		\\
+语法	&	grammer	&	die	&	Grammatik	&	-en	&		\\
+单词	&	word	&	das	&	Wort	&	-e	&	le mot	\\
+句子	&	sentense	&	der	&	Satz	&	\"{--}e	&		\\
+
+
+	
+	
+	
+\end{longtable}
+
+
+	\begin{longtable}{c|l|rll|l}
+	\hline
+学科	&subject&	\multicolumn{3}{c|}{}&	le sujet\\
+	\hline
+	\endhead
+	\hline
+学科	&subject&	\multicolumn{3}{c|}{}&	le sujet\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+	\caption{学科}
+	\endlastfoot				
+数学	&	math	&	die	&	Mathematik	&		&	les math\'{e}matiques	\\
+代数	&	algebra	&	die	&	Algebra	&	-bren	&	l'alg\`{e}bre	\\
+几何	&	geometry	&	die	&	Geometrie	&		&	la g\'{e}om\'{e}trie	\\
+物理	&	physics	&	die	&	Physik	&		&	la physique	\\
+化学	&	chemistry	&		&		&		&	la chimie	\\
+政治	&	politics	&	die	&	Politik	&	-en	&	les sciences politiques	\\
+历史	&	history	&	die	&	Geschichte	&	-n	&	l'histoire(f.)	\\
+地理	&	geography	&		&		&		&	la g\'{e}ographie	\\
+音乐	&	music	&	die	&	Musik	&		&	la musique	\\
+美术	&	art	&		&		&		&	l'art(m.)	\\
+体育	&	physical education	&		&		&		&	l'\'{e}ducation physique et sportive (f.)	\\
+信息科学	&		&	die	&	Informatik	&		&	l'informatique	\\
+文学	&	literature	&		&		&		&	la litt\'{e}rature	\\
+新闻业	&	journalism	&		&		&		&	le journalisme	\\
+表演艺术	&		&		&		&		&	les arts du spectacle	\\
+造型艺术	&		&		&		&		&	les arts plastiques	\\
+建筑学	&	architecture	&		&		&		&	l'architecture(f.)	\\
+城市规划	&		&		&		&		&	l'urbanisme(m.)	\\
+环境	&	environment	&		&		&		&	l'environnement(m.)	\\
+医学	&	medicine	&		&		&		&	la m\'{e}decine	\\
+教育	&	education	&		&		&		&	l'\'{e}ducation(f.)	\\
+
+
+\end{longtable}
+Quelles mati\`{e}res tu e'tudies?
+\begin{longtable}{c|l|rll|l}
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endhead
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{爱好}
+	\endlastfoot				
+篮球	&	basketball	&		&		&		&	le basket	\\
+网球	&	tennisball	&		&		&		&	le tennis	\\
+田径运动	&		&		&		&		&	l'athletisme(m.)	\\
+跨栏	&		&		&		&		&	l'esalade	\\
+游泳	&	swimming	&		&		&		&	la natation	\\
+拳击	&		&		&		&		&	la boxe 	\\
+舞蹈	&	dance	&		&		&		&	la danse	\\
+电影	&	film	&		&		&		&	le cinema/les films(m.)	\\
+音乐	&	music	&	die	&	Musik	&		&	la musique	\\
+阅读	&		&		&		&		&	la lecture	\\
+画画	&		&		&		&		&		\\
+\hline											
+琴	&		&		&		&		&		\\
+棋	&	chess	&		&		&		&		\\
+书	&	book	&	das	&	buch	&	\"{--}er	&	le livre	\\
+画	&	picture	&	das	&	Bild	&	-er	&	la peinture 	\\
+
+
+
+	
+\end{longtable}
+\begin{longtable}{c|l|rll|l}
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endhead
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{音乐}
+	\endlastfoot				
+音乐	&		&	die	&	Musik	&		&	la musique	\\
+歌曲	&	song	&	das	&	Lied	&	-er	&	la chanson	\\
+吉他，六弦琴	&		&	die	&	Gitarre	&	-n	&		\\
+
+
+	
+\end{longtable}
+
+	\subsection{人}\hspace{1cm} die Leute(Pl.)
+	
+	\begin{longtable}{c|l|rll|l|l}
+	\hline
+	中文	& 英文&& 德语& &	masculin	&	f\'{e}minin	\\
+	\hline
+	\endhead
+	\hline
+	中文	& 英文&& 德语& &	masculin	&	f\'{e}minin	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+	\caption{职业}
+	\endlastfoot				
+职业	&	occupations	&	der	&	Beruf	&	-e	&		&	la profession	\\
+教授	&		&		&		&		&	le professeur	&		\\
+医生	&		&	der	&	Doktor	&	-en	&	le m\'{e}decin	&		\\
+\hline													
+总统	&		&	der 	&	Präsident	&	-en	&	le pr\'{e}sident	&	la pr\'{e}sidente	\\
+雇员	&		&		&		&		&	l'employ\'{e}	&	l'employ\'{e}e	\\
+助手	&		&		&		&		&	l'assistant	&	l'assistante	\\
+(中小学)学生	&		&	der	&	Sch\"{u}ler	&	-	&	l\'{e}tudiant	&	l'\'{e}tudiante	\\
+商人	&		&		&		&		&	le commer\c{c}ant	&	la commer\c{c}ante	\\
+商人	&	businessman	&	der	&	Gesch\"{a}ftsmann	&	\"{--}er	&	le marchand	&	la marchande	\\
+律师	&	lawyer	&	der 	&	Anwalt	&	\"{--}e	&	l'avocat	&	l'avocate	\\
+作家	&	writer	&		&		&		&	l'\'{e}crivain	&	l'\'{e}crivaine	\\
+药师	&	pharmacist	&		&		&		&	le pharmacien	&	la pharmacienne	\\
+\hline													
+牙医	&	dentist	&	der	&	Zahnarzt	&	\"{--}e	&	le dentiste	&	la dentiste	\\
+摄影师	&	photographer	&	der	&	Fotograf	&	-en, -en	&	le photographe	&	la photographe	\\
+秘书	&	secretary	&	der	&	Sekret\"{a}r	&	-e	&	le secr\'{e}tiare	&	la secr\'{e}tiare	\\
+厨师	&	cook	&	der	&	Koch	&	\"{--}e	&	le cuistot	&	la cuistot	\\
+建筑师	&	architect	&	der	&	Architekt	&	-en	&	l'architecte	&	l'architecte	\\
+兽医	&	vet	&		&		&		&	le v\'{e}t\'{e}rinaire	&	la v\'{e}t\'{e}rinaire	\\
+设计家	&	designer	&		&		&		&	le designer	&	la designer	\\
+心理学家	&	psychologist	&		&		&		&	le psychologue	&	la psychologue	\\
+政治家	&	politician	&	der	&	Polizist	&	-en	&	le politique	&	la politique	\\
+邻居	&	neighbour	&	der	&	Nachbar	&	-n	&	le voisin	&	la voisin	\\
+\hline													
+售货员	&		&		&		&		&	le vendeur	&	la vendeuse	\\
+经理	&	director	&		&		&		&	le directeur	&	la directrice	\\
+教育家	&	educator	&		&		&		&	l'\'{e}ducateur	&	l'\'{e}ducatrice	\\
+电影导演	&	film director	&		&		&		&	le r\'{e}alisateur	&	le r\'{e}alisatrice	\\
+\hline													
+消防员	&	fireman	&	der	&	Feuerwehrmann	&	\"{--}en	&	le pompier	&	la pompi\`{e}re	\\
+护士	&	nurse	&		&		&		&	le infirmier	&	la infirmi\`{e}re	\\
+\Xcline{1-7}{2\arrayrulewidth} 													
+教师	&	teacher	&	der	&	Lehrer	&	-	&		&		\\
+服务员	&	waiter;waitress	&	der	&	Ober	&	-	&		&		\\
+司机	&		&	der	&	Fahrer	&	-	&		&		\\
+理发师	&	barber	&	der	&	Friseur	&	-e	&		&		\\
+屠夫	&	butcher	&	der	&	Metzger	&	-	&		&		\\
+小丑	&	clown	&	der	&	Clown	&	-s	&		&		\\
+
+\end{longtable}
+
+德语中的职业名称普遍为阳性，其后加-in成为阴性名词，复数再于其后加-nen。法语由于历史原因，大多数职业均为阳性，如今的新式职业逐渐无差别化。
+
+
+
+
+	\begin{longtable}{rll|rll|l|l}
+	\hline
+\multicolumn{6}{c|}{Deutsch}&	masculin	&	f\'{e}minin	\\
+	\hline
+	\endhead
+	\hline
+\multicolumn{6}{c|}{Deutsch}&	masculin	&	f\'{e}minin	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+	\caption{les personnes}
+	\endlastfoot				
+		
+	&		&		&		&		&		&	un homme	&	une femme	\\
+\hline															
+&		&		&		&		&		&	un mec	&	une dame	\\
+&		&		&		&		&		&	un gars	&	une fille	\\
+der	&	Junge	&	-n,-n	&	das	&	M\"{a}dchen	&	-	&	un gars\c{c}on	&	une jeune fille/femme	\\
+das	&	Kind	&	-er	&		&		&		&		&		\\
+das	&	Baby	&	-s	&		&		&		&	un enfant/un b\'{e}b\'{e}	&		\\
+\hline															
+&		&		&		&		&		&	monsieur	&	madame,mademoiselle	\\
+
+
+	
+	
+	
+	
+	
+	
+\end{longtable}
+{
+	
+	% Adjust margins
+	\setlength\LTleft{-0.5in}
+	\setlength\LTright{-1in plus 1 fill}
+\setlength{\tabcolsep}{4pt}
+\begin{longtable}{l|l|l|l|rll|rlll}
+	\hline
+中文&	masculin	&	f\'{e}minin	& 	pluriel		&		&		&		&		&		&		&	\\
+	\hline
+	\endhead
+	\hline
+中文&	masculin	&	f\'{e}minin	& 	pluriel		&		&		&		&		&		&		&	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+	\caption{亲戚}
+	\endlastfoot				
+家庭	&		&		&		&		&		&		&	die	&	Familie	&	-n	&	\\
+亲戚	&		&		&		&	der	&	Verwandte	&	-n	&		&		&		&	\\
+\hline																				
+爷爷…	&	grand-fr\`{e}re	&	grand-m\`{e}re	&	grand-parents	&	der	&	Opa	&	-s	&	die	&	Oma	&	-s	&	\\
+父母	&	p\`{e}re	&	m\`{e}re	&	die Eltern(Pl.)	&	der	&	Vater	&	\"{--}	&	die	&	Mutter	&	\"{--}	&	\\
+叔婶	&	oncle	&	tante	&		&	der	&	Onkel	&	-	&	die	&	Tante	&	-n	&	\\
+兄弟…	&	fr\`{e}re	&	s\oe ur	&	die Geschwister(Pl.)	&	der	&	Bruder	&	\"{--}	&	die	&	Schwester	&	-n	&	\\
+表兄弟…	&	cousin	&	cousine	&		&		&		&		&		&		&		&	\\
+子女	&	fils	&	fille	&		&	der	&	Sohn	&	\"{--}e	&	die	&	Tochter	&	\"{--}	&	\\
+孙子孙女	&		&		&		&	der	&	Enkelsohn	&	\"{--}e	&	die	&	Enkeltochter	&	\"{--}	&	\\
+双胞胎	&	jumeaux	&	jumelles	&		&	der	&	Zwilling	&	-e	&		&		&		&	\\
+\hline																				
+教父教母	&	parrain	&	marraine	&	beaux-parents	&		&		&		&		&		&		&	\\
+丈夫妻子	&	mari	&	femme	&	das Ehepaar -e	&	der	&	Ehemann	&	\"{--}er	&	die 	&	Ehefrau	&	-en	&	\\
+男女朋友	&	copain	&	copine	&		&		&		&		&	die	&	Freundin	&	-nen	&	\\
+朋友	&	ami	&	amie	&		&	der	&	Freund	&	-e	&	die	&	Freundin	&	-nen	&	\\
+新郎新娘	&	bride	&		&		&		&		&		&	die	&	Braut	&	\"{--}e	&	\\
+前任	&	ex	&	ex	&		&		&		&		&		&		&		&	\\
+
+\end{longtable}
+}
+ Meine Damen und Herren!
+\begin{longtable}{c|l|rll|l}
+	\hline
+	人体	&	body	&	der & K\"{o}rper&  &	le corps 	\\
+	\hline
+	\endhead
+	\hline
+	人体	&	body	&	der & K\"{o}rper&  &	le corps 	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{身体}
+	\endlastfoot				
+头	&	head	&	der	&	Kopf	&	\"{--}e	&	la t\^{e}te	\\
+脸	&	face	&		&		&		&	le visage	\\
+头发	&	hair	&		&		&		&	les cheveux	\\
+眉毛	&	eyebrow	&		&		&		&		\\
+眼睛	&	eye	&		&		&		&	l'\oe il	\\
+鼻子	&	nose	&	die	&	Nase	&	-n	&	le nez	\\
+嘴	&	mouth	&		&		&		&	le bouche	\\
+唇	&	lip	&	die	&	Lippe	&	-n	&		\\
+齿	&	tooth	&		&		&		&	la dent	\\
+舌	&	tongue	&		&		&		&		\\
+耳	&	ear	&	das	&	Ohr	&	-en	&	l'oreille(f.)	\\
+脖子	&	neck	&		&		&		&	le cou	\\
+肩	&	shoulder	&		&		&		&	l'\'{e}paule	\\
+胸膛	&	chest	&		&		&		&	la poitrine	\\
+背	&	back	&		&		&		&	le dos	\\
+手臂	&	arm	&		&		&		&	le bras	\\
+肘	&	elbow	&		&		&		&	le coude	\\
+手腕	&	wrist	&		&		&		&	le poignet	\\
+手	&	hand	&		&		&		&	la main	\\
+手掌	&	palm	&		&		&		&	la paume	\\
+手指头	&	finger	&		&		&		&	le doigt	\\
+大拇指	&		&		&		&		&	le pouce	\\
+食指	&		&		&		&		&	l'index(m.)	\\
+中指	&		&		&		&		&	le majeur	\\
+无名指	&		&		&		&		&	l'annulaire(m.)	\\
+小拇指	&		&		&		&		&	l'auriculaire(m.), le petit doigt	\\
+腿	&	leg	&		&		&		&	la jambe	\\
+膝盖	&	knee	&		&		&		&	le genou	\\
+脚踝	&	ankle	&		&		&		&	la cheville	\\
+脚	&	foot	&	der 	&	Fu\ss 	&	\"{--}e	&	le pied	\\
+脚趾	&	toe	&		&		&		&	l'orteil(m.)	\\
+胃	&	stomach	&		&		&		&	le ventre	\\
+心脏	&	heart	&		&		&		&	le c\oe ur	\\
+肋骨	&	rib	&		&		&		&	la c\^{o}te	\\
+
+
+
+	
+	
+\end{longtable}
+\begin{longtable}{c|l|rll|l}
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endhead
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{穿着}
+	\endlastfoot				
+围巾	&		&	der	&	Schal	&	-s	&	l'\'{e}charpe(f.)	\\
+便帽	&	hat	&	die	&	M\"{u}tze	&	-n	&	le chapeau	\\
+鸭舌帽	&	cap	&	die	&	Kappe	&	-n	&		\\
+面具	&	mask	&	die	&	Maske	&	-n	&		\\
+眼镜	&	glasses	&		&		&		&	les lunettes	\\
+太阳镜	&	sunglasses	&	die	&	Sonnenbrille	&	-n	&		\\
+
+休闲西装	&	blazer	&	das	&	Sakko	&	-s	&		\\
+夹克衫	&	jacket	&	die	&	Jacke	&	-n	&	la veste	\\
+衬衫	&	shirt	&	das	&	Hemd	&	-en	&	la chemise	\\
+T恤衫	&	T-shirt	&		&		&		&	le T-shirt	\\
+女衬衫	&	blouse	&	die	&	Bluse	&	-n	&		\\
+男西服	&	suit	&	der	&	Anzug	&	\"{--}e	&		\\
+大衣，外套	&	coat	&	der	&	Mantel	&	\"{--}	&	le manteau	\\
+风衣	&	anorak	&	der	&	Anorak	&	-s	&		\\
+毛衣	&		&		&		&		&	le pull	\\
+浴袍	&	bathrobe	&	der	&	Bademantel	&	\"{--}	&	le peignoir	\\
+泳衣	&	swimsuit	&	der	&	Badeanzug	&	\"{--}e	&		\\
+领带	&	tie	&	die	&	Krawatte	&	-n	&	la cravate	\\
+纽扣	&	button	&	der	&	Knopf	&	\"{--}e	&	le bouton	\\
+手套	&	glove	&	der	&	Handschuh	&	-e	&	les gants(m.)	\\
+连指手套	&	mitten	&	der	&	Fausthandschuh	&	-e	&	les moufles(f.)	\\
+腰带	&	belt	&	der	&	G\"{u}rtel	&	-	&	la ceinture	\\
+
+裤子	&	pants	&	die	&	Hose	&	-n	&	la culotte	\\
+连衣裙	&	dress	&	das	&	Kleid	&	-er	&	la jupe	\\
+牛仔裤	&	jeans	&	die	&	Jeans	&	-	&	le jean	\\
+短裙	&	skirt	&	der	&	Rock	&	\"{--}e	&		\\
+短裤	&	shorts	&		&		&		&	le short	\\
+内裤	&	unterwear	&	die	&	Unterw\"{a}sche	&		&	le slip	\\
+尿布	&	diaper	&	die	&	Windel	&	-n	&		\\
+
+鞋	&	shoes	&	der	&	Schuh	&	-e	&	la chaussure	\\
+靴子	&	boots	&	der	&	Stiefel	&	-	&	la botte	\\
+拖鞋	&	flip-flops	&	die	&	Badeschlappe	&		&	les tongs(f.)	\\
+凉鞋	&	sandal	&	die	&	Sandale	&	-n	&	la sandale	\\
+高跟鞋	&	high heels	&		&		&		&	les talons aiguilles(m.)	\\
+室内便鞋	&	slipper	&	der	&	Pantoffel	&	-n	&	la pantoufle	\\
+袜子	&	socks	&	die	&	Socke	&	-n	&	la chaussette	\\
+
+	
+	
+\end{longtable}
+\subsection{生物}\hspace{1cm}
+\subsubsection{动物}\hspace{1cm}
+\begin{longtable}{c|l|rll|l}
+	\hline
+动物	&	animal	&	das	&	Tier	&	-e	&		\\
+
+	\hline
+	\endhead
+	\hline
+动物	&	animal	&	das	&	Tier	&	-e	&		\\
+
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{动物}
+	\endlastfoot				
+动物	&	animal	&	das	&	Tier	&	-e	&		\\
+鱼	&	fish	&	der	&	Fisch	&	-e	&		\\
+昆虫	&	insect	&	das	&	Insekt	&	-en	&		\\
+苍蝇	&	fly	&	die	&	Fliege	&	-n	&		\\
+甲虫	&	beetle	&	der	&	K\"{a}fer	&	-	&		\\
+蜘蛛	&	spider	&	die	&	Spinne	&	-n	&		\\
+蜂	&	beetle	&	die	&	Biene	&	-n	&		\\
+鸟	&	bird	&	der	&	Vogel	&	\"{--}	&		\\
+鸭	&	duck	&	die	&	Ente	&	-n	&		\\
+鹅	&		&		&		&		&		\\
+猫	&	cat	&	die	&	Katze	&	-n	&		\\
+熊	&	bear	&	der	&	B\"{a}r	&	-en	&		\\
+宠物	&	pet	&	das	&	Haustier	&	-e	&		\\
+蛋，卵 	&	egg	&	das 	&	Ei	&	-er	&	l'\oe uf(m.)	\\
+奶酪	&	cheese	&	der	&	K\"{a}se	&	-	&	le fromage	\\
+
+	
+	
+\end{longtable}
+\begin{longtable}{c|l|rll|l}
+	\hline
+	\thead{十二\\生肖}	&	\thead{the Chinese\\ Zodiac}	&	 	\multicolumn{3}{c|}{\thead{die 12 chinesischen \\ Tierkreiszeichen}}			&\thead{les signes du  \\ zodiac chinois}	\\
+	
+	
+	
+	\hline
+	\endhead
+	\hline
+	\thead{十二\\生肖}	&	\thead{the Chinese\\ Zodiac}	&	 	\multicolumn{3}{c|}{\thead{die 12 chinesischen \\ Tierkreiszeichen}}			&\thead{les signes du  \\ zodiac chinois}	\\
+	
+	
+	
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+	\caption{十二生肖}
+	\endlastfoot				
+	
+鼠	&	rat	&	die	&	Ratte	&	-n	&	le rat	\\
+鼠	&	mouse	&	die	&	Maus	&	\"{--}e	&		\\
+牛	&	ox	&	der	&	Ochse	&	-n,-n	&	le b\oe uf	\\
+母牛	&	cow	&	die	&	Kuh	&	\"{--}e	&		\\
+虎	&	tiger	&	der	&	Tiger	&	-s	&	le tigre	\\
+(野)兔	&	hare	&	der	&	Hase	&	-n,-n	&	le li\`{e}vre	\\
+(普通)兔	&	rabbit	&		&		&		&	le lapin	\\
+龙	&	dragon	&	der	&	Drache	&	-n,-n	&	le dragon	\\
+蛇	&	snake	&	die	&	Schlange	&	-n	&	le serpent	\\
+马	&	horse	&	das	&	Pferd	&	-e	&	le cheval	\\
+羊	&	sheep	&	die	&	Ziege	&	-n	&	le mouton	\\
+山羊	&	goat	&		&		&		&		\\
+猴	&	monkey	&	der	&	Affe	&	-n,-n	&	le singe	\\
+鸡	&	rooster	&	der	&	Hahn	&	\"{--}e	&	le coq	\\
+狗	&	dog	&	der	&	Hund	&	-e	&	le chien	\\
+猪	&	boar/pig	&	das	&	Schwein	&	-e	&	le cochon	\\
+
+
+	
+	
+	
+\end{longtable}
+\subsubsection{植物}\hspace{1cm}
+\begin{longtable}{c|l|rll|l}
+	\hline
+植物	&	plant	&	die	&	Pflanze	&	-n	&		\\
+	\hline
+	\endhead
+	\hline
+植物	&	plant	&	die	&	Pflanze	&	-n	&		\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{植物}
+	\endlastfoot				
+
+树	&	tree	&	der	&	Baum	&	\"{--}e	&	l'arbre(m.)	\\
+花	&	flower	&	die	&	Blume	&	-n	&		\\
+草	&	grass	&		&		&		&		\\
+叶	&	leaf	&		&		&		&		\\
+
+	
+\end{longtable}
+\subsubsection{微生物}\hspace{1cm}
+\subsection{食物}\hspace{1cm} 
+\subsubsection{水果}\hspace{1cm}
+\begin{longtable}{c|l|rll|l}
+	\hline
+	水果	&	fruit	&das & Obst& - &	le fruit  	\\
+	\hline
+	\endhead
+	\hline
+	水果	&	fruit	&das & Obst& - &	le fruit  	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{水果}
+	\endlastfoot				
+葡萄	&	grape	&	der	&	Wein	&	-e	&		\\
+苹果	&	apple	&	der	&	Apfel	&	\"{--}	&		\\
+橙子	&	orange	&	das	&	Orange	&	-	&		\\
+香蕉	&	banana	&	die	&	Banane	&	-n	&		\\
+草莓	&	strawberry	&	die	&	Erdbeere	&	-n	&		\\
+
+	
+	
+\end{longtable}
+\subsubsection{蔬菜}\hspace{1cm}
+\begin{longtable}{c|l|rll|l}
+	\hline
+蔬菜	&	vegetable	&	das	&	Gem\"{u}se	&	-	&	le l\'{e}gume	\\
+
+	
+	\hline
+	\endhead
+	\hline
+蔬菜	&	vegetable	&	das	&	Gem\"{u}se	&	-	&	le l\'{e}gume	\\
+
+	
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{蔬菜}
+	\endlastfoot				
+	土豆	&	potato	&	die	&	Kartoffel	&	-n	&	le pomme de terre	\\
+	西红柿	&	tomato	&	die	&	Tomate	&	-n	&		\\
+	
+	
+	
+	
+\end{longtable}
+\subsubsection{肉}\hspace{1cm}
+\begin{longtable}{c|l|rll|l}
+	\hline
+肉	&	meat	&	das	&	Fleisch	&		&	la viande	\\
+
+	\hline
+	\endhead
+	\hline
+肉	&	meat	&	das	&	Fleisch	&		&	la viande	\\
+
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{肉}
+	\endlastfoot				
+鱼肉	&	fish	&	der	&	Fisch	&	-e	&	le poisson	\\
+
+	
+	
+	
+\end{longtable}
+\subsubsection{饮料}\hspace{1cm}
+\begin{longtable}{c|l|rll|l}
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endhead
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{杯具与饮料}
+	\endlastfoot				
+玻璃杯	&	glass	&	das	&	Glas	&	\"{--}er	&		\\
+带柄的杯	&		&	die	&	Tasse	&	-n	&		\\
+马克杯	&	mug	&		&		&		&		\\
+\hline											
+饮料	&		&	das	&	Getr\"{a}nk	&	-e	&		\\
+啤酒	&		&	das	&	Bier	&	-e	&		\\
+葡萄酒	&		&	der	&	Wein	&	-e	&	le vin	\\
+咖啡	&	coffee	&	der	&	Kaffee	&		&	le caf\'{e}	\\
+茶	&	tea	&	der	&	Tee	&	-s	&	le th\'{e}	\\
+牛奶	&	milk	&	die	&	Milch	&	-en	&		\\
+可乐	&	cola	&	die	&	Cola	&	-s	&		\\
+果汁	&	juice	&	der	&	Saft	&	\"{--}e	&		\\
+水	&	water	&	das	&	Wasser	&		&		\\
+
+
+\end{longtable}
+Ich trinke gern gr\"{u}nen Tee/schwarzen Kaffee/deutsches Bier/franz\"{o}sischen Wein.
+
+ Er thinkt ein Glas Bier oder eine Tasse Kaffee.
+\subsubsection{调味料}\hspace{1cm}
+\begin{longtable}{c|l|rll|l}
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endhead
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{开门七件事}
+	\endlastfoot				
+柴	&		&		&		&		&		\\
+米	&	rice	&	der	&	Reis	&		&	le riz	\\
+油	&	oil	&		&		&		&		\\
+盐	&	salt	&		&		&		&		\\
+酱	&		&		&		&		&		\\
+醋	&		&	der	&	Essig	&	-e	&		\\
+茶	&	tea	&	der	&	Tee	&	-s	&	le th\'{e}	\\
+
+	
+	
+\end{longtable}
+\subsubsection{其他}\hspace{1cm}
+\begin{longtable}{c|l|rll|l}
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endhead
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{其他}
+	\endlastfoot				
+糖果	&	candy	&	die	&	S\"{u}\ss igkeiten(Pl.)	&		&		\\
+蛋糕	&	cake	&	die	&	Torte	&	-n	&		\\
+面包	&	bread	&	das 	&	Brot	&	-e	&	le pain	\\
+巧克力	&	chocolate	&	die	&	Schokolade	&	-n	&	le chocolat	\\
+
+
+	
+\end{longtable}
+\subsection{地点名}\hspace{1cm}\\
+\begin{longtable}{c|l|rll|l}
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endhead
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{地点}
+	\endlastfoot				
+世界	&	world	&	die	&	Welt	&		&		\\
+地球	&	earth	&	die	&	Erde	&		&		\\
+国家	&	country	&	das	&	Land	&	\"{--}er	&	le pays	\\
+地区	&		&	die	&	Gegend	&	-en	&		\\
+省	&	province	&	die	&	Provinz	&	-en	&		\\
+市	&		&		&		&		&		\\
+县	&		&		&		&		&		\\
+乡	&		&		&		&		&		\\
+城市	&	city	&	die	&	Stadt	&	\"{--}e	&	la ville	\\
+村庄	&		&	das	&	Dorf	&	\"{--}er	&		\\
+首都	&	capital	&		&		&		&	la capitale	\\
+
+	
+	
+	
+\end{longtable}
+
+	\begin{longtable}{c|l|rll|l}
+	\hline
+店铺	&		&	das	&	Gesch\"{a}ft	&	-e	&		\\
+
+	\hline
+	\endhead
+	\hline
+店铺	&		&	das	&	Gesch\"{a}ft	&	-e	&		\\
+
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+	\caption{商铺名称}
+	\endlastfoot				
+生肉店	&		&		&		&		&	la boucherie	\\
+熟肉店	&		&		&		&		&	la charcuterie	\\
+面包店	&		&		&		&		&	la boulangerie	\\
+鞋店	&		&		&		&		&	la cordonnerie	\\
+香水店	&		&		&		&		&	la parfumerie	\\
+药店	&		&		&		&		&	la pharmacie	\\
+鱼店	&		&		&		&		&	la poissonnerie	\\
+眼镜店	&		&		&		&		&	la boutique de l'opticien	\\
+烟草店	&		&		&		&		&	le bureau de tabac	\\
+体育用品店	&		&		&		&		&	le magasin de sports	\\
+卖报亭	&		&		&		&		&	\thead{le point presse\\le vendeur de journaux}	\\
+理发店	&		&		&		&		&	le salon de coiffure	\\
+车库	&		&		&		&		&	le garage	\\
+邮局	&	post office	&	die	&	Post	&		&	le bureau de poste	\\
+饭店	&		&	das	&	Restaurant	&	-s	&	le restaurant	\\
+学生食堂	&		&	die	&	Mensa	&	-sen	&		\\
+旅馆	&		&	das	&	Hotel	&	-s	&		\\
+银行	&	bank	&	die	&	Bank	&	-en	&	la banque	\\
+电影院	&		&	das	&	Kino	&	-s	&		\\
+洗衣店	&		&	die	&	W\"{a}scherei	&	-en	&		\\
+
+
+	
+	
+	
+	
+	
+\end{longtable}
+	\begin{longtable}{r|l|l}
+	\hline
+	地点	& pour acheter	&	活动 	\\
+	\hline
+	\endhead
+	\hline
+	地点	& pour acheter	&	活动 	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+	\caption{商铺名称与活动(法)}
+	\endlastfoot				
+	la boucherie	&		&	de la viande	\\
+	la charcuterie	&		&	de la viande	\\
+	la boulangerie	&		&	du pain	\\
+	la cordonnerie	&		&	des chaussures	\\
+	la parfumerie	&		&	du parfum	\\
+	la pharmacie	&		&	des m\'{e}dicaments	\\
+	la poissonnerie	&		&	du poisson	\\
+	la boutique de l'opticien	&		&	de lunettes	\\
+	le bureau de tabac	&		&	des cigarettes	\\
+	le magasin de sports	&		&	des v\^{e}toments de sport	\\
+	\thead{le point presse\\le vendeur de journaux}	&	r\'{e}parer	&	le journal	\\
+	le salon de coiffure	&	couper	&	les cheveux	\\
+	le garage	&		&		\\
+	le bureau de poste	&	envoyer	&	une lettre	\\
+	le restaurant	&		&		\\
+	la banque	&	retirer	&	de l'argent	\\
+	
+	
+	
+	
+	
+	
+	
+\end{longtable}
+Pourquoi tu vas \`{a} la …?
+
+Je vais ou/\`{a} la … pour acheter…
+
+
+\begin{longtable}{c|l|rll|l}
+	\hline
+建筑	&	building	&		&		&		&	le b\^{a}timent	\\
+
+	\hline
+	\endhead
+	\hline
+建筑	&	building	&		&		&		&	le b\^{a}timent	\\
+
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{建筑}
+	\endlastfoot				
+博物馆	&	museum	&	das	&	Museum	&	-seen	&	le mus\'{e}um	\\
+图书馆	&	library	&	die	&	Bibliothek	&	-en	&	la biblioth\`{e}que	\\
+塔，钟楼	&	tower	&	der	&	Turm	&	\"{--}e	&		\\
+火车站	&	station	&	der	&	Bahnhof	&	\"{--}e	&	la gare	\\
+
+
+	
+\end{longtable}
+\begin{longtable}{c|l|rll|l}
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endhead
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{其他}
+	\endlastfoot				
+广场	&	square	&	der	&	Platz	&	\"{--}e	&	la place	\\
+港口，码头	&		&	der	&	Hafen	&	\"{--}	&		\\
+街道，道路	&	street	&	die	&	Sta\ss e	&	-n	&	l'avenue(f.)	\\
+小路	&	road	&	der	&	Weg	&	-e	&	la rue	\\
+山	&	hill	&	der	&	Berg	&	-e	&		\\
+山脉	&	mountain	&	das	&	Gebirge	&	-	&	la montagne	\\
+江	&		&		&		&		&	le fleuve	\\
+河	&	river	&	der	&	Fluss	&	\"{--}e	&	la rivi\`{e}re	\\
+湖	&	lake	&	der	&	See	&	-n	&	le lac	\\
+海	&	sea	&	das	&	Meer	&	-e	&	la mer	\\
+沙滩	&	beach	&		&		&		&	la plage	\\
+阅览室	&		&	der	&	Lesesaal	&	-s\"{a}le	&		\\
+
+
+\end{longtable}
+
+\subsection{住房}\hspace{1cm}
+\begin{longtable}{c|l|l|l}
+	\hline
+	中文	&	English(England)	&	Deutsch	&	français	\\
+	\hline
+	\endhead
+	\hline
+	中文	&	English(England)	&	Deutsch	&	français	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{楼层}
+	\endlastfoot				
+在一楼	&	on the ground floor	&	im Erdgeschoss	&	au rez-de-chauss\'{e}e	\\
+在二楼	&	on the first floor	&	im ersten Stock	&	au premier floor	\\
+
+
+	
+\end{longtable}
+\begin{longtable}{c|l|rll|l}
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endhead
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{三种房屋}
+	\endlastfoot				
+房子	&	house	&	das	&	Haus	&	\"{--}er	&	la maison	\\
+家	&	home	&	das	&	Haus	&	\"{--}er	&	la maison	\\
+别墅	&	villa	&	die	&	Villa	&	-llen	&	la villa	\\
+套房	&	apartment	&	die	&	Wohnung	&	-en	&	appartement	\\
+房间	&	room	&	das	&	Zimmer	&	-	&	la chambre	\\
+
+
+
+	
+\end{longtable}
+3-Zi-Wo:两室一厅
+\begin{longtable}{c|l|rll|l}
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endhead
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{住房}
+	\endlastfoot				
+入口	&	entrance	&	der	&	Eingang	&	\"{--}e	&	l'entr\'{e}e(f.)	\\
+出口	&		&	der	&	Ausgang	&	\"{--}e	&	la sortie	\\
+大门	&	gate	&	das	&	Tor	&	-e	&		\\
+小门	&	door	&	die	&	T\"{u}r	&	-en	&	la porte	\\
+...之家	&		&	das	&	Heim	&	-e	&		\\
+屋顶	&	roof	&		&		&		&	le toit	\\
+天花板	&	ceiling	&		&		&		&	le plafond	\\
+墙	&	wall	&	die	&	Wand	&	\"{--}e	&	le mur	\\
+窗户	&	window	&	das	&	Fenster	&		&	la fen\^{e}tre	\\
+角落	&		&	die	&	Ecke	&	-n	&		\\
+地面	&	ground	&		&		&		&	le sol	\\
+
+	
+	
+\end{longtable}
+\begin{longtable}{c|l|rll|l}
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endhead
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{家中物品}
+	\endlastfoot				
+家具	&	furniture	&		&		&		&	le meuble	\\
+衣橱	&	wardrobe	&	der	&	Schrank	&	\"{--}e	&	l'armoire	\\
+橱柜	&	cupboard	&		&		&		&	le placard	\\
+五斗橱	&	chest of drawers	&		&		&		&	la commode	\\
+沙发	&	sofa	&		&		&		&	le canap\'{e}	\\
+灯	&	lamp	&	die	&	Lampe	&	-n	&	la lampe	\\
+床	&	bed	&	das	&	Bett	&	-en	&	le lit	\\
+加衬芯床罩	&	comforter	&		&		&		&	la couette	\\
+毛毯	&	blanket	&		&		&		&	la couverture	\\
+枕头	&	pillow	&		&		&		&	l'oreiller(m.)	\\
+淋浴	&		&	die	&	Dusche	&	-n	&		\\
+浴缸/浴室	&		&	das	&	Bad	&	\"{--}er	&		\\
+镜子	&	mirror	&		&		&		&	le miroir	\\
+烤箱	&	oven	&		&		&		&	le four	\\
+炉子	&	stove	&		&		&		&	la cuisini\`{e}re	\\
+冰箱	&	refrigerator(fridge)	&		&		&		&	le r\'{e}frig\'{e}rateur	\\
+制冷机	&	freezer	&		&		&		&	le cong\'{e}lateur	\\
+
+
+	
+\end{longtable}
+\subsection{旅行}\hspace{1cm}
+\begin{longtable}{c|l|rll|l}
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endhead
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{总称}
+	\endlastfoot				
+郊游，短途旅行	&	&	der	&	Ausflug	&	\"{--}e	&		\\
+旅行	&	&	die	&	Reise	&	-n	&		\\
+
+	
+	
+\end{longtable}
+\begin{longtable}{c|l|l|l}
+	\hline
+	中文	&	English	& Deutsch  &	français  	\\
+	\hline
+	\endhead
+	\hline
+	中文	&	English	& Deutsch  &	français  	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{方位}
+	\endlastfoot				
+东	&	east	&	Ost	&	l'est	\\
+南	&	south	&	s\"{u}d	&	le sud	\\
+西	&	west	&	West	&	l'ouest	\\
+北	&	north	&	Nord	&	le nord	\\
+
+\end{longtable}
+\begin{longtable}{c|l|rll|l}
+	\hline
+交通工具	&	&&& &	la voiture  	\\
+	\hline
+	\endhead
+	\hline
+交通工具	&	&&& &	la voiture  	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{交通工具}
+	\endlastfoot				
+步行	&	on foot	&	\multicolumn{3}{c|}{zu Fu\ss} 					&	\`{a} pied	\\
+自行车	&	bicycle	&	das	&	Fahrrad	&	\"{--}er	&	le velo/la bicyclette	\\
+摩托车	&	motorcycle	&		&		&		&	la moto	\\
+马车	&		&		&		&		&	le cheval	\\
+出租车	&	taxi	&		&		&		&	le taxi	\\
+汽车	&	car	&	das	&	Auto	&	-s	&	l'autobus(m.)	\\
+吉普车	&	jeep	&		&		&		&	la jeep	\\
+公交车	&	bus	&		&		&		&	le bus	\\
+地铁	&	metro	&	die 	&	U-Bahn	&	-en	&	le metro	\\
+火车	&	train	&	der	&	Zug	&	\"{--}e	&	le autorail	\\
+船	&	ship	&	das	&	Schiff	&	-e	&	le bateau	\\
+飞机	&	plane	&		&		&		&	l'avion(m.)	\\
+
+	
+\end{longtable}
+\subsection{休闲}\hspace{1cm}
+\subsubsection{节日}\hspace{1cm}
+\begin{longtable}{c|l|rll|l}
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endhead
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{节日}
+	\endlastfoot				
+长假	&	&	die	&	Ferien(Pl.)	&		&		\\
+节日	&	&	der	&	Urlaubstag	&	-e	&		\\
+节假日	&	&	das	&	Fest	&	-e	&		\\
+有薪假期	&	&	der	&	Feiertag	&	-e	&		\\
+\hline										
+除夕	&	&	s/r	&	Silvester	&		&		\\
+元旦	&	&	das	&	Neujahr	&		&		\\
+复活节	&	&	das	&	Ostern	&		&		\\
+狂欢节	&	&	der	&	Karnevel	&		&		\\
+平安夜	&	&	der	&	Heiligabend	&	-e	&		\\
+&	&		&		&		&		\\
+圣诞节	&	&	die	&	Weihnacht	&		&	N\"{o}el	\\
+国庆节	&	&	der	&	Nationalfeiertag	&		&		\\
+
+
+
+	
+	
+\end{longtable}
+\subsubsection{聚会}\hspace{1cm}
+\begin{longtable}{c|l|rll|l}
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endhead
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{聚会}
+	\endlastfoot				
+庆祝会	&		&	die	&	Feier	&	-n	&		\\
+派对	&	party	&	die	&	Party	&	-s	&	soir\'{e}e	\\
+客人	&	guest	&	der	&	Gast	&	\"{--}e	&		\\
+礼物	&	gift	&	das	&	Geschenk	&	-e	&		\\
+长篇小说	&		&	der	&	Roman	&	-e	&		\\
+短篇小说	&		&	die	&	Erz\"{a}hlung	&	-en	&		\\
+光盘	&	CD	&	die	&	CD	&	-(s)	&		\\
+
+	
+\end{longtable}
+\subsection{情感}\hspace{1cm}
+\begin{longtable}{c|l|rll|l}
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endhead
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{情感}
+	\endlastfoot				
+情感	&	mood	&	die	&	Stimmung	&	-en	&		\\
+喜	&	joy	&	die	&	Freude	&	-n	&		\\
+怒	&	rage	&	die	&	Wut	&		&		\\
+哀	&	grief	&	die	&	Trauer	&		&		\\
+乐	&		&		&		&		&		\\
+愁	&		&		&		&		&		\\
+惧	&	fear	&	die	&	Angst	&	\"{--}e	&		\\
+爱	&	love	&	die	&	Liebe	&	-n	&	l'amour(m.)	\\
+口渴	&	thirst	&	der	&	Durst	&		&		\\
+饥饿	&	hunger	&	der	&	Hunger	&		&		\\
+时间	&	time	&	die	&	Zeit	&	-en	&		\\
+
+	
+\end{longtable}
+\begin{longtable}{c|l|rll|l}
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endhead
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{性格}
+	\endlastfoot				
+乐趣	&	fun	&	der	&	Spa\ss	&	\"{--}e	&		\\
+乐观	&	optimism	&	der	&	Optimismus	&	-smen	&		\\
+快乐	&	happiness	&	das	&	Gl\"{u}ck	&	-e	&	le bonheur	\\
+自信	&	confidence	&	das	&	Vertrauen	&		&		\\
+希望	&	hope	&	die	&	Hoffnung	&	-en	&		\\
+友谊	&	friendship	&	die	&	Freundschaft	&	-en	&		\\
+创新	&	creativity	&	die	&	Kreativit\"{a}t	&		&		\\
+兴趣	&	interest	&	das	&	Interesse	&	-n	&		\\
+好奇心	&	curiosity	&	die	&	Neugier	&		&		\\
+准时	&	punctuality	&	die	&	P\"{u}nktlichkeit	&	-en	&		\\
+无聊	&	boredom	&	die	&	Langeweile	&		&		\\
+失败	&	failure	&	die	&	Niederlage	&	-n	&		\\
+抑郁	&	depression	&	die	&	Depression	&	-en	&		\\
+绝望	&	despair	&	die	&	Verzweiflung	&	-en	&		\\
+
+	
+	
+\end{longtable}
+\subsection{其他抽象名词}\hspace{1cm}
+\begin{longtable}{c|l|rll|l}
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endhead
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{动词衍生名词}
+	\endlastfoot				
+尖叫	&	scream	&	der	&	Schrei	&	-e	&		\\
+微笑	&	smile	&	das	&	Lächeln	&		&		\\
+拒绝	&	rejection	&	die	&	Ablehnung	&	-en	&		\\
+要求	&	request	&	die	&	Aufforderung	&	-en	&		\\
+梦想	&	dream	&	der	&	Traum	&	\"{--}e	&		\\
+不信任	&	distrust	&	das	&	Misstrauen	&		&		\\
+怀疑	&	doubt	&	der	&	Zweifel	&	-	&		\\
+争执	&	fight	&	der	&	Streit	&	-e	&		\\
+
+	
+	
+\end{longtable}
+\begin{longtable}{c|l|rll|l}
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endhead
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{抽象名词}
+	\endlastfoot				
+工作，作业，职业	&	&	die	&	Arbeit	&	-en	&		\\
+学习，研究	&	&	das	&	Studium	&	-dien	&		\\
+使用，支配	&	&	die	&	Verf\"{u}gung	&	-en	&		\\
+约会	&	&	die	&	Veravredung	&	-en	&		\\
+邀请	&	&	die	&	Einladung	&	-en	&		\\
+解释	&	&	die	&	Erklärung	&	-en	&		\\
+	
+	
+\end{longtable}
+\subsection{待修改}\hspace{1cm}
+\begin{longtable}{c|l|rll|l}
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endhead
+	\hline
+	中文	&	English	&\multicolumn{3}{c|}{Deutsch} &	français  	\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline	
+	\caption{媒介}
+	\endlastfoot				
+报纸	&	newspaper	&	die	&	Zeitung	&	-en	&	le journal	\\
+信件	&	letter	&	der	&	Brief	&	-e	&	la lettre	\\
+卡片	&	card	&	die	&	Karte	&	-n	&	la carte	\\
+
+
+	
+\end{longtable}
+\begin{longtable}{rll|rll|rll}
+	\hline
+	&阳性&	&	&中性&	& &阴性&		\\
+	\hline
+	\endhead
+	\hline
+	&阳性&	&	&中性&	& &阴性&		\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+	\caption{德语名词}
+	\endlastfoot				
+
+der	&	Spa\ss	&	\"{--}e	&	das	&	Wiedersehen	&		&	die	&	Idee	&	-n	\\
+der	&	Mond	&	-e	&	das	&	Fenster	&	-	&	die	&	Rechnung	&	-en	\\
+der	&	Volkswagen	&		&	das	&	Thema	&	-men	&		&		&		\\
+der	&	Anhalter	&		&	das	&	Geld	&		&		&		&		\\
+der	&	Zufall	&	\"{--}e	&	das	&	Gl\"{u}ck	&		&		&		&		\\
+der	&	Halt	&		&	das	&	Feuerwerk	&		&		&		&		\\
+der	&	L\"{a}rm	&		&		&		&		&		&		&		\\
+der	&	Ruf	&	-e	&		&		&		&		&		&		\\
+der	&	Beginn	&		&		&		&		&		&		&		\\
+
+
+\end{longtable}
+
+待补充：弱变化名词
+
+
+	\begin{longtable}{|l|l|l|}
+	\hline
+	masculin	&	f\'{e}minin	& pluriel		\\
+	\hline
+	\endhead
+	\hline
+	masculin	&	f\'{e}minin	& pluriel		\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+	\caption{特殊的名词阴阳性}
+	\endlastfoot				
+				
+le cartable	&	la nationalit\'{e}	&		\\
+le livre	&		&		\\
+le dictionnaire	&		&		\\
+le rythme	&		&		\\
+le tigre	&		&		\\
+le singe	&		&		\\
+le li\`{e}vre	&		&		\\
+
+\end{longtable}
+\begin{longtable}{l|l|c}
+	\hline
+		masculin	&	f\'{e}minin	& 中文		\\
+	\hline
+	\endhead
+	\hline
+		masculin	&	f\'{e}minin	& 中文		\\
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+	\caption{法语名词(未整理)}
+	\endlastfoot				
+证件	&		&		\\
+le passeport	&	la pi\`{e}ce d'identit\'{e}	&		\\
+le formulaire d'inscription	&	la carte national d'identit\'{e}	&		\\
+\hline					
+个人信息	&		&		\\
+le nom de famille	&	la nationalit\'{e}	&		\\
+le pr\'{e}nom	&	la situation famille	&		\\
+l'\^{a}ge	&	la date de naissance	&		\\
+le lieu de naissance	&		&		\\
+le domicile	&		&		\\
+le sexe	&	la situation	&		\\
+l'etat civil	&	l'adresse	&		\\
+le num\'{e}ro de t\'{e}l\'{e}phone	&		&		\\
+\hline					
+le magasin	&	la m\'{e}diath\'{e}que	&		\\
+le bureau	&	l'\'{e}cole/l'\'{u}niversit\'{e}	&		\\
+le couloir	&	la caf\'{e}t\'{e}ria	&		\\
+l'escalier	&		&		\\
+le salle d'informatique	&		&		\\
+le restaurant universitaire	&		&		\\
+
+\end{longtable}
+Quel \^{a}ge avez-vous?
+
+Quel est votre nom?
+
+待补充：美食
+
+\section{形容词}
+
+\begin{longtable}{c|c|c|c}
+	\hline
+颜色	&	color	&	die Farbe -n	&	la couleur	\\
+
+	\hline
+	\endhead
+	\hline
+颜色	&	color	&	die Farben -n	&	la couleur	\\
+
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+	\caption{颜色}
+	\endlastfoot				
+赤	&	red	&	rot	&	rouge	\\
+橙	&	orange	&	orange	&	orange	\\
+黄	&	yellow	&	gelb	&	jaune	\\
+绿	&	green	&	grün	&	vert,e	\\
+青	&	cyan	&	blaugrün	&	cyan	\\
+蓝	&	blue	&	blau	&	bleu,e	\\
+靛	&	indigo	&	indigo	&	indigo	\\
+紫	&	purple	&	lila	&	violet,te	\\
+粉	&	pink	&	pink	&	rose	\\
+黑	&	black	&	schwarz	&	noire	\\
+棕	&	brown	&	braun	&	brun,e	\\
+灰	&	grey	&	grau	&	gris,e	\\
+白	&	white	&	weiß	&	blanc,che	\\
+
+	
+\end{longtable}
+\begin{longtable}{c|c|c|c}
+	\hline
+	天气	&	whether	&		&		\\
+	
+	\hline
+	\endhead
+	\hline
+	天气	&	whether	&		&		\\
+	
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+	\caption{天气}
+	\endlastfoot				
+温暖	&	warm	&	warm	&		\\
+炎热	&	hot	&	hei\ss	&		\\
+凉爽	&	cool	&	h\"{u}hl	&		\\
+寒冷	&	cold	&	kalt	&		\\
+
+	
+\end{longtable}
+\section{副词}
+\begin{longtable}{c|c|c|c}
+	\hline
+	频率	&		&		&		\\
+	
+	\hline
+	\endhead
+	\hline
+	频率	&		&		&		\\
+	
+	\hline
+	\endfirsthead	
+	\hline
+	\endfoot
+	\hline		
+	\caption{频率副词}
+	\endlastfoot				
+总是	&	always	&	immer	&	toujours	\\
+通常	&	usually	&		&		\\
+经常	&	often	&	oft	&		\\
+有时	&	sometimes	&	manchmal	&		\\
+从不	&	never	&	nie	&	jamais	\\
+
+
+
+	
+\end{longtable}
+\section{每日一句}
+\begin{enumerate}[1.]
+	\item Aller Anfang ist schwer.
+	\item []万事开头难。
+	\item []Endes gut, alles gut.
+	\item Wer Vertrauen hat, erlebt jeden Tag Wunder.
+	\item[] Wo eine Wille ist, ist auch ein Weg.
+	\item[]有志者事竟成。
+	\item Egal wie weit der Weg ist, mas muss den ersten Schritt tun.
+	\item[] 千里之行，始于足下。
+	\item Alle Wege f\"{u}hren zu/nach Rom.
+	\item []条条大路通罗马。
+	\item Besser sp\"{a}ter als nie.
+	\item []迟做总比不做好。
+	\item April, April, der wei\ss nicht, was er will.
+\end{enumerate}
+%\section{日语发音}
+%\noindent あいうえお\\かきくけこ\\さしすせそ\\たちつてと\\なにぬねの\\はひふへほ\\まみうめも\\やいゆえよ\\らりるれろ\\わいうえを
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+\end{document}
+
+
+
+

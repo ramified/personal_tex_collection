@@ -1,0 +1,30 @@
+
+\documentclass[border={0pt 0pt 0pt 0pt}]{standalone}
+\usepackage{tikz-cd,tikz-3dplot} 
+\usetikzlibrary{calc,intersections,through,backgrounds,decorations.pathmorphing, decorations.shapes,decorations.markings}
+%include other needed packages here   
+\begin{document}
+\begin{tikzpicture}[scale=6]
+
+\draw[step=.5cm,gray,very thin] (-0.4,-0.4) grid (1.4,1.4);
+\draw[->] (-0.5,0) -- (1.5,0);
+\draw[->] (0,-0.5) -- (0,1.5);
+
+\fill[red!20!white] (0,0) -- (0.5,0) -- (0.5,1) -- (0,1) -- (0,0);
+\draw[red!80!white,very thick] (0,0.5) -- (0,0) -- (0.5,0) -- (0.5,0.5);
+
+
+\foreach \x/\xtext in {0.5/1,1/2}
+\draw (\x cm,1pt) -- (\x cm,-1pt) node[anchor=north,fill=white] {$\xtext$};
+\foreach \y/\ytext in {0.5/1,1/2}
+\draw (1pt,\y cm) -- (-1pt,\y cm) node[anchor=east,fill=white] {$\ytext$};
+\foreach \x/\y/\ytext in {1/1/-\frac{7}{2},1/3/-\frac{1}{2},1/5/\frac{5}{2},1/7/\frac{1}{2},1/9/\frac{7}{2},3/1/-2,3/3/-1,3/5/0,3/7/1,3/9/2,5/1/\frac{2}{5},5/3/\frac{1}{5}}
+\draw[black] plot[mark=x,mark size=0.02cm] coordinates{(\x/10,\y/10)} {} 
+node[anchor=north east] {$\ytext$};
+\draw (-0.7pt,-0.7pt)  node[anchor=north east,fill=white] {0};
+
+
+\node [fill=red,inner sep=2pt] at (0,0.5) {};
+\node [fill=red,inner sep=2pt] at (0.5,0.5) {};
+\end{tikzpicture}
+\end{document}

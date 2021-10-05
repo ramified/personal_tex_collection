@@ -1,0 +1,3 @@
+G5 = Gamma(5)
+A   = FareySymbol (G5). fundamental_domain ( show_pairing = true )
+show( A ,f igsize=20 , fontsize=20 )

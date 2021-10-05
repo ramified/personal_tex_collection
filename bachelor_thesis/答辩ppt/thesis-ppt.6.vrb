@@ -1,0 +1,80 @@
+\fontencoding{T1}\fontfamily{ptm}
+^^I\setbeamercovered{invisible}
+\begin{tikzpicture}[
+double={blue!10}, double distance between line centers=3pt,
+node distance=15mm,
+terminal/.style={
+^^I% The shape:
+^^Irectangle,minimum size=6mm, minimum width=10mm,rounded corners=0mm,
+^^I% The rest
+^^Ithick,draw=violet!50,
+^^Itop color=white,bottom color=violet!20,
+^^Ifont=\ttfamily},
+smaller/.style={
+^^I% The shape:
+^^Irectangle,minimum size=4mm,rounded corners=0mm,
+^^I% The rest
+^^Ithick,draw=red!50,
+^^Itop color=white,bottom color=red!20,
+^^Ifont=\ttfamily},
+every new ->/.style={shorten >=1pt},
+>={Implies[fill=blue!80]},thick,blue!90,text=black,
+%arrows = {-Latex[length=5pt 3 0]}
+]
+
+\node (ratfct) [terminal, visible on=<11->] {有理函数};
+%\node[smaller,right=of ratfct,yshift=-.45cm,xshift=1cm,font=\footnotesize, visible on=<15->]{扩张};
+\node (fctfield) [terminal,right=of ratfct, visible on=<13->] {函数域};
+%\node[smaller,right=of fctfield,yshift=-.45cm,xshift=1.8cm,font=\footnotesize, visible on=<15->]{子群};
+\node (group) [terminal,right=of fctfield,xshift=1cm, visible on=<6->] {群} ;
+\node[smaller,below=of fctfield,yshift=-.49cm,xshift=1cm,font=\footnotesize, visible on=<9->]{\hyperlink{covering<1>}{分歧覆叠}};
+\node (RS) [terminal,below=of fctfield, visible on=<8->] {\hyperlink{RS<1>}{Riemann面}};
+\node (sym) [terminal,below=of group, visible on=<4->] {对称性};
+\node (poly) [terminal,below=of sym, visible on=<2->] {正多面体};
+\path (fctfield) edge [->,double, visible on=<14->]node[above, visible on=<14->]{\small PET} (ratfct);
+\path (fctfield) edge [<->,double, visible on=<12->]node[above, visible on=<12->]{\small Galois} (group);
+\path (fctfield) edge [<->,double, visible on=<14->] (RS);
+\path (group) edge [<->,double, visible on=<5->] (sym);
+\path (poly) edge [<->,double, visible on=<3->] (sym);
+\path (group) edge [->,double, visible on=<7->] (RS);
+\path (RS) edge [->,double, visible on=<10->] (ratfct);
+\draw[black,dashed] (-2.5,-1.5)--(8,-1.5);
+\draw (-2,-1.5) node[anchor=south] {代数};
+\draw (-2,-1.5) node[anchor=north] {几何};
+%\path (shier) edge [<->,double]node[left]{\parbox{1.5cm}{\small 辅助方程}} ($(Bri1.north)+(10mm,0)$);
+%\path ($(Bri1.south)+(10mm,0)$) edge [<->,double]node[left]{\parbox{2.5cm}{\small Tschirnhaus变换}} (qua);
+%\path (jie.south west) edge [<->,double]node[right]{\parbox{1.5cm}{\small J-B约化}} (qua.north east);
+\end{tikzpicture}
+\only<14>{
+^^I\begin{minipage}[t]{.75\textwidth}
+^^I^^I\vspace{-2cm}
+^^I^^I\begin{theorem}[本原元定理(PET)]
+^^I^^I^^I域$\mathbb{C}(x)$的有限扩域$E$是单扩域，即，存在$y \in E$使得$E =\mathbb{C}(x)(y)$.
+^^I^^I\end{theorem}
+^^I^^I
+^^I\end{minipage}
+}
+\only<15>{
+^^I\begin{minipage}[t]{.75\textwidth}
+^^I^^I\vspace{-1.7cm}
+^^I^^I\begin{equation*}
+^^I^^I\begin{array}{ccc}
+^^I^^I\Gamma_1 &\subseteq& \Gamma_2\\
+^^I^^I\mathbb{PC}^1/\Gamma_1& \longrightarrow& \mathbb{PC}^1/\Gamma_2\\
+^^I^^I\mathcal{M}(\mathbb{PC}^1/\Gamma_1)& \supseteq& \mathcal{M}(\mathbb{PC}^1/\Gamma_2)
+^^I^^I\end{array}
+^^I^^I\end{equation*}^^I
+^^I\end{minipage}
+}
+\only<6-13>{
+^^I\begin{minipage}[t]{.75\textwidth}
+^^I^^I\vspace{-1.7cm}
+^^I^^I$$\uncover<13->{\mathcal{M}(}
+^^I^^I\uncover<8->{\mathbb{PC}^1/\Gamma}
+^^I^^I\uncover<13->{)}
+^^I^^I\uncover<12->{\Longleftrightarrow} \Gamma$$
+^^I^^I\vspace{-0.5cm}
+^^I^^I$$\uncover<9->{\varPhi:\mathbb{PC}^1\xtwoheadrightarrow{}}
+^^I^^I\uncover<8->{\mathbb{PC}^1/\Gamma\overset{\sim}{\longrightarrow}\mathbb{PC}^1}$$^^I^^I
+^^I\end{minipage}
+}

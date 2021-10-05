@@ -1,0 +1,18 @@
+
+\documentclass[border={0pt 0pt 0pt 0pt}]{standalone}
+\usepackage{tikz-cd} 
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usetikzlibrary{calc,intersections,through,backgrounds,decorations.pathmorphing, decorations.shapes,decorations.markings,arrows.meta}
+%include other needed packages here   
+\begin{document}
+	\tikzset{LA/.style = {line width=1pt, double distance=5pt,
+			arrows = {-Implies}}
+	}
+	\begin{tikzcd}[row sep=2cm
+		,line width=rule_thickness
+		] \raisebox{-2cm}{\includegraphics[]{planet4.pdf}} \arrow[d,LA]\\
+		\raisebox{-2cm}{\includegraphics[]{planet1.pdf}}
+	\end{tikzcd}
+\end{document}

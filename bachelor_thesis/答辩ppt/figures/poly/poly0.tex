@@ -1,0 +1,47 @@
+\documentclass[border={-10pt 0pt 0pt 0pt}]{standalone}
+\usepackage{tikz-cd,tikz-3dplot} 
+\usetikzlibrary{shapes.geometric, arrows, backgrounds,external}
+%include other needed packages here   
+\begin{document}
+	\tdplotsetmaincoords{50}{10}
+	\begin{tikzpicture}[tdplot_main_coords,scale=1,line join=round]
+	\pgfmathsetmacro\a{0.4}
+	\pgfmathsetmacro\b{2.1*\a}
+	\pgfmathsetmacro\c{1.4*\a}
+	\pgfmathsetmacro{\phi}{\a*(1+sqrt(5))/2}
+	\pgfmathsetmacro{\sinaa}{\a*(sin 72)}
+	\pgfmathsetmacro{\cosa}{\a*(cos 72)}
+	\pgfmathsetmacro{\sinbb}{\a*(sin 144)}
+	\pgfmathsetmacro{\cosb}{\a*(cos 144)}
+	\path 
+	coordinate(A) at (\b,\c,0)
+	coordinate(B) at (\b,-\c,0)
+	coordinate(C) at (-\b,\c,0)
+	coordinate(D) at (-\b,-\c,0)
+	coordinate(E) at (\a,0,0)
+	coordinate(F) at (\cosa,\sinaa,0)
+	coordinate(G) at (\cosa,-\sinaa,0)
+	coordinate(H) at (\cosb,\sinbb,0)
+	coordinate(I) at (\cosb,-\sinbb,0)
+	;
+	\draw[dashed, thick]    
+	
+	;
+	
+	\draw[ultra thick]
+	(A) -- (B) -- (D) -- (C) --cycle
+	(E) -- (F) -- (H) -- (I) -- (G) --cycle
+	; 
+	%\foreach \point/\position in {A/right,B/below,C/above,D/left,E/{above right},F/below,G/above,H/left,I/left}
+	%{
+	%	\fill (\point) circle (1.5pt);
+	%	\node[\position=3pt] at (\point) {$\point$};
+	%}
+	\begin{pgfonlayer}{background}
+	\filldraw [line width=3mm,join=round,black!10,opacity=0]
+	(C.north -| A.east) rectangle (B.south -| D.west);
+	\end{pgfonlayer}
+
+	\end{tikzpicture}
+	
+\end{document}
