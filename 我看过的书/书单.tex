@@ -7,6 +7,7 @@
 \usepackage{extarrows}
 \usepackage{xcolor}
 \usepackage{geometry} %调整页面的页边距
+\usepackage{hyperref}
 \geometry{left=2.5cm,right=2.5cm,top=3cm,bottom=3cm}
 \title{我看过的书单}
 \usepackage{tikz}
@@ -92,7 +93,19 @@
 	\item \cite{fricke1897vorlesungen}:毕设相关,据说写的不好
 	\item Mline教授的数论全家桶:\cite{milne2006elliptic,milne1986jacobian,milne2005introduction}
 \end{itemize}
-
+\section{spectral sequence}
+关于自己读过的谱序列的书的推荐，本来想放每周例子的，想想没啥内容就不放了。
+\begin{itemize}
+	\item \cite[Chap 3]{bott2013differential}这本书用谱序列计算了一些球面的非平凡同伦群。
+	\item \cite[1.7,23.3]{vakil2017rising}介绍了谱序列的大定理和应用(就算把它作为黑箱也已经有很多很有意思的结论了)，特别是导出函子诱导的双复形的谱序列。不过这里要推荐\href{https://www.3blue1brown.com/content/blog/exact-sequence-picturebook/PuzzlingThroughExactSequences.pdf}{Puzzling through exact sequences: A bedtime story with pictures},建议中文推广名：宝宝的谱序列。
+	\item \href{https://www.cnblogs.com/XiongRuiMath/p/14992978.html}{Spectral Sequence, My Homological Saw}:似乎是相对完整的谱序列讲义？只是图片似乎没有Vakil那么有吸引力。
+\end{itemize}
+作为补充，我得收集一下Snake lemma的各类证明：
+\begin{itemize}
+	\item diagram chasing element by element:基本方法
+	\item by universal properties of kernal and cokernal:我从没真正搞定过，不过似乎可以按照\href{https://www.3blue1brown.com/content/blog/exact-sequence-picturebook/PuzzlingThroughExactSequences.pdf}{Vakil的睡前小故事}中的图片来按图索骥？
+	\item by spectral sequence:用这种方式可以有效地看出所有的条件用在了什么地方，以及可以做什么方式的推广。参见\cite[1.7.5]{vakil2017rising},``大炮打蚊子"的方式也是一种享受。
+\end{itemize}
 \renewcommand\refname{{\textbf{参考文献}}}
 \bibliography{reference}	
 \bibliographystyle{ieeetr}
