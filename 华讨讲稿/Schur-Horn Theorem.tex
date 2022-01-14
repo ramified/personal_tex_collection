@@ -117,7 +117,7 @@ Question:What do the diagonal elements
 $$(a_{11},a_{22},\ldots,a_{nn})$$  
 look like?
 
-\begin{fact}(Obvious)
+\begin{fact}[Obvious]\
 	\begin{itemize}
 		\item $A^H=A \Rightarrow a_{11},a_{22},\ldots,a_{nn} \in \mathbb{R}$
 		\item $A$ is \textbf{unitary similar} to $\diag(\lambda_1,\ldots,\lambda_n)$ \\
@@ -129,7 +129,7 @@ look like?
 		NOTICE:After that we will assume $\lambda_1 \geqslant \lambda_2\geqslant\ldots\geqslant\lambda_n$.
 	\end{itemize}
 \end{fact}
-\begin{fact}(Not Obvious)
+\begin{fact}[Not Obvious]\
 	\begin{itemize}
 		\item $\forall\; i \in \{1,\ldots, n\}, \lambda_n \leqslant a_{ii} \leqslant \lambda_1$
 		\item $\forall\; k \in \{1,\ldots, n\}, \sum_{i=1}^k a_{ii} \leqslant \sum_{i=1}^k \lambda_i$ 
@@ -151,14 +151,14 @@ Denote
 	\end{aligned}
 \end{equation*}
 
-\begin{theorem}(Schur-Horn)
-	$\pi (\mathcal{H}_\lambda)$ is a \textbf{convex polyhedron} in $\mathbb{R}^n$ whose vertices are
+\begin{theorem}[Schur-Horn]
+	The image $\pi (\mathcal{H}_\lambda)$ is a \textbf{convex polyhedron} in $\mathbb{R}^n$ whose vertices are
 	$$(\lambda_{\tau(1)},\ldots,\lambda_{\tau(n)})^T \in \mathbb{R}^n$$
 	where $\tau \in S_n$.\footnote{Alfred Horn (Amerian, UCLA) proved it in 1954.}
 \end{theorem}
 With these facts in mind, we will first discuss some examples.
-\begin{eg}(trivial)
-	when $\bm{\lambda} =(\lambda_0,\lambda_0,\ldots,\lambda_0)^T$, we have
+\begin{eg}[Trivial]
+	When $\bm{\lambda} =(\lambda_0,\lambda_0,\ldots,\lambda_0)^T$, we have
 \begin{align*}
 	\Lambda \,\,&= \lambda_0 I \\
 	\mathcal{H}_\lambda &= \{A \in \mathbb{C}^{n \times n} \mid 
@@ -168,9 +168,7 @@ With these facts in mind, we will first discuss some examples.
 \end{eg}
  We leave 2-dimension example at last because it’s computable.
 
-\begin{eg}(3-dimension condition)
-
-	when $\bm{\lambda} =(\lambda_1,\lambda_2,\lambda_3)^T$, it's almost impossible to calculate, so we only draw out the final result:
+\begin{eg}[3-dimension condition] When $\bm{\lambda} =(\lambda_1,\lambda_2,\lambda_3)^T$, it's almost impossible to calculate, so we only draw out the final result:
 	  	\begin{figure}[H]
 	 	\begin{minipage}[t]{.49\textwidth}
 	 		\centering
@@ -184,8 +182,8 @@ With these facts in mind, we will first discuss some examples.
 	 	\end{minipage}
 	 \end{figure}	
 \end{eg}
-\begin{eg}(2-dimension condition)
-	we have
+\begin{eg}[2-dimension condition]
+	We have
 	$$A= \begin{pmatrix}
 	a_{11} & a_{12} \\
 	a_{21} & a_{22}
@@ -638,7 +636,7 @@ a vector field (which I have mentioned, induced by group action) to an exact 1-f
 		$$\exists\, f \in C^{\infty}(\mathcal{H}_\lambda) \text{ such that } w_\lambda^\#(X_i)=df$$
 		This function $f$ will bw denoted "\textbf{the moment map}".
 		
-		We will verify that when $\bm{\lambda}=(1,0)^T$, this symplectic structure defined coincide with $w_{can}$ we've encountered. As follows:
+		We will verify that when $\bm{\lambda}=(1,0)^T$, this symplectic structure defined coincide with $w_{can}$ we've encountered. This is shown as follows:
 
 \begin{list}{}%
 	\item 
@@ -837,7 +835,7 @@ such that for any $ i \in \{1,\ldots,n\},  w_{can}^\#(X_i)=d\mu_i$.
 \section{Proof of the Schur-Horn Theorem} 
 
 After we’ve introduced all conceptions, we state the last theorem which is  ingenious formally but its proof need deep symplectic  geometry knowledge.
-\begin{theorem}(Atiyah-Guillemin-Sternberg Convexity theorem)
+\begin{theorem}[Atiyah-Guillemin-Sternberg convexity theorem]
 	Suppose $(\mathcal{H}_\lambda,w_\lambda, \mathbb{T}^r, \mu)$ be a Hamiltonian $\mathbb{T}^r$-manifold.If $M$ is compact and connected, then
 	\begin{center}
 			\fbox{$\mathcal{H}_\lambda$ is a convex polyhedron in $\mathbb{R}^n$ whose vertices are the images of the $\mathbb{T}^r$-fixed points.}
@@ -926,10 +924,10 @@ where $\tau \in S_n$.
 
 
 \section{Miscellaneous} 
-Using deeper results in symplectic geometry, one is able to prove more results in linear algebra. Take one for example:(see V. Guillemin, R. Sjamaar \cite{VR})
+Using deeper results in symplectic geometry, one is able to prove more results in linear algebra. Take one for example:
 
 Denote the principal $k \times k$ minor of a matrix $A \in \mathcal{H}(n+1)$, denote the eigenvalues of $A_k$ by $\mu_{1k},\mu_{2k},\ldots,\mu_{kk}$, and assume that they are arranged in decreasing order: $\mu_{1k}\geqslant \mu_{2k}\geqslant \cdots\geqslant\mu_{kk}$. 
-\begin{theorem}(Gelfand-Cetlin)
+\begin{theorem}[{Gelfand-Cetlin,\cite{VR}}]
 The $\mu_{ik}$'s satisfy the interlacing conditions. Moreover, for every sequence of $\mu_{ik}$'s satisfying these interlacing conditions
 \[
 \begin{array}{p{3mm}p{3mm}p{3mm}p{3mm}p{3mm}p{3mm}p{3mm}p{3mm}p{3mm}p{45mm}}
@@ -980,8 +978,7 @@ Courses/15S-Symp/SympGeom.html
 Zuoqin Wang: Geometry of Moment Maps. 2016.
 \bibitem{VR}
 V. Guillemin, R. Sjamaar: Convexity properties of Hamiltonian group actions. 2005.
-url:http://
-www.math.ornell.edu/$\sim$sjamaar
+url:http://pi.math.cornell.edu/$\sim$sjamaar/papers/polytope.ps
 \bibitem{GS}
 V. Guillemin and S. Sternberg: Convexity Properties of the Moment Mapping.
 Inventiones Mathematicae 67, pp. 491-513 (1982)

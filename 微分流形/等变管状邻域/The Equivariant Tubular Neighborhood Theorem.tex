@@ -105,8 +105,8 @@ The equivariant tubular neighborhood theorem is a interesting generalization of 
 \section{the Statement of the Theorem}
 	
 In Prof.Wang's lecture notes \cite{ZW1} (Lecture 10, Theorem 2.2) we have seen the following theorem:
-\begin{theorem}\label{thm:main}
-	(Tubular Neighborhood Theorem). Let $N \subseteq M$ be a smooth embedding submanifold.
+\begin{theorem}[Tubular neighborhood theorem]\label{thm:main}
+	Let $N \subseteq M$ be a smooth embedding submanifold.
 	Then there exists a \textbf{diffeomorphism} from an open neighborhood of $N$ in the normal bundle $\mu_N$ of $N$ onto an open neighborhood of $N$ in $M$.
 \end{theorem}
   Now we want to add group action $\tau$ of $G$ on $M$ which maps points in $N$ to points in $N$. We want to find out
@@ -222,7 +222,7 @@ We will need a Riemannian metric on $M$ which is ``compatible with the $G$-actio
 Notice that the $G$-action on $M$ induces the $G$-action on $TM$:
 $$\tau_g:M \longrightarrow M \quad\rightsquigarrow\quad d(\tau_g)_m:T_mM \longrightarrow T_mM$$
 and the projection map $\pi:T_mM \rightarrow M$ is a $G$-equivariant map. From now on, if $v \in T_mM$, we will denote $g\cdot v:=d(\tau_g)_m(v)$ to simplify symbolic expressions.
-\begin{defn}(Riemannian metric)
+\begin{defn}[Riemannian metric]
 	A \textbf{Riemannian metric} on $M$ is a symmetric 2-tensor $g=\left<-,-\right>$ such that for any $m \in M$, $g_m=\left<-,-\right>_m$ is positive definite.
 	
 	$\left<-,-\right>$ is said to be \textbf{invariant} (with respect to the $G$-action) if
@@ -403,12 +403,12 @@ By staring at the proof when $G$ is finite, one can see the finite condition is 
 	$\left<-,-\right>$.
 	\item Redefine the ``average function" $k(x)$ from $h(x)$.
 \end{itemize}
-To solve these problems, one needs to calculate the ``average" of the function, or ``integrate a function on $G$ ". So we need a good volume form on $G$ which is compatible with the group structures. (Notice that the Lie group is always compatible)
-\begin{defn}(The left invariant volume form)
+To solve these problems, one needs to calculate the ``average" of the function, or ``integrate a function on $G$". So we need a good volume form on $G$ which is compatible with the group structures. (Notice that the Lie group is always compatible)
+\begin{defn}[Left invariant volume form]
 	A volume form $\omega$ on a Lie group $G$ is called \textbf{left invariant} if $L_g^*\omega=\omega$ for any $g \in G$.
 	Sometimes we denoted the left invariant volume form by $\,d\mu_G$.
 \end{defn}
-\begin{theorem}(The Existence of the left invariant volume form)
+\begin{theorem}[Existence of the left invariant volume form]
 	Suppose $G$ is a Lie group. Then there exists a left invariant volume form on $G$.
 \end{theorem}
 \begin{proof}
@@ -446,7 +446,7 @@ thus we have proved the case when $G$ is compact.
 
 \section{From Compact to Proper} 
 Now we want to remove the ``compactness" assumption. We have the following generalized theorem:
-\begin{theorem}(The Generalized Equivariant Tubular Neighborhood Theorem)
+\begin{theorem}[The generalized equivariant tubular neighborhood theorem]
 	\label{thm:equi2}
 	Suppose a Lie group $G$
 	acts on a smooth manifold $M$ \textbf{properly}. Then for any $G$-invariant smooth submanifold $N$

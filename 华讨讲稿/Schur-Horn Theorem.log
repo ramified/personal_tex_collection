@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  11 JUN 2019 22:30
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  14 JAN 2022 14:21
 entering extended mode
 **"./Schur-Horn Theorem.tex"
 ("Schur-Horn Theorem.tex"
@@ -490,13 +490,13 @@ File: figures/figure5.png Graphic file (type bmp)
 File: figures/figure6.png Graphic file (type bmp)
 <figures/figure6.png>
  [4] [5]
-Overfull \hbox (8.79941pt too wide) detected at line 453
+Overfull \hbox (8.79941pt too wide) detected at line 451
 []
  []
 
 Missing character: There is no ， in font [lmroman10-italic]:mapping=tex-text;!
 [6] [7]
-Overfull \hbox (10.20346pt too wide) in paragraph at lines 572--574
+Overfull \hbox (10.20346pt too wide) in paragraph at lines 570--572
 \TU/lmr/bx/n/10.95 Example 4.3. $\OT1/cmr/m/n/10.95 (\U/msb/m/n/10.95 R[]\OML/c
 mm/m/it/10.95 ; w\OT1/cmr/m/n/10.95 )$ \TU/lmr/m/it/10.95 is a symplectic manif
 old with chart coordinate $\OT1/cmr/m/n/10.95 (\OML/cmm/m/it/10.95 x[]; [] ; x[
@@ -508,28 +508,58 @@ Underfull \vbox (badness 1960) has occurred while \output is active []
 
  [9]
 [10] [11]
-Overfull \hbox (2.60176pt too wide) in paragraph at lines 936--936
+Overfull \hbox (2.60176pt too wide) in paragraph at lines 934--934
 []$\OML/cmm/m/it/10.95 ^^U[]$| 
  []
 
 
-Overfull \hbox (2.60176pt too wide) in paragraph at lines 936--936
+Overfull \hbox (2.60176pt too wide) in paragraph at lines 934--934
 []$\OML/cmm/m/it/10.95 ^^U[]$| 
  []
 
 
-Overfull \hbox (2.60176pt too wide) in paragraph at lines 936--936
+Overfull \hbox (2.60176pt too wide) in paragraph at lines 934--934
 []$\OML/cmm/m/it/10.95 ^^U[]$| 
  []
 
 
-Overfull \hbox (3.47386pt too wide) in paragraph at lines 937--937
+Overfull \hbox (3.47386pt too wide) in paragraph at lines 935--935
 []$[][][]$| 
  []
 
 
-Overfull \hbox (3.47386pt too wide) in paragraph at lines 937--937
+Overfull \hbox (3.47386pt too wide) in paragraph at lines 935--935
 []$[][][]$| 
+ []
+
+
+Overfull \hbox (3.47386pt too wide) in paragraph at lines 935--935
+[]$[][][]$| 
+ []
+
+
+Overfull \hbox (3.47386pt too wide) in paragraph at lines 935--935
+[]$[][][]$| 
+ []
+
+
+Overfull \hbox (105.67326pt too wide) in paragraph at lines 935--935
+[]$[] [] [] [] [] [] [] [][][]$| 
+ []
+
+
+Overfull \hbox (7.96964pt too wide) in paragraph at lines 936--936
+[]$\OML/cmm/m/it/10.95 ^^V[]$| 
+ []
+
+
+Overfull \hbox (7.96964pt too wide) in paragraph at lines 936--936
+[]$\OML/cmm/m/it/10.95 ^^V[]$| 
+ []
+
+
+Overfull \hbox (111.07645pt too wide) in paragraph at lines 936--936
+[]$[] [] [] [] [] [] [] \OML/cmm/m/it/10.95 ^^V[]$| 
  []
 
 
@@ -548,58 +578,34 @@ Overfull \hbox (105.67326pt too wide) in paragraph at lines 937--937
  []
 
 
-Overfull \hbox (7.96964pt too wide) in paragraph at lines 938--938
+Overfull \hbox (25.44211pt too wide) in paragraph at lines 938--938
 []$\OML/cmm/m/it/10.95 ^^V[]$| 
  []
 
 
-Overfull \hbox (7.96964pt too wide) in paragraph at lines 938--938
-[]$\OML/cmm/m/it/10.95 ^^V[]$| 
- []
-
-
-Overfull \hbox (111.07645pt too wide) in paragraph at lines 938--938
+Overfull \hbox (146.0214pt too wide) in paragraph at lines 938--938
 []$[] [] [] [] [] [] [] \OML/cmm/m/it/10.95 ^^V[]$| 
  []
 
 
-Overfull \hbox (3.47386pt too wide) in paragraph at lines 939--939
-[]$[][][]$| 
- []
-
-
-Overfull \hbox (3.47386pt too wide) in paragraph at lines 939--939
-[]$[][][]$| 
- []
-
-
-Overfull \hbox (105.67326pt too wide) in paragraph at lines 939--939
-[]$[] [] [] [] [] [] [] [][][]$| 
- []
-
-
-Overfull \hbox (25.44211pt too wide) in paragraph at lines 940--940
-[]$\OML/cmm/m/it/10.95 ^^V[]$| 
- []
-
-
-Overfull \hbox (146.0214pt too wide) in paragraph at lines 940--940
-[]$[] [] [] [] [] [] [] \OML/cmm/m/it/10.95 ^^V[]$| 
- []
-
-
-Overfull \hbox (93.66359pt too wide) in paragraph at lines 941--942
+Overfull \hbox (93.66359pt too wide) in paragraph at lines 939--940
 []$[] [] [] [] [] [] [] $$[]$| 
  []
 
 
-Overfull \hbox (79.06367pt too wide) in paragraph at lines 942--943
+Overfull \hbox (79.06367pt too wide) in paragraph at lines 940--941
 []$[] [] [] [] [] $$[]$| 
  []
 
 
-Overfull \hbox (82.22658pt too wide) in paragraph at lines 943--944
+Overfull \hbox (82.22658pt too wide) in paragraph at lines 941--942
 []$[]\OML/cmm/m/it/10.95 ^^V[] [] [] ^^V[]$| 
+ []
+
+
+Underfull \hbox (badness 5331) in paragraph at lines 980--982
+[]\TU/lmr/m/n/9 V. Guillemin, R. Sjamaar: Convexity properties of Hamiltonian g
+roup actions. 2005.
  []
 
 [12] ("Schur-Horn Theorem.aux") ) 
