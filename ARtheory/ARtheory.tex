@@ -1,0 +1,178 @@
+\documentclass[pdf]{beamer}
+\mode<presentation>{
+	\usetheme{Ilmenau}
+	
+}
+\usecolortheme{dolphin}
+%\usepackage[UTF8,indent]{ctexcap}%中文
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{indentfirst}
+\usepackage{enumerate}
+\usepackage{extpfeil}
+\usepackage{tikz-cd}
+\usepackage{longtable}
+\usepackage{makecell}
+\usepackage{array}
+\usepackage{xcolor}
+\usetikzlibrary {calc,positioning,shapes.misc,graphs,decorations.pathreplacing}
+
+
+\numberwithin{equation}{section}
+
+\theoremstyle{plain}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{defn}[theorem]{Definition}
+\newtheorem{eg}{  }
+\newtheorem{pf}[theorem]{Proof}
+\newtheorem{cor}[theorem]{Corollary}
+
+
+\newtheorem{tabloid}[theorem]{Tabloid: equivalence class of standard filling}
+
+
+\theoremstyle{plain}
+\newtheorem{exercise}{Exercise}[section]
+
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}{Remarks}
+\newtheorem{ex}[theorem]{Exercise}
+\newtheorem{question}[theorem]{Questions}
+\newtheorem{notation}[theorem]{Notations}
+\newtheorem{short}{ }
+\newtheorem{shortapp}[theorem]{Application}
+
+
+\newcommand*{\thick}[1]{\text{\boldmath$#1$}}
+\newcommand*{\cir}[1]{\;$\ding{19#1}$\;}%临时使用
+\newcommand*{\norm}[1]{\lVert#1\rVert}
+\newcommand*{\ignore}[1]{\textcolor{lightgray}{#1}}
+\newcommand*{\stress}[1]{\textcolor{red}{#1}}
+\newcommand*{\bgpicb}[1]{\usebackgroundtemplate{%
+	\begin{tikzpicture}[path image/.style={
+		path picture={
+			\node at (path picture bounding box.center) {
+				\includegraphics[height=10cm]{#1}
+			};
+	}}]
+	
+	\draw [path image]
+	(current page.north west) rectangle
+	(current page.south east);
+	
+	\end{tikzpicture}
+}}
+\newcommand*{\bgpica}[1]{\usebackgroundtemplate{%
+		\begin{tikzpicture}[path image/.style={
+			path picture={
+				\node at (path picture bounding box.center) {
+					\includegraphics[height=7.5cm]{#1}
+				};
+		}}]
+		
+		\draw [path image]
+		(current page.north west) rectangle
+		(current page.south east);
+		
+		\end{tikzpicture}
+}}
+
+
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Proj}{\operatorname{Proj}}
+\DeclareMathOperator{\Aut}{\operatorname{Aut}}
+\DeclareMathOperator{\Img}{\operatorname{Im}}
+\DeclareMathOperator{\Sym}{\operatorname{Sym}}
+\DeclareMathOperator{\sgn}{\operatorname{sgn}}
+\DeclareMathOperator{\Mod}{\operatorname{mod}}
+\DeclareMathOperator{\Id}{\operatorname{Id}}
+\DeclareMathOperator{\Hom}{\operatorname{Hom}}
+\DeclareMathOperator{\Ext}{\operatorname{Ext}}
+\DeclareMathOperator{\Tor}{\operatorname{Tor}}
+\DeclareMathOperator{\rep}{\operatorname{rep}}
+\DeclareMathOperator{\Irr}{\operatorname{Irr}}
+\DeclareMathOperator{\ind}{\operatorname{ind}}
+\DeclareMathOperator{\ques}{\;?\;}
+\DeclareMathOperator{\Fl}{\mathcal{F\ell}}
+%\setlength{\parindent}{1em}
+
+
+
+
+\setbeamertemplate{caption}[numbered]
+% 设置图形文件的搜索路径
+\graphicspath{{figures/}}
+\title{Auslander--Reiten theory}
+\author{Xiaoxiang Zhou}
+\institute[Bonn uni]{Universität Bonn}
+\date{\today} % March 24,2022
+\tikzset{
+	invisible/.style={opacity=0,text opacity=0},
+	visible on/.style={alt=#1{}{invisible}},
+	alt/.code args={<#1>#2#3}{%
+		\alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}} % \pgfkeysalso doesn't change the path
+	},
+}
+%\setbeamercolor{section number projected}{fg=white!90!blue, bg=red!90!black}
+\definecolor{goodblue}{RGB}{71,71,186}
+\definecolor{janblue}{RGB}{230, 230, 254}
+\definecolor{jangreen}{RGB}{231, 255, 231}
+\definecolor{olivegreen}{RGB}{60, 128, 49}
+
+
+\setbeamercolor{block title}{fg=white, bg=goodblue}
+\setbeamercolor{block body}{fg=black,bg=janblue}
+
+\BeforeBeginEnvironment{defn}{
+    \setbeamercolor{block title}{bg=olivegreen}
+    \setbeamercolor{block body}{fg=black, bg=jangreen}
+}
+\AfterEndEnvironment{defn}{
+ \setbeamercolor{block title}{fg=white, bg=goodblue}
+ \setbeamercolor{block body}{fg=black,bg=janblue}
+}
+\BeforeBeginEnvironment{notation}{
+    \setbeamercolor{block title}{bg=olivegreen}
+    \setbeamercolor{block body}{fg=black, bg=jangreen}
+}
+\AfterEndEnvironment{notation}{
+ \setbeamercolor{block title}{fg=white, bg=goodblue}
+ \setbeamercolor{block body}{fg=black,bg=janblue}
+}
+\definecolor{ashgrey}{rgb}{0.7, 0.75, 0.71}
+\usefonttheme[onlymath]{serif}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\setbeamertemplate{headline}{
+	\begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex]{section in head/foot}%
+		\hspace{3ex}{\insertsectionhead}
+	\end{beamercolorbox}
+	%	\begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{subsection in head/foot}
+	%		\usebeamerfont{subsection in head/foot}\insertsubsectionhead
+	%\end{beamercolorbox}
+}%删除点
+\begin{document}
+\begin{frame}
+	\titlepage
+	Jan Schröer's lecture notes should be a perfect reference. 
+\end{frame}
+\end{document}
+%Process: red and gray
+
+
+%\begin{equation*}
+%\begin{aligned}
+%内容...
+%\end{aligned}
+%\end{equation*}

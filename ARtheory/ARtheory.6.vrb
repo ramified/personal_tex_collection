@@ -1,0 +1,14 @@
+\frametitle{Quiver representation \textcolor {ashgrey}{(finite dimension)}}
+
+\begin{defn}
+\centering
+    \includegraphics[scale=0.45]{figure/fig6.jpg}
+\end{defn}
+%Now fix a field $K$.
+\begin{eg}
+\centering
+    \includegraphics[scale=0.45]{figure/fig7.jpg}
+\end{eg}
+\begin{theorem}[Central result in today's talk]
+$\rep(Q) \cong \Mod (KQ)$ \textcolor{ashgrey}{(left $KQ$-module)} \hyperlink{app1}{\beamergotobutton{typical example}}
+\end{theorem}

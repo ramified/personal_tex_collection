@@ -1,0 +1,16 @@
+\frametitle{Goal}
+\begin{itemize}
+^^I\item What is quiver representation?
+^^I\item Why do we need quiver representation?
+^^I\item How do we compute quiver representation?
+^^I
+\end{itemize}
+\vspace{5mm}
+\hspace{0.3cm}Why:
+
+\begin{itemize}
+\setlength{\itemindent}{0.5cm}
+^^I\item Reformulate some problems in quiver language.
+^^I\item Understand $\Mod(A)$ much better.
+^^I\item Offer us concrete examples in homological algebra.
+\end{itemize}
