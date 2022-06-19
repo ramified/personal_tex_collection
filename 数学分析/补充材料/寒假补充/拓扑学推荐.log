@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  2 FEB 2019 23:02
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  19 JUN 2022 20:42
 entering extended mode
 **./拓扑学推荐.tex
 (拓扑学推荐.tex
@@ -969,25 +969,25 @@ File: figures/BasicTopology.jpg Graphic file (type bmp)
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [1]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 184.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 185.
  [2]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 184.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 185.
  (拓扑学推荐.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 184.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 184.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 185.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 185.
 Package rerunfilecheck Info: File `拓扑学推荐.out' has not changed.
 (rerunfilecheck)             Checksum: 85A12B5B684492339788DA6CACB70126.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 184.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 185.
  ) 
 Here is how much of TeX's memory you used:
- 24548 strings out of 427748
- 481005 string characters out of 3150981
- 568456 words of memory out of 3000000
- 28210 multiletter control sequences out of 15000+200000
+ 24456 strings out of 427748
+ 475185 string characters out of 3150981
+ 569456 words of memory out of 3000000
+ 28118 multiletter control sequences out of 15000+200000
  540673 words of font info for 84 fonts, out of 3000000 for 9000
  1489 hyphenation exceptions out of 8191
  52i,8n,68p,595b,536s stack positions out of 5000i,500n,10000p,200000b,50000s

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  29 MAR 2022 23:34
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  4 MAY 2022 00:09
 entering extended mode
 **./ARtheory.tex
 (ARtheory.tex
@@ -1184,6 +1184,8 @@ Dictionary: translator-numbers-dictionary, Language: English
 Dictionary: translator-theorem-dictionary, Language: English 
 ) (ARtheory.nav) [1
 
+] [2
+
 ]
 \tf@nav=\write6
 \openout6 = `ARtheory.nav'.
@@ -1194,21 +1196,22 @@ Dictionary: translator-theorem-dictionary, Language: English
 \tf@snm=\write8
 \openout8 = `ARtheory.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 170.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 170.
- (ARtheory.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 170.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 170.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 173.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 173.
+
+(ARtheory.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 173.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 173.
 Package rerunfilecheck Info: File `ARtheory.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E.
  ) 
 Here is how much of TeX's memory you used:
- 26521 strings out of 427748
- 517418 string characters out of 3150981
- 600297 words of memory out of 3000000
- 30080 multiletter control sequences out of 15000+200000
+ 26463 strings out of 427748
+ 516943 string characters out of 3150981
+ 598644 words of memory out of 3000000
+ 30022 multiletter control sequences out of 15000+200000
  17883 words of font info for 22 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  58i,15n,84p,797b,614s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on ARtheory.pdf (1 page).
+Output written on ARtheory.pdf (2 pages).

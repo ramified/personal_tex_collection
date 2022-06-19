@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  14 JAN 2022 14:02
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  22 MAY 2022 12:07
 entering extended mode
 **./TopoinR^n.tex
 (TopoinR^n.tex
@@ -1068,25 +1068,25 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 (fontspec)             <->"FangSong/OT:script=hani;language=DFLT;"
 (fontspec)             - 'small caps'  (m/sc) with NFSS spec.: 
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 403.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 405.
  [6]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 403.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 405.
  (TopoinR^n.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 403.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 403.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 405.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 405.
 Package rerunfilecheck Info: File `TopoinR^n.out' has not changed.
 (rerunfilecheck)             Checksum: 4916EFCCB681E19D7DA719974434F8FC.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 403.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 405.
  ) 
 Here is how much of TeX's memory you used:
- 24877 strings out of 427748
- 480822 string characters out of 3150981
+ 24887 strings out of 427748
+ 481439 string characters out of 3150981
  569160 words of memory out of 3000000
- 28476 multiletter control sequences out of 15000+200000
+ 28486 multiletter control sequences out of 15000+200000
  551921 words of font info for 137 fonts, out of 3000000 for 9000
  1489 hyphenation exceptions out of 8191
  52i,19n,68p,372b,502s stack positions out of 5000i,500n,10000p,200000b,50000s
