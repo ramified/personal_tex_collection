@@ -84,6 +84,7 @@
 \newcommand{\Nil}{\operatorname{Nil}}
 \newcommand{\Sol}{\operatorname{Sol}}
 \newcommand{\Alb}{\operatorname{Alb}}
+\newcommand{\Coh}{\operatorname{Coh}}
 \newcommand{\uniofsl}{\stackon[-4pt]{$\SL_2(\RR)$}{\vstretch{0.75}{\hstretch{1.2}{\widetilde{\phantom{\;\;\;\;\;\;\;\;}}}}}}	%万有覆叠
 \newcommand*\extarr{\mathrel{\scalebox{5.0}[1.0]{\hbox{$\rightleftarrows $}}}} %图表箭头
 
@@ -339,7 +340,7 @@ $$\mathrm{Filtration: }\qquad
 $$
 
 
-该图最清楚的科普/解释是在\cite[18.4.10]{vakil2017rising}(或者说这个图就是这段话的图示). 在搞定Picard群后\footnote{比如,找出$N^1(X)$的生成元.}, 我们有两个方向的延拓: 一方面, 我们可以计算Grothendieck群$K_0(X)$和Chow环$CH^*(X)$; 另一方面, 在$N^1(X)\cong \ZZ^{\rho(X)}$上有自然的双线性型, 是由$\Pic X$上的相交形式
+该图最清楚的科普/解释是在\cite[18.4.10(with 24.7.5)]{vakil2017rising}(或者说这个图就是这段话的图示). 在搞定Picard群后\footnote{比如,找出$N^1(X)$的生成元.}, 我们有两个方向的延拓: 一方面, 我们可以计算Grothendieck群$K_0(X)$和Chow环$CH^*(X)$; 另一方面, 在$N^1(X)\cong \ZZ^{\rho(X)}$上有自然的双线性型, 是由$\Pic X$上的相交形式
 $$\Pic X \times \Pic X \longrightarrow \ZZ \qquad (\mathcal{L}_1,\mathcal{L}_2) \longmapsto \chi(\mathcal{O}_X)-\chi(\mathcal{L}_1^{\bigvee})-\chi(\mathcal{L}_2^{\bigvee})+\chi(\mathcal{L}_1^{\bigvee} \otimes \mathcal{L}_1^{\bigvee})$$
 诱导的, 称作相交矩阵. 利用这个相交矩阵, 我们常常可以算出哪些线丛是ample的,哪些线丛是nef的(nef cone),哪些线丛是effective的(effective cone). 当然我们也希望能算出哪些线丛是very ample的, 不过这个难度就高出不少. 我们也关注特殊的线丛, 尤其是典范线丛$\omega_X$\footnote{有些书中也记作$K_X$. 该向量丛在Serre对偶中出现, 是上同调机器里很重要的一个概念}.
 
@@ -359,6 +360,8 @@ $$\Pic X \times \Pic X \longrightarrow \ZZ \qquad (\mathcal{L}_1,\mathcal{L}_2) 
 $$\pi_1^{\text{ét}}(X):=\varprojlim_{\substack{X_i\rightarrow X \\ \text{Gal cover} }} \Aut_X(X_i)$$
 
 提到这里, 我们也会关注$X$的自同构群$\Aut X$. 谈论自同构时请务必小心: 我们的态射是双有理映射(birational map)还是作为概形的同态(morphism)? 当$X$是某条曲线$C$上的纤维丛时, 态射还可能只是丛同态. 提到群作用就有商空间的问题, 不过商空间的理论难度过高, 这里略去不提.
+
+同调代数中的导出范畴相比于层上同调给出了更多的信息,能进行更多操作,是更加自然的研究对象.人们关注$X$的有界导出范畴$\mathcal{D}^b(X):= \mathcal{D}^b(\Coh(X))$的结构\cite[Theorem 6.1]{sosnatriangulated};特别地,也关注$\mathcal{D}^b(X)$作为三角范畴的自同构群\cite[Theorem 8.1,8.3,9.9]{sosnatriangulated}.这些结论与表示论、同调镜像对称有着极为深刻的联系.
 
 我们也关注各种示性类, 不过对复向量丛来说, 一个Chern类就可以推出其它的示性类. 简记$X:=X_{\CC}$,固定$X$上的一个rank为$r$的复向量丛$E$(例如切丛$T_X$).\footnote{Chern类、Todd类的定义可参考\cite[Class 18]{vakil2004algsurf},其 他示性类的一般定义请参考wiki. 这里只给出限定在代数曲面上的公式.}\footnote{在下述 五行中, 这些示性类中简记$c_i:=c_i(E)$, 请勿与陈数混淆.} 
 
@@ -611,7 +614,7 @@ Blow down可以简化曲面的复杂程度. 我们想找某个双有理等价类
 
 数学问题的无尽性恰如几何空间的无限性. 一个好的理论, 能在这无限的可能中划出一个恰当的边界, 在方寸之地创造艺术, 又仿佛于天地之间驰骋.把简单的例子算清楚, 用分类定理叠出厚势, 格局虽小却稳扎稳打, 也不失为一种前行方法.
 
-由于水平与篇幅的双重掣肘, 笔者只提及了几何中的分类定理, 无法提及有限单群的分类与ADE classification(半单Lie代数的分类是其推广)这两个经典的分类定理. 另外许多空间上的不变量也可以视作一个小的分类定理, 比如Picard群$Pic(X)$描述了概形$X$上线丛的分类. 线性代数中的相抵、相似、相合理论也可以看成是分类定理. 这么看来, 分类的思想无处不在.
+由于水平与篇幅的双重掣肘, 笔者只提及了几何中的分类定理, 无法提及有限单群的分类与ADE classification(半单Lie代数和线性约化群\footnote{请搜索Bruhat--Tits building.}的分类是其推广)这两个经典的分类定理. 另外许多空间上的不变量也可以视作一个小的分类定理, 比如Picard群$Pic(X)$描述了概形$X$上线丛的分类. 线性代数中的相抵、相似、相合理论也可以看成是分类定理. 这么看来, 分类的思想无处不在.
 \bibliography{9-7-ref}
 
 \end{document}
