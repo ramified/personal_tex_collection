@@ -1,0 +1,185 @@
+\documentclass[border={-2pt 4pt 4pt 4pt}]{standalone}
+\usepackage{tikz,tikz-3dplot} 
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usetikzlibrary{shapes.geometric, arrows, backgrounds,external,angles,quotes}
+%There are some mistakes when the number is big
+
+%include other needed packages here   
+%https://tex.stackexchange.com/questions/555038/tikz-def-arithmetic-division?noredirect=1&lq=1
+%https://tex.stackexchange.com/questions/314095/tikz-and-variables
+%https://tex.stackexchange.com/questions/101843/tikz-foreach-loop-evaluate-variable-using-pgfmath-function
+%Here we solve the problem of computation in tikz.
+
+%https://tex.stackexchange.com/questions/16617/use-tikz-for-example-to-draw-pictures-in-hyperbolic-geometry
+
+
+
+\makeatletter
+
+\def\hyper@x#1,#2\relax{#1}
+\def\hyper@y#1,#2\relax{#2}
+\def\hyper@coords#1{#1}
+
+\newif\ifhyper@vertical
+
+\def\hyper@computer#1#2{%
+	\edef\hyper@toscan{(#1)}
+	\tikz@scan@one@point\hyper@coords\hyper@toscan
+	\edef\hyper@sx{\the\pgf@x}
+	\edef\hyper@sy{\the\pgf@y}
+	\edef\hyper@toscan{(#2)}
+	\tikz@scan@one@point\hyper@coords\hyper@toscan
+	\edef\hyper@ex{\the\pgf@x}
+	\edef\hyper@ey{\the\pgf@y}
+	\pgfmathsetmacro{\hyper@mx}{(\hyper@ex + \hyper@sx)/2}
+	\pgfmathsetmacro{\hyper@my}{(\hyper@ey + \hyper@sy)/2}
+	\pgfmathsetmacro{\hyper@dx}{\hyper@ex - \hyper@sx}
+	\pgfmathparse{\hyper@dx == 0 ? "\noexpand\hyper@verticaltrue" : "\noexpand\hyper@verticalfalse"}
+	\pgfmathresult
+	\ifhyper@vertical
+	\edef\hyper@cmd{-- (\tikztotarget)}
+	\else
+	\pgfmathsetmacro{\hyper@dy}{\hyper@ey - \hyper@sy}
+	\pgfmathsetmacro{\hyper@t}{\hyper@my/\hyper@dx}
+	\pgfmathsetmacro{\hyper@cx}{\hyper@mx + \hyper@t * \hyper@dy}
+	\pgfmathsetmacro{\hyper@radius}{veclen(\hyper@cx - \hyper@sx, \hyper@sy)}
+	\pgfmathsetmacro{\hyper@sangle}{180 - atan2(\hyper@sy,\hyper@cx-\hyper@sx)}
+	\pgfmathsetmacro{\hyper@eangle}{180 - atan2(\hyper@ey,\hyper@cx-\hyper@ex)}
+	\edef\hyper@cmd{arc[radius=\hyper@radius pt, start angle=\hyper@sangle, end angle=\hyper@eangle]}
+	\fi
+}
+
+\def\hyper@disc@computer#1#2{%
+	\edef\hyper@toscan{(#1)}
+	\tikz@scan@one@point\hyper@coords\hyper@toscan
+	\edef\hyper@sx{\the\pgf@x}
+	\edef\hyper@sy{\the\pgf@y}
+	\edef\hyper@toscan{(#2)}
+	\tikz@scan@one@point\hyper@coords\hyper@toscan
+	\edef\hyper@ex{\the\pgf@x}
+	\edef\hyper@ey{\the\pgf@y}
+	\pgfmathsetmacro{\hyper@det}{\hyper@sx * \hyper@ey - \hyper@sy * \hyper@ex}
+	\pgfmathparse{\hyper@det == 0 ? "\noexpand\hyper@verticaltrue" : "\noexpand\hyper@verticalfalse"}
+	\pgfmathresult
+	\ifhyper@vertical
+	\edef\hyper@cmd{-- (\tikztotarget)}
+	\else
+	\pgfmathsetmacro{\hyper@mx}{(\hyper@ex + \hyper@sx)/2}
+	\pgfmathsetmacro{\hyper@my}{(\hyper@ey + \hyper@sy)/2}
+	\pgfmathsetmacro{\hyper@dx}{\hyper@ex - \hyper@sx}
+	\pgfmathsetmacro{\hyper@dy}{\hyper@ey - \hyper@sy}
+	\pgfmathsetmacro{\hyper@dradius}{\pgfkeysvalueof{/tikz/hyperbolic disc radius}}
+	\pgfmathsetmacro{\hyper@t}{((\hyper@dradius)^2 - \hyper@sx * \hyper@ex - \hyper@sy * \hyper@ey)/(2 * (\hyper@sx * \hyper@ey - \hyper@sy * \hyper@ex))}
+	\pgfmathsetmacro{\hyper@radius}{sqrt((\hyper@t)^2 + .25) * veclen(\hyper@dx,\hyper@dy)}
+	\pgfmathsetmacro{\hyper@cx}{\hyper@mx + \hyper@t * \hyper@dy}
+	\pgfmathsetmacro{\hyper@cy}{\hyper@my - \hyper@t * \hyper@dx}
+	\pgfmathsetmacro{\hyper@sangle}{atan2(\hyper@sy-\hyper@cy,\hyper@sx - \hyper@cx)}
+	\pgfmathsetmacro{\hyper@eangle}{atan2(\hyper@ey-\hyper@cy,\hyper@ex - \hyper@cx)}
+	\pgfmathsetmacro{\hyper@eangle}{\hyper@eangle > \hyper@sangle + 180 ? \hyper@eangle - 360 : \hyper@eangle}
+	\pgfmathsetmacro{\hyper@eangle}{\hyper@eangle < \hyper@sangle - 180 ? \hyper@eangle + 360 : \hyper@eangle}
+	\edef\hyper@cmd{arc[radius=\hyper@radius pt, start angle=\hyper@sangle, end angle=\hyper@eangle]}
+	\fi
+}
+
+\def\hyper@plane@tangent#1#2{%
+	\edef\hyper@toscan{(#1)}
+	\tikz@scan@one@point\hyper@coords\hyper@toscan
+	\edef\hyper@sx{\the\pgf@x}
+	\edef\hyper@sy{\the\pgf@y}
+	\edef\hyper@toscan{(#2)}
+	\tikz@scan@one@point\hyper@coords\hyper@toscan
+	\edef\hyper@ex{\the\pgf@x}
+	\edef\hyper@ey{\the\pgf@y}
+	% The difference between the end and start defines the tangent
+	% vector
+	\pgfmathsetmacro{\hyper@ex}{\hyper@ex - \hyper@sx}
+	\pgfmathsetmacro{\hyper@ey}{\hyper@ey - \hyper@sy}
+	% If we're straight up ...
+	\pgfmathparse{\hyper@ex == 0 ? "\noexpand\hyper@verticaltrue" : "\noexpand\hyper@verticalfalse"}
+	\pgfmathresult
+	\ifhyper@vertical
+	% Need to set length here, rescale to cm first
+	% User \hyper@ey here as that remembers the sign
+	\pgfmathsetmacro{\hyper@d}{\hyper@ey/1cm}
+	\pgfmathsetmacro{\hyper@radius}{\hyper@sy * exp(\hyper@d) - \hyper@sy}
+	\edef\hyper@cmd{-- ++(0,\hyper@radius pt)}
+	\else
+	% Set length
+	\pgfmathsetmacro{\hyper@d}{\hyper@ex > 0 ? veclen(\hyper@ex,\hyper@ey) : -veclen(\hyper@ex,\hyper@ey)}
+	% Radius of arc
+	\pgfmathsetmacro{\hyper@radius}{abs(\hyper@sy * \hyper@d / \hyper@ex)}
+	% Starting angle
+	\pgfmathsetmacro{\hyper@sangle}{90 + atan(\hyper@ey/\hyper@ex)}
+	% Ending angle, check if given
+	\pgfkeysgetvalue{/tikz/hyperbolic plane target angle}{\hyper@eangle}
+	\ifx\hyper@eangle\pgfutil@empty
+	% rescale into cm to avoid Big Numbers
+	\pgfmathsetmacro{\hyper@d}{\hyper@d/1cm}
+	\pgfmathsetmacro{\hyper@ey}{\hyper@ey/1cm}
+	\pgfmathsetmacro{\hyper@tanhd}{tanh(\hyper@d)}
+	\pgfmathsetmacro{\hyper@eangle}{acos((\hyper@d * \hyper@tanhd - \hyper@ey)/(\hyper@d - \hyper@ey * \hyper@tanhd))}
+	%
+	\fi
+	\edef\hyper@cmd{arc[radius=\hyper@radius pt, start angle=\hyper@sangle, end angle=\hyper@eangle]}
+	\fi
+}
+
+\tikzset{%
+	hyperbolic disc radius/.initial={1cm},
+	hyperbolic plane/.style={
+		to path={
+			\pgfextra{\hyper@computer\tikztostart\tikztotarget}
+			\hyper@cmd
+		}
+	},
+	hyperbolic plane tangent/.style={
+		to path={
+			\pgfextra{\hyper@plane@tangent\tikztostart\tikztotarget}
+			\hyper@cmd
+		}
+	},
+	hyperbolic disc/.style={
+		to path={
+			\pgfextra{\hyper@disc@computer\tikztostart\tikztotarget}
+			\hyper@cmd
+		}
+	},
+	hyperbolic plane target angle/.initial={},
+}
+
+\makeatother
+\begin{document}
+	\def\a{2}
+	\def\aminusindex{0.275}
+\begin{tikzpicture}
+
+\def\p{3}	
+\pgfmathsetmacro{\aminus}{\a*\aminusindex}
+\pgfmathsetmacro{\bminus}{\aminus*\aminusindex}
+\pgfmathtruncatemacro{\q}{\p-1}
+%\node[](test){$\aminus$};
+\draw (0,0) circle [radius=\a];
+\draw (0,0) circle [radius=\aminus];
+\draw (0,0) circle [radius=\bminus];
+	\foreach \z [evaluate=\z as \angle using 360/\q *\z] in {0,...,\q}
+	{\coordinate (B\z) at ($(\angle:\aminus-\bminus)$);
+	\draw (B\z) circle [radius=\aminus*\aminusindex];
+	
+	}
+
+\foreach \y [evaluate=\y as \angle using 360/\q *\y] in {0,...,\q}
+{\coordinate (A\y) at ($(\angle:\a-\aminus)$);
+\draw (\angle:\a-\aminus) circle [radius=\aminus];
+\draw (A\y) circle [radius=\aminus*\aminusindex];
+	\foreach \z [evaluate=\z as \angle using 360/\q *\z] in {0,...,\q}
+	{\coordinate (B\y\z) at ($(A\y)+(\angle:\aminus-\bminus)$);
+	\draw (B\y\z) circle [radius=\aminus*\aminusindex];
+	
+	}
+
+}
+
+
+\end{tikzpicture}
+\end{document}
