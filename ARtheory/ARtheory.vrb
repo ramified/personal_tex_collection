@@ -1,34 +1,8 @@
-\frametitle{E.g. $A_5 \qquad 1 \stackrel {a}{\longrightarrow } 2 \stackrel {b}{\longrightarrow } 3 \stackrel {c}{\longleftarrow } 4 \stackrel {d}{\longrightarrow } 5 $}
+\frametitle{Questions}
 
-\begin{overlayarea}{\linewidth}{\textheight}
-\begin{short}
-\vspace{-3mm}
-\adjustbox{minipage=[r][0.5\textheight][b]{\paperwidth},scale=0.5,center}{%
-% https://q.uiver.app/?q=WzAsNSxbMCwwLCIxIl0sWzEsMSwiMiJdLFsyLDIsIjMiXSxbMywxLCI0Il0sWzQsMiwiNSJdLFswLDFdLFsxLDJdLFszLDJdLFszLDRdXQ==
-\[\begin{tikzcd}[column sep={2cm,between origins},row sep={8mm,between origins}]
-^^I1 \\
-^^I& 2 && 4 \\
-^^I&& 3 && 5
-^^I\arrow[from=1-1, to=2-2]
-^^I\arrow[from=2-2, to=3-3]
-^^I\arrow[from=2-4, to=3-3]
-^^I\arrow[from=2-4, to=3-5]
-\end{tikzcd}\]
+\begin{itemize}
+^^I\item How many indecomposable representations are there?
+^^I\item Do those dimension vectors follow any patterns?
+^^I\item Where are those irreducible/projective/injective representations?
+\end{itemize}
 
-% https://q.uiver.app/?q=WzAsNSxbMCwyLCJQKDEpIl0sWzEsMSwiUCgyKSJdLFsyLDAsIlAoMykiXSxbMywxLCJQKDQpIl0sWzQsMCwiUCg1KSJdLFsxLDBdLFsyLDFdLFsyLDNdLFs0LDNdXQ==
-\[\begin{tikzcd}[column sep={2cm,between origins},row sep={8mm,between origins}]
-^^I&& {P(3)} && {P(5)} \\
-^^I& {P(2)} && {P(4)} \\
-^^I{P(1)}
-^^I\arrow[from=2-2, to=3-1]
-^^I\arrow[from=1-3, to=2-2]
-^^I\arrow[from=1-3, to=2-4]
-^^I\arrow[from=1-5, to=2-4]
-\end{tikzcd}\]
-}
-\vspace{25mm}
-\end{short}
-\begin{ex}
-$a\colon i \rightarrow j \Longrightarrow f^a\colon P(j) \rightarrow P(i)$ is unique up to (nonzero) scalar.
-\end{ex}
-\end{overlayarea}
