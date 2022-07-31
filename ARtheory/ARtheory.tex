@@ -20,7 +20,7 @@
 \usepackage{xcolor}
 \usetikzlibrary {calc,positioning,shapes.misc,graphs,decorations.pathreplacing}
 
-
+\usepackage{adjustbox}
 \numberwithin{equation}{section}
 
 \theoremstyle{plain}
@@ -89,6 +89,8 @@
 \DeclareMathOperator{\vol}{vol}
 \DeclareMathOperator{\diag}{diag}
 \DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Ker}{\operatorname{ker}}
+\DeclareMathOperator{\coker}{\operatorname{coker}}
 \DeclareMathOperator{\Proj}{\operatorname{Proj}}
 \DeclareMathOperator{\Aut}{\operatorname{Aut}}
 \DeclareMathOperator{\Img}{\operatorname{Im}}
@@ -102,6 +104,7 @@
 \DeclareMathOperator{\rep}{\operatorname{rep}}
 \DeclareMathOperator{\Irr}{\operatorname{Irr}}
 \DeclareMathOperator{\ind}{\operatorname{ind}}
+\DeclareMathOperator{\dvct}{\underline{\operatorname{dim}}}
 \DeclareMathOperator{\ques}{\;?\;}
 \DeclareMathOperator{\Fl}{\mathcal{F\ell}}
 %\setlength{\parindent}{1em}
@@ -169,6 +172,86 @@
 \end{frame}
 \begin{frame}
 In this talk, we dive into the huge forest of Auslander--Reiten theory.
+\vspace{1cm}
+\begin{table}[]
+\begin{tabular}{c|c|c}
+\hline
+                 & Last time     & This time            \\ \hline
+Central concepts & quiver rep    & ind rep \& AR quiver \\ \hline
+Proofs           & relative easy & most skipped         \\ \hline
+Goal             & comprehend    & enjoy                \\ \hline
+\end{tabular}
+\end{table}
+\end{frame}
+
+\begin{frame}{Review}
+\begin{ex}
+\centering
+    \includegraphics[scale=0.45]{figure/fig1.jpg}
+    \vspace{2.5cm}
+\end{ex}
+\begin{defn}
+$$\dvct M:= \left( \dim_K M_i \right)_{i \in v(Q)} \qquad \text{for } M \in \Mod(KQ/I)$$
+\end{defn}
+\end{frame}
+%say something about "Later, we will represent representations by its dimension vector"
+\begin{frame}[fragile]{Process}
+
+\begin{itemize}
+	\item Find more representations.
+	\begin{itemize}
+	\item knitting process
+	\item introduction to root system
+	\item relations among indecomposable representations\\
+	(Compute $\Hom$, $\Ker$, $\coker$ in a fancy way) 
+	\item starting function 
+	\end{itemize}
+	\vspace{0.5cm}
+	\item From Dynkin quiver to affine quiver.
+	\begin{itemize}
+	\item new root system
+	\item tube
+	\item other cases
+	\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}[fragile]{E.g. $A_5 \qquad 1 \stackrel{a}{\longrightarrow} 2 \stackrel{b}{\longrightarrow} 3 \stackrel{c}{\longleftarrow} 4
+\stackrel{d}{\longrightarrow} 5 $}
+
+\begin{overlayarea}{\linewidth}{\textheight}
+\begin{short}
+\vspace{-3mm}
+\adjustbox{minipage=[r][0.5\textheight][b]{\paperwidth},scale=0.5,center}{%
+% https://q.uiver.app/?q=WzAsNSxbMCwwLCIxIl0sWzEsMSwiMiJdLFsyLDIsIjMiXSxbMywxLCI0Il0sWzQsMiwiNSJdLFswLDFdLFsxLDJdLFszLDJdLFszLDRdXQ==
+\[\begin{tikzcd}[column sep={2cm,between origins},row sep={8mm,between origins}]
+	1 \\
+	& 2 && 4 \\
+	&& 3 && 5
+	\arrow[from=1-1, to=2-2]
+	\arrow[from=2-2, to=3-3]
+	\arrow[from=2-4, to=3-3]
+	\arrow[from=2-4, to=3-5]
+\end{tikzcd}\]
+
+% https://q.uiver.app/?q=WzAsNSxbMCwyLCJQKDEpIl0sWzEsMSwiUCgyKSJdLFsyLDAsIlAoMykiXSxbMywxLCJQKDQpIl0sWzQsMCwiUCg1KSJdLFsxLDBdLFsyLDFdLFsyLDNdLFs0LDNdXQ==
+\[\begin{tikzcd}[column sep={2cm,between origins},row sep={8mm,between origins}]
+	&& {P(3)} && {P(5)} \\
+	& {P(2)} && {P(4)} \\
+	{P(1)}
+	\arrow[from=2-2, to=3-1]
+	\arrow[from=1-3, to=2-2]
+	\arrow[from=1-3, to=2-4]
+	\arrow[from=1-5, to=2-4]
+\end{tikzcd}\] 
+}
+\vspace{25mm}
+\end{short}  
+\begin{ex}
+$a\colon i \rightarrow j \Longrightarrow f^a\colon P(j) \rightarrow P(i)$ is unique up to (nonzero) scalar.
+\end{ex}
+\end{overlayarea}
 \end{frame}
 \end{document}
 %Process: red and gray
