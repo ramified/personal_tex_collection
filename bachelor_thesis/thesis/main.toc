@@ -23,18 +23,18 @@
 \contentsline {section}{\numberline {2.2}$\theta $-函数}{26}{section.2.2}% 
 \contentsline {subsection}{\numberline {2.2.1}定义}{26}{subsection.2.2.1}% 
 \contentsline {subsection}{\numberline {2.2.2}恒等式}{26}{subsection.2.2.2}% 
-\contentsline {subsubsection}{\numberline {2.2.2.1}基本公式}{26}{subsubsection.2.2.2.1}% 
-\contentsline {subsubsection}{\numberline {2.2.2.2}方程相关公式}{27}{subsubsection.2.2.2.2}% 
+\contentsline {subsubsection}{\numberline {2.2.2.1}基本公式}{27}{subsubsection.2.2.2.1}% 
+\contentsline {subsubsection}{\numberline {2.2.2.2}方程相关公式}{28}{subsubsection.2.2.2.2}% 
 \contentsline {subsubsection}{\numberline {2.2.2.3}乘积公式}{28}{subsubsection.2.2.2.3}% 
-\contentsline {subsubsection}{\numberline {2.2.2.4}散在恒等式}{28}{subsubsection.2.2.2.4}% 
-\contentsline {subsection}{\numberline {2.2.3}应用:表达$\wp $, $G_4$和$G_6$}{29}{subsection.2.2.3}% 
+\contentsline {subsubsection}{\numberline {2.2.2.4}散在恒等式}{29}{subsubsection.2.2.2.4}% 
+\contentsline {subsection}{\numberline {2.2.3}应用:表达$\wp $, $G_4$和$G_6$}{30}{subsection.2.2.3}% 
 \contentsline {section}{\numberline {2.3}构造模形式}{30}{section.2.3}% 
-\contentsline {subsection}{\numberline {2.3.1}等价特征类空间}{30}{subsection.2.3.1}% 
-\contentsline {subsection}{\numberline {2.3.2}二次描述尖点}{31}{subsection.2.3.2}% 
-\contentsline {subsection}{\numberline {2.3.3}$Y(\Gamma (N))$:全纯函数与射影嵌入}{33}{subsection.2.3.3}% 
+\contentsline {subsection}{\numberline {2.3.1}等价特征类空间}{31}{subsection.2.3.1}% 
+\contentsline {subsection}{\numberline {2.3.2}二次描述尖点}{32}{subsection.2.3.2}% 
+\contentsline {subsection}{\numberline {2.3.3}$Y(\Gamma (N))$:全纯函数与射影嵌入}{34}{subsection.2.3.3}% 
 \contentsline {subsection}{\numberline {2.3.4}$X(\Gamma (N))$:尖点与亚纯函数}{35}{subsection.2.3.4}% 
 \contentsline {subsection}{\numberline {2.3.5}$\Img \Phi $上的群作用}{38}{subsection.2.3.5}% 
-\contentsline {section}{\numberline {2.4}应用:正二十面体群与Klein四次曲线}{39}{section.2.4}% 
+\contentsline {section}{\numberline {2.4}应用:正二十面体群与Klein四次曲线}{40}{section.2.4}% 
 \contentsline {subsection}{\numberline {2.4.1}$k=5$, $j_5$-函数}{40}{subsection.2.4.1}% 
 \contentsline {subsection}{\numberline {2.4.2}$k=7$, Klein四次曲线}{41}{subsection.2.4.2}% 
 \contentsline {chapter}{参考文献}{43}{chapter*.50}% 

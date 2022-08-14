@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  9 AUG 2022 23:45
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  14 AUG 2022 21:26
 entering extended mode
 **./main.tex
 (main.tex
@@ -2679,15 +2679,15 @@ LaTeX Warning: Command \textbackslash invalid in math mode on input line 149.
 [25]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 205.
+(hyperref)                removing `math shift' on input line 206.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\theta' on input line 205.
+(hyperref)                removing `\theta' on input line 206.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 205.
+(hyperref)                removing `math shift' on input line 206.
 
 [26] [27] [28]
 File: figures/snip/table-geomean.png Graphic file (type bmp)
@@ -2695,213 +2695,213 @@ File: figures/snip/table-geomean.png Graphic file (type bmp)
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 299.
+(hyperref)                removing `math shift' on input line 300.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\wp' on input line 299.
+(hyperref)                removing `\wp' on input line 300.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 299.
+(hyperref)                removing `math shift' on input line 300.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 299.
+(hyperref)                removing `math shift' on input line 300.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 299.
+(hyperref)                removing `subscript' on input line 300.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 299.
+(hyperref)                removing `math shift' on input line 300.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 299.
+(hyperref)                removing `math shift' on input line 300.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 299.
+(hyperref)                removing `subscript' on input line 300.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 299.
+(hyperref)                removing `math shift' on input line 300.
 
 [29]
-LaTeX Font Info:    Try loading font information for U+dsrom on input line 345.
+LaTeX Font Info:    Try loading font information for U+dsrom on input line 346.
 
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/doublestro
 ke\udsrom.fd"
 File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
-)
+) [30]
 File: figures/pic/funsetofchar.pdf Graphic file (type pdf)
 <use figures/pic/funsetofchar.pdf>
- [30]
-
-LaTeX Warning: Command \textbackslash invalid in math mode on input line 385.
 
 
 LaTeX Warning: Command \textbackslash invalid in math mode on input line 386.
 
+
+LaTeX Warning: Command \textbackslash invalid in math mode on input line 387.
+
+[31]
 File: figures/pic/cuspofX(5).pdf Graphic file (type pdf)
 <use figures/pic/cuspofX(5).pdf>
-[31] [32]
+ [32] [33]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 464.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Gamma' on input line 464.
+(hyperref)                removing `math shift' on input line 465.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 464.
-
-[33] [34]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 529.
+(hyperref)                removing `\Gamma' on input line 465.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Gamma' on input line 529.
+(hyperref)                removing `math shift' on input line 465.
+
+[34]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 530.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 529.
-
-[35] [36]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 692.
+(hyperref)                removing `\Gamma' on input line 530.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathop' on input line 692.
+(hyperref)                removing `math shift' on input line 530.
+
+[35] [36] [37]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 693.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 692.
+(hyperref)                removing `\mathop' on input line 693.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 692.
+(hyperref)                removing `\mathcode' on input line 693.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 692.
+(hyperref)                removing `\mathcode' on input line 693.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Umathcharnumdef' on input line 692.
+(hyperref)                removing `\mathcode' on input line 693.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\std@minus' on input line 692.
+(hyperref)                removing `\Umathcharnumdef' on input line 693.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Umathcodenum' on input line 692.
+(hyperref)                removing `\std@minus' on input line 693.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 692.
+(hyperref)                removing `\Umathcodenum' on input line 693.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 692.
+(hyperref)                removing `\mathcode' on input line 693.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathcode' on input line 692.
+(hyperref)                removing `\mathcode' on input line 693.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\leavevmode@ifvmode' on input line 692.
+(hyperref)                removing `\mathcode' on input line 693.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leavevmode@ifvmode' on input line 693.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \kern 2.67638pt
-(hyperref)                removed on input line 692.
+(hyperref)                removed on input line 693.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\mathgroup' on input line 692.
+(hyperref)                removing `\mathgroup' on input line 693.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\symoperators' on input line 692.
+(hyperref)                removing `\symoperators' on input line 693.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\new@ifnextchar' on input line 692.
+(hyperref)                removing `\new@ifnextchar' on input line 693.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\@ifnextchar' on input line 692.
+(hyperref)                removing `\@ifnextchar' on input line 693.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\Phi' on input line 692.
+(hyperref)                removing `\Phi' on input line 693.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 692.
+(hyperref)                removing `math shift' on input line 693.
 
-[37] [38]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 785.
-
+[38] [39]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 785.
+(hyperref)                removing `math shift' on input line 786.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 785.
+(hyperref)                removing `math shift' on input line 786.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 785.
+(hyperref)                removing `math shift' on input line 786.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 785.
+(hyperref)                removing `subscript' on input line 786.
 
-[39]
-Overfull \hbox (12.06984pt too wide) in paragraph at lines 810--811
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 786.
+
+
+Overfull \hbox (12.06984pt too wide) in paragraph at lines 811--812
 [][] 
  []
 
 
-Overfull \hbox (29.85121pt too wide) in paragraph at lines 817--818
+Overfull \hbox (29.85121pt too wide) in paragraph at lines 818--819
 [][] 
  []
 
 [40]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 841.
+(hyperref)                removing `math shift' on input line 842.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 841.
+(hyperref)                removing `math shift' on input line 842.
 
-) [41] [42
+[41]) [42] (main.bbl) [43
 
 
-] (main.bbl) [43
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 204.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 204.
- (main.aux (chapter/thanks.aux)
-(chapter/abstract.aux) (chapter/ch1.aux) (chapter/ch2.aux))
+ (main.aux (chapter/thanks.aux) (chapter/abstract.aux) (chapter/ch1.aux) (chapt
+er/ch2.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 204.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 204.
 Package rerunfilecheck Info: File `main.out' has not changed.
@@ -2917,10 +2917,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 204.
  ) 
 Here is how much of TeX's memory you used:
- 54093 strings out of 427748
- 1227168 string characters out of 3150981
- 1402296 words of memory out of 3000000
- 57201 multiletter control sequences out of 15000+200000
+ 54102 strings out of 427748
+ 1227812 string characters out of 3150981
+ 1403256 words of memory out of 3000000
+ 57210 multiletter control sequences out of 15000+200000
  599258 words of font info for 369 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  62i,19n,96p,788b,1248s stack positions out of 5000i,500n,10000p,200000b,50000s
