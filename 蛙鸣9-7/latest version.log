@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  12 JUL 2022 21:56
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  3 OCT 2022 21:50
 entering extended mode
 **"./latest version.tex"
 ("latest version.tex"
@@ -1715,118 +1715,118 @@ Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS)
  ("latest version.aux")
 \openout1 = `"latest version.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 95.
-LaTeX Font Info:    Try loading font information for OML+txmi on input line 95.
+LaTeX Font Info:    Checking defaults for OML/txmi/m/it on input line 96.
+LaTeX Font Info:    Try loading font information for OML+txmi on input line 96.
 
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/txfonts\om
 ltxmi.fd"
 File: omltxmi.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 95.
-LaTeX Font Info:    Try loading font information for OMS+txsy on input line 95.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMS/txsy/m/n on input line 96.
+LaTeX Font Info:    Try loading font information for OMS+txsy on input line 96.
 
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/txfonts\om
 stxsy.fd"
 File: omstxsy.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 95.
-LaTeX Font Info:    Try loading font information for OMX+txex on input line 95.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMX/txex/m/n on input line 96.
+LaTeX Font Info:    Try loading font information for OMX+txex on input line 96.
 
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/txfonts\om
 xtxex.fd"
 File: omxtxex.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 95.
-LaTeX Font Info:    Try loading font information for U+txexa on input line 95.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for U/txexa/m/n on input line 96.
+LaTeX Font Info:    Try loading font information for U+txexa on input line 96.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/txfonts\ut
 xexa.fd"
 File: utxexa.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Try loading font information for TU+ptm on input line 95.
-LaTeX Font Info:    No file TUptm.fd. on input line 95.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Try loading font information for TU+ptm on input line 96.
+LaTeX Font Info:    No file TUptm.fd. on input line 96.
 
 
 LaTeX Font Warning: Font shape `TU/ptm/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 95.
+(Font)              using `TU/lmr/m/n' instead on input line 96.
 
 ABD: EverySelectfont initializing macros
-LaTeX Info: Redefining \selectfont on input line 95.
+LaTeX Info: Redefining \selectfont on input line 96.
 
 Package fontspec Info: Adjusting the maths setup (use [no-math] to avoid
 (fontspec)             this).
 
 \symlegacymaths=\mathgroup13
 LaTeX Font Info:    Overwriting symbol font `legacymaths' in version `bold'
-(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 95.
-LaTeX Font Info:    Redeclaring math accent \acute on input line 95.
-LaTeX Font Info:    Redeclaring math accent \grave on input line 95.
-LaTeX Font Info:    Redeclaring math accent \ddot on input line 95.
-LaTeX Font Info:    Redeclaring math accent \tilde on input line 95.
-LaTeX Font Info:    Redeclaring math accent \bar on input line 95.
-LaTeX Font Info:    Redeclaring math accent \breve on input line 95.
-LaTeX Font Info:    Redeclaring math accent \check on input line 95.
-LaTeX Font Info:    Redeclaring math accent \hat on input line 95.
-LaTeX Font Info:    Redeclaring math accent \dot on input line 95.
-LaTeX Font Info:    Redeclaring math accent \mathring on input line 95.
-LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 95.
-LaTeX Font Info:    Redeclaring math symbol \Delta on input line 95.
-LaTeX Font Info:    Redeclaring math symbol \Theta on input line 95.
-LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 95.
-LaTeX Font Info:    Redeclaring math symbol \Xi on input line 95.
-LaTeX Font Info:    Redeclaring math symbol \Pi on input line 95.
-LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 95.
-LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 95.
-LaTeX Font Info:    Redeclaring math symbol \Phi on input line 95.
-LaTeX Font Info:    Redeclaring math symbol \Psi on input line 95.
-LaTeX Font Info:    Redeclaring math symbol \Omega on input line 95.
-LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 95.
-LaTeX Font Info:    Redeclaring symbol font `operators' on input line 95.
+(Font)                  OT1/cmr/m/n --> OT1/cmr/bx/n on input line 96.
+LaTeX Font Info:    Redeclaring math accent \acute on input line 96.
+LaTeX Font Info:    Redeclaring math accent \grave on input line 96.
+LaTeX Font Info:    Redeclaring math accent \ddot on input line 96.
+LaTeX Font Info:    Redeclaring math accent \tilde on input line 96.
+LaTeX Font Info:    Redeclaring math accent \bar on input line 96.
+LaTeX Font Info:    Redeclaring math accent \breve on input line 96.
+LaTeX Font Info:    Redeclaring math accent \check on input line 96.
+LaTeX Font Info:    Redeclaring math accent \hat on input line 96.
+LaTeX Font Info:    Redeclaring math accent \dot on input line 96.
+LaTeX Font Info:    Redeclaring math accent \mathring on input line 96.
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 96.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 96.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 96.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 96.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 96.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 96.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 96.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 96.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 96.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 96.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 96.
+LaTeX Font Info:    Redeclaring math symbol \mathdollar on input line 96.
+LaTeX Font Info:    Redeclaring symbol font `operators' on input line 96.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `normal' on input line 95.
+(Font)              `operators' in the math version `normal' on input line 96.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  OT1/txr/m/n --> TU/ptm/m/n on input line 95.
+(Font)                  OT1/txr/m/n --> TU/ptm/m/n on input line 96.
 LaTeX Font Info:    Encoding `OT1' has changed to `TU' for symbol font
-(Font)              `operators' in the math version `bold' on input line 95.
+(Font)              `operators' in the math version `bold' on input line 96.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  OT1/txr/bx/n --> TU/ptm/m/n on input line 95.
+(Font)                  OT1/txr/bx/n --> TU/ptm/m/n on input line 96.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
-(Font)                  TU/ptm/m/n --> TU/ptm/m/n on input line 95.
+(Font)                  TU/ptm/m/n --> TU/ptm/m/n on input line 96.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
-(Font)                  OT1/txr/m/it --> TU/ptm/m/it on input line 95.
+(Font)                  OT1/txr/m/it --> TU/ptm/m/it on input line 96.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
-(Font)                  OT1/txr/bx/n --> TU/ptm/bx/n on input line 95.
+(Font)                  OT1/txr/bx/n --> TU/ptm/bx/n on input line 96.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
-(Font)                  OT1/txss/m/n --> TU/phv/m/n on input line 95.
+(Font)                  OT1/txss/m/n --> TU/phv/m/n on input line 96.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
-(Font)                  OT1/txtt/m/n --> TU/txtt/m/n on input line 95.
+(Font)                  OT1/txtt/m/n --> TU/txtt/m/n on input line 96.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
-(Font)                  TU/ptm/m/n --> TU/ptm/bx/n on input line 95.
+(Font)                  TU/ptm/m/n --> TU/ptm/bx/n on input line 96.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
-(Font)                  OT1/txr/bx/it --> TU/ptm/bx/it on input line 95.
+(Font)                  OT1/txr/bx/it --> TU/ptm/bx/it on input line 96.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
-(Font)                  OT1/txss/b/n --> TU/phv/bx/n on input line 95.
+(Font)                  OT1/txss/b/n --> TU/phv/bx/n on input line 96.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
-(Font)                  OT1/txtt/b/n --> TU/txtt/bx/n on input line 95.
+(Font)                  OT1/txtt/b/n --> TU/txtt/bx/n on input line 96.
 
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1866,10 +1866,10 @@ ABD: EveryShipout initializing macros
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.16} into 
 your preamble.
- on input line 95.
+ on input line 96.
 
 \AtBeginShipoutBox=\box109
-Package hyperref Info: Link coloring ON on input line 95.
+Package hyperref Info: Link coloring ON on input line 96.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\n
 ameref.sty"
@@ -1881,9 +1881,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count366
 )
-LaTeX Info: Redefining \ref on input line 95.
-LaTeX Info: Redefining \pageref on input line 95.
-LaTeX Info: Redefining \nameref on input line 95.
+LaTeX Info: Redefining \ref on input line 96.
+LaTeX Info: Redefining \pageref on input line 96.
+LaTeX Info: Redefining \nameref on input line 96.
  ("latest version.out") ("latest version.out")
 \@outlinefile=\write4
 \openout4 = `"latest version.out"'.
@@ -1893,37 +1893,37 @@ Package caption Info: End \AtBeginDocument code.
 
 
 LaTeX Font Warning: Font shape `TU/ptm/bx/n' undefined
-(Font)              using `TU/ptm/m/n' instead on input line 103.
+(Font)              using `TU/ptm/m/n' instead on input line 104.
 
-LaTeX Font Info:    Try loading font information for U+txsya on input line 103.
+LaTeX Font Info:    Try loading font information for U+txsya on input line 104.
 
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/txfonts\ut
 xsya.fd"
 File: utxsya.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyb on input line 103.
+LaTeX Font Info:    Try loading font information for U+txsyb on input line 104.
 
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/txfonts\ut
 xsyb.fd"
 File: utxsyb.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for OT1+txr on input line 103.
+LaTeX Font Info:    Try loading font information for OT1+txr on input line 104.
 
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/txfonts\ot
 1txr.fd"
 File: ot1txr.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txmia on input line 103.
+LaTeX Font Info:    Try loading font information for U+txmia on input line 104.
 
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/txfonts\ut
 xmia.fd"
 File: utxmia.fd 2000/12/15 v3.1
 )
-LaTeX Font Info:    Try loading font information for U+txsyc on input line 103.
+LaTeX Font Info:    Try loading font information for U+txsyc on input line 104.
 
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/txfonts\ut
@@ -1941,21 +1941,21 @@ File: 9-7-fig/genus2.png Graphic file (type bmp)
 File: 9-7-fig/genus3.png Graphic file (type bmp)
 <9-7-fig/genus3.png>
 
-Overfull \hbox (8.2857pt too wide) in paragraph at lines 187--206
+Overfull \hbox (8.2857pt too wide) in paragraph at lines 188--207
  [][] 
  []
 
 [2] [3]
-Invalid UTF-8 byte or sequence at line 236 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 236 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 236 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 236 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 236 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 236 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 236 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 236 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 236 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 236 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 237 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 237 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 237 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 237 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 237 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 237 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 237 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 237 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 237 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 237 replaced by U+FFFD.
 File: 9-7-fig/toridecomposition.eps Graphic file (type eps)
 <9-7-fig/toridecomposition.eps>
 
@@ -1970,13 +1970,13 @@ Package fontspec Info: Could not resolve font "FangSong/B" (it probably
 Package fontspec Info: Could not resolve font "FangSong/I" (it probably
 (fontspec)             doesn't exist).
 
-LaTeX Font Info:    Try loading font information for TU+txtt on input line 243.
+LaTeX Font Info:    Try loading font information for TU+txtt on input line 244.
 
-LaTeX Font Info:    No file TUtxtt.fd. on input line 243.
+LaTeX Font Info:    No file TUtxtt.fd. on input line 244.
 
 
 LaTeX Font Warning: Font shape `TU/txtt/m/n' undefined
-(Font)              using `TU/lmr/m/n' instead on input line 243.
+(Font)              using `TU/lmr/m/n' instead on input line 244.
 
 
 Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
@@ -1992,25 +1992,25 @@ Package fontspec Info: Font family 'FangSong(0)' created for font 'FangSong'
 [4]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 254.
+(hyperref)                removing `math shift' on input line 255.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 254.
+(hyperref)                removing `math shift' on input line 255.
 
 
 Overfull \vbox (0.22325pt too high) has occurred while \output is active []
 
 
 [5]
-Overfull \hbox (9.10922pt too wide) in paragraph at lines 275--277
+Overfull \hbox (9.10922pt too wide) in paragraph at lines 276--278
 \TU/SimSun(0)/m/n/12 这 个 结 果 令 人 震 惊\TU/txtt/m/n/12 : \TU/SimSun(0)/m/n/12 几 何 
 对 象 的 参 数 空 间 似 乎 也 自 然 存 在 着 某 种 几 何 结 构\TU/txtt/m/n/12 ! $\OMS/txsy/m/n/12 H\
 OT1/cmr/m/n/12 / [][](\U/txsyb/m/n/12 Z\OT1/cmr/m/n/12 )$
  []
 
 
-Overfull \hbox (25.15414pt too wide) in paragraph at lines 285--296
+Overfull \hbox (25.15414pt too wide) in paragraph at lines 286--297
  [] 
  []
 
@@ -2018,19 +2018,19 @@ Overfull \hbox (25.15414pt too wide) in paragraph at lines 285--296
 File: 9-7-fig/numinv.png Graphic file (type bmp)
 <9-7-fig/numinv.png>
  [7]
-Invalid UTF-8 byte or sequence at line 350 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 350 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 350 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 350 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 350 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 350 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 351 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 351 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 351 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 351 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 351 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 351 replaced by U+FFFD.
 File: 9-7-fig/picofF385.eps Graphic file (type eps)
 <9-7-fig/picofF385.eps>
- [8] [9] [10] [11]
+ [8] [9] [10] [11] [12]
 File: 9-7-fig/hodgeofp2.png Graphic file (type bmp)
 <9-7-fig/hodgeofp2.png>
 
-Overfull \hbox (16.78171pt too wide) in paragraph at lines 459--461
+Overfull \hbox (16.78171pt too wide) in paragraph at lines 485--487
 \TU/SimSun(0)/m/n/12 这 个 双 线 性 型 恰 好 刻 画 了 $\OML/txmi/m/it/12 X$ \TU/SimSun(0)/
 m/n/12 中 曲 线 的 相 交 数\TU/txtt/m/n/12 : \TU/SimSun(0)/m/n/12 可 以 证 明\TU/txtt/m/n/
 12 , \TU/SimSun(0)/m/n/12 对 $\OML/txmi/m/it/12 X$ \TU/SimSun(0)/m/n/12 中 不 可 约 
@@ -2038,31 +2038,32 @@ m/n/12 中 曲 线 的 相 交 数\TU/txtt/m/n/12 : \TU/SimSun(0)/m/n/12 可 以
 m/n/12 ,
  []
 
-[12] [13] [14]
+[13] [14]
 File: 9-7-fig/4algsurf.png Graphic file (type bmp)
 <9-7-fig/4algsurf.png>
-Invalid UTF-8 byte or sequence at line 560 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 560 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 560 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 560 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 560 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 560 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 560 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 560 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 560 replaced by U+FFFD.
+ [15]
+Invalid UTF-8 byte or sequence at line 586 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 586 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 586 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 586 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 586 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 586 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 586 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 586 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 586 replaced by U+FFFD.
 File: 9-7-fig/table.eps Graphic file (type eps)
 <9-7-fig/table.eps>
- [15]
+ [16]
 File: 9-7-fig/hodgeofhopf.png Graphic file (type bmp)
 <9-7-fig/hodgeofhopf.png>
 File: 9-7-fig/chernofsurfaces.png Graphic file (type bmp)
 <9-7-fig/chernofsurfaces.png>
- [16] ("latest version.bbl"
+ ("latest version.bbl" [17]
 
 LaTeX Font Warning: Font shape `TU/ptm/m/it' undefined
 (Font)              using `TU/ptm/m/n' instead on input line 5.
 
-[17]
+
 Underfull \hbox (badness 3826) in paragraph at lines 27--32
 []\TU/ptm/m/it/12 Michael Hartley Freedman et al.  The topology of four-dimensi
 onal
@@ -2080,27 +2081,27 @@ Underfull \hbox (badness 10000) in paragraph at lines 27--32
 ][][][][][] [] [][][][] [] [][][] [] [][][][][][][][][][] [] [][][][] []
  []
 
-[18]) [19]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 620.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 620.
+[18] [19]) [20]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 646.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 646.
  ("latest version.aux")
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 620.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 620.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 646.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 646.
 Package rerunfilecheck Info: File `"latest version".out' has not changed.
 (rerunfilecheck)             Checksum: .
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 620.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 646.
  ) 
 Here is how much of TeX's memory you used:
- 50102 strings out of 427748
- 1128893 string characters out of 3150981
- 1295197 words of memory out of 3000000
- 53457 multiletter control sequences out of 15000+200000
+ 50145 strings out of 427748
+ 1129961 string characters out of 3150981
+ 1297205 words of memory out of 3000000
+ 53500 multiletter control sequences out of 15000+200000
  559774 words of font info for 141 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  62i,19n,96p,995b,1077s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on latest version.pdf (19 pages).
+Output written on latest version.pdf (20 pages).

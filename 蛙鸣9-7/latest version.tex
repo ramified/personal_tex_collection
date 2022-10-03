@@ -80,6 +80,7 @@
 \newcommand{\Aut}{\operatorname{Aut}}
 \newcommand{\Spec}{\operatorname{Spec}}
 \newcommand{\Proj}{\operatorname{Proj}}
+\newcommand{\Rep}{\operatorname{Rep}}  
 \newcommand{\Pic}{\operatorname{Pic}}
 \newcommand{\Nil}{\operatorname{Nil}}
 \newcommand{\Sol}{\operatorname{Sol}}
@@ -406,12 +407,12 @@ $\quad\quad\quad\quad\searrow\quad\quad\quad\nearrow\quad\quad\searrow \quad\qua
 
 
 想必复几何中第一个紧复流形的例子一定是复射影空间$\mathbb{CP}^n$, 那么第一个代数曲面的例子自然是二维复射影空间
-$$\mathbb{P}_{\CC}^2:= \Proj \CC[x_0,x_1,x_2], $$
-它的解析化就是$\mathbb{CP}^2$.我喜欢画一个$S^2$作为$\mathbb{P}_{\CC}^2$的几何直观, 尽管这不完美: $\mathbb{P}_{\CC}^2$是一个复$2$维, 实$4$维的对象, 另外$\mathbb{P}_{\CC}^2$上的两条直线只交于一点, 而$S^2$上两个大圆必交于2点\footnote{$\mathbb{P}_{\CC}^2$上的直线指的是一个一次齐次方程确定的零点集, 例如$[L:x_0+2x_1-4x_2=0]$就是其中的一条直线.}. 你可以用这些小结论来修正你的几何直观.
+$$\PCC:= \Proj \CC[x_0,x_1,x_2], $$
+它的解析化就是$\mathbb{CP}^2$.我喜欢画一个$S^2$作为$\PCC$的几何直观, 尽管这不完美: $\PCC$是一个复$2$维, 实$4$维的对象, 另外$\PCC$上的两条直线只交于一点, 而$S^2$上两个大圆必交于2点\footnote{$\PCC$上的直线指的是一个一次齐次方程确定的零点集, 例如$[L:x_0+2x_1-4x_2=0]$就是其中的一条直线.}. 你可以用这些小结论来修正你的几何直观.
 
-利用切除正合列(excision exact sequence)\cite[14.2.8]{vakil2017rising}, 我们可以算出$\mathbb{P}_{\CC}^2$的Picard群\footnote{所有的线丛在张量的运算下构成一个群, 称为Picard群. 线丛直观来讲是秩为1的复向量丛, 不过代数几何中更多指的是$X$上秩为1的局部常值层.}
-$$\varphi: \Pic \mathbb{P}_{\CC}^2 \cong \ZZ$$
-对$n \in \ZZ$,记$\mathcal{O}_{\mathbb{P}_{\CC}^2}(n):=\varphi^{-1}(n)$.我们有多种线丛的理解方式\cite[14.1,14.2,15.2]{vakil2017rising}: 
+利用切除正合列(excision exact sequence)\cite[14.2.8]{vakil2017rising}, 我们可以算出$\PCC$的Picard群\footnote{所有的线丛在张量的运算下构成一个群, 称为Picard群. 线丛直观来讲是秩为1的复向量丛, 不过代数几何中更多指的是$X$上秩为1的局部常值层.}
+$$\varphi: \Pic \PCC \cong \ZZ$$
+对$n \in \ZZ$,记$\mathcal{O}_{\PCC}(n):=\varphi^{-1}(n)$.我们有多种线丛的理解方式\cite[14.1,14.2,15.2]{vakil2017rising}: 
 \begin{itemize}
 	
 	\item 固定$\PCC$上的标准仿射开覆盖$U_0=\Spec k[x_{1/0},x_{2/0}],U_1,U_2$, 我们用转移函数定义线丛$\mathcal{L}_n$, 例如:
@@ -426,14 +427,39 @@ $$\varphi: \Pic \mathbb{P}_{\CC}^2 \cong \ZZ$$
 	
 	其中映射在
 	$$U_0 \cap U_1= \Spec k[x_{1/0},x_{2/0}]_{(x_{1/0})}=\Spec k[x_{0/1},x_{2/1}]_{(x_{0/1})}$$
-	上定义,我们有$\mathcal{L}_n \cong \mathcal{O}_{\mathbb{P}_{\CC}^2}(n)$.
+	上定义,我们有$\mathcal{L}_n \cong \mathcal{O}_{\PCC}(n)$.
 	
 	
 	这种方式容易证明是线丛(局部平凡性+转移函数), 问题在于不容易描述全局截影, 给出的解答往往是局部的.
-	\item 取超曲面截影$H: x_0=0$, 则$\mathcal{O}_{\mathbb{P}_{\CC}^2}(n)=\mathcal{O}_{\mathbb{P}_{\CC}^2}(nH)$, 其中
-	$$\left[\mathcal{O}_{\mathbb{P}_{\CC}^2}(nH)\right](U)=\left\{ t \in K(\PCC)^{\times}: \ddiv|_U t \geqslant -nH  \right\} \cup \{0  \}$$
-	这种方式容易描述线丛上的截影, 不过思考的时候需要做一个twist, 有点转换参考系的感觉\footnote{例如, 同样一个有理函数$t \in K(\PCC)^{\times}$, 作为$\mathcal{O}_{\mathbb{P}_{\CC}^2}(nH)$和$\mathcal{O}_{\mathbb{P}_{\CC}^2}(mH)$上的有理截影, 对应的除子就不一致. ($n\neq m$)}. 另外, 这种方式暗示了``线丛对应曲线"的思维方式, 曲线的相交数由此转化为Picard群上的双线性型.
-	\item 记分次环$S_{\bullet}:=\CC[x_0,x_1,x_2]$,分次$S_{\bullet}$-模$S(n)_{\bullet}:=S_{n+\bullet}$, 则拟凝聚层$\mathcal{O}_{\mathbb{P}_{\CC}^2}(n)=\tilde{S(n)_{\bullet}}$为$\mathbb{P}_{\CC}^2=\Proj S_{\bullet}$上的线丛.
+	\item 取超曲面截影$H: x_0=0$, 则$\mathcal{O}_{\PCC}(n)=\mathcal{O}_{\PCC}(nH)$, 其中
+	$$\left[\mathcal{O}_{\PCC}(nH)\right](U)=\left\{ t \in K(\PCC)^{\times}: \ddiv|_U t \geqslant -nH  \right\} \cup \{0  \}$$
+	这种方式容易描述线丛上的截影, 不过思考的时候需要做一个twist, 有点转换参考系的感觉\footnote{例如, 同样一个有理函数$t \in K(\PCC)^{\times}$, 作为$\mathcal{O}_{\PCC}(nH)$和$\mathcal{O}_{\PCC}(mH)$上的有理截影, 对应的除子就不一致. ($n\neq m$)}. 另外, 这种方式暗示了``线丛对应曲线"的思维方式, 曲线的相交数由此转化为Picard群上的双线性型.
+	\item 通过拉回映射, $\PCC$上的线丛可视作$\CC^3 \setminus \left\{ 0 \right\}$上带$\CC^{\times}$-作用的等变线丛.
+	
+	固定$\CC^{\times}$的$1$维表示$(\lambda,\CC_{\lambda}) \in \Rep(\CC^{\times})$如下:
+	$$\lambda: \CC^{\times} \longrightarrow \Aut_{\CC_{\lambda}}(\CC) =\CC^{\times} \qquad t \longmapsto t^{\textcolor{red}{-n}}$$
+	$$\CC^{\times} \times \CC_{\lambda} \longrightarrow \CC_{\lambda} \qquad (t,v) \longmapsto \lambda(t)v$$
+	另外定义$\CC^{\times}$在$\CC^3 \setminus \left\{ 0 \right\}$右方的左作用\footnote{一般而言大家习惯将群作用实现为左作用,在右方作用是为了实现类似张量积的效果.\\考虑$\CC^{\times}$ 在乘积空间$(\CC^3 \setminus \left\{ 0 \right\}) \times \CC_{\lambda}$上的作用,形式上这是对角作用$$t.(x,v)=(t.x,t.v)$$
+	而直观上看却是``将左边的元素移至右边":$$t.(x,v)=(xt^{-1},tv)$$
+	这使得商空间看上去更加自然.}
+	$$\CC^{\times} \times (\CC^3 \setminus \left\{ 0 \right\}) \longrightarrow \CC^3 \setminus \left\{ 0 \right\} \qquad \big( t,(x_0,x_1,x_2) \big) \longmapsto (x_0t^{-1},x_1t^{-1},x_2t^{-1})$$
+	我们得到$\PCC$上的线丛(的复点)
+	$$(\CC^3 \setminus \left\{ 0 \right\}) \times^{\CC^{\times}} \CC_{\lambda}:=(\CC^3 \setminus \left\{ 0 \right\}) \times \CC_{\lambda} \;\big/_{\displaystyle \CC^{\times}\text{-action}}$$
+	下面的交换图表清晰地显示了不同空间之间的关系:
+% https://q.uiver.app/?q=WzAsNCxbMSwwLCIoXFxDQ14zIFxcc2V0bWludXMgXFxsZWZ0XFx7IDAgXFxyaWdodFxcfSkgXFx0aW1lc157XFxDQ157XFx0aW1lc319IFxcQ0Nfe1xcbGFtYmRhfSJdLFswLDAsIihcXENDXjMgXFxzZXRtaW51cyBcXGxlZnRcXHsgMCBcXHJpZ2h0XFx9KSBcXHRpbWVzIFxcQ0Nfe1xcbGFtYmRhfSJdLFswLDEsIlxcQ0NeMyBcXHNldG1pbnVzIFxcbGVmdFxceyAwIFxccmlnaHRcXH0iXSxbMSwxLCJcXFBDQyJdLFsyLDMsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFswLDMsIlxccGkiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMSwwLCIiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMSwyLCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XV0=
+\[\begin{tikzcd}[ampersand replacement=\&]
+	{(\CC^3 \setminus \left\{ 0 \right\}) \times \CC_{\lambda}} \& {(\CC^3 \setminus \left\{ 0 \right\}) \times^{\CC^{\times}} \CC_{\lambda}} \\
+	{\CC^3 \setminus \left\{ 0 \right\}} \& \PCC
+	\arrow[two heads, from=2-1, to=2-2]
+	\arrow["\pi", two heads, from=1-2, to=2-2]
+	\arrow[two heads, from=1-1, to=1-2]
+	\arrow[two heads, from=1-1, to=2-1]
+\end{tikzcd}\]
+	可以通过局部坐标卡的计算证明
+	$$(\CC^3 \setminus \left\{ 0 \right\}) \times^{\CC^{\times}} \CC_{\lambda} = \left(\Spec \mathcal{O}_{\PCC}(n)\right) (\CC) \qquad \mathcal{O}_{\PCC}(n) \cong \pi_* \mathcal{O}_{(\CC^3 \setminus \left\{ 0 \right\}) \times^{\CC^{\times}} \CC_{\lambda}}$$
+	
+	这种方式与表示论联系密切,给出了一个不依赖于坐标的整体描述,也容易推广构造旗簇(flag variety)上的等变向量丛.只可惜这种方式和其他理解方式之间的转换较为复杂.
+	\item 记分次环$S_{\bullet}:=\CC[x_0,x_1,x_2]$,分次$S_{\bullet}$-模$S(n)_{\bullet}:=S_{n+\bullet}$, 则拟凝聚层$\mathcal{O}_{\PCC}(n)=\tilde{S(n)_{\bullet}}$为$\PCC=\Proj S_{\bullet}$上的线丛.
 	
 	这种方式最为抽象, 但是是一个整体描述, 不依赖于$\PCC$上的坐标, 也容易给出不同线丛之间的映射.
 \end{itemize}
