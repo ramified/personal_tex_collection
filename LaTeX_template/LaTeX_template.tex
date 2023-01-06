@@ -1,0 +1,317 @@
+
+\documentclass{article}
+%Typical documenttypes: article/book
+%some examples:
+%\documentclass[reqno,11pt]{book}   %%%for books
+%\documentclass[]{minimal}			%%%for Minimal Working Example
+
+%%%%%%%%%%%%%%%%%%%% setting for fast compiling
+
+%\special{dvipdfmx:config z 0} %%%no compression
+
+%%%only for long documents
+%\includeonly{chapters/contents}
+%\includeonly{chapters/introduction}
+%\includeonly{chapters/introduction,chapters/affinepaving}
+%\includeonly{chapters/chapter1} %%%In practice, use an empty document called "chapter9"
+
+
+%%%%%%%%%%%%%%%%%%%% here we include packages
+
+%%%basic packages for math articles
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+%%%basic packages for fancy electronic documents
+\usepackage{hyperref}
+\usepackage[table,xcdraw]{xcolor} % before tikz-cd
+
+%%%packages for pictures
+\usepackage{tikz-cd}
+
+%%%%%%%%%%%%%%%%%%%% here we include theoremstyles
+
+\numberwithin{equation}{section}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+
+\newtheorem{setting}[theorem]{Setting}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{eg}[theorem]{Example}
+\newtheorem{ex}[theorem]{Exercise}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{ques}[theorem]{Question}
+\newtheorem{warning}[theorem]{Warning}
+
+
+
+\newtheorem*{bbox}{Black box}
+\newtheorem*{notation}{Conventions and Notations}
+
+
+\numberwithin{equation}{section}
+
+
+\theoremstyle{remark}
+
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{remarks}{Remarks}
+
+%%% for important theorems
+%\newtheoremstyle{theoremletter}{4mm}{1mm}{\itshape}{ }{\bfseries}{}{ }{}
+%\theoremstyle{theoremletter}
+%\newtheorem{theoremA}{Theorem}
+%\renewcommand{\thetheoremA}{A}
+%\newtheorem{theoremB}{Theorem}
+%\renewcommand{\thetheoremB}{B}
+
+%%%%%%%%%%%%%%%%%%%% here we declare some symbols
+
+%%%%%%%DeclareMathOperator
+%see here for why newcommand is better for DeclareMathOperator: https://tex.stackexchange.com/questions/67506/newcommand-vs-declaremathoperator
+
+%%%%%basic symbols. Keep them!
+
+%%%symbols for sets and maps
+\DeclareMathOperator{\pt}{\operatorname{pt}}	%points. Other possibilities are \{pt\}, ...
+\DeclareMathOperator{\Id}{\operatorname{Id}}	%identity in groups.
+\DeclareMathOperator{\Img}{\operatorname{Im}}
+
+\DeclareMathOperator{\Ob}{\operatorname{Ob}}
+\DeclareMathOperator{\Mor}{\operatorname{Mor}}	%difference of Mor and Hom: Hom is usually for abelian categories
+\DeclareMathOperator{\Hom}{\operatorname{Hom}}	\DeclareMathOperator{\End}{\operatorname{End}}
+\DeclareMathOperator{\Aut}{\operatorname{Aut}}
+
+%%%symbols for linear algebras and 
+%%linear algebras
+\DeclareMathOperator{\tr}{\operatorname{tr}}
+\DeclareMathOperator{\diag}{\operatorname{diag}}	%for diagonal matrices
+
+%%abstract algebras
+\DeclareMathOperator{\ord}{\operatorname{ord}}
+\DeclareMathOperator{\gr}{\operatorname{gr}}
+\DeclareMathOperator{\Frac}{\operatorname{Frac}}
+
+%%%symbols for basic geometries
+\DeclareMathOperator{\vol}{\operatorname{vol}}	%volume
+\DeclareMathOperator{\dist}{\operatorname{dist}}
+\DeclareMathOperator{\supp}{\operatorname{supp}}
+
+%%%symbols for category
+%%names of categories
+\DeclareMathOperator{\Mod}{\operatorname{Mod}}
+\DeclareMathOperator{\Vect}{\operatorname{Vect}}
+\DeclareMathOperator{\rep}{\operatorname{rep}} %usually rep means the category of finite dimensional representations, while Rep means the category of representations.
+\DeclareMathOperator{\Rep}{\operatorname{Rep}}
+
+
+%%%symbols for homological algebras
+\DeclareMathOperator{\Tor}{\operatorname{Tor}}
+\DeclareMathOperator{\Ext}{\operatorname{Ext}}
+\DeclareMathOperator{\gldim}{\operatorname{gl.dim}}
+\DeclareMathOperator{\projdim}{\operatorname{proj.dim}}
+\DeclareMathOperator{\injdim}{\operatorname{inj.dim}}
+\DeclareMathOperator{\rad}{\operatorname{rad}}
+
+
+%%%symbols for algebraic groups
+\DeclareMathOperator{\GL}{\operatorname{GL}}
+\DeclareMathOperator{\SL}{\operatorname{SL}}
+
+%%%symbols for typical varieties
+\DeclareMathOperator{\Gr}{\operatorname{Gr}}
+\DeclareMathOperator{\Flag}{\operatorname{Flag}}
+
+%%%symbols for basic algebraic geometry
+\DeclareMathOperator{\Spec}{\operatorname{Spec}}
+\DeclareMathOperator{\Coh}{\operatorname{Coh}}
+\newcommand{\Dcoh}{\mathcal{D}_{\operatorname{Coh}}}%%%This one shows the difference between \DeclareMathOperator and \newcommand
+\DeclareMathOperator{\Pic}{\operatorname{Pic}}
+\DeclareMathOperator{\Jac}{\operatorname{Jac}}
+
+%%%%%advanced symbols. Choose the part you need!
+
+%%%symbols for algebraic representation theory
+\DeclareMathOperator{\Irr}{\operatorname{Irr}}
+\DeclareMathOperator{\ind}{\operatorname{ind}}	%\ind(Q) means the set of  equivalence classes of finite dimensional indecomposable representations
+\DeclareMathOperator{\Res}{\operatorname{Res}}
+\DeclareMathOperator{\Ind}{\operatorname{Ind}}
+\DeclareMathOperator{\cInd}{\operatorname{c-Ind}}
+
+
+%%%symbols for algebraic topology
+\DeclareMathOperator{\EGG}{\operatorname{E}\!}
+\DeclareMathOperator{\BGG}{\operatorname{B}\!}
+
+\DeclareMathOperator{\chern}{\operatorname{ch}^{*}}
+\DeclareMathOperator{\Td}{\operatorname{Td}}
+\DeclareMathOperator{\AS}{\operatorname{AS}}	%Atiyah--Segal completion theorem 
+
+%%%symbols for Auslander--Reiten theory 
+\DeclareMathOperator{\Modup}{\overline{\operatorname{mod}}}
+\DeclareMathOperator{\Moddown}{\underline{\operatorname{mod}}}
+\DeclareMathOperator{\Homup}{\overline{\operatorname{Hom}}}
+\DeclareMathOperator{\Homdown}{\underline{\operatorname{Hom}}}
+
+
+%%%symbols for operad
+\DeclareMathOperator{\Com}{\operatorname{\mathcal{C}om}}
+\DeclareMathOperator{\Ass}{\operatorname{\mathcal{A}ss}}
+\DeclareMathOperator{\Lie}{\operatorname{\mathcal{L}ie}}
+\DeclareMathOperator{\calEnd}{\operatorname{\mathcal{E}nd}} %cal=\mathcal
+
+
+%%%%%personal symbols. Use at your own risk!
+
+%%%symbols only for master thesis
+\DeclareMathOperator{\ptt}{\operatorname{par}}	%the partition map
+\DeclareMathOperator{\str}{\operatorname{str}}	%strict case
+\DeclareMathOperator{\RRep}{\widetilde{\operatorname{Rep}}}
+\DeclareMathOperator{\Rpt}{\operatorname{R}}
+\DeclareMathOperator{\Rptc}{\operatorname{\mathcal{R}}}
+\DeclareMathOperator{\Spt}{\operatorname{S}}
+\DeclareMathOperator{\Sptc}{\operatorname{\mathcal{S}}}
+\DeclareMathOperator{\Kcurl}{\operatorname{\mathcal{K}}}
+\DeclareMathOperator{\Hcurl}{\operatorname{\mathcal{H}}}
+\DeclareMathOperator{\eu}{\operatorname{eu}}
+\DeclareMathOperator{\Eu}{\operatorname{Eu}}
+\DeclareMathOperator{\dimv}{\operatorname{\underline{\mathbf{dim}}}}
+\DeclareMathOperator{\St}{\mathcal{Z}}
+
+%%%%%symbols which haven't been classified. Add your own math operators here!
+
+
+
+
+
+
+
+
+%%%%%%%newcommand
+
+%as the subscription of Hom
+\DeclareMathOperator{\Alggp}{\text{-Alg gp}}
+
+%%%%%%%%%%%%%%%%%%%% here we make some block functions. They can be put or removed by blocks.
+
+%%%% todo notes %%%%
+\usepackage[colorinlistoftodos,textsize=footnotesize]{todonotes}
+\setlength{\marginparwidth}{2.5cm}
+\newcommand{\leftnote}[1]{\reversemarginpar\marginnote{\footnotesize #1}}
+\newcommand{\rightnote}[1]{\normalmarginpar\marginnote{\footnotesize #1}\reversemarginpar}
+
+%%%%%%%%%%%%%%%%%%%% here we make some global settings. Understand everything here before you make a document!
+
+\begin{document}
+This is a document for beginning with ease.
+
+
+The structure of documents:
+\begin{enumerate}
+\item document class;
+\item packages;
+\item symbols, containing math operators and other symbols;
+\item global settings;
+\end{enumerate}
+\renewcommand{\arraystretch}{1.2}
+
+\begin{table}[ht]
+\centering
+\[
+\begin{array}{c|c|c|c|c|c|c|c}
+\hline
+M                      & M(1) & M(2) & M(3) & M(4) & M(5) & M(6)  & \href{http://oeis.org}{OEIS} \\ \hline
+\Com                   & 1    & 1    & 1    & 1    & 1    & 1     &      \\ \hline
+\Ass                   & 1    & 2    & 6    & 24   & 120  & 720   &      \\ \hline
+\Lie                   & 1    & 1    & 2    & 6    & 24   & 120   &      \\ \hline
+\mathcal{T}(E_{\Com})  & 1    & 1    & 3    & 15   & 105  & 945   &  \href{http://oeis.org/A001147}{A001147}    \\ \hline
+\mathcal{T}(E_{\Ass})  & 1    & 2    & 12   & 120  & 1680 & 30240 & \href{http://oeis.org/A001813}{A001813}     \\ \hline
+\mathcal{T}(E_{\Lie})  & 1    & 1    & 3    & 15   & 105  & 945   & \href{http://oeis.org/A001147}{A001147}     \\ \hline
+\left(R_{\Com}\right)  & 0    & 0    & 2    & 14   & 104  & 944   &      \\ \hline
+\left(R_{\Ass}\right)  & 0    & 0    & 6    & 96   & 1560 & 29520 &      \\ \hline
+\left(R_{\Ass}\right)  & 0    & 0    & 1    & 9    & 81   & 825   &      \\ \hline
+\calEnd_{\mathbb{C}^k} & k^2  & 2k^2 & 3k^2 & 4k^2 & 5k^2 & 6k^2  &      \\ \hline
+\Com \circ \Lie        &      &      &      &      &      &       &      \\ \hline
+\vdots                 &      &      &      &      &      &       &      \\ \hline
+                       &      &      &      &      &      &       &      \\ \hline
+                       &      &      &      &      &      &       &      \\ \hline
+\end{array}
+\]
+\end{table}
+
+\begin{theorem}
+内容...
+\end{theorem}
+
+\begin{setting}
+内容...
+\end{setting}
+
+\begin{definition}
+内容...
+\end{definition}
+
+\begin{lemma}
+内容...
+\end{lemma}
+
+\begin{proposition}
+内容...
+\end{proposition}
+
+\begin{corollary}
+内容...
+\end{corollary}
+\begin{conjecture}
+内容...
+\end{conjecture}
+\begin{claim}
+内容...
+\end{claim}
+\begin{eg}
+内容...
+\end{eg}
+\begin{ex}
+内容...
+\end{ex}
+\begin{fact}
+内容...
+\end{fact}
+\begin{ques}
+内容...
+\end{ques}
+\begin{warning}
+内容...
+\end{warning}
+\begin{bbox}
+内容...
+\end{bbox}
+\begin{notation}
+内容...
+\end{notation}
+
+\begin{remark}
+内容...
+\end{remark}
+
+\begin{remarks}\
+\begin{enumerate}
+\item ...
+\item ...
+\end{enumerate}
+\end{remarks}
+
+
+
+
+
+\end{document}
