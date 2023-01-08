@@ -1,19 +1,24 @@
 
-\documentclass{article}
+\documentclass{amsart}
 %Typical documenttypes: article/book
 %some examples:
 %\documentclass[reqno,11pt]{book}   %%%for books
 %\documentclass[]{minimal}			%%%for Minimal Working Example
 
+
+
+
+
+
 %%%%%%%%%%%%%%%%%%%% setting for fast compiling
 
-%\special{dvipdfmx:config z 0} %%%no compression
+%\special{dvipdfmx:config z 0}		% no compression
 
-%%%only for long documents
-%\includeonly{chapters/contents}
-%\includeonly{chapters/introduction}
-%\includeonly{chapters/introduction,chapters/affinepaving}
-%\includeonly{chapters/chapter1} %%%In practice, use an empty document called "chapter9"
+\includeonly{chapters/chapter9}		% In practice, use an empty document called "chapter9"	% usually for printing books
+
+
+
+
 
 
 %%%%%%%%%%%%%%%%%%%% here we include packages
@@ -23,13 +28,59 @@
 \usepackage{amsthm}
 \usepackage{amsmath}
 \usepackage{amsfonts}
+\usepackage[shortlabels]{enumitem}	% It supersedes both enumerate and mdwlist. The package option shortlabels is included to configure the labels like in enumerate.
+
+%%%packages for special symbols
+\usepackage{pifont}					% Access to PostScript standard Symbol and Dingbats fonts
+\usepackage{wasysym}				% additional characters
+\usepackage{bm}						% bold fonts: \bm{...}
+\usepackage{extarrows}				% may be replaced by tikz-cd
+%\usepackage{unicode-math}			% unicode maths for math fonts, now I don't know how to include it
 
 %%%basic packages for fancy electronic documents
-\usepackage{hyperref}
-\usepackage[table,xcdraw]{xcolor} % before tikz-cd
+\usepackage[colorlinks]{hyperref}
+\usepackage[table,hyperref]{xcolor} 			% before tikz-cd. 
+%\usepackage[table,hyperref,monochrome]{xcolor}	% disable colored output (black and white)
+
+%%%packages for figures and tables (general setting)
+\usepackage{float}				%Improved interface for floating objects
+\usepackage{caption,subcaption}
+\usepackage{adjustbox}			% for me it is usually used in tables 
+\usepackage{stackengine}		%baseline changes
+
+%%%packages for commutative diagrams
+\usepackage{tikz-cd}
+%\usepackage{quiver}			% see https://q.uiver.app/
 
 %%%packages for pictures
-\usepackage{tikz-cd}
+\usepackage[width=0.5,tiewidth=0.7]{strands}
+\usepackage{graphicx}			% Enhanced support for graphics
+
+%%%packages for tables and general settings
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{diagbox}
+
+
+
+
+
+
+
+
+
+ %https://tex.stackexchange.com/questions/58852/possible-incompatibility-with-enumitem
+
+
+
+
+
+
+
+
+
 
 %%%%%%%%%%%%%%%%%%%% here we include theoremstyles
 
@@ -73,6 +124,12 @@
 %\renewcommand{\thetheoremA}{A}
 %\newtheorem{theoremB}{Theorem}
 %\renewcommand{\thetheoremB}{B}
+
+
+
+
+
+
 
 %%%%%%%%%%%%%%%%%%%% here we declare some symbols
 
@@ -198,10 +255,40 @@
 
 %%%%%%%newcommand
 
-%as the subscription of Hom
-\DeclareMathOperator{\Alggp}{\text{-Alg gp}}
+%%%basic symbols
+\newcommand{\norm}[1]{\Vert{#1}\Vert}
 
-%%%%%%%%%%%%%%%%%%%% here we make some block functions. They can be put or removed by blocks.
+%%%symbols only for master thesis
+\newcommand{\dimvec}[1]{\mathbf{#1}}
+\newcommand{\abdimvec}[1]{|\dimvec{#1}|}
+\newcommand{\ftdimvec}[1]{\underline{\dimvec{#1}}}
+
+\newcommand{\WWd}{\absgp{W}_{\abdimvec{d}}}
+\newcommand{\Wd}{W_{\dimvec{d}}}
+\newcommand{\MinWd}{\operatorname{Min}(\absgp{W}_{\abdimvec{d}},W_{\dimvec{d}})}
+\newcommand{\Compd}{\operatorname{Comp}_{\dimvec{d}}}
+\newcommand{\Shuffled}{\operatorname{Shuffle}_{\dimvec{d}}}
+
+\newcommand{\Omcell}{\Omega}
+\newcommand{\OOmcell}{\boldsymbol{\Omega}}
+\newcommand{\Vcell}{\mathcal{V}}
+\newcommand{\VVcell}{\boldsymbol{\mathcal{V}}}
+\newcommand{\Ocell}{\mathcal{O}}
+\newcommand{\OOcell}{\boldsymbol{\mathcal{O}}}
+\newcommand{\preimage}[1]{\widetilde{#1}}
+\newcommand{\orde}{\operatorname{ord}_e}
+\newcommand{\fakestar}{*}
+
+%as the subscription of Hom
+\newcommand{\Alggp}{\text{-Alg gp}}
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%% here we make some blocks for special features. 
 
 %%%% todo notes %%%%
 \usepackage[colorinlistoftodos,textsize=footnotesize]{todonotes}
@@ -209,10 +296,55 @@
 \newcommand{\leftnote}[1]{\reversemarginpar\marginnote{\footnotesize #1}}
 \newcommand{\rightnote}[1]{\normalmarginpar\marginnote{\footnotesize #1}\reversemarginpar}
 
+
+
+
+
+
+
+
+
 %%%%%%%%%%%%%%%%%%%% here we make some global settings. Understand everything here before you make a document!
 
+\usepackage[a4paper,left=3cm,right=3cm,bottom=4cm]{geometry}
+\usepackage{indentfirst}	% Indent first paragraph after section header
+
+\setcounter{tocdepth}{2}
+
+
+%https://latexref.xyz/_005cparindent-_0026-_005cparskip.html
+\setlength{\parindent}{15pt}	
+\setlength{\parskip}{0pt plus1pt}
+
+%\setlength\intextsep{0cm}
+%\setlength\textfloatsep{0cm}
+\def\arraystretch{1}
+%\setcounter{secnumdepth}{3}
+
+\allowdisplaybreaks
+
+
 \begin{document}
-This is a document for beginning with ease.
+
+% The beginning depends on the documentclass. Rewrite this part if you use different documentclass!
+\date{\today}
+
+\title
+{\LaTeX\;Template
+}
+\author{Xiaoxiang Zhou}
+\address{School of Mathematical Sciences\\
+University of Bonn\\
+Bonn, 53115\\ Germany\\} 
+\email{email:xx352229@mail.ustc.edu.cn}
+
+
+\maketitle
+\tableofcontents
+
+
+\section{Introduction}
+This is a document for beginning with ease. Sometimes I felt disturbed by the structures of the \LaTeX\;document. I don't know how to reset the arranges among paragraphs, and some environments crash with each other.
 
 
 The structure of documents:
@@ -221,7 +353,9 @@ The structure of documents:
 \item packages;
 \item symbols, containing math operators and other symbols;
 \item global settings;
+\item blocks for special features;
 \end{enumerate}
+\begingroup
 \renewcommand{\arraystretch}{1.2}
 
 \begin{table}[ht]
@@ -247,8 +381,10 @@ M                      & M(1) & M(2) & M(3) & M(4) & M(5) & M(6)  & \href{http:/
 \end{array}
 \]
 \end{table}
-
-\begin{theorem}
+\endgroup
+\section{Examples}
+\subsection{Theorem environment}
+\begin{theorem}[{see \cite[Theorem 18.5.1]{vakil2017rising}}]
 内容...
 \end{theorem}
 
@@ -304,14 +440,18 @@ M                      & M(1) & M(2) & M(3) & M(4) & M(5) & M(6)  & \href{http:/
 \end{remark}
 
 \begin{remarks}\
-\begin{enumerate}
+\begin{enumerate}[1.]
 \item ...
 \item ...
 \end{enumerate}
 \end{remarks}
 
+\include{chapters/chapter9}
 
+\nocite{Eberhardt2022Koszul}	% cite articles which are not cited in the document yet
 
+% Remember to protect the uppercase of people's name and LaTeX symbols
 
-
+\bibliographystyle{plain}
+\bibliography{reference}
 \end{document}
