@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  18 SEP 2022 12:28
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  9 JAN 2023 15:05
 entering extended mode
 **./talkzxx.tex
 (talkzxx.tex
@@ -410,47 +410,55 @@ Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 yperref.sty"
 Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
 
-("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek
-\hobsub-hyperref.sty"
-Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hobsub\hob
+sub-hyperref.sty"
+Package: hobsub-hyperref 2019-11-14
+hobsub not currently supported, see hobsub.dtx to extract original code
 
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek
+\pdftexcmds.sty"
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+)
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek
-\hobsub-generic.sty"
-Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
-Package hobsub Info: Skipping package `infwarerr' (already loaded).
-Package hobsub Info: Skipping package `ltxcmds' (already loaded).
+\ifluatex.sty"
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-Package hobsub Info: Skipping package `ifvtex' (already loaded).
-Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
-Package hobsub Info: Skipping package `ifpdf' (already loaded).
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: pdfTeX >= 1.30 not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode not found.
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/kvsetkeys\
+kvsetkeys.sty"
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek
+\kvdefinekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek
+\pdfescape.sty"
 Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
-Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
 )
-Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
-Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
-)
-Package hobsub Info: Skipping package `hobsub' (already loaded).
-Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
-Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
-Package: xcolor-patch 2016/05/16 xcolor patch
-Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
-Package hobsub Info: Skipping package `atbegshi' (already loaded).
-Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\h
+ycolor.sty"
 Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
-)
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\x
+color-patch.sty"
+Package: xcolor-patch 2016/05/16 xcolor patch
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\h
+opatch.sty"
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+)))
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\l
+etltxmacro.sty"
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+))
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\a
 uxhook.sty"
 Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
@@ -466,6 +474,14 @@ Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\p
 d1enc.def"
 File: pd1enc.def 2018/11/30 v6.88e Hyperref: PDFDocEncoding definition (HO)
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek
+\intcalc.sty"
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek
+\etexcmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 )
 \Hy@SavedSpaceFactor=\count124
 
@@ -492,6 +508,16 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5125.
 \XeTeXLinkMargin=\dimen164
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek
+\bitset.sty"
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek
+\bigintcalc.sty"
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+))
 \Fld@menulength=\count126
 \Field@Width=\dimen165
 \Fld@charsize=\dimen166
@@ -534,6 +560,15 @@ Package: stringenc 2016/05/16 v1.11 Convert strings between diff. encodings (HO
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\r
 erunfilecheck.sty"
 Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\a
+tveryend.sty"
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek
+\uniquecounter.sty"
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 ))
@@ -1106,7 +1141,20 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 135.
 
-(talkzxx.aux)
+(talkzxx.aux
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.88 \
+      
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+)
 \openout1 = `talkzxx.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 135.
@@ -1169,6 +1217,10 @@ Package hyperref Info: Link coloring OFF on input line 135.
 ameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\r
+efcount.sty"
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+)
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek
 \gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
@@ -1262,9 +1314,13 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 138.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 138.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [1
 
 ]
+[2]
 \openout4 = `talkzxx.vrb'.
 
  (talkzxx.vrb
@@ -1272,28 +1328,28 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10.95> on input line 7.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 7.
-) [2
+) [3
 
 ]
 Overfull \hbox (5.38483pt too wide) in paragraph at lines 176--176
  [] 
  []
 
-[3
+[4
 
-] [4
+] [5
 
 ]
 \openout4 = `talkzxx.vrb'.
 
- (talkzxx.vrb) [5
+ (talkzxx.vrb) [6
 
-] [6
+] [7
 
 ]
 File: figure/youngdiagram0.pdf Graphic file (type pdf)
 <use figure/youngdiagram0.pdf>
- [7
+ [8
 
 ]
 Overfull \vbox (110.1829pt too high) detected at line 267
@@ -1301,7 +1357,7 @@ Overfull \vbox (110.1829pt too high) detected at line 267
 
 File: figure/youngdiagram_order.pdf Graphic file (type pdf)
 <use figure/youngdiagram_order.pdf>
-[8
+[9
 
 ]
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
@@ -1314,12 +1370,6 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
 Overfull \vbox (23.87349pt too high) detected at line 296
  []
 
-[9
-
-]
-Overfull \vbox (23.87349pt too high) detected at line 296
- []
-
 [10
 
 ]
@@ -1327,6 +1377,12 @@ Overfull \vbox (23.87349pt too high) detected at line 296
  []
 
 [11
+
+]
+Overfull \vbox (23.87349pt too high) detected at line 296
+ []
+
+[12
 
 ]
 \openout4 = `talkzxx.vrb'.
@@ -1337,12 +1393,6 @@ File: figure/shadow/tabloid.png Graphic file (type bmp)
 File: figure/shadow/tabloid2.png Graphic file (type bmp)
 <figure/shadow/tabloid2.png>
 )
-Overfull \vbox (23.87349pt too high) detected at line 366
- []
-
-[12
-
-] (talkzxx.vrb)
 Overfull \vbox (23.87349pt too high) detected at line 366
  []
 
@@ -1360,30 +1410,30 @@ Overfull \vbox (23.87349pt too high) detected at line 366
 
 [15
 
+] (talkzxx.vrb)
+Overfull \vbox (23.87349pt too high) detected at line 366
+ []
+
+[16
+
 ]
 LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <10.95> not available
 (Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 379.
 
- [16
+ [17
 
 ]
 File: figure/shadow/eg1.png Graphic file (type bmp)
 <figure/shadow/eg1.png>
 File: figure/shadow/eg2.png Graphic file (type bmp)
 <figure/shadow/eg2.png>
- [17
-
-] [18
+ [18
 
 ] [19
 
 ] [20
 
-]
-Overfull \vbox (23.87349pt too high) detected at line 500
- []
-
-[21
+] [21
 
 ]
 Overfull \vbox (23.87349pt too high) detected at line 500
@@ -1392,14 +1442,20 @@ Overfull \vbox (23.87349pt too high) detected at line 500
 [22
 
 ]
+Overfull \vbox (23.87349pt too high) detected at line 500
+ []
+
+[23
+
+]
 File: figure/youngdiagram.pdf Graphic file (type pdf)
 <use figure/youngdiagram.pdf>
- [23
+ [24
 
 ]
 File: figure/youngdiagramseries.pdf Graphic file (type pdf)
 <use figure/youngdiagramseries.pdf>
- [24
+ [25
 
 ]
 Overfull \hbox (9.61679pt too wide) detected at line 526
@@ -1410,7 +1466,7 @@ Overfull \hbox (9.61679pt too wide) detected at line 526
 Overfull \vbox (23.87349pt too high) detected at line 526
  []
 
-[25
+[26
 
 ]
 Overfull \hbox (6.57512pt too wide) detected at line 545
@@ -1421,7 +1477,7 @@ Overfull \hbox (6.57512pt too wide) detected at line 545
 Overfull \vbox (23.87349pt too high) detected at line 545
  []
 
-[26
+[27
 
 ]
 Overfull \hbox (9.61679pt too wide) detected at line 562
@@ -1432,9 +1488,9 @@ Overfull \hbox (9.61679pt too wide) detected at line 562
 Overfull \vbox (23.87349pt too high) detected at line 562
  []
 
-[27
+[28
 
-] [28
+] [29
 
 ]
 \openout4 = `talkzxx.vrb'.
@@ -1446,7 +1502,7 @@ File: figure/shadow/induction.png Graphic file (type bmp)
 Overfull \vbox (23.87349pt too high) detected at line 604
  []
 
-[29
+[30
 
 ] (talkzxx.vrb
 File: figure/shadow/induction.png Graphic file (type bmp)
@@ -1455,22 +1511,22 @@ File: figure/shadow/induction.png Graphic file (type bmp)
 Overfull \vbox (23.87349pt too high) detected at line 604
  []
 
-[30
+[31
 
 ]
 File: figure/youngdiagram.pdf Graphic file (type pdf)
 <use figure/youngdiagram.pdf>
- [31
+ [32
 
 ]
 File: figure/youngdiagram1.pdf Graphic file (type pdf)
 <use figure/youngdiagram1.pdf>
- [32
+ [33
 
 ]
 \openout4 = `talkzxx.vrb'.
 
- (talkzxx.vrb) [33
+ (talkzxx.vrb) [34
 
 ]
 \openout4 = `talkzxx.vrb'.
@@ -1482,7 +1538,7 @@ File: figure/shadow/vote.png Graphic file (type bmp)
 Overfull \vbox (23.87349pt too high) detected at line 645
  []
 
-[34
+[35
 
 ]
 \openout4 = `talkzxx.vrb'.
@@ -1491,7 +1547,7 @@ Overfull \vbox (23.87349pt too high) detected at line 645
 Overfull \vbox (23.87349pt too high) detected at line 657
  []
 
-[35
+[36
 
 ] (talkzxx.vrb
 File: figure/shadow/crossingless2.png Graphic file (type bmp)
@@ -1500,7 +1556,7 @@ File: figure/shadow/crossingless2.png Graphic file (type bmp)
 Overfull \vbox (23.87349pt too high) detected at line 657
  []
 
-[36
+[37
 
 ] (talkzxx.vrb
 File: figure/shadow/crossingless.png Graphic file (type bmp)
@@ -1509,11 +1565,11 @@ File: figure/shadow/crossingless.png Graphic file (type bmp)
 Overfull \vbox (23.87349pt too high) detected at line 657
  []
 
-[37
-
-] [38
+[38
 
 ] [39
+
+] [40
 
 ]
 File: figure/shadow/defspringer.png Graphic file (type bmp)
@@ -1523,34 +1579,34 @@ LaTeX Font Info:    Try loading font information for U+euf on input line 706.
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 euf.fd"
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [40
+) [41
 
 ]
 Overfull \vbox (1.0pt too high) detected at line 730
  []
 
-[41
+[42
 
-] [42
+] [43
 
 ]
 File: figure/youngdiagramseries.pdf Graphic file (type pdf)
 <use figure/youngdiagramseries.pdf>
- [43
+ [44
 
 ]
 Overfull \vbox (23.87349pt too high) detected at line 769
  []
 
-[44
+[45
 
 ]
 Overfull \vbox (42.97353pt too high) detected at line 785
  []
 
-[45
+[46
 
-] [46
+] [47
 
 ]
 File: figure/shadow/case(2,1).png Graphic file (type bmp)
@@ -1559,14 +1615,14 @@ File: figure/shadow/case(2,1).png Graphic file (type bmp)
 Overfull \vbox (30.97351pt too high) detected at line 817
  []
 
-[47
+[48
 
-] [48
+] [49
 
 ]
 File: figure/shadow/myidea.png Graphic file (type bmp)
 <figure/shadow/myidea.png>
- [49
+ [50
 
 ]
 \openout4 = `talkzxx.vrb'.
@@ -1575,7 +1631,7 @@ File: figure/shadow/myidea.png Graphic file (type bmp)
 Overfull \vbox (23.87349pt too high) detected at line 850
  []
 
-[50
+[51
 
 ]
 \openout4 = `talkzxx.vrb'.
@@ -1587,7 +1643,7 @@ File: figure/shadow/case(2,1)series1.png Graphic file (type bmp)
 Overfull \vbox (23.87349pt too high) detected at line 898
  []
 
-[51
+[52
 
 ] (talkzxx.vrb
 File: figure/shadow/case(2,1)series1.png Graphic file (type bmp)
@@ -1596,7 +1652,7 @@ File: figure/shadow/case(2,1)series1.png Graphic file (type bmp)
 Overfull \vbox (23.87349pt too high) detected at line 898
  []
 
-[52
+[53
 
 ] (talkzxx.vrb
 File: figure/shadow/case(2,1)series2.png Graphic file (type bmp)
@@ -1605,7 +1661,7 @@ File: figure/shadow/case(2,1)series2.png Graphic file (type bmp)
 Overfull \vbox (23.87349pt too high) detected at line 898
  []
 
-[53
+[54
 
 ] (talkzxx.vrb
 File: figure/shadow/case(2,1)series3.png Graphic file (type bmp)
@@ -1614,7 +1670,7 @@ File: figure/shadow/case(2,1)series3.png Graphic file (type bmp)
 Overfull \vbox (23.87349pt too high) detected at line 898
  []
 
-[54
+[55
 
 ]
 File: figure/shadow/case(2,1,1)del.png Graphic file (type bmp)
@@ -1623,7 +1679,7 @@ File: figure/shadow/case(2,1,1)del.png Graphic file (type bmp)
 Overfull \vbox (42.97353pt too high) detected at line 916
  []
 
-[55
+[56
 
 ]
 File: figure/shadow/case(2,1,1).png Graphic file (type bmp)
@@ -1637,7 +1693,7 @@ Overfull \hbox (2.43333pt too wide) in paragraph at lines 916--916
 Overfull \vbox (42.97353pt too high) detected at line 916
  []
 
-[56
+[57
 
 ]
 File: figure/shadow/case(2,2)del.png Graphic file (type bmp)
@@ -1646,7 +1702,7 @@ File: figure/shadow/case(2,2)del.png Graphic file (type bmp)
 Overfull \vbox (30.97351pt too high) detected at line 934
  []
 
-[57
+[58
 
 ]
 File: figure/shadow/case(2,2).png Graphic file (type bmp)
@@ -1660,38 +1716,38 @@ Overfull \hbox (2.43333pt too wide) in paragraph at lines 934--934
 Overfull \vbox (30.97351pt too high) detected at line 934
  []
 
-[58
+[59
 
-] [59
+] [60
 
 ]
 File: figure/youngdiagram0.pdf Graphic file (type pdf)
 <use figure/youngdiagram0.pdf>
- [60
+ [61
 
 ]
 File: figure/youngdiagram2.pdf Graphic file (type pdf)
 <use figure/youngdiagram2.pdf>
- [61
+ [62
 
 ]
 File: figure/youngdiagram1.pdf Graphic file (type pdf)
 <use figure/youngdiagram1.pdf>
- [62
+ [63
 
-] [63
+] [64
 
 ]
 File: figure/youngdiagram0.pdf Graphic file (type pdf)
 <use figure/youngdiagram0.pdf>
- [64
+ [65
 
 ]
 Overfull \hbox (5.74059pt too wide) detected at line 1006
 [][]
  []
 
-[65
+[66
 
 ]
 Overfull \hbox (5.74059pt too wide) detected at line 1006
@@ -1703,9 +1759,9 @@ Overfull \hbox (0.91028pt too wide) detected at line 1006
 [][]
  []
 
-[66
+[67
 
-] [67
+] [68
 
 ]
 \tf@nav=\write6
@@ -1725,14 +1781,18 @@ Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1026.
 
 Package rerunfilecheck Info: File `talkzxx.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
  ) 
 Here is how much of TeX's memory you used:
- 27247 strings out of 427748
- 533515 string characters out of 3150981
- 710114 words of memory out of 3000000
+ 27292 strings out of 427748
+ 535149 string characters out of 3150981
+ 709209 words of memory out of 3000000
  30677 multiletter control sequences out of 15000+200000
  66020 words of font info for 78 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  88i,31n,180p,796b,1174s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on talkzxx.pdf (67 pages).
+Output written on talkzxx.pdf (68 pages).

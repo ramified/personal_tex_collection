@@ -6,7 +6,7 @@
 %\documentclass[]{minimal}			%%%for Minimal Working Example
 
 
-
+%for beamers, you have to change a lot. Especially, remove the package enumitem!!!
 
 
 
@@ -247,7 +247,7 @@
 %%%%%symbols which haven't been classified. Add your own math operators here!
 
 
-
+\DeclareMathOperator{\Modr}{\operatorname{-Mod}}
 
 
 
@@ -263,6 +263,7 @@
 \newcommand{\abdimvec}[1]{|\dimvec{#1}|}
 \newcommand{\ftdimvec}[1]{\underline{\dimvec{#1}}}
 
+\newcommand{\absgp}[1]{\mathbb{#1}}
 \newcommand{\WWd}{\absgp{W}_{\abdimvec{d}}}
 \newcommand{\Wd}{W_{\dimvec{d}}}
 \newcommand{\MinWd}{\operatorname{Min}(\absgp{W}_{\abdimvec{d}},W_{\dimvec{d}})}
@@ -357,6 +358,27 @@ The structure of documents:
 \end{enumerate}
 \begingroup
 \renewcommand{\arraystretch}{1.2}
+
+% https://q.uiver.app/?q=WzAsMTAsWzAsMCwiXFxSZXBfe1xcTGFtYmRhfShLWikiXSxbMCwxLCJcXFJlcF97XFxMYW1iZGF9KEtaKV8wIl0sWzAsMiwiXFxtYXRoY2Fse0J9Il0sWzEsMiwiXFxtYXRoY2Fse0N9Il0sWzAsMywiXFxtYXRoY2Fse0J9XzEiXSxbMSwzLCJcXG1hdGhjYWx7Q31fMSciXSxbMSwwLCJcXFJlcF97XFxMYW1iZGF9KEcpIl0sWzEsMSwiXFxSZXBfe1xcTGFtYmRhfShHKV8wIl0sWzIsMywiXFxNb2QoXFxHYW1tYV97XFxwaV8xfSkiXSxbMywzLCJcXG1hdGhjYWx7Q31fMSJdLFs0LDUsIlxcc2ltIl0sWzIsMywiXFxzaW0gXFx0ZXh0e2ZvciBmLmwufSJdLFsxLDddLFswLDYsIlxcY0luZF97S1p9XntHfSJdLFsxLDAsIlxcc3Vic2V0IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIsMSwiXFxzdWJzZXQiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMyw3LCJcXHN1YnNldCIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs3LDYsIlxcc3Vic2V0IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzQsMiwiXFxzdWJzZXQiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNSwzLCJcXHN1YnNldCIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs1LDgsIlxcY29uZyIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs4LDksIlxcY29uZyIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs5LDcsIlxcc3Vwc2V0IiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XV0=
+\[\begin{tikzcd}[column sep={between origins, 12mm},row sep=small]
+	{\Rep_{\Lambda}(KZ)} & [37mm]{\Rep_{\Lambda}(G)} \\
+	{\Rep_{\Lambda}(KZ)_0} & {\Rep_{\Lambda}(G)_0} &&[7mm]\\
+	{\mathcal{B}} & {\mathcal{C}} \\
+	{\mathcal{B}_1} & {\mathcal{C}_1'} & {\!\!\End_G(\Pi_1)\Modr} & {\mathcal{C}_1}
+	\arrow["\sim", from=4-1, to=4-2]
+	\arrow["{\sim \text{ for f.l.}}", from=3-1, to=3-2]
+	\arrow[from=2-1, to=2-2]
+	\arrow["{\cInd_{KZ}^{G}}", from=1-1, to=1-2]
+	\arrow["\subset"{description}, sloped, draw=none, from=2-1, to=1-1]
+	\arrow["\subset"{description}, sloped, draw=none, from=3-1, to=2-1]
+	\arrow["\subset"{description}, sloped, draw=none, from=3-2, to=2-2]
+	\arrow["\subset"{description}, sloped, draw=none, from=2-2, to=1-2]
+	\arrow["\subset"{description}, sloped, draw=none, from=4-1, to=3-1]
+	\arrow["\subset"{description}, sloped, draw=none, from=4-2, to=3-2]
+	\arrow["\cong"{description}, draw=none, from=4-2, to=4-3]
+	\arrow["\cong"{description}, draw=none, from=4-3, to=4-4]
+	\arrow["\supset"{sloped}, hook', from=4-4, to=2-2]
+\end{tikzcd}\]
 
 \begin{table}[ht]
 \centering
