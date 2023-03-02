@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  28 JAN 2023 12:56
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  31 JAN 2023 23:06
 entering extended mode
 **./main.tex
 (main.tex
@@ -2439,6 +2439,14 @@ tonic solid, ramified covering, resolvent, root formula, modular form,
 
  (chapter/ch1.tex
 第一章
+
+LaTeX Font Warning: Font shape `U/wasy/b/n' in size <9.03374> not available
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 10.
+
+
+LaTeX Font Warning: Font shape `U/wasy/b/n' in size <5> not available
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 10.
+
 File: figures/snip/propofpoly.png Graphic file (type bmp)
 <figures/snip/propofpoly.png>
 File: figures/snip/tikz-iso.png Graphic file (type bmp)
@@ -2447,14 +2455,6 @@ File: figures/snip/tikz-iso.png Graphic file (type bmp)
 
 
 ]
-
-LaTeX Font Warning: Font shape `U/wasy/b/n' in size <9.03374> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 33.
-
-
-LaTeX Font Warning: Font shape `U/wasy/b/n' in size <5> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 33.
-
 File: figures/pic/rotaion.png Graphic file (type bmp)
 <figures/pic/rotaion.png>
 File: figures/poly/poly4-1.pdf Graphic file (type pdf)
@@ -2463,7 +2463,7 @@ File: figures/poly/poly4-2.pdf Graphic file (type pdf)
 <use figures/poly/poly4-2.pdf>
 File: figures/commu/commu2.pdf Graphic file (type pdf)
 <use figures/commu/commu2.pdf>
-[2]
+ [2]
 File: figures/poly/poly24.pdf Graphic file (type pdf)
 <use figures/poly/poly24.pdf>
 File: figures/poly/poly12.pdf Graphic file (type pdf)
@@ -2969,10 +2969,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 204.
  ) 
 Here is how much of TeX's memory you used:
- 54157 strings out of 427748
- 1229807 string characters out of 3150981
- 1402640 words of memory out of 3000000
- 57212 multiletter control sequences out of 15000+200000
+ 54159 strings out of 427748
+ 1229832 string characters out of 3150981
+ 1402647 words of memory out of 3000000
+ 57214 multiletter control sequences out of 15000+200000
  599258 words of font info for 369 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  62i,19n,96p,788b,1248s stack positions out of 5000i,500n,10000p,200000b,50000s

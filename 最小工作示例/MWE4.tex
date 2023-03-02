@@ -1,0 +1,90 @@
+\documentclass[]{book}
+\usepackage{tocloft}
+\usepackage{caption}
+
+\begin{document}
+% List of Tables
+\makeatletter
+\def\@chapter[#1]#2{\ifnum \c@secnumdepth >\m@ne
+                       \if@mainmatter
+                         \refstepcounter{chapter}%
+                         \typeout{\@chapapp\space\thechapter.}%
+                         \addcontentsline{toc}{chapter}%
+                                   {\protect\numberline{\thechapter}#1}%
+                       \else
+                         \addcontentsline{toc}{chapter}{#1}%
+                       \fi
+                    \else
+                      \addcontentsline{toc}{chapter}{#1}%
+                    \fi
+                    \chaptermark{#1}%
+%                    \addtocontents{lof}{\protect\addvspace{10\p@}}% NEW
+%                    \addtocontents{lot}{\protect\addvspace{10\p@}}% NEW
+                    \if@twocolumn
+                      \@topnewpage[\@makechapterhead{#2}]%
+                    \else
+                      \@makechapterhead{#2}%
+                      \@afterheading
+                    \fi}
+\makeatother
+
+\tableofcontents
+
+\begingroup
+\let\cleardoublepage\relax
+%\let\clearpage\relax
+\addcontentsline{toc}{chapter}{List of Tables}
+\listoftables
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+\endgroup
+
+
+\chapter{Chapter One}
+
+
+\begin{table}[htbp] 
+  \centering
+    \begin{tabular}{lll}
+    & Col 1 & Col 2 \\
+    Row 1 & 11 & 12 \\
+    Row 2 & 21 & 22 \\
+    \end{tabular}
+  \caption{This is table 1.1.}
+\end{table}
+
+\begin{table}[htbp] 
+  \centering
+    \begin{tabular}{lll}
+    Row 1 & 11 & 12 \\
+    Row 2 & 21 & 22 \\
+    \end{tabular}
+  \caption{This is table 1.2.}
+\end{table}
+
+
+\chapter{Chapter Two}
+
+\begin{table}[htbp] 
+  \centering
+    \begin{tabular}{lll}
+    & Col 1 & Col 2 \\
+    Row 1 & 11 & 12 \\
+    Row 2 & 21 & 22 \\
+    \end{tabular}
+  \caption{This is table 2.1.}
+\end{table}
+
+\begin{table}[htbp] 
+  \centering
+    \begin{tabular}{lll}
+    & Col 1 & Col 2 \\
+    Row 1 & 11 & 12 \\
+    Row 2 & 21 & 22 \\
+    \end{tabular}
+  \caption{This is table 2.2.}
+\end{table}
+
+
+
+\end{document}

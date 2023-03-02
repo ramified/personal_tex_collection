@@ -5,7 +5,7 @@
 \contentsline {chapter}{\numberline {第一章\hspace {.3em}}正多面体与五次方程解}{1}{chapter.1}% 
 \contentsline {section}{\numberline {1.1}引入:从正多面体至分歧覆叠}{1}{section.1.1}% 
 \contentsline {section}{\numberline {1.2}综述}{5}{section.1.2}% 
-\contentsline {section}{\numberline {1.3}不变量理论}{6}{section.1.3}% 
+\contentsline {section}{\numberline {1.3}不变量理论}{5}{section.1.3}% 
 \contentsline {subsection}{\numberline {1.3.1}不变函数与半不变量}{6}{subsection.1.3.1}% 
 \contentsline {subsection}{\numberline {1.3.2}轨道形式}{7}{subsection.1.3.2}% 
 \contentsline {subsection}{\numberline {1.3.3}协变函子$H$, $J$}{9}{subsection.1.3.3}% 
