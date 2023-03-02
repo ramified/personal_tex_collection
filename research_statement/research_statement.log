@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  2 MAR 2023 20:42
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  3 MAR 2023 00:49
 entering extended mode
 **./research_statement.tex
 (research_statement.tex
@@ -1517,40 +1517,40 @@ fig\geometry.cfg"))
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\inde
 ntfirst.sty"
 Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
-) (research_statement.aux (chapters/chapter9.aux))
+) (research_statement.aux)
 \openout1 = `research_statement.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 328.
-LaTeX Font Info:    ... okay on input line 328.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 328.
-LaTeX Font Info:    ... okay on input line 328.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 328.
-LaTeX Font Info:    ... okay on input line 328.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 328.
-LaTeX Font Info:    ... okay on input line 328.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 328.
-LaTeX Font Info:    ... okay on input line 328.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 328.
-LaTeX Font Info:    ... okay on input line 328.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 328.
-LaTeX Font Info:    ... okay on input line 328.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 328.
-LaTeX Font Info:    ... okay on input line 328.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 328.
-LaTeX Font Info:    ... okay on input line 328.
-LaTeX Font Info:    Try loading font information for U+msa on input line 328.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 340.
+LaTeX Font Info:    ... okay on input line 340.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 340.
+LaTeX Font Info:    ... okay on input line 340.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 340.
+LaTeX Font Info:    ... okay on input line 340.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 340.
+LaTeX Font Info:    ... okay on input line 340.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 340.
+LaTeX Font Info:    ... okay on input line 340.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 340.
+LaTeX Font Info:    ... okay on input line 340.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 340.
+LaTeX Font Info:    ... okay on input line 340.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 340.
+LaTeX Font Info:    ... okay on input line 340.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 340.
+LaTeX Font Info:    ... okay on input line 340.
+LaTeX Font Info:    Try loading font information for U+msa on input line 340.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 msa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 328.
+LaTeX Font Info:    Try loading font information for U+msb on input line 340.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 msb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 328.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 340.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/wasysym\uw
 asy.fd"
@@ -1558,18 +1558,18 @@ File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <8> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 328.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 340.
 
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <6> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 328.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 340.
 
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <5> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 328.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 340.
 
 \AtBeginShipoutBox=\box98
-Package hyperref Info: Link coloring ON on input line 328.
+Package hyperref Info: Link coloring ON on input line 340.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\n
 ameref.sty"
@@ -1585,9 +1585,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count332
 )
-LaTeX Info: Redefining \ref on input line 328.
-LaTeX Info: Redefining \pageref on input line 328.
-LaTeX Info: Redefining \nameref on input line 328.
+LaTeX Info: Redefining \ref on input line 340.
+LaTeX Info: Redefining \pageref on input line 340.
+LaTeX Info: Redefining \nameref on input line 340.
  (research_statement.out) (research_statement.out)
 \@outlinefile=\write4
 \openout4 = `research_statement.out'.
@@ -1629,15 +1629,6 @@ ABD: EveryShipout initializing macros
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(research_statement.toc
-
-LaTeX Font Warning: Font shape `U/wasy/b/n' in size <7> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 2.
-
-)
-\tf@toc=\write5
-\openout5 = `research_statement.toc'.
-
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek
 \se-ascii-print.def"
@@ -1645,38 +1636,44 @@ File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 
 )
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 350.
+LaTeX Font Warning: Font shape `U/wasy/b/n' in size <7> not available
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 360.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 350.
+(hyperref)                removing `math shift' on input line 362.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 362.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 362--363
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 370--371
+
+ []
 
 [1] [2]
-\openout2 = `chapters/chapter9.aux'.
-
-
-No file chapters/chapter9.tex.
-[3
-
-
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 372.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 372.
- (research_statement.aux (chapters/chapter9.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 372.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 372.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 394.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 394.
+ (research_statement.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 394.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 394.
 Package rerunfilecheck Info: File `research_statement.out' has not changed.
-(rerunfilecheck)             Checksum: A8B11FBDED3242946A4EFC9307AB40C0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 372.
+(rerunfilecheck)             Checksum: 377591E69A62AA55B15536E1AB657DDE.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 394.
  ) 
 Here is how much of TeX's memory you used:
- 36491 strings out of 427748
- 676878 string characters out of 3150981
- 725508 words of memory out of 3000000
+ 36482 strings out of 427748
+ 676731 string characters out of 3150981
+ 726506 words of memory out of 3000000
  39839 multiletter control sequences out of 15000+200000
  544173 words of font info for 76 fonts, out of 3000000 for 9000
  1489 hyphenation exceptions out of 8191
  61i,6n,82p,976b,443s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on research_statement.pdf (3 pages).
+Output written on research_statement.pdf (2 pages).
