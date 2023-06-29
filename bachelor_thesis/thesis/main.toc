@@ -17,7 +17,7 @@
 \contentsline {chapter}{\numberline {第二章\hspace {.3em}}模形式与模曲线}{21}{chapter.2}% 
 \contentsline {section}{\numberline {2.1}经典模形式回顾}{21}{section.2.1}% 
 \contentsline {subsection}{\numberline {2.1.1}复环面}{21}{subsection.2.1.1}% 
-\contentsline {subsection}{\numberline {2.1.2}模空间$\mathcal {H}/SL_2(\mathbb {Z})$}{22}{subsection.2.1.2}% 
+\contentsline {subsection}{\numberline {2.1.2}模空间$\mathcal {H}/\operatorname {SL}_2(\mathbb {Z})$}{22}{subsection.2.1.2}% 
 \contentsline {subsection}{\numberline {2.1.3}Jacobi模形式}{24}{subsection.2.1.3}% 
 \contentsline {subsection}{\numberline {2.1.4}级结构}{24}{subsection.2.1.4}% 
 \contentsline {section}{\numberline {2.2}$\theta $-函数}{26}{section.2.2}% 

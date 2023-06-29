@@ -21,13 +21,13 @@ $$\mathbb{C}/\Lambda_{\tau} \longrightarrow \mathbb{PC}^2 \qquad \bar{z} \longma
 	\label{pic:Ellipticcurve}
 \end{figure}
 
-\subsection{模空间$\mathcal{H}/SL_2(\mathbb{Z})$}
+\subsection{模空间$\mathcal{H}/\SL_2(\mathbb{Z})$}
 现在我们扰动点$\tau \in \mathcal{H}$,得到不同的复环面.在黎曼面范畴同构的意义下,
-$$\Lambda_{\tau} \cong \Lambda_{\tau'} \Longleftrightarrow \text{存在$\gamma \in SL_2(\mathbb{Z})$,使得$\gamma \tau = \tau'$}$$
-故所有复环面构成的空间为$\mathcal{H}/SL_2(\mathbb{Z})$,在加入尖点紧化后同构于$\mathbb{PC}^1$.为了定义``模空间中的函数(截面)",我们引进模形式的概念:
+$$\Lambda_{\tau} \cong \Lambda_{\tau'} \Longleftrightarrow \text{存在$\gamma \in \SL_2(\mathbb{Z})$,使得$\gamma \tau = \tau'$}$$
+故所有复环面构成的空间为$\mathcal{H}/\SL_2(\mathbb{Z})$,在加入尖点紧化后同构于$\mathbb{PC}^1$.为了定义``模空间中的函数(截面)",我们引进模形式的概念:
 
 \begin{defn}
-	称$\mathcal{H}$上的全纯函数$f$为权$k \in \mathbb{Z}$,级$\Gamma:= SL_2(\mathbb{Z})$的模形式,若
+	称$\mathcal{H}$上的全纯函数$f$为权$k \in \mathbb{Z}$,级$\Gamma:= \SL_2(\mathbb{Z})$的模形式,若
 	
 	\begin{enumerate}[(1)]
 		\item 对任意$\gamma=\begin{pmatrix}
@@ -54,11 +54,11 @@ $$\Lambda_{\tau} \cong \Lambda_{\tau'} \Longleftrightarrow \text{存在$\gamma \
 		\item $k$为奇数时, $G_k \equiv 0$;
 		\item $k$为偶数时, $G_k$满足\eqref{eq:modform},且有Fourier展开
 		$$G_k(\tau)=\frac{(2\pi i)^k}{(k-1)!} \left( -\frac{B_k}{2k}+\sum_{n=1}^{\infty}\sigma_{k-1}(n)q^n \right)$$
-		故$G_k$为权$k$,级$SL_2(\mathbb{Z})$的模形式.
+		故$G_k$为权$k$,级$\SL_2(\mathbb{Z})$的模形式.
 	\end{enumerate}
 \end{exercise}
 
-为方便起见,取$E_k:= G_k/(2\zeta(k))$使得Fourier常数项化为1.可以证明, $M_{*}(SL_2(\mathbb{Z})) \cong \mathbb{C}[E_4,E_6]$,且$E_4,E_6$代数无关.
+为方便起见,取$E_k:= G_k/(2\zeta(k))$使得Fourier常数项化为1.可以证明, $M_{*}(\SL_2(\mathbb{Z})) \cong \mathbb{C}[E_4,E_6]$,且$E_4,E_6$代数无关.
 
 \begin{remark}
 	模形式可视作格点上的函数,即
@@ -84,7 +84,7 @@ $$\Lambda_{\tau} \cong \Lambda_{\tau'} \Longleftrightarrow \text{存在$\gamma \
 \end{figure}
 另外补充两个重要的函数:模判别式
 $\Delta:=\frac{1}{1728}(E_4^3-E_6^2)$
-给出了第一个在$\infty$处取0的模形式,由它可以得到尖点形式的结构；$j:=E_4^3/\Delta$给出紧化的模空间$\mathcal{H}^*/SL_2(\mathbb{Z})$至$\mathbb{PC}^1$的黎曼面同构.\footnote{注意$j$不是模形式,它在$\infty$处有1阶极点.}
+给出了第一个在$\infty$处取0的模形式,由它可以得到尖点形式的结构；$j:=E_4^3/\Delta$给出紧化的模空间$\mathcal{H}^*/\SL_2(\mathbb{Z})$至$\mathbb{PC}^1$的黎曼面同构.\footnote{注意$j$不是模形式,它在$\infty$处有1阶极点.}
 
 我们以一个表\ref{tb:torus-moduli}作为上述内容的总结:
 \begin{table}[ht]
@@ -94,8 +94,9 @@ $\Delta:=\frac{1}{1728}(E_4^3-E_6^2)$
 	\label{tb:torus-moduli}
 \end{table}
 \subsection{Jacobi模形式}
-曾经我突发奇想,是否存在一个$\mathcal{H}/SL_2(\mathbb{Z})$上的纤维丛$E$,使得每一个点$\tau$对应的纤维$E_\tau$恰好就是复环面$\mathbb{C}/\Lambda_{\tau}$?直到有一天我找到了梦中的空间:
-$$E:=SL_2(\mathbb{Z})\textbackslash (\mathcal{H} \times \mathbb{C})/\mathbb{Z}^2 \qquad \gamma(\tau,z):= (\gamma \tau,\frac{z}{c\tau +d}) \quad (m,n)(\tau,z):=(\tau, z+m\tau+n)$$
+曾经我突发奇想,是否存在一个$\mathcal{H}/\SL_2(\mathbb{Z})$上的纤维丛$E$,使得每一个点$\tau$对应的纤维$E_\tau$恰好就是复环面$\mathbb{C}/\Lambda_{\tau}$?直到有一天我找到了梦中的空间:\footnote{事实上，这个空间是$E:=(\mathbb{Z}^2 \rtimes \SL_2(\mathbb{Z})) \textbackslash (\mathcal{H} \times \mathbb{C})$, 其中半直积如下群作用定义:
+$$\SL_2(\mathbb{Z})  \times \mathbb{Z}^2 \longrightarrow \mathbb{Z}^2 \qquad \left( \gamma,\rule{0mm}{3.7mm} (m,n) \right) \longmapsto (m,n) \gamma^{-1} .$$}
+$$E:=\SL_2(\mathbb{Z})\textbackslash (\mathcal{H} \times \mathbb{C})/\mathbb{Z}^2 \qquad \gamma(\tau,z):= (\gamma \tau,\frac{z}{c\tau +d}) \quad (m,n)(\tau,z):=(\tau, z+m\tau+n)$$
 这个空间鼓励我们通过整体的方式来看问题,让我们回顾Weierstrass函数$\wp(z,\tau):= \wp_{\Lambda_{\tau}}(z)$,发现它可以视作两个变元的函数,并且它的Laurent展开
 $$\wp(z,\tau)=\frac{1}{z^2}+ \sum_{k=1}^{\infty}(2k+1) G_{2(k+1)}(\tau)z^{2k}$$
 中的系数即是经典的模形式.或许作为Weierstrass函数也可以称作某种特殊的模形式?在下一节我们将给出Weierstrass函数的一系列``同类"——$\theta$-函数,它们被统称为Jacobi模形式.
@@ -111,10 +112,10 @@ $$\wp(z,\tau)=\frac{1}{z^2}+ \sum_{k=1}^{\infty}(2k+1) G_{2(k+1)}(\tau)z^{2k}$$
 %Jacobi模形式的定义
 
 \subsection{级结构}
-下一步,我们要推广模形式的定义,考虑复环面的级结构,将级从$SL_2(\mathbb{Z})$推广到同余子群
+下一步,我们要推广模形式的定义,考虑复环面的级结构,将级从$\SL_2(\mathbb{Z})$推广到同余子群
 $$\Gamma(N):=\left\{ \begin{pmatrix}
 a &b \\ c & d
-\end{pmatrix} \in SL_2(\mathbb{Z}) \;\middle|\; \begin{pmatrix}
+\end{pmatrix} \in \SL_2(\mathbb{Z}) \;\middle|\; \begin{pmatrix}
 a &b \\ c & d
 \end{pmatrix} \equiv \begin{pmatrix}
 1 &0 \\ 0 & 1
@@ -122,20 +123,20 @@ a &b \\ c & d
 上. (还记得上章末尾留的任务吗?)简要一提,这个群有一个经典的正合列: ($N>3$)
 \begin{center}
 	\begin{tikzcd}
-		1 \arrow[r]           & \Gamma(N) \arrow[r]             & PSL_2(\mathbb{Z}) \arrow[r]   & PSL_2(\mathbb{Z}/N\mathbb{Z}) \arrow[r] & 1 
+		1 \arrow[r]           & \Gamma(N) \arrow[r]             & \PSL_2(\mathbb{Z}) \arrow[r]   & \PSL_2(\mathbb{Z}/N\mathbb{Z}) \arrow[r] & 1 
 	\end{tikzcd}
 \end{center}
 
 我们定义$\mathcal{H}/\Gamma(N)$的尖点为$\mathbb{PQ}^1 /\Gamma(N)$,有一些不太显然的性质\footnote{参考\cite[练习1.4.14,2.5,例4.2.2]{Li2019modularform}}:
 \begin{itemize}
 	\item 我们有群的阶数
-	$$\mu(N):= \# \,PSL_2(N) =\begin{cases}\displaystyle
+	$$\mu(N):= \# \,\PSL_2(N) =\begin{cases}\displaystyle
 	\frac{N^3}{2} \prod_{p \mid N}(1-p^{-2}), & N>2\\
 	6, & N=2
 	\end{cases}$$
 	\item $N>1$时, $\Gamma(N)$无椭圆点,复叠映射$\mathcal{H} \longrightarrow\mathcal{H}/\Gamma(N)$为非分歧映射; $\mathcal{H}/\Gamma(N)$在标准双曲度量下面积为
 	$\frac{\pi}{3} \mu$.
-	\item $\Gamma(1)=SL_2(\mathbb{Z})$在$\mathbb{PQ}^1$上的作用可递,故$\mathcal{H}/\Gamma(1)$的尖点为独点集,记为$\infty$.
+	\item $\Gamma(1)=\SL_2(\mathbb{Z})$在$\mathbb{PQ}^1$上的作用可递,故$\mathcal{H}/\Gamma(1)$的尖点为独点集,记为$\infty$.
 	\item 模空间$\mathcal{H}/\Gamma(N)$加入所有尖点后成为紧黎曼面,亏格为
 	$$g(N)=\begin{cases}\displaystyle
 	1+ \frac{N^2(N-6)}{24} \prod_{p \mid N}(1-p^{-2}), & N >2\\
@@ -156,7 +157,7 @@ a &b \\ c & d
 \end{itemize}
 	在之后,我们记$Y(\Gamma(N)):= \mathcal{H}/\Gamma(N)$, $X(\Gamma(N))$为$Y(\Gamma(N))$紧化后得到的复黎曼面.
 \begin{remark}
-	类似于$\mathcal{H}/SL_2(\mathbb{Z})$,可以证明$Y(\Gamma(N))$分类了对象
+	类似于$\mathcal{H}/\SL_2(\mathbb{Z})$,可以证明$Y(\Gamma(N))$分类了对象
 	$$(\Lambda, \alpha: (\mathbb{Z}/N\mathbb{Z})^2\overset{\sim}{\longrightarrow} E_{\Lambda}[N] )/\sim$$
 	其中$E_{\Lambda}[N]:=\left\{ z \in \mathbb{C}/\Lambda \middle| Nz=0 \right\}$, $\alpha$需要满足Drinfeld条件：存在$P,Q \in \frac{1}{N}\Lambda$使得
 	$$\bar{P}=\alpha(1,0),\quad \bar{Q}=\alpha(0,1),\quad \Lambda=\mathbb{Z}P \oplus \mathbb{Z}Q,\quad \Img \frac{P}{Q}>0.$$
@@ -243,7 +244,7 @@ a &b \\ c & d
 
 \footnotetext{$\gamma=\left(\begin{smallmatrix}
 	a & b\\ c & d
-	\end{smallmatrix}\right) \in SL_2(\mathbb{Z})$}
+	\end{smallmatrix}\right) \in \SL_2(\mathbb{Z})$}
 \subsubsection{方程相关公式}
 \begin{gather*}
 \intertext{函数方程:($\theta$-函数的另一种定义)固定$\tau$, $\chi$,令$f(z):=\theta \normalcharacter(z,\tau)$,则}
@@ -402,10 +403,10 @@ $$\exp \pi i \left\{ -cz^2\gamma'(\tau)^{\frac{1}{2}} \right\}\theta[\chi](z\gam
 		\item $\gamma \in \Gamma(N)$固定$X_0(N)$中的每个点.
 		\item 设$\gamma \in \Gamma(1)$固定$X_0(N)$中的每个点,则$\gamma \in \pm\Gamma(N)$.
 		%		\item 记$\Perm(X_0(N))$为$X_0(N)$的置换群,我们有群嵌入\vspace{-0.6cm}
-		%		$$PSL_2(\mathbb{Z}/N\mathbb{Z}) \cong SL_2(\mathbb{Z})/\pm\Gamma(N) \hookrightarrow \Perm(X_0(N))$$\\[-1.8cm]
+		%		$$\PSL_2(\mathbb{Z}/N\mathbb{Z}) \cong \SL_2(\mathbb{Z})/\pm\Gamma(N) \hookrightarrow \Perm(X_0(N))$$\\[-1.8cm]
 		%		$\,$
 		\item 记$\Perm(X_0(N))$为$X_0(N)$的置换群,我们有群嵌入
-		$$PSL_2(\mathbb{Z}/N\mathbb{Z}) \cong SL_2(\mathbb{Z})/\pm\Gamma(N) \hookrightarrow \Perm(X_0(N))$$
+		$$\PSL_2(\mathbb{Z}/N\mathbb{Z}) \cong \SL_2(\mathbb{Z})/\pm\Gamma(N) \hookrightarrow \Perm(X_0(N))$$
 		\item 设$N>1$,则对每个$\chi \in X_0(N)$, $\theta[\chi]:=\theta[\chi](0,-)$为权$1/2$,特征为$\bigchi$的模形式,其中$\bigchi^{8k} \equiv 1 $.
 	\end{enumerate}
 	
@@ -533,7 +534,7 @@ $$\Psi: \mathbb{Q}^*/\Gamma(k) \longrightarrow \mathbb{Q}^*/\Gamma_0(k)$$
 将尖点分成两类，其中
 $$\Gamma_0(k):=\left\{ \begin{pmatrix}
 a &b \\ c & d
-\end{pmatrix} \in SL_2(\mathbb{Z}) \;\middle|\; \begin{pmatrix}
+\end{pmatrix} \in \SL_2(\mathbb{Z}) \;\middle|\; \begin{pmatrix}
 a &b \\ c & d
 \end{pmatrix} \equiv \begin{pmatrix}
 * & * \\ 0 & *
@@ -541,7 +542,7 @@ a &b \\ c & d
 对偶地定义
 $$\Gamma^0(k):=\left\{ \begin{pmatrix}
 a & b \\ c & d
-\end{pmatrix} \in SL_2(\mathbb{Z}) \;\middle|\; \begin{pmatrix}
+\end{pmatrix} \in \SL_2(\mathbb{Z}) \;\middle|\; \begin{pmatrix}
 a & b \\ c & d
 \end{pmatrix} \equiv \begin{pmatrix}
 * & 0 \\ * & *
@@ -858,7 +859,7 @@ $$\frac{f_2}{f_1^2}= \omega_7^{-1}\frac{f_0^2}{f_1}+\omega_7^2$$
 亦即
 $$\phi_2\phi_0^3=\omega_7^{-1}\phi_0\phi_1^3 +\omega_7^{2}\phi_1\phi_2^3$$
 在线性变换
-$$X=\omega_7^4\varphi_0, \qquad Y=\varphi_1, \qquad Z= \varphi_2,$$之后得到极其优美的方程$$X^3Y+Y^3Z+Z^3X=0.$$可以直接验证这个方程确定的曲面确实是亏格为$3$的光滑的黎曼面，并且具有丰富的对称性: $\Gamma(1)/\Gamma(7) \cong PSL_2(\mathbb{F}_7)$是它的自同构群，阶数为168.史称该曲线为Klein四次曲线。
+$$X=\omega_7^4\varphi_0, \qquad Y=\varphi_1, \qquad Z= \varphi_2,$$之后得到极其优美的方程$$X^3Y+Y^3Z+Z^3X=0.$$可以直接验证这个方程确定的曲面确实是亏格为$3$的光滑的黎曼面，并且具有丰富的对称性: $\Gamma(1)/\Gamma(7) \cong \PSL_2(\mathbb{F}_7)$是它的自同构群，阶数为168.史称该曲线为Klein四次曲线。
 \nocite{nash2014klein}\nocite{hilton1991catalan}\nocite{duke2005continued}
 \nocite{green1978on}\nocite{klein1892vorlesungen}\nocite{fricke1897vorlesungen}\nocite{shimura1971introduction}\nocite{shurman1997geometry}\nocite{anvari2009automorphisms}\nocite{mumford1995algebraic}
 %然后第三节写一下用$\theta$函数来构造主同余子群的模形式(显然!)将特征的等价类与尖点、$\pm \textbackslash(\mathbb{Z}/N\mathbb{Z})^2_{\prim}$联系起来,构造特殊的模形式.
