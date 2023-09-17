@@ -339,7 +339,7 @@
 \date{\today}
 
 \title
-{\LaTeX\;Template
+{a crash introduction to Langlands Correspondence
 }
 \author{Xiaoxiang Zhou}
 \address{School of Mathematical Sciences\\
@@ -347,141 +347,19 @@ University of Bonn\\
 Bonn, 53115\\ Germany\\} 
 \email{email:xx352229@mail.ustc.edu.cn}
 
-
+\begin{abstract}
+In these notes, we explore various versions of the Langlands correspondence, placing particular emphasis on modular forms, automorphic forms, and automorphic representations.
+\end{abstract}
 \maketitle
 \tableofcontents
 
 
 \section{Introduction}
-This is a document for beginning with ease. Sometimes I felt disturbed by the structures of the \LaTeX\;document. I don't know how to reset the arranges among paragraphs, and some environments crash with each other.
+These notes represent a faithful record of my talk at KleinAG. I have intentionally omitted sections that were not addressed during the actual presentation, making these notes somewhat incomplete. Readers may refer to my handwritten notes for a more expressive and detailed account.
 
-中文尝试
+I want to acknowledge that there is nothing original in my presentation. I appreciate the organizers, the attentive audience, and fellow speakers for helping identify my mistakes. Please feel free to continue pointing out any more errors or issues.
 
-$\Rep$ 
-$\Irr$
-$ \Adm \Char$
-$ \WDrep$
-$ \Acusp$
-
-The structure of documents:
-\begin{enumerate}
-\item document class;
-\item packages;
-\item symbols, containing math operators and other symbols;
-\item global settings;
-\item blocks for special features;
-\end{enumerate}
-\begingroup
-\renewcommand{\arraystretch}{1.2}
-
-% https://q.uiver.app/?q=WzAsMTAsWzAsMCwiXFxSZXBfe1xcTGFtYmRhfShLWikiXSxbMCwxLCJcXFJlcF97XFxMYW1iZGF9KEtaKV8wIl0sWzAsMiwiXFxtYXRoY2Fse0J9Il0sWzEsMiwiXFxtYXRoY2Fse0N9Il0sWzAsMywiXFxtYXRoY2Fse0J9XzEiXSxbMSwzLCJcXG1hdGhjYWx7Q31fMSciXSxbMSwwLCJcXFJlcF97XFxMYW1iZGF9KEcpIl0sWzEsMSwiXFxSZXBfe1xcTGFtYmRhfShHKV8wIl0sWzIsMywiXFxNb2QoXFxHYW1tYV97XFxwaV8xfSkiXSxbMywzLCJcXG1hdGhjYWx7Q31fMSJdLFs0LDUsIlxcc2ltIl0sWzIsMywiXFxzaW0gXFx0ZXh0e2ZvciBmLmwufSJdLFsxLDddLFswLDYsIlxcY0luZF97S1p9XntHfSJdLFsxLDAsIlxcc3Vic2V0IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIsMSwiXFxzdWJzZXQiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMyw3LCJcXHN1YnNldCIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs3LDYsIlxcc3Vic2V0IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzQsMiwiXFxzdWJzZXQiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNSwzLCJcXHN1YnNldCIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs1LDgsIlxcY29uZyIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs4LDksIlxcY29uZyIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs5LDcsIlxcc3Vwc2V0IiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XV0=
-\[\begin{tikzcd}[column sep={between origins, 12mm},row sep=small]
-	{\Rep_{\Lambda}(KZ)} & [37mm]{\Rep_{\Lambda}(G)} \\
-	{\Rep_{\Lambda}(KZ)_0} & {\Rep_{\Lambda}(G)_0} &&[7mm]\\
-	{\mathcal{B}} & {\mathcal{C}} \\
-	{\mathcal{B}_1} & {\mathcal{C}_1'} & {\!\!\End_G(\Pi_1)\Modr} & {\mathcal{C}_1}
-	\arrow["\sim", from=4-1, to=4-2]
-	\arrow["{\sim \text{ for f.l.}}", from=3-1, to=3-2]
-	\arrow[from=2-1, to=2-2]
-	\arrow["{\cInd_{KZ}^{G}}", from=1-1, to=1-2]
-	\arrow["\subset"{description}, sloped, draw=none, from=2-1, to=1-1]
-	\arrow["\subset"{description}, sloped, draw=none, from=3-1, to=2-1]
-	\arrow["\subset"{description}, sloped, draw=none, from=3-2, to=2-2]
-	\arrow["\subset"{description}, sloped, draw=none, from=2-2, to=1-2]
-	\arrow["\subset"{description}, sloped, draw=none, from=4-1, to=3-1]
-	\arrow["\subset"{description}, sloped, draw=none, from=4-2, to=3-2]
-	\arrow["\cong"{description}, draw=none, from=4-2, to=4-3]
-	\arrow["\cong"{description}, draw=none, from=4-3, to=4-4]
-	\arrow["\supset"{sloped}, hook', from=4-4, to=2-2]
-\end{tikzcd}\]
-
-\begin{table}[ht]
-\centering
-\[
-\begin{array}{c|c|c|c|c|c|c|c}
-\hline
-M                      & M(1) & M(2) & M(3) & M(4) & M(5) & M(6)  & \href{http://oeis.org}{OEIS} \\ \hline
-\Com                   & 1    & 1    & 1    & 1    & 1    & 1     &      \\ \hline
-\Ass                   & 1    & 2    & 6    & 24   & 120  & 720   &      \\ \hline
-\Lie                   & 1    & 1    & 2    & 6    & 24   & 120   &      \\ \hline
-\mathcal{T}(E_{\Com})  & 1    & 1    & 3    & 15   & 105  & 945   &  \href{http://oeis.org/A001147}{A001147}    \\ \hline
-\mathcal{T}(E_{\Ass})  & 1    & 2    & 12   & 120  & 1680 & 30240 & \href{http://oeis.org/A001813}{A001813}     \\ \hline
-\mathcal{T}(E_{\Lie})  & 1    & 1    & 3    & 15   & 105  & 945   & \href{http://oeis.org/A001147}{A001147}     \\ \hline
-\left(R_{\Com}\right)  & 0    & 0    & 2    & 14   & 104  & 944   &      \\ \hline
-\left(R_{\Ass}\right)  & 0    & 0    & 6    & 96   & 1560 & 29520 &      \\ \hline
-\left(R_{\Ass}\right)  & 0    & 0    & 1    & 9    & 81   & 825   &      \\ \hline
-\calEnd_{\mathbb{C}^k} & k^2  & 2k^2 & 3k^2 & 4k^2 & 5k^2 & 6k^2  &      \\ \hline
-\Com \circ \Lie        &      &      &      &      &      &       &      \\ \hline
-\vdots                 &      &      &      &      &      &       &      \\ \hline
-                       &      &      &      &      &      &       &      \\ \hline
-                       &      &      &      &      &      &       &      \\ \hline
-\end{array}
-\]
-\end{table}
-\endgroup
-\section{Examples}
-\subsection{Theorem environment}
-\begin{theorem}[{see \cite[Theorem 18.5.1]{vakil2017rising}}]
-内容...
-\end{theorem}
-
-\begin{setting}
-内容...
-\end{setting}
-
-\begin{definition}
-内容...
-\end{definition}
-
-\begin{lemma}
-内容...
-\end{lemma}
-
-\begin{proposition}
-内容...
-\end{proposition}
-
-\begin{corollary}
-内容...
-\end{corollary}
-\begin{conjecture}
-内容...
-\end{conjecture}
-\begin{claim}
-内容...
-\end{claim}
-\begin{eg}
-内容...
-\end{eg}
-\begin{ex}
-内容...
-\end{ex}
-\begin{fact}
-内容...
-\end{fact}
-\begin{ques}
-内容...
-\end{ques}
-\begin{warning}
-内容...
-\end{warning}
-\begin{bbox}
-内容...
-\end{bbox}
-\begin{notation}
-内容...
-\end{notation}
-
-\begin{remark}
-内容...
-\end{remark}
-
-\begin{remarks}\
-\begin{enumerate}[1.]
-\item ...
-\item ...
-\end{enumerate}
-\end{remarks}
+Introducing the Langlands correspondence can often be a challenging and intricate endeavor. It encompasses numerous versions, spanning from local to global, from one dimension to $n$ dimensions, and from $\GL_n$ to non-split groups. Today's talk is structured into four parts, each focusing on a specific version of Langlands correspondence, as outlined below:
 
 \include{chapters/chapter9}
 

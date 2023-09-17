@@ -1,7 +1,7 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  17 SEP 2023 13:05
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  17 SEP 2023 13:27
 entering extended mode
-**./LaTeX_template.tex
-(LaTeX_template.tex
+**./KleinAG_talk2_LC_XiaoxiangZhou.tex
+(KleinAG_talk2_LC_XiaoxiangZhou.tex
 LaTeX2e <2018-12-01>
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amscls\ams
@@ -1541,8 +1541,8 @@ Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 LaTeX Warning: Unused global option(s):
     [UTF8].
 
-(LaTeX_template.aux (chapters/chapter9.aux))
-\openout1 = `LaTeX_template.aux'.
+(KleinAG_talk2_LC_XiaoxiangZhou.aux (chapters/chapter9.aux))
+\openout1 = `KleinAG_talk2_LC_XiaoxiangZhou.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 336.
 LaTeX Font Info:    ... okay on input line 336.
@@ -1612,9 +1612,10 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 336.
 LaTeX Info: Redefining \pageref on input line 336.
 LaTeX Info: Redefining \nameref on input line 336.
- (LaTeX_template.out) (LaTeX_template.out)
+ (KleinAG_talk2_LC_XiaoxiangZhou.out)
+(KleinAG_talk2_LC_XiaoxiangZhou.out)
 \@outlinefile=\write4
-\openout4 = `LaTeX_template.out'.
+\openout4 = `KleinAG_talk2_LC_XiaoxiangZhou.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: longtable package is loaded.
@@ -1658,13 +1659,9 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-
-LaTeX Font Warning: Font shape `U/wasy/b/n' in size <7> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 352.
-
-(LaTeX_template.toc)
+(KleinAG_talk2_LC_XiaoxiangZhou.toc)
 \tf@toc=\write5
-\openout5 = `LaTeX_template.toc'.
+\openout5 = `KleinAG_talk2_LC_XiaoxiangZhou.toc'.
 
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek
@@ -1672,67 +1669,35 @@ LaTeX Font Warning: Font shape `U/wasy/b/n' in size <7> not available
 File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 
 )
-Missing character: There is no 中 in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 文 in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 尝 in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 试 in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 内 in font [lmroman10-italic]:mapping=tex-text;!
-Missing character: There is no 容 in font [lmroman10-italic]:mapping=tex-text;!
-Missing character: There is no 内 in font [lmroman10-italic]:mapping=tex-text;!
-Missing character: There is no 容 in font [lmroman10-italic]:mapping=tex-text;!
-Missing character: There is no 内 in font [lmroman10-italic]:mapping=tex-text;!
-Missing character: There is no 容 in font [lmroman10-italic]:mapping=tex-text;!
-Missing character: There is no 内 in font [lmroman10-italic]:mapping=tex-text;!
-Missing character: There is no 容 in font [lmroman10-italic]:mapping=tex-text;!
-Missing character: There is no 内 in font [lmroman10-italic]:mapping=tex-text;!
-Missing character: There is no 容 in font [lmroman10-italic]:mapping=tex-text;!
-Missing character: There is no 内 in font [lmroman10-italic]:mapping=tex-text;!
-Missing character: There is no 容 in font [lmroman10-italic]:mapping=tex-text;!
-Missing character: There is no 内 in font [lmroman10-italic]:mapping=tex-text;!
-Missing character: There is no 容 in font [lmroman10-italic]:mapping=tex-text;!
- [1]
-Missing character: There is no 内 in font [lmroman10-italic]:mapping=tex-text;!
-Missing character: There is no 容 in font [lmroman10-italic]:mapping=tex-text;!
-Missing character: There is no 内 in font [lmroman10-italic]:mapping=tex-text;!
-Missing character: There is no 容 in font [lmroman10-italic]:mapping=tex-text;!
-Missing character: There is no 内 in font [lmroman10-italic]:mapping=tex-text;!
-Missing character: There is no 容 in font [lmroman10-italic]:mapping=tex-text;!
-Missing character: There is no 内 in font [lmroman10-italic]:mapping=tex-text;!
-Missing character: There is no 容 in font [lmroman10-italic]:mapping=tex-text;!
-Missing character: There is no 内 in font [lmroman10-italic]:mapping=tex-text;!
-Missing character: There is no 容 in font [lmroman10-italic]:mapping=tex-text;!
-Missing character: There is no 内 in font [lmroman10-italic]:mapping=tex-text;!
-Missing character: There is no 容 in font [lmroman10-italic]:mapping=tex-text;!
-Missing character: There is no 内 in font [lmroman10-italic]:mapping=tex-text;!
-Missing character: There is no 容 in font [lmroman10-italic]:mapping=tex-text;!
-Missing character: There is no 内 in font [lmroman10-italic]:mapping=tex-text;!
-Missing character: There is no 容 in font [lmroman10-italic]:mapping=tex-text;!
-Missing character: There is no 内 in font [lmroman10-regular]:mapping=tex-text;!
-Missing character: There is no 容 in font [lmroman10-regular]:mapping=tex-text;!
- [2]
+
+LaTeX Font Warning: Font shape `U/wasy/b/n' in size <7> not available
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 362.
+
+[1]
 \openout2 = `chapters/chapter9.aux'.
 
- (chapters/chapter9.tex) (LaTeX_template.bbl)
-[3
+ (chapters/chapter9.tex) (KleinAG_talk2_LC_XiaoxiangZhou.bbl) [2
 
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 494.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 494.
- (LaTeX_template.aux (chapters/chapter9.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 494.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 494.
-Package rerunfilecheck Info: File `LaTeX_template.out' has not changed.
-(rerunfilecheck)             Checksum: 4EDAAE8BE90042910C380D5A8C2BA143.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 494.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 372.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 372.
+
+(KleinAG_talk2_LC_XiaoxiangZhou.aux (chapters/chapter9.aux))
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 372.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 372.
+Package rerunfilecheck Info: File `KleinAG_talk2_LC_XiaoxiangZhou.out' has not 
+changed.
+(rerunfilecheck)             Checksum: E571EA1F92143202AFFB31C5A206642E.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 372.
  ) 
 Here is how much of TeX's memory you used:
- 36834 strings out of 427748
- 683917 string characters out of 3150981
- 746330 words of memory out of 3000000
- 40166 multiletter control sequences out of 15000+200000
- 544197 words of font info for 79 fonts, out of 3000000 for 9000
+ 36621 strings out of 427748
+ 678799 string characters out of 3150981
+ 724819 words of memory out of 3000000
+ 39959 multiletter control sequences out of 15000+200000
+ 544173 words of font info for 76 fonts, out of 3000000 for 9000
  1489 hyphenation exceptions out of 8191
- 61i,16n,82p,1416b,1007s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 61i,6n,82p,988b,443s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on LaTeX_template.pdf (3 pages).
+Output written on KleinAG_talk2_LC_XiaoxiangZhou.pdf (2 pages).
