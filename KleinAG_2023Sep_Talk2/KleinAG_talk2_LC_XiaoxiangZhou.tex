@@ -52,7 +52,7 @@
 
 %%%packages for commutative diagrams
 \usepackage{tikz-cd}
-%\usepackage{quiver}			% see https://q.uiver.app/
+\usepackage{quiver}			% see https://q.uiver.app/
 
 %%%packages for pictures
 \usepackage[width=0.5,tiewidth=0.7]{strands}
@@ -160,6 +160,7 @@
 \DeclareMathOperator{\ord}{\operatorname{ord}}
 \DeclareMathOperator{\gr}{\operatorname{gr}}
 \DeclareMathOperator{\Frac}{\operatorname{Frac}}
+\DeclareMathOperator{\Gal}{\operatorname{Gal}}
 
 %%%symbols for basic geometries
 \DeclareMathOperator{\vol}{\operatorname{vol}}	%volume
@@ -256,7 +257,7 @@
 
 
 \DeclareMathOperator{\Modr}{\operatorname{-Mod}}
-
+\DeclareMathOperator{\alg}{\operatorname{alg}}
 
 
 
@@ -360,7 +361,56 @@ These notes represent a faithful record of my talk at KleinAG. I have intentiona
 I want to acknowledge that there is nothing original in my presentation. I appreciate the organizers, the attentive audience, and fellow speakers for helping identify my mistakes. Please feel free to continue pointing out any more errors or issues.
 
 Introducing the Langlands correspondence can often be a challenging and intricate endeavor. It encompasses numerous versions, spanning from local to global, from one dimension to $n$ dimensions, and from $\GL_n$ to non-split groups. Today's talk is structured into four parts, each focusing on a specific version of Langlands correspondence, as outlined below:
+%https://tex.stackexchange.com/questions/289295/column-alignment-in-tikzcd
 
+% https://q.uiver.app/#q=WzAsOCxbMCwwLCJcXElycl97XFxtYXRoYmJ7Q319XFxsZWZ0KFxcR0xfbihGKVxccnVsZXswbW19ezMuMG1tfVxccmlnaHQpIl0sWzEsMCwiXFxXRHJlcF97XFxzdWJzdGFja3tuXFx0ZXh0ey1cXCF9XFxkaW0gXFxcXCBcXHRleHR7RnJvYiBzc319fShXX0YpIl0sWzAsMSwiXFxDaGFyX3tcXG1hdGhiYntDfSwgXFxhbGd9IFxcIVxcbGVmdChGXntcXHRpbWVzfSBcXGJhY2tzbGFzaCBcXG1hdGhiYntBfV9GXntcXHRpbWVzfSBcXHJpZ2h0KSJdLFsxLDEsIlxcQ2hhcl97XFxiYXJ7XFxtYXRoYmJ7UX19X3B9XFwhIFxcbGVmdChcXEdhbW1hIFxccmlnaHQpICsgXFx0ZXh0e2RlIFJoYW19Il0sWzAsMiwiXFxQaV97XFxBY3VzcCxrLFxcZXRhfSBcXCFcXGxlZnQoXFxHTF8yKFxcbWF0aGJie0F9X3tcXG1hdGhiYntRfX0pIFxccnVsZXswbW19ezMuMG1tfVxccmlnaHQpIl0sWzEsMiwiXFxJcnJfe1xcYmFye1xcbWF0aGJie1F9fV9wLCAyXFx0ZXh0ey1cXCF9XFxkaW19XFwhIFxcbGVmdChcXEdhbW1hIFxccmlnaHQpICsgXFx0ZXh0e21vZHVsYXJ9Il0sWzAsMywiXFxQaV97XFxBY3VzcCxrLFxcZXRhfSBcXCFcXGxlZnQoR19EKFxcbWF0aGJie0F9X3tcXG1hdGhiYntRfX0pIFxccnVsZXswbW19ezMuMG1tfVxccmlnaHQpIl0sWzEsMywiXFxjZG90cyJdLFswLDEsIjE6MSIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6ImFycm93aGVhZCJ9fX1dLFsyLDMsIjE6MSIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6ImFycm93aGVhZCJ9fX1dLFs0LDUsIkVTIl0sWzYsN11d
+\[\begin{tikzcd}[column sep=3.15em,row sep=0mm
+    ,/tikz/column 1/.append style={anchor=base east}
+    ,/tikz/column 2/.append style={anchor=base west}
+    ]
+	{\Irr_{\mathbb{C}}\left(\GL_n(F)\rule{0mm}{3.0mm}\right)} & {\WDrep_{\substack{n\text{-\!}\dim \\ \text{Frob ss}}}(W_F)} \\
+	{\Char_{\mathbb{C}, \alg} \!\left(F^{\times} \backslash \mathbb{A}_F^{\times} \right)} & {\Char_{\bar{\mathbb{Q}}_p}\! \left(\Gamma \right) \hspace{4.3mm} + \text{de Rham}} \\
+	{\Pi_{\Acusp,k,\eta} \!\left(\GL_2(\mathbb{A}_{\mathbb{Q}}) \rule{0mm}{3.0mm}\right)} & {\Irr_{\bar{\mathbb{Q}}_p, 2\text{-\!}\dim}\! \left(\Gamma \right) + \text{modular}} \\
+	{\Pi_{\Acusp,k,\eta} \!\left(G_D(\mathbb{A}_{\mathbb{Q}}) \rule{0mm}{3.0mm}\right)} & \hspace{7mm}\cdots
+	\arrow["{1:1}", tail reversed, from=1-1, to=1-2]
+	\arrow["{1:1}", tail reversed, from=2-1, to=2-2]
+	\arrow["ES", from=3-1, to=3-2]
+	\arrow[from=4-1, to=4-2]
+\end{tikzcd}\]
+
+Before discussing these correspondings, let us fix some notations.
+
+\begin{setting}$\,$
+
+In Section \ref{sec:NALLC}, $F$ is a non-Archimedean local field with integral ring $O_F$ and residue field $\kappa_F$. Within this context, we also make use of the absolute Galois group $\Gamma_F$ and the Weil group $W_F$ associated with $F$.
+
+Moving on to Section \ref{sec:GLC_dim1}, we shift our focus to a number field, still denoted as $F$, with its integral ring denoted as $O_F$. For each place $v$ of $F$, we equip with three complete local rings, namely, $O_v$, $F_v$ and $\kappa_v$. The absolute Galois group of $F$ remains denoted as $\Gamma_F$.
+
+We will use the following abbreviations for representations:
+
+\begin{table}[]
+\centering
+\begin{tabular}{|c|r|}
+$\Rep$ & smooth representation \\
+$\Irr$ & irreducible smooth representation \\
+$\Pi$ &\hspace{5mm} admissible irreducible smooth representation \\
+$\Char$ & $1$-dim smooth representation \\
+$\WDrep$ & Weil--Deligne representation \\
+$\Acusp$ & cuspidal automorphic form \\
+\end{tabular}
+\end{table}
+
+\end{setting}
+
+For the definition of smooth/irreducible/admissible/Weil--Deligne representation, see [???] or (partially)[???].
+
+\section{non-Archimedean local field case}\label{sec:NALLC}
+
+Read [???$GL_n$-case]. You may assume $F=\mathbb{Q}_p$ if you are not familiar with local fields.
+
+In this instance, the Langlands correspondence is notably explicit, allowing for the classification of representations on both sides. Notably, it simplifies to a linear algebra task when considering the L-parameters of $\GL_{2,\mathbb{R}}$.
+
+\section{global Langlands correspondence , $n=1$}\label{sec:GLC_dim1}
 \include{chapters/chapter9}
 
 \nocite{Eberhardt2022Koszul}	% cite articles which are not cited in the document yet
