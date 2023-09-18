@@ -1,4 +1,10 @@
 \contentsline {section}{\tocsection {}{1}{Introduction}}{1}{section.1}% 
-\contentsline {section}{\tocsection {}{2}{non-Archimedean local field case}}{2}{section.2}% 
-\contentsline {section}{\tocsection {}{3}{global Langlands correspondence , $n=1$}}{2}{section.3}% 
-\contentsline {section}{\tocsection {}{}{References}}{3}{section*.3}% 
+\contentsline {section}{\tocsection {}{2}{Non-Archimedean Local Field Case}}{2}{section.2}% 
+\contentsline {section}{\tocsection {}{3}{Global Langlands Correspondence, $n=1$}}{2}{section.3}% 
+\contentsline {section}{\tocsection {}{4}{Adèlic Modular Forms}}{2}{section.4}% 
+\contentsline {subsection}{\tocsubsection {}{4.1}{Moduli space}}{2}{subsection.4.1}% 
+\contentsline {subsection}{\tocsubsection {}{4.2}{Automorphic forms and automorphic representations}}{2}{subsection.4.2}% 
+\contentsline {subsection}{\tocsubsection {}{4.3}{Global Langlands correspondence for $\GL _{2,F}$}}{2}{subsection.4.3}% 
+\contentsline {section}{\tocsection {}{5}{Adèlic Modular Forms on Quaternion Algebras}}{2}{section.5}% 
+\contentsline {subsection}{\tocsubsection {}{5.1}{Quaternion algebras}}{2}{subsection.5.1}% 
+\contentsline {section}{\tocsection {}{}{References}}{2}{section*.3}% 

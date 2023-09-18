@@ -258,9 +258,9 @@
 
 \DeclareMathOperator{\Modr}{\operatorname{-Mod}}
 \DeclareMathOperator{\alg}{\operatorname{alg}}
-
-
-
+\DeclareMathOperator{\ab}{\operatorname{ab}}
+\DeclareMathOperator{\ur}{\operatorname{ur}}
+\DeclareMathOperator{\Art}{\operatorname{Art}}
 
 %%%%%%%newcommand
 
@@ -356,7 +356,7 @@ In these notes, we explore various versions of the Langlands correspondence, pla
 
 
 \section{Introduction}
-These notes represent a faithful record of my talk at KleinAG. I have intentionally omitted sections that were not addressed during the actual presentation, making these notes somewhat incomplete. Readers may refer to my handwritten notes for a more expressive and detailed account.
+These notes represent a faithful record of my talk at KleinAG. I have intentionally omitted sections that were not addressed during the actual presentation, making these notes somewhat incomplete. Readers may refer to my handwritten notes \cite{weeklyupdate} for a more expressive and detailed account.
 
 I want to acknowledge that there is nothing original in my presentation. I appreciate the organizers, the attentive audience, and fellow speakers for helping identify my mistakes. Please feel free to continue pointing out any more errors or issues.
 
@@ -402,18 +402,40 @@ $\Acusp$ & cuspidal automorphic form \\
 
 \end{setting}
 
-For the definition of smooth/irreducible/admissible/Weil--Deligne representation, see [???] or (partially)[???].
+For the definition of smooth/irreducible/admissible/Weil--Deligne representation, see \cite{zbMATH07686814} or (partially)\cite[\href{https://github.com/ramified/personal_handwritten_collection/raw/main/weeklyupdate/2022.04.17_preliminary_facts_of_reps_of_p-adic_groups.pdf}{22.04.17}]{weeklyupdate}.
 
-\section{non-Archimedean local field case}\label{sec:NALLC}
+\section{Non-Archimedean Local Field Case}\label{sec:NALLC}
 
-Read [???$GL_n$-case]. You may assume $F=\mathbb{Q}_p$ if you are not familiar with local fields.
+Read \cite[\href{https://github.com/ramified/personal_handwritten_collection/raw/main/Langlands/GL_case.pdf}{$\GL_n$-case}]{weeklyupdate}. You may assume $F=\mathbb{Q}_p$ if you are not familiar with local fields.
 
 In this instance, the Langlands correspondence is notably explicit, allowing for the classification of representations on both sides. Notably, it simplifies to a linear algebra task when considering the L-parameters of $\GL_{2,\mathbb{R}}$.
 
-\section{global Langlands correspondence , $n=1$}\label{sec:GLC_dim1}
-\include{chapters/chapter9}
+\section{Global Langlands Correspondence, $n=1$}\label{sec:GLC_dim1}
 
-\nocite{Eberhardt2022Koszul}	% cite articles which are not cited in the document yet
+In order to state global Langlands correspondence, we need adèle and idèle which collects all local information. A short introduction of adèle and idèle can be found in A.
+
+Observe that
+$$\mathbb{Q}^{\times} \backslash \raisebox{1mm}{$\mathbb{A}_{\mathbb{Q}}^{\times}$} /\, \mathbb{R}_{>0} \;\cong\; \widehat{\mathbb{Z}}^{\times} \;\cong\; \Gal \left( \mathbb{Q}^{\ab}/\mathbb{Q} \right) \!:= \Gamma_{\mathbb{Q}}^{\ab}.$$
+In fact, we have Artin reciprocity:
+$$\Art : \raisebox{-1mm}{$F^{\times}$} \backslash \raisebox{1mm}{$\mathbb{A}_{F}^{\times}$} /\, \raisebox{-1mm}{$\overline{\left(F_{\infty}^{\times}\right)^{\circ}}$} \;\cong\; \Gamma_{F}^{\ab},$$
+which gives us global Langlands correspondence for $n=1$:
+
+For more information about the twist, see \cite[\href{https://github.com/ramified/personal_handwritten_collection/blob/main/Langlands/3.1_Galois_representation.pdf}{Galois representation}]{weeklyupdate}.(???Wait for updating)
+
+\section{Adèlic Modular Forms}
+
+\subsection{Moduli space}
+
+\subsection{Automorphic forms and automorphic representations}
+
+\subsection{Global Langlands correspondence for $\GL_{2,F}$}
+
+\section{Adèlic Modular Forms on Quaternion Algebras}
+
+\subsection{Quaternion algebras}
+%\include{chapters/chapter9}
+
+%\nocite{Eberhardt2022Koszul}	% cite articles which are not cited in the document yet
 
 % Remember to protect the uppercase of people's name and LaTeX symbols
 
