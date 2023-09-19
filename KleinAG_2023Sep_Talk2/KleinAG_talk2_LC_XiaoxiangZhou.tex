@@ -255,12 +255,16 @@
 
 %%%%%symbols which haven't been classified. Add your own math operators here!
 
-
+\DeclareMathOperator{\SO}{\operatorname{SO}}
 \DeclareMathOperator{\Modr}{\operatorname{-Mod}}
 \DeclareMathOperator{\alg}{\operatorname{alg}}
 \DeclareMathOperator{\ab}{\operatorname{ab}}
 \DeclareMathOperator{\ur}{\operatorname{ur}}
 \DeclareMathOperator{\Art}{\operatorname{Art}}
+\DeclareMathOperator{\wt}{\operatorname{wt}}
+\DeclareMathOperator{\fin}{\operatorname{fin}}
+
+
 
 %%%%%%%newcommand
 
@@ -294,7 +298,7 @@
 
 %as automorphic representations
 \newcommand{\Acusp}{\mathcal{A}_{\operatorname{cusp}}}
-
+\newcommand{\Acuspkn}{\mathcal{A}_{\operatorname{cusp},k,\eta}}
 
 
 
@@ -328,7 +332,7 @@
 
 %\setlength\intextsep{0cm}
 %\setlength\textfloatsep{0cm}
-\def\arraystretch{1}
+\def\arraystretch{1.2}
 %\setcounter{secnumdepth}{3}
 
 \allowdisplaybreaks
@@ -386,23 +390,27 @@ In Section \ref{sec:NALLC}, $F$ is a non-Archimedean local field with integral r
 
 Moving on to Section \ref{sec:GLC_dim1}, we shift our focus to a number field, still denoted as $F$, with its integral ring denoted as $O_F$. For each place $v$ of $F$, we equip with three complete local rings, namely, $O_v$, $F_v$ and $\kappa_v$. The absolute Galois group of $F$ remains denoted as $\Gamma_F$.
 
+In Section \ref{sec:GLC_nonsplit}, $F$ will be a totally real field for simplicity.
+
 We will use the following abbreviations for representations:
 
-\begin{table}[]
+\begin{table}[ht]
 \centering
 \begin{tabular}{|c|r|}
+\hline
 $\Rep$ & smooth representation \\
 $\Irr$ & irreducible smooth representation \\
 $\Pi$ &\hspace{5mm} admissible irreducible smooth representation \\
 $\Char$ & $1$-dim smooth representation \\
 $\WDrep$ & Weil--Deligne representation \\
 $\Acusp$ & cuspidal automorphic form \\
+\hline
 \end{tabular}
 \end{table}
 
 \end{setting}
 
-For the definition of smooth/irreducible/admissible/Weil--Deligne representation, see \cite{zbMATH07686814} or (partially)\cite[\href{https://github.com/ramified/personal_handwritten_collection/raw/main/weeklyupdate/2022.04.17_preliminary_facts_of_reps_of_p-adic_groups.pdf}{22.04.17}]{weeklyupdate}.
+For the definition of smooth/irreducible/admissible/Weil--Deligne representation, see \cite{Modlift22} or (partially)\cite[\href{https://github.com/ramified/personal_handwritten_collection/raw/main/weeklyupdate/2022.04.17_preliminary_facts_of_reps_of_p-adic_groups.pdf}{22.04.17}]{weeklyupdate}.
 
 \section{Non-Archimedean Local Field Case}\label{sec:NALLC}
 
@@ -412,27 +420,163 @@ In this instance, the Langlands correspondence is notably explicit, allowing for
 
 \section{Global Langlands Correspondence, $n=1$}\label{sec:GLC_dim1}
 
-In order to state global Langlands correspondence, we need adèle and idèle which collects all local information. A short introduction of adèle and idèle can be found in A.
+To state the global Langlands correspondence, we rely on the concepts of adèles and idèles, which gather all the local information. A brief introduction to adèles and idèles can be found in \cite[\href{https://github.com/ramified/personal_handwritten_collection/raw/main/weeklyupdate/2021.06.27_ad\%C3\%A8les_and_id\%C3\%A8les.pdf}{21.06.27}]{weeklyupdate}.
 
 Observe that
 $$\mathbb{Q}^{\times} \backslash \raisebox{1mm}{$\mathbb{A}_{\mathbb{Q}}^{\times}$} /\, \mathbb{R}_{>0} \;\cong\; \widehat{\mathbb{Z}}^{\times} \;\cong\; \Gal \left( \mathbb{Q}^{\ab}/\mathbb{Q} \right) \!:= \Gamma_{\mathbb{Q}}^{\ab}.$$
 In fact, we have Artin reciprocity:
 $$\Art : \raisebox{-1mm}{$F^{\times}$} \backslash \raisebox{1mm}{$\mathbb{A}_{F}^{\times}$} /\, \raisebox{-1mm}{$\overline{\left(F_{\infty}^{\times}\right)^{\circ}}$} \;\cong\; \Gamma_{F}^{\ab},$$
 which gives us global Langlands correspondence for $n=1$:
-
+% https://q.uiver.app/#q=WzAsNSxbMCwwLCJcXENoYXJfe1xcbWF0aGJie0N9LCBcXGFsZywgXFx3dCAwfSBcXCFcXGxlZnQoIFxccmFpc2Vib3h7LTAuNW1tfXskRl57XFx0aW1lc30kfSBcXGJhY2tzbGFzaCBcXHJhaXNlYm94ezAuNW1tfXskXFxtYXRoYmJ7QX1fe0Z9XntcXHRpbWVzfSR9IFxccmlnaHQpIl0sWzAsMSwiXFxDaGFyX3tcXG1hdGhiYntDfSwgXFxhbGd9IFxcIVxcbGVmdCggXFxyYWlzZWJveHstMC41bW19eyRGXntcXHRpbWVzfSR9IFxcYmFja3NsYXNoIFxccmFpc2Vib3h7MC41bW19eyRcXG1hdGhiYntBfV97Rn1ee1xcdGltZXN9JH0gXFxyaWdodCkiXSxbMSwwLCJcXENoYXJfe1xcbWF0aGJie0N9fSBcXCFcXGxlZnQoXFxHYW1tYV97Rn0gXFxyaWdodCkiXSxbMSwxLCJcXENoYXJfe1xcb3ZlcmxpbmV7XFxtYXRoYmJ7UX19X3B9XFwhXFwhXFwhXFxsZWZ0KFxcR2FtbWFfe0Z9IFxccmlnaHQpIl0sWzIsMSwiXFx0ZXh0e2RlIFJoYW19Il0sWzAsMiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiYXJyb3doZWFkIn19fV0sWzAsMSwiIiwxLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XSxbMSwzLCJcXHRleHR7dHdpc3R9IiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiYXJyb3doZWFkIn19fV0sWzIsMywiXFx0ZXh0e3R3aXN0fSIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoiYm90dG9tIn19fV0sWzMsNCwiKyIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
+\[\begin{tikzcd}[column sep=20mm,row sep=5mm
+    ,/tikz/column 1/.append style={anchor=base east}
+    ,/tikz/column 2/.append style={anchor=base west}
+    ]
+	{\hspace{-5mm}\Char_{\mathbb{C}, \alg, \wt 0} \!\left( \raisebox{-0.5mm}{$F^{\times}$} \backslash \raisebox{0.5mm}{$\mathbb{A}_{F}^{\times}$} \right)} & {\Char_{\mathbb{C}} \!\left(\Gamma_{F} \right)} & [-18mm] \\
+	{\Char_{\mathbb{C}, \alg} \!\left( \raisebox{-0.5mm}{$F^{\times}$} \backslash \raisebox{0.5mm}{$\mathbb{A}_{F}^{\times}$} \right)} & {\Char_{\overline{\mathbb{Q}}_p}\!\!\!\left(\Gamma_{F} \right)} & {\text{de Rham}}
+	\arrow[tail reversed, from=1-1, to=1-2]
+	\arrow[hook', from=1-1, to=2-1]
+	\arrow["{\text{twist}}", tail reversed, from=2-1, to=2-2]
+	\arrow["{\text{twist}}", hook', from=1-2, to=2-2]
+	\arrow["{+}"{description}, draw=none, from=2-2, to=2-3]
+\end{tikzcd}\]
 For more information about the twist, see \cite[\href{https://github.com/ramified/personal_handwritten_collection/blob/main/Langlands/3.1_Galois_representation.pdf}{Galois representation}]{weeklyupdate}.(???Wait for updating)
 
-\section{Adèlic Modular Forms}
-
+\section{Adèlic Modular Forms}\label{sec:GLC_GL2}
+In this section, we want to discuss global Langlands correspondence for $\GL_2$. The route is as follows:
+$$\text{moduli space} \;\rightsquigarrow\; \text{MF} \;\rightsquigarrow\; \Acuspkn \;\rightsquigarrow\; \Pi_{\Acusp,k,\eta} \;\rightsquigarrow\; \text{GLC}$$
 \subsection{Moduli space}
+Recall:
+{
+\setlength\arraycolsep{1pt}
+\renewcommand{\arraystretch}{0.6}
+ 
+% https://q.uiver.app/#q=WzAsNixbMCwwLCJcXEdhbW1hKE4pIl0sWzEsMCwiXFxHYW1tYV8xKE4pIl0sWzIsMCwiXFxHTF8yKFxcbWF0aGJie1p9KSJdLFswLDEsIlxcYmVnaW57cG1hdHJpeH0gMSAmIDAgXFxcXCAwICYgMSBcXGVuZHtwbWF0cml4fSJdLFsyLDEsIlxcR0xfMihcXG1hdGhiYntafS9OXFxtYXRoYmJ7Wn0pIl0sWzEsMSwiXFxiZWdpbntwbWF0cml4fSAxICYgKiBcXFxcIDAgJiAqIFxcZW5ke3BtYXRyaXh9Il0sWzAsMSwiXFxzdWJzZXQiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMSwyLCJcXHN1YnNldCIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFszLDUsIlxcc3Vic2V0IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzUsNCwiXFxzdWJzZXQiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwzXSxbMSw1XSxbMiw0LCJcXHRleHR7bm90IHN1cmp9Il1d
+\[\begin{tikzcd}[ampersand replacement=\&]
+	{\Gamma(N)} \& {\Gamma_1(N)} \& {\GL_2(\mathbb{Z})} \\
+	{\begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}} \& {\begin{pmatrix} 1 & * \\ 0 & * \end{pmatrix}} \& {\GL_2(\mathbb{Z}/N\mathbb{Z})}
+	\arrow["\subset"{description}, draw=none, from=1-1, to=1-2]
+	\arrow["\subset"{description}, draw=none, from=1-2, to=1-3]
+	\arrow["\subset"{description}, draw=none, from=2-1, to=2-2]
+	\arrow["\subset"{description}, draw=none, from=2-2, to=2-3]
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-2, to=2-2]
+	\arrow["{\text{not surj}}", from=1-3, to=2-3]
+\end{tikzcd}\]
+
+One can define subgroups of $\GL_2(\widehat{\mathbb{Z}})$ in a similar way:
+
+% https://q.uiver.app/#q=WzAsNixbMCwwLCJcXHdpZGVoYXR7XFxHYW1tYShOKX0iXSxbMSwwLCJcXHdpZGVoYXR7XFxHYW1tYV8xKE4pfSJdLFsyLDAsIlxcR0xfMihcXHdpZGVoYXR7XFxtYXRoYmJ7Wn19KSJdLFswLDEsIlxcYmVnaW57cG1hdHJpeH0gMSAmIDAgXFxcXCAwICYgMSBcXGVuZHtwbWF0cml4fSJdLFsyLDEsIlxcR0xfMihcXG1hdGhiYntafS9OXFxtYXRoYmJ7Wn0pIl0sWzEsMSwiXFxiZWdpbntwbWF0cml4fSAxICYgKiBcXFxcIDAgJiAqIFxcZW5ke3BtYXRyaXh9Il0sWzAsMSwiXFxzdWJzZXQiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMSwyLCJcXHN1YnNldCIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFszLDUsIlxcc3Vic2V0IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzUsNCwiXFxzdWJzZXQiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwzXSxbMSw1XSxbMiw0LCJcXHRleHR7bm90IHN1cmp9Il1d
+\[\begin{tikzcd}[ampersand replacement=\&]
+	{\widehat{\Gamma(N)}} \& {\widehat{\Gamma_1(N)}} \& {\GL_2(\widehat{\mathbb{Z}})} \\
+	{\begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix}} \& {\begin{pmatrix} 1 & * \\ 0 & * \end{pmatrix}} \& {\GL_2(\mathbb{Z}/N\mathbb{Z})}
+	\arrow["\subset"{description}, draw=none, from=1-1, to=1-2]
+	\arrow["\subset"{description}, draw=none, from=1-2, to=1-3]
+	\arrow["\subset"{description}, draw=none, from=2-1, to=2-2]
+	\arrow["\subset"{description}, draw=none, from=2-2, to=2-3]
+	\arrow[from=1-1, to=2-1]
+	\arrow[from=1-2, to=2-2]
+	\arrow["{\text{not surj}}", from=1-3, to=2-3]
+\end{tikzcd}\]
+}
+
+\begin{proposition}
+As a topological space,\\
+$$\raisebox{-1mm}{$\GL_2(\mathbb{Q})$} \backslash \raisebox{1mm}{$\GL_2(\mathbb{A}_{\mathbb{Q}})$} /\, \raisebox{-1mm}{$\widehat{\Gamma_1(N)} \cdot \mathbb{R}^{\times} \cdot \SO_2$} \;\cong\; \raisebox{-1mm}{$\Gamma_1(N)$} \backslash \raisebox{1mm}{$\mathcal{H}^{\pm}$}.$$
+\\As a result, the moduli space can be realized adèlically.
+\end{proposition}
+\begin{proof}
+We use the strong approximation theorem\footnote{See \cite{StrongapproximationConrad,3057117} for the sketch of proof.} for $\SL_2$:
+$$\SL_2(\mathbb{A}_{\mathbb{Q}, \fin}) = \SL_2(\mathbb{Q})\cdot \widehat{\Gamma_1(N)}_{\det=1}.$$
+With this in hand, one can show that
+$$\GL_2(\mathbb{A}_{\mathbb{Q}, \fin}) = \GL_2(\mathbb{Q})\cdot \widehat{\Gamma_1(N)}._{\phantom{\det=1}}$$
+Therefore,
+\begin{equation*}
+\begin{aligned}
+  \;&  \raisebox{-1mm}{$\GL_2(\mathbb{Q})$} \backslash \raisebox{1mm}{$\GL_2(\mathbb{A}_{\mathbb{Q}})$} /\, \raisebox{-1mm}{$\widehat{\Gamma_1(N)} \cdot \mathbb{R}^{\times} \cdot \SO_2$}\\ 
+  \cong\;&  \raisebox{-1mm}{$\GL_2(\mathbb{Q})$} \backslash
+  \left( \raisebox{1mm}{$\GL_2(\mathbb{A}_{\mathbb{Q},\fin})$} /\, \raisebox{-1mm}{$\widehat{\Gamma_1(N)}$}
+  \;\times\;
+  \raisebox{1mm}{$\GL_2(\mathbb{R})$} /\, \raisebox{-1mm}{$\mathbb{R}^{\times} \cdot \SO_2$}
+  \right)\\ 
+  \cong\;&  \raisebox{-1mm}{$\GL_2(\mathbb{Q})$} \backslash
+  \left( \raisebox{1mm}{$\GL_2(\mathbb{Q})\cdot \widehat{\Gamma_1(N)}$} /\, \raisebox{-1mm}{$\widehat{\Gamma_1(N)}$}
+  \;\times\;
+  \raisebox{1mm}{$\GL_2(\mathbb{R})$} /\, \raisebox{-1mm}{$\mathbb{R}^{\times} \cdot \SO_2$}
+  \right)\\ 
+  \cong\;&  \raisebox{-1mm}{$\GL_2(\mathbb{Q})$} \backslash
+  \left( \raisebox{1mm}{$\GL_2(\mathbb{Q})$} /\, \raisebox{-1mm}{$\Gamma_1(N)$}
+  \;\times\;
+  \mathcal{H}^{\pm}
+  \right)\\ 
+  \cong\;&  \left(\raisebox{-1mm}{$\Gamma_1(N)$} \backslash
+   \raisebox{1mm}{$\GL_2(\mathbb{Q})$}\right)
+  \;\times_{\GL_2(\mathbb{Q})}\;
+  \mathcal{H}^{\pm}
+\\ 
+  \cong\;& \raisebox{-1mm}{$\Gamma_1(N)$} \backslash \raisebox{1mm}{$\mathcal{H}^{\pm}$}. \\ 
+\end{aligned}
+\end{equation*}
+\end{proof}
+\begin{remark}
+One don't have strong approximation theorem for $\GL_2$. In fact, for $N \geqslant 2$,
+{
+\setlength\arraycolsep{1pt}
+\renewcommand{\arraystretch}{0.6}
+\begin{equation*}
+\begin{aligned}
+  \mathbb{A}_{\mathbb{Q}, \fin}^{\times} =\;&  \bigsqcup_{t \in I_N} \mathbb{Q}^{\times} \cdot t \cdot \ker \chi_N\\ 
+  \GL_2(\mathbb{A}_{\mathbb{Q}, \fin}) =\;&  \bigsqcup_{t \in I_N} \GL_2(\mathbb{Q}) \cdot 
+  \begin{pmatrix}
+  1 & \\ & t
+  \end{pmatrix} \cdot \widehat{\Gamma(N)}\\ 
+\end{aligned}
+\end{equation*}
+}
+where
+\begin{equation*}
+\begin{aligned}
+  &\chi_N: \widehat{Z}^{\times} \longrightarrow (\mathbb{Z}/N\mathbb{Z})^{\times} \qquad (a_n)_n \longmapsto a_N  \\ 
+  I_N:= \raisebox{-1mm}{$\{\pm 1\}$} \backslash \raisebox{1mm}{$\widehat{\mathbb{Z}}^{\times}$}&\!/ \raisebox{-1mm}{$\ker \chi_N$} \;\cong\; \raisebox{-1mm}{$\{\pm 1\}$} \backslash \raisebox{1mm}{$(\mathbb{Z}/N\mathbb{Z})^{\times}$}
+  \qquad \# I_N= \begin{cases}
+  1, & N=2, \\
+  \phi(N)/2, & N>2.
+  \end{cases}\\  
+\end{aligned}
+\end{equation*}
+Using the same method, one would get
+$$\raisebox{-1mm}{$\GL_2(\mathbb{Q})$} \backslash \raisebox{1mm}{$\GL_2(\mathbb{A}_{\mathbb{Q}})$} /\, \raisebox{-1mm}{$\widehat{\Gamma(N)} \cdot \mathbb{R}^{\times} \cdot \SO_2$} \;\cong\; \bigsqcup_{t \in I_N} \raisebox{-1mm}{$\Gamma(N)$} \backslash \raisebox{1mm}{$\mathcal{H}^{\pm}$}.$$
+You may need the following fact during the proof:
+{
+\setlength\arraycolsep{1pt}
+\renewcommand{\arraystretch}{0.6}
+\begin{equation*}
+\begin{aligned}
+  \;& \GL_2(\mathbb{Q}) \cap \begin{pmatrix}
+  1 & \\ & t
+  \end{pmatrix} \widehat{\Gamma(N)} 
+  \begin{pmatrix}
+    1 & \\ & t
+    \end{pmatrix}^{-1} \\ 
+  =\;& \GL_2(\mathbb{Q}) \cap \widehat{\Gamma(N)} \\
+  =\;& \Gamma(N).
+\end{aligned}
+\end{equation*}
+}
+\end{remark}
 
 \subsection{Automorphic forms and automorphic representations}
 
+In this subsection, we introduce the space of cuspidal automorphic forms $\Acuspkn$ and the space of cuspidal automorphic representations $\Pi_{\Acusp,k,\eta}$.
+
 \subsection{Global Langlands correspondence for $\GL_{2,F}$}
 
-\section{Adèlic Modular Forms on Quaternion Algebras}
+\section{Adèlic Modular Forms on Quaternion Algebras}\label{sec:GLC_nonsplit}
 
 \subsection{Quaternion algebras}
+
+\href{https://www.zhihu.com/column/c_1338102029848887297}{Quaternion algebras}
+
 %\include{chapters/chapter9}
 
 %\nocite{Eberhardt2022Koszul}	% cite articles which are not cited in the document yet

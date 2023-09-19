@@ -1,6 +1,18 @@
 \begin{thebibliography}{1}
 
-\bibitem{zbMATH07686814}
+\bibitem{3057117}
+Strong approximation and class number in the adelic setting.
+\newblock Mathematics Stack Exchange.
+\newblock URL:https://math.stackexchange.com/q/3057117 (version: 2018-12-30).
+
+\bibitem{StrongapproximationConrad}
+{Brian Conrad}.
+\newblock Strong approximation in algebraic groups.
+\newblock
+  \url{http://virtualmath1.stanford.edu/~conrad/248BPage/handouts/strongapprox.pdf}.
+\newblock [Online].
+
+\bibitem{Modlift22}
 Toby Gee.
 \newblock Modularity lifting theorems.
 \newblock {\em Essent. Number Theory}, 1(1):73--126, 2022.
