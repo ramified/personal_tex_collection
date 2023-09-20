@@ -75,8 +75,8 @@
 
 
  %https://tex.stackexchange.com/questions/58852/possible-incompatibility-with-enumitem
-
-
+%https://tex.stackexchange.com/questions/43008/absolute-value-symbols
+\usepackage{physics}
 
 
 
@@ -153,7 +153,7 @@
 
 %%%symbols for linear algebras and 
 %%linear algebras
-\DeclareMathOperator{\tr}{\operatorname{tr}}
+%\DeclareMathOperator{\tr}{\operatorname{tr}}
 \DeclareMathOperator{\diag}{\operatorname{diag}}	%for diagonal matrices
 
 %%abstract algebras
@@ -201,7 +201,7 @@
 
 %%%symbols for algebraic representation theory
 \DeclareMathOperator{\ind}{\operatorname{ind}}	%\ind(Q) means the set of  equivalence classes of finite dimensional indecomposable representations
-\DeclareMathOperator{\Res}{\operatorname{Res}}
+%\DeclareMathOperator{\Res}{\operatorname{Res}}
 \DeclareMathOperator{\Ind}{\operatorname{Ind}}
 \DeclareMathOperator{\cInd}{\operatorname{c-Ind}}
 
@@ -269,7 +269,7 @@
 %%%%%%%newcommand
 
 %%%basic symbols
-\newcommand{\norm}[1]{\Vert{#1}\Vert}
+%\newcommand{\norm}[1]{\Vert{#1}\Vert}
 
 %%%symbols only for master thesis
 \newcommand{\dimvec}[1]{\mathbf{#1}}
@@ -373,8 +373,8 @@ Introducing the Langlands correspondence can often be a challenging and intricat
     ,/tikz/column 2/.append style={anchor=base west}
     ]
 	{\Irr_{\mathbb{C}}\left(\GL_n(F)\rule{0mm}{3.0mm}\right)} & {\WDrep_{\substack{n\text{-\!}\dim \\ \text{Frob ss}}}(W_F)} \\
-	{\Char_{\mathbb{C}, \alg} \!\left(F^{\times} \backslash \mathbb{A}_F^{\times} \right)} & {\Char_{\bar{\mathbb{Q}}_p}\! \left(\Gamma \right) \hspace{4.3mm} + \text{de Rham}} \\
-	{\Pi_{\Acusp,k,\eta} \!\left(\GL_2(\mathbb{A}_{\mathbb{Q}}) \rule{0mm}{3.0mm}\right)} & {\Irr_{\bar{\mathbb{Q}}_p, 2\text{-\!}\dim}\! \left(\Gamma \right) + \text{modular}} \\
+	{\Char_{\mathbb{C}, \alg} \!\left(F^{\times} \backslash \mathbb{A}_F^{\times} \right)} & {\Char_{\overline{\mathbb{Q}}_p}\! \left(\Gamma \right) \hspace{4.3mm} + \text{de Rham}} \\
+	{\Pi_{\Acusp,k,\eta} \!\left(\GL_2(\mathbb{A}_{\mathbb{Q}}) \rule{0mm}{3.0mm}\right)} & {\Irr_{\overline{\mathbb{Q}}_p, 2\text{-\!}\dim}\! \left(\Gamma \right) + \text{modular}} \\
 	{\Pi_{\Acusp,k,\eta} \!\left(G_D(\mathbb{A}_{\mathbb{Q}}) \rule{0mm}{3.0mm}\right)} & \hspace{7mm}\cdots
 	\arrow["{1:1}", tail reversed, from=1-1, to=1-2]
 	\arrow["{1:1}", tail reversed, from=2-1, to=2-2]
@@ -565,9 +565,78 @@ You may need the following fact during the proof:
 }
 \end{remark}
 
+\subsection{Adèlic cuspidal modular forms}
+
+In this subsection, we define modular form in an adèlic way.
+
+\begin{definition}[Cuspidal modular form $S_{M_2(\mathbb{Q}), k, \eta}$]
+For $k \geqslant 2$, $\eta \in \mathbb{Z}$, let
+{
+\setlength\arraycolsep{1pt}
+\renewcommand{\arraystretch}{0.6}
+$$j_{k,\eta}(\gamma):= (\det \gamma)^{\eta-1} (ci+d)^{k} \qquad \gamma=\begin{pmatrix}
+a & b \\ c & d
+\end{pmatrix} \in \GL_2(\mathbb{R}).$$
+}
+We define the space of cuspidal modular form 
+$$S_{M_2(\mathbb{Q}), k, \eta}:= \left\{
+\begin{aligned}
+  &\phi\colon \raisebox{-1mm}{$\GL_2(\mathbb{Q})$} \backslash \raisebox{1mm}{$\GL_2(\mathbb{A}_{\mathbb{Q}})$} \longrightarrow \mathbb{C} \quad\text{ as functions}   \\ 
+  & \qquad\text{such that {\upshape(1) to (4)} are ture} \\
+\end{aligned}
+\right\}$$
+\begingroup
+\upshape
+%\setlist{itemsep=-0.4em}
+\renewcommand\labelenumi{(\theenumi)}
+\begin{enumerate}
+\item (continuity) There exists an open subset $U_{\fin} \leqslant \GL_2(\mathbb{A}_{\mathbb{Q},\fin})$ such that 
+$$\phi(g\gamma)= \phi(g) \phantom{j_{k,\eta}(\gamma)^{-1}} \qquad \text{ for any } \gamma \in U_{\fin}.\hspace{8mm}$$
+\item (automorphy)
+$$\phi(g\gamma)= j_{k,\eta}(\gamma)^{-1}\phi(g) \qquad \text{ for any } \gamma \in \mathbb{R}^{\times} \cdot \SO_2.$$
+This formula can also be formulated as $$j_{k,\eta}(\gamma'\gamma)^{-1}\phi(g\gamma)=j_{k,\eta}(\gamma')^{-1}\phi(g).$$
+\item (holomorphy) For any $g \in \GL_2(\mathbb{A}_{\mathbb{Q}})$, the function
+$$f_{\phi,g}: \mathcal{H}^{\pm} \longrightarrow \mathbb{C} \qquad \gamma i \longmapsto \gamma(g\gamma)j_{k,\eta}(\gamma)$$
+is holomorphic.
+\item[] (holomorphic at $\infty$) $f_{\phi,g}(\tau) \abs{\Img \tau}^{\frac{k}{2}}$ is bounded.
+\item (cuspidal condition) For any $g \in \GL_2(\mathbb{A}_{\mathbb{Q}})$, 
+{
+\setlength\arraycolsep{1pt}
+\renewcommand{\arraystretch}{0.6}
+$$\int_{\mathbb{Q} \backslash \mathbb{A}_{\mathbb{Q}}} \phi \! \left( \begin{pmatrix}
+1 & x \\ 0 & 1 
+\end{pmatrix} \rule{0mm}{5mm}g \right) dx =0.$$
+}
+\end{enumerate}
+\endgroup
+\end{definition}
+\begin{eg}
+When $U_{\fin}= \widehat{\Gamma_1(N)}$, one has isomorphism
+$$S_{M_2(\mathbb{Q}), k, \eta}^{\widehat{\Gamma_1(N)}} \cong S_k\!\left(\rule{0mm}{3mm}\Gamma_1(N)\right) \qquad \phi \longmapsto f_{\phi, \Id},$$
+where
+$$S_k\!\left(\rule{0mm}{3mm}\Gamma_1(N)\right)= \left\{ f: \mathcal{H}^{\pm} \longrightarrow \mathbb{C} \;\middle|\; 
+\begin{aligned}
+  & f(\gamma z)= (c\tau +d)^k f(z) \quad \text{ for any } \gamma \in \Gamma_1(N) \\ 
+  & f \text{ has zeros in the cusps } + \cdots \\ 
+\end{aligned}
+  \right\}.$$
+\end{eg}
+\begin{remark}
+The integer $k$ works as the weight while the subgroup $U_{\fin}$ works as the level. The integer $\eta$ is not too important: one has isomorphism
+$$S_{M_2(\mathbb{Q}), k, \eta} \longrightarrow S_{M_2(\mathbb{Q}), k, \eta-1} \qquad \phi(-) \longmapsto \phi(-) \cdot \abs{\det(-)}_{\mathbb{A}_{\mathbb{Q}^{\times}}}$$
+which shifts the weight $\eta$.
+\end{remark}
+
+
 \subsection{Automorphic forms and automorphic representations}
 
 In this subsection, we introduce the space of cuspidal automorphic forms $\Acuspkn$ and the space of cuspidal automorphic representations $\Pi_{\Acusp,k,\eta}$.
+
+\begin{definition}
+For $k \geqslant 2$, $\eta \in \mathbb{Z}$, the space of cuspidal automorphic forms of weight $(k,\eta)$ is defined as the minimal $\GL_2(\mathbb{A}_{\mathbb{Q}})$ representation containing $S_{M_2(\mathbb{Q}), k, \eta}$, i.e.,
+$$\Acuspkn = \left< S_{M_2(\mathbb{Q}), k, \eta} \right>_{\Rep_{\mathbb{C}}\left( \GL_2(\mathbb{A}_{\mathbb{Q}}) \right)}$$
+\end{definition}
+
 
 \subsection{Global Langlands correspondence for $\GL_{2,F}$}
 
