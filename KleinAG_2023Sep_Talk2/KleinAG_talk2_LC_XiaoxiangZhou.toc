@@ -5,7 +5,7 @@
 \contentsline {subsection}{\tocsubsection {}{4.1}{Moduli space}}{3}{subsection.4.1}% 
 \contentsline {subsection}{\tocsubsection {}{4.2}{Adèlic cuspidal modular forms}}{4}{subsection.4.2}% 
 \contentsline {subsection}{\tocsubsection {}{4.3}{Automorphic forms and automorphic representations}}{5}{subsection.4.3}% 
-\contentsline {subsection}{\tocsubsection {}{4.4}{Global Langlands correspondence for $\GL _{2,F}$}}{5}{subsection.4.4}% 
-\contentsline {section}{\tocsection {}{5}{Adèlic Modular Forms on Quaternion Algebras}}{5}{section.5}% 
-\contentsline {subsection}{\tocsubsection {}{5.1}{Quaternion algebras}}{5}{subsection.5.1}% 
-\contentsline {section}{\tocsection {}{}{References}}{5}{section*.3}% 
+\contentsline {subsection}{\tocsubsection {}{4.4}{Global Langlands correspondence for $\GL _{2,F}$}}{6}{subsection.4.4}% 
+\contentsline {section}{\tocsection {}{5}{Adèlic Modular Forms on Quaternion Algebras}}{6}{section.5}% 
+\contentsline {subsection}{\tocsubsection {}{5.1}{Quaternion algebras}}{6}{subsection.5.1}% 
+\contentsline {section}{\tocsection {}{}{References}}{6}{section*.3}% 

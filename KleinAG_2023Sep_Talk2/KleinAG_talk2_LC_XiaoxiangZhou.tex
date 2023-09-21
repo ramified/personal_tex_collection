@@ -263,7 +263,9 @@
 \DeclareMathOperator{\Art}{\operatorname{Art}}
 \DeclareMathOperator{\wt}{\operatorname{wt}}
 \DeclareMathOperator{\fin}{\operatorname{fin}}
-
+\DeclareMathOperator{\character}{\operatorname{char}}
+\DeclareMathOperator{\poly}{\operatorname{poly}}
+\DeclareMathOperator{\Frob}{\operatorname{Frob}}
 
 
 %%%%%%%newcommand
@@ -373,8 +375,8 @@ Introducing the Langlands correspondence can often be a challenging and intricat
     ,/tikz/column 2/.append style={anchor=base west}
     ]
 	{\Irr_{\mathbb{C}}\left(\GL_n(F)\rule{0mm}{3.0mm}\right)} & {\WDrep_{\substack{n\text{-\!}\dim \\ \text{Frob ss}}}(W_F)} \\
-	{\Char_{\mathbb{C}, \alg} \!\left(F^{\times} \backslash \mathbb{A}_F^{\times} \right)} & {\Char_{\overline{\mathbb{Q}}_p}\! \left(\Gamma \right) \hspace{4.3mm} + \text{de Rham}} \\
-	{\Pi_{\Acusp,k,\eta} \!\left(\GL_2(\mathbb{A}_{\mathbb{Q}}) \rule{0mm}{3.0mm}\right)} & {\Irr_{\overline{\mathbb{Q}}_p, 2\text{-\!}\dim}\! \left(\Gamma \right) + \text{modular}} \\
+	{\Char_{\mathbb{C}, \alg} \!\left(F^{\times} \backslash \mathbb{A}_F^{\times} \right)} & {\Char_{\overline{\mathbb{Q}}_p}\! \left(\Gamma_F \right) \hspace{4.3mm} + \text{de Rham}} \\
+	{\Pi_{\Acusp,k,\eta} \!\left(\GL_2(\mathbb{A}_{\mathbb{Q}}) \rule{0mm}{3.0mm}\right)} & {\Irr_{\overline{\mathbb{Q}}_p, 2\text{-\!}\dim}\! \left(\Gamma_F \right) + \text{modular}} \\
 	{\Pi_{\Acusp,k,\eta} \!\left(G_D(\mathbb{A}_{\mathbb{Q}}) \rule{0mm}{3.0mm}\right)} & \hspace{7mm}\cdots
 	\arrow["{1:1}", tail reversed, from=1-1, to=1-2]
 	\arrow["{1:1}", tail reversed, from=2-1, to=2-2]
@@ -420,7 +422,7 @@ In this instance, the Langlands correspondence is notably explicit, allowing for
 
 \section{Global Langlands Correspondence, $n=1$}\label{sec:GLC_dim1}
 
-To state the global Langlands correspondence, we rely on the concepts of adèles and idèles, which gather all the local information. A brief introduction to adèles and idèles can be found in \cite[\href{https://github.com/ramified/personal_handwritten_collection/raw/main/weeklyupdate/2021.06.27_ad\%C3\%A8les_and_id\%C3\%A8les.pdf}{21.06.27}]{weeklyupdate}.
+To state the global Langlands correspondence, we rely on the concepts of adèles and idèles, which gather all the local information. A brief introduction to adèles and idèles can be found in \cite[\href{https://github.com/ramified/personal_handwritten_collection/raw/main/weeklyupdate/2022.08.28_global_field.pdf}{21.08.28}]{weeklyupdate}.
 
 Observe that
 $$\mathbb{Q}^{\times} \backslash \raisebox{1mm}{$\mathbb{A}_{\mathbb{Q}}^{\times}$} /\, \mathbb{R}_{>0} \;\cong\; \widehat{\mathbb{Z}}^{\times} \;\cong\; \Gal \left( \mathbb{Q}^{\ab}/\mathbb{Q} \right) \!:= \Gamma_{\mathbb{Q}}^{\ab}.$$
@@ -536,7 +538,7 @@ One don't have strong approximation theorem for $\GL_2$. In fact, for $N \geqsla
 where
 \begin{equation*}
 \begin{aligned}
-  &\chi_N: \widehat{Z}^{\times} \longrightarrow (\mathbb{Z}/N\mathbb{Z})^{\times} \qquad (a_n)_n \longmapsto a_N  \\ 
+  &\chi_N: \widehat{\mathbb{Z}}^{\times} \longrightarrow (\mathbb{Z}/N\mathbb{Z})^{\times} \qquad (a_n)_n \longmapsto a_N  \\ 
   I_N:= \raisebox{-1mm}{$\{\pm 1\}$} \backslash \raisebox{1mm}{$\widehat{\mathbb{Z}}^{\times}$}&\!/ \raisebox{-1mm}{$\ker \chi_N$} \;\cong\; \raisebox{-1mm}{$\{\pm 1\}$} \backslash \raisebox{1mm}{$(\mathbb{Z}/N\mathbb{Z})^{\times}$}
   \qquad \# I_N= \begin{cases}
   1, & N=2, \\
@@ -637,8 +639,56 @@ For $k \geqslant 2$, $\eta \in \mathbb{Z}$, the space of cuspidal automorphic fo
 $$\Acuspkn = \left< S_{M_2(\mathbb{Q}), k, \eta} \right>_{\Rep_{\mathbb{C}}\left( \GL_2(\mathbb{A}_{\mathbb{Q}}) \right)}$$
 \end{definition}
 
+%tex.stackexchange.com/questions/230360/consistency-in-the-appearances-of-loops-from-rectangular-nodes
+%https://tex.stackexchange.com/questions/405149/setting-the-name-of-matrix-in-tikz-cd
+% https://q.uiver.app/#q=WzAsNSxbMCwwLCJcXGxlZnRcXHtcXHBoaVxcY29sb24gXFxyYWlzZWJveHstMW1tfXskXFxHTF8yKFxcbWF0aGJie1F9KSR9IFxcYmFja3NsYXNoIFxccmFpc2Vib3h7MW1tfXskXFxHTF8yKFxcbWF0aGJie0F9X3tcXG1hdGhiYntRfX0pJH0gXFxsb25ncmlnaHRhcnJvdyBcXG1hdGhiYntDfVxccmlnaHRcXH0iXSxbMCwxLCJcXEFjdXNwa24iXSxbMCwyLCIgU197TV8yKFxcbWF0aGJie1F9KSwgaywgXFxldGF9Il0sWzEsMSwiXFx0ZXh0eyBjdXNwaWRhbCBhdXRvbW9ycGhpYyBmb3JtcyBvZiB3ZWlnaHQgfSAoayxcXGV0YSkiXSxbMSwyLCJcXHRleHR7IGFkw6hsaWMgbW9kdWxhciBmb3JtcyBvZiB3ZWlnaHQgfSAoayxcXGV0YSkiXSxbMiwxLCJcXHN1YnNldCIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxLDAsIlxcc3Vic2V0IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d
+\[\begin{tikzcd}[ampersand replacement=\&, column sep={30mm,between origins}, row sep={10mm,between origins}, execute at end picture={
+%    \filldraw[red] (\tikzcdmatrixname-1-1.172) circle[radius=1pt];
+%    \filldraw[green] (\tikzcdmatrixname-1-1.169) circle[radius=1pt];
+    \path[->] (\tikzcdmatrixname-1-1.169) edge  [out=100, in=170,distance=5mm] node[anchor=east] {$\GL_2(\mathbb{Q})$}(\tikzcdmatrixname-1-1.172);
+  }]
+	{\left\{\phi\colon \raisebox{-1mm}{$\GL_2(\mathbb{Q})$} \backslash \raisebox{1mm}{$\GL_2(\mathbb{A}_{\mathbb{Q}})$} \longrightarrow \mathbb{C}\right\}}  \\
+	\Acuspkn \& {\text{ \textbf{cuspidal automorphic forms} of weight } (k,\eta)} \\
+	{ S_{M_2(\mathbb{Q}), k, \eta}} \& {\text{ \textbf{adèlic modular forms} of weight } (k,\eta)}
+	\arrow["\subset"{description}, sloped, draw=none, from=3-1, to=2-1]
+	\arrow["\subset"{description}, sloped, draw=none, from=2-1, to=1-1]
+\end{tikzcd}\]
+
+\begin{remarks}\
+\begin{enumerate}[1.]
+\item (see \cite[Remark 4.14]{Modlift22}) People have defined the space of cuspidal automorphic forms, denoted as $\Acusp$, which encompasses a broader range of elements compared to the definitions provided earlier. One get
+$$\Acusp \;\supsetneqq\;\; \bigoplus_{\substack{k \geqslant 2 \\ \eta \in \mathbb{Z}}} \Acuspkn,$$
+where Maass forms (a special case of regular algebraic cuspidal automorphic forms) and weight-$1$ modular forms (a special case of regular algebraic cuspidal automorphic forms) are missing on the right hand side.
+\item (see \cite[Fact 4.12]{Modlift22}) $\Acuspkn$ can be written as direct sums of irreducible admissible representations of $\GL_2(\mathbb{A}_{\mathbb{Q},\fin})$,\footnote{I'm not sure if replacing $\GL_2(\mathbb{A}_{\mathbb{Q},\fin})$ with $\GL_2(\mathbb{A}_{\mathbb{Q}})$ is possible, but I don't think using $\GL_2(\mathbb{A}_{\mathbb{Q},\fin})$ here sounds natural.} i.e.,\footnote{In this document, I consistently use symbols $\pi \in \Pi$ and $\varphi \in \Phi$ to ensure clarity and prevent any confusion between their respective memberships.}
+$$\Acuspkn = \bigoplus_{i \in I} \pi_i \qquad \pi_i \in \Pi \!\left(\GL_2(\mathbb{A}_{\mathbb{Q},\fin}\rule{0mm}{3.0mm}) \right).$$
+\end{enumerate}
+\end{remarks}
+
+\begin{definition}
+We call
+$$\Pi_{\Acusp,k,\eta}:= \left\{ \pi_i \middle| i \in I \right\} \subseteq \Pi \!\left(\GL_2(\mathbb{A}_{\mathbb{Q},\fin}\rule{0mm}{3.0mm}) \right)$$
+as the set of \textbf{cuspidal automorphic representations} of weight $(k,\eta)$.
+\end{definition}
+\begin{remark}
+We did not delve into the Hecke operator theory \cite[4.6-4.7]{Modlift22}, strong multiplicity one \cite[4.15]{Modlift22}, and the theory of newforms \cite[4.16]{Modlift22} in this discussion. Interested readers are encouraged to explore these topics independently.
+\end{remark}
+\begin{remark}
+To generalize the above results to $\GL_{2,F}$, substitute $\mathbb{Q}$ with $\mathbb{F}$. If any issues arise, apply $D=M_2(F)$ in the following section to observe the generalization.
+\end{remark}
 
 \subsection{Global Langlands correspondence for $\GL_{2,F}$}
+In this subsection, we present the Eichler–Shimura theorem without providing a proof.
+\begin{theorem}[{Eichler–Shimura, \cite[4.20]{Modlift22}}]$\,$
+
+Fix $\pi \in \Pi_{\Acusp,k,\eta}\!\left(\GL_2(\mathbb{A}_{F}\rule{0mm}{3.0mm}) \right)$, and take $L$ as some CM-field containing all eigenvalues of Hecke operators. For any finite place $\lambda$ of $L$, there exists $\varphi_{\lambda}(\pi) \in \Irr_{\overline{\mathbb{Q}}_p, 2\text{-\!}\dim}\! \left(\Gamma_F \right)$ such that 
+\begin{enumerate}[1)]
+\item If $\pi_v$ is unramified and $\character \kappa_v \neq \character \kappa_{\lambda}$, then $\varphi_{\lambda}(\pi)\big|_{G_{F_v}}$ is unramified, and 
+$$\character \poly (\Frob) = X^2 -t_vX + (\#\kappa_v) s_v,$$
+where $t_v$ and $s_v$ are the eigenvalues of $T_v$ and $S_v$.
+\item It is compatible with the local Langlands correspondence in both the cases when $l \neq p$ and when $l = p$.
+\item $\varphi_{\lambda}(\pi)$ is geometric.\footnote{See \cite[2.28]{Modlift22} for the definition of geometric representations.} 
+\end{enumerate}
+\end{theorem}
 
 \section{Adèlic Modular Forms on Quaternion Algebras}\label{sec:GLC_nonsplit}
 
