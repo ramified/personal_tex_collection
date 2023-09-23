@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  22 SEP 2023 00:34
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  23 SEP 2023 12:04
 entering extended mode
 **./KleinAG_talk2_LC_XiaoxiangZhou.tex
 (KleinAG_talk2_LC_XiaoxiangZhou.tex
@@ -1789,20 +1789,20 @@ Underfull \hbox (badness 1412) in paragraph at lines 9--14
  []
 
 ) [6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 707.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 707.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 727.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 727.
  (KleinAG_talk2_LC_XiaoxiangZhou.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 707.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 707.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 727.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 727.
 Package rerunfilecheck Info: File `KleinAG_talk2_LC_XiaoxiangZhou.out' has not 
 changed.
 (rerunfilecheck)             Checksum: 46E5AA96545943570BA1A572FAFD9F32.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 707.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 727.
  ) 
 Here is how much of TeX's memory you used:
  37753 strings out of 427748
- 697175 string characters out of 3150981
- 753044 words of memory out of 3000000
+ 697187 string characters out of 3150981
+ 753046 words of memory out of 3000000
  41075 multiletter control sequences out of 15000+200000
  544237 words of font info for 84 fonts, out of 3000000 for 9000
  1489 hyphenation exceptions out of 8191

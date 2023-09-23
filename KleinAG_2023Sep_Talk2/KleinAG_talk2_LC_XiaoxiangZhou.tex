@@ -103,7 +103,7 @@
 \newtheorem{eg}[theorem]{Example}
 \newtheorem{ex}[theorem]{Exercise}
 \newtheorem{fact}[theorem]{Fact}
-\newtheorem{ques}[theorem]{Question}
+\newtheorem{question}[theorem]{Question}
 \newtheorem{warning}[theorem]{Warning}
 
 
@@ -677,20 +677,40 @@ To generalize the above results to $\GL_{2,F}$, substitute $\mathbb{Q}$ with $\m
 \end{remark}
 
 \subsection{Global Langlands correspondence for $\GL_{2,F}$}
-In this subsection, we present the Eichler–Shimura theorem without providing a proof.
+In this subsection, we present the Eichler–Shimura theorem without providing a proof. For more information about global Langlands correspondence, see the discussion in \href{https://mathoverflow.net/questions/127157/status-of-global-langlands-conjecture-for-mathrmgl-2-over-mathbbq}{Mathoverflow:127157}.
+
 \begin{theorem}[{Eichler–Shimura, \cite[4.20]{Modlift22}}]$\,$
 
 Fix $\pi \in \Pi_{\Acusp,k,\eta}\!\left(\GL_2(\mathbb{A}_{F}\rule{0mm}{3.0mm}) \right)$, and take $L$ as some CM-field containing all eigenvalues of Hecke operators. For any finite place $\lambda$ of $L$, there exists $\varphi_{\lambda}(\pi) \in \Irr_{\overline{\mathbb{Q}}_p, 2\text{-\!}\dim}\! \left(\Gamma_F \right)$ such that 
+
+\begingroup
+\upshape
+%\setlist{itemsep=-0.4em}
+\renewcommand\labelenumi{(\theenumi)}
 \begin{enumerate}[1)]
 \item If $\pi_v$ is unramified and $\character \kappa_v \neq \character \kappa_{\lambda}$, then $\varphi_{\lambda}(\pi)\big|_{G_{F_v}}$ is unramified, and 
 $$\character \poly (\Frob) = X^2 -t_vX + (\#\kappa_v) s_v,$$
 where $t_v$ and $s_v$ are the eigenvalues of $T_v$ and $S_v$.
 \item It is compatible with the local Langlands correspondence in both the cases when $l \neq p$ and when $l = p$.
 \item $\varphi_{\lambda}(\pi)$ is geometric.\footnote{See \cite[2.28]{Modlift22} for the definition of geometric representations.} 
+\item For any $\lambda | \infty$ satisfying $F_v \cong \mathbb{R}$, if we denote $\Gamma_{F_v}:=\{1,\sigma_v\} \subseteq \Gamma_{F}$, then
+$$\det \left( \rule{0mm}{3.0mm}\varphi_{\lambda}(\pi)(\sigma_v) \right)=-1.$$
+\item $\{ \varphi_{\lambda}(\pi) \}_{\lambda}$ forms a strictly compatible system.\footnote{See \cite[2.32]{Modlift22} for the definition of a strictly compatible system.}
 \end{enumerate}
+\endgroup
 \end{theorem}
+\begin{definition}
+$\varphi \in \Irr_{\overline{\mathbb{Q}}_p, 2\text{-\!}\dim}(\Gamma_F)$ is modular, if $\varphi=\varphi_{\lambda}(\pi)$ for some $\pi,\lambda$.
+\end{definition}
+\begin{question}
+Are all geometric representations modular?
+\end{question}
 
 \section{Adèlic Modular Forms on Quaternion Algebras}\label{sec:GLC_nonsplit}
+
+In this section, we try to generalize all the results in Section \ref{sec:GLC_GL2} to quaternion algebras. In another word, we are trying to do global Langlands correspondence for inner forms of $\GL_2$.
+
+For simplicity, $F$ is a totally real field in the whole section.
 
 \subsection{Quaternion algebras}
 
