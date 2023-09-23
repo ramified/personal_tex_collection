@@ -77,7 +77,7 @@
  %https://tex.stackexchange.com/questions/58852/possible-incompatibility-with-enumitem
 %https://tex.stackexchange.com/questions/43008/absolute-value-symbols
 \usepackage{physics}
-
+%https://tex.stackexchange.com/questions/245603/can-suggested-commands-be-removed-from-texstudios-autocomplete
 
 
 
@@ -257,6 +257,7 @@
 
 \DeclareMathOperator{\SO}{\operatorname{SO}}
 \DeclareMathOperator{\Modr}{\operatorname{-Mod}}
+\DeclareMathOperator{\Algr}{\operatorname{-Alg}}
 \DeclareMathOperator{\alg}{\operatorname{alg}}
 \DeclareMathOperator{\ab}{\operatorname{ab}}
 \DeclareMathOperator{\ur}{\operatorname{ur}}
@@ -267,6 +268,9 @@
 \DeclareMathOperator{\poly}{\operatorname{poly}}
 \DeclareMathOperator{\Frob}{\operatorname{Frob}}
 \DeclareMathOperator{\Norm}{\operatorname{Nm}}
+\DeclareMathOperator{\opposite}{\operatorname{op}}
+\DeclareMathOperator{\Set}{\operatorname{Set}}
+\DeclareMathOperator{\Fun}{\operatorname{Fun}}
 
 %%%%%%%newcommand
 
@@ -302,6 +306,7 @@
 \newcommand{\Acusp}{\mathcal{A}_{\operatorname{cusp}}}
 \newcommand{\Acuspkn}{\mathcal{A}_{\operatorname{cusp},k,\eta}}
 
+\renewcommand{\Res}{\operatorname{Res}}
 
 
 %%%%%%%%%%%%%%%%%%%% here we make some blocks for special features. 
@@ -714,6 +719,8 @@ For simplicity, $F$ is a totally real field in the whole section.
 
 \subsection{Quaternion algebras}
 
+There are many stories about Quaternion algebras, see \href{https://www.zhihu.com/column/c_1338102029848887297}{Topics on Quaternions}(Chinese).
+
 \begin{definition}
 A \textbf{quaternion algebra} over $F$ is a $4$-$\dim$ central simple algebra(CSA) over $F$.
 \end{definition}
@@ -727,7 +734,7 @@ $$i^2=a, j^2 =b, ij=k=-ji.$$
 Then $\big(\frac{a,b}{F}\big)$ is a quaternion algebra over $F$.\footnote{One can also define $\left(\frac{a,b}{F}\right)$ for a ring $R$.}
 \end{ex}
 \begin{remark}
-All the quaternion algebras can be written as the form $\big(\frac{a,b}{F}\big)$. How to show this?
+All the quaternion algebras can be written as the form $\big(\frac{a,b}{F}\big)$. See \cite[Theorem 5.5]{clark2012non} for a proof of this fact.
 \end{remark}
 The quaternion algebra is closely related to the Brauer group and Galois cohomology. Consequently, I may not be able to provide a comprehensive presentation of all aspects. Here, I have compiled some key facts that may aid in understanding and computations.
 %https://tex.stackexchange.com/questions/147679/custom-alignment-of-text-in-itemized-environment
@@ -783,10 +790,55 @@ It is claimed that the map
 is a bijection by the theory on Brauer group, but I don't know how to construct the inverse map explicitly. The set $S(D)$ is not easy to compute neither. 
 \end{remark}
 \begin{question}
-How to understand the ramification theory of quaternion algebras geometrically? My understanding of ramifications in field extensions \cite[\href{https://github.com/ramified/personal_handwritten_collection/tree/main/ramified_covering}{ramified covering}]{weeklyupdate} may be helpful.
+How to understand the ramification theory of quaternion algebras geometrically? My understanding of ramifications in field extensions \cite[\href{https://github.com/ramified/personal_handwritten_collection/tree/main/ramified_covering}{ramified covering}]{weeklyupdate} may be helpful. As a beginning point, I want to consider quaternion algebras over $\mathbb{C}(t)$ as some twists of the trivial $\GL_{2}(\mathbb{C})$-bundle over $\mathbb{P}_{\mathbb{C}}^1$.
 \end{question}
 
-\href{https://www.zhihu.com/column/c_1338102029848887297}{Quaternion algebras}
+Roughly, the quaternion algebra gives us inner forms of $\GL_{2,F}$.
+\begin{definition}[Algebraic group associated with $D$]
+For a quaternion algebra $D$ over $F$, the functor
+$$G_D:= (- \otimes_{\mathbb{Q}} D)^{\times} : \mathbb{Q}\Algr^{\opposite} \longrightarrow \Set \qquad A \longmapsto (A \otimes_{\mathbb{Q}} D)^{\times}$$
+is represented by an algebraic group over $\mathbb{Q}$, still denoted by $G_D$. 
+\end{definition}
+\begin{remark}
+It can be shown that $G_D$ is an inner form of $\prod_{[F:\mathbb{Q}]} \GL_{2,\mathbb{Q}}$. Moreover, every inner form of $\GL_{2,\mathbb{Q}}$ has the form $G_D$, for some quaternion algebra $D$ over $\mathbb{Q}$. These facts can be found in [???].
+\end{remark}
+\begin{remark}
+I personally would like to write
+$$G_D= \Res_{D/\mathbb{Q}} \mathbb{G}_m = \Res_{F/\mathbb{Q}}\Res_{D/F} \mathbb{G}_m, $$
+where
+$$\Res_{D/F}: \Fun(D\Algr^{\opposite}, \Set) \longrightarrow \Fun(F\Algr^{\opposite}, \Set) \qquad G \longmapsto G(- \otimes_{\mathbb{Q}} D)$$
+is defined in a similar way as the Weil restriction.
+
+The comparison between quaternion algebra and field extension can be perplexing. On one hand, it is suggested that $\GL_{2}$ may not be as intimidating as it seems, as it can be seen as "the restriction of a torus". On the other hand, $\mathbb{G}_{m,D}$ faces challenges in being represented by a scheme due to the non-commutativity of $D$. Can one really understand the geometry of non-commutative rings?
+\end{remark}
+We conclude this subsection by a table of examples.
+{\def\arraystretch{2}
+\begin{table}[ht]
+\centering
+\[
+\begin{array}{|l|c|c|}
+\hline
+F & \mathbb{Q} & \mathbb{Q}(\sqrt{3}) \\
+D/F & M_2(\mathbb{Q}) & \displaystyle \left(\frac{-1,-1}{\mathbb{Q}(\sqrt{3})}\right) \\
+S(D) & \varnothing & \{\infty_1, \infty_2 \} \\
+\hline
+G_D:=(D \otimes_{\mathbb{Q}} -)^{\times} & \GL_2 & \displaystyle\left(\frac{-1,-1}{\mathbb{Q}(\sqrt{3}) \otimes_{\mathbb{Q}} -}\right)^{\times}\rule{0mm}{8mm} \\
+G_D(\mathbb{Q})=D^{\times} & \GL_2(\mathbb{Q}) & \displaystyle\left(\frac{-1,-1}{\mathbb{Q}(\sqrt{3})}\right)^{\times} \rule{0mm}{8mm}\\
+G_D(\mathbb{R}) & \GL_2(\mathbb{R}) & \mathbb{H}^{\times} \times \mathbb{H}^{\times}\rule{0mm}{8mm}\\
+\hline
+\end{array}
+\]
+\end{table}
+}
+
+\begin{ex}
+Work out $G_D(A)$ for $A=\mathbb{C}, \mathbb{Q}_p$ and $\mathbb{A}_{\mathbb{Q}}$.
+\end{ex}
+
+\subsection{Modular form of quaternion algebras}
+
+
+\subsection{Global Langlands correspondence for inner forms of $\GL_{2,F}$}
 
 %\include{chapters/chapter9}
 
