@@ -8,4 +8,4 @@
 \contentsline {subsection}{\tocsubsection {}{4.4}{Global Langlands correspondence for $\GL _{2,F}$}}{6}{subsection.4.4}% 
 \contentsline {section}{\tocsection {}{5}{Adèlic Modular Forms on Quaternion Algebras}}{6}{section.5}% 
 \contentsline {subsection}{\tocsubsection {}{5.1}{Quaternion algebras}}{6}{subsection.5.1}% 
-\contentsline {section}{\tocsection {}{}{References}}{6}{section*.3}% 
+\contentsline {section}{\tocsection {}{}{References}}{8}{section*.3}% 

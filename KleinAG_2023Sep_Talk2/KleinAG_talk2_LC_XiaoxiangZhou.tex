@@ -266,7 +266,7 @@
 \DeclareMathOperator{\character}{\operatorname{char}}
 \DeclareMathOperator{\poly}{\operatorname{poly}}
 \DeclareMathOperator{\Frob}{\operatorname{Frob}}
-
+\DeclareMathOperator{\Norm}{\operatorname{Nm}}
 
 %%%%%%%newcommand
 
@@ -713,6 +713,78 @@ In this section, we try to generalize all the results in Section \ref{sec:GLC_GL
 For simplicity, $F$ is a totally real field in the whole section.
 
 \subsection{Quaternion algebras}
+
+\begin{definition}
+A \textbf{quaternion algebra} over $F$ is a $4$-$\dim$ central simple algebra(CSA) over $F$.
+\end{definition}
+\begin{ex}
+For $a,b \in F^{\times}$, $\character F \neq 2$, denote
+$$\left(\frac{a,b}{F}
+\right)
+=F \oplus Fi \oplus Fj \oplus Fk$$
+with relations
+$$i^2=a, j^2 =b, ij=k=-ji.$$
+Then $\big(\frac{a,b}{F}\big)$ is a quaternion algebra over $F$.\footnote{One can also define $\left(\frac{a,b}{F}\right)$ for a ring $R$.}
+\end{ex}
+\begin{remark}
+All the quaternion algebras can be written as the form $\big(\frac{a,b}{F}\big)$. How to show this?
+\end{remark}
+The quaternion algebra is closely related to the Brauer group and Galois cohomology. Consequently, I may not be able to provide a comprehensive presentation of all aspects. Here, I have compiled some key facts that may aid in understanding and computations.
+%https://tex.stackexchange.com/questions/147679/custom-alignment-of-text-in-itemized-environment
+%https://tex.stackexchange.com/questions/258192/how-can-i-make-a-math-version-of-itemize-enumerate-and-description-environment
+\begin{bbox}
+\begin{equation*}
+\begin{aligned}
+&1)&&  \left(\frac{a,b}{F}\right) \cong M_2(F) &&&& \text{when $F$ is finite aor algebraic closed.}  \\ 
+&2)&&  \left(\frac{a,b}{\mathbb{R}}\right) \cong M_2(\mathbb{R}) && \Longleftrightarrow && a>0 \text{ or } b>0 \\ 
+&3)&&  \left(\frac{a,b}{F_v}\right) \cong M_2(F_v) && \Longleftrightarrow && (a,b)_v=1 \\
+&&&&& \Longleftrightarrow && z^2=ax^2+by^2 \text{ has a non-zero solution } (x,y,z) \in F_v^{\oplus 3} \\[3mm]
+&&&&& \Longleftrightarrow && b \in \Img \Norm_{F_v(\sqrt{a})/F_v} \\
+\end{aligned}
+\end{equation*} 
+
+Here,
+$$(a,b)_v=\begin{cases}
+(-1)^{\alpha\beta \varepsilon(p)} \left(\displaystyle\frac{u}{p}\right)^{\beta} \left(\displaystyle\frac{v}{p}\right)^{\alpha}\!\!\!, & F_v \cong \mathbb{Z}_p, p \geqslant 3, a=p^{\alpha}u, b=p^{\beta} v\\
+\rule{0mm}{6mm}(-1)^{\varepsilon(u)\varepsilon(v)+\alpha \omega(v)+\beta \omega(u)}, & F_v \cong \mathbb{Z}_2, \phantom{p \geqslant 3,} a=2^{\alpha}u, b=2^{\beta} v\\
+\rule{0mm}{6mm}? & \text{other cases}
+\end{cases}$$
+is the Hilbert symbol, where
+$$\varepsilon(n)=\frac{n-1}{2}, \qquad \omega(n)=\frac{n^2-1}{8}.$$
+\end{bbox}
+
+Quaternion algebras over number fields are global objects, for which we can study the ``ramification information" locally.
+
+\begin{definition}[Ramification for quaternion algebras]
+Let $F$ be a number field, $D$ be a quaternion algebra over $F$, and $v$ be a place of $F$. We say that $D$ is ramified at $v$, if
+$$D \otimes_F F_v \ncong M_2(F_v)$$
+as quaternion algebras over $F_v$. Denote
+$$S(D):= \left\{ v: \text{places of } F\rule{0mm}{3mm} \;\middle|\; D \otimes_F F_v \ncong M_2(F_v) \right\}$$
+as the set of places of $F$ at which $D$ is ramified.
+\end{definition}
+
+\begin{eg}
+Using the black box, one can show that
+$$S\!\left(M_2(F)\rule{0mm}{3mm}\right) = \varnothing, \qquad
+S\!\left(\left(\frac{-1,-1}{\mathbb{Q}}\right)\rule{-0.5mm}{5.6mm}\right) = \{2,\infty\},\qquad
+S\!\left(\left(\frac{-1,-1}{\mathbb{Q}(\sqrt{3})}\right)\rule{-0.5mm}{5.6mm}\right) = \{\infty_1,\infty_2\}.
+$$
+\end{eg}
+
+\begin{remark}
+It is claimed that the map
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXHtcXHRleHR7cXVhdGVybmlvbiBhbGdlYnJhcyBvdmVyIH0gRiBcXH0gL197XFxjb25nfSJdLFsxLDAsIlxcbGVmdFxceyBBIFxcc3Vic2V0ZXFxIFxce1xcdGV4dHtwbGFjZXMgb2YgfSBGIFxcfSBcXDtcXG1pZGRsZXxcXDsgXFwjIEEgXFx0ZXh0eyBpcyBldmVufVxccnVsZXswbW19ezNtbX0gIFxccmlnaHRcXH0iXSxbMSwxLCJTKEQpIl0sWzAsMSwiRCJdLFszLDIsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Im1hcHMgdG8ifX19XSxbMCwxLCJcXGNvbmciXV0=
+\[\begin{tikzcd}[column sep=10mm,row sep=0mm]
+	{\{\text{quaternion algebras over } F \} /_{\cong}} & {\left\{ A \subseteqq \{\text{places of } F \} \;\middle|\; \# A \text{ is even}\rule{0mm}{3mm}  \right\}} \\
+	D & {S(D)}
+	\arrow[maps to, from=2-1, to=2-2]
+	\arrow["\cong", from=1-1, to=1-2]
+\end{tikzcd}\]
+is a bijection by the theory on Brauer group, but I don't know how to construct the inverse map explicitly. The set $S(D)$ is not easy to compute neither. 
+\end{remark}
+\begin{question}
+How to understand the ramification theory of quaternion algebras geometrically? My understanding of ramifications in field extensions \cite[\href{https://github.com/ramified/personal_handwritten_collection/tree/main/ramified_covering}{ramified covering}]{weeklyupdate} may be helpful.
+\end{question}
 
 \href{https://www.zhihu.com/column/c_1338102029848887297}{Quaternion algebras}
 
