@@ -356,7 +356,7 @@
 \begin{document}
 
 % The beginning depends on the documentclass. Rewrite this part if you use different documentclass!
-\date{\today}
+\date{September 9,2023}
 
 \title
 {a crash introduction to Langlands Correspondence
@@ -686,7 +686,7 @@ as the set of \textbf{cuspidal automorphic representations} of weight $(k,\eta)$
 We did not delve into the Hecke operator theory \cite[4.6-4.7]{Modlift22}, strong multiplicity one \cite[4.15]{Modlift22}, and the theory of newforms \cite[4.16]{Modlift22} in this discussion. Interested readers are encouraged to explore these topics independently.
 \end{remark}
 \begin{remark}
-To generalize the above results to $\GL_{2,F}$, substitute $\mathbb{Q}$ with $\mathbb{F}$. If any issues arise, apply $D=M_2(F)$ in the following section to observe the generalization.
+To generalize the above results to $\GL_{2,F}$, substitute $\mathbb{Q}$ with $F$. If any issues arise, apply $D=M_2(F)$ in the following section to observe the generalization.
 \end{remark}
 
 \subsection{Global Langlands correspondence for $\GL_{2,F}$}
@@ -739,7 +739,7 @@ $$\left(\frac{a,b}{F}
 =F \oplus Fi \oplus Fj \oplus Fk$$
 with relations
 $$i^2=a, j^2 =b, ij=k=-ji.$$
-Then $\big(\frac{a,b}{F}\big)$ is a quaternion algebra over $F$.\footnote{One can also define $\left(\frac{a,b}{F}\right)$ for a ring $R$.}
+Then $\big(\frac{a,b}{F}\big)$ is a quaternion algebra over $F$.\footnote{One can also define $\left(\frac{a,b}{R}\right)$ for a ring $R$.}
 \end{ex}
 \begin{remark}
 All the quaternion algebras can be written as the form $\big(\frac{a,b}{F}\big)$. See \cite[Theorem 5.5]{clark2012non} for a proof of this fact.
@@ -818,7 +818,7 @@ It can be shown that $G_D$ is an inner form of $\prod_{[F:\mathbb{Q}]} \GL_{2,\m
 I personally would like to write
 $$G_D= \Res_{D/\mathbb{Q}} \mathbb{G}_m = \Res_{F/\mathbb{Q}}\Res_{D/F} \mathbb{G}_m, $$
 where
-$$\Res_{D/F}: \Fun(D\Algr^{\opposite}, \Set) \longrightarrow \Fun(F\Algr^{\opposite}, \Set) \qquad G \longmapsto G(- \otimes_{\mathbb{Q}} D)$$
+$$\Res_{D/F}: \Fun(D\Algr^{\opposite}, \Set) \longrightarrow \Fun(F\Algr^{\opposite}, \Set) \qquad G \longmapsto G(- \otimes_{F} D)$$
 is defined in a similar way as the Weil restriction.
 
 The comparison between quaternion algebra and field extension can be perplexing. On one hand, it is suggested that $\GL_{2}$ may not be as intimidating as it seems, as it can be seen as "the restriction of a torus". On the other hand, $\mathbb{G}_{m,D}$ faces challenges in being represented by a scheme due to the non-commutativity of $D$. Can one really understand the geometry of non-commutative rings?
@@ -834,7 +834,7 @@ F & \mathbb{Q} & \mathbb{Q}(\sqrt{3}) \\
 D/F & M_2(\mathbb{Q}) & \displaystyle \left(\frac{-1,-1}{\mathbb{Q}(\sqrt{3})}\right) \\
 S(D) & \varnothing & \{\infty_1, \infty_2 \} \\
 \hline
-G_D:=(D \otimes_{\mathbb{Q}} -)^{\times} & \GL_2 & \displaystyle\left(\frac{-1,-1}{\mathbb{Q}(\sqrt{3}) \otimes_{\mathbb{Q}} -}\right)^{\times}\rule{0mm}{8mm} \\
+G_D:=(- \otimes_{\mathbb{Q}} D)^{\times} & \GL_2 & \displaystyle\left(\frac{-1,-1}{ -\otimes_{\mathbb{Q}} \mathbb{Q}(\sqrt{3})}\right)^{\times}\rule{0mm}{8mm} \\
 G_D(\mathbb{Q})=D^{\times} & \GL_2(\mathbb{Q}) & \displaystyle\left(\frac{-1,-1}{\mathbb{Q}(\sqrt{3})}\right)^{\times} \rule{0mm}{8mm}\\
 G_D(\mathbb{R}) & \GL_2(\mathbb{R}) & \mathbb{H}^{\times} \times \mathbb{H}^{\times}\rule{0mm}{8mm}\\
 \hline
@@ -901,7 +901,7 @@ This formula can also be formulated as $$\tau_{\infty}(\gamma'\gamma)\phi(g\gamm
 $$f_{\phi,g}: (\mathcal{H}^{\pm})^{\{ v|\infty \} \smallsetminus S(D)} \longrightarrow \mathbb{C} \qquad \gamma (i,\ldots,i) \longmapsto \tau_{\infty}(\gamma)\phi(g\gamma)$$
 is holomorphic.
 \item[] (holomorphic at $\infty$) When $D=M_2(\mathbb{Q})$,  $f_{\phi,g}(\tau) \abs{\Img \tau}^{\frac{k}{2}}$ is bounded.
-\item (cuspidal condition) When $G_D=\GL_{2}(F\otimes_{\mathbb{Q}} -)$, for any $g \in G_D(\mathbb{A}_{\mathbb{Q}})=\GL_2(\mathbb{A}_F)$, 
+\item (cuspidal condition) When $G_D=\GL_{2}(-\otimes_{\mathbb{Q}} F)$, for any $g \in G_D(\mathbb{A}_{\mathbb{Q}})=\GL_2(\mathbb{A}_F)$, 
 {
 \setlength\arraycolsep{1pt}
 \renewcommand{\arraystretch}{0.6}
