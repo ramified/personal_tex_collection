@@ -9,5 +9,5 @@
 \contentsline {section}{\tocsection {}{5}{Adèlic Modular Forms on Quaternion Algebras}}{6}{section.5}% 
 \contentsline {subsection}{\tocsubsection {}{5.1}{Quaternion algebras}}{6}{subsection.5.1}% 
 \contentsline {subsection}{\tocsubsection {}{5.2}{Modular form of quaternion algebras}}{8}{subsection.5.2}% 
-\contentsline {subsection}{\tocsubsection {}{5.3}{Global Langlands correspondence for inner forms of $\GL _{2,F}$}}{8}{subsection.5.3}% 
-\contentsline {section}{\tocsection {}{}{References}}{8}{section*.4}% 
+\contentsline {subsection}{\tocsubsection {}{5.3}{Global Langlands correspondence for inner forms of $\GL _{2,F}$}}{9}{subsection.5.3}% 
+\contentsline {section}{\tocsection {}{}{References}}{9}{section*.5}% 

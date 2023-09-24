@@ -271,6 +271,7 @@
 \DeclareMathOperator{\opposite}{\operatorname{op}}
 \DeclareMathOperator{\Set}{\operatorname{Set}}
 \DeclareMathOperator{\Fun}{\operatorname{Fun}}
+\DeclareMathOperator{\Sym}{\operatorname{Sym}}
 
 %%%%%%%newcommand
 
@@ -576,7 +577,7 @@ You may need the following fact during the proof:
 
 In this subsection, we define modular form in an adèlic way.
 
-\begin{definition}[Cuspidal modular form $S_{M_2(\mathbb{Q}), k, \eta}$]
+\begin{definition}[Cuspidal modular form $S_{M_2(\mathbb{Q}), k, \eta}$]\label{def:cmf}
 For $k \geqslant 2$, $\eta \in \mathbb{Z}$, let
 {
 \setlength\arraycolsep{1pt}
@@ -601,9 +602,9 @@ $$S_{M_2(\mathbb{Q}), k, \eta}:= \left\{
 $$\phi(g\gamma)= \phi(g) \phantom{j_{k,\eta}(\gamma)^{-1}} \qquad \text{ for any } \gamma \in U_{\fin}.\hspace{8mm}$$
 \item (automorphy)
 $$\phi(g\gamma)= j_{k,\eta}(\gamma)^{-1}\phi(g) \qquad \text{ for any } \gamma \in \mathbb{R}^{\times} \cdot \SO_2.$$
-This formula can also be formulated as $$j_{k,\eta}(\gamma'\gamma)^{-1}\phi(g\gamma)=j_{k,\eta}(\gamma')^{-1}\phi(g).$$
+This formula can also be formulated as $$j_{k,\eta}(\gamma'\gamma)\phi(g\gamma)=j_{k,\eta}(\gamma')\phi(g).$$
 \item (holomorphy) For any $g \in \GL_2(\mathbb{A}_{\mathbb{Q}})$, the function
-$$f_{\phi,g}: \mathcal{H}^{\pm} \longrightarrow \mathbb{C} \qquad \gamma i \longmapsto \gamma(g\gamma)j_{k,\eta}(\gamma)$$
+$$f_{\phi,g}: \mathcal{H}^{\pm} \longrightarrow \mathbb{C} \qquad \gamma i \longmapsto j_{k,\eta}(\gamma)\phi(g\gamma)$$
 is holomorphic.
 \item[] (holomorphic at $\infty$) $f_{\phi,g}(\tau) \abs{\Img \tau}^{\frac{k}{2}}$ is bounded.
 \item (cuspidal condition) For any $g \in \GL_2(\mathbb{A}_{\mathbb{Q}})$, 
@@ -800,8 +801,12 @@ $$G_D:= (- \otimes_{\mathbb{Q}} D)^{\times} : \mathbb{Q}\Algr^{\opposite} \longr
 is represented by an algebraic group over $\mathbb{Q}$, still denoted by $G_D$. 
 \end{definition}
 \begin{remark}
-It can be shown that $G_D$ is an inner form of $\prod_{[F:\mathbb{Q}]} \GL_{2,\mathbb{Q}}$. Moreover, every inner form of $\GL_{2,\mathbb{Q}}$ has the form $G_D$, for some quaternion algebra $D$ over $\mathbb{Q}$. These facts can be found in [???].
+It can be shown that $G_D$ is an inner form of $\prod_{[F:\mathbb{Q}]} \GL_{2,\mathbb{Q}}$. Moreover, every inner form of $\GL_{2,\mathbb{Q}}$ has the form $G_D$, for some quaternion algebra $D$ over $\mathbb{Q}$. These facts can be found in \cite[Chapter 17]{springer1998linear}.
 \end{remark}
+%mathoverflow.net/questions/271640/is-there-a-list-of-the-inner-forms-of-the-quasisplit-groups-over-local-and-globa
+%https://math.stackexchange.com/questions/2750838/central-simple-algebras-give-rise-to-algebraic-groups
+%https://dial.uclouvain.be/pr/boreal/object/boreal\%3A109069/datastream/PDF_01/view
+%https://www.math.ens.psl.eu/~benoist/refs/Gille-Szamuely.pdf
 \begin{remark}
 I personally would like to write
 $$G_D= \Res_{D/\mathbb{Q}} \mathbb{G}_m = \Res_{F/\mathbb{Q}}\Res_{D/F} \mathbb{G}_m, $$
@@ -837,7 +842,69 @@ Work out $G_D(A)$ for $A=\mathbb{C}, \mathbb{Q}_p$ and $\mathbb{A}_{\mathbb{Q}}$
 
 \subsection{Modular form of quaternion algebras}
 
+For mimicking Definition \ref{def:cmf}, one has to give some new definitions.
+\begin{definition}
+For $v|\infty$, $k_v$, $\eta_v \in \mathbb{Z}$, define $U_v$ and $(\tau_v,W_v) \in \rep(U_v)$ as follows:
 
+% Please add the following required packages to your document preamble:
+% \usepackage{multirow}
+\begin{table}[ht]
+\centering
+\[
+\begin{array}{|c|c|c|}
+\hline
+ & v \notin S(D) & v \in S(D) \\
+ \hline
+U_v & \mathbb{R}^{\times} \SO_2 & \mathbb{H}^{\times} \\
+\hline
+W_v & \mathbb{C} & (\Lambda^2\mathbb{C}^2)^{\eta_v} \otimes_{\mathbb{C}} (\Sym^{k_v-2} \mathbb{C}^2 ) \\
+\hline
+\multirow{2}{*}{$\tau_v$} &  & \text{ constructed from }\\
+ & \mathbb{R}^{\times} \SO_2 \xrightarrow{j_{k_v,\eta_v}} \mathbb{C}^{\times} \curvearrowright \mathbb{C} & \mathbb{H}^{\times} \hookrightarrow \GL_{2,\mathbb{C}} \curvearrowright \mathbb{C}^2 \\
+ \hline
+\end{array}
+\]
+\end{table}
+We denote 
+$$\displaystyle U_{\infty} = \prod_{v|\infty} U_v, \qquad  (\tau_{\infty}, W_{\infty}) = \bigotimes_{v|\infty} (\tau_v, W_v).$$
+\end{definition}
+
+
+Now we can modify Definition \ref{def:cmf}.
+
+\begin{definition}[{Cuspidal modular form $S_{D, k, \eta}$, \cite[4.8]{Modlift22}}]\label{def:cmfqalg}
+For $k =(k_v)_{v|\infty}$, $\eta=(\eta_v)_{v|\infty}$, define the space of cuspidal modular form for a quaternion algebra $D$:
+$$S_{D, k, \eta}:= \left\{
+\begin{aligned}
+  &\phi\colon \raisebox{-1mm}{$G_D(\mathbb{Q})$} \backslash \raisebox{1mm}{$G_D(\mathbb{A}_{\mathbb{Q}})$} \longrightarrow \mathbb{C} \quad\text{ as functions}   \\ 
+  & \qquad\text{such that {\upshape(1) to (4)} are ture} \\
+\end{aligned}
+\right\}$$
+\begingroup
+\upshape
+%\setlist{itemsep=-0.4em}
+\renewcommand\labelenumi{(\theenumi)}
+\begin{enumerate}
+\item (continuity) There exists an open subset $U_{\fin} \leqslant G_D(\mathbb{A}_{\mathbb{Q},\fin})$ such that 
+$$\phi(g\gamma)= \phi(g) \phantom{\tau_{\infty}(\gamma)^{-1}} \qquad \text{ for any } \gamma \in U_{\fin}.\hspace{0mm}$$
+\item (automorphy)
+$$\phi(g\gamma)= \tau_{\infty}(\gamma)^{-1}\phi(g) \qquad \text{ for any } \gamma \in U_{\infty}.$$
+This formula can also be formulated as $$\tau_{\infty}(\gamma'\gamma)\phi(g\gamma)=\tau_{\infty}(\gamma')\phi(g).$$
+\item (holomorphy) For any $g \in G_D(\mathbb{A}_{\mathbb{Q}})$, the function
+$$f_{\phi,g}: (\mathcal{H}^{\pm})^{S_{\infty} \smallsetminus S(D)} \longrightarrow \mathbb{C} \qquad \gamma (i,\ldots,i) \longmapsto \tau_{\infty}(\gamma)\phi(g\gamma)$$
+is holomorphic.
+\item[] (holomorphic at $\infty$) When $D=M_2(\mathbb{Q})$,  $f_{\phi,g}(\tau) \abs{\Img \tau}^{\frac{k}{2}}$ is bounded.
+\item (cuspidal condition) When $G_D=\GL_{2}(F\otimes_{\mathbb{Q}} -)$, for any $g \in G_D(\mathbb{A}_{\mathbb{Q}})=\GL_2(\mathbb{A}_F)$, 
+{
+\setlength\arraycolsep{1pt}
+\renewcommand{\arraystretch}{0.6}
+$$\int_{F \backslash \mathbb{A}_{F}} \phi \! \left( \begin{pmatrix}
+1 & x \\ 0 & 1 
+\end{pmatrix} \rule{0mm}{5mm}g \right) dx =0.$$
+}
+\end{enumerate}
+\endgroup
+\end{definition}
 \subsection{Global Langlands correspondence for inner forms of $\GL_{2,F}$}
 
 %\include{chapters/chapter9}
