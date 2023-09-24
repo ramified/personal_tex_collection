@@ -272,7 +272,9 @@
 \DeclareMathOperator{\Set}{\operatorname{Set}}
 \DeclareMathOperator{\Fun}{\operatorname{Fun}}
 \DeclareMathOperator{\Sym}{\operatorname{Sym}}
-
+\DeclareMathOperator{\JK}{\operatorname{JK}}
+\DeclareMathOperator{\loc}{\operatorname{loc}}
+\DeclareMathOperator{\BC}{\operatorname{BC}}
 %%%%%%%newcommand
 
 %%%basic symbols
@@ -308,6 +310,11 @@
 \newcommand{\Acuspkn}{\mathcal{A}_{\operatorname{cusp},k,\eta}}
 
 \renewcommand{\Res}{\operatorname{Res}}
+%https://tex.stackexchange.com/questions/260554/two-headed-version-of-xrightarrow
+\newcommand{\rightarrowdbl}{\rightarrow\mathrel{\mkern-14mu}\rightarrow}
+\newcommand{\xrightarrowdbl}[2][]{%
+  \xrightarrow[#1]{#2}\mathrel{\mkern-14mu}\rightarrow
+}
 
 
 %%%%%%%%%%%%%%%%%%%% here we make some blocks for special features. 
@@ -891,7 +898,7 @@ $$\phi(g\gamma)= \phi(g) \phantom{\tau_{\infty}(\gamma)^{-1}} \qquad \text{ for 
 $$\phi(g\gamma)= \tau_{\infty}(\gamma)^{-1}\phi(g) \qquad \text{ for any } \gamma \in U_{\infty}.$$
 This formula can also be formulated as $$\tau_{\infty}(\gamma'\gamma)\phi(g\gamma)=\tau_{\infty}(\gamma')\phi(g).$$
 \item (holomorphy) For any $g \in G_D(\mathbb{A}_{\mathbb{Q}})$, the function
-$$f_{\phi,g}: (\mathcal{H}^{\pm})^{S_{\infty} \smallsetminus S(D)} \longrightarrow \mathbb{C} \qquad \gamma (i,\ldots,i) \longmapsto \tau_{\infty}(\gamma)\phi(g\gamma)$$
+$$f_{\phi,g}: (\mathcal{H}^{\pm})^{\{ v|\infty \} \smallsetminus S(D)} \longrightarrow \mathbb{C} \qquad \gamma (i,\ldots,i) \longmapsto \tau_{\infty}(\gamma)\phi(g\gamma)$$
 is holomorphic.
 \item[] (holomorphic at $\infty$) When $D=M_2(\mathbb{Q})$,  $f_{\phi,g}(\tau) \abs{\Img \tau}^{\frac{k}{2}}$ is bounded.
 \item (cuspidal condition) When $G_D=\GL_{2}(F\otimes_{\mathbb{Q}} -)$, for any $g \in G_D(\mathbb{A}_{\mathbb{Q}})=\GL_2(\mathbb{A}_F)$, 
@@ -905,7 +912,75 @@ $$\int_{F \backslash \mathbb{A}_{F}} \phi \! \left( \begin{pmatrix}
 \end{enumerate}
 \endgroup
 \end{definition}
+
+\begin{remark}
+For assuring $S_{D,k,\eta} \neq \{0\}$, one should require that
+$$k_v \geqslant 2, \qquad k_v+2\eta_v=k_w+2\eta_w, \quad \text{ for any } v,w|\infty.$$
+\end{remark}
+
+\begin{eg}
+For $D=\big(\frac{-1,-1}{\mathbb{Q}(\sqrt{3})}\big)$, conditions {\upshape(3)} and {\upshape(4)} are automatically satisfied. Furthermore,
+\begin{equation*}
+\begin{aligned}
+  S_{D,2,0}^{U_{\fin}}=\;&  \mathbb{C} \left[ 
+  \raisebox{-1mm}{$G_D(\mathbb{Q})$} \backslash \raisebox{1mm}{$G_D(\mathbb{A}_{\mathbb{Q}})$} /\, \raisebox{-1mm}{$U_{\fin}U_{\infty}$}
+  \right]\\ 
+  =\;&  \mathbb{C} \left[ 
+    \raisebox{-1mm}{$G_D(\mathbb{Q})$} \backslash \raisebox{1mm}{$G_D(\mathbb{A}_{\mathbb{Q},\fin})$} /\, \raisebox{-1mm}{$U_{\fin}$}
+    \right]\\ 
+\end{aligned}
+\end{equation*}
+is a finite dimensional $\mathbb{C}$-vector space.
+\end{eg}
+
+\begin{definition}
+$D$ is definite, if $\{ v|\infty \} \subseteq S(D)$, i.e., $G_D(\mathbb{R}) \cong \mathbb{H}^{\times} \times \cdots \times \mathbb{H}^{\times}$.
+\end{definition}
+\begin{eg}
+The quaternion algebra $\big(\frac{-1,-1}{F}\big)$ is definite.
+\end{eg}
+Modular forms are easier in the definite quaternion algebra case. In the proof of modularity lifting, we will reduce the problem to this case.
+
+\begin{remark}
+One can define $\Acuspkn(G_D)$ and $\Pi_{\Acusp,k,\eta}(G_D)$ in a manner analogous to Section \ref{sec:GLC_GL2}, demonstrating that they exhibit similar properties.
+\end{remark}
+
 \subsection{Global Langlands correspondence for inner forms of $\GL_{2,F}$}
+
+Finally, we state the Jacquet--Langlands correspondence without proof, which may be viewed as the global Langlands correspondence for inner forms of $\GL_{2}$.
+\begin{theorem}[{The Jacquet--Langlands correspondence, \cite[4.17]{Modlift22}}]
+One has the following $1$-to-$1$ correspondence:
+$$\JK:\left\{
+\begin{aligned}
+  (\pi, V) \in& \Pi_{\Acusp,k,\eta}\!\left(G_D\rule{0mm}{3mm}(\mathbb{A}_{\mathbb{Q}, \fin})\right)   \\ 
+  & \dim_{\mathbb{C}} V = +\infty \\
+\end{aligned}
+\right\} \xrightarrow{\quad\cong\quad}
+\left\{
+\begin{aligned}
+  &(\pi, V) \in \Pi_{\Acusp,k,\eta}\!\left(\GL_2\rule{0mm}{3mm}(\mathbb{A}_{\mathbb{Q}, \fin})\right)   \\ 
+   \pi|_{\GL_{2}(F_v)}&:\text{discrete series, for any } v \in S(D), v \nmid \infty \\
+\end{aligned}
+\right\}
+$$
+Moreover, 
+\begin{itemize}
+\item when $v \notin S(D)$, both sides gives the same representation;
+\item when $v \in S(D)$, $v\nmid \infty$, the Jacquet--Langlands map is compatible with the local Jacquet--Langlands map:
+$$\JK_{\loc}: \Irr \! \left( G_D\rule{0mm}{3mm}(F_v) \right) \xrightarrow{\quad\cong\quad} \Irr \!\left( \GL_2\rule{0mm}{3mm}(F_v) \right) + \text{ discrete series}.$$
+\end{itemize}
+\end{theorem}
+
+We also state the base change property here.
+
+\begin{theorem}[{Base change, \cite[4.23]{Modlift22}}]
+Let $E/F$ be a totally real field extension with $\Gal(E/F) \cong \mathbb{Z}/\tilde{p}\mathbb{Z}$, where $\tilde{p}$ is a prime number. We get a map
+$$\BC_{E/F}: \Pi_{\Acusp,k,\eta}\!\left(\GL_2\rule{0mm}{3mm}(\mathbb{A}_{F, \fin})\right)/_{\sim} \xrightarrowdbl{\quad\cong\quad} \Pi_{\Acusp,k,\eta}\!\left(\GL_2\rule{0mm}{3mm}(\mathbb{A}_{E, \fin})\right)^{\Gal(E/F)}$$
+which is compatible with local Langlands correspondence, where
+$$\pi \sim \pi' \quad \Longleftrightarrow \quad \pi \;\cong\; \pi' \otimes (\chi \circ \det)$$
+$$\chi \circ \det: \GL_2\rule{0mm}{3mm}(\mathbb{A}_{F, \fin}) \xrightarrow{\det} \mathbb{A}_{F, \fin}^{\times} \xrightarrow{\Art_F} \Gamma_{F}^{\ab} \xrightarrowdbl{\quad} \Gal(E/F) \xrightarrow{\;\chi\;} \mathbb{C}^{\times}.$$
+\end{theorem}
+After extensive effort, we have comprehended the Langlands correspondence in these four versions. All the versions presented in this document have been rigorously proven. To gain a deep understanding and avoid errors, readers are encouraged to explore the extensive literature for the detailed proofs. However, this is far away from the goal of this talk.
 
 %\include{chapters/chapter9}
 
