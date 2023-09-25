@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  24 SEP 2023 23:00
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  25 SEP 2023 18:53
 entering extended mode
 **./KleinAG_talk2_LC_XiaoxiangZhou.tex
 (KleinAG_talk2_LC_XiaoxiangZhou.tex
@@ -1683,11 +1683,7 @@ LaTeX Font Warning: Font shape `U/wasy/b/n' in size <7> not available
 \se-ascii-print.def"
 File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 
-)
-Overfull \vbox (2.2951pt too high) has occurred while \output is active []
-
-
-[1]
+) [1]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 436.
@@ -1889,7 +1885,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 993.
 Here is how much of TeX's memory you used:
  37825 strings out of 427748
  698503 string characters out of 3150981
- 753477 words of memory out of 3000000
+ 753496 words of memory out of 3000000
  41147 multiletter control sequences out of 15000+200000
  544237 words of font info for 84 fonts, out of 3000000 for 9000
  1489 hyphenation exceptions out of 8191

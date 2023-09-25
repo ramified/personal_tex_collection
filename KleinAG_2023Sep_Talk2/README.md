@@ -1,4 +1,4 @@
-Here is the lecture note for the KleinAG talk. If I have time I would LaTeX it and put it in this folder.
+Here is the lecture note for the [KleinAG](thomasmanopulo.wordpress.com/kleine-ag-september-2023-modularity-lifting-theorems/) talk. For other people's note, see the [link](thomasmanopulo.wordpress.com/kleine-ag-september-2023-modularity-lifting-theorems/).
 
 
 
