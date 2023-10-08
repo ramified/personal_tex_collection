@@ -94,8 +94,10 @@ $\Delta:=\frac{1}{1728}(E_4^3-E_6^2)$
 	\label{tb:torus-moduli}
 \end{table}
 \subsection{Jacobi模形式}
-曾经我突发奇想,是否存在一个$\mathcal{H}/\SL_2(\mathbb{Z})$上的纤维丛$E$,使得每一个点$\tau$对应的纤维$E_\tau$恰好就是复环面$\mathbb{C}/\Lambda_{\tau}$?直到有一天我找到了梦中的空间:\footnote{事实上，这个空间是$E:=(\mathbb{Z}^2 \rtimes \SL_2(\mathbb{Z})) \textbackslash (\mathcal{H} \times \mathbb{C})$, 其中半直积如下群作用定义:
-$$\SL_2(\mathbb{Z})  \times \mathbb{Z}^2 \longrightarrow \mathbb{Z}^2 \qquad \left( \gamma,\rule{0mm}{3.7mm} (m,n) \right) \longmapsto (m,n) \gamma^{-1} .$$}
+曾经我突发奇想,是否存在一个$\mathcal{H}/\SL_2(\mathbb{Z})$上的纤维丛$E$,使得每一个点$\tau$对应的纤维$E_\tau$恰好就是复环面$\mathbb{C}/\Lambda_{\tau}$?直到有一天我找到了梦中的空间:\footnote{这个空间是$E:=(\mathbb{Z}^2 \rtimes \SL_2(\mathbb{Z})) \textbackslash (\mathcal{H} \times \mathbb{C})$, 其中半直积如下群作用定义:
+$$\SL_2(\mathbb{Z})  \times \mathbb{Z}^2 \longrightarrow \mathbb{Z}^2 \qquad \left( \gamma,\rule{0mm}{3.7mm} (m,n) \right) \longmapsto (m,n) \gamma^{-1} .$$
+然而，如果你仔细验证的话会发现，每一个点$\tau$对应的纤维$E_\tau$是复环面$\mathbb{C}/\Lambda_{\tau}$商去对径点，即$\mathbb{P}^1$.事实上，由于稳定子群非平凡，$\mathcal{H}/\SL_2(\mathbb{Z})$无法成为细模空间。
+}
 $$E:=\SL_2(\mathbb{Z})\textbackslash (\mathcal{H} \times \mathbb{C})/\mathbb{Z}^2 \qquad \gamma(\tau,z):= (\gamma \tau,\frac{z}{c\tau +d}) \quad (m,n)(\tau,z):=(\tau, z+m\tau+n)$$
 这个空间鼓励我们通过整体的方式来看问题,让我们回顾Weierstrass函数$\wp(z,\tau):= \wp_{\Lambda_{\tau}}(z)$,发现它可以视作两个变元的函数,并且它的Laurent展开
 $$\wp(z,\tau)=\frac{1}{z^2}+ \sum_{k=1}^{\infty}(2k+1) G_{2(k+1)}(\tau)z^{2k}$$

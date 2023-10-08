@@ -1,0 +1,592 @@
+
+\documentclass[reqno,UTF8]{amsart}
+%Typical documenttypes: article/book
+%some examples:
+%\documentclass[reqno,11pt]{book}   %%%for books
+%\documentclass[]{minimal}			%%%for Minimal Working Example
+
+
+%for beamers, you have to change a lot. Especially, remove the package enumitem!!!
+
+
+
+%%%%%%%%%%%%%%%%%%%% setting for fast compiling
+
+%\special{dvipdfmx:config z 0}		% no compression
+
+\includeonly{chapters/chapter9}		% In practice, use an empty document called "chapter9"	% usually for printing books
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%% here we include packages
+
+%%%basic packages for math articles
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[shortlabels]{enumitem}	% It supersedes both enumerate and mdwlist. The package option shortlabels is included to configure the labels like in enumerate.
+
+%%%packages for special symbols
+\usepackage{pifont}					% Access to PostScript standard Symbol and Dingbats fonts
+\usepackage{wasysym}				% additional characters
+\usepackage{bm}						% bold fonts: \bm{...}
+\usepackage{extarrows}				% may be replaced by tikz-cd
+%\usepackage{unicode-math}			% unicode maths for math fonts, now I don't know how to include it
+%\usepackage{ctex}					% Chinese characters, huge difference.
+
+
+%%%basic packages for fancy electronic documents
+\usepackage[colorlinks]{hyperref}
+\usepackage[table,hyperref]{xcolor} 			% before tikz-cd. 
+%\usepackage[table,hyperref,monochrome]{xcolor}	% disable colored output (black and white)
+
+%%%packages for figures and tables (general setting)
+\usepackage{float}				%Improved interface for floating objects
+\usepackage{caption,subcaption}
+\usepackage{adjustbox}			% for me it is usually used in tables 
+\usepackage{stackengine}		%baseline changes
+
+%%%packages for commutative diagrams
+\usepackage{tikz-cd}
+%\usepackage{quiver}			% see https://q.uiver.app/
+
+%%%packages for pictures
+\usepackage[width=0.5,tiewidth=0.7]{strands}
+\usepackage{graphicx}			% Enhanced support for graphics
+
+%%%packages for tables and general settings
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{diagbox}
+\usepackage{longtable}
+
+%%%packages for ToC, LoF and LoT
+
+
+
+
+
+
+
+ %https://tex.stackexchange.com/questions/58852/possible-incompatibility-with-enumitem
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%% here we include theoremstyles
+
+\numberwithin{equation}{section}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+
+\newtheorem{setting}[theorem]{Setting}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{eg}[theorem]{Example}
+\newtheorem{ex}[theorem]{Exercise}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{ques}[theorem]{Question}
+\newtheorem{warning}[theorem]{Warning}
+
+
+
+\newtheorem*{bbox}{Black box}
+\newtheorem*{notation}{Conventions and Notations}
+
+
+\numberwithin{equation}{section}
+
+
+\theoremstyle{remark}
+
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{remarks}{Remarks}
+
+%%% for important theorems
+%\newtheoremstyle{theoremletter}{4mm}{1mm}{\itshape}{ }{\bfseries}{}{ }{}
+%\theoremstyle{theoremletter}
+%\newtheorem{theoremA}{Theorem}
+%\renewcommand{\thetheoremA}{A}
+%\newtheorem{theoremB}{Theorem}
+%\renewcommand{\thetheoremB}{B}
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%% here we declare some symbols
+
+%%%%%%%DeclareMathOperator
+%see here for why newcommand is better for DeclareMathOperator: https://tex.stackexchange.com/questions/67506/newcommand-vs-declaremathoperator
+
+%%%%%basic symbols. Keep them!
+
+%%%symbols for sets and maps
+\DeclareMathOperator{\pt}{\operatorname{pt}}	%points. Other possibilities are \{pt\}, \{*\}, pt, * ...
+\DeclareMathOperator{\Id}{\operatorname{Id}}	%identity in groups.
+\DeclareMathOperator{\Img}{\operatorname{Im}}
+
+\DeclareMathOperator{\Ob}{\operatorname{Ob}}
+\DeclareMathOperator{\Mor}{\operatorname{Mor}}	%difference of Mor and Hom: Hom is usually for abelian categories
+\DeclareMathOperator{\Hom}{\operatorname{Hom}}	\DeclareMathOperator{\End}{\operatorname{End}}
+\DeclareMathOperator{\Aut}{\operatorname{Aut}}
+
+%%%symbols for linear algebras and 
+%%linear algebras
+\DeclareMathOperator{\tr}{\operatorname{tr}}
+\DeclareMathOperator{\diag}{\operatorname{diag}}	%for diagonal matrices
+
+%%abstract algebras
+\DeclareMathOperator{\ord}{\operatorname{ord}}
+\DeclareMathOperator{\gr}{\operatorname{gr}}
+\DeclareMathOperator{\Frac}{\operatorname{Frac}}
+
+%%%symbols for basic geometries
+\DeclareMathOperator{\vol}{\operatorname{vol}}	%volume
+\DeclareMathOperator{\dist}{\operatorname{dist}}
+\DeclareMathOperator{\supp}{\operatorname{supp}}
+
+%%%symbols for category
+%%names of categories
+\DeclareMathOperator{\Mod}{\operatorname{Mod}}
+\DeclareMathOperator{\Vect}{\operatorname{Vect}}
+\DeclareMathOperator{\rep}{\operatorname{rep}} %usually rep means the category of finite dimensional representations, while Rep means the category of representations.
+\DeclareMathOperator{\Rep}{\operatorname{Rep}}
+
+
+%%%symbols for homological algebras
+\DeclareMathOperator{\Tor}{\operatorname{Tor}}
+\DeclareMathOperator{\Ext}{\operatorname{Ext}}
+\DeclareMathOperator{\gldim}{\operatorname{gl.dim}}
+\DeclareMathOperator{\projdim}{\operatorname{proj.dim}}
+\DeclareMathOperator{\injdim}{\operatorname{inj.dim}}
+\DeclareMathOperator{\rad}{\operatorname{rad}}
+
+
+%%%symbols for algebraic groups
+\DeclareMathOperator{\GL}{\operatorname{GL}}
+\DeclareMathOperator{\SL}{\operatorname{SL}}
+
+%%%symbols for typical varieties
+\DeclareMathOperator{\Gr}{\operatorname{Gr}}
+\DeclareMathOperator{\Flag}{\operatorname{Flag}}
+
+%%%symbols for basic algebraic geometry
+\DeclareMathOperator{\Spec}{\operatorname{Spec}}
+\DeclareMathOperator{\Coh}{\operatorname{Coh}}
+\newcommand{\Dcoh}{\mathcal{D}_{\operatorname{Coh}}}%%%This one shows the difference between \DeclareMathOperator and \newcommand
+\DeclareMathOperator{\Pic}{\operatorname{Pic}}
+\DeclareMathOperator{\Jac}{\operatorname{Jac}}
+
+%%%%%advanced symbols. Choose the part you need!
+
+%%%symbols for algebraic representation theory
+\DeclareMathOperator{\Irr}{\operatorname{Irr}}
+\DeclareMathOperator{\ind}{\operatorname{ind}}	%\ind(Q) means the set of  equivalence classes of finite dimensional indecomposable representations
+\DeclareMathOperator{\Res}{\operatorname{Res}}
+\DeclareMathOperator{\Ind}{\operatorname{Ind}}
+\DeclareMathOperator{\cInd}{\operatorname{c-Ind}}
+
+
+%%%symbols for algebraic topology
+\DeclareMathOperator{\EGG}{\operatorname{E}\!}
+\DeclareMathOperator{\BGG}{\operatorname{B}\!}
+
+\DeclareMathOperator{\chern}{\operatorname{ch}^{*}}
+\DeclareMathOperator{\Td}{\operatorname{Td}}
+\DeclareMathOperator{\AS}{\operatorname{AS}}	%Atiyah--Segal completion theorem 
+
+%%%symbols for Auslander--Reiten theory 
+\DeclareMathOperator{\Modup}{\overline{\operatorname{mod}}}
+\DeclareMathOperator{\Moddown}{\underline{\operatorname{mod}}}
+\DeclareMathOperator{\Homup}{\overline{\operatorname{Hom}}}
+\DeclareMathOperator{\Homdown}{\underline{\operatorname{Hom}}}
+
+
+%%%symbols for operad
+\DeclareMathOperator{\Com}{\operatorname{\mathcal{C}om}}
+\DeclareMathOperator{\Ass}{\operatorname{\mathcal{A}ss}}
+\DeclareMathOperator{\Lie}{\operatorname{\mathcal{L}ie}}
+\DeclareMathOperator{\calEnd}{\operatorname{\mathcal{E}nd}} %cal=\mathcal
+
+
+%%%%%personal symbols. Use at your own risk!
+
+%%%symbols only for master thesis
+\DeclareMathOperator{\ptt}{\operatorname{par}}	%the partition map
+\DeclareMathOperator{\str}{\operatorname{str}}	%strict case
+\DeclareMathOperator{\RRep}{\widetilde{\operatorname{Rep}}}
+\DeclareMathOperator{\Rpt}{\operatorname{R}}
+\DeclareMathOperator{\Rptc}{\operatorname{\mathcal{R}}}
+\DeclareMathOperator{\Spt}{\operatorname{S}}
+\DeclareMathOperator{\Sptc}{\operatorname{\mathcal{S}}}
+\DeclareMathOperator{\Kcurl}{\operatorname{\mathcal{K}}}
+\DeclareMathOperator{\Hcurl}{\operatorname{\mathcal{H}}}
+\DeclareMathOperator{\eu}{\operatorname{eu}}
+\DeclareMathOperator{\Eu}{\operatorname{Eu}}
+\DeclareMathOperator{\dimv}{\operatorname{\underline{\mathbf{dim}}}}
+\DeclareMathOperator{\St}{\mathcal{Z}}
+
+%%%%%symbols which haven't been classified. Add your own math operators here!
+
+\DeclareSymbolFont{bbold}{U}{bbold}{m}{n}
+\DeclareSymbolFontAlphabet{\mathbbold}{bbold}
+\DeclareMathOperator{\indicator}{\mathbbold{1}}
+%https://tex.stackexchange.com/questions/488/blackboard-bold-characters/3260
+
+\DeclareMathOperator{\Real}{\operatorname{Re}}
+\DeclareMathOperator{\ev}{\operatorname{ev}}
+\DeclareMathOperator{\LHS}{\operatorname{LHS}}
+\DeclareMathOperator{\RHS}{\operatorname{RHS}}
+\makeatletter
+\newcommand*\rel@kern[1]{\kern#1\dimexpr\macc@kerna}
+\newcommand*\widebar[1]{%
+  \begingroup
+  \def\mathaccent##1##2{%
+    \rel@kern{0.8}%
+    \overline{\rel@kern{-0.8}\macc@nucleus\rel@kern{0.2}}%
+    \rel@kern{-0.2}%
+  }%
+  \macc@depth\@ne
+  \let\math@bgroup\@empty \let\math@egroup\macc@set@skewchar
+  \mathsurround\z@ \frozen@everymath{\mathgroup\macc@group\relax}%
+  \macc@set@skewchar\relax
+  \let\mathaccentV\macc@nested@a
+  \macc@nested@a\relax111{#1}%
+  \endgroup
+}
+\makeatother
+
+
+
+%%%%%%%newcommand
+
+%%%basic symbols
+\newcommand{\norm}[1]{\Vert{#1}\Vert}
+
+%%%symbols only for master thesis
+\newcommand{\dimvec}[1]{\mathbf{#1}}
+\newcommand{\abdimvec}[1]{|\dimvec{#1}|}
+\newcommand{\ftdimvec}[1]{\underline{\dimvec{#1}}}
+
+\newcommand{\absgp}[1]{\mathbb{#1}}
+\newcommand{\WWd}{\absgp{W}_{\abdimvec{d}}}
+\newcommand{\Wd}{W_{\dimvec{d}}}
+\newcommand{\MinWd}{\operatorname{Min}(\absgp{W}_{\abdimvec{d}},W_{\dimvec{d}})}
+\newcommand{\Compd}{\operatorname{Comp}_{\dimvec{d}}}
+\newcommand{\Shuffled}{\operatorname{Shuffle}_{\dimvec{d}}}
+
+\newcommand{\Omcell}{\Omega}
+\newcommand{\OOmcell}{\boldsymbol{\Omega}}
+\newcommand{\Vcell}{\mathcal{V}}
+\newcommand{\VVcell}{\boldsymbol{\mathcal{V}}}
+\newcommand{\Ocell}{\mathcal{O}}
+\newcommand{\OOcell}{\boldsymbol{\mathcal{O}}}
+\newcommand{\preimage}[1]{\widetilde{#1}}
+\newcommand{\orde}{\operatorname{ord}_e}
+\newcommand{\fakestar}{*}
+
+%as the subscription of Hom
+\newcommand{\Alggp}{\text{-Alg gp}}
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%% here we make some blocks for special features. 
+
+%%%% todo notes %%%%
+\usepackage[colorinlistoftodos,textsize=footnotesize]{todonotes}
+\setlength{\marginparwidth}{2.5cm}
+\newcommand{\leftnote}[1]{\reversemarginpar\marginnote{\footnotesize #1}}
+\newcommand{\rightnote}[1]{\normalmarginpar\marginnote{\footnotesize #1}\reversemarginpar}
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%% here we make some global settings. Understand everything here before you make a document!
+
+\usepackage[a4paper,left=3cm,right=3cm,bottom=4cm]{geometry}
+\usepackage{indentfirst}	% Indent first paragraph after section header
+
+\setcounter{tocdepth}{2}
+
+
+%https://latexref.xyz/_005cparindent-_0026-_005cparskip.html
+\setlength{\parindent}{15pt}	
+\setlength{\parskip}{0pt plus1pt}
+
+%\setlength\intextsep{0cm}
+%\setlength\textfloatsep{0cm}
+\def\arraystretch{1}
+%\setcounter{secnumdepth}{3}
+
+\allowdisplaybreaks
+
+
+\begin{document}
+
+% The beginning depends on the documentclass. Rewrite this part if you use different documentclass!
+\date{\today}
+
+\title
+{Calderón's complex interpolation method
+}
+\author{empty}
+\address{School of Mathematical Sciences\\
+University of Bonn\\
+Bonn, 53115\\ Germany\\} 
+\email{email:xx352229@mail.ustc.edu.cn}
+
+
+\maketitle
+\tableofcontents
+
+
+\section{Calderón's complex interpolation method (Due to Alberto Calderón)}
+
+
+In this section, we will try to show that
+\begin{equation}\label{eq: Fourier middle}
+\mathcal{F} \left( L^p(\Omega) \right) \subseteq L^q(\Omega) \quad \text{ for } 1 \le p \le 2, \; \frac{1}{p}+ \frac{1}{q}=1
+\end{equation}
+under the help of complex interpolation method. Surprisingly, this method stems from a theorem in complex analysis, call the three-lines theorem.
+
+\begin{theorem}[Three lines theorem, due to Hadamard]\label{thm:three_lines}
+Let
+\begin{equation*}
+\begin{aligned}
+  \Omega:&\!=\; \left\{ z \in \mathbb{C} : 0 < \Real <1 \right\} \\ 
+  E:& \text{Banach space} \\
+  f:&\; \widebar{\Omega} \longrightarrow E \text{ is bounded, continuous, and $f|_{\Omega}$ is holomorphic.}\\
+\end{aligned}
+\end{equation*}
+For $0 \le \theta \le 1$, define
+$$M_{\theta}(f):= \sup_{t \in \mathbb{R}} \norm{f(r+it)} < + \infty,$$
+then
+$$M_{\theta}(f) \le \left(M_{0}(f)\right)^{\theta}\left(M_{1}(f)\right)^{1-\theta}.$$
+This is equivalent to say, the function 
+$$[0,1] \longrightarrow \mathbb{R} \qquad \theta \longmapsto \log M_{\theta}(f)$$
+is convex.
+\end{theorem}
+\begin{remark}
+We say $f: \Omega \longrightarrow E$ is \textbf{holomorphic} if $f$ satisfies Riemann-Cauchy equation. Equivalently, $f: \Omega \longrightarrow E$ is holomorphic if for any $\phi \in E'$, the composition
+$$\Omega \stackrel{f}{\longrightarrow} E \stackrel{\phi}{\longrightarrow} \mathbb{C}$$
+is holomorphic.
+\end{remark}
+
+The proof use the Phragmén--Lindelöf method. Before the proof, let me recall the maximum principle.
+
+\begin{theorem}[Maximum principle for holomorphic functions]
+Let $\Omega$ be a bounded open subset of $\mathbb{C}$, $f: \widebar{\Omega} \longrightarrow \mathbb{C}$ be continuous and holomorphic (in $\Omega$). Then for any $z \in \widebar{\Omega}$,
+$$\norm{f(z)}_E \le \sup_{w \in \partial \Omega} |f(w)|. $$
+\end{theorem}
+
+\begin{proof}[Proof of Theorem \ref{thm:three_lines}, by Phragmén--Lindelöf method]\hspace{3mm}\\
+\paragraph*{\underline{\textbf{Step 1}}}Prove the theorem for $E=\mathbb{C}$, $M_0(f)=M_1(f)=1$ case. In this case, we need to show
+$$|f(z)| \le 1 \qquad \text{ for any } z \in \Omega.$$\\[-3mm]
+\underline{\textbf{Idea}}: introduce a multiplicative factor $e^{\frac{z^2-1}{n}}$ to ``subdue" the growth of $f$, so that we can use maximal principle to get the bound.
+
+Let $f_n(z):= e^{\frac{z^2-1}{n}} f(z)$, then there exists $R>0$ (depend on $n$), such that 
+$$|f_n(z)| \le 1 \qquad \text{ for } z \in \widebar{\Omega}, \;\; |\Img z| \ge R.$$ 
+By the maximal principle for $\left\{ z \in \widebar{\Omega}: |\Img z| \le R  \right\}$,
+$$|f_n(z)| \le 1 \qquad \text{ for } z \in \widebar{\Omega}, \;\; |\Img z| \le R.$$ 
+Therefore, $\norm{f_n} \le 1$. As a result,
+$$|f(z)| = \lim_{n \rightarrow \infty} |f_n(z)| \le 1.$$ 
+
+
+\paragraph*{\underline{\textbf{Step 2}}}Prove the theorem for $E=\mathbb{C}$ case. \\[-3mm]
+
+Define 
+$$g: \widebar{\Omega} \longrightarrow \mathbb{C} \qquad g(z):= M_0(f)^{z-1} M_1(f)^{-z} f(z),$$
+and apply $g$ to Step 1.
+
+\paragraph*{\underline{\textbf{Step 3}}}General case.\\[-3mm]
+
+For $\phi \in E'$, $\norm{\phi}_{E'}\le 1$, define $h_{\phi}:= \phi \circ f$:
+$$h_{\phi}: \widebar{\Omega} \stackrel{f}{\longrightarrow} E \stackrel{\phi}{\longrightarrow} \mathbb{C},$$
+then
+$$|h_{\phi}(z)|=\left|\phi\left(\rule{0mm}{3.1mm}f(z)\right)\right| \le \norm{\phi}_{E'} \norm{f(z)}_{E} \le \norm{f(z)}_{E}.$$
+Apply $h_{\phi}$ to Step 2, we get 
+$$|h_{\phi}(z)| \le M_{0}(h_{\phi})^{\theta}M_{1}(h_{\phi})^{1-\theta} \le M_{0}(f)^{\theta}M_{1}(f)^{1-\theta} \qquad \text{ for any } z \in \widebar{\Omega}, \Real z = \theta,$$
+so
+$$\norm{f(z)}_E = \sup_{\substack{\phi \in E'\\ \norm{\phi} \le 1}} \left| \left< \phi, f(z) \right> \right| = \sup_{\substack{\phi \in E'\\ \norm{\phi} \le 1}} \left| h_{\phi}(z) \right| \le M_{0}(f)^{\theta}M_{1}(f)^{1-\theta}.$$
+\end{proof}
+
+Somewhat surprising, Theorem \ref{thm:three_lines} offers us a way to construct ``a continuous deformation between two Banach spaces". Intuitively, these intermediate spaces must lie in the sum of these two Banach spaces. First, we try to give a norm to this ambiance space.
+
+\begin{proposition}
+Let $E_0$, $E_1$ be two Banach spaces contained in some topological vector space $V$.??? Then $E_0 \oplus E_1$ is a Banach space with norm
+$$\norm{(x,y)} = \norm{x}_{E_0} + \norm{y}_{E_1},$$
+$E_0 \oplus E_1$ is a Banach space with norm
+$$\norm{x+y} = \inf_{\xi \in E_0 \cap E_1} \left\{ \norm{x+ \xi}_{E_0} + \norm{y-\xi}_{E_1} \right\}.$$
+\end{proposition}
+
+\begin{proof}
+Conditions on norm are relatively easy to check, but I don't know how to show completeness.
+\end{proof}
+
+\begin{lemma}
+The injection $j: E_0 \hookrightarrow E_0 + E_1$ is continuous of norm $\le 1$.
+\end{lemma}
+\begin{proof}
+We have the estimation
+$$\norm{x+0}_{E_0+E_1} = \inf_{\xi \in E_0 \cap E_1} \left\{ \norm{x+ \xi}_{E_0} + \norm{-\xi}_{E_1} \right\} \le \norm{x}_{E_0}.$$
+\end{proof}
+\begin{warning}
+The injection $j$ may be not topological embedding, i.e., $E_0 \hookrightarrow \Img j$ may be not homeomorphism.
+\end{warning}
+
+\begin{definition}[Interpolation spaces]
+For two Banach spaces $E_0$, $E_1$ contained in some vector space $V$, we define the space
+$$\mathcal{H}: = \mathcal{H}(E_0,E_1) := \left\{ f: \widebar{\Omega} \longrightarrow E_0 +E_1  \;\middle|\; 
+\begin{aligned}
+  & \text{$f$ is continuous and bounded} \\ 
+  & \text{$f|_{\Omega}$ is holomorphic} \\ 
+  & f(it) \in E_0,\; f(1+it) \in E_1, \text{ for any } t \in \mathbb{R} \\   
+\end{aligned}
+ \right\}$$
+ to be the Banach space with norm
+ $$\norm{f}_{\mathcal{H}}:= \max \left( M_0(f), M_1(f)  \right)= \norm{|f|}_{\infty}.$$
+ For $0 < \theta <1$, define the \textbf{interpolation space}
+ $$E_{\theta}:= [E_0,E_1]_{\theta}:= \mathcal{H}(E_0,E_1)/\left\{ f \in \mathcal{H}: f(\theta)=0 \right\},$$
+ i.e., the image of the map
+ $$\ev_{\theta}: \mathcal{H}(E_0,E_1) \longrightarrow E_0+E_1 \qquad f \longmapsto f(\theta).$$
+ Notice that we only take the norm of $E_{\theta}$ as the residue norm of $\mathcal{H}$, instead of the subspace norm of $E_0+E_1$.
+\end{definition}
+\begin{ques}
+Are these two norms the same norm?
+\end{ques}
+\begin{remark}
+It is natural to set $\theta=0$, and guess $[E_0,E_1]_0=E_0$, but this is false in general. Consider $E_0=\mathbb{C}, E_1=0$, then
+$$\mathcal{H}(E_0,E_1)=0 \quad\Longrightarrow\quad [E_0,E_1]_{\theta}=0 \quad \text{ for any } \theta.$$ 
+\end{remark}
+
+Here we list some immediate properties of the interpolation spaces.
+\begin{lemma}
+$[E_0,E_1]_{\theta}=[E_1,E_0]_{1-\theta}$.
+\end{lemma}
+\begin{lemma}
+For $\xi \in [E_0,E_1]_{\theta}$,
+$$\norm{\xi}_{\theta}= \inf_{\substack{f\in \mathcal{H}\\ \bar{f}=\xi}} \left\{ M_0(f)^{1-\theta} M_1(f)^{\theta} \right\}.$$
+\end{lemma}
+\begin{proof}
+For the easy direction,
+$$\LHS = \inf_{\substack{f\in \mathcal{H}\\ \bar{f}=\xi}} \norm{f}_{\mathcal{H}}= \inf_{\substack{f\in \mathcal{H}\\ \bar{f}=\xi}} \left\{ \max \left(\rule{0mm}{3.2mm}M_0(f), M_1(f) \right)\right\} \geq \RHS.$$
+To show $\RHS \le \LHS$, one needs to show that
+$$\text{ For } f \in \mathcal{H}, \text{ there exists } g \in \mathcal{H}, g(\theta)=f(\theta), \text{ such that } \norm{g}_{\mathcal{H}} \le  M_0(f)^{1-\theta} M_1(f)^{\theta}.$$
+Then $g(z):= M_0(f)^{z-1} M_1(f)^{-z}f(z)$ satisfy the condition. ???
+\end{proof}
+
+The next theorem gives us a perfect example.
+
+\begin{theorem}[Riesz-Thorin interpolation theorem]\label{thm:interpolation_L_p}
+Let $(X,\mathcal{A}, \mu)$ be a $\sigma$-finite space, $1 \le p < q \le \infty$, $0 \le \theta \le 1$, $p'$, $q'$ be the conjugate indices of $p$, $q$. Let $r \in \mathbb{R}$ such that $\frac{1}{r}= \frac{1-\theta}{p}+\frac{\theta}{q}$, then
+$$\left[ L^p(X), L^q(X) \right]_{\theta}\cong L^r(X)$$
+as Banach spaces.
+\end{theorem}
+
+\begin{eg}$\,$
+
+When $q= \infty$, $r= \frac{1}{1-\theta} \cdot p$.
+
+When $\theta=\frac{1}{2}$, $\frac{2}{r}=\frac{1}{p}+\frac{1}{q}$, $(0,p,r,q)$ is a harmonic range.
+\end{eg}
+
+\begin{proof}
+We do the case $q < +\infty$. Let
+$$L^0(X):= \left\{ \text{ measurable functions } \right\} / \text{ null functions }$$
+be an ambiance space, and $f \in L^r(X)$ be a representative (i.e., a function). We need three steps:
+
+\paragraph*{\underline{\textbf{Step 1}}}Let $f \in L^r(X)$, construct $\phi \in \mathcal{H}\left(\rule{0mm}{3.2mm}L^p(X), L^q(X)\right)$ such that $\phi(\theta)=f$.\\[-3mm]
+
+For this, define
+$$\phi: \widebar{\Omega} \longrightarrow L^p(X) + L^q(X) 
+\qquad \phi(z)= \frac{f(-)}{|f(-)|} |f(-)|^{ r\left(\textstyle \frac{1-z}{p}+\frac{z}{q} \right)} \indicator_{\{|f|>0\}}.$$
+ We need to verify:
+ \begin{itemize}
+ \item For a fixed $z$, $\phi(z) \in L^p(X)+L^q(X)$;
+ \item $\phi \in \mathcal{H}\left(\rule{0mm}{3.2mm}L^p(X), L^q(X)\right)$;
+ \item $\phi(\theta)=f$.
+ \end{itemize}
+ 
+\paragraph*{\underline{\textbf{Step 2}}}For $\phi \in \mathcal{H}\left(\rule{0mm}{3.2mm}L^p(X), L^q(X)\right)$, show that $\phi(\theta) \in L^r(X)$.\\[-3mm]
+
+For proving this, we need a fact from the duality theory:
+
+\begin{fact}
+Given $h \in L^0(X)$ and $r$, $r'$ as conjugate indices. If for all simple functions\footnote{For simple functions, we mean the function of form $$\sum_{\text{fin}} a_i \indicator_{A_i}$$ where all $A_i$ are measurable sets with finite measure.} $g$ we have
+$$h \cdot g \in L^1, \qquad \int |h \cdot g| d \mu \le C \cdot \norm{g}_{r'},$$
+then $h \in L^r$ and $\norm{h}_{L^r} \le C$.
+\end{fact}
+
+From this fact, one needs to estimate
+$$\int |\phi(\theta) \cdot g| d \mu \le C \cdot \norm{g}_{r'}$$
+for any simple function $g$. Now fix $g$, define
+\begin{equation*}
+\begin{aligned}
+  &\psi: \widebar{\Omega} \longrightarrow L^{p'}(X) + L^{q'}(X)\;\; &&  \psi(z)= \frac{g(-)}{|g(-)|} |g(-)|^{ r'\left(\textstyle \frac{1-z}{p'}+\frac{z}{q'} \right)} \indicator_{\{|g|>0\}}\\ 
+  & H: \widebar{\Omega} \longrightarrow \mathbb{C} && H(z):= \int_{L^1} \phi(z)\psi(z)d\mu.\\ 
+\end{aligned}
+\end{equation*}
+
+???
+\paragraph*{\underline{\textbf{Step 3}}}For $\xi \in \left[ L^p(X), L^q(X) \right]_{\theta}$, show that $\norm{\xi}_{\theta}=\norm{\xi}_{L^r}$.\\[-3mm]
+
+???
+\end{proof}
+
+Finally, we state the main theorem of this section. The inclusion \ref{eq: Fourier middle} is a natural corollary of Theorem \ref{thm:interpolation_operator}.
+\begin{theorem}[Abstract Riesz-Thorin]\label{thm:interpolation_operator}
+Given $E_0$, $E_1$; $F_0$, $F_1$ two pairs of Banach spaces as before???, $0 < \theta < 1$. Suppose $T: E_0 +E_1 \longrightarrow F_0 + F_1$ is linear with
+$$T(E_0) \subseteq F_0, \quad T(E_1) \subseteq F_1,$$
+then
+$$T([E_0,E_1]_{\theta}) \subseteq [F_0,F_1]_{\theta}.$$
+Moreover, if $T|_{E_0}$, $T|_{E_1}$ are bounded, then $T|_{E_{\theta}}$ is bounded, and 
+$$\norm{T}_{\theta} \le \norm{T}_0^{1-\theta} \norm{T}_1^{\theta}.$$
+\end{theorem}
+\begin{proof}
+Let $xi \in [E_0,E_1]_{\theta}$, we need to show $T(\xi) \in [F_0,F_1]_{\theta}$, and give an estimation of $T(\xi)$. For any $\varepsilon > 0$, we choose $f \in \mathcal{H}(E_0,E_1)$, $\bar{f}=\xi$ such that 
+$$\norm{\xi}_{\theta} \le \norm{f}_{\mathcal{H }} \le \norm{\xi}_{\theta} + \varepsilon.$$
+Then $T(f) \in \mathcal{H}(F_0,F_1)$ ($\Rightarrow T(\xi) \in [F_0,F_1]_{\theta}$), and 
+\begin{equation*}
+\begin{aligned}
+  \;& M_0(T(f)) \le \norm{T}_0 M_0(f) \qquad M_1(T(f)) \le \norm{T}_1 M_1(f)\\ 
+  \Longrightarrow\;& M_{\theta}(T(f)) \le \norm{T}_0^{1-\theta} \norm{T}_1^{\theta} M_0(f)^{1-\theta} M_1(f)^{\theta} \\
+   \;& \phantom{M_{\theta}(T(f))} \le \norm{T}_0^{1-\theta} \norm{T}_1^{\theta} \left( \norm{\xi}_{\theta} +\varepsilon \right)
+\end{aligned}
+\end{equation*}
+Let $\varepsilon \rightarrow 0$, we get the bound.
+\end{proof}
+
+
+% Remember to protect the uppercase of people's name and LaTeX symbols
+
+\end{document}
