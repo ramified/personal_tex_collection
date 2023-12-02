@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  6 OCT 2023 23:40
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  12 OCT 2023 21:56
 entering extended mode
 **./main.tex
 (main.tex
@@ -2975,10 +2975,10 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 204.
  ) 
 Here is how much of TeX's memory you used:
- 54170 strings out of 427748
- 1230491 string characters out of 3150981
- 1402840 words of memory out of 3000000
- 57225 multiletter control sequences out of 15000+200000
+ 54173 strings out of 427748
+ 1230572 string characters out of 3150981
+ 1402856 words of memory out of 3000000
+ 57228 multiletter control sequences out of 15000+200000
  599258 words of font info for 369 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  62i,19n,96p,788b,1248s stack positions out of 5000i,500n,10000p,200000b,50000s
