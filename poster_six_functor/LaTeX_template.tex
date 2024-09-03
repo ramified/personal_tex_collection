@@ -263,8 +263,10 @@
 
 %%%%%%%newcommand
 \DeclareMathOperator{\sky}{\operatorname{sky}}
-
-
+\DeclareMathOperator{\Hcohom}{\operatorname{H}}
+\DeclareMathOperator{\BM}{\operatorname{BM}}
+\DeclareMathOperator{\cpt}{\operatorname{c}}
+\DeclareMathOperator{\Or}{\operatorname{Or}}
 
 
 
@@ -293,8 +295,8 @@
 
 
 %https://latexref.xyz/_005cparindent-_0026-_005cparskip.html
-\setlength{\parindent}{15pt}	
-\setlength{\parskip}{0pt plus1pt}
+%\setlength{\parindent}{15pt}	
+%\setlength{\parskip}{0pt plus1pt}
 
 %\setlength\intextsep{0cm}
 %\setlength\textfloatsep{0cm}
@@ -335,47 +337,100 @@ $Rf_!$ cpt supp cohomology $\sky_p(\mathbb{Q})$
 
 $f^!$ orientation sheaf $[n]$ $\mathcal{F}_p[-n]$
 
+\begin{table}[]
+\centering
+\begin{tabular}{c|c|c}
+\hline
+ & $f:Y \longrightarrow \pt$ & $f: p \hookrightarrow X$ \\ \hline
+$f^*$ & constant sheaf & $\mathcal{F}_p$ \\ \hline
+$Rf_*$ & cohomology & $\sky_p(\mathbb{Q})$ \\ \hline
+$Rf_!$ & cpt supp cohomology & $\sky_p(\mathbb{Q})$ \\ \hline
+$f^!$ & orientation sheaf & $[n]$ $\mathcal{F}_p[-n]$ \\ \hline
+\end{tabular}
+\end{table}
+
 For $f^!$, assume $Y,X$ are manifolds of dimension $n$.
 
 $j_!j^* \mathcal{F}$ $\mathcal{F}$ $i_!i^*\mathcal{F}$
 
-Certainly! Here is the corrected version of your list:
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJaIl0sWzEsMCwiWCJdLFsyLDAsIlUiXSxbMCwxLCJpIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMiwxLCJqIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XV0=
+\[\begin{tikzcd}
+	Z & X & U
+	\arrow["i", hook, from=1-1, to=1-2]
+	\arrow["j"', hook', from=1-3, to=1-2]
+\end{tikzcd}\]
 
----
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJEKFopIl0sWzEsMCwiRChYKSJdLFsyLDAsIkQoVSkiXSxbMCwxLCJpXyo9aV8hIl0sWzEsMiwial4qPWpeISJdLFsyLDEsImpfISIsMix7ImN1cnZlIjozfV0sWzEsMCwiaV4qIiwyLHsiY3VydmUiOjN9XSxbMiwxLCJSal8qIiwwLHsiY3VydmUiOi0yfV0sWzEsMCwiaV4hIiwwLHsiY3VydmUiOi0yfV1d
+\[\begin{tikzcd}
+	{D(Z)} & {D(X)} & {D(U)}
+	\arrow["{i_*=i_!}", from=1-1, to=1-2]
+	\arrow["{i^*}"', curve={height=18pt}, from=1-2, to=1-1]
+	\arrow["{i^!}", curve={height=-12pt}, from=1-2, to=1-1]
+	\arrow["{j^*=j^!}", from=1-2, to=1-3]
+	\arrow["{j_!}"', curve={height=18pt}, from=1-3, to=1-2]
+	\arrow["{Rj_*}", curve={height=-12pt}, from=1-3, to=1-2]
+\end{tikzcd}\]
+
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJqXyFqXiogXFxtYXRoY2Fse0Z9Il0sWzEsMCwiXFxtYXRoY2Fse0Z9Il0sWzIsMCwiaV8haV4qXFxtYXRoY2Fse0Z9Il0sWzMsMF0sWzAsMV0sWzEsMl0sWzIsMywiKzEiXV0=
+\[\begin{tikzcd}
+	{j_!j^* \mathcal{F}} & {\mathcal{F}} & {i_!i^*\mathcal{F}} & {}
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow["{+1}", from=1-3, to=1-4]
+\end{tikzcd}\]
+
+% https://q.uiver.app/#q=WzAsMyxbMSwwLCJcXG90aW1lcyJdLFswLDEsImZeKiJdLFsyLDEsImZfISJdLFswLDEsImZeKigtXFxvdGltZXMgLSkiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzAsMiwiXFx0ZXh0e3Byb2ogZm9ybXVsYX0iLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsMiwiXFx0ZXh0e2Jhc2UgY2hhbmdlfSIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=
+\[\begin{tikzcd}
+	& \otimes \\[8mm]
+	{f^*} && {f_!}
+	\arrow["{f^*(-\otimes -)}"', no head, from=1-2, to=2-1]
+	\arrow["{\text{proj formula}}", no head, from=1-2, to=2-3]
+	\arrow["{\text{base change}}"', no head, from=2-1, to=2-3]
+\end{tikzcd}\]
+
+% https://q.uiver.app/#q=WzAsNSxbMiwwLCJcXG90aW1lcyJdLFsxLDEsImZeKiJdLFszLDEsImZfISJdLFs0LDEsIlxcOyJdLFswLDEsIlxcOyJdLFswLDEsImZeKigtXFxvdGltZXMgLSkiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzAsMiwiXFx0ZXh0e3Byb2ogZm9ybXVsYX0iLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsMiwiXFx0ZXh0e2Jhc2UgY2hhbmdlfSIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=
+\[\begin{tikzcd}
+	&& \otimes \\[8mm]
+	{\;} & {f^*} && {f_!} & {\;}
+	\arrow["{f^*(-\otimes -)}"', no head, from=1-3, to=2-2]
+	\arrow["{\text{proj formula}}", no head, from=1-3, to=2-4]
+	\arrow["{\text{base change}}"', no head, from=2-2, to=2-4]
+\end{tikzcd}\]
 
 \section{A Short List of Applications}
 
 Assuming the six-functor formalism (and everything derived), let \( X \) be a smooth manifold of dimension \( n \).
 
-1. Define four types of cohomology:
-
-   ...
-
+1. Define four types of cohomology and the relative cohomology.
    Verify that:
-
-   ...
+$$\Hcohom^i_{\cpt}(X;\mathbb{Q}) \cong \Hcohom^i\left(\bar{X}, \{\infty \};\mathbb{Q}\right)$$
+$$\Hcohom_i^{\BM}(X;\mathbb{Q}) \cong \Hcohom^{n-i}(X; \Or_X)$$
+$$\Hcohom_i(X;\mathbb{Q}) \cong \Hcohom^{n-i}_{\cpt}(X; \Or_X)$$
 
    Also, define the cup and cap product structures.
 
 2. Using the projection formula, show Poincaré duality:
 
-   ...
+$$\Hcohom^i_{\cpt}(X;\mathbb{Q})^* \cong \Hcohom^{n-i}(X; \Or_X)$$
+$$\Hcohom^i(X;\mathbb{Q}) \cong \Hcohom^{n-i}_{\cpt}(X; \Or_X)^*$$
 
-3. Define the relative cohomology (using only six functors) so that:
 
-   ...
+3. Derive the Gysin sequence for any oriented \( S^k \)-bundle \( \pi: E \longrightarrow B \):
 
-4. Derive the Gysin sequence for any oriented \( S^k \)-bundle \( \pi: E \longrightarrow B \):
-
-   ...
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJIXm4oQikiXSxbMSwwLCJIXm4oRSkiXSxbMiwwLCJIXntuLWt9KEIpIl0sWzMsMF0sWzAsMSwiXFxwaV4qIl0sWzEsMiwiXFxwaV8qIl0sWzIsMywiKzEiXSxbMiwzLCJldV97XFxwaX0iLDJdXQ==
+\[\begin{tikzcd}
+	{H^n(B)} & {H^n(E)} & {H^{n-k}(B)} & {}
+	\arrow["{\pi^*}", from=1-1, to=1-2]
+	\arrow["{\pi_*}", from=1-2, to=1-3]
+	\arrow["{+1}", from=1-3, to=1-4]
+	\arrow["{eu_{\pi}}"', from=1-3, to=1-4]
+\end{tikzcd}\]
 
    Derive the Mayer-Vietoris sequence and the relative cohomology sequence, and verify the equivalence of different cohomology groups.
 
-5. Compute the upper shriek for singular spaces.
+4. Compute the upper shriek for singular spaces.
 
---- 
 
-Let me know if you need further adjustments!
 
 
 \begin{equation*}
