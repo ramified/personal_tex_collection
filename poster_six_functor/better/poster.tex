@@ -68,7 +68,7 @@
 % ====================
 
 % use this to include logos on the left and/or right side of the header:
-% \logoright{\includegraphics[height=7cm]{logo1.pdf}}
+% \logoleft{\includegraphics[height=5cm]{BMS_logo.png}}
 % \logoleft{\includegraphics[height=7cm]{logo2.pdf}}
 
 % ====================
@@ -77,6 +77,9 @@
 
 
 %%%%%%%newcommand
+
+\definecolor{BrickRed}{rgb}{0.65, 0.12, 0.21}
+\definecolor{BrickBlue}{rgb}{0, 0.1, 0.3}
 \DeclareMathOperator{\sky}{\operatorname{sky}}
 \DeclareMathOperator{\Hcohom}{\operatorname{H}}
 \DeclareMathOperator{\BM}{\operatorname{BM}}
@@ -86,6 +89,9 @@
 \DeclareMathOperator{\constructable}{\operatorname{cons}}
 \DeclareMathOperator{\IC}{\operatorname{IC}}
 \DeclareMathOperator{\Perv}{\operatorname{Perv}}
+\DeclareMathOperator{\cone}{\operatorname{cone}}
+\DeclareMathOperator{\CC}{\operatorname{CC}}
+\DeclareMathOperator{\NMD}{\operatorname{NMD}}
 
 \begin{document}
 
@@ -169,7 +175,7 @@
   \end{block}
 
 
-  \begin{alertblock}{A Short List of Applications}
+  \begin{exampleblock}{A Short List of Applications}
 
 Assuming the six-functor formalism (and everything derived), let \( X \) be a smooth manifold of dimension \( n \).
 
@@ -177,15 +183,22 @@ Assuming the six-functor formalism (and everything derived), let \( X \) be a sm
 
 \item Define four types of cohomology and the relative cohomology.
    Verify that:
-$$\Hcohom^i_{\cpt}(X;\mathbb{Q}) \cong \Hcohom^i\left(\bar{X}, \{\infty \};\mathbb{Q}\right)$$
-$$\Hcohom_i^{\BM}(X;\mathbb{Q}) \cong \Hcohom^{n-i}(X; \Or_X)$$
-$$\Hcohom_i(X;\mathbb{Q}) \cong \Hcohom^{n-i}_{\cpt}(X; \Or_X)$$
+   \begin{equation*}
+   \begin{aligned}
+    \Hcohom^i_{\cpt}(X;\mathbb{Q}) \cong\;&  \Hcohom^i\left(\bar{X}, \{\infty \};\mathbb{Q}\right)\\ 
+     \Hcohom_i^{\BM}(X;\mathbb{Q})\cong\;& \Hcohom^{n-i}(X; \Or_X) \\ 
+     \Hcohom_i(X;\mathbb{Q})\cong\;& \Hcohom^{n-i}_{\cpt}(X; \Or_X) \\ 
+   \end{aligned}
+   \end{equation*}
   Also, define the cup and cap product structures.
 
 \item Using the projection formula, show Poincaré duality:
-$$\Hcohom^i_{\cpt}(X;\mathbb{Q})^* \cong \Hcohom^{n-i}(X; \Or_X)$$
-$$\Hcohom^i(X;\mathbb{Q}) \cong \Hcohom^{n-i}_{\cpt}(X; \Or_X)^*$$
-
+\begin{equation*}
+\begin{aligned}
+  \Hcohom^i_{\cpt}(X;\mathbb{Q})^*\cong\;& \Hcohom^{n-i}(X; \Or_X) \\ 
+  \Hcohom^i(X;\mathbb{Q})  \cong\;& \Hcohom^{n-i}_{\cpt}(X; \Or_X)^* \\ 
+\end{aligned}
+\end{equation*}
 
 \item Derive the Gysin sequence for any oriented \( S^k \)-bundle \( \pi: E \longrightarrow B \):
 % https://q.uiver.app/#q=WzAsNCxbMCwwLCJIXm4oQikiXSxbMSwwLCJIXm4oRSkiXSxbMiwwLCJIXntuLWt9KEIpIl0sWzMsMF0sWzAsMSwiXFxwaV4qIl0sWzEsMiwiXFxwaV8qIl0sWzIsMywiKzEiXSxbMiwzLCJldV97XFxwaX0iLDJdXQ==
@@ -203,7 +216,7 @@ $$\Hcohom^i(X;\mathbb{Q}) \cong \Hcohom^{n-i}_{\cpt}(X; \Or_X)^*$$
 \end{enumerate}
 
 
-  \end{alertblock}
+  \end{exampleblock}
 
 \end{column}
 
@@ -213,7 +226,7 @@ $$\Hcohom^i(X;\mathbb{Q}) \cong \Hcohom^{n-i}_{\cpt}(X; \Or_X)^*$$
 
   \begin{block}{Perverse Sheaf}
 
-We will mix the usage of sheaves and complexes. For simplicity, let us fix a stratification $\mathcal{S}$:
+We will mix the usage of sheaves and complexes. For simplicity, let us fix a Whitney stratification $\mathcal{S}$:
 \newcommand\largesubset{\mathrel{\scalebox{1.5}[1]{\(\subset\)}}}
 $$\varnothing \overset{\;\,U_0}{\largesubset} Z_0 \overset{\;\,U_1}{\largesubset}\cdots  \overset{\;\,U_n}{\largesubset} Z_n = X$$
 Denote $D_{\constructable,\mathcal{S}}^{b}(X)$ as the category of constructible sheaves over $X$ with respect to $\mathcal{S}$.
@@ -231,59 +244,66 @@ $$
 $$
 
 
-To determine whether a complex $\mathcal{F}$ is perverse, one simply needs to complete the following table:
-{
-  \renewcommand{\arraystretch}{1.2}
-  \renewcommand{\tabcolsep}{5mm}
-  \definecolor{BrickRed}{rgb}{0.8, 0.25, 0.33}
-  \definecolor{BrickBlue}{rgb}{0, 0.1, 0.3}
-  \newcommand{\pervcross}{\textcolor{BrickRed}{$\boldsymbol{\times}$}  }
-  \newcommand{\ICcross}{\textcolor{BrickBlue}{$\boldsymbol{\times}$}  }
-\begin{table}[]
-\centering
-\begin{tabular}{|c|c|c|c|c|c|c|c|}
-\hline
-           $\mathcal{H}^i(-)$                  & $-3$ & $-2$ & $-1$ & $\;0\;$ & $\;1\;$ & $\;2\;$ & $\;3\;$ \\ \hline
-$\iota_{U_2}^*\mathcal{F}$ & \pervcross   &      & \pervcross     &  \pervcross   &  \pervcross   & \pervcross    &  \pervcross   \\ \hline
-$\iota_{U_1}^*\mathcal{F}$ &      &      &  \ICcross    &  \pervcross   &  \pervcross   &  \pervcross   &  \pervcross   \\ \hline
-$\iota_{U_1}^!\mathcal{F}$ &  \pervcross    &  \pervcross    &  \ICcross    &     &     &     &     \\ \hline
-$\iota_{Z_0}^*\mathcal{F}$ &      &      &      &  \ICcross   &   \pervcross  &   \pervcross  &  \pervcross   \\ \hline
-$\iota_{Z_0}^!\mathcal{F}$ &   \pervcross   &  \pervcross    &  \pervcross    &  \ICcross   &     &     &     \\ \hline
-\end{tabular}
-\end{table}
-}
+
+
 \heading{Deligne's construction}
 Any local system $\mathcal{L}$ supported on $U_i$ can be converted into a perverse sheaf through truncations. This process is known as \textbf{Deligne's construction}, and the resulting perverse sheaf is called the intersection cohomology complex, or the IC sheaf, denoted by $\IC(\mathcal{L})$. IC sheaves are the simple objects in the category $\Perv_{\mathcal{S}}(X)$.
 
-  \end{block}
-
-  \begin{block}{Fusce aliquam magna velit}
-
-    Et rutrum ex euismod vel. Pellentesque ultricies, velit in fermentum
-    vestibulum, lectus nisi pretium nibh, sit amet aliquam lectus augue vel
-    velit. Suspendisse rhoncus massa porttitor augue feugiat molestie. Sed
-    molestie ut orci nec malesuada. Sed ultricies feugiat est fringilla
-    posuere.
-
-    \begin{figure}
-      \centering
-      \begin{tikzpicture}
-        \begin{axis}[
-            scale only axis,
-            no markers,
-            domain=0:2*pi,
-            samples=100,
-            axis lines=center,
-            axis line style={-},
-            ticks=none]
-          \addplot[red] {sin(deg(x))};
-          \addplot[blue] {cos(deg(x))};
-        \end{axis}
-      \end{tikzpicture}
-      \caption{Another figure caption.}
-    \end{figure}
+To determine whether a complex $\mathcal{F}$ is {\color{BrickRed}perverse} or an {\color{BrickBlue}IC sheaf}, one simply needs to complete {\color{BrickRed}Table 1}.
 
   \end{block}
+  
+  \begin{block}{Nearby Cycle}
+A perverse sheaf may not be so ``perverse", but a nearby cycle is definitely ``nearby".
+
+% https://q.uiver.app/#q=WzAsOSxbMCwxLCJcXHswXFx9Il0sWzEsMSwiXFxtYXRoYmJ7Q30iXSxbMiwxLCJcXG1hdGhiYntDfV57XFx0aW1lc30iXSxbMywxLCJcXHdpZGV0aWxkZXtcXG1hdGhiYntDfX1ee1xcdGltZXN9Il0sWzgsMCwiXFxtYXRoY2Fse0Z9Il0sWzQsMSwiXFxtYXRoYmJ7Q30iXSxbNSwwLCJpXipcXG1hdGhjYWx7Rn0iXSxbNiwwLCJcXHBzaSBcXG1hdGhjYWx7Rn0iXSxbNywwLCJcXHZhcnBoaSBcXG1hdGhjYWx7Rn0iXSxbMCwxLCJpIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMiwxLCJqIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XSxbMywyLCJwIiwyXSxbMSw0LCIiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzMsNSwiXFxjb25nIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzYsMCwiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs3LDAsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbOCwwLCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d
+\[\begin{tikzcd}[ampersand replacement=\&]
+	\&\&\&\&[-30mm]\&[-270mm] {\color{BrickRed}i^*\mathcal{F}} \&[-35mm] {\color{BrickRed}\psi \mathcal{F}} \&[-35mm] {\color{BrickRed}\varphi \mathcal{F}} \& {\mathcal{F}} \\[-15mm]
+	{\{0\}} \& {\mathbb{C}} \& {\mathbb{C}^{\times}} \& {\widetilde{\mathbb{C}}^{\times}} \& {\mathbb{C}}
+	\arrow[no head,color=BrickRed, from=1-6, to=2-1]
+	\arrow[no head,color=BrickRed, from=1-7, to=2-1]
+	\arrow[no head,color=BrickRed, from=1-8, to=2-1]
+	\arrow["i", hook, from=2-1, to=2-2]
+	\arrow[no head, from=2-2, to=1-9]
+	\arrow["j"', hook', from=2-3, to=2-2]
+	\arrow["p"', from=2-4, to=2-3]
+	\arrow["\cong"{description}, draw=none, from=2-4, to=2-5]
+\end{tikzcd}\]
+Given $\mathcal{F} \in D^b(\mathbb{C})$, one can construct the \textbf{nearby cycle} 
+$${\color{BrickRed}\psi \mathcal{F}}:= i^* Rj_* p_* p^* j^* \mathcal{F} \in D^b(\{0\}),$$
+ which can be roughly viewed as the fiber $\mathcal{F}_x$ for $x$ sufficiently close to $0$. By quotienting out the \textbf{non-vanishing cycle} {\color{BrickRed}$i^*\mathcal{F}$}, one obtains the \textbf{vanishing cycle} $${\color{BrickRed}\varphi \mathcal{F}}:= \cone \left[ i^*\mathcal{F} \overset{sp}{\longrightarrow} \psi \mathcal{F} \right] \in D^b(\{0\}).$$
+ 
+ 
+% https://q.uiver.app/#q=WzAsOSxbMCwyLCJcXHswXFx9Il0sWzEsMiwiRCJdLFsyLDIsIkReKiJdLFszLDIsIlxcd2lkZXRpbGRle0R9XioiXSxbMCwxLCJYXzAiXSxbMSwxLCJYIl0sWzIsMSwiWF4qIl0sWzMsMSwiXFx3aWRldGlsZGV7WH1eKiJdLFs0LDAsIlxcbWF0aGNhbHtGfSJdLFs3LDNdLFs2LDJdLFs1LDFdLFs0LDBdLFs0LDUsImkiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs2LDUsImoiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6ImJvdHRvbSJ9fX1dLFsyLDEsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoiYm90dG9tIn19fV0sWzAsMSwiIiwxLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbNyw2LCJwIiwyXSxbMywyXSxbNSw4LCIiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d
+\[\begin{tikzcd}[ampersand replacement=\&]
+	\&\&\&\&[-150mm] {\mathcal{F}} \\[-15mm]
+	{X_0} \& X \& {X^*} \& {\widetilde{X}^*} \\
+	{\{0\}} \& D \& {D^*} \& {\widetilde{D}^*}
+	\arrow["i", hook, from=2-1, to=2-2]
+	\arrow[from=2-1, to=3-1]
+	\arrow[no head, from=2-2, to=1-5]
+	\arrow[from=2-2, to=3-2]
+	\arrow["j"', hook', from=2-3, to=2-2]
+	\arrow[from=2-3, to=3-3]
+	\arrow["p"', from=2-4, to=2-3]
+	\arrow[from=2-4, to=3-4]
+	\arrow[hook, from=3-1, to=3-2]
+	\arrow[hook', from=3-3, to=3-2]
+	\arrow[from=3-4, to=3-3]
+\end{tikzcd}\]
+  In general, $\mathcal{C}$ can be replaced by any disk $\mathcal{D}$, as the problem is local, and $\mathcal{F}$ can be a sheaf over any space $X$ over $\mathcal{D}$.
+  
+ The same construction yields a distinguished triangle in $D^b(X_0)$:
+ % https://q.uiver.app/#q=WzAsNCxbMCwwLCJpXiogXFxtYXRoY2Fse0Z9Il0sWzEsMCwiXFxwc2lfZiBcXG1hdGhjYWx7Rn0iXSxbMiwwLCJcXHZhcnBoaV9mIFxcbWF0aGNhbHtGfSJdLFszLDBdLFswLDFdLFsxLDJdLFsyLDMsIisxIl1d
+ \[\begin{tikzcd}[ampersand replacement=\&]
+ 	{i^* \mathcal{F}} \& {\psi_f \mathcal{F}} \& {\varphi_f \mathcal{F}} \& {}
+ 	\arrow[from=1-1, to=1-2]
+ 	\arrow[from=1-2, to=1-3]
+ 	\arrow["{+1}", from=1-3, to=1-4]
+ \end{tikzcd}\]
+  \end{block}
+
+
 
 
 \end{column}
@@ -292,39 +312,56 @@ Any local system $\mathcal{L}$ supported on $U_i$ can be converted into a perver
 
 \begin{column}{\colwidth}
 
-  \begin{exampleblock}{A highlighted block containing some math}
+  \begin{alertblock}{NMD and CC}
+\heading{Normal Morse Data}  
+We work with a fixed complex variety embedding $X \subseteq \mathbb{C}^n$, equipped with a Whitney stratification $\mathcal{S}$. Let $S \subseteq X$ be a connected component of some $U_i$. Fix $x_0 \in S$, and let $N$ be a normal slice of $S$ at $x_0$.
 
-    A different kind of highlighted block.
+For any sheaf $\mathcal{F} \in D^b_{\constructable, \mathcal{S}}(X)$, the normal Morse data is defined as
+$$\NMD(\mathcal{F}, S):= \left( \varphi_{g|_{N \cap X}} \left(\mathcal{F}|_{N \cap X}\right)  \right)_{x_0} [-1]$$
+where $g: \mathbb{C}^n \longrightarrow \mathbb{C}$ is a holomorphic function, and $f:= Re(g)$ such that 
+\begin{itemize}
+\item $g(x_0)=0$;
+\item $df_{x_0} \in T^*_S \mathbb{C}^n$, $df_{x_0} \notin T^*_{S'} \mathbb{C}^n$ for any $S'\neq S$;
+\item $x_0$ is a non-degenerate critical point of $f|_{S}$.
+\end{itemize}  
+  
+\heading{Characteristic Cycle}
+With normal Morse data, one can define the characteristic cycle
+$$\CC(\mathcal{F}):= \sum_S m_S [T_S^* \mathbb{C}^n] \in H_{2n}^{\BM}\Big(\operatornamewithlimits{\cup}_S T_S^* \mathbb{C}^n\Big),$$
+where
+$$m_S:= \chi\left(\NMD(\mathcal{F},S)\rule{0mm}{10mm}[-\dim S]\right) \in \mathbb{Z}.$$
 
-    $$
-    \int_{-\infty}^{\infty} e^{-x^2}\,dx = \sqrt{\pi}
-    $$
+%Notably, $\CC(\mathcal{F})$ does not depend on the stratification $\mathcal{S}$.
 
-    Interdum et malesuada fames $\{1, 4, 9, \ldots\}$ ac ante ipsum primis in
-    faucibus. Cras eleifend dolor eu nulla suscipit suscipit. Sed lobortis non
-    felis id vulputate.
+The characteristic cycle can be computed when the geometry is well-understood. For example, we can compute $\CC(\IC(\underline{\mathbb{Q}}_{X \smallsetminus \{0\}}))$ when $X \subseteq \mathbb{C}^m$ is a cone over a smooth hyperplane.
 
-    \heading{A heading inside a block}
-
-    Praesent consectetur mi $x^2 + y^2$ metus, nec vestibulum justo viverra
-    nec. Proin eget nulla pretium, egestas magna aliquam, mollis neque. Vivamus
-    dictum $\mathbf{u}^\intercal\mathbf{v}$ sagittis odio, vel porta erat
-    congue sed. Maecenas ut dolor quis arcu auctor porttitor.
-
-    \heading{Another heading inside a block}
-
-    Sed augue erat, scelerisque a purus ultricies, placerat porttitor neque.
-    Donec $P(y \mid x)$ fermentum consectetur $\nabla_x P(y \mid x)$ sapien
-    sagittis egestas. Duis eget leo euismod nunc viverra imperdiet nec id
-    justo.
-
-  \end{exampleblock}
+  \end{alertblock}
 
  
   \begin{block}{References}
-
+  $\;$\\[-30mm] $\,$
     \nocite{*}
     \footnotesize{\bibliographystyle{plain}\bibliography{poster}}
+    
+    {
+      \renewcommand{\arraystretch}{1.2}
+      \renewcommand{\tabcolsep}{5mm}
+      \newcommand{\pervcross}{\textcolor{BrickRed}{$\boldsymbol{\times}$}  }
+      \newcommand{\ICcross}{\textcolor{BrickBlue}{$\boldsymbol{\times}$}  }
+    \begin{table}[]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+    \hline
+               $\mathcal{H}^i(-)$                  & $-3$ & $-2$ & $-1$ & $\;0\;$ & $\;1\;$ & $\;2\;$ & $\;3\;$ \\ \hline
+    $\iota_{U_2}^*\mathcal{F} = \iota_{U_2}^!\mathcal{F}$ & \pervcross   &      & \pervcross     &  \pervcross   &  \pervcross   & \pervcross    &  \pervcross   \\ \hline
+    $\iota_{U_1}^*\mathcal{F}$ &      &      &  \ICcross    &  \pervcross   &  \pervcross   &  \pervcross   &  \pervcross   \\ \hline
+    $\iota_{U_1}^!\mathcal{F}$ &  \pervcross    &  \pervcross    &  \ICcross    &     &     &     &     \\ \hline
+    $\iota_{Z_0}^*\mathcal{F}$ &      &      &      &  \ICcross   &   \pervcross  &   \pervcross  &  \pervcross   \\ \hline
+    $\iota_{Z_0}^!\mathcal{F}$ &   \pervcross   &  \pervcross    &  \pervcross    &  \ICcross   &     &     &     \\ \hline
+    \end{tabular}
+    \caption{Sheaf verification for $\dim_{\mathbb{C}} X = 2$.}
+    \end{table}
+    }
 
   \end{block}
 

@@ -1,4 +1,7 @@
 \contentsline {section}{\tocsection {}{1}{A small toolkit}}{1}{section.1}% 
 \contentsline {section}{\tocsection {}{2}{A Short List of Applications}}{2}{section.2}% 
 \contentsline {section}{\tocsection {}{3}{perverse sheaf}}{2}{section.3}% 
+\contentsline {section}{\tocsection {}{4}{Nearby Cycle}}{3}{section.4}% 
+\contentsline {section}{\tocsection {}{5}{Characteristic Cycle}}{3}{section.5}% 
+\contentsline {section}{\tocsection {}{6}{nmd}}{3}{section.6}% 
 \contentsline {section}{\tocsection {}{}{References}}{4}{section*.3}% 
