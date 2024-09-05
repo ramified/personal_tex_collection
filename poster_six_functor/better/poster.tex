@@ -1,0 +1,337 @@
+% Gemini theme
+% https://github.com/anishathalye/gemini
+
+\documentclass[final]{beamer}
+
+% ====================
+% Packages
+% ====================
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[orientation=portrait, size=a0, scale=1.4]{beamerposter}
+\usetheme{gemini}
+\usecolortheme{mit}
+\usepackage{graphicx}
+\usepackage{booktabs}
+%\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.14}
+\usepackage{anyfontsize}
+\usepackage{tikz-cd}
+\usepackage{quiver}
+%\usepackage[dvipsnames]{xcolor}
+% ====================
+% Lengths
+% ====================
+
+% If you have N columns, choose \sepwidth and \colwidth such that
+% (N+1)*\sepwidth + N*\colwidth = \paperwidth
+\newlength{\sepwidth}
+\newlength{\colwidth}
+\setlength{\sepwidth}{0.025\paperwidth}
+\setlength{\colwidth}{0.3\paperwidth}
+
+\newcommand{\separatorcolumn}{\begin{column}{\sepwidth}\end{column}}
+
+% ====================
+% Title
+% ====================
+
+
+
+%Title: A User-Friendly Introduction to Six-Functor Formalism
+%
+%Abstract: Instead of delving into abstract and highly general formulations, this poster aims to introduce traditional six-functor formalism in an accessible manner. It presents a user-friendly toolkit designed to simplify the understanding and memorization of six-functor formalisms. Additionally, the poster concludes with various applications of six-functor formalism, demonstrating its versatility and utility in different contexts.
+%
+%For further details and supplementary materials, please visit my GitHub repository: https://github.com/ramified/personal_handwritten_collection/tree/main/applied_six_functor_formalism
+
+
+\title{A User-Friendly Introduction to Six-Functor Formalism}
+
+\author{Xiaoxiang Zhou \\ Advisor: Prof. Dr. Thomas Krämer}
+
+\institute[shortinst]{Humboldt-Universität zu Berlin}
+
+% ====================
+% Footer (optional)
+% ====================
+
+\footercontent{
+  \href{https://ramified.github.io/}{https://ramified.github.io/} \hfill
+  Ramification Heidelberg 2024 \hfill
+  \href{mailto:xiaoxiang.zhou@student.hu-berlin.de}{xiaoxiang.zhou@student.hu-berlin.de}}
+% (can be left out to remove footer)
+
+% ====================
+% Logo (optional)
+% ====================
+
+% use this to include logos on the left and/or right side of the header:
+% \logoright{\includegraphics[height=7cm]{logo1.pdf}}
+% \logoleft{\includegraphics[height=7cm]{logo2.pdf}}
+
+% ====================
+% Body
+% ====================
+
+
+%%%%%%%newcommand
+\DeclareMathOperator{\sky}{\operatorname{sky}}
+\DeclareMathOperator{\Hcohom}{\operatorname{H}}
+\DeclareMathOperator{\BM}{\operatorname{BM}}
+\DeclareMathOperator{\cpt}{\operatorname{c}}
+\DeclareMathOperator{\Or}{\operatorname{Or}}
+\DeclareMathOperator{\pt}{\operatorname{pt}}
+\DeclareMathOperator{\constructable}{\operatorname{cons}}
+\DeclareMathOperator{\IC}{\operatorname{IC}}
+\DeclareMathOperator{\Perv}{\operatorname{Perv}}
+
+\begin{document}
+
+\begin{frame}[t]
+\begin{columns}[t]
+\separatorcolumn
+
+\begin{column}{\colwidth}
+
+
+
+  \begin{block}{A Small Toolkit}
+  \begin{itemize}
+  \item \textbf{Basic examples.}
+  
+    For $f^!$, assume $Y,X$ are manifolds of dimension $n$.
+    {
+  \renewcommand{\arraystretch}{1.2}
+  \renewcommand{\tabcolsep}{5mm}
+   \begin{table}[]
+   \centering
+   \begin{tabular}{c|c|c}
+  \hline
+    & $f:Y \longrightarrow \pt$ & $f: p \hookrightarrow X$ \\ \hline
+   $f^*$ & constant sheaf & $\mathcal{F}_p$ \\ \hline
+   $Rf_*$ & cohomology & $\sky_p(\mathbb{Q})$ \\ \hline
+   $Rf_!$ & cpt supp cohomology & $\sky_p(\mathbb{Q})$ \\ \hline
+   $f^!$ & orientation sheaf$[n]$ &  $\mathcal{F}_p[n]$ \\ \hline
+   \end{tabular}
+   \end{table}
+   }
+  
+  
+  \item \textbf{Recollement diagram.}
+  
+  % https://q.uiver.app/#q=WzAsMyxbMCwwLCJaIl0sWzEsMCwiWCJdLFsyLDAsIlUiXSxbMCwxLCJpIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMiwxLCJqIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XV0=
+  \[\begin{tikzcd}[ampersand replacement=\&]
+  	Z \& X \& U
+  	\arrow["i", hook, from=1-1, to=1-2]
+  	\arrow["j"', hook', from=1-3, to=1-2]
+  \end{tikzcd}\]
+  
+  % https://q.uiver.app/#q=WzAsMyxbMCwwLCJEKFopIl0sWzEsMCwiRChYKSJdLFsyLDAsIkQoVSkiXSxbMCwxLCJpXyo9aV8hIl0sWzEsMiwial4qPWpeISJdLFsyLDEsImpfISIsMix7ImN1cnZlIjozfV0sWzEsMCwiaV4qIiwyLHsiY3VydmUiOjN9XSxbMiwxLCJSal8qIiwwLHsiY3VydmUiOi0yfV0sWzEsMCwiaV4hIiwwLHsiY3VydmUiOi0yfV1d
+  \[\begin{tikzcd}[ampersand replacement=\&]
+  	{D(Z)} \& {D(X)} \& {D(U)}
+  	\arrow["{i_*=i_!}", from=1-1, to=1-2]
+  	\arrow["{i^*}"', curve={height=60pt}, from=1-2, to=1-1]
+  	\arrow["{i^!}", curve={height=-60pt}, from=1-2, to=1-1]
+  	\arrow["{j^*=j^!}", from=1-2, to=1-3]
+  	\arrow["{j_!}"', curve={height=60pt}, from=1-3, to=1-2]
+  	\arrow["{Rj_*}", curve={height=-60pt}, from=1-3, to=1-2]
+  \end{tikzcd}\]
+  % https://q.uiver.app/#q=WzAsNCxbMCwwLCJqXyFqXiogXFxtYXRoY2Fse0Z9Il0sWzEsMCwiXFxtYXRoY2Fse0Z9Il0sWzIsMCwiaV8haV4qXFxtYXRoY2Fse0Z9Il0sWzMsMF0sWzAsMV0sWzEsMl0sWzIsMywiKzEiXV0=
+  \[\begin{tikzcd}[ampersand replacement=\&]
+  	{j_!j^* \mathcal{F}} \& {\mathcal{F}} \& {i_!i^*\mathcal{F}} \& {}
+  	\arrow[from=1-1, to=1-2]
+  	\arrow[from=1-2, to=1-3]
+  	\arrow["{+1}", from=1-3, to=1-4]
+  \end{tikzcd}\]
+  
+  
+  \item \textbf{Compatability among functors.}
+  
+  % https://q.uiver.app/#q=WzAsMyxbMSwwLCJcXG90aW1lcyJdLFswLDEsImZeKiJdLFsyLDEsImZfISJdLFswLDEsImZeKigtXFxvdGltZXMgLSkiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzAsMiwiXFx0ZXh0e3Byb2ogZm9ybXVsYX0iLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsMiwiXFx0ZXh0e2Jhc2UgY2hhbmdlfSIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=
+  \[\begin{tikzcd}[ampersand replacement=\&]
+  	\& \otimes \\[30mm]
+  	{f^*} \&\& {f_!}
+  	\arrow["{f^*(-\otimes -)}"', no head, from=1-2, to=2-1]
+  	\arrow["{\text{proj formula}}", no head, from=1-2, to=2-3]
+  	\arrow["{\text{base change}}"', no head, from=2-1, to=2-3]
+  \end{tikzcd}\]
+  
+  
+  \end{itemize}
+
+
+
+
+
+
+  \end{block}
+
+
+  \begin{alertblock}{A Short List of Applications}
+
+Assuming the six-functor formalism (and everything derived), let \( X \) be a smooth manifold of dimension \( n \).
+
+\begin{enumerate}
+
+\item Define four types of cohomology and the relative cohomology.
+   Verify that:
+$$\Hcohom^i_{\cpt}(X;\mathbb{Q}) \cong \Hcohom^i\left(\bar{X}, \{\infty \};\mathbb{Q}\right)$$
+$$\Hcohom_i^{\BM}(X;\mathbb{Q}) \cong \Hcohom^{n-i}(X; \Or_X)$$
+$$\Hcohom_i(X;\mathbb{Q}) \cong \Hcohom^{n-i}_{\cpt}(X; \Or_X)$$
+  Also, define the cup and cap product structures.
+
+\item Using the projection formula, show Poincaré duality:
+$$\Hcohom^i_{\cpt}(X;\mathbb{Q})^* \cong \Hcohom^{n-i}(X; \Or_X)$$
+$$\Hcohom^i(X;\mathbb{Q}) \cong \Hcohom^{n-i}_{\cpt}(X; \Or_X)^*$$
+
+
+\item Derive the Gysin sequence for any oriented \( S^k \)-bundle \( \pi: E \longrightarrow B \):
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJIXm4oQikiXSxbMSwwLCJIXm4oRSkiXSxbMiwwLCJIXntuLWt9KEIpIl0sWzMsMF0sWzAsMSwiXFxwaV4qIl0sWzEsMiwiXFxwaV8qIl0sWzIsMywiKzEiXSxbMiwzLCJldV97XFxwaX0iLDJdXQ==
+\[\begin{tikzcd}[ampersand replacement=\&, column sep = 15mm]
+	{H^n(B)} \& {H^n(E)} \& {H^{n-k}(B)} \& {}
+	\arrow["{\pi^*}", from=1-1, to=1-2]
+	\arrow["{\pi_*}", from=1-2, to=1-3]
+	\arrow["{+1}", from=1-3, to=1-4]
+	\arrow["{eu_{\pi}}"', from=1-3, to=1-4]
+\end{tikzcd}\]
+
+   Derive the Mayer-Vietoris sequence and the relative cohomology sequence, and verify the equivalence of different cohomology groups.
+
+\item Compute the upper shriek for singular spaces.
+\end{enumerate}
+
+
+  \end{alertblock}
+
+\end{column}
+
+\separatorcolumn
+
+\begin{column}{\colwidth}
+
+  \begin{block}{Perverse Sheaf}
+
+We will mix the usage of sheaves and complexes. For simplicity, let us fix a stratification $\mathcal{S}$:
+\newcommand\largesubset{\mathrel{\scalebox{1.5}[1]{\(\subset\)}}}
+$$\varnothing \overset{\;\,U_0}{\largesubset} Z_0 \overset{\;\,U_1}{\largesubset}\cdots  \overset{\;\,U_n}{\largesubset} Z_n = X$$
+Denote $D_{\constructable,\mathcal{S}}^{b}(X)$ as the category of constructible sheaves over $X$ with respect to $\mathcal{S}$.
+
+\heading{Definition}
+
+Roughly speaking, a perverse sheaf is a type of sheaf that lies between $\pi^* \mathbb{Q}$ and $\pi^! \mathbb{Q}$. More rigorously, a perverse sheaf is a complex that belongs to the heart of the perverse $t$-structure. 
+
+We say that $\mathcal{F} \in D_{\constructable,\mathcal{S}}^{b}(X)$ is perverse if 
+$$
+\begin{cases}
+\mathcal{H}^i\left(\iota_{U_j}^* \mathcal{F}\right) = 0, & \text{for any } i > -j\\
+\mathcal{H}^i\left(\iota_{U_j}^! \mathcal{F}\right) = 0, & \text{for any } i < -j\\
+\end{cases}
+$$
+
+
+To determine whether a complex $\mathcal{F}$ is perverse, one simply needs to complete the following table:
+{
+  \renewcommand{\arraystretch}{1.2}
+  \renewcommand{\tabcolsep}{5mm}
+  \definecolor{BrickRed}{rgb}{0.8, 0.25, 0.33}
+  \definecolor{BrickBlue}{rgb}{0, 0.1, 0.3}
+  \newcommand{\pervcross}{\textcolor{BrickRed}{$\boldsymbol{\times}$}  }
+  \newcommand{\ICcross}{\textcolor{BrickBlue}{$\boldsymbol{\times}$}  }
+\begin{table}[]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|c|c|}
+\hline
+           $\mathcal{H}^i(-)$                  & $-3$ & $-2$ & $-1$ & $\;0\;$ & $\;1\;$ & $\;2\;$ & $\;3\;$ \\ \hline
+$\iota_{U_2}^*\mathcal{F}$ & \pervcross   &      & \pervcross     &  \pervcross   &  \pervcross   & \pervcross    &  \pervcross   \\ \hline
+$\iota_{U_1}^*\mathcal{F}$ &      &      &  \ICcross    &  \pervcross   &  \pervcross   &  \pervcross   &  \pervcross   \\ \hline
+$\iota_{U_1}^!\mathcal{F}$ &  \pervcross    &  \pervcross    &  \ICcross    &     &     &     &     \\ \hline
+$\iota_{Z_0}^*\mathcal{F}$ &      &      &      &  \ICcross   &   \pervcross  &   \pervcross  &  \pervcross   \\ \hline
+$\iota_{Z_0}^!\mathcal{F}$ &   \pervcross   &  \pervcross    &  \pervcross    &  \ICcross   &     &     &     \\ \hline
+\end{tabular}
+\end{table}
+}
+\heading{Deligne's construction}
+Any local system $\mathcal{L}$ supported on $U_i$ can be converted into a perverse sheaf through truncations. This process is known as \textbf{Deligne's construction}, and the resulting perverse sheaf is called the intersection cohomology complex, or the IC sheaf, denoted by $\IC(\mathcal{L})$. IC sheaves are the simple objects in the category $\Perv_{\mathcal{S}}(X)$.
+
+  \end{block}
+
+  \begin{block}{Fusce aliquam magna velit}
+
+    Et rutrum ex euismod vel. Pellentesque ultricies, velit in fermentum
+    vestibulum, lectus nisi pretium nibh, sit amet aliquam lectus augue vel
+    velit. Suspendisse rhoncus massa porttitor augue feugiat molestie. Sed
+    molestie ut orci nec malesuada. Sed ultricies feugiat est fringilla
+    posuere.
+
+    \begin{figure}
+      \centering
+      \begin{tikzpicture}
+        \begin{axis}[
+            scale only axis,
+            no markers,
+            domain=0:2*pi,
+            samples=100,
+            axis lines=center,
+            axis line style={-},
+            ticks=none]
+          \addplot[red] {sin(deg(x))};
+          \addplot[blue] {cos(deg(x))};
+        \end{axis}
+      \end{tikzpicture}
+      \caption{Another figure caption.}
+    \end{figure}
+
+  \end{block}
+
+
+\end{column}
+
+\separatorcolumn
+
+\begin{column}{\colwidth}
+
+  \begin{exampleblock}{A highlighted block containing some math}
+
+    A different kind of highlighted block.
+
+    $$
+    \int_{-\infty}^{\infty} e^{-x^2}\,dx = \sqrt{\pi}
+    $$
+
+    Interdum et malesuada fames $\{1, 4, 9, \ldots\}$ ac ante ipsum primis in
+    faucibus. Cras eleifend dolor eu nulla suscipit suscipit. Sed lobortis non
+    felis id vulputate.
+
+    \heading{A heading inside a block}
+
+    Praesent consectetur mi $x^2 + y^2$ metus, nec vestibulum justo viverra
+    nec. Proin eget nulla pretium, egestas magna aliquam, mollis neque. Vivamus
+    dictum $\mathbf{u}^\intercal\mathbf{v}$ sagittis odio, vel porta erat
+    congue sed. Maecenas ut dolor quis arcu auctor porttitor.
+
+    \heading{Another heading inside a block}
+
+    Sed augue erat, scelerisque a purus ultricies, placerat porttitor neque.
+    Donec $P(y \mid x)$ fermentum consectetur $\nabla_x P(y \mid x)$ sapien
+    sagittis egestas. Duis eget leo euismod nunc viverra imperdiet nec id
+    justo.
+
+  \end{exampleblock}
+
+ 
+  \begin{block}{References}
+
+    \nocite{*}
+    \footnotesize{\bibliographystyle{plain}\bibliography{poster}}
+
+  \end{block}
+
+\end{column}
+
+\separatorcolumn
+\end{columns}
+\end{frame}
+
+\end{document}

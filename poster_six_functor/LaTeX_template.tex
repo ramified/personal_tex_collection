@@ -37,7 +37,7 @@
 \usepackage{extarrows}				% may be replaced by tikz-cd
 %\usepackage{unicode-math}			% unicode maths for math fonts, now I don't know how to include it
 %\usepackage{ctex}					% Chinese characters, huge difference.
-
+\usepackage{stackengine}
 
 %%%basic packages for fancy electronic documents
 \usepackage[colorlinks]{hyperref}
@@ -267,7 +267,7 @@
 \DeclareMathOperator{\BM}{\operatorname{BM}}
 \DeclareMathOperator{\cpt}{\operatorname{c}}
 \DeclareMathOperator{\Or}{\operatorname{Or}}
-
+\DeclareMathOperator{\constructable}{\operatorname{cons}}
 
 
 %%%%%%%%%%%%%%%%%%%% here we make some blocks for special features. 
@@ -444,6 +444,27 @@ $$\Hcohom^i(X;\mathbb{Q}) \cong \Hcohom^{n-i}_{\cpt}(X; \Or_X)^*$$
 
 six functor formalism $\hspace{10mm}\approx\hspace{10mm}$ cohomology theory
 
+\section{perverse sheaf}
+
+We will mix the usage of sheaves and complexes. For simplicity, let us fix a stratification $\mathcal{S}$:
+\newcommand\largesubset{\mathrel{\scalebox{1.5}[1]{\(\subset\)}}}
+$$\varnothing \overset{\;\,U_0}{\largesubset} Z_0 \overset{\;\,U_1}{\largesubset}\cdots  \overset{\;\,U_n}{\largesubset} Z_n = X$$
+Denote $D_{\constructable,\mathcal{S}}^{b}(X)$ as the category of constructible sheaves over $X$ with respect to $\mathcal{S}$.
+
+Roughly speaking, a perverse sheaf is a type of sheaf that lies between $\pi^* \mathbb{Q}$ and $\pi^! \mathbb{Q}$. More rigorously, a perverse sheaf is a complex that belongs to the heart of the perverse $t$-structure. We say that $\mathcal{F} \in D_{\constructable,\mathcal{S}}^{b}(X)$ is perverse if 
+$$
+\begin{cases}
+\mathcal{H}^i\left(\iota_{U_j}^* \mathcal{F}\right) = 0, & \text{for any } i > -j\\
+\mathcal{H}^i\left(\iota_{U_j}^! \mathcal{F}\right) = 0, & \text{for any } i < -j\\
+\end{cases}
+$$
+
+
+To determine whether a complex $\mathcal{F}$ is perverse, one simply needs to complete the following table:
+
+$\iota_{U_j}^*(\mathcal{F})$
+
+The local system supported on $U_i$ (denoted by $\mathcal{L}$) converted to a perverse sheaf by truncations. This method is called Deligne's construction, and the constructed perverse sheaf is called the intersection cohomology complex(or the IC sheaf), denoted by $IC(\mathcal{L})$. IC sheaves are the simple objects in the category $Perv_{\mathcal{S}}(X)$.
 
 \include{chapters/chapter9}
 
