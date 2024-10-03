@@ -1814,11 +1814,11 @@ BSD猜想可以同类数公式做一个形式上的类比.回忆类数公式:
 	\begin{enumerate}
 		\item $h_K:=\#Cl(K)$为$K$的\textbf{类数};
 		\item $w_K:=\#(\mathcal{O}_K^{\times})_{\tor}$为$K$的单位根数目;
-		\item $R_K$为$\mathcal{O}_K^{\times}/(\mathcal{O}_K^{\times})_{\tor}$作为格点时对应的体积,具体来说,定义
+		\item $R_K$为$\mathcal{O}_K^{\times}/(\mathcal{O}_K^{\times})_{\tor}$(大致)作为格点时对应的体积,具体来说,定义
 		$$H:=\left\{\eta \in \mathbb{R}^{r_1+r_2} \;\middle|\; \sum_{i=1}^{r_1+r_2}\eta_i=0 \right\}, $$
 		则超平面$H$上有自然的内积结构,定义映射($v_1,\ldots,v_{r_1} \in M_K^0$为实赋值, $v_{r_1+1},\ldots ,v_{r_1+r_2} \in M_K^0$为复赋值)
 		$$\varphi:\mathcal{O}_K^{\times} \longrightarrow H \qquad x \longmapsto \big(ln(|x|_{v_1}), \ldots, ln(|x|_{v_{r_1+r_2}})\big)$$
-		则$\varphi$良定, $\ker \varphi =(\mathcal{O}_K^{\times})_{\tor}$, $\Img \varphi$为$H$上的一个满秩格点,定义$R_K:=\vol(H/\Img \varphi)$. (这个映射在证明$\mathcal{O}_K^{\times}$的有限生成性时即已出现过.当$r=0$时,补充定义$R_K:=1$.)
+		则$\varphi$良定, $\ker \varphi =(\mathcal{O}_K^{\times})_{\tor}$, $\Img \varphi$为$H$上的一个满秩格点,定义$R_K:=\frac{1}{\sqrt{r_1+r_2}}\vol(H/\Img \varphi)$. (这个映射在证明$\mathcal{O}_K^{\times}$的有限生成性时即已出现过.当$r=0$时,补充定义$R_K:=1$.)
 	\end{enumerate}
 \end{theorem}
 可以看出,这个公式将解析对象($L$函数)同算术对象($Cl(K),\mathcal{O}_K$)联系起来.通过类比这个公式,我们“导出”BSD猜想.
