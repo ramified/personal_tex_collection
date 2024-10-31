@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  31 OCT 2024 12:43
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  31 OCT 2024 18:45
 entering extended mode
 **./dim_of_Zchi.tex
 (dim_of_Zchi.tex
@@ -1696,22 +1696,26 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 401.
 
-(dim_of_Zchi.bbl [2]) [3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 438.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 438.
+[2] (dim_of_Zchi.bbl
+
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
+
+) [3]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 476.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 476.
  (dim_of_Zchi.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 438.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 438.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 476.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 476.
 Package rerunfilecheck Info: File `dim_of_Zchi.out' has not changed.
 (rerunfilecheck)             Checksum: 85CDF08F11846A8513D7BF00DBB05456.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 438.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 476.
  ) 
 Here is how much of TeX's memory you used:
- 36859 strings out of 427748
- 684311 string characters out of 3150981
+ 36861 strings out of 427748
+ 684374 string characters out of 3150981
  733578 words of memory out of 3000000
  40194 multiletter control sequences out of 15000+200000
- 544197 words of font info for 79 fonts, out of 3000000 for 9000
+ 544205 words of font info for 80 fonts, out of 3000000 for 9000
  1489 hyphenation exceptions out of 8191
  61i,16n,82p,969b,967s stack positions out of 5000i,500n,10000p,200000b,50000s
 
