@@ -1,3 +1,4 @@
 \contentsline {section}{\tocsection {}{1}{Background}}{1}{section.1}% 
 \contentsline {section}{\tocsection {}{2}{Description of $Z_{\chi }$ via correspondence}}{2}{section.2}% 
-\contentsline {section}{\tocsection {}{}{References}}{3}{section*.2}% 
+\contentsline {section}{\tocsection {}{3}{Description of the tangent map}}{3}{section.3}% 
+\contentsline {section}{\tocsection {}{}{References}}{4}{section*.2}% 

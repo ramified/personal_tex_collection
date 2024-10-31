@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  31 OCT 2024 18:45
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  31 OCT 2024 23:50
 entering extended mode
 **./dim_of_Zchi.tex
 (dim_of_Zchi.tex
@@ -1696,27 +1696,27 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 401.
 
-[2] (dim_of_Zchi.bbl
+[2] [3] (dim_of_Zchi.bbl
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 476.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 476.
+) [4]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 537.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 537.
  (dim_of_Zchi.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 476.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 476.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 537.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 537.
 Package rerunfilecheck Info: File `dim_of_Zchi.out' has not changed.
-(rerunfilecheck)             Checksum: 85CDF08F11846A8513D7BF00DBB05456.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 476.
+(rerunfilecheck)             Checksum: 9DB428AF076DECB4E708580B1F0CFB52.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 537.
  ) 
 Here is how much of TeX's memory you used:
- 36861 strings out of 427748
- 684374 string characters out of 3150981
- 733578 words of memory out of 3000000
- 40194 multiletter control sequences out of 15000+200000
+ 37043 strings out of 427748
+ 689163 string characters out of 3150981
+ 737578 words of memory out of 3000000
+ 40376 multiletter control sequences out of 15000+200000
  544205 words of font info for 80 fonts, out of 3000000 for 9000
  1489 hyphenation exceptions out of 8191
  61i,16n,82p,969b,967s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on dim_of_Zchi.pdf (3 pages).
+Output written on dim_of_Zchi.pdf (4 pages).
