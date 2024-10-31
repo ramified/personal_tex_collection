@@ -259,7 +259,10 @@
 \DeclareMathOperator{\Sp}{\operatorname{Sp}}
 \DeclareMathOperator{\SO}{\operatorname{SO}}
 \DeclareMathOperator{\E6}{\operatorname{E}_6}
-
+\DeclareMathOperator{\cc}{\operatorname{cc}}
+\DeclareMathOperator{\Hnm}{\operatorname{H}}
+\DeclareMathOperator{\-mod}{\!\operatorname{-mod}}
+\DeclareMathOperator{\divisor}{\operatorname{div}}
 %%%%%%%newcommand
 
 %%%basic symbols
@@ -372,10 +375,60 @@ Here, $g:= \dim_{\mathbb{C}}(A)$, and
 \item $\Theta$ is the smooth theta divisor of a general principally polarized abelian variety.
 \end{itemize}
 \end{proposition}
+In [Kr20], any perverse sheaf $\mathcal{F}$ can be associated with its clean characteristic cycle
+$$\cc(\mathcal{F})= \sum_Z m_{\mathcal{F}}(Z) [\Lambda_Z].$$
+This coinsides with the weight decomposition for $V \in \Rep(G)$:
+$$V = \bigoplus_{\chi \in X^*(T)} V_{\chi} = \bigoplus_{[\chi] \in X^*(T)/W} \left(\bigoplus_{\chi \in [\chi]} V_{\chi} \right)$$
+
+By comparing the following formulas (and applying induction on highest weight representations), we can associate each weight orbit $[\chi]$ with a subvariety $Z$ of $A$:
+$$
+\left\{
+\begin{aligned}
+\chi(\mathcal{F})&= \sum_Z \deg \Lambda_Z \cdot m_{\mathcal{F}}(Z)\\
+\dim_{\mathbb{C}} V &= \sum_{[\chi]} \# [\chi] \cdot \dim_{\mathbb{C}} V_{\chi} 
+\end{aligned}
+\right.
+$$
+We may later denote this subvariety as $Z_{\chi}$ to indicate its correspondence with the weight orbit where $\chi$ lies.
+
+
+In the case of curves, the conormal cone $\Lambda_Z$ of $Z = Z_{\chi}$ has an explicit description as a Lagrangian cycle:
+$$\Lambda_Z \subset T^* A \cong A \times \Hnm^0(C,\omega_C).$$
+In the next section, we will describe this Lagrangian cycle in detail, leading to an explicit description of $Z_{\chi}$.
 
 
 
+\section{Description of $Z_{\chi}$ via correspondence}
 
+From now on, we focus on the curve case, where $G = \SL_{2g-2}(\mathbb{C})$ or $\Sp_{2g-2}(\mathbb{C})$. In both cases, $\delta$ corresponds to the minuscule representation $L(\omega)$ for some highest weight $\omega \in X^(T)$. The Weyl group $W = S_{2g-2}$ or $S_{g-1} \times (\mathbb{Z}/2\mathbb{Z})^{g-1}$ acts on the character lattice $X^*(T)$. Letting $$[\omega] = \{\lambda_1,\ldots, \lambda_{2g-2} \} \subset X^*(T)$$ 
+denote the orbit of $\omega$, we have 
+$$X^*(T) = \left< \lambda_1,\ldots, \lambda_{2g-2} \right>_{\mathbb{Z}\-mod}.$$
+In other words, any character $\chi \in X^*(T)$ can be written as $\chi = \sum_{i=1}^{2g-2} m_i \lambda_i$ for some tuple $(m) = (m_1, \ldots, m_{2g-2}) \in \mathbb{Z}^{2g-2}$.
+
+For any $(m) \in \mathbb{Z}^k$, we can construct a map 
+% https://q.uiver.app/#q=WzAsNyxbMCwwLCJhXnsobSl9OiJdLFsxLDAsIkNeayJdLFsyLDAsIlxcUGljXntcXHN1bSBtX2l9KEMpIl0sWzMsMCwiQSJdLFsyLDEsIlxcc3VtX3tpPTF9XntrfSBtX2lwX2kiXSxbMSwxLCIocF8xLFxcbGRvdHMscF9rKSJdLFszLDEsIlxcc3VtX3tpPTF9XntrfSBtX2kocF9pLXBfMCkiXSxbNSw0LCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtYXBzIHRvIn19fV0sWzQsNiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibWFwcyB0byJ9fX1dLFsxLDJdLFsyLDMsIlxcY29uZyIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
+\[\begin{tikzcd}[row sep=0mm]
+	{a^{(m)}:} &[-10mm] {C^k} & {\Pic^{\scriptstyle\Sigma m_i}\!(C)} &[-5mm] A\hspace{20mm} \\
+	& {(p_1,\ldots,p_k)} & {\sum_{i=1}^{k} m_ip_i} & {\sum_{i=1}^{k} m_i(p_i-p_0)}
+	\arrow[from=1-2, to=1-3]
+	\arrow["\cong"{description}, draw=none, from=1-3, to=1-4]
+	\arrow[maps to, from=2-2, to=2-3]
+	\arrow[maps to, from=2-3, to=2-4]
+\end{tikzcd}\]
+For simplicity, we write 
+$a := a^{(1, \ldots, 1)}$
+and let 
+$$K \in \Pic^{2g-2}(C) \cong A$$
+denote the class corresponding to the line bundle $\omega_C$ of degree $2g-2$.
+
+\begin{proposition}
+Assume the curve is non-hyperelliptic. For $\chi \in X^*(T)$, express $\chi$ as $\chi = \sum_{i=1}^{2g-2} m_i \lambda_i$ for some tuple $(m) \in \mathbb{Z}^{2g-2}$.
+\begin{enumerate}[1)]
+\item The conormal cone $\Lambda_{Z_{\chi}}$ is given by 
+$$\Lambda_{Z_{\chi}}= \left\{\rule{0mm}{4.4mm} \left(a^{(m)}(p), \eta \right) \in A \times \Hnm^0 (C, \omega_C) \;\middle|\; p \in C^{2g-2}, \sum p_i=\divisor \eta  \right\}.$$
+\item The subvariety $Z_{\chi}$ is described by $Z_{\chi}=a^{(m)}\left(a^{-1}(K)\right)$.
+\end{enumerate}
+\end{proposition}
 %\nocite{Eberhardt2022Koszul}	% cite articles which are not cited in the document yet
 
 % Remember to protect the uppercase of people's name and LaTeX symbols
