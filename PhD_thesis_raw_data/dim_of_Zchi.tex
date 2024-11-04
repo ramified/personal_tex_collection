@@ -1,5 +1,5 @@
 
-\documentclass[UTF8]{amsart}
+\documentclass[reqno, UTF8]{amsart}
 %Typical documenttypes: article/book
 %some examples:
 %\documentclass[reqno,11pt]{book}   %%%for books
@@ -264,6 +264,14 @@
 \DeclareMathOperator{\-mod}{\!\operatorname{-mod}}
 \DeclareMathOperator{\divisor}{\operatorname{div}}
 \DeclareMathOperator{\rank}{\operatorname{rank}}
+\DeclareMathOperator{\sign}{\operatorname{sign}}
+\DeclareMathOperator{\longleftmapsto}{\rotatebox[origin=c]{180}{$\;\longmapsto\;$}}
+
+
+
+
+
+
 %%%%%%%newcommand
 
 %%%basic symbols
@@ -584,7 +592,7 @@ $$
 \begin{pmatrix}
      d_p a^{\phantom{()}} \\  d_p a^{(m)}
 \end{pmatrix}
-: \mathbb{C}^{2g-2} \longrightarrow H \bigoplus H \cong \mathbb{C}^{2g-2}
+: \mathbb{C}^{2g-2} \longrightarrow H \oplus H \cong \mathbb{C}^{2g-2}
 $$
 has the matrix coefficient expression
 \setlength{\arraycolsep}{2pt}
@@ -675,7 +683,7 @@ The $S_{2g-2}$-representation $V$ is irreducible. In fact, it is exactly the Spe
 \begin{lemma}
 The polynomial
 $$
-C^{(m)}:= \det \begin{pmatrix}
+f^{(m)}:= \det \begin{pmatrix}
      v_1 & \cdots & v_{2g-2} \\
      m_1v_1 & \cdots & m_{2g-2}v_{2g-2} \\
 \end{pmatrix} \in V
@@ -683,14 +691,14 @@ $$
 is nonzero.
 \end{lemma}
 \begin{proof}
-The multilinearity property of the determinant allows us to show that $C^{(m)} \in V$. For proving that $C^{(m)} \neq 0$, we evaluate $C^{(m)}$ at specially chosen values. Since at most $g - 2$ of the $m_i$ terms are identical, we can always select a permutation $\sigma \in S_{2g-2}$ such that 
-$$\prod_{k=1}^{g-1} \left( m_{\sigma(2k-1)}- m_{\sigma(2k)} \right) \neq 0.$$
- By setting $v_{\sigma(2k - 1)} = v_{\sigma(2k)} = e_k$, it follows that 
+The multilinearity property of the determinant allows us to show that $f^{(m)} \in V$. For proving that $f^{(m)} \neq 0$, we evaluate $f^{(m)}$ at specially chosen values. Since at most $g - 2$ of the $m_i$ terms are identical, we can always select a permutation $\sigma \in S_{2g-2}$ such that 
+$$\prod_{k=1}^{g-1} \left( m_{\sigma(2l-1)}- m_{\sigma(2l)} \right) \neq 0.$$
+ By setting $v_{\sigma(2l - 1)} = v_{\sigma(2l)} = e_k$, it follows that 
  $$\det\begin{pmatrix}
       v_1 & \cdots & v_{2g-2} \\
       m_1v_1 & \cdots & m_{2g-2}v_{2g-2} \\
- \end{pmatrix}\Bigg|_{\substack{v_{\sigma(2k - 1)} = e_k\\ v_{\sigma(2k)} = e_k}}
-  =\pm \prod_{k=1}^{g-1} \left( m_{\sigma(2k-1)}- m_{\sigma(2k)} \right) \neq 0.$$
+ \end{pmatrix}\Bigg|_{\substack{v_{\sigma(2l - 1)} = e_k\\ v_{\sigma(2l)} = e_k}}
+  =\pm \prod_{k=1}^{g-1} \left( m_{\sigma(2l-1)}- m_{\sigma(2l)} \right) \neq 0.$$
 \end{proof}
 
 \begin{proof}[Proof of Theorem \ref{thm:A}]
@@ -701,9 +709,9 @@ $$\det \begin{pmatrix}
 \end{pmatrix}
 = 0\quad \text{ for any }\sigma \in S_{2g-2},$$
 then
-$$\sigma(C^{(m)}) (\beta_1,\ldots, \beta_{2g-2})
+$$\sigma(f^{(m)}) (\beta_1,\ldots, \beta_{2g-2})
 = 0\quad \text{ for any }\sigma \in S_{2g-2}.$$
-Since $C^{(m)} \neq 0$ and $V$ is irreducible, $V= \left< \sigma(C^{(m)}) \right>_{\sigma \in S_{2g-2}}$, one gets
+Since $f^{(m)} \neq 0$ and $V$ is irreducible, $V= \left< \sigma(f^{(m)}) \right>_{\sigma \in S_{2g-2}}$, one gets
 $$f (\beta_1,\ldots, \beta_{2g-2})
 = 0\quad \text{ for any }f \in S_{2g-2}.$$
 Taking $f=f_{\Id}$ implies that 
@@ -711,6 +719,111 @@ $$\det(\beta_1,\ldots, \beta_{g-1})\det(\beta_{g},\ldots, \beta_{2g-2})=0.$$
 However, this contradicts the fact that any arbitrary selection of $g-1$ elements from $\{\beta_1, \ldots, \beta_{2g-2}\} \subset H \cong \mathbb{C}^{g-1}$ must be linearly independent.
 \end{proof}
 
+
+\section{Description of homology class}
+
+In the second argument, we seek to identify the homology class $[Z_{\chi}]$. When $Z_{\chi}$ is a divisor, 
+$$a^{(m)}_* [a^{-1}(K)]=\deg \left( a^{(m)}\big|_{a^{-1}(K)} \right) \cdot [Z_{\chi}] \in \Hnm^2(A;\mathbb{Z}).$$
+While I have not developed a way to calculate this degree, we do have a clear description of the homology class $a^{(m)}_* [a^{-1}(K)]$:
+
+\begin{theorem}\label{thm:B}
+There exists a homology class $[Z] \in \Hnm^2 (A;\mathbb{Q})$, such that for any tuple $(m) \in \mathbb{Z}^{2g-2}$, 
+$$a^{(m)}_* [a^{-1}(K)]=\left( \frac{1}{2^{g-1}} \sum_{\sigma \in S_{2g-2}} \prod_{l=1}^{g-1} \left( m_{\sigma(2l-1)}-m_{\sigma(2l)} \right)^2  \right) \cdot [Z].$$
+\end{theorem}
+
+\begin{remark}
+Take $m=( \underbrace{1, \ldots, 1}_{g-1}, \underbrace{0, \ldots, 0}_{g-1} )$, then Theorem \ref{thm:B} tells us that
+\begin{equation}\label{eq:theta1}
+a^{(m)}_* [a^{-1}(K)]= \left( \rule{0mm}{3.0mm} (g-1)! \right)^2 \cdot [Z].
+\end{equation}
+In the same time, $Z_{\chi} = \Theta$ and $\deg \left( a^{(m)}\big|_{a^{-1}(K)} \right) = \left( \rule{0mm}{3.0mm} (g-1)! \right)^2$, so
+\begin{equation}\label{eq:theta2}
+a^{(m)}_* [a^{-1}(K)]= \left( \rule{0mm}{3.0mm} (g-1)! \right)^2 \cdot [\Theta].
+\end{equation}
+Combining \eqref{eq:theta1} and \eqref{eq:theta2}, one gets $[Z]=[\Theta]$ in the main theorem.
+
+Notice that the homology calculation aligns with the dimension calculation, as shown by the equivalence:
+$$\dim_{\mathbb{C}} Z_{\chi} = g-1 \quad \Longleftrightarrow \quad a^{(m)}_* [a^{-1}(K)] \neq 0.$$
+\end{remark}
+
+To prove Theorem \ref{thm:B}, we start with a few preparatory steps. We start by fixing a basis for the cohomology and then express both the pullback and pushforward with respect to this basis. The homology class $[a^{-1}(K)] \in \Hnm^{2g-2}(C^{2g-2};\mathbb{Z})$ is not yet fully understood, adding complexity to the problem. We address this issue using certain symmetry methods in Section \ref{sec: sym_fct}.
+
+\subsection{Basis}
+The cohomology ring of a curve $C/\mathbb{C}$ is well-known:
+$$\Hnm^*(C;\mathbb{Z}) =\; \mathbb{Z}\;\oplus\; \bigoplus_{i=1}^{g} \left( \rule{0mm}{3mm} \mathbb{Z}a_i \oplus \mathbb{Z}b_i \right) \;\oplus \;\mathbb{Z}e.$$
+In this structure, $e = a_i \cap b_i = -b_i \cap a_i$ are the only non-trivial cup products. To simplify, we relabel $(a_1, b_1, \ldots, a_g, b_g)$ as $(c_1, c_2, \ldots, c_{2g})$, while also setting $c_0 = 1$ and $c_{2g+1} = e$.
+
+Observe that the Abel–Jacobi map $\iota_C: C \longrightarrow A$ yields an isomorphism
+$$\iota_C^* : \Hnm^1(A;\mathbb{Z}) \longrightarrow \Hnm^1(C;\mathbb{Z}) \cong \bigoplus_{i=1}^{2g} \mathbb{Z}c_i.$$
+We retain the notation $\{c_i\}_{i=1}^{2g}$ as a basis of $\Hnm^1(A; \mathbb{Z})$ as well, and define 
+$$c_I:= c_{i_1} \cap \cdots \cap c_{i_d} \in \Hnm^d(A;\mathbb{Z})$$
+for $I = \{i_1,\ldots,i_d\} \subseteq \{1,\ldots, 2g\}$, $i_1 < \cdots < i_d$. This sets up the basis for our calculations:
+$$
+\begin{cases}
+\displaystyle\Hnm^*(C;\mathbb{Z}) \cong \hspace{4mm}\bigoplus_{i=0}^{2g+1} \hspace{4mm}\mathbb{Z}c_i\\[5mm]
+\displaystyle\Hnm^*(A;\mathbb{Z}) \cong \bigoplus_{I  \subseteq \{1,\ldots, 2g\}} \mathbb{Z}c_I\\
+\end{cases}
+$$
+By Künneth formula, one can directly write down a basis for the cohomology of product spaces:
+$$
+\begin{cases}
+\displaystyle\Hnm^*(C^k;\mathbb{Z}) \cong \bigoplus_{(i_1,\ldots,i_k)}^{\phantom{1}} \mathbb{Z}\left(\rule{0mm}{3mm} c_{i_1} \otimes \cdots \otimes c_{i_k}  \right)\\[5mm]
+\displaystyle\Hnm^*(A^k;\mathbb{Z}) \cong \bigoplus_{(I_1,\ldots,I_k)} \mathbb{Z}\left(\rule{0mm}{3mm} c_{I_1} \otimes \cdots \otimes c_{I_k}  \right)\\
+\end{cases}
+$$
+
+There's a small issue here. Due to the non-commutativity of the cohomology ring, expressions often involve $-1$ coefficients, which, while algebraically necessary, can obscure the core insights. To simplify matters, we adopt a modified basis: 
+\begin{equation*}
+\begin{aligned}
+ \left(\rule{0mm}{3mm} c_{i_1} \otimes \cdots \otimes c_{i_k}  \right)^c :=\;&  \;(-1)^{\sign}\left(\rule{0mm}{3mm} c_{i_1} \otimes \cdots \otimes c_{i_k}  \right)\\ 
+ \left(\rule{0mm}{3mm} c_{I_1} \otimes \cdots \otimes c_{I_k}  \right)^c :=\;&  \;(-1)^{\sign}\left(\rule{0mm}{3mm} c_{I_1} \otimes \cdots \otimes c_{I_k}  \right)\\ 
+\end{aligned}
+\end{equation*}
+where the sign accounts for all coefficients arising when rearranging terms to the standard grading order $(c_0, \ldots, c_{2g+1})$. With this adjustment, the permutation action no longer introduces any extraneous coefficients:
+$$\sigma \cdot \left(\rule{0mm}{3mm} c_{i_1} \otimes \cdots \otimes c_{i_k}  \right)^c = \left(\rule{0mm}{3mm} c_{\sigma(i_1)} \otimes \cdots \otimes c_{\sigma(i_k)}  \right)^c. $$
+
+\subsection{Pullback}
+The pullback is more straightforward to compute than the pushforward, as we only need to determine it on the basis elements. We collect the building blocks here: \footnote{For 2), it reduces to the addition map $S^1 \times S^1 \longrightarrow S^1$.}
+
+\begin{equation*}
+\begin{aligned}
+&1) && \iota_C: & C\;& \longrightarrow A\qquad & c_i &\longleftmapsto c_i   \\ 
+&2) && +: & A \times A\;& \longrightarrow A\qquad & c_i \otimes 1 + 1 \otimes c_i  &\longleftmapsto c_i   \\ 
+&3) && \Delta: & A\;& \longrightarrow A \times A\qquad & c_i &\longleftmapsto  c_i \otimes 1,\;  1 \otimes c_i   \\ 
+&4) && [m]: & A \times A\;& \longrightarrow A\qquad & mc_i &\longleftmapsto c_i   \\ 
+&5) && +: & A^k\;& \longrightarrow A\qquad & \sum_{j=1}^{k} 1 \otimes \cdots \underset{\underset{j\text{-th}}{\uparrow}}{c_i} \cdots \otimes 1 &\longleftmapsto c_i   \\ 
+\end{aligned}
+\end{equation*}
+
+Now, for a tuple $(m) \in \mathbb{Z}^{k}$, the map
+$$a^{(m)}: C^k \longrightarrow A \qquad (p_1,\ldots , p_k) \longrightarrow \sum_{i=1}^{k} m_i (p_i-p_0)$$
+can be written as compositions of basic functions:
+% https://q.uiver.app/#q=WzAsNCxbMCwwLCJhXnsobSl9OiBDXmsiXSxbMSwwLCJBXmsiXSxbMiwwLCJBXmsiXSxbMywwLCJBIl0sWzAsMSwiKFxcaW90YV9DLFxcbGRvdHMsXFxpb3RhX0MpIl0sWzEsMiwiKG1fMSwgXFxsZG90cywgbV9rKSJdLFsyLDMsIisiXV0=
+\[\begin{tikzcd}[ampersand replacement=\&,column sep=huge]
+	{a^{(m)}: C^k} \& {A^k} \& {A^k} \& A
+	\arrow["{(\iota_C,\ldots,\iota_C)}", from=1-1, to=1-2]
+	\arrow["{(m_1, \ldots, m_k)}", from=1-2, to=1-3]
+	\arrow["{+}", from=1-3, to=1-4]
+\end{tikzcd}\]
+We get
+$$a^{(m),*} c_i = \sum_{j=1}^k 1 \otimes \cdots \underset{\underset{j\text{-th}}{\uparrow}}{m_ic_i} \cdots \otimes 1$$
+As a result,
+\begin{equation*}
+\begin{aligned}
+ a^{(m),*} c_I =\;& \sum_{I= \sqcup I_i} \left(m_1^{|I_1|} \iota_C^* c_{I_1} \otimes \cdots \otimes m_k^{|I_k|} \iota_C^* c_{I_k}\right)^c \\
+ =\;& \sum_{\substack{I= \sqcup I_i \\ |I_i|\leqslant 2}}\left( \prod_{i=1}^k m_i^{|I_i|}\right)  \left(c_{I_1} \otimes \cdots \otimes  c_{I_k}\right)^c \\ 
+\end{aligned}
+\end{equation*}
+where $c_{\{i,j\}} = c_i \cap c_j \in \Hnm^0(C;\mathbb{Z})$ in the last expression.
+
+\subsection{Pushforward}
+
+\section{Second proof by symmetric functions}\label{sec: sym_fct}
+
+Ideally, if we could express $[a^{-1}(K)] \in \Hnm^{2g-2} (C^{2g-2};\mathbb{Z})$ as a linear combination of the basis elements $c_{i_1} \otimes \cdots \otimes c_{i_{2g-2}}$, we could then compute it directly to obtain the answer. As of now, however, this formulation is unknown.
+
+Fortunately, there are several symmetries that simplify calculations. For instance, the subset $a^{-1}(K) \subset C^{2g-2}$ is preserved under the action of $S_{2g-2}$.
+ 
 %\nocite{Eberhardt2022Koszul}	% cite articles which are not cited in the document yet
 
 % Remember to protect the uppercase of people's name and LaTeX symbols
