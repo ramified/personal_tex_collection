@@ -527,7 +527,7 @@ $\;$\\
 {\bfseries Step 1.} The following lemma provides a foundational result for analyzing the tangent map up to scalar.
 
 \begin{lemma}[???]\label{lemma:diff_of_AJ}
-The projectivized differential of the Abel-Jacobi map $\iota_C: C \longrightarrow A$ is the canonical embedding $\varphi_C: C \longrightarrow \mathbb{P}^{g-1}$, i.e.,
+The projectivized differential of the Abel--Jacobi map $\iota_C: C \longrightarrow A$ is the canonical embedding $\varphi_C: C \longrightarrow \mathbb{P}^{g-1}$, i.e.,
 $$\varphi_C(p) = \Img (d_p \iota_C) \in \mathbb{P}(T_p A) \cong \mathbb{P}\left(\Hnm^0 (C, \omega_C)^*\right).$$
 \end{lemma}
 
@@ -753,7 +753,7 @@ The cohomology ring of a curve $C/\mathbb{C}$ is well-known:
 $$\Hnm^*(C;\mathbb{Z}) =\; \mathbb{Z}\;\oplus\; \bigoplus_{i=1}^{g} \left( \rule{0mm}{3mm} \mathbb{Z}a_i \oplus \mathbb{Z}b_i \right) \;\oplus \;\mathbb{Z}e.$$
 In this structure, $e = a_i \cap b_i = -b_i \cap a_i$ are the only non-trivial cup products. To simplify, we relabel $(a_1, b_1, \ldots, a_g, b_g)$ as $(c_1, c_2, \ldots, c_{2g})$, while also setting $c_0 = 1$ and $c_{2g+1} = e$.
 
-Observe that the Abel–Jacobi map $\iota_C: C \longrightarrow A$ yields an isomorphism
+Observe that the Abel--Jacobi map $\iota_C: C \longrightarrow A$ yields an isomorphism
 $$\iota_C^* : \Hnm^1(A;\mathbb{Z}) \longrightarrow \Hnm^1(C;\mathbb{Z}) \cong \bigoplus_{i=1}^{2g} \mathbb{Z}c_i.$$
 We retain the notation $\{c_i\}_{i=1}^{2g}$ as a basis of $\Hnm^1(A; \mathbb{Z})$ as well, and define 
 $$c_I:= c_{i_1} \cap \cdots \cap c_{i_d} \in \Hnm^d(A;\mathbb{Z})$$
@@ -818,11 +818,109 @@ where $c_{\{i,j\}} = c_i \cap c_j \in \Hnm^0(C;\mathbb{Z})$ in the last expressi
 
 \subsection{Pushforward}
 
+To determine the pushforward, we apply the projection formula
+$$
+f_* \alpha \cap \beta = f_*(\alpha \cap f^* \beta).
+$$
+Notably, this pushforward yields an isomorphism on the top cohomology:
+\begin{equation*}
+\begin{aligned}
+  &\iota_{C, *}: &\Hnm^2(C;\mathbb{Z})& \longrightarrow \Hnm^{2g}(A;\mathbb{Z}) \qquad& e & \longmapsto c_{\{1,\ldots, 2g\}}\\ 
+  &a^{(m)}_{*}:& \Hnm^{4g-4}(C^{2g-2};\mathbb{Z})& \longrightarrow \Hnm^{2g}(A;\mathbb{Z}) \qquad& e \otimes \cdots \otimes e & \longmapsto c_{\{1,\ldots, 2g\}}\\ 
+\end{aligned}
+\end{equation*}
+Let us proceed with this method, first on the Abel--Jacobi map $\iota_C$, and then on $a^{(m)}$.
+
+\begin{ex}[Pushforward of $\iota_C$]
+Let $\{c_I^*\} \subset \Hnm^* (A;\mathbb{Z})$ denote the dual basis of $\{c_I\}$ with respect to the inner product induced by the cup product. Specifically, this basis satisfies 
+$$c_I^* \cap c_J = \delta_{I,J} \cdot c_{\{1,\ldots, 2g\}}.$$
+
+For $i, j \in \{ 1,\ldots,2g \}$, we have 
+$$
+\iota_{C, *}(c_i) \cap c_j = \iota_{C, *}(c_i \cap c_j) = 
+\begin{cases}
+c_{\{1,\ldots, 2g\}}, & i \text{ odd }, j=i+1\\
+-c_{\{1,\ldots, 2g\}}, & i \text{ even }, j=i-1\\
+0, & \text{otherwise}
+\end{cases}
+$$
+which implies that
+$$
+\iota_{C, *}(c_i)  = 
+\begin{cases}
+c_{i+1}^*, & i \text{ odd }\\
+-c_{i-1}^*, & i \text{ even }
+\end{cases}
+$$
+
+For $i < j$, we have 
+$$
+\iota_{C, *}(1) \cap c_{\{i,j\}} = \iota_{C, *}(c_i \cap c_j) = 
+\begin{cases}
+c_{\{1,\ldots, 2g\}}, & i \text{ odd }, j=i+1\\
+0, & \text{otherwise}
+\end{cases}
+$$
+which implies that
+$$
+\iota_{C, *}(1)  = 
+\sum_{l=1}^{g} c_{\{2l-1,2l\}}^*.
+$$
+
+In summary, the pushforward can now be written in terms of the elements $a_i$ and $b_i$:
+\begin{equation*}
+\left\{
+\begin{aligned}
+ \iota_{C, *}(e)\; =\;&  1^* \\ 
+  \iota_{C, *}(a_i) =\;&  b_i^* \\ 
+   \iota_{C, *}(b_i) =\;&  -a_i^* \\ 
+    \iota_{C, *}(1)\; =\;&  \textstyle\sum_i (a_i \cap b_i)^* 
+\end{aligned}
+\right.
+\end{equation*}
+
+\end{ex}
+
+Using a similar approach, we can explicitly express the pushforward of the map $a^{(m)}$ and qualitatively analyze its properties, as discussed in the following proposition:
+\begin{proposition}
+For any cohomology class $\alpha \in \sum_{i=1}^{k} \Hnm^{d_i} (C;\mathbb{Z}) \subset \Hnm^{|d|} (C^k;\mathbb{Z})$, $d_i \in \{0,1,2\}$, there exists a unique class $[Z_{\alpha}] \in \Hnm^{2g-2k+|d|}(A;\mathbb{Z})$ such that 
+$$
+a^{(m)}_* \alpha = \left( \prod_{i=1}^{k}  m_i^{2-d_i}  \right) \cdot [Z_{\alpha}].
+$$
+Moreover, $[Z_{\sigma(\alpha)}]=[Z_{\alpha}]$ for any permutation $\sigma \in S_k$.
+\end{proposition}
+
+\begin{proof}
+For any $\beta \in  \Hnm^{2k-|d|} (A;\mathbb{Z})$, there exists $e_{\beta} \in \mathbb{Z}$ such that 
+\begin{equation*}
+\begin{aligned}
+  \;& \left(a^{(m)}_* \alpha \right) \cap \beta = a^{(m)}_* \left( a^{(m),*} \alpha \cap \beta \right) = \left( \prod_{i=1}^{k} m_i^{2-d_i}\right) e_{\beta}\; c_{\{1,\ldots,2g\}} \\ 
+  \Rightarrow\;&  a^{(m)}_* \alpha =  \left( \prod_{i=1}^{k} m_i^{2-d_i}\right) \left( \sum_{\beta\text{:basis}} e_{\beta} \beta^* \right).\\ 
+\end{aligned}
+\end{equation*}
+Moreover,
+\begin{equation*}
+\begin{aligned}
+  \;& \left(a^{(m)}_* \sigma(\alpha) \right) \cap \beta = a^{(m)}_* \left( a^{(m),*} \sigma(\alpha) \cap \beta \right) = \left( \prod_{i=1}^{k} m_{\sigma(i)}^{2-d_i}\right) e_{\beta}\; c_{\{1,\ldots,2g\}} \\ 
+  \Rightarrow\;&  a^{(m)}_* \sigma(\alpha) =  \left( \prod_{i=1}^{k} m_{\sigma(i)}^{2-d_i}\right) \left( \sum_{\beta\text{:basis}} e_{\beta} \beta^* \right).\\ 
+\end{aligned}
+\end{equation*}
+\end{proof}
+
+For a polynomial $f$, the exponent refers to the largest degree of any one variable in $f$. For instance, the polynomial $\prod_{i=1}^{k} m_i^{2-d_i}$ has exponent $\leqslant 2$,
+
+\begin{corollary}
+For any cohomology class $\alpha \in \Hnm^{d} (C^k;\mathbb{Z})^{S_k}$, we can associate a homogeneous symmetric polynomial $f_I^{\alpha} \in \mathbb{Z}[m_1, \ldots, m_k]^{S_k}$ of degree $2k - d$ and exponent at most 2 to each subset $I \subseteq \{1, 2, \ldots, 2g\}$ of cardinality $2k - d$, such that 
+$$a^{(m)}_*\alpha =\sum_{\substack{I\subseteq \{1,\ldots,2g\} \\ |I|=2k-d}} f_I^{\alpha}(m_1,\ldots,m_k) \cdot c_I^*.$$
+\end{corollary}
+
 \section{Second proof by symmetric functions}\label{sec: sym_fct}
 
 Ideally, if we could express $[a^{-1}(K)] \in \Hnm^{2g-2} (C^{2g-2};\mathbb{Z})$ as a linear combination of the basis elements $c_{i_1} \otimes \cdots \otimes c_{i_{2g-2}}$, we could then compute it directly to obtain the answer. As of now, however, this formulation is unknown.
 
 Fortunately, there are several symmetries that simplify calculations. For instance, the subset $a^{-1}(K) \subset C^{2g-2}$ is preserved under the action of $S_{2g-2}$.
+
+
  
 %\nocite{Eberhardt2022Koszul}	% cite articles which are not cited in the document yet
 

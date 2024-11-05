@@ -5,6 +5,6 @@
 \contentsline {section}{\tocsection {}{5}{Description of homology class}}{7}{section.5}% 
 \contentsline {subsection}{\tocsubsection {}{5.1}{Basis}}{7}{subsection.5.1}% 
 \contentsline {subsection}{\tocsubsection {}{5.2}{Pullback}}{8}{subsection.5.2}% 
-\contentsline {subsection}{\tocsubsection {}{5.3}{Pushforward}}{8}{subsection.5.3}% 
-\contentsline {section}{\tocsection {}{6}{Second proof by symmetric functions}}{9}{section.6}% 
-\contentsline {section}{\tocsection {}{}{References}}{9}{section*.2}% 
+\contentsline {subsection}{\tocsubsection {}{5.3}{Pushforward}}{9}{subsection.5.3}% 
+\contentsline {section}{\tocsection {}{6}{Second proof by symmetric functions}}{10}{section.6}% 
+\contentsline {section}{\tocsection {}{}{References}}{10}{section*.2}% 
