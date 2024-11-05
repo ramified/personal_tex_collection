@@ -1,3 +1,43 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{1}
+
+\bibitem{BL04}
+Christina Birkenhake and Herbert Lange.
+\newblock {\em Complex abelian varieties}, volume 302 of {\em Grundlehren Math.
+  Wiss.}
+\newblock Berlin: Springer, 2nd augmented ed. edition, 2004.
+
+\bibitem{Fu97}
+William Fulton.
+\newblock {\em Young tableaux. {With} applications to representation theory and
+  geometry}, volume~35 of {\em Lond. Math. Soc. Stud. Texts}.
+\newblock Cambridge: Cambridge University Press, 1997.
+
+\bibitem{KW15ppav}
+T.~Kr{\"a}mer and R.~Weissauer.
+\newblock On the {Tannaka} group attached to the theta divisor of a generic
+  principally polarized abelian variety.
+\newblock {\em Math. Z.}, 281(3-4):723--745, 2015.
+
+\bibitem{Kr16cubicthreefold}
+Thomas Kr{\"a}mer.
+\newblock Cubic threefolds, {Fano} surfaces and the monodromy of the {Gauss}
+  map.
+\newblock {\em Manuscr. Math.}, 149(3-4):303--314, 2016.
+
+\bibitem{Kr20}
+Thomas Kr{\"a}mer.
+\newblock Summands of theta divisors on {Jacobians}.
+\newblock {\em Compos. Math.}, 156(7):1457--1475, 2020.
+
+\bibitem{KW15small}
+Thomas Kr{\"a}mer and Rainer Weissauer.
+\newblock Semisimple super {Tannakian} categories with a small tensor
+  generator.
+\newblock {\em Pac. J. Math.}, 276(1):229--248, 2015.
+
+\bibitem{KW15vanishing}
+Thomas Kr{\"a}mer and Rainer Weissauer.
+\newblock Vanishing theorems for constructible sheaves on abelian varieties.
+\newblock {\em J. Algebr. Geom.}, 24(3):531--568, 2015.
 
 \end{thebibliography}
