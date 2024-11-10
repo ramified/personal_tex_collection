@@ -462,7 +462,7 @@ $$\Lambda_{Z_{\chi}}= \left\{\rule{0mm}{4.4mm} \left(a^{(m)}(p), \eta \right) \i
 In the hyperelliptic case, the statement differs slightly. Assume that $X^*(T) = \bigoplus_{i=1}^{g-1} \mathbb{Z} \lambda_i$ with $\lambda_{i+g-1} = -\lambda_i$. For $\chi = \sum_{i=1}^{g-1} m_i \lambda_i + \sum_{i=g}^{2g-2} 0 \cdot \lambda_i$, let $(n) = (m_1, \ldots, m_{g-1}) \in \mathbb{Z}^{g-1}$. Then the normal cone $\Lambda_{Z_{\chi}}$ is given by 
 \begin{equation*}
 \begin{aligned}
-  \Lambda_{Z_{\chi}}=\;& \left\{\rule{0mm}{4.4mm} \left(a^{(m)}(p), \eta \right) \in A \times \Hnm^0 (C, \omega_C) \;\middle|\; p \in C^{2g-2}, p_{i+g}= p_i ,\textstyle \sum p_i=\divisor \eta  \right\} \\ 
+  \Lambda_{Z_{\chi}}=\;& \left\{\rule{0mm}{4.4mm} \left(a^{(m)}(p), \eta \right) \in A \times \Hnm^0 (C, \omega_C) \;\middle|\; p \in C^{2g-2}, p_{i+g}= -p_i ,\textstyle \sum p_i=\divisor \eta  \right\} \\ 
   =\;& \left\{\rule{0mm}{4.4mm} \left(a^{(n)}(p), \eta \right) \in A \times \Hnm^0 (C, \omega_C) \;\middle|\; p \in C^{g-1},\textstyle \sum 2 p_i=\divisor \eta  \right\} \\ 
 \end{aligned}
 \end{equation*}
@@ -791,7 +791,7 @@ The pullback is more straightforward to compute than the pushforward, as we only
 &1) && \iota_C: & C\;& \longrightarrow A\qquad & c_i &\longleftmapsto c_i   \\ 
 &2) && +: & A \times A\;& \longrightarrow A\qquad & c_i \otimes 1 + 1 \otimes c_i  &\longleftmapsto c_i   \\ 
 &3) && \Delta: & A\;& \longrightarrow A \times A\qquad & c_i &\longleftmapsto  c_i \otimes 1,\;  1 \otimes c_i   \\ 
-&4) && [m]: & A \times A\;& \longrightarrow A\qquad & mc_i &\longleftmapsto c_i   \\ 
+&4) && [m]: &  A\;& \longrightarrow A\qquad & mc_i &\longleftmapsto c_i   \\ 
 &5) && +: & A^k\;& \longrightarrow A\qquad & \sum_{j=1}^{k} 1 \otimes \cdots \underset{\underset{j\text{-th}}{\uparrow}}{c_i} \cdots \otimes 1 &\longleftmapsto c_i   \\ 
 \end{aligned}
 \end{equation*}
@@ -895,14 +895,14 @@ Moreover, $[Z_{\sigma(\alpha)}]=[Z_{\alpha}]$ for any permutation $\sigma \in S_
 For any $\beta \in  \Hnm^{2k-|d|} (A;\mathbb{Z})$, there exists $e_{\beta} \in \mathbb{Z}$ such that 
 \begin{equation*}
 \begin{aligned}
-  \;& \left(a^{(m)}_* \alpha \right) \cup \beta = a^{(m)}_* \left( a^{(m),*} \alpha \cup \beta \right) = \left( \prod_{i=1}^{k} m_i^{2-d_i}\right) e_{\beta}\; c_{\{1,\ldots,2g\}} \\ 
+  \;& \left(a^{(m)}_* \alpha \right) \cup \beta = a^{(m)}_* \left(  \alpha \cup a^{(m),*} \beta \right) = \left( \prod_{i=1}^{k} m_i^{2-d_i}\right) e_{\beta}\; c_{\{1,\ldots,2g\}} \\ 
   \Rightarrow\;&  a^{(m)}_* \alpha =  \left( \prod_{i=1}^{k} m_i^{2-d_i}\right) \left( \sum_{\beta\text{:basis}} e_{\beta} \beta^* \right).\\ 
 \end{aligned}
 \end{equation*}
 Moreover,
 \begin{equation*}
 \begin{aligned}
-  \;& \left(a^{(m)}_* \sigma(\alpha) \right) \cup \beta = a^{(m)}_* \left( a^{(m),*} \sigma(\alpha) \cup \beta \right) = \left( \prod_{i=1}^{k} m_{\sigma(i)}^{2-d_i}\right) e_{\beta}\; c_{\{1,\ldots,2g\}} \\ 
+  \;& \left(a^{(m)}_* \sigma(\alpha) \right) \cup \beta = a^{(m)}_* \left(  \sigma(\alpha) \cup a^{(m),*} \beta \right) = \left( \prod_{i=1}^{k} m_{\sigma(i)}^{2-d_i}\right) e_{\beta}\; c_{\{1,\ldots,2g\}} \\ 
   \Rightarrow\;&  a^{(m)}_* \sigma(\alpha) =  \left( \prod_{i=1}^{k} m_{\sigma(i)}^{2-d_i}\right) \left( \sum_{\beta\text{:basis}} e_{\beta} \beta^* \right).\\ 
 \end{aligned}
 \end{equation*}
@@ -981,13 +981,13 @@ Applying the same method as for the map $\iota: C^{g-1} \to A$, we obtain that
 
 \begin{equation*}
 \begin{aligned}
-  [\Theta]=\;&  \frac{1}{(g-1)!}\; \iota_* [C^{g-1}]\\ 
+  \,[\Theta]=\;&  \frac{1}{(g-1)!}\; \iota_* [C^{g-1}]\\ 
   =\;&  \frac{1}{(g-1)!} (g-1)!\; \sum_{l=1}^g c_{\{1,\ldots, 2g\} \smallsetminus \{2l-1,2l\}}^*\\
    =\;&  \sum_{l=1}^g c_{2l-1} \cup c_{2l}\\
    =\;&  \sum_{l=1}^g a_{l} \cup b_{l} \qquad\qquad \in \Hnm^2(A;\mathbb{Z}).\\
 \end{aligned}
 \end{equation*}
-However, we still cannot determine $[a^{-1}(K)] \in \Hnm^{2g-2}(C^{2g-2}; \mathbb{Z})$ explicitly. However, we can still not determine $[a^{-1}(K)]$ explicitly. The choice of $a_i$ and $b_i$ might affect how $[a^{-1}(K)]$ is expressed. 
+However, we still cannot determine $[a^{-1}(K)] \in \Hnm^{2g-2}(C^{2g-2}; \mathbb{Z})$ explicitly. The choice of $a_i$ and $b_i$ might affect how $[a^{-1}(K)]$ is expressed. 
 
 This argument cannot be extended to the Chow group, as we lack a satisfactory understanding of the Chow group $\CH^{g-1}(C^{2g-2};\mathbb{Z})$, and the Künneth formula no longer holds in this context.
 \end{remark}
