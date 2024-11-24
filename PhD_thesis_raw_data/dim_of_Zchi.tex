@@ -351,11 +351,11 @@ Examples are abundant but intricate. For reference, we provide a brief list of k
 For any smooth projective variety $X$ over $\mathbb{C}$, let $A := \Alb(X)$ be its Albanese variety. When the Albanese map
 $$\alpha: X \longrightarrow Alb(X)$$
 is a closed embedding, this map defines a perverse sheaf 
-$$\delta:= \alpha_* (\underline{\mathbb{Q}}[\dim X]) \in \overline{\Perv}(A).$$ 
+$$\delta_X:= \alpha_* (\underline{\mathbb{Q}}[\dim X]) \in \overline{\Perv}(A).$$ 
 In several cases, the Tannaka group is already well understood, as follows:
 %https://tex.stackexchange.com/questions/342702/removing-brace-from-the-left-of-dcases
 $$
-\left< \delta, * \right> \cong
+\left< \delta_X, * \right> \cong
 \left\{
 \begin{aligned}
 &\Rep( \SL_{2g-2} (\mathbb{C}) ), && X=C \text{ non-hyperelliptic}\\
@@ -410,8 +410,8 @@ In the next section, we will describe this Lagrangian cycle in detail, leading t
 
 \section{Description of $Z_{\chi}$ via correspondence}
 
-From now on, we focus on the curve case, where $G = \SL_{2g-2}(\mathbb{C})$ or $\Sp_{2g-2}(\mathbb{C})$. In both cases, $\delta$ corresponds to the minuscule representation $L(\omega)$ for some highest weight $\omega \in X^(T)$. The Weyl group $W = S_{2g-2}$ or $S_{g-1} \times (\mathbb{Z}/2\mathbb{Z})^{g-1}$ acts on the character lattice $X^*(T)$. Letting $$[\omega] = \{\lambda_1,\ldots, \lambda_{2g-2} \} \subset X^*(T)$$ 
-denote the orbit of $\omega$, we have 
+From now on, we focus on the curve case, where $G = \SL_{2g-2}(\mathbb{C})$ or $\Sp_{2g-2}(\mathbb{C})$. We fix a maximal torus $T$ of $G$ and denotes by $\varpi \in X^*(T)$ the highest weight of the standard representation. In both cases, $\delta$ corresponds to the minuscule representation $L(\varpi)$. The Weyl group $W = S_{2g-2}$ or $S_{g-1} \times (\mathbb{Z}/2\mathbb{Z})^{g-1}$ acts on the character lattice $X^*(T)$. Letting $$[\varpi] = \{\lambda_1,\ldots, \lambda_{2g-2} \} \subset X^*(T)$$ 
+denote the orbit of $\varpi$, we have 
 $$X^*(T) = \left< \lambda_1,\ldots, \lambda_{2g-2} \right>_{\mathbb{Z}\-mod}.$$
 In other words, any character $\chi \in X^*(T)$ can be written as $\chi = \sum_{i=1}^{2g-2} m_i \lambda_i$ for some tuple $(m) = (m_1, \ldots, m_{2g-2}) \in \mathbb{Z}^{2g-2}$.
 
@@ -437,7 +437,7 @@ Assume the curve is non-hyperelliptic. For $\chi \in X^*(T)$, express $\chi$ as 
 \upshape
 %\setlist{itemsep=-0.4em}
 \renewcommand\labelenumi{(\theenumi)}
-\begin{enumerate}[1)]
+\begin{enumerate}[(1)]
 \item The conormal cone $\Lambda_{Z_{\chi}}$ is given by 
 $$\Lambda_{Z_{\chi}}= \left\{\rule{0mm}{4.4mm} \left(a^{(m)}(p), \eta \right) \in A \times \Hnm^0 (C, \omega_C) \;\middle|\; p \in C^{2g-2},\textstyle \sum p_i=\divisor \eta  \right\}.$$
 \item The subvariety $Z_{\chi}$ is described by $Z_{\chi}=a^{(m)}\left(a^{-1}(K)\right)$.
@@ -446,7 +446,7 @@ $$\Lambda_{Z_{\chi}}= \left\{\rule{0mm}{4.4mm} \left(a^{(m)}(p), \eta \right) \i
 \end{proposition}
 
 \begin{proof}\
-\begin{enumerate}[1)]
+\begin{enumerate}[(1)]
 \item This can first be checked on the fundamental weights and then extended linearly.
 \item Take the projection $\pi_A: A \times \Hnm^0(C, \omega_C) \longrightarrow A$, then
 \begin{equation*}
@@ -483,7 +483,7 @@ We will analyze this question from two perspectives: one that focuses on the loc
 
 The first approach attempts to determine $\dim_{\mathbb{C}} Z_{\chi}$ by analyzing its tangent space.
 
-For a general point $p = (p_1, \ldots , p_{2g-2})$ in $a^{-1}(K)$, $a^{-1}(K)$ is smooth at $p$, and $Z_{\chi}$ is also smooth at $q := a^{(m)}(p)$. This allows us to derive the diagram
+For a general point $p = (p_1, \ldots , p_{2g-2})$ in $a^{-1}(K)$, the fiber $a^{-1}(K)$ is smooth at $p$ and the space $Z_{\chi}$ is smooth at $q := a^{(m)}(p)$. This allows us to derive the diagram
 % https://q.uiver.app/#q=WzAsMTQsWzEsMCwiYV57LTF9KEspIl0sWzYsMCwiVF9wIGFeey0xfShLKSJdLFswLDEsIlxce0tcXH0iXSxbMiwxLCJaX3tcXGNoaX0iXSxbNSwxLCIwIl0sWzcsMSwiVF9xIFpfe1xcY2hpfSJdLFs0LDJdLFszLDJdLFswLDQsIkEiXSxbMSwzLCJDXnsyZy0yfSJdLFsyLDQsIkEiXSxbNSw0LCJUX3tLfUEiXSxbNiwzLCJUX3BDXnsyZy0yfSJdLFs3LDQsIlRfcSBBIl0sWzcsNiwiIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoic3F1aWdnbHkifX19XSxbMiw4XSxbMCw5XSxbMywxMF0sWzQsMTFdLFsxLDEyXSxbNSwxM10sWzEyLDExLCJkX3AgYSIsMix7ImxhYmVsX3Bvc2l0aW9uIjozMH1dLFsxLDVdLFsxMiwxMywiZF9wIGFeeyhtKX0iLDAseyJsYWJlbF9wb3NpdGlvbiI6MzB9XSxbMCwzXSxbMCwyXSxbOSw4LCJhIiwyLHsibGFiZWxfcG9zaXRpb24iOjMwfV0sWzksMTAsImFeeyhtKX0iLDAseyJsYWJlbF9wb3NpdGlvbiI6MzB9XSxbMSw0XV0=
 \[\begin{tikzcd}[column sep=2.25em,row sep=tiny]
 	& {a^{-1}(K)} &&[-5mm]&&[-5mm]& {T_p a^{-1}(K)} \\
@@ -515,12 +515,12 @@ In the remainder of this section, we will analyze $T_q Z_{\chi}$ for general poi
 \begingroup
 
 \setlist{itemindent=5mm}
-%\setlist{itemsep=-0.4em}
+\setlist{itemsep=0em}
 \renewcommand\labelenumi{(\theenumi)}
 \begin{enumerate}[\bfseries{Step} 1.]
-\item Analyze the form of $d_p a^{(m)}$.
+\item Analyze $d_p a^{(m)}$.
 \item Verify that $T_p a^{-1}(K) = \ker d_p a$.
-\item Compute $\dim_{\mathbb{C}} T_q Z_{\chi}$, and transform it to a linear algebra question.
+\item Reduce the computation of $\dim_{\mathbb{C}} T_q Z_{\chi}$ to a linear algebra question, which will be dealt with in the next section.
 \end{enumerate}
 \endgroup
 
@@ -532,52 +532,65 @@ The projectivized differential of the Abel--Jacobi map $\iota_C: C \longrightarr
 $$\varphi_C(p) = \Img (d_p \iota_C) \in \mathbb{P}(T_p A) \cong \mathbb{P}\left(\Hnm^0 (C, \omega_C)^*\right).$$
 \end{lemma}
 
-For convenience, at each point $p = (p_1, \ldots, p_{2g-2}) \in C^{2g-2}$, we select nonzero elements $\alpha_i \in T_{p_i}C \subset \oplus_i T_{p_i} C$. Then, ${\alpha_i}$ forms a basis for $\oplus_i T_{p_i} C$, and $\operatorname{Im} d_p a$ is generated by
+For convenience, at each point $p = (p_1, \ldots, p_{2g-2}) \in C^{2g-2}$, we select nonzero elements $\alpha_i \in T_{p_i}C \subset \oplus_i T_{p_i} C$. Then, $\{\alpha_i\}_{i=1}^{2g-2}$ forms a basis for $\oplus_i T_{p_i} C$, and $\operatorname{Im} d_p a$ is generated by
 $$\beta_i:= d_p \iota_C (\alpha_i) \in \Hnm^0(C, \omega_C)^*.$$
 By Lemma \ref{lemma:diff_of_AJ}, $[\beta_i] = \varphi_C(p_i)$.
 
 \begin{lemma}\label{lemma:diff_of_am}
 For any tuple $(m) \in \mathbb{Z}^{2g-2}$, the differential of the map $a^{(m)}: C^{2g-2} \longrightarrow A$ at $p$ is given by
+%\begin{equation*}
+%\begin{aligned}
+% d_p a^{(m)}=\;& \left[\left( m_i d_{p_i} \iota_C \right)_{i=1}^{2g-2} : \bigoplus_i T_{p_i}C \longrightarrow  \Hnm^0(C, \omega_C)^*\right]\\ 
+% =\;& \left[\left( m_i \beta_i \right)_{i=1}^{2g-2} : \bigoplus_i \mathbb{C} \longrightarrow  \Hnm^0(C, \omega_C)^*\right]\\ 
+%\end{aligned}
+%\end{equation*}
 \begin{equation*}
 \begin{aligned}
- d_p a^{(m)}=\;& \left( m_i d_{p_i} \iota_C \right)_{i=1}^{2g-2} : \bigoplus_i T_{p_i}C \longrightarrow  \Hnm^0(C, \omega_C)^*\\ 
- =\;& \left( m_i \beta_i \right)_{i=1}^{2g-2} : \bigoplus_i \mathbb{C} \longrightarrow  \Hnm^0(C, \omega_C)^*\\ 
+ d_p a^{(m)}=\; \left( m_i d_{p_i} \iota_C \right)_{i=1}^{2g-2}  
+ =\; \left( m_i \beta_i \right)_{i=1}^{2g-2} :\qquad T_p C^{2g-2} \longrightarrow  \Hnm^0(C, \omega_C)^*
 \end{aligned}
 \end{equation*}
+under the identification
+$$
+ T_p C^{2g-2} \cong \bigoplus_{i=1}^{2g-2} T_{p_i}C \cong \bigoplus_{i=1}^{2g-2} \mathbb{C}.
+$$
 \end{lemma}
 
 \begin{proof}
-This is done by first checking that $(m)=(0,\ldots,1,\ldots,0)$, and then extending linearly.
+This is done by first checking it for  $(m)=(0,\ldots,1,\ldots,0)$, and then extending linearly.
 \end{proof}
 
-The next lemma integrates Lemma \ref{lemma:diff_of_AJ}, Lemma \ref{lemma:diff_of_am}, and the general position theorem:
-\begin{lemma}\
+
+\begin{corollary}\label{cor:hyperplanemain}\
 \begingroup
 \upshape
 %\setlist{itemsep=-0.4em}
 \renewcommand\labelenumi{(\theenumi)}
-\begin{enumerate}[1)]
-\item For any point $p \in a^{-1}(K)$, the associated differential $\eta \in H^0(C, \omega_C)$ determines a hyperplane $H$ in $H^0(C, \omega_C)^*$, which contains the image of $d_p a$.
-\item For a general point $p \in a^{-1}(K)$, any selection of $g-1$ elements from $\{\beta_1, \ldots, \beta_{2g-2}\}$ is linearly independent and spans the hyperplane $H$.
+\begin{enumerate}[(1)]
+\item For any point $p \in a^{-1}(K)$, the associated differential $\eta \in H^0(C, \omega_C)$ determines a hyperplane $H$ in $H^0(C, \omega_C)^*$, which contains the image of $d_p a$. \label{cor: hyperplane}
+\item For a general point $p \in a^{-1}(K)$, any selection of $g-1$ elements from $\{\beta_1, \ldots, \beta_{2g-2}\}$ is linearly independent and spans the hyperplane $H$.\label{cor: genpos}
 \end{enumerate}
 \endgroup
-\end{lemma}
+\end{corollary}
 
 \begin{proof}\
-\begin{enumerate}[1)]
-\item This is simply a tautology.
-\item This is a consequence of the general position theorem; see [Ar85] for further details.
+\begin{enumerate}[(1)]
+\item This follows from Lemma \ref{lemma:diff_of_AJ} and Lemma \ref{lemma:diff_of_am}.
+\item This is a consequence of the general position theorem; see [Ar85, p109] for further details.
 \end{enumerate}
 \end{proof}
 $\;$\\
 {\bfseries Step 2.} It is easy to check that $T_p a^{-1}(K) \subseteq \ker d_p a$, and the equality is established through dimension counting. Observe that Lemma 3 implies $\operatorname{Im} d_p a = H$ for a generic point $p \in a^{-1}(K)$.
  
 $\;$\\
-{\bfseries Step 3.} Notice that for a generic point $p \in a^{-1}(K)$,
+{\bfseries Step 3.} 
+Recall we have a surjection
+$$d_p a^{(m)}: T_p a^{-1}(K) \longrightarrow T_q Z_{\chi}$$
+for a generic point $p \in a^{-1}(K)$. Therefore,
 \begin{equation*}
 \begin{aligned}
-  \dim_{\mathbb{C}} T_q Z_{\chi}=\;& \dim_{\mathbb{C}} T_p a^{-1}(K) - \dim_{\mathbb{C}} \ker \left( d_p a^{(m)} |_{T_p a^{-1}(K)} \right) \\ 
-  =\;& g-1 - \dim_{\mathbb{C}} \left( \ker  d_p a^{(m)} \cap \ker  d_p a \right) \\ 
+  \dim_{\mathbb{C}} T_q Z_{\chi}=\;& \dim_{\mathbb{C}} T_p a^{-1}(K) - \dim_{\mathbb{C}} \ker \left( d_p a^{(m)} |_{T_p a^{-1}(K)} \right)   \\ 
+  =\;& g-1 - \dim_{\mathbb{C}} \left( \ker  d_p a^{(m)} \cap \ker  d_p a \right) \qquad\qquad \text{ {by \bfseries Step 2}}\\ 
   =\;& g-1 - \dim_{\mathbb{C}} \ker
   \begin{pmatrix}
    d_p a^{\phantom{()}} \\  d_p a^{(m)}
@@ -593,16 +606,19 @@ $$
 \begin{pmatrix}
      d_p a^{\phantom{()}} \\  d_p a^{(m)}
 \end{pmatrix}
-: \mathbb{C}^{2g-2} \longrightarrow H \oplus H \cong \mathbb{C}^{2g-2}
+: \mathbb{C}^{2g-2} \longrightarrow H^0(C, \omega_C)^*  \oplus H^0(C, \omega_C)^*
 $$
+has target $ H \oplus H \cong \mathbb{C}^{2g-2}$ by Corollary \ref{cor:hyperplanemain} \ref{cor: hyperplane}. Explicitly, by Lemma \ref{lemma:diff_of_am}, it
 has the matrix coefficient expression
 \setlength{\arraycolsep}{2pt}
 $$
 \begin{pmatrix}
-     \beta_1 & \cdots & \beta_{2g-2} \\
+     \beta_1 & \cdots & \beta_{2g-2} \\[1mm]
      m_1\beta_1 & \cdots & m_{2g-2}\beta_{2g-2} \\
 \end{pmatrix} \in M^{(2g-2) \times (2g-2)}(\mathbb{C}).
 $$
+Here, $\beta_{1},\ldots,\beta_{2g-2}$ are seen as vectors in $\mathbb{C}^{g-1}$ via a fixed choice of an isomorphism $H \cong \mathbb{C}^{g-1}$.
+
 
 Now it is time to work on some special cases.
 
@@ -611,19 +627,25 @@ Now it is time to work on some special cases.
 \upshape
 %\setlist{itemsep=-0.4em}
 \renewcommand\labelenumi{(\theenumi)}
-\begin{enumerate}[1)]
-\item When $m_1\cdots m_i \neq 0$ and $m_{i+1}=\cdots=m_{2g-2}=0$ for some $i \leqslant g-1$,
+\begin{enumerate}[(1)]
+\item \label{eg: case1} If for some $i \leqslant g-1$ and some $a \in \mathbb{Z}$, each of $m_1, \ldots, m_i$ differs from $a$ and $m_{i+1}=\cdots=m_{2g-2}=a$, then
 \begin{equation*}
 \begin{aligned}
   \rank\begin{pmatrix}
-       \beta_1 & \cdots & \beta_{2g-2} \\
+       \beta_1 & \cdots & \beta_{2g-2} \\[1mm]
        m_1\beta_1 & \cdots & m_{2g-2}\beta_{2g-2} \\
   \end{pmatrix} =\;& 
   \rank\begin{pmatrix}
-       \beta_1 & \cdots & \beta_{i} & \beta_{i+1} & \cdots & \beta_{2g-2}\\
-       m_1\beta_1 & \cdots & m_{i}\beta_{i} & 0 & \cdots & 0 \\
+       \beta_1 & \cdots & \beta_{i} & \beta_{i+1} & \cdots & \beta_{2g-2}\\[2mm]
+       \rule{4mm}{0mm}m_1\beta_1\rule{4mm}{0mm} & \cdots &\rule{4mm}{0mm} m_{i}\beta_{i}\rule{4mm}{0mm} & a\beta_{i+1} & \cdots & a\beta_{2g-2} \\
   \end{pmatrix}
      \\ 
+  =\;& 
+    \rank\begin{pmatrix}
+         \beta_1 & \cdots & \beta_{i} & \beta_{i+1} & \cdots & \beta_{2g-2}\\[2mm]
+         (m_1-a)\beta_1 & \cdots & (m_{i}-a)\beta_{i} & 0 & \cdots & 0 \\
+    \end{pmatrix}
+       \\ 
      =\;& 
        \rank\begin{pmatrix}
              \beta_{i+1} & \cdots & \beta_{2g-2}
@@ -633,36 +655,36 @@ Now it is time to work on some special cases.
         m_1\beta_1 & \cdots & m_{i}\beta_{i} 
    \end{pmatrix}      
           \\ 
-      =\;& g-1+i
+      =\;& g-1+i \hspace{40mm} \text{by Corollary \ref{cor:hyperplanemain} \ref{cor: genpos}}
 \end{aligned}
 \end{equation*}
 As a result, we have $\dim_{\mathbb{C}} T_q Z_{\chi}=i$.
-\item In cases where at least $g-1$ of the $m_i$'s are equal, let $i$ denote the cardinality of the remaining elements, one also gets $\dim_{\mathbb{C}} T_q Z_{\chi}=i$.
+\item In cases where at least $g-1$ of the $m_j$'s are equal, let $i$ be the numbers of the remaining elements, then after relabelling we are in situation \ref{eg: case1}, and hence one also gets $\dim_{\mathbb{C}} T_q Z_{\chi}=i$.
 \end{enumerate}
 \endgroup
 \end{eg}
 
-These examples illustrate only a fraction of the possible cases. In the next section, we will address all other cases and prove that they are all divisors.
+These examples illustrate only a fraction of the possible cases. In the next section, we will address all other cases and prove that they are all divisors. In particular, this shows:
 
-\section{First proof by representation}
+\begin{corollary}
+For a non-hyperelliptic curve, where $\chi = \sum_{i=1}^{2g-2} m_i \lambda_i$ with no $g-1$ of $m_i$ equal to each other, we have $\dim_{\mathbb{C}} Z_{\chi} = g-1$.
+\end{corollary}
 
-In this section, we assume that at most $g-2$ of the $m_i$ values are equal. We also recall that any arbitrary selection of $g-1$ elements from $\{\beta_1, \ldots, \beta_{2g-2}\} \subset H \cong \mathbb{C}^{g-1}$ are linearly independent.
 
-The goal is to establish the following linear algebra result:
+\section{First proof by representation theory}
+
+In this section, we assume that at most $g-2$ of the values $m_i$ are equal. Let $H=\mathbb{C}^{g-1}$ and let $\beta_1, \ldots, \beta_{2g-2} \in H$ be given such that any $g-1$ of them are linearly independent. The goal is to establish the following linear algebra result:
 \begin{theorem}\label{thm:A}
-Let $m_i \in \mathbb{Z}$ and $\beta_i \in \mathbb{C}^{g-1}$ as defined above, and fix these values. Then there exists a permutation $\sigma \in S_{2g-2}$ such that 
+There exists a permutation $\sigma \in S_{2g-2}$ such that 
 $$\det
 \begin{pmatrix}
-     \beta_{\sigma(1)} & \cdots & \beta_{\sigma(2g-2)} \\
+     \beta_{\sigma(1)} & \cdots & \beta_{\sigma(2g-2)} \\[2mm]
      m_1\beta_{\sigma(1)} & \cdots & m_{2g-2}\beta_{\sigma(2g-2)} \\
 \end{pmatrix}
 \neq 0.
 $$
 \end{theorem}
 
-\begin{corollary}
-For a non-hyperelliptic curve, where $\chi = \sum_{i=1}^{2g-2} m_i \lambda_i$ with at most $g-2$ identical $m_i$ values, we have $\dim_{\mathbb{C}} Z_{\chi} = g-1$.
-\end{corollary}
 
 To prove this theorem, several preliminary steps are required.
 
@@ -674,18 +696,18 @@ $$
 as a polynomial in $(g-1) \times (2g-2)$ variables, and let 
 $$V:= \left< f_{\sigma} \right>_{\sigma \in S_{2g-2}}$$
 denote the vector subspace of the polynomial ring generated by $f_{\sigma}$. The symmetric group $S_{2g-2}$ acts naturally on $V$, defined by
-$$\tau f(v_1,\ldots , v_{2g-2}) =  f(v_{\tau(1)},\ldots , v_{\tau(2g-2)}).$$
+$$(\sigma f)(v_1,\ldots , v_{2g-2}) =  f(v_{\sigma(1)},\ldots , v_{\sigma(2g-2)}).$$
 \end{definition}
 
-\begin{lemma}
+\begin{remark}
 The $S_{2g-2}$-representation $V$ is irreducible. In fact, it is exactly the Specht module associated with the Young diagram of shape $(2, 2, \ldots, 2)$, see \cite[\textsection 7.2]{Fu97}.
-\end{lemma}
+\end{remark}
 
 \begin{lemma}
 The polynomial
 $$
 f^{(m)}:= \det \begin{pmatrix}
-     v_1 & \cdots & v_{2g-2} \\
+     v_1 & \cdots & v_{2g-2} \\[2mm]
      m_1v_1 & \cdots & m_{2g-2}v_{2g-2} \\
 \end{pmatrix} \in V
 $$
@@ -693,31 +715,31 @@ is nonzero.
 \end{lemma}
 \begin{proof}
 The multilinearity property of the determinant allows us to show that $f^{(m)} \in V$. For proving that $f^{(m)} \neq 0$, we evaluate $f^{(m)}$ at specially chosen values. Since at most $g - 2$ of the $m_i$ terms are identical, we can always select a permutation $\sigma \in S_{2g-2}$ such that 
-$$\prod_{k=1}^{g-1} \left( m_{\sigma(2l-1)}- m_{\sigma(2l)} \right) \neq 0.$$
- By setting $v_{\sigma(2l - 1)} = v_{\sigma(2l)} = e_k$, it follows that 
+$$\prod_{l=1}^{g-1} \left( m_{\sigma(2l-1)}- m_{\sigma(2l)} \right) \neq 0.$$
+ Let $e_l=(0,\ldots,\underset{\underset{l\text{-th}}{\uparrow}}{1},\ldots,0)^T$, setting $v_{\sigma(2l - 1)} = v_{\sigma(2l)} = e_l$ implies that 
  $$\det\begin{pmatrix}
-      v_1 & \cdots & v_{2g-2} \\
+      v_1 & \cdots & v_{2g-2} \\[2mm]
       m_1v_1 & \cdots & m_{2g-2}v_{2g-2} \\
- \end{pmatrix}\Bigg|_{\substack{v_{\sigma(2l - 1)} = e_k\\ v_{\sigma(2l)} = e_k}}
-  =\pm \prod_{k=1}^{g-1} \left( m_{\sigma(2l-1)}- m_{\sigma(2l)} \right) \neq 0.$$
+ \end{pmatrix}\Bigg|_{\substack{v_{\sigma(2l - 1)} = e_l\\ v_{\sigma(2l)} = e_l}}
+  =\pm \prod_{l=1}^{g-1} \left( m_{\sigma(2l-1)}- m_{\sigma(2l)} \right) \neq 0.$$
 \end{proof}
 
 \begin{proof}[Proof of Theorem \ref{thm:A}]
 We prove it by contradiction. If
 $$\det \begin{pmatrix}
-     \beta_{\sigma(1)} & \cdots & \beta_{\sigma(2g-2)} \\
+     \beta_{\sigma(1)} & \cdots & \beta_{\sigma(2g-2)} \\[2mm]
      m_1\beta_{\sigma(1)} & \cdots & m_{2g-2}\beta_{\sigma(2g-2)} \\
 \end{pmatrix}
-= 0\quad \text{ for any }\sigma \in S_{2g-2},$$
+= 0\quad \text{ for all }\sigma \in S_{2g-2},$$
 then
-$$\sigma(f^{(m)}) (\beta_1,\ldots, \beta_{2g-2})
-= 0\quad \text{ for any }\sigma \in S_{2g-2}.$$
-Since $f^{(m)} \neq 0$ and $V$ is irreducible, $V= \left< \sigma(f^{(m)}) \right>_{\sigma \in S_{2g-2}}$, one gets
+$$\left(\sigma(f^{(m)})\right) (\beta_1,\ldots, \beta_{2g-2})
+= 0\quad \text{ for all }\sigma \in S_{2g-2}.$$
+Since $f^{(m)} \neq 0$ and $V$ is irreducible, we have $V= \left< \sigma(f^{(m)}) \right>_{\sigma \in S_{2g-2}}$, hence
 $$f (\beta_1,\ldots, \beta_{2g-2})
-= 0\quad \text{ for any }f \in S_{2g-2}.$$
+= 0\quad \text{ for all }f \in V.$$
 Taking $f=f_{\Id}$ implies that 
 $$\det(\beta_1,\ldots, \beta_{g-1})\det(\beta_{g},\ldots, \beta_{2g-2})=0.$$ 
-However, this contradicts the fact that any arbitrary selection of $g-1$ elements from $\{\beta_1, \ldots, \beta_{2g-2}\} \subset H \cong \mathbb{C}^{g-1}$ must be linearly independent.
+However, this contradicts the fact that any arbitrary selection of $g-1$ elements from $\{\beta_1, \ldots, \beta_{2g-2}\} \subset H$ must be linearly independent.
 \end{proof}
 
 
@@ -926,7 +948,7 @@ Fortunately, there are several symmetries that simplify calculations. For instan
 \upshape
 %\setlist{itemsep=-0.4em}
 \renewcommand\labelenumi{(\theenumi)}
-\begin{enumerate}[1)]
+\begin{enumerate}[(1)]
 \item for any $\{i,j \} \subset \{1,\ldots , 2g\}$, $i<j$, there exists  a homogeneous symmetric polynomial $f_{ij}^{\alpha} \in \mathbb{Z}[m_1, \ldots, m_{2g-2}]^{S_{2g-2}}$ of degree $2g-2$ and exponent at most $2$, such that 
 \begin{equation}\label{eq: symfct1}
 \begin{aligned}
@@ -964,7 +986,7 @@ This proves Theorem \ref{thm:B}.
 \upshape
 %\setlist{itemsep=-0.4em}
 \renewcommand\labelenumi{(\theenumi)}
-\begin{enumerate}[1)]
+\begin{enumerate}[(1)]
 \item Take $k=2g-2$, $d=2g-2$, $\alpha=[a^{-1}(K)]$ in Corollary \ref{cor: push_sym}.
 \item  Notice that $(m_1+t,\ldots,m_{2g-2}+t)$ and $(m_1,\ldots,m_{2g-2})$ define the same homology class.
 \item The polynomial $f_{ij}$ must be of the form
@@ -997,7 +1019,7 @@ This argument cannot be extended to the Chow group, as we lack a satisfactory un
 \upshape
 %\setlist{itemsep=-0.4em}
 \renewcommand\labelenumi{(\theenumi)}
-\begin{enumerate}[1)]
+\begin{enumerate}[(1)]
 \item How is the homology class of the special fiber generally computed? 
 \item Extend this approach to the $E_6$ case. (We can discuss about this next time)
 \end{enumerate}
