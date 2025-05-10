@@ -1,0 +1,396 @@
+
+\documentclass[reqno, UTF8]{amsart}
+%Typical documenttypes: article/book
+%some examples:
+%\documentclass[reqno,11pt]{book}   %%%for books
+%\documentclass[]{minimal}			%%%for Minimal Working Example
+
+
+%for beamers, you have to change a lot. Especially, remove the package enumitem!!!
+
+
+
+%%%%%%%%%%%%%%%%%%%% setting for fast compiling
+
+%\special{dvipdfmx:config z 0}		% no compression
+
+%\includeonly{chapters/chapter9}		% In practice, use an empty document called "chapter9"	% usually for printing books
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%% here we include packages
+
+%%%basic packages for math articles
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[shortlabels]{enumitem}	% It supersedes both enumerate and mdwlist. The package option shortlabels is included to configure the labels like in enumerate.
+
+%%%packages for special symbols
+\usepackage{pifont}					% Access to PostScript standard Symbol and Dingbats fonts
+\usepackage{wasysym}				% additional characters
+\usepackage{bm}						% bold fonts: \bm{...}
+\usepackage{extarrows}				% may be replaced by tikz-cd
+%\usepackage{unicode-math}			% unicode maths for math fonts, now I don't know how to include it
+%\usepackage{ctex}					% Chinese characters, huge difference.
+
+
+%%%basic packages for fancy electronic documents
+\usepackage[colorlinks]{hyperref}
+\usepackage[table,hyperref]{xcolor} 			% before tikz-cd. 
+%\usepackage[table,hyperref,monochrome]{xcolor}	% disable colored output (black and white)
+
+%%%packages for figures and tables (general setting)
+\usepackage{float}				%Improved interface for floating objects
+\usepackage{caption,subcaption}
+\usepackage{adjustbox}			% for me it is usually used in tables 
+\usepackage{stackengine}		%baseline changes
+
+%%%packages for commutative diagrams
+\usepackage{tikz-cd}
+\usepackage{quiver}			% see https://q.uiver.app/
+
+%%%packages for pictures
+\usepackage[width=0.5,tiewidth=0.7]{strands}
+\usepackage{graphicx}			% Enhanced support for graphics
+
+%%%packages for tables and general settings
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{diagbox}
+\usepackage{longtable}
+
+%%%packages for ToC, LoF and LoT
+
+
+
+
+
+
+
+ %https://tex.stackexchange.com/questions/58852/possible-incompatibility-with-enumitem
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%% here we include theoremstyles
+
+\numberwithin{equation}{section}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+
+\newtheorem{setting}[theorem]{Setting}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{eg}[theorem]{Example}
+\newtheorem{ex}[theorem]{Exercise}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{ques}[theorem]{Question}
+\newtheorem{warning}[theorem]{Warning}
+
+
+
+\newtheorem*{bbox}{Black box}
+\newtheorem*{notation}{Conventions and Notations}
+
+
+\numberwithin{equation}{section}
+
+
+\theoremstyle{remark}
+
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{remarks}{Remarks}
+
+%%% for important theorems
+%\newtheoremstyle{theoremletter}{4mm}{1mm}{\itshape}{ }{\bfseries}{}{ }{}
+%\theoremstyle{theoremletter}
+%\newtheorem{theoremA}{Theorem}
+%\renewcommand{\thetheoremA}{A}
+%\newtheorem{theoremB}{Theorem}
+%\renewcommand{\thetheoremB}{B}
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%% here we declare some symbols
+
+%%%%%%%DeclareMathOperator
+%see here for why newcommand is better for DeclareMathOperator: https://tex.stackexchange.com/questions/67506/newcommand-vs-declaremathoperator
+
+%%%%%basic symbols. Keep them!
+
+%%%symbols for sets and maps
+\DeclareMathOperator{\pt}{\operatorname{pt}}	%points. Other possibilities are \{pt\}, \{*\}, pt, * ...
+\DeclareMathOperator{\Id}{\operatorname{Id}}	%identity in groups.
+\DeclareMathOperator{\Img}{\operatorname{Im}}
+
+\DeclareMathOperator{\Ob}{\operatorname{Ob}}
+\DeclareMathOperator{\Mor}{\operatorname{Mor}}	%difference of Mor and Hom: Hom is usually for abelian categories
+\DeclareMathOperator{\Hom}{\operatorname{Hom}}	\DeclareMathOperator{\End}{\operatorname{End}}
+\DeclareMathOperator{\Aut}{\operatorname{Aut}}
+
+%%%symbols for linear algebras and 
+%%linear algebras
+\DeclareMathOperator{\tr}{\operatorname{tr}}
+\DeclareMathOperator{\diag}{\operatorname{diag}}	%for diagonal matrices
+
+%%abstract algebras
+\DeclareMathOperator{\ord}{\operatorname{ord}}
+\DeclareMathOperator{\gr}{\operatorname{gr}}
+\DeclareMathOperator{\Frac}{\operatorname{Frac}}
+
+%%%symbols for basic geometries
+\DeclareMathOperator{\vol}{\operatorname{vol}}	%volume
+\DeclareMathOperator{\dist}{\operatorname{dist}}
+\DeclareMathOperator{\supp}{\operatorname{supp}}
+
+%%%symbols for category
+%%names of categories
+\DeclareMathOperator{\Mod}{\operatorname{Mod}}
+\DeclareMathOperator{\Vect}{\operatorname{Vect}}
+
+
+%%%symbols for homological algebras
+\DeclareMathOperator{\Tor}{\operatorname{Tor}}
+\DeclareMathOperator{\Ext}{\operatorname{Ext}}
+\DeclareMathOperator{\gldim}{\operatorname{gl.dim}}
+\DeclareMathOperator{\projdim}{\operatorname{proj.dim}}
+\DeclareMathOperator{\injdim}{\operatorname{inj.dim}}
+\DeclareMathOperator{\rad}{\operatorname{rad}}
+
+
+%%%symbols for algebraic groups
+\DeclareMathOperator{\GL}{\operatorname{GL}}
+\DeclareMathOperator{\SL}{\operatorname{SL}}
+
+%%%symbols for typical varieties
+\DeclareMathOperator{\Gr}{\operatorname{Gr}}
+\DeclareMathOperator{\Flag}{\operatorname{Flag}}
+
+%%%symbols for basic algebraic geometry
+\DeclareMathOperator{\Spec}{\operatorname{Spec}}
+\DeclareMathOperator{\Coh}{\operatorname{Coh}}
+\newcommand{\Dcoh}{\mathcal{D}_{\operatorname{Coh}}}%%%This one shows the difference between \DeclareMathOperator and \newcommand
+\DeclareMathOperator{\Pic}{\operatorname{Pic}}
+\DeclareMathOperator{\Jac}{\operatorname{Jac}}
+
+%%%%%advanced symbols. Choose the part you need!
+
+%%%symbols for algebraic representation theory
+\DeclareMathOperator{\ind}{\operatorname{ind}}	%\ind(Q) means the set of  equivalence classes of finite dimensional indecomposable representations
+\DeclareMathOperator{\Res}{\operatorname{Res}}
+\DeclareMathOperator{\Ind}{\operatorname{Ind}}
+\DeclareMathOperator{\cInd}{\operatorname{c-Ind}}
+
+
+\DeclareMathOperator{\Rep}{\operatorname{Rep}}
+\DeclareMathOperator{\rep}{\operatorname{rep}} %usually rep means the category of finite dimensional representations, while Rep means the category of representations.
+\DeclareMathOperator{\Irr}{\operatorname{Irr}}
+\DeclareMathOperator{\irr}{\operatorname{irr}}
+\DeclareMathOperator{\Adm}{\operatorname{\Pi}}
+\DeclareMathOperator{\Char}{\operatorname{Char}}
+\DeclareMathOperator{\WDrep}{\operatorname{WDrep}}
+
+%%%symbols for algebraic topology
+\DeclareMathOperator{\EGG}{\operatorname{E}\!}
+\DeclareMathOperator{\BGG}{\operatorname{B}\!}
+
+\DeclareMathOperator{\chern}{\operatorname{ch}^{*}}
+\DeclareMathOperator{\Td}{\operatorname{Td}}
+\DeclareMathOperator{\AS}{\operatorname{AS}}	%Atiyah--Segal completion theorem 
+
+%%%symbols for Auslander--Reiten theory 
+\DeclareMathOperator{\Modup}{\overline{\operatorname{mod}}}
+\DeclareMathOperator{\Moddown}{\underline{\operatorname{mod}}}
+\DeclareMathOperator{\Homup}{\overline{\operatorname{Hom}}}
+\DeclareMathOperator{\Homdown}{\underline{\operatorname{Hom}}}
+
+
+%%%symbols for operad
+\DeclareMathOperator{\Com}{\operatorname{\mathcal{C}om}}
+\DeclareMathOperator{\Ass}{\operatorname{\mathcal{A}ss}}
+\DeclareMathOperator{\Lie}{\operatorname{\mathcal{L}ie}}
+\DeclareMathOperator{\calEnd}{\operatorname{\mathcal{E}nd}} %cal=\mathcal
+
+
+%%%%%personal symbols. Use at your own risk!
+
+%%%symbols only for master thesis
+\DeclareMathOperator{\ptt}{\operatorname{par}}	%the partition map
+\DeclareMathOperator{\str}{\operatorname{str}}	%strict case
+\DeclareMathOperator{\RRep}{\widetilde{\operatorname{Rep}}}
+\DeclareMathOperator{\Rpt}{\operatorname{R}}
+\DeclareMathOperator{\Rptc}{\operatorname{\mathcal{R}}}
+\DeclareMathOperator{\Spt}{\operatorname{S}}
+\DeclareMathOperator{\Sptc}{\operatorname{\mathcal{S}}}
+\DeclareMathOperator{\Kcurl}{\operatorname{\mathcal{K}}}
+\DeclareMathOperator{\Hcurl}{\operatorname{\mathcal{H}}}
+\DeclareMathOperator{\eu}{\operatorname{eu}}
+\DeclareMathOperator{\Eu}{\operatorname{Eu}}
+\DeclareMathOperator{\dimv}{\operatorname{\underline{\mathbf{dim}}}}
+\DeclareMathOperator{\St}{\mathcal{Z}}
+
+%%%%%symbols which haven't been classified. Add your own math operators here!
+
+\DeclareMathOperator{\Perv}{\operatorname{Perv}}
+\DeclareMathOperator{\Alb}{\operatorname{Alb}}
+\DeclareMathOperator{\Sp}{\operatorname{Sp}}
+\DeclareMathOperator{\SO}{\operatorname{SO}}
+\DeclareMathOperator{\E6}{\operatorname{E}_6}
+\DeclareMathOperator{\cc}{\operatorname{cc}}
+\DeclareMathOperator{\Hnm}{\operatorname{H}}
+\DeclareMathOperator{\-mod}{\!\operatorname{-mod}}
+\DeclareMathOperator{\divisor}{\operatorname{div}}
+\DeclareMathOperator{\rank}{\operatorname{rank}}
+\DeclareMathOperator{\CH}{\operatorname{CH}}
+\DeclareMathOperator{\sign}{\operatorname{sign}}
+\DeclareMathOperator{\longleftmapsto}{\rotatebox[origin=c]{180}{$\;\longmapsto\;$}}
+\DeclareMathOperator{\Zsm}{Z^{\operatorname{sm}}}
+
+
+
+
+
+%%%%%%%newcommand
+
+%%%basic symbols
+\newcommand{\norm}[1]{\Vert{#1}\Vert}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%% here we make some blocks for special features. 
+
+%%%% todo notes %%%%
+\usepackage[colorinlistoftodos,textsize=footnotesize]{todonotes}
+\setlength{\marginparwidth}{2.5cm}
+\newcommand{\leftnote}[1]{\reversemarginpar\marginnote{\footnotesize #1}}
+\newcommand{\rightnote}[1]{\normalmarginpar\marginnote{\footnotesize #1}\reversemarginpar}
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%% here we make some global settings. Understand everything here before you make a document!
+
+\usepackage[a4paper,left=3cm,right=3cm,bottom=4cm]{geometry}
+\usepackage{indentfirst}	% Indent first paragraph after section header
+
+\setcounter{tocdepth}{1}
+
+
+%https://latexref.xyz/_005cparindent-_0026-_005cparskip.html
+\setlength{\parindent}{15pt}	
+\setlength{\parskip}{0pt plus1pt}
+
+%\setlength\intextsep{0cm}
+%\setlength\textfloatsep{0cm}
+\def\arraystretch{1}
+%\setcounter{secnumdepth}{3}
+
+\allowdisplaybreaks
+
+
+\begin{document}
+
+% The beginning depends on the documentclass. Rewrite this part if you use different documentclass!
+\date{\today}
+
+\title
+{Subvarieties in complex abelian varieties 
+}
+\author{Xiaoxiang Zhou}
+\address{Institut für Mathematik\\
+Humboldt-Universität zu Berlin\\
+Berlin, 12489\\ Germany\\} 
+\email{email:xiaoxiang.zhou@hu-berlin.de}
+
+
+\maketitle
+\tableofcontents
+
+This document is intended to collect the questions and doubts that arose during my research this year. For many of these problems, I have consulted my fellow students, my supervisor, and various other people I’ve met. However, most of them remain in the realm of folklore—problems that are likely known but for which I could not find a reference. On the other hand, some of the questions may not appear particularly interesting unless their underlying motivations are clearly explained. Therefore, I’ll try to provide relevant background and outline some initial, perhaps naive, ideas while listing the problems along the way. Any responses, answers, or references are most welcome and will be added to keep this document updated.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Basic setting}
+For simplicity, we work over the base field $\kappa = \mathbb{C}$, and by a variety we mean a reduced, separated scheme of finite type over $\mathbb{C}$. Let $A/\mathbb{C}$ be an abelian variety of dimension $n$, and let $Z \subseteq A$ be an irreducible closed subvariety of dimension $r$. We denote by $\iota_Z: Z \hookrightarrow A$ the inclusion morphism.\footnote{I'm not sure whether we should consider the more general cases in the future—such as working over a field of characteristic $p$, letting $A$ be a semiabelian variety or a complex torus, or allowing $\iota$ to be a covering onto its image. For now, I will omit these possibilities from this document.}
+
+\subsection{Gauss map}
+The goal of my research is to understand the geometry of $Z$, and the main tool for the subvariety geometry is the Gauss map. The Gauss map describe the tangent space information at each point: 
+$$\phi_Z: \Zsm \longrightarrow \Gr(r,T_0 A) \qquad p \longmapsto T_pZ \;\;\subseteq T_pA \cong T_0 A$$
+Any map to the Grassmannian $\Gr(r, n)$ is induced by a rank $r$ vector bundle together with $n$ global sections. In this case, the map $\phi_Z$ is induced by the tangent bundle $\mathcal{T}_{\Zsm}$ and the sections
+$$H^0(A,\mathcal{T}_{\Zsm}) \otimes_{\mathbb{C}} \mathcal{O}_{\Zsm} \twoheadrightarrow \mathcal{T}_{\Zsm}.$$
+
+\subsection{Conormal variety}
+This concept may already be familiar to many readers, so we briefly recall the definition. On the smooth locus, the normal and conormal bundles behave well as vector bundles:\footnote{This is more symmetric when writing them as short exact sequences:
+% https://q.uiver.app/#q=WzAsMTAsWzMsMCwiXFxtYXRoY2Fse059X3tcXFpzbS9BfSJdLFsxLDAsIlxcbWF0aGNhbHtUfV97XFxac219Il0sWzIsMCwiXFxtYXRoY2Fse1R9X0F8X3tcXFpzbX0iXSxbMSwxLCJcXExhbWJkYV97XFxac219ICJdLFsyLDEsIlxcT21lZ2FfQXxfe1xcWnNtfSAiXSxbMywxLCJcXE9tZWdhX3tcXFpzbX0gIl0sWzQsMCwiMCJdLFs0LDEsIjAiXSxbMCwwLCIwIl0sWzAsMSwiMCJdLFsxLDJdLFsyLDBdLFszLDRdLFs0LDVdLFswLDZdLFs1LDddLFs4LDFdLFs5LDNdXQ==
+\[\begin{tikzcd}[ampersand replacement=\&,column sep=2.25em,row sep=tiny]
+	0 \& {\mathcal{T}_{\Zsm}} \& {\mathcal{T}_A|_{\Zsm}} \& {\mathcal{N}_{\Zsm/A}} \& 0 \\
+	0 \& {\Lambda_{\Zsm} } \& {\Omega_A|_{\Zsm} } \& {\Omega_{\Zsm} } \& 0
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-3, to=1-4]
+	\arrow[from=1-4, to=1-5]
+	\arrow[from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow[from=2-3, to=2-4]
+	\arrow[from=2-4, to=2-5]
+\end{tikzcd}\]
+}
+$$\mathcal{N}_{\Zsm/A} := \mathcal{T}_A|_{\Zsm} \;/\; \mathcal{T}_{\Zsm} \qquad \Lambda_{\Zsm}:= \mathcal{N}_{\Zsm/A}^* = \ker \left( \Omega_A|_{\Zsm} \rightarrow \rule{0mm}{3.4mm} \Omega_{\Zsm} \right).$$
+The conormal variety $\Omega_{Z}$ is just the closure of $\Lambda_{\Zsm}$ viewed as a subvariety in $T^*A$:
+$$\Lambda_{Z}:=\;\; \overline{\Lambda_{\Zsm}} \;\; \subset T^*A \;\cong\; A \times T^{*}_{0}A$$
+this is conical Lagrangian cycle in $T^*A$.
+
+Moreover, the projectivized conormal variety
+$$\mathbb{P}\Lambda_{Z}:=\;\; \overline{\mathbb{P}\Lambda_{\Zsm}} \;\; \subset \mathbb{P}T^*A \;\cong\; A \times \mathbb{P}T^{*}_{0}A$$
+is a Legendrian cycle in the contact variety $A \times \mathbb{P}T^{*}_{0}A$. $\mathbb{P}\Lambda_{\Zsm}$ is a $\mathbb{P}^{r-1}$-bundle, and the map 
+$$\gamma_Z: \mathbb{P}\Lambda_{Z} \subset A \times \mathbb{P}T^{*}_{0}A \longrightarrow \mathbb{P}T^{*}_{0}A$$
+is generically finite (i.e., clean) when $Z$ is (an integral variety) of general type, see \cite[Theorem 2.8 (1)]{JKLM22}.
+\section{Searching for examples}
+
+\section{Families of subvarieties}
+
+\section{Tannakian formalism}
+
+
+For simplicity, we work over the base field $\kappa = \mathbb{C}$. Let $A$ denote a fixed complex abelian variety, and let $\Perv(A)$ denote the category of perverse sheaves on $A$ with coefficients in $\mathbb{Q}$. For any algebraic group $G$, we denote by $\Rep(G)$ the category of algebraic representations of $G$.
+
+Following the approach of \cite{KW15vanishing}, we work in the quotient category $\overline{\Perv}(A) = \Perv(A) / N(A)$, where $N(A) \subset \Perv(A)$ is the Serre subcategory of negligible complexes. A complex $\mathcal{F}$ is defined to be negligible if $\chi(A, \mathcal{F}) = 0$. This quotient category admits a natural convolution structure, and every finitely generated tensor subcategory of it is Tannakian, with a reductive Tannaka group $G$ (see \cite[Thm 7.1 \& Cor 9.2]{KW15vanishing}). In particular, for any perverse sheaf $\delta \in \overline{\Perv}(A)$, the full subcategory generated by $\delta$ is categorically equivalent to the representation category of an algebraic group $G$:
+$$\left< \delta, * \right> \cong \Rep(G).$$
+
+
+%\nocite{Eberhardt2022Koszul}	% cite articles which are not cited in the document yet
+
+% Remember to protect the uppercase of people's name and LaTeX symbols
+
+\bibliographystyle{plain}
+\bibliography{reference}
+\end{document}
