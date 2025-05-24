@@ -18,10 +18,35 @@
 \newblock 科学出版社, 2020.
 \newblock url: \url{https://wwli.asia/downloads/books/Modulform.pdf}.
 
+\bibitem{Ar85I}
+E.~Arbarello, M.~Cornalba, P.~A. Griffiths, and J.~Harris.
+\newblock {\em Geometry of algebraic curves. {Volume} {I}}, volume 267 of {\em
+  Grundlehren Math. Wiss.}
+\newblock Springer, Cham, 1985.
+
+\bibitem{Ar85II}
+Enrico Arbarello, Maurizio Cornalba, and Phillip~A. Griffiths.
+\newblock {\em Geometry of algebraic curves. {Volume} {II}. {With} a
+  contribution by {Joseph} {Daniel} {Harris}}, volume 268 of {\em Grundlehren
+  Math. Wiss.}
+\newblock Berlin: Springer, 2011.
+
 \bibitem{beauville1996complex}
 Arnaud Beauville and Beauville Arnaud.
 \newblock {\em Complex algebraic surfaces}.
 \newblock Number~34. Cambridge University Press, 1996.
+
+\bibitem{BL04}
+Christina Birkenhake and Herbert Lange.
+\newblock {\em Complex abelian varieties}, volume 302 of {\em Grundlehren Math.
+  Wiss.}
+\newblock Berlin: Springer, 2nd augmented ed. edition, 2004.
+
+\bibitem{Deb99}
+Olivier Debarre.
+\newblock {\em Complex tori and {Abelian} varieties. {Transl}. from the
+  {French} by {Philippe} {Mazaud}}, volume~11 of {\em SMF/AMS Texts Monogr.}
+\newblock Providence, RI: American Mathematical Society (AMS), 2005.
 
 \bibitem{freedman1982topology}
 Michael~Hartley Freedman et~al.
@@ -34,6 +59,28 @@ Michael~Hartley Freedman et~al.
 Robin Hartshorne.
 \newblock Algebraic geometry.
 \newblock volume~52. Springer Science \& Business Media, 2013.
+
+\bibitem{HuyFMtrans}
+D.~Huybrechts.
+\newblock {\em Fourier-{Mukai} transforms in algebraic geometry}.
+\newblock Oxford Math. Monogr. Oxford: Clarendon Press, 2006.
+
+\bibitem{HuyK3}
+Daniel Huybrechts.
+\newblock {\em Lectures on {{\(K\)}}3 surfaces}, volume 158 of {\em Camb. Stud.
+  Adv. Math.}
+\newblock Cambridge: Cambridge University Press, 2016.
+
+\bibitem{Huy23}
+Daniel Huybrechts.
+\newblock {\em The geometry of cubic hypersurfaces}, volume 206 of {\em Camb.
+  Stud. Adv. Math.}
+\newblock Cambridge: Cambridge University Press, 2023.
+
+\bibitem{Huymodulisheaves}
+Daniel Huybrechts and Manfred Lehn.
+\newblock {\em The geometry of moduli spaces of sheaves}.
+\newblock Cambridge: Cambridge University Press, 2nd ed. edition, 2010.
 
 \bibitem{kodaira1964structure}
 Kunihiko Kodaira.
@@ -59,6 +106,12 @@ Kunihiko Kodaira.
 J{\'a}nos Koll{\'a}r.
 \newblock {\em Lectures on resolution of singularities (AM-166)}.
 \newblock Princeton University Press, 2009.
+
+\bibitem{LR22}
+Herbert Lange and Rub{\'{\i}}~E. Rodr{\'{\i}}guez.
+\newblock {\em Decomposition of {Jacobians} by {Prym} varieties}, volume 2310
+  of {\em Lect. Notes Math.}
+\newblock Cham: Springer, 2022.
 
 \bibitem{milnor1962unique}
 John Milnor.
