@@ -31,10 +31,17 @@ Enrico Arbarello, Maurizio Cornalba, and Phillip~A. Griffiths.
   Math. Wiss.}
 \newblock Berlin: Springer, 2011.
 
+\bibitem{Barth04}
+W.~Barth, C.~Peters, and A.~Van~de Ven.
+\newblock {\em Compact complex surfaces}, volume~4 of {\em Ergeb. Math.
+  Grenzgeb., 3. Folge}.
+\newblock Springer, Cham, 1984.
+
 \bibitem{beauville1996complex}
-Arnaud Beauville and Beauville Arnaud.
-\newblock {\em Complex algebraic surfaces}.
-\newblock Number~34. Cambridge University Press, 1996.
+Arnaud Beauville.
+\newblock {\em Complex algebraic surfaces.}, volume~34 of {\em Lond. Math. Soc.
+  Stud. Texts}.
+\newblock Cambridge: Cambridge Univ. Press, 2nd ed. edition, 1996.
 
 \bibitem{BL04}
 Christina Birkenhake and Herbert Lange.
@@ -54,6 +61,11 @@ Michael~Hartley Freedman et~al.
 \newblock {\em J. Differential Geom}, 17(3):357--453, 1982.
 \newblock url:
   \url{https://maths.dur.ac.uk/users/mark.a.powell/1982_The\%20topology\%20of\%20four-dimensional\%20manifolds.pdf}.
+
+\bibitem{GH94}
+Phillip Griffiths and Joseph Harris.
+\newblock {\em Principles of algebraic geometry.}
+\newblock New York, NY: John Wiley \& Sons Ltd., 2nd ed. edition, 1994.
 
 \bibitem{hartshorne2013algebraic}
 Robin Hartshorne.
@@ -113,6 +125,20 @@ Herbert Lange and Rub{\'{\i}}~E. Rodr{\'{\i}}guez.
   of {\em Lect. Notes Math.}
 \newblock Cham: Springer, 2022.
 
+\bibitem{Laz04I}
+Robert Lazarsfeld.
+\newblock {\em Positivity in algebraic geometry. {I}. {Classical} setting: line
+  bundles and linear series}, volume~48 of {\em Ergeb. Math. Grenzgeb., 3.
+  Folge}.
+\newblock Berlin: Springer, 2004.
+
+\bibitem{Laz04II}
+Robert Lazarsfeld.
+\newblock {\em Positivity in algebraic geometry. {II}. {Positivity} for vector
+  bundles, and multiplier ideals.}, volume~49 of {\em Ergeb. Math. Grenzgeb.,
+  3. Folge}.
+\newblock Berlin: Springer, 2004.
+
 \bibitem{milnor1962unique}
 John Milnor.
 \newblock A unique decomposition theorem for 3-manifolds.
@@ -164,6 +190,20 @@ Ravi Vakil.
 \newblock {\em preprint}, 2017.
 \newblock url:
   \url{http://math.stanford.edu/~vakil/216blog/FOAGnov1817public.pdf}.
+
+\bibitem{Vo02I}
+Claire Voisin.
+\newblock {\em Hodge theory and complex algebraic geometry. {I}. {Translated}
+  from the {French} by {Leila} {Schneps}}, volume~76 of {\em Camb. Stud. Adv.
+  Math.}
+\newblock Cambridge: Cambridge University Press, 2002.
+
+\bibitem{Vo02II}
+Claire Voisin.
+\newblock {\em Hodge theory and complex algebraic geometry. {II}. {Transl}.
+  from the {French} by {Leila} {Schneps}}, volume~77 of {\em Camb. Stud. Adv.
+  Math.}
+\newblock Cambridge: Cambridge University Press, 2007.
 
 \bibitem{john2014geometrization}
 John Zhang.
