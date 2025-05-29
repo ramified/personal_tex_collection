@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  10 MAY 2025 16:23
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  29 MAY 2025 22:14
 entering extended mode
 **./subvarieties_in_abelian_variety.tex
 (subvarieties_in_abelian_variety.tex
@@ -1497,8 +1497,8 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LT@p@ftn=\toks49
 )
 \c@theorem=\count332
-LaTeX Info: Redefining \E6 on input line 261.
-LaTeX Info: Redefining \-mod on input line 264.
+LaTeX Info: Redefining \E6 on input line 262.
+LaTeX Info: Redefining \-mod on input line 265.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/todonotes\
 todonotes.sty"
@@ -1552,37 +1552,37 @@ LaTeX Warning: Unused global option(s):
 (subvarieties_in_abelian_variety.aux)
 \openout1 = `subvarieties_in_abelian_variety.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 321.
-LaTeX Font Info:    ... okay on input line 321.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 321.
-LaTeX Font Info:    ... okay on input line 321.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 321.
-LaTeX Font Info:    ... okay on input line 321.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 321.
-LaTeX Font Info:    ... okay on input line 321.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 321.
-LaTeX Font Info:    ... okay on input line 321.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 321.
-LaTeX Font Info:    ... okay on input line 321.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 321.
-LaTeX Font Info:    ... okay on input line 321.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 321.
-LaTeX Font Info:    ... okay on input line 321.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 321.
-LaTeX Font Info:    ... okay on input line 321.
-LaTeX Font Info:    Try loading font information for U+msa on input line 321.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 322.
+LaTeX Font Info:    ... okay on input line 322.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 322.
+LaTeX Font Info:    ... okay on input line 322.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 322.
+LaTeX Font Info:    ... okay on input line 322.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 322.
+LaTeX Font Info:    ... okay on input line 322.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 322.
+LaTeX Font Info:    ... okay on input line 322.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 322.
+LaTeX Font Info:    ... okay on input line 322.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 322.
+LaTeX Font Info:    ... okay on input line 322.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 322.
+LaTeX Font Info:    ... okay on input line 322.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 322.
+LaTeX Font Info:    ... okay on input line 322.
+LaTeX Font Info:    Try loading font information for U+msa on input line 322.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 msa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 321.
+LaTeX Font Info:    Try loading font information for U+msb on input line 322.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 msb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 321.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 322.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/wasysym\uw
 asy.fd"
@@ -1590,18 +1590,18 @@ File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <8> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 321.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 322.
 
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <6> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 321.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 322.
 
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <5> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 321.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 322.
 
 \AtBeginShipoutBox=\box102
-Package hyperref Info: Link coloring ON on input line 321.
+Package hyperref Info: Link coloring ON on input line 322.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\n
 ameref.sty"
@@ -1617,9 +1617,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count337
 )
-LaTeX Info: Redefining \ref on input line 321.
-LaTeX Info: Redefining \pageref on input line 321.
-LaTeX Info: Redefining \nameref on input line 321.
+LaTeX Info: Redefining \ref on input line 322.
+LaTeX Info: Redefining \pageref on input line 322.
+LaTeX Info: Redefining \nameref on input line 322.
  (subvarieties_in_abelian_variety.out)
 (subvarieties_in_abelian_variety.out)
 \@outlinefile=\write4
@@ -1679,35 +1679,27 @@ File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 )
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <7> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 343.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 344.
 
-[1] (subvarieties_in_abelian_variety.bbl) [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 396.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 396.
+[1] [2] (subvarieties_in_abelian_variety.bbl) [3]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 447.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 447.
 
 (subvarieties_in_abelian_variety.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 396.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 396.
-
-
-Package rerunfilecheck Warning: File `subvarieties_in_abelian_variety.out' has 
-changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `subvarieties_in_abelian_variety.out
-':
-(rerunfilecheck)             Before: A8661BFC1A5B93D73240674CFCDEEC2A
-(rerunfilecheck)             After:  30BF309CFA19606019DDA469FE961FA7.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 396.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 447.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 447.
+Package rerunfilecheck Info: File `subvarieties_in_abelian_variety.out' has not
+ changed.
+(rerunfilecheck)             Checksum: 30BF309CFA19606019DDA469FE961FA7.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 447.
  ) 
 Here is how much of TeX's memory you used:
- 36874 strings out of 427748
- 684873 string characters out of 3150981
- 734928 words of memory out of 3000000
- 40214 multiletter control sequences out of 15000+200000
- 544173 words of font info for 76 fonts, out of 3000000 for 9000
+ 36885 strings out of 427748
+ 685038 string characters out of 3150981
+ 736014 words of memory out of 3000000
+ 40223 multiletter control sequences out of 15000+200000
+ 544181 words of font info for 77 fonts, out of 3000000 for 9000
  1489 hyphenation exceptions out of 8191
  61i,20n,82p,989b,1076s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on subvarieties_in_abelian_variety.pdf (2 pages).
+Output written on subvarieties_in_abelian_variety.pdf (3 pages).

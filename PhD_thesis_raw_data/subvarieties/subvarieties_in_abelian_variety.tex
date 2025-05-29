@@ -104,6 +104,7 @@
 \newtheorem{ex}[theorem]{Exercise}
 \newtheorem{fact}[theorem]{Fact}
 \newtheorem{ques}[theorem]{Question}
+\newtheorem{answ}[theorem]{Answer}
 \newtheorem{warning}[theorem]{Warning}
 
 
@@ -268,7 +269,7 @@
 \DeclareMathOperator{\sign}{\operatorname{sign}}
 \DeclareMathOperator{\longleftmapsto}{\rotatebox[origin=c]{180}{$\;\longmapsto\;$}}
 \DeclareMathOperator{\Zsm}{Z^{\operatorname{sm}}}
-
+\DeclareMathOperator{\Gal}{\operatorname{Gal}}
 
 
 
@@ -374,7 +375,57 @@ $$\mathbb{P}\Lambda_{Z}:=\;\; \overline{\mathbb{P}\Lambda_{\Zsm}} \;\; \subset \
 is a Legendrian cycle in the contact variety $A \times \mathbb{P}T^{*}_{0}A$. $\mathbb{P}\Lambda_{\Zsm}$ is a $\mathbb{P}^{r-1}$-bundle, and the map 
 $$\gamma_Z: \mathbb{P}\Lambda_{Z} \subset A \times \mathbb{P}T^{*}_{0}A \longrightarrow \mathbb{P}T^{*}_{0}A$$
 is generically finite (i.e., clean) when $Z$ is (an integral variety) of general type, see \cite[Theorem 2.8 (1)]{JKLM22}.
-\section{Searching for examples}
+
+A lot of geometry of $Z$ is encoded in the map $\gamma_Z$. For instance, if $Z$ is smooth and lies inside $A$, then 
+$$\deg \gamma_Z = (-1)^r \chi(Z)$$
+tells us the Euler characteristic of $Z$.
+
+Further insight can be gained by analyzing the fibers of $\gamma_Z$. These fibers, though finite, are not arbitrary—they obey hidden structural rules. For instance, if $Z$ is preserved by a translation $t_v: A\longrightarrow A$, then each fiber $\gamma_Z^{-1}(\xi)$ is also invariant under $t_v$. Likewise, if $Z = -Z$, then the fibers satisfy $\gamma_Z^{-1}(\xi) = -\gamma_Z^{-1}(\xi)$. Outside these special configurations, it becomes more challenging to identify further constraints.\footnote{You can imagine the fiber $\gamma_Z^{-1}(\xi)$ as a cluster of stars projected onto a celestial dome. As $\xi$ varies, these points shift, tracing out paths much like stars drifting across the night sky. The constraints that govern them are subtle, like the imagined lines that shape constellations. And in the long arc of variation, monodromy emerges—like the slow turning that replaces Kochab with Polaris among the stars.}
+
+An important invariant arising from the fiber $\gamma_Z^{-1}(\xi)$ is the monodromy group $\Gal(\gamma_Z)$; for completeness, we recall its definition below.
+
+\begin{definition}
+Define
+$$U= \left\{ \xi  \in \mathbb{P}T^{*}_{0}A \,\middle|\, \# \gamma_Z^{-1}(\xi) = \deg \gamma_Z \right\}.$$ 
+Moving along a loop in $U$ induces a permutation of the points in the fiber $\gamma_Z^{-1}(\xi)$, which defines the map 
+$$\rho_{\gamma_Z}: \pi_1(U, \xi_0) \longrightarrow \Aut (\gamma_Z^{-1}(\xi)) = S_{\deg \gamma_Z}.$$ 
+The monodromy group is then defined as the image of $\rho$, i.e.,
+$$\Gal(\gamma_Z):= \Img \rho_{\gamma_Z}.$$
+\end{definition}
+\begin{ques}\label{ques:monodromy}
+Suppose that the subvariety $Z \subset A$ is not stable under any translation on $A$. Are there known algorithms to compute the monodromy group $\Gal(\gamma_Z)$? Furthermore, what kinds of groups can appear as $\Gal(\gamma_Z)$ for suitable choices of $Z \subset A$?
+\end{ques}
+
+We will try to compute $\Gal(\gamma_Z)$ for a number of specific cases in Section \ref{sec:mon_examples}. Three special cases are already treated in \cite[Theorem 9]{Kr16cubicthreefold}, and we will generalize the strategies there.
+
+\subsection{Interpolation via hyperplanes}
+Before delving into examples, we reinterpret $\gamma_Z$ using a functorial and more transparent framework, enabling a decomposition of Question \ref{ques:monodromy} into two primary subquestions. 
+
+Recognizing that each non-zero conormal vector $\xi  \in T^{*}_{0}A$ determines a hyperplane $H_{\xi} \in \Gr(n-1, T_0A)$, we establish the isomorphisms 
+\begin{equation*}
+\begin{aligned}
+   \mathbb{P}T^{*}_{0}A \cong\;& \Gr(n-1, T_0A) \,\hat{=} \left(\mathbb{P}^{n-1}\right)^{\vee}, \\ 
+    \mathbb{P}\Lambda_{\Zsm}=\;& \left\{\, (p,\xi)  \in \Zsm \times \mathbb{P}T^{*}_{0}A \;\middle|\; \xi|_{T_pZ}\! \equiv 0 \,\right\}  \\ 
+    \cong\;& \left\{\,\rule{0mm}{3.2mm} (p,H)  \in \Zsm \times \Gr(n-1, n) \;\middle|\; \phi_Z(p) \subseteq H \,\right\}  \\ 
+    \cong\;& \left(\phi_Z, \Id \right)^{-1} I_{r, n-1},  \\ 
+\end{aligned}
+\end{equation*}
+where 
+$$I_{r, n-1}:= \left\{ \rule{0mm}{3.2mm} (V,H)  \in \Gr(r,n) \times \Gr(n-1, n) \;\middle|\; V \subseteq H \,\right\}$$ 
+is the incidence variety relating $\Gr(r,n)$ and $\Gr(n-1, n)$. In that case, 
+\begin{equation*}
+\begin{aligned}
+    \gamma_Z^{-1}(H) \cap \Zsm=\;& \left\{\, p  \in \Zsm  \;\middle|\; \phi_Z(p) \subseteq H \,\right\}  \\ 
+    \cong\;& \phi_Z^{-1}\left(\Gr(r\rule{0mm}{3mm},H)\right)  \\ 
+\end{aligned}
+\end{equation*}
+is the collection of points whose tangent spaces lie entirely within $H$.
+
+Geometrically, the monodromy can be described as follows: given a hyperplane $H$, its preimage consists of $d$ points ${ p_1, \ldots, p_d }$. Moving $H$ continuously along a loop causes these points to permute, and the monodromy group $\Gal(\gamma_Z)$ consists of all permutations obtained this way.
+
+\section{Searching for examples}\label{sec:mon_examples}
+
+In this section, we discuss examples drawn from my ongoing work, focusing on the construction of subvarieties and the computation of their monodromy groups.
 
 \section{Families of subvarieties}
 
