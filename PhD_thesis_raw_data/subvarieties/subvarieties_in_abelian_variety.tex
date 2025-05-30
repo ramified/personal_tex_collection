@@ -341,7 +341,7 @@ This document is intended to collect the questions and doubts that arose during 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Basic setting}
-For simplicity, we work over the base field $\kappa = \mathbb{C}$, and by a variety we mean a reduced, separated scheme of finite type over $\mathbb{C}$. Let $A/\mathbb{C}$ be an abelian variety of dimension $n$, and let $Z \subseteq A$ be an irreducible closed subvariety of dimension $r$. We denote by $\iota_Z: Z \hookrightarrow A$ the inclusion morphism.\footnote{I'm not sure whether we should consider the more general cases in the future—such as working over a field of characteristic $p$, letting $A$ be a semiabelian variety or a complex torus, or allowing $\iota$ to be a covering onto its image. For now, I will omit these possibilities from this document.}
+For simplicity, we work over the base field $\kappa = \mathbb{C}$, and by a variety we mean a integral separated scheme of finite type over $\mathbb{C}$. Let $A/\mathbb{C}$ be an abelian variety of dimension $n$, and let $Z \subseteq A$ be an irreducible closed subvariety of dimension $r$. We denote by $\iota_Z: Z \hookrightarrow A$ the inclusion morphism.\footnote{I'm not sure whether we should consider the more general cases in the future—such as working over a field of characteristic $p$, letting $A$ be a semiabelian variety or a complex torus, or allowing $\iota$ to be a covering onto its image. For now, I will omit these possibilities from this document.}
 
 \subsection{Gauss map}
 The goal of my research is to understand the geometry of $Z$, and the main tool for the subvariety geometry is the Gauss map. The Gauss map describe the tangent space information at each point: 
@@ -366,13 +366,13 @@ This concept may already be familiar to many readers, so we briefly recall the d
 \end{tikzcd}\]
 }
 $$\mathcal{N}_{\Zsm/A} := \mathcal{T}_A|_{\Zsm} \;/\; \mathcal{T}_{\Zsm} \qquad \Lambda_{\Zsm}:= \mathcal{N}_{\Zsm/A}^* = \ker \left( \Omega_A|_{\Zsm} \rightarrow \rule{0mm}{3.4mm} \Omega_{\Zsm} \right).$$
-The conormal variety $\Omega_{Z}$ is just the closure of $\Lambda_{\Zsm}$ viewed as a subvariety in $T^*A$:
+The conormal variety $\Lambda_{Z}$ is just the closure of $\Lambda_{\Zsm}$ viewed as a subvariety in $T^*A$:
 $$\Lambda_{Z}:=\;\; \overline{\Lambda_{\Zsm}} \;\; \subset T^*A \;\cong\; A \times T^{*}_{0}A$$
 this is conical Lagrangian cycle in $T^*A$.
 
 Moreover, the projectivized conormal variety
 $$\mathbb{P}\Lambda_{Z}:=\;\; \overline{\mathbb{P}\Lambda_{\Zsm}} \;\; \subset \mathbb{P}T^*A \;\cong\; A \times \mathbb{P}T^{*}_{0}A$$
-is a Legendrian cycle in the contact variety $A \times \mathbb{P}T^{*}_{0}A$. $\mathbb{P}\Lambda_{\Zsm}$ is a $\mathbb{P}^{r-1}$-bundle, and the map 
+is a Legendrian cycle in the contact variety $A \times \mathbb{P}T^{*}_{0}A$. $\mathbb{P}\Lambda_{\Zsm}$ is a $\mathbb{P}^{r-1}$-bundle over $\Zsm$, and the map 
 $$\gamma_Z: \mathbb{P}\Lambda_{Z} \subset A \times \mathbb{P}T^{*}_{0}A \longrightarrow \mathbb{P}T^{*}_{0}A$$
 is generically finite (i.e., clean) when $Z$ is (an integral variety) of general type, see \cite[Theorem 2.8 (1)]{JKLM22}.
 
@@ -423,6 +423,13 @@ is the collection of points whose tangent spaces lie entirely within $H$.
 
 Geometrically, the monodromy can be described as follows: given a hyperplane $H$, its preimage consists of $d$ points ${ p_1, \ldots, p_d }$. Moving $H$ continuously along a loop causes these points to permute, and the monodromy group $\Gal(\gamma_Z)$ consists of all permutations obtained this way.
 
+\begin{ques}
+Let $Z \subseteq \Gr(r,n)$ be a subvariety of dimension $r$ such that $[Z] \neq 0$ in $H_r(\Gr(r,n);\mathbb{Z})$. What can be said about its monodromy group? 
+\end{ques}
+
+\begin{ques}
+For a map $\phi:Z \longrightarrow \Gr(r,n)$, when is it induced from some inclusion $Z \subset A$?
+\end{ques}
 \section{Searching for examples}\label{sec:mon_examples}
 
 In this section, we discuss examples drawn from my ongoing work, focusing on the construction of subvarieties and the computation of their monodromy groups.
