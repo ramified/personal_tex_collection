@@ -120,7 +120,9 @@
 
 \newtheorem{remark}[theorem]{Remark}
 \newtheorem*{remarks}{Remarks}
-
+\newenvironment{proofsketch}
+  {\begin{proof}[Sketch of proof]}
+  {\end{proof}}
 %%% for important theorems
 %\newtheoremstyle{theoremletter}{4mm}{1mm}{\itshape}{ }{\bfseries}{}{ }{}
 %\theoremstyle{theoremletter}
@@ -270,8 +272,8 @@
 \DeclareMathOperator{\longleftmapsto}{\rotatebox[origin=c]{180}{$\;\longmapsto\;$}}
 \DeclareMathOperator{\Zsm}{Z^{\operatorname{sm}}}
 \DeclareMathOperator{\Gal}{\operatorname{Gal}}
-
-
+\DeclareMathOperator{\AJ}{\operatorname{AJ}}
+\newcommand{\covermap}{h}
 
 
 %%%%%%%newcommand
@@ -380,16 +382,16 @@ A lot of geometry of $Z$ is encoded in the map $\gamma_Z$. For instance, if $Z$ 
 $$\deg \gamma_Z = (-1)^r \chi(Z)$$
 tells us the Euler characteristic of $Z$.
 
-Further insight can be gained by analyzing the fibers of $\gamma_Z$. These fibers, though finite, are not arbitrary—they obey hidden structural rules. For instance, if $Z$ is preserved by a translation $t_v: A\longrightarrow A$, then each fiber $\gamma_Z^{-1}(\xi)$ is also invariant under $t_v$. Likewise, if $Z = -Z$, then the fibers satisfy $\gamma_Z^{-1}(\xi) = -\gamma_Z^{-1}(\xi)$. Outside these special configurations, it becomes more challenging to identify further constraints.\footnote{You can imagine the fiber $\gamma_Z^{-1}(\xi)$ as a cluster of stars projected onto a celestial dome. As $\xi$ varies, these points shift, tracing out paths much like stars drifting across the night sky. The constraints that govern them are subtle, like the imagined lines that shape constellations. And in the long arc of variation, monodromy emerges—like the slow turning that replaces Kochab with Polaris among the stars.}
+Further insight can be gained by analyzing the fibers of $\gamma_Z$. These fibers, though finite, are not arbitrary—they obey hidden structural rules. For instance, if $Z$ is preserved by a translation $t_v: A\longrightarrow A$, then each fiber $\gamma_Z^{-1}(\xi)$ is also invariant under $t_v$. Likewise, if $Z = -Z$, then the fiber satisfies $\gamma_Z^{-1}(\xi) = -\gamma_Z^{-1}(\xi)$. Outside these special configurations, it becomes more challenging to identify further constraints.\footnote{You can imagine the fiber $\gamma_Z^{-1}(\xi)$ as a cluster of stars projected onto a celestial dome. As $\xi$ varies, these points shift, tracing out paths much like stars drifting across the night sky. The constraints that govern them are subtle, like the imagined lines that shape constellations. And in the long arc of variation, monodromy emerges—like the slow turning that replaces Kochab with Polaris among the stars.}
 
 An important invariant arising from the fiber $\gamma_Z^{-1}(\xi)$ is the monodromy group $\Gal(\gamma_Z)$; for completeness, we recall its definition below.
 
 \begin{definition}
 Define
 $$U= \left\{ \xi  \in \mathbb{P}T^{*}_{0}A \,\middle|\, \# \gamma_Z^{-1}(\xi) = \deg \gamma_Z \right\}.$$ 
-Moving along a loop in $U$ induces a permutation of the points in the fiber $\gamma_Z^{-1}(\xi)$, which defines the map 
-$$\rho_{\gamma_Z}: \pi_1(U, \xi_0) \longrightarrow \Aut (\gamma_Z^{-1}(\xi)) = S_{\deg \gamma_Z}.$$ 
-The monodromy group is then defined as the image of $\rho$, i.e.,
+Moving along a loop in $U$ induces a permutation of the points in the fiber $\gamma_Z^{-1}(\xi_0)$, which defines the map 
+$$\rho_{\gamma_Z}: \pi_1(U, \xi_0) \longrightarrow \Aut (\gamma_Z^{-1}(\xi_0)) = S_{\deg \gamma_Z}.$$ 
+The monodromy group is then defined as the image of $\rho_{\gamma_Z}$, i.e.,
 $$\Gal(\gamma_Z):= \Img \rho_{\gamma_Z}.$$
 \end{definition}
 \begin{ques}\label{ques:monodromy}
@@ -421,19 +423,110 @@ is the incidence variety relating $\Gr(r,n)$ and $\Gr(n-1, n)$. In that case,
 \end{equation*}
 is the collection of points whose tangent spaces lie entirely within $H$.
 
-Geometrically, the monodromy can be described as follows: given a hyperplane $H$, its preimage consists of $d$ points ${ p_1, \ldots, p_d }$. Moving $H$ continuously along a loop causes these points to permute, and the monodromy group $\Gal(\gamma_Z)$ consists of all permutations obtained this way.
+Geometrically, the monodromy can be described as follows: given a general hyperplane $H$, its preimage consists of $d$ points ${ p_1, \ldots, p_d }$. Moving $H$ continuously along a loop causes these points to permute, and the monodromy group $\Gal(\gamma_Z)$ consists of all permutations obtained this way. With this new formulation, it suffices to consider the Gauss map $\phi_Z$ alone; the inclusion $\iota_Z: Z \to A$ is no longer required for computing the monodromy group.
 
-\begin{ques}
+\begin{definition}\label{def:general_monodromy}
+Let $Z$ be an $r$-dimensional variety and $\phi: Z \longrightarrow \Gr(r,n)$ a morphism.  Suppose that for some $d \in \mathbb{N}_{>0}$, the set 
+$$U:= \left\{\,\rule{0mm}{3.2mm} H  \in  \Gr(n-1, n) \;\middle|\;  \# \phi^{-1}\left( \Gr(r,H_0) \right) = d \,\right\}$$ 
+is non-empty open in $\Gr(n-1,n)$\footnote{Here, the fiber is understood set-theoretically; multiplicities are not taken into account.}. The monodromy group $\Gal(\phi)$ is defined as the image of
+$$\rho_{\gamma_Z}: \pi_1(U,H_0) \longrightarrow \Aut \left( \phi^{-1}\left( \Gr(r,H_0) \right) \right) \cong S_d.$$
+\end{definition}
+When $\phi$ is not generically finite onto its image, the monodromy group is subject to additional constraints, as captured by the next lemma.
+\begin{lemma}\label{lem:wreath_product}
+When $\phi: Z \to \Gr(r,n)$ is generically $k$-to-$1$ onto its image , the monodromy group $\Gal(\phi)$ is contained in the wreath product
+$$S_k \wr S_{d/k}:= \left( S_k^{\oplus d/k} \right) \rtimes S_{d/k}. $$
+\end{lemma}
+\begin{proof}
+Consider the diagram below:  
+% https://q.uiver.app/#q=WzAsNyxbMCwwLCJcXHBoaToiXSxbMiwwLCJcXEltZyBaIl0sWzEsMCwiWiJdLFszLDAsIlxcR3IocixuKSJdLFszLDEsIlxcR3IocixIKSJdLFsyLDEsIlxce3FfMSxcXGxkb3RzLHFfe2Qva31cXH0iXSxbMSwxLCJcXHtwXzEsXFxsZG90cyxwX2RcXH0iXSxbMiwxLCJrOjEiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMSwzLCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs2LDVdLFs1LDRdLFs2LDIsIlxccm90YXRlYm94W29yaWdpbj1jXXs5MH17JFxcc3Vic2V0JH0iLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNSwxLCJcXHJvdGF0ZWJveFtvcmlnaW49Y117OTB9eyRcXHN1YnNldCR9IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzQsMywiXFxyb3RhdGVib3hbb3JpZ2luPWNdezkwfXskXFxzdWJzZXQkfSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
+\[\begin{tikzcd}[ampersand replacement=\&,row sep=small]
+	{\phi:} \&[-10mm] Z \& {\Img Z} \& {\Gr(r,n)} \\
+	\& {\{p_1,\ldots,p_d\}} \& {\{q_1,\ldots,q_{d/k}\}} \& {\Gr(r,H)}
+	\arrow["{k:1}", two heads, from=1-2, to=1-3]
+	\arrow[hook, from=1-3, to=1-4]
+	\arrow["{\rotatebox[origin=c]{90}{$\subset$}}"{description}, draw=none, from=2-2, to=1-2]
+	\arrow[from=2-2, to=2-3]
+	\arrow["{\rotatebox[origin=c]{90}{$\subset$}}"{description}, draw=none, from=2-3, to=1-3]
+	\arrow[from=2-3, to=2-4]
+	\arrow["{\rotatebox[origin=c]{90}{$\subset$}}"{description}, draw=none, from=2-4, to=1-4]
+\end{tikzcd}\]
+The fiber $\phi^{-1}\left( \Gr(r,H_0) \right)$ splits into $d/k$ groups of points, with the monodromy group acting by permutations within each group and among the groups.
+\end{proof}
+Based on the discussion above, Question \ref{ques:monodromy} reduces to Question \ref{ques:mon_Grass} and Question \ref{ques:when_are_maps_Gauss}, with Question \ref{ques:mon_Grass_sub} appearing as a special case of Question \ref{ques:mon_Grass}.
+
+
+\begin{ques}\label{ques:mon_Grass}
+For a map $\phi: Z \longrightarrow \Gr(r,n)$ satisfying the conditions in Definition \ref{def:general_monodromy}, how can we compute $\Gal(\phi)$?
+\end{ques}
+
+\begin{ques}\label{ques:mon_Grass_sub}
 Let $Z \subseteq \Gr(r,n)$ be a subvariety of dimension $r$ such that $[Z] \neq 0$ in $H_r(\Gr(r,n);\mathbb{Z})$. What can be said about its monodromy group? 
 \end{ques}
 
-\begin{ques}
+\begin{ques}\label{ques:when_are_maps_Gauss}
 For a map $\phi:Z \longrightarrow \Gr(r,n)$, when is it induced from some inclusion $Z \subset A$?
 \end{ques}
 \section{Searching for examples}\label{sec:mon_examples}
 
 In this section, we discuss examples drawn from my ongoing work, focusing on the construction of subvarieties and the computation of their monodromy groups.
 
+Broadly speaking, there are two approaches to constructing examples. One may start with a given variety $Z$ and attempt to embed it into an abelian variety—this always factors through its Albanese $\Alb(Z)$. Alternatively, one may begin with an abelian variety $A$ and construct subvarieties by intersecting suitable divisors. Unfortunately, even in the case where $Z$ is a curve, we have not fully resolved Question \ref{ques:monodromy}.
+
+\subsection{Curves}
+A complete answer to Question \ref{ques:mon_Grass_sub} is known when $Z = C$ is a curve.
+\begin{proposition}[See {\cite[p111]{Ar85I}} for a detailed proof]\label{prop:mon_of_embedded_curve}
+Suppose that $\iota_C: C \subseteq \mathbb{P}^{n-1}$ is an irreducible nondegenerate curve of degree $d$, then $\Gal(\iota_C) \cong S_d$.
+\end{proposition}
+
+\begin{proofsketch}
+Because $S_d$ is generated by its transpositions, we are reduced to verifying that:
+\begin{itemize}
+\item $\Gal(\iota_C)$ acts doubly transitively on the fiber;
+\item $\Gal(\iota_C)$ contains a transposition.
+\end{itemize}
+\end{proofsketch}
+
+\begin{proposition}\label{prop:mon_of_nonembedded_curve}
+Let $\iota_{C}' : C' \hookrightarrow \mathbb{P}^{n-1}$ be an irreducible nondegenerate curve of degree $d/2$, and let $\covermap: C \to C'$ be a degree $2$ ramified covering, with ramification occurring at at least one smooth point of $C'$. Then $\Gal(\iota_{C'} \circ \covermap) \cong S_2^{\oplus d/2} \rtimes S_{d/2}$.
+\end{proposition}
+
+\begin{proofsketch}
+By Lemma \ref{lem:wreath_product} we know that $\Gal(\iota_{C'} \circ \covermap) \subseteq S_2^{\oplus d/2} \rtimes S_{d/2}$.
+By Lemma \ref{lem: type_C_Weyl_group}, we are reduced to verifying that:
+\begin{itemize}
+\item The quotient map $\Gal(\iota_{C'} \circ \covermap) \longrightarrow \Gal(\iota_{C'}) \cong S_{d/2}$ is surjective;
+\item $\Gal(\iota_{C'} \circ \covermap)$ contains a transposition of a pair of points in the fiber of $\covermap$.
+\end{itemize}
+\end{proofsketch}
+
+\begin{lemma}\label{lem: type_C_Weyl_group}
+Let $G$ be a subgroup of $S_2^{\oplus m} \rtimes S_m$, acting naturally on the set ${\pm 1, \ldots, \pm m}$. If the projection $G \to S_m$ is surjective and the transposition $\sigma_0$ of $\pm 1$ lies in $G$, then $G = S_2^{\oplus m} \rtimes S_m$.
+\end{lemma}
+
+\begin{proofsketch}(with help from Chenji Fu)
+Let $\varepsilon_i$ denote the transposition of $\pm i$. For any $\sigma \in S_m$, choose a lift $\tilde{\sigma} \in G$, then 
+$$\varepsilon_{\sigma(1)}=\tilde{\sigma} \circ \sigma_0 \circ \tilde{\sigma}^{-1}   \in G.$$
+Thus, $S_2^{\oplus m} \subset G$, and since $G$ maps onto $S_m$, we obtain $G = S_2^{\oplus m} \rtimes S_m$.
+\end{proofsketch}
+
+\begin{ex}
+Let $C$ be a smooth curve of genus $g$ embedded in its Jacobian $A := \Jac(C)$ via the Abel–Jacobi map $\AJ_C: C \hookrightarrow A$.
+
+When $C$ is non-hyperelliptic, the corresponding Gauss map 
+$$|\omega_C|: C\longrightarrow \mathbb{P}^{g-1}$$
+makes $C$ as an irreducible nondegenerate curve of degree $2g-2$, by Proposition \ref{prop:mon_of_embedded_curve} we get
+$$\Gal(\gamma_C) \cong S_{2g-2}.$$
+
+When $C$ is hyperelliptic, the corresponding Gauss map is $2:1$ onto a rational normal curve $R \subset \mathbb{P}^{g-1}$:
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJ8XFxvbWVnYV9DfDogQyJdLFsyLDAsIlxcbWF0aGJie1B9XntnLTF9Il0sWzEsMCwiUiJdLFswLDIsIjI6MSIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsyLDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV1d
+\[\begin{tikzcd}
+	{|\omega_C|: C} & R & {\mathbb{P}^{g-1}}
+	\arrow["{2:1}", two heads, from=1-1, to=1-2]
+	\arrow[hook, from=1-2, to=1-3]
+\end{tikzcd}\]
+By Proposition \ref{prop:mon_of_nonembedded_curve} we get
+$$\Gal(\gamma_C) \cong S_2^{\oplus g-1} \rtimes S_{g-1}.$$
+\end{ex}
 \section{Families of subvarieties}
 
 \section{Tannakian formalism}
