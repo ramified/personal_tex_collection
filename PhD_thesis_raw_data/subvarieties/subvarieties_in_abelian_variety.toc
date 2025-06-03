@@ -3,7 +3,7 @@
 \contentsline {subsection}{\tocsubsection {}{1.2}{Conormal variety}}{2}{subsection.1.2}% 
 \contentsline {subsection}{\tocsubsection {}{1.3}{Interpolation via hyperplanes}}{3}{subsection.1.3}% 
 \contentsline {section}{\tocsection {}{2}{Searching for examples}}{4}{section.2}% 
-\contentsline {subsection}{\tocsubsection {}{2.1}{Curves}}{4}{subsection.2.1}% 
-\contentsline {section}{\tocsection {}{3}{Families of subvarieties}}{5}{section.3}% 
-\contentsline {section}{\tocsection {}{4}{Tannakian formalism}}{5}{section.4}% 
+\contentsline {subsection}{\tocsubsection {}{2.1}{Curves, basic results}}{4}{subsection.2.1}% 
+\contentsline {section}{\tocsection {}{3}{Families of subvarieties}}{6}{section.3}% 
+\contentsline {section}{\tocsection {}{4}{Tannakian formalism}}{6}{section.4}% 
 \contentsline {section}{\tocsection {}{}{References}}{6}{section*.3}% 

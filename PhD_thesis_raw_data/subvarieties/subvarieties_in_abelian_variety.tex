@@ -472,7 +472,7 @@ In this section, we discuss examples drawn from my ongoing work, focusing on the
 
 Broadly speaking, there are two approaches to constructing examples. One may start with a given variety $Z$ and attempt to embed it into an abelian variety—this always factors through its Albanese $\Alb(Z)$. Alternatively, one may begin with an abelian variety $A$ and construct subvarieties by intersecting suitable divisors. Unfortunately, even in the case where $Z$ is a curve, we have not fully resolved Question \ref{ques:monodromy}.
 
-\subsection{Curves}
+\subsection{Curves, basic results}
 A complete answer to Question \ref{ques:mon_Grass_sub} is known when $Z = C$ is a curve.
 \begin{proposition}[See {\cite[p111]{Ar85I}} for a detailed proof]\label{prop:mon_of_embedded_curve}
 Suppose that $\iota_C: C \subseteq \mathbb{P}^{n-1}$ is an irreducible nondegenerate curve of degree $d$, then $\Gal(\iota_C) \cong S_d$.
@@ -582,6 +582,19 @@ Let $H$ denote the kernel of the natural quotient map $G \to S_m$. Then $H$ is s
 %When ramification occurring only in the smooth point of $C'$, I try to collect the following links:
 %\href{https://mathoverflow.net/questions/310299/characterizing-subgroups-of-semidirect-products-with-a-fixed-intersection-with-t}{subgroups of semidirect products}
 %\href{https://mathoverflow.net/questions/321698/first-group-cohomology-for-the-standard-representation-of-s-n-over-mathbbf}{first group cohomology for the standard representation of $S_n$}
+
+We are particularly interested in identifying cases where the monodromy group is small(i.e., not big), which can occur only when $k > 2$, where $k$ denotes the degree of the map $\phi: C \to \mathbb{P}^{n-1}$. On the other hand, when both $k > 2$ and $n > 2$, Lemma \ref{lem:wreath_product} ensures that the resulting monodromy group is indeed small. Thus, in the case of curves, Question \ref{ques:monodromy} is resolved except in the following three cases:
+\begin{enumerate}
+\item $n>2$ and $k=2$. By Proposition \ref{prop:mon_of_nonembedded_curve2}, the monodromy group is known to be large, although its precise structure remains undetermined.
+\item $n=2$. Here, $A$ is an abelian surface and $C$ corresponds to a divisor.
+\item $n>2$ and $k>2$. Finding an example of this would guarantee a case of small monodromy.
+\end{enumerate}
+
+\begin{ques}\label{ques:monodromy_2}
+Can we find any curve $C \subset A$ not stable under any translation on $A$, and for which the associated monodromy group is small?
+
+Assume that $n>2$. Can we find any curve $C \subset A$ not stable under any translation on $A$, whose Gauss map has degree $d>2$? 
+\end{ques}
 
 \section{Families of subvarieties}
 
