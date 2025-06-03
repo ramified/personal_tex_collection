@@ -106,11 +106,11 @@
 \newtheorem{ques}[theorem]{Question}
 \newtheorem{answ}[theorem]{Answer}
 \newtheorem{warning}[theorem]{Warning}
-
+\newtheorem{notation}[theorem]{Notations}
 
 
 \newtheorem*{bbox}{Black box}
-\newtheorem*{notation}{Conventions and Notations}
+
 
 
 \numberwithin{equation}{section}
@@ -273,7 +273,13 @@
 \DeclareMathOperator{\Zsm}{Z^{\operatorname{sm}}}
 \DeclareMathOperator{\Gal}{\operatorname{Gal}}
 \DeclareMathOperator{\AJ}{\operatorname{AJ}}
+\DeclareMathOperator{\AP}{\operatorname{AP}}
 \newcommand{\covermap}{h}
+\DeclareMathOperator{\Prym}{\operatorname{Prym}}
+\DeclareMathOperator{\Nm}{\operatorname{Nm}}
+\DeclareMathOperator{\gon}{\operatorname{gon}}
+
+
 
 
 %%%%%%%newcommand
@@ -311,7 +317,7 @@
 
 %https://latexref.xyz/_005cparindent-_0026-_005cparskip.html
 \setlength{\parindent}{15pt}	
-\setlength{\parskip}{0pt plus1pt}
+\setlength{\parskip}{0pt plus1.5pt}
 
 %\setlength\intextsep{0cm}
 %\setlength\textfloatsep{0cm}
@@ -370,7 +376,7 @@ This concept may already be familiar to many readers, so we briefly recall the d
 $$\mathcal{N}_{\Zsm/A} := \mathcal{T}_A|_{\Zsm} \;/\; \mathcal{T}_{\Zsm} \qquad \Lambda_{\Zsm}:= \mathcal{N}_{\Zsm/A}^* = \ker \left( \Omega_A|_{\Zsm} \rightarrow \rule{0mm}{3.4mm} \Omega_{\Zsm} \right).$$
 The conormal variety $\Lambda_{Z}$ is just the closure of $\Lambda_{\Zsm}$ viewed as a subvariety in $T^*A$:
 $$\Lambda_{Z}:=\;\; \overline{\Lambda_{\Zsm}} \;\; \subset T^*A \;\cong\; A \times T^{*}_{0}A$$
-this is conical Lagrangian cycle in $T^*A$.
+this is a conical Lagrangian cycle in $T^*A$.
 
 Moreover, the projectivized conormal variety
 $$\mathbb{P}\Lambda_{Z}:=\;\; \overline{\mathbb{P}\Lambda_{\Zsm}} \;\; \subset \mathbb{P}T^*A \;\cong\; A \times \mathbb{P}T^{*}_{0}A$$
@@ -427,7 +433,7 @@ Geometrically, the monodromy can be described as follows: given a general hyperp
 
 \begin{definition}\label{def:general_monodromy}
 Let $Z$ be an $r$-dimensional variety and $\phi: Z \longrightarrow \Gr(r,n)$ a morphism.  Suppose that for some $d \in \mathbb{N}_{>0}$, the set 
-$$U:= \left\{\,\rule{0mm}{3.2mm} H  \in  \Gr(n-1, n) \;\middle|\;  \# \phi^{-1}\left( \Gr(r,H_0) \right) = d \,\right\}$$ 
+$$U:= \left\{\,\rule{0mm}{3.2mm} H  \in  \Gr(n-1, n) \;\middle|\;  \# \phi^{-1}\left( \Gr(r,H) \right) = d \,\right\}$$ 
 is non-empty open in $\Gr(n-1,n)$\footnote{Here, the fiber is understood set-theoretically; multiplicities are not taken into account.}. The monodromy group $\Gal(\phi)$ is defined as the image of
 $$\rho_{\gamma_Z}: \pi_1(U,H_0) \longrightarrow \Aut \left( \phi^{-1}\left( \Gr(r,H_0) \right) \right) \cong S_d.$$
 \end{definition}
@@ -456,7 +462,7 @@ Based on the discussion above, Question \ref{ques:monodromy} reduces to Question
 
 
 \begin{ques}\label{ques:mon_Grass}
-For a map $\phi: Z \longrightarrow \Gr(r,n)$ satisfying the conditions in Definition \ref{def:general_monodromy}, how can we compute $\Gal(\phi)$?
+In the situation of Definition \ref{def:general_monodromy}, how can we compute $\Gal(\phi)$?
 \end{ques}
 
 \begin{ques}\label{ques:mon_Grass_sub}
@@ -543,8 +549,10 @@ $W(A_{m+1})=S_m$                            & full symmetric group        &     
 $\hspace{4mm}W(C_{m})=S_2^{\oplus m} \rtimes S_m$       & signed symmetric group      & hyperoctahedral group     \\ \hline
 $\hspace{4mm}W(D_{m})=(S_2^{\oplus m})_{0} \rtimes S_m$ & even-signed symmetric group & demihyperoctahedral group \\ \hline
 \end{tabular}
+\medskip
 \caption{big monodromy group}
 \label{table:big_mono}
+\vspace*{-\baselineskip}
 \end{table}
 }
 
@@ -595,6 +603,71 @@ Can we find any curve $C \subset A$ not stable under any translation on $A$, and
 
 Assume that $n>2$. Can we find any curve $C \subset A$ not stable under any translation on $A$, whose Gauss map has degree $d>2$? 
 \end{ques}
+
+\subsection{Curves in Prym variety}
+To address Question \ref{ques:monodromy_2}, we seek explicit examples, and the case of a Prym curve mapping to its associated Prym variety offers a natural starting point for investigation.
+
+\begin{notation}
+Suppose $C'$ is a smooth projective curve of genus $g(C')$, and let $B$ be an effective (possibly zero) divisor on $C'$. For any line bundle $\eta \in \Pic(C')$ such that $\eta^{\otimes 2} \cong \mathcal{O}_{C'}(B)$, one obtains a double cover $h: C \to C'$ of smooth projective curves, ramified precisely over $B$. The associated involution on $C$ is denoted by $\iota$, and the triple $(C, C', h)$ is referred to as the Prym pair.
+
+Recall that the Prym variety $A := \Prym(C/C')$ is defined as the connected component of the identity in 
+$$\ker \left[\Nm:\rule{0mm}{3.4mm}\Jac(C) \longrightarrow \Jac(C') \right].$$ 
+The Abel--Prym map is defined by
+$$\AP_{C/C'}: C \longrightarrow A \qquad p \longmapsto \mathcal{O}_{C}(p-\iota(p)).$$
+\end{notation}
+
+The classical theory treats the case where the Prym variety $A$ is principally polarized—this occurs exactly when $B = \varnothing$ or $B =\{p_0, q_0\}$, that is, when $h$ is either unramified or ramified at two points.\footnote{See \cite[Theorem 3.2.6]{CK22} for the proof.} For clarity and focus, we restrict our attention to these cases. Table \ref{table:Prym_numerical_data} lists the relevant numerical data.\footnote{As usual, $n=\dim_{\mathbb{C}} A$ is the dimension of the abelian variety.}
+
+{
+\def\arraystretch{1.2}
+\begin{table}[ht]
+\begin{tabular}{c|c|c|c}
+\hline
+                  & $g(C)$ & $g(C')$ & $\deg \eta$ \\ \hline
+$B = \varnothing$ & $2n+1$ & $n+1$   & $0$         \\ \hline
+$B =\{p_0, q_0\}$ & $2n$   & $n$     & $1$         \\ \hline
+\end{tabular}
+\medskip
+\caption{numerical data of Prym pair}
+\label{table:Prym_numerical_data}
+\vspace*{-\baselineskip}
+\end{table}
+}
+The Abel–Prym map $\AP_{C/C'}$ does not always behave as nicely as the Abel–Jacobi map; it may fail to be an embedding. When $C$ is hyperelliptic, the map $\AP_{C/C'}$ fails to be generically injective, and therefore falls outside the scope of our discussion. When $C$ is non-hyperelliptic, we may regard it as a subvariety of $A$ for our purposes, although it may be not strictly embedded.\footnote{For a detailed description of the map $\AP_{C/C'}$, see \cite[Proposition 12.5.2, Corollary 12.5.6]{BL04}. Although $\AP_{C/C'}$ may collapse $p_0$ and $q_0$, this does not affect the relevant computation of $\Gal(\gamma_Z)$.} However, it remains unclear whether $C$ is stable under any translation in $A$.
+
+In the Prym setting, the corresponding Gauss map $\gamma_C$ factors through $h$: 
+% https://q.uiver.app/#q=WzAsMTEsWzAsMCwiXFxnYW1tYV9DOiJdLFsxLDAsIkMiXSxbMiwwLCJDJyJdLFszLDAsIlxcbWF0aGJie1B9XntuLTF9Il0sWzUsMCwiXFxtYXRoYmJ7UH1cXCFcXGxlZnQoIEheMChcXG9tZWdhX3tDJ30gXFxvdGltZXMgXFxldGEpXiogXFxyaWdodCkiXSxbNSwxLCJcXEdyXFxsZWZ0KG4tMSwgSF4wKFxcb21lZ2Ffe0MnfSBcXG90aW1lcyBcXGV0YSlcXHJpZ2h0KSJdLFs1LDIsIkheMFxcbGVmdChcXG9tZWdhX3tDJ30gXFxvdGltZXMgXFxldGEoLXApXFxyaWdodCkiXSxbMiwyLCJwIl0sWzEsMiwiXFx0aWxkZXtwfSJdLFs0LDAsIj0iXSxbNCwxLCJcXGNvbmciXSxbOCw3LCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtYXBzIHRvIn19fV0sWzIsMywifFxcb21lZ2Ffe0MnfSBcXG90aW1lcyBcXGV0YXwiXSxbMSwyLCJoIl0sWzcsNiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibWFwcyB0byJ9fX1dXQ==
+\[\begin{tikzcd}[column sep=10mm,row sep=-2mm]
+	{\gamma_C:} &[-12mm] C & {C'} & [5mm] {\mathbb{P}^{n-1}} & [-12mm]{=} &[-12mm] {\hspace{-10mm}\mathbb{P}\!\left( H^0(\omega_{C'} \otimes \eta)^* \right)} \\
+	&&&& \cong & {\Gr\left(n-1, H^0(\omega_{C'} \otimes \eta)\right)} \\[1mm]
+	& {\tilde{p}} & p &&& {H^0\left(\omega_{C'} \otimes \eta(-p)\right)}
+	\arrow["h", from=1-2, to=1-3]
+	\arrow["{|\omega_{C'} \otimes \eta|}", from=1-3, to=1-4]
+	\arrow[maps to, from=3-2, to=3-3]
+	\arrow[maps to, from=3-3, to=3-6]
+\end{tikzcd}\]
+
+Unfortunately, in the Prym setting, no example has been found for Question \ref{ques:monodromy_2}, and such an example is likely to exist only when the gonality $\gon(C)$ is sufficiently small.
+
+\begin{lemma}
+When $\gon(C)>4$, $|\omega_{C'} \otimes \eta|$ is injective. As a result, the monodromy group is big.
+\end{lemma}
+
+\begin{proof}
+Suppose that $|\omega_{C'} \otimes \eta|$ is not injective, we need to find a line bundle of degree $4$ and rank $\geqslant 1$. In fact, for $p\neq q$,
+\begin{equation*}
+\begin{aligned}
+\;& |\omega_{C'} \otimes \eta|(p)=|\omega_{C'} \otimes \eta|(q) &&\\
+  \Longleftrightarrow\;& h^0 \left(\omega_{C'} \otimes \eta\right) -  h^0 \left(\omega_{C'} \otimes \eta(-p-q)\right) = 1\qquad && \text{By \cite[19.2.8]{vakil2017rising}}\\ 
+  \Longleftrightarrow\;& h^0 \left(\omega_{C'} \otimes \eta(-p-q)\right) = n - 1 && \text{Since $\dim_{\mathbb{C}} A = n$}\\
+  \Longleftrightarrow\;& h^0 \left( \eta^{\vee}(p+q)\right) = 1 && \text{Via Riemann--Roch}\\   
+\end{aligned}
+\end{equation*}
+When $B=\varnothing$, write $\eta^{\vee}(p+q)=\mathcal{O}_{C'}(p'+q')$, then
+$$\mathcal{O}_{C'}(2p+2q) = \left(\eta^{\vee}\right)^{\otimes 2}(2p+2q) = \mathcal{O}_{C'}(2p'+2q') \hspace{25mm}\in g_4^1;$$
+When $B=\{p_0,q_0\}$, write $\eta^{\vee}(p+q)=\mathcal{O}_{C'}(p')$, then
+$$\mathcal{O}_{C'}(2p+2q) = \left(\eta^{\vee}\right)^{\otimes 2}(2p+2q+p_0+q_0) = \mathcal{O}_{C'}(2p'+p_0+q_0) \quad\in g_4^1.$$
+\end{proof}
 
 \section{Families of subvarieties}
 

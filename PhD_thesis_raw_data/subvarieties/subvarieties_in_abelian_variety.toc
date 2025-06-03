@@ -4,6 +4,7 @@
 \contentsline {subsection}{\tocsubsection {}{1.3}{Interpolation via hyperplanes}}{3}{subsection.1.3}% 
 \contentsline {section}{\tocsection {}{2}{Searching for examples}}{4}{section.2}% 
 \contentsline {subsection}{\tocsubsection {}{2.1}{Curves, basic results}}{4}{subsection.2.1}% 
-\contentsline {section}{\tocsection {}{3}{Families of subvarieties}}{6}{section.3}% 
-\contentsline {section}{\tocsection {}{4}{Tannakian formalism}}{6}{section.4}% 
-\contentsline {section}{\tocsection {}{}{References}}{6}{section*.3}% 
+\contentsline {subsection}{\tocsubsection {}{2.2}{Curves in Prym variety}}{6}{subsection.2.2}% 
+\contentsline {section}{\tocsection {}{3}{Families of subvarieties}}{7}{section.3}% 
+\contentsline {section}{\tocsection {}{4}{Tannakian formalism}}{7}{section.4}% 
+\contentsline {section}{\tocsection {}{}{References}}{7}{section*.4}% 

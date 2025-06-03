@@ -6,6 +6,17 @@ E.~Arbarello, M.~Cornalba, P.~A. Griffiths, and J.~Harris.
   Grundlehren Math. Wiss.}
 \newblock Springer, Cham, 1985.
 
+\bibitem{BL04}
+Christina Birkenhake and Herbert Lange.
+\newblock {\em Complex abelian varieties}, volume 302 of {\em Grundlehren Math.
+  Wiss.}
+\newblock Berlin: Springer, 2nd augmented ed. edition, 2004.
+
+\bibitem{CK22}
+Giulio Codogni and Thomas Kr{\"a}mer.
+\newblock Semicontinuity of {Gauss} maps and the {Schottky} problem.
+\newblock {\em Math. Ann.}, 382(1-2):607--630, 2022.
+
 \bibitem{JKLM22}
 Ariyan Javanpeykar, Thomas Kr{\"a}mer, Christian Lehn, and Marco Maculan.
 \newblock The monodromy of families of subvarieties on abelian varieties.
@@ -21,5 +32,10 @@ Thomas Kr{\"a}mer.
 Thomas Kr{\"a}mer and Rainer Weissauer.
 \newblock Vanishing theorems for constructible sheaves on abelian varieties.
 \newblock {\em J. Algebr. Geom.}, 24(3):531--568, 2015.
+
+\bibitem{vakil2017rising}
+Ravi Vakil.
+\newblock The rising sea: Foundations of algebraic geometry.
+\newblock {\em preprint}, 2017.
 
 \end{thebibliography}
