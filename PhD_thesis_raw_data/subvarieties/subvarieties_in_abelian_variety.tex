@@ -669,6 +669,39 @@ When $B=\{p_0,q_0\}$, write $\eta^{\vee}(p+q)=\mathcal{O}_{C'}(p')$, then
 $$\mathcal{O}_{C'}(2p+2q) = \left(\eta^{\vee}\right)^{\otimes 2}(2p+2q+p_0+q_0) = \mathcal{O}_{C'}(2p'+p_0+q_0) \quad\in g_4^1.$$
 \end{proof}
 
+\begin{remark}
+Based on the strategy used in the proof of Lemma 2.10, we can in fact obtain stronger results. For $p \in C$,
+\begin{equation*}
+\begin{aligned}
+\;& |\omega_{C'} \otimes \eta|\text{ is ramified at $p$} && \text{(i.e., the tangent map is $0$ at $p$)}\\
+  \Longleftrightarrow\;& h^0 \left(\omega_{C'} \otimes \eta\right) -  h^0 \left(\omega_{C'} \otimes \eta(-2p)\right) = 1\qquad && \text{By \cite[19.2.9]{vakil2017rising}}\\ 
+  \Longleftrightarrow\;& h^0 \left(\omega_{C'} \otimes \eta(-2p)\right) = n - 1 && \text{Since $\dim_{\mathbb{C}} A = n$}\\
+  \Longleftrightarrow\;& h^0 \left( \eta^{\vee}(2p)\right) = 1 && \text{Via Riemann--Roch}\\   
+\end{aligned}
+\end{equation*}
+
+For the remainder of this discussion, we focus exclusively on the case $B = \varnothing$. Combining both,
+\begin{equation*}
+\begin{aligned}
+\;& |\omega_{C'} \otimes \eta|\text{ is not generically injective} \\
+  \Longleftrightarrow\;&\text{For any } p \in C', \text{ there exist } q \in C' \text{ such that } h^0 \left( \eta^{\vee}(p+q)\right) = 1 \\   
+\Longleftrightarrow\;&\text{For any } p \in C', \text{ there exist } q \in C' \text{ such that }  \eta^{\vee}+p \in C'+C'-q \\  
+\Longleftrightarrow\;&  \eta^{\vee}+C' \subseteq C'+ C'- C'. \\ 
+\end{aligned}
+\end{equation*}
+
+It is expected that
+\begin{equation}\label{eq:remove_extra_C}
+\eta^{\vee}+C' \subseteq C'+ C'- C' \quad\Longleftrightarrow\quad \eta^{\vee} \in C'- C'.
+\end{equation}
+If so, writing $\eta^{\vee}=\mathcal{O}_{C'}(p-q)$, we obtain
+$$\mathcal{O}_{C'}(2p)=\mathcal{O}_{C'}(2q) \in g_2^1,$$
+which implies that $C'$ is hyperelliptic. By Fact ???, this forces $C$ to be hyperelliptic as well, and hence it lies outside the scope of our discussion.
+
+Unfortunately, \eqref{eq:remove_extra_C} does not hold in general. A counterexample, communicated to me by Prof. Farkas, will be presented in Proposition ???.
+
+\end{remark}
+
 \section{Families of subvarieties}
 
 \section{Tannakian formalism}

@@ -7,4 +7,4 @@
 \contentsline {subsection}{\tocsubsection {}{2.2}{Curves in Prym variety}}{6}{subsection.2.2}% 
 \contentsline {section}{\tocsection {}{3}{Families of subvarieties}}{7}{section.3}% 
 \contentsline {section}{\tocsection {}{4}{Tannakian formalism}}{7}{section.4}% 
-\contentsline {section}{\tocsection {}{}{References}}{7}{section*.4}% 
+\contentsline {section}{\tocsection {}{}{References}}{8}{section*.4}% 
