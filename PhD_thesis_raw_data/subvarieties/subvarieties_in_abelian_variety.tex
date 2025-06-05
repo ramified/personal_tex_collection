@@ -355,7 +355,7 @@ For simplicity, we work over the base field $\kappa = \mathbb{C}$, and by a vari
 The goal of my research is to understand the geometry of $Z$, and the main tool for the subvariety geometry is the Gauss map. The Gauss map describe the tangent space information at each point: 
 $$\phi_Z: \Zsm \longrightarrow \Gr(r,T_0 A) \qquad p \longmapsto T_pZ \;\;\subseteq T_pA \cong T_0 A$$
 Any map to the Grassmannian $\Gr(r, n)$ is induced by a rank $r$ vector bundle together with $n$ global sections. In this case, the map $\phi_Z$ is induced by the tangent bundle $\mathcal{T}_{\Zsm}$ and the sections
-$$H^0(A,\mathcal{T}_{\Zsm}) \otimes_{\mathbb{C}} \mathcal{O}_{\Zsm} \twoheadrightarrow \mathcal{T}_{\Zsm}.$$
+$$\Hnm^0(A,\mathcal{T}_{\Zsm}) \otimes_{\mathbb{C}} \mathcal{O}_{\Zsm} \twoheadrightarrow \mathcal{T}_{\Zsm}.$$
 
 \subsection{Conormal variety}
 This concept may already be familiar to many readers, so we briefly recall the definition. On the smooth locus, the normal and conormal bundles behave well as vector bundles:\footnote{This is more symmetric when writing them as short exact sequences:
@@ -638,9 +638,9 @@ The Abel–Prym map $\AP_{C/C'}$ does not always behave as nicely as the Abel–
 In the Prym setting, the corresponding Gauss map $\gamma_C$ factors through $h$: 
 % https://q.uiver.app/#q=WzAsMTEsWzAsMCwiXFxnYW1tYV9DOiJdLFsxLDAsIkMiXSxbMiwwLCJDJyJdLFszLDAsIlxcbWF0aGJie1B9XntuLTF9Il0sWzUsMCwiXFxtYXRoYmJ7UH1cXCFcXGxlZnQoIEheMChcXG9tZWdhX3tDJ30gXFxvdGltZXMgXFxldGEpXiogXFxyaWdodCkiXSxbNSwxLCJcXEdyXFxsZWZ0KG4tMSwgSF4wKFxcb21lZ2Ffe0MnfSBcXG90aW1lcyBcXGV0YSlcXHJpZ2h0KSJdLFs1LDIsIkheMFxcbGVmdChcXG9tZWdhX3tDJ30gXFxvdGltZXMgXFxldGEoLXApXFxyaWdodCkiXSxbMiwyLCJwIl0sWzEsMiwiXFx0aWxkZXtwfSJdLFs0LDAsIj0iXSxbNCwxLCJcXGNvbmciXSxbOCw3LCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtYXBzIHRvIn19fV0sWzIsMywifFxcb21lZ2Ffe0MnfSBcXG90aW1lcyBcXGV0YXwiXSxbMSwyLCJoIl0sWzcsNiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibWFwcyB0byJ9fX1dXQ==
 \[\begin{tikzcd}[column sep=10mm,row sep=-2mm]
-	{\gamma_C:} &[-12mm] C & {C'} & [5mm] {\mathbb{P}^{n-1}} & [-12mm]{=} &[-12mm] {\hspace{-10mm}\mathbb{P}\!\left( H^0(\omega_{C'} \otimes \eta)^* \right)} \\
-	&&&& \cong & {\Gr\left(n-1, H^0(\omega_{C'} \otimes \eta)\right)} \\[1mm]
-	& {\tilde{p}} & p &&& {H^0\left(\omega_{C'} \otimes \eta(-p)\right)}
+	{\gamma_C:} &[-12mm] C & {C'} & [5mm] {\mathbb{P}^{n-1}} & [-12mm]{=} &[-12mm] {\hspace{-10mm}\mathbb{P}\!\left( \Hnm^0(\omega_{C'} \otimes \eta)^* \right)} \\
+	&&&& \cong & {\Gr\left(n-1, \Hnm^0(\omega_{C'} \otimes \eta)\right)} \\[1mm]
+	& {\tilde{p}} & p &&& {\Hnm^0\left(\omega_{C'} \otimes \eta(-p)\right)}
 	\arrow["h", from=1-2, to=1-3]
 	\arrow["{|\omega_{C'} \otimes \eta|}", from=1-3, to=1-4]
 	\arrow[maps to, from=3-2, to=3-3]
@@ -696,11 +696,45 @@ It is expected that
 \end{equation}
 If so, writing $\eta^{\vee}=\mathcal{O}_{C'}(p-q)$, we obtain
 $$\mathcal{O}_{C'}(2p)=\mathcal{O}_{C'}(2q) \in g_2^1,$$
-which implies that $C'$ is hyperelliptic. By Fact ???, this forces $C$ to be hyperelliptic as well, and hence it lies outside the scope of our discussion.
+which implies that $C'$ is hyperelliptic. By Fact \ref{fact:etale_cover_of_hyperelliptic_curves}, this forces $C$ to be hyperelliptic as well, and hence it lies outside the scope of our discussion.
 
-Unfortunately, \eqref{eq:remove_extra_C} does not hold in general. A counterexample, communicated to me by Prof. Farkas, will be presented in Proposition ???.
-
+Unfortunately, \eqref{eq:remove_extra_C} does not hold in general. A counterexample, communicated to me by Gavril Farkas, will be presented in Proposition \ref{prop:fail_to_remove_extra_C}.
 \end{remark}
+
+\begin{fact}[{From \cite[p346]{Mum74}}]\label{fact:etale_cover_of_hyperelliptic_curves}
+We have an explicit classification of $2:1$ unramified covers of a hyperelliptic curve $C'$. Let $\pi: C' \to \mathbb{P}^1$ be the double cover ramified at $\{p_1, \ldots, p_{2g+2}\}$, then every such unramified double cover of $C'$ arises from some line bundle in $C$ of the form
+$$\eta:= \mathcal{O}_{C'}(p_{i_1} + \cdots + p_{i_l} - p_{i_{l+1}}-\cdots - p_{i_{2l}}) = \mathcal{O}_{C'}\left( \sum_{j=1}^{2l}p_{i_j}-2l \cdot p_{1}  \right).$$ 
+When $l = 1$, the associated covering curve $C$ is also hyperelliptic.
+\end{fact}
+
+\begin{ques}\label{ques:mon_gp_for_classical_Prym}
+Can one find a non-hyperelliptic curve $C'$ and a nontrivial line bundle $\eta \in \Jac(C')$ satisfying $\eta^{\otimes 2} \cong \mathcal{O}_{C'}$, such that 
+$$\eta^{\vee}+C' \subseteq C'+ C'- C'?$$
+If such a pair exists, can we find a case where the resulting curve $C \subset A$ is not preserved under any translation on $A$?
+\end{ques}
+
+As a key example relevant to Question \ref{ques:mon_gp_for_classical_Prym}, I include here a result of Gavril Farkas.
+
+\begin{proposition}[{See \cite[Proposition 2.8]{FK16}}]\label{prop:fail_to_remove_extra_C}
+ Let $C$ be a general smooth curve of genus $g = 2i$, and suppose $D \in W_{i+1}^1(C)$ is a pencil of minimal degree—i.e., a line bundle $\mathcal{O}_{C}(D) \in \Pic^{i+1}(C)$ with $h^0(C, \mathcal{O}_{C}(D)) = 2$. Define
+ $$\mathcal{L}:= K_C-2D \in \Pic^{2i-4}(C),$$
+ then $\mathcal{L}$ satisfies 
+ $$\mathcal{L} + C \subset C_{2i-2}-C, \quad \text{but} \quad\mathcal{L} \notin C_{2i-3}-C.$$
+\end{proposition}
+
+\begin{remark}
+Take $i=2$, the line bundle $\mathcal{L}$ provides a counterexample to \eqref{eq:remove_extra_C}. However, this example does not directly yield a counterexample to Question \ref{ques:mon_gp_for_classical_Prym}. This is due to the uncertainty of whether there exist $C$ and $D$ satisfying $\mathcal{L}^{\otimes 2} \cong \mathcal{O}_C$, and whether the curve $C$ is sufficiently general for Proposition \ref{prop:fail_to_remove_extra_C} to hold. 
+
+I intend to revisit the proof in detail, especially the use of the base point free pencil trick and the Petri map. Should this yield any useful observations, they will be included here.
+\end{remark}
+
+\subsection{Albanese variety}
+Let $X$ be a smooth complex projective variety of dimension $r$, and set $n := \dim_{\mathbb{C}} \Hnm^0(X, \Omega_X) = h^{1,0}$.
+Recall that the Albanese variety of $X$ is defined as
+$$\Alb(X):=\Hnm^0(X, \Omega_X)^* / \Hnm_1(X, \mathbb{Z})_{\mathrm{free}},$$
+and the Albanese map is given by (pick a base point $p_0 \in X$)
+$$\alpha: X \longrightarrow \Alb(X) \qquad 
+\qquad p \longmapsto \left[ \;\;\omega \mapsto \int_{\gamma: p_0 \sim p} \omega \;\;\right].$$
 
 \section{Families of subvarieties}
 

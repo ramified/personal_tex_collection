@@ -17,6 +17,11 @@ Giulio Codogni and Thomas Kr{\"a}mer.
 \newblock Semicontinuity of {Gauss} maps and the {Schottky} problem.
 \newblock {\em Math. Ann.}, 382(1-2):607--630, 2022.
 
+\bibitem{FK16}
+Gavril Farkas and Michael Kemeny.
+\newblock The generic {Green}-{Lazarsfeld} secant conjecture.
+\newblock {\em Invent. Math.}, 203(1):265--301, 2016.
+
 \bibitem{JKLM22}
 Ariyan Javanpeykar, Thomas Kr{\"a}mer, Christian Lehn, and Marco Maculan.
 \newblock The monodromy of families of subvarieties on abelian varieties.
@@ -32,6 +37,14 @@ Thomas Kr{\"a}mer.
 Thomas Kr{\"a}mer and Rainer Weissauer.
 \newblock Vanishing theorems for constructible sheaves on abelian varieties.
 \newblock {\em J. Algebr. Geom.}, 24(3):531--568, 2015.
+
+\bibitem{Mum74}
+David Mumford.
+\newblock {\em The red book of varieties and schemes. {Includes} the {Michigan}
+  lectures (1974) on ``{Curves} and their {Jacobians}''.}, volume 1358 of {\em
+  Lect. Notes Math.}
+\newblock Berlin: Springer, 2nd, expanded ed. with contributions by {Enrico}
+  {Arbarello} edition, 1999.
 
 \bibitem{vakil2017rising}
 Ravi Vakil.
