@@ -276,8 +276,8 @@
 \DeclareMathOperator{\Prym}{\operatorname{Prym}}
 \DeclareMathOperator{\Nm}{\operatorname{Nm}}
 \DeclareMathOperator{\gon}{\operatorname{gon}}
-
-
+\DeclareMathOperator{\univ}{\operatorname{univ}}
+\DeclareMathOperator{\Abel}{\operatorname{Abel}}
 
 
 %%%%%%%newcommand
@@ -919,7 +919,7 @@ For any irreducible conic Lagrangian cycle $\mathbf{\Lambda} \subset T^*A$, let 
 
 Why do we shift attention from $Z$ to $\Lambda_Z$ as the main object of study? One reason is the uniformity of $\Lambda_Z$: it always has dimension $n$, and in most cases, the natural map $\Lambda_Z \to T_0^* A$ is generically finite, with fibers lying inside $A$.
 
-\begin{definition}[clean cycle]
+\begin{definition}[Clean cycle]
 An irreducible Lagrangian cycle $\mathbf{\Lambda} \subset T^*A$ is called clean if the composed projection
 $$\mathbf{\Lambda} \longrightarrow T^*A \twoheadrightarrow T_0^*A$$
 is generically finite.
@@ -950,6 +950,140 @@ and $a: A \times A \longrightarrow A$ is the addition map in $A$.
 \begin{proofsketch}
 To establish the claim, it suffices to show that $\Lambda_{Z_1} \circ \Lambda_{Z_2}$ defines a weighted conic Lagrangian cycle. The conic property follows directly from the definition, while the Lagrangian condition can be verified at a general point $(p_1 + p_2, \xi) \in \Lambda_{Z_1} \circ \Lambda_{Z_2}$.
 \end{proofsketch}
+
+We now consider the projective versions of all objects involved, so that we may make use of properness.
+
+\begin{lemma}\label{lem:mon_of_prod}\
+\begingroup
+\upshape
+%\setlist{itemsep=-0.4em}
+\renewcommand\labelenumi{(\theenumi)}
+\begin{enumerate}[(1)]
+\item Suppose that $\mathbb{P}\Lambda_{Z_1}, \mathbb{P}\Lambda_{Z_1} \subset \mathbb{P}T^*A$ admit monodromy representations $$\rho_{\gamma_{Z_i}}: \pi_1(U,\xi_0) \longrightarrow \Aut\left(\gamma_{Z_i}^{-1}(\xi_0)\right),$$ 
+then $\mathbb{P}\Lambda_{Z_1} \times_{\mathbb{P}^{\vee}} \mathbb{P}\Lambda_{Z_2} \subset A\times A \times \mathbb{P}^{\vee}$ admits monodromy representation given by
+$$(\rho_{\gamma_{Z_1}},\rho_{\gamma_{Z_2}}): \pi_1(U,\xi_0) \longrightarrow \Aut\left(\gamma_{Z_1}^{-1}(\xi_0) \times \gamma_{Z_2}^{-1}(\xi_0)\right),$$ 
+\item When $Z_1=Z_2=Z$, we obtain an one-to-one correspondence:
+$$\left\{ 
+\begin{aligned}
+  &\text{ irr components of } \mathbb{P}\Lambda_{Z} \times_{\mathbb{P}^{\vee}} \mathbb{P}\Lambda_{Z}  \\ 
+  &\hspace{10mm}\text{ with a surjection to } \mathbb{P}^{\vee}
+\end{aligned}
+ \right\} \longleftrightarrow 
+\left\{ 
+\begin{aligned}
+  &\Gal(\gamma_{Z})\text{-orbits of }  \\ 
+  &\;\;\gamma_{Z}^{-1}(\xi_0) \times \gamma_{Z}^{-1}(\xi_0)
+\end{aligned}
+ \right\} 
+ $$
+\end{enumerate}
+\endgroup
+\end{lemma}
+\begin{proofsketch}
+Statement (1) holds by definition. The proof of (2) reduces to the following purely topological statement:
+\begin{claim}
+Let $\pi: E \longrightarrow B$ be a (unramified) covering space over a manifold $B$ with deck transformation group $G$, then
+$$\left\{ \rule{0mm}{3.1mm}\text{ connected components of }E \times_B E \;\right\} \longleftrightarrow \left\{   \;G\text{-orbits of } \pi^{-1}(b_0) \times \pi^{-1}(b_0)\; \right\}. $$
+\end{claim}
+\noindent The claim follows directly from the correspondence between covering spaces over $B$ and $\pi_1(B)$-sets; see \cite[Theorem 1.38]{Ha02}.
+\end{proofsketch}
+
+Generalizing the argument of Lemma \ref{lem:mon_of_prod}, we arrive at the following lemma.
+
+\begin{lemma}
+For $d=\deg \gamma_{Z}$, $\xi_0 \in T_0^* A$ a general point, write
+\begin{equation*}
+\begin{aligned}
+  \mathbb{P}\Lambda_{Z}^{\times d} :=\;&\;\; \mathbb{P}\Lambda_{Z} \times_{\mathbb{P}^{\vee}}\mathbb{P}\Lambda_{Z} \times_{\mathbb{P}^{\vee}} \cdots \times_{\mathbb{P}^{\vee}} \mathbb{P}\Lambda_{Z} && \subset A^d \times \mathbb{P}^{\vee}\\ 
+  \gamma_{Z}^{-1}(\xi_0)^{d} :=\;& \gamma_{Z}^{-1}(\xi_0) \times \gamma_{Z}^{-1}(\xi_0) \times \cdots \times \gamma_{Z}^{-1}(\xi_0) && \subset A^d \\ 
+\end{aligned}
+\end{equation*}
+\begingroup
+\upshape
+%\setlist{itemsep=-0.4em}
+\renewcommand\labelenumi{(\theenumi)}
+\begin{enumerate}[(1)]
+\item we obtain an one-to-one correspondence:
+$$\left\{ 
+\begin{aligned}
+  &\text{ irr components of } \mathbb{P}\Lambda_{Z}^{\times d}  \\ 
+  &\hspace{0mm}\text{ with a surjection to } \mathbb{P}^{\vee}
+\end{aligned}
+ \right\} \longleftrightarrow 
+\left\{ 
+\begin{aligned}
+  &\Gal(\gamma_{Z})\text{-orbits of }  \\ 
+  &\hspace{8mm}\gamma_{Z}^{-1}(\xi_0) ^d
+\end{aligned}
+ \right\} 
+ $$
+\item Write
+\begin{equation*}
+\begin{aligned}
+  \Delta_d :=\;&\left\{ (p_1,\ldots,p_d) \in A^d \;\middle|\; p_i=p_j \text{ for some } i \neq j  \right\} && \subset A^d \\ 
+  \mathbb{P}\Lambda_{Z}^{[d]} :=\;& \overline{\left( \mathbb{P}\Lambda_{Z}^{\times d} \smallsetminus \left( \Delta_d \times \mathbb{P}^{\vee} \right) \right)|_U} && \subset A^d \times \mathbb{P}^{\vee}\\ 
+\end{aligned}
+\end{equation*}
+Fix a general point $\xi_0 \in \mathbb{P}^{\vee}$ and a well-order for $\gamma_{Z}^{-1}(\xi_0)$, one can identify $S_d \cong \gamma_{Z}^{-1}(\xi_0)^d \smallsetminus \Delta_d$, and 
+$$\left\{ 
+\text{ irr components of } \mathbb{P}\Lambda_{Z}^{[d]}  
+ \;\right\} \longleftrightarrow 
+\left\{ \;\rule{0mm}{3.3mm}
+\Gal(\gamma_{Z})\text{-orbits of }  S_d
+ \;\right\} 
+ $$
+ In reference, $\Delta_d$ is usually called the big diagonal.
+\end{enumerate}
+\endgroup
+\end{lemma}
+
+From this point on, we fix an irreducible component of $\mathbb{P}\Lambda_{Z}^{[d]}$, denoted by $\mathbb{P}\Lambda_{Z}^{\univ}$. As we will see in Definition A, this variety generates all subvarieties within the families under consideration.
+
+\begin{definition}[The subvariety $Z^{(m)}$]
+For any tuple $(m) = (m_1, \ldots, m_d) \in \mathbb{Z}^d$, we define the weighted sum map
+$$a^{(m)}: A^d \longrightarrow A \qquad (p_1,\ldots,p_d) \longmapsto \sum_{i=1}^{d} m_ip_i.$$
+We also define 
+$$\mathbb{P}\Lambda_{Z}^{(m)}: = \left( a^{(m)},\Id_{\mathbb{P}^{\vee}}  \right)_* \mathbb{P}\Lambda_{Z}^{\univ}.$$
+as the (projectivized) weighted Lagrangian cycle in $\mathbb{P}T^*A$. The projective cycle $\mathbb{P}\Lambda_{Z}^{(m)}$ is irreducible but may appear with multiplicities. We can therefore write
+$$\mathbb{P}\Lambda_{Z}^{(m)} = c_Z^{(m)}  \mathbb{P}\Lambda_{Z^{(m)}}$$
+where $c_Z^{(m)} \in \mathbb{Z}_{>0}$ and $Z^{(m)} \subset A$ are uniquely determined. This gives rise to a family of subvarieties parametrized by $\mathbb{Z}^d$.
+\end{definition}
+
+The next lemma gathers some basic properties of $Z^{(m)}$. Observe that $S_d=\Aut\left(\gamma_{Z}^{-1}(\xi_0)\right)$ acts naturally on $\mathbb{Z}^d$ via
+$$g(m)=\left(m_{g(1)},\ldots , m_{g(d)}\right) \in \mathbb{Z}^d.$$
+
+\begin{lemma}\
+\begingroup
+\upshape
+%\setlist{itemsep=-0.4em}
+\renewcommand\labelenumi{(\theenumi)}
+\begin{enumerate}[(1)]
+\item For all $g\in \Gal(\gamma_{Z})$, we have $ Z^{g(m)}=Z^{(m)}$, $c_Z^{g(m)}=c_Z^{(m)}$;
+\item For $(m)=(1,0,\ldots,0)\in \mathbb{Z}^d$, $Z^{(m)}=Z$;
+\item For all $(m), (m') \in \mathbb{Z}^d$, we have  $\mathbb{P}\Lambda_{Z}^{(m)} \circ \mathbb{P}\Lambda_{Z}^{(m')} = \mathbb{P}\Lambda_{Z}^{(m+m')}$;
+\item The group $\left< \mathbb{P}\Lambda_{Z^{(m)}} \right>_{\Abel}$ is closed under the convolution product.
+\end{enumerate}
+\endgroup
+\end{lemma}
+
+\begin{ques}\label{ques:homo_class_of_subvarieties}
+Can we compute the dimension and the homology class for these subvarieties $Z^{(m)}$?
+\end{ques}
+
+At first glance, this question may appear naive, but it turns out to be extremely challenging. The main difficulty lies in determining the homology class of $\mathbb{P}\Lambda_{Z}^{\univ}$. Once this is known, one can compute the pushforward to obtain the homology class of $\mathbb{P}\Lambda_{Z}^{(m)}$, from which both $\dim_{\mathbb{C}} Z^{(m)}$ and the homology class of $Z^{(m)}$ (up to a scalar factor $c_Z^{(m)}$) can be extracted.
+
+However, standard intersection theory yields only the homology class of $\mathbb{P}\Lambda_Z^{[d]}$, via the Chern–Mather class of $Z$. At present, there is no known method for computing the homology class of a single irreducible component of $\mathbb{P}\Lambda_Z^{[d]}$. Although we can distinguish these components topologically, we lack tools to compute their topological invariants, which presents an unfortunate limitation.
+
+Nevertheless, Question \ref{ques:homo_class_of_subvarieties} can still be addressed in certain special situations. For instance, when $\Gal(\gamma_Z) = S_n$, the space $\mathbb{P} \Lambda_Z^{[d]}$ is known to be irreducible, enabling explicit computation. Similarly, when $Z = -Z$ and $\Gal(\gamma_Z) = W(C_{d/2})$, one can impose additional conditions (e.g., $p_{2l-1} = -p_{2l}$) to guarantee the uniqueness of $\mathbb{P} \Lambda_Z^{\univ}$, which again allows us to perform the computation.
+
+\begin{ques}
+Suppose $d = 2d_0$ with $d_0$ even, $(m) \in \mathbb{Z}^d$, and $g \in W(C_{d/2}) \smallsetminus W(D_{d/2})$. Is it possible to construct an example with $Z = -Z$ and $\Gal(\gamma_Z) = W(D_{d/2})$, yet $\dim_{\mathbb{C}} Z^{g(m)} \neq \dim_{\mathbb{C}} Z^{(m)}$?
+\end{ques}
+
+\begin{ques}
+Suppose that $Z$ is the Fano surface of a smooth cubic threefold, and let $A := \Alb(Z)$. How can we compute the homology class of $Z^{(m)}$?
+\end{ques}
+
 
 \section{Tannakian formalism}
 

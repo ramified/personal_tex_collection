@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Ar85I}
 E.~Arbarello, M.~Cornalba, P.~A. Griffiths, and J.~Harris.
@@ -21,6 +21,11 @@ Giulio Codogni and Thomas Kr{\"a}mer.
 Gavril Farkas and Michael Kemeny.
 \newblock The generic {Green}-{Lazarsfeld} secant conjecture.
 \newblock {\em Invent. Math.}, 203(1):265--301, 2016.
+
+\bibitem{Ha02}
+Allen Hatcher.
+\newblock {\em Algebraic topology}.
+\newblock Cambridge: Cambridge University Press, 2002.
 
 \bibitem{JKLM22}
 Ariyan Javanpeykar, Thomas Kr{\"a}mer, Christian Lehn, and Marco Maculan.
