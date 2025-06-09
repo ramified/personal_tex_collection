@@ -83,8 +83,6 @@
 
 
 
-
-
 %%%%%%%%%%%%%%%%%%%% here we include theoremstyles
 
 \numberwithin{equation}{section}
@@ -901,6 +899,57 @@ The precise formulation of this question is somewhat ambiguous, and depending on
  
 
 \section{Families of subvarieties}
+
+In this section, we move from the study of monodromy groups to a more direct analysis of the subvarieties themselves. Given an initial subvariety, one can naturally generate a family of subvarieties. Our goal here is to define these families and investigate their properties.
+
+\begin{proposition}
+All irreducible conic Lagrangian cycles in $T^*A$ are of the form $\Lambda_Z$ for some irreducible subvariety $Z \subset A$. This yields a one-to-one correspondence between irreducible conic Lagrangian cycles in $T^*A$ and irreducible subvarieties of $A$:
+$$\left\{\text{ irreducible conic Lagrangian cycles in $T^*A$ }   \right\} \longleftrightarrow \left\{\text{ irreducible subvarieties in $A$ }   \right\}$$
+\end{proposition}
+
+\begin{proofsketch}
+For any irreducible conic Lagrangian cycle $\mathbf{\Lambda} \subset T^*A$, let $Z$ denote the image of $\mathbf{\Lambda}$ under the natural projection $T^*A \to A$. Our goal is to show that $\mathbf{\Lambda} = \Lambda_Z$.
+\begin{itemize}
+\item By definition, $\mathbf{\Lambda} \subset T^*A|_Z$.
+\item Since $\mathbf{\Lambda}$ is conic, we have $s(Z) \subset \mathbf{\Lambda}$, where $s : A \to T^*A$ denotes the zero section.
+\item Since $\mathbf{\Lambda}$ is Lagrangian and $s(Z) \subset \mathbf{\Lambda}$, we have $\mathbf{\Lambda} \subset \Lambda_Z$.
+\item Since $\Lambda_Z$ is irreducible with $\dim_{\mathbb{C}} \mathbf{\Lambda} = \dim_{\mathbb{C}} \Lambda_Z = n$, we have $\mathbf{\Lambda} = \Lambda_Z$.
+\end{itemize}
+\end{proofsketch}
+
+Why do we shift attention from $Z$ to $\Lambda_Z$ as the main object of study? One reason is the uniformity of $\Lambda_Z$: it always has dimension $n$, and in most cases, the natural map $\Lambda_Z \to T_0^* A$ is generically finite, with fibers lying inside $A$.
+
+\begin{definition}[clean cycle]
+An irreducible Lagrangian cycle $\mathbf{\Lambda} \subset T^*A$ is called clean if the composed projection
+$$\mathbf{\Lambda} \longrightarrow T^*A \twoheadrightarrow T_0^*A$$
+is generically finite.
+\end{definition}
+
+Another important reason is that the space of weighted clean conic Lagrangian cycles naturally acquires a convolution structure, arising from the group law on $A$, which plays a central role in the analysis.
+
+\begin{proposition}
+The group of weighted clean conic Lagrangian cycles
+\begin{equation*}
+\begin{aligned}
+  \mathcal{L}(A):=\;& \left\{ \text{weighted clean conic Lagrangian cycles in }T^*A \right\}  \\ 
+  =\;& \left\{ \raisebox{1.5mm}{$\displaystyle\sum_{\substack{Z_i \subset A \\ \text{irr clean}}}$}n_i \Lambda_{Z_i}\; \middle|\; n_i \in \mathbb{Z} \right\}  \\ 
+\end{aligned}
+\end{equation*}
+has a natural convolution structure as follows: 
+\begin{equation*}
+\begin{aligned}
+  \Lambda_{Z_1} \circ \Lambda_{Z_2}=\;& \text{ the clean part of }(a,\Id_{T_0^* A})_* \left( \Lambda_{Z_1} \times_{T_0^* A} \Lambda_{Z_2} \right) \\ 
+  =\;& \overline{(a,\Id_{U})_* \left( \Lambda_{Z_1}|_U \times_{U} \Lambda_{Z_2}|_U \right)} \\ 
+\end{aligned}
+\end{equation*}
+where 
+$$U:=\left\{ \xi \in T_0^*A \; \middle|\; \rule{0mm}{3.4mm}\deg \phi_{Z_i}= \# \phi_{Z_i}^{-1}(\xi) \text{ for } i=1,2 \right\}$$
+and $a: A \times A \longrightarrow A$ is the addition map in $A$.
+\end{proposition}
+
+\begin{proofsketch}
+To establish the claim, it suffices to show that $\Lambda_{Z_1} \circ \Lambda_{Z_2}$ defines a weighted conic Lagrangian cycle. The conic property follows directly from the definition, while the Lagrangian condition can be verified at a general point $(p_1 + p_2, \xi) \in \Lambda_{Z_1} \circ \Lambda_{Z_2}$.
+\end{proofsketch}
 
 \section{Tannakian formalism}
 
