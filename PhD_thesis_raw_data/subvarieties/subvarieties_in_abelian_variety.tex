@@ -352,7 +352,7 @@ For simplicity, we work over the base field $\kappa = \mathbb{C}$, and by a vari
 \subsection{Gauss map}
 The goal of my research is to understand the geometry of $Z$, and the main tool for the subvariety geometry is the Gauss map. The Gauss map describe the tangent space information at each point: 
 $$\phi_Z: \Zsm \longrightarrow \Gr(r,T_0 A) \qquad p \longmapsto T_pZ \;\;\subseteq T_pA \cong T_0 A$$
-Any map to the Grassmannian $\Gr(r, n)$ is induced by a rank $r$ vector bundle together with $n$ global sections. In this case, the map $\phi_Z$ is induced by the tangent bundle $\mathcal{T}_{\Zsm}$ and the sections
+Any map $X\longrightarrow\Gr(r, V)$ is induced by a rank $r$ vector bundle $\mathcal{E}$ on $X$ together with an epimorphism $V\otimes \mathcal{O}_X \twoheadrightarrow \mathcal{E}$. In our case, the map $\phi_Z$ is induced by the tangent bundle $\mathcal{T}_{\Zsm}$ and the sections
 $$\Hnm^0(A,\mathcal{T}_{\Zsm}) \otimes_{\mathbb{C}} \mathcal{O}_{\Zsm} \twoheadrightarrow \mathcal{T}_{\Zsm}.$$
 
 \subsection{Conormal variety}
@@ -360,7 +360,7 @@ This concept may already be familiar to many readers, so we briefly recall the d
 % https://q.uiver.app/#q=WzAsMTAsWzMsMCwiXFxtYXRoY2Fse059X3tcXFpzbS9BfSJdLFsxLDAsIlxcbWF0aGNhbHtUfV97XFxac219Il0sWzIsMCwiXFxtYXRoY2Fse1R9X0F8X3tcXFpzbX0iXSxbMSwxLCJcXExhbWJkYV97XFxac219ICJdLFsyLDEsIlxcT21lZ2FfQXxfe1xcWnNtfSAiXSxbMywxLCJcXE9tZWdhX3tcXFpzbX0gIl0sWzQsMCwiMCJdLFs0LDEsIjAiXSxbMCwwLCIwIl0sWzAsMSwiMCJdLFsxLDJdLFsyLDBdLFszLDRdLFs0LDVdLFswLDZdLFs1LDddLFs4LDFdLFs5LDNdXQ==
 \[\begin{tikzcd}[ampersand replacement=\&,column sep=2.25em,row sep=tiny]
 	0 \& {\mathcal{T}_{\Zsm}} \& {\mathcal{T}_A|_{\Zsm}} \& {\mathcal{N}_{\Zsm/A}} \& 0 \\
-	0 \& {\Lambda_{\Zsm} } \& {\Omega_A|_{\Zsm} } \& {\Omega_{\Zsm} } \& 0
+	0 \& {\mathcal{N}_{\Zsm/A}^* } \& {\Omega_A|_{\Zsm} } \& {\Omega_{\Zsm} } \& 0
 	\arrow[from=1-1, to=1-2]
 	\arrow[from=1-2, to=1-3]
 	\arrow[from=1-3, to=1-4]
@@ -371,8 +371,9 @@ This concept may already be familiar to many readers, so we briefly recall the d
 	\arrow[from=2-4, to=2-5]
 \end{tikzcd}\]
 }
-$$\mathcal{N}_{\Zsm/A} := \mathcal{T}_A|_{\Zsm} \;/\; \mathcal{T}_{\Zsm} \qquad \Lambda_{\Zsm}:= \mathcal{N}_{\Zsm/A}^* = \ker \left( \Omega_A|_{\Zsm} \rightarrow \rule{0mm}{3.4mm} \Omega_{\Zsm} \right).$$
-The conormal variety $\Lambda_{Z}$ is just the closure of $\Lambda_{\Zsm}$ viewed as a subvariety in $T^*A$:
+$$\mathcal{N}_{\Zsm/A} := \mathcal{T}_A|_{\Zsm} \;/\; \mathcal{T}_{\Zsm} \qquad \mathcal{N}_{\Zsm/A}^* = \ker \left( \Omega_A|_{\Zsm} \rightarrow \rule{0mm}{3.4mm} \Omega_{\Zsm} \right).$$
+We write $\Lambda_{\Zsm}$ as the total space of $\mathcal{N}_{\Zsm/A}^*$.
+The conormal variety $\Lambda_{Z}$ is the closure of $\Lambda_{\Zsm}$ viewed as a subvariety in $T^*A$:
 $$\Lambda_{Z}:=\;\; \overline{\Lambda_{\Zsm}} \;\; \subset T^*A \;\cong\; A \times T^{*}_{0}A$$
 this is a conical Lagrangian cycle in $T^*A$.
 
@@ -380,45 +381,45 @@ Moreover, the projectivized conormal variety
 $$\mathbb{P}\Lambda_{Z}:=\;\; \overline{\mathbb{P}\Lambda_{\Zsm}} \;\; \subset \mathbb{P}T^*A \;\cong\; A \times \mathbb{P}T^{*}_{0}A$$
 is a Legendrian cycle in the contact variety $A \times \mathbb{P}T^{*}_{0}A$. $\mathbb{P}\Lambda_{\Zsm}$ is a $\mathbb{P}^{r-1}$-bundle over $\Zsm$, and the map 
 $$\gamma_Z: \mathbb{P}\Lambda_{Z} \subset A \times \mathbb{P}T^{*}_{0}A \longrightarrow \mathbb{P}T^{*}_{0}A$$
-is generically finite (i.e., clean) when $Z$ is (an integral variety) of general type, see \cite[Theorem 2.8 (1)]{JKLM22}.
+is generically finite when $Z$ is (an integral variety) of general type, see \cite[Theorem 2.8 (1)]{JKLM22}.
 
-A lot of geometry of $Z$ is encoded in the map $\gamma_Z$. For instance, if $Z$ is smooth and lies inside $A$, then 
-$$\deg \gamma_Z = (-1)^r \chi(Z)$$
-tells us the Euler characteristic of $Z$.
+A lot of geometry of $Z$ is encoded in the map $\gamma_Z$. For instance, if $Z \subset A$ is smooth, then 
+$$\deg \gamma_Z = (-1)^r \chi(Z),$$
+where $\chi(Z)=\sum_i (-1)^i b_i(Z)$ is the topological Euler characteristic of $Z$.
 
-Further insight can be gained by analyzing the fibers of $\gamma_Z$. These fibers, though finite, are not arbitrary—they obey hidden structural rules. For instance, if $Z$ is preserved by a translation $t_v: A\longrightarrow A$, then each fiber $\gamma_Z^{-1}(\xi)$ is also invariant under $t_v$. Likewise, if $Z = -Z$, then the fiber satisfies $\gamma_Z^{-1}(\xi) = -\gamma_Z^{-1}(\xi)$. Outside these special configurations, it becomes more challenging to identify further constraints.\footnote{You can imagine the fiber $\gamma_Z^{-1}(\xi)$ as a cluster of stars projected onto a celestial dome. As $\xi$ varies, these points shift, tracing out paths much like stars drifting across the night sky. The constraints that govern them are subtle, like the imagined lines that shape constellations. And in the long arc of variation, monodromy emerges—like the slow turning that replaces Kochab with Polaris among the stars.}
+Further insight can be gained by analyzing the fibers of $\gamma_Z$. For instance, if $Z$ is preserved by a translation $t_v: A\longrightarrow A$, then each fiber $\gamma_Z^{-1}(\xi)$ is also invariant under $t_v$. Likewise, if $Z = -Z$, then the fiber satisfies $\gamma_Z^{-1}(\xi) = -\gamma_Z^{-1}(\xi)$. Finding further constraints is more challenging.\footnote{You can imagine the fiber $\gamma_Z^{-1}(\xi)$ as a cluster of stars projected onto a celestial dome. As $\xi$ varies, these points shift, tracing out paths much like stars drifting across the night sky. The constraints that govern them are subtle, like the imagined lines that shape constellations. And in the long arc of variation, monodromy emerges—like the slow turning that replaces Kochab with Polaris among the stars.}
 
 An important invariant arising from the fiber $\gamma_Z^{-1}(\xi)$ is the monodromy group $\Gal(\gamma_Z)$; for completeness, we recall its definition below.
 
 \begin{definition}
-Define
-$$U= \left\{ \xi  \in \mathbb{P}T^{*}_{0}A \,\middle|\, \# \gamma_Z^{-1}(\xi) = \deg \gamma_Z \right\}.$$ 
-Moving along a loop in $U$ induces a permutation of the points in the fiber $\gamma_Z^{-1}(\xi_0)$, which defines the map 
-$$\rho_{\gamma_Z}: \pi_1(U, \xi_0) \longrightarrow \Aut (\gamma_Z^{-1}(\xi_0)) = S_{\deg \gamma_Z}.$$ 
-The monodromy group is then defined as the image of $\rho_{\gamma_Z}$, i.e.,
-$$\Gal(\gamma_Z):= \Img \rho_{\gamma_Z}.$$
+Let $f: Y \to X$ be a generically finite morphism between algebraic varieties. Then there exists a non-empty Zariski-open subset $U \subseteq X$ such that the restriction $f^{-1}(U) \to U$ is a finite étale cover.
+Moving along a closed loop in $U$ induces a permutation of the points in the fiber $f^{-1}(\xi_0)$, which defines the map 
+$$\rho_{f}: \pi_1(U, \xi_0) \longrightarrow \Aut (f^{-1}(\xi_0)) = S_{\deg f}.$$ 
+The monodromy group is then defined as the image of $\rho_{f}$, i.e.,
+$$\Gal(f):= \Img \rho_{f}.$$
+It is clear that $\Gal(f)$ doesn't depend on the choice of $U$.
 \end{definition}
 \begin{ques}\label{ques:monodromy}
-Suppose that the subvariety $Z \subset A$ is not stable under any translation on $A$. Are there known algorithms to compute the monodromy group $\Gal(\gamma_Z)$? Furthermore, what kinds of groups can appear as $\Gal(\gamma_Z)$ for suitable choices of $Z \subset A$?
+Suppose that the subvariety $Z \subset A$ is not stable under any translation on $A$. Are there criterias to compute the monodromy group $\Gal(\gamma_Z)$? Furthermore, what kinds of groups can appear as $\Gal(\gamma_Z)$ for suitable choices of $Z \subset A$?
 \end{ques}
 
 We will try to compute $\Gal(\gamma_Z)$ for a number of specific cases in Section \ref{sec:mon_examples}. Three special cases are already treated in \cite[Theorem 9]{Kr16cubicthreefold}, and we will generalize the strategies there.
 
 \subsection{Interpolation via hyperplanes}
-Before delving into examples, we reinterpret $\gamma_Z$ using a functorial and more transparent framework, enabling a decomposition of Question \ref{ques:monodromy} into two primary subquestions. 
+Before delving into examples, we reinterpret $\gamma_Z$ using a functorial and more transparent framework, enabling us to decompose Question \ref{ques:monodromy} into two primary subquestions. 
 
-Recognizing that each non-zero conormal vector $\xi  \in T^{*}_{0}A$ determines a hyperplane $H_{\xi} \in \Gr(n-1, T_0A)$, we establish the isomorphisms 
+Since each non-zero conormal vector $\xi  \in T^{*}_{0}A$ determines a hyperplane $H_{\xi} \in \Gr(n-1, T_0A)$, we have the isomorphisms (To simplify notation, we abbreviate $T^{*}_{0}A$ by $W$.)
 \begin{equation*}
 \begin{aligned}
-   \mathbb{P}T^{*}_{0}A \cong\;& \Gr(n-1, T_0A) \,\hat{=} \left(\mathbb{P}^{n-1}\right)^{\vee}, \\ 
+   \mathbb{P}T^{*}_{0}A \cong\;& \Gr(n-1, T_0A), \\ 
     \mathbb{P}\Lambda_{\Zsm}=\;& \left\{\, (p,\xi)  \in \Zsm \times \mathbb{P}T^{*}_{0}A \;\middle|\; \xi|_{T_pZ}\! \equiv 0 \,\right\}  \\ 
-    \cong\;& \left\{\,\rule{0mm}{3.2mm} (p,H)  \in \Zsm \times \Gr(n-1, n) \;\middle|\; \phi_Z(p) \subseteq H \,\right\}  \\ 
+    \cong\;& \left\{\,\rule{0mm}{3.2mm} (p,H)  \in \Zsm \times \Gr(n-1, W) \;\middle|\; \phi_Z(p) \subseteq H \,\right\}  \\ 
     \cong\;& \left(\phi_Z, \Id \right)^{-1} I_{r, n-1},  \\ 
 \end{aligned}
 \end{equation*}
 where 
-$$I_{r, n-1}:= \left\{ \rule{0mm}{3.2mm} (V,H)  \in \Gr(r,n) \times \Gr(n-1, n) \;\middle|\; V \subseteq H \,\right\}$$ 
-is the incidence variety relating $\Gr(r,n)$ and $\Gr(n-1, n)$. In that case, 
+$$I_{r, n-1}:= \left\{ \rule{0mm}{3.2mm} (V,H)  \in \Gr(r,W) \times \Gr(n-1, W) \;\middle|\; V \subseteq H \,\right\}$$ 
+is the incidence variety relating $\Gr(r,W)$ and $\Gr(n-1, W)$. In these terms, 
 \begin{equation*}
 \begin{aligned}
     \gamma_Z^{-1}(H) \cap \Zsm=\;& \left\{\, p  \in \Zsm  \;\middle|\; \phi_Z(p) \subseteq H \,\right\}  \\ 
@@ -427,7 +428,7 @@ is the incidence variety relating $\Gr(r,n)$ and $\Gr(n-1, n)$. In that case,
 \end{equation*}
 is the collection of points whose tangent spaces lie entirely within $H$.
 
-Geometrically, the monodromy can be described as follows: given a general hyperplane $H$, its preimage consists of $d$ points ${ p_1, \ldots, p_d }$. Moving $H$ continuously along a loop causes these points to permute, and the monodromy group $\Gal(\gamma_Z)$ consists of all permutations obtained this way. With this new formulation, it suffices to consider the Gauss map $\phi_Z$ alone; the inclusion $\iota_Z: Z \to A$ is no longer required for computing the monodromy group.
+Geometrically, the monodromy can be described as follows: given a general hyperplane $H \in \mathbb{P}T^{*}_{0}A$, its preimage consists of $d$ points ${ p_1, \ldots, p_d }$. Moving $H$ continuously along a closed loop causes these points to permute, and the monodromy group $\Gal(\gamma_Z)$ consists of all permutations obtained this way. With this formulation, it suffices to consider the Gauss map $\phi_Z$ alone; the inclusion $\iota_Z: Z \to A$ is no longer required for computing the monodromy group.
 
 \begin{definition}\label{def:general_monodromy}
 Let $Z$ be an $r$-dimensional variety and $\phi: Z \longrightarrow \Gr(r,n)$ a morphism.  Suppose that for some $d \in \mathbb{N}_{>0}$, the set 
@@ -464,7 +465,7 @@ In the situation of Definition \ref{def:general_monodromy}, how can we compute $
 \end{ques}
 
 \begin{ques}\label{ques:mon_Grass_sub}
-Let $Z \subseteq \Gr(r,n)$ be a subvariety of dimension $r$ such that $[Z] \neq 0$ in $H_r(\Gr(r,n);\mathbb{Z})$. What can be said about its monodromy group? 
+Let $Z \subseteq \Gr(r,n)$ be a subvariety of dimension $r$ such that $[Z] \cdot [\Gr(r,H)] \neq 0$ in $H_r(\Gr(r,n);\mathbb{Z})$. What can be said about its monodromy group? 
 \end{ques}
 
 \begin{ques}\label{ques:when_are_maps_Gauss}
@@ -477,7 +478,9 @@ In this section, we discuss examples drawn from my ongoing work, focusing on the
 Broadly speaking, there are two approaches to constructing examples. One may start with a given variety $Z$ and attempt to embed it into an abelian variety—this always factors through its Albanese $\Alb(Z)$. Alternatively, one may begin with an abelian variety $A$ and construct subvarieties by intersecting suitable divisors. Unfortunately, even in the case where $Z$ is a curve, we have not fully resolved Question \ref{ques:monodromy}.
 
 \subsection{Curves, basic results}
-A complete answer to Question \ref{ques:mon_Grass_sub} is known when $Z = C$ is a curve.
+A complete answer to Question \ref{ques:mon_Grass_sub} is known when $Z = C$ is a curve. A curve $C \subseteq \mathbb{P}^{n-1}$ is said to be nondegenerate if it is not contained in any hyperplane $H \subseteq \mathbb{P}^{n-1}$.
+
+
 \begin{proposition}[See {\cite[p111]{Ar85I}} for a detailed proof]\label{prop:mon_of_embedded_curve}
 Suppose that $\iota_C: C \subseteq \mathbb{P}^{n-1}$ is an irreducible nondegenerate curve of degree $d$, then $\Gal(\iota_C) \cong S_d$.
 \end{proposition}
@@ -561,7 +564,7 @@ Let $\iota_{C'} : C' \hookrightarrow \mathbb{P}^{n-1}$ be an irreducible nondege
 \end{proposition}
 
 \begin{proofsketch}
-By Lemma \ref{lem:wreath_product} we know that $\Gal(\iota_{C'} \circ \covermap) \subseteq W(D_{d/2})$.
+By Lemma \ref{lem:wreath_product} we know that $\Gal(\iota_{C'} \circ \covermap) \subseteq W(C_{d/2})$.
 By Lemma \ref{lem: type_C_Weyl_group2}, we are reduced to verifying that:
 \begin{itemize}
 \item The quotient map $\Gal(\iota_{C'} \circ \covermap) \longrightarrow \Gal(\iota_{C'}) \cong S_{d/2}$ is surjective;
@@ -570,14 +573,15 @@ By Lemma \ref{lem: type_C_Weyl_group2}, we are reduced to verifying that:
 \end{proofsketch}
 
 \begin{lemma}\label{lem: type_C_Weyl_group2}
-Let $G$ be a subgroup of $W(D_{m})$, acting naturally on the set ${\pm 1, \ldots, \pm m}$. If the projection $G \to S_m$ is surjective  then 
-$$G \cong  W(C_{m}) \text{ or } W(D_{m}) \text{ or } S_{m}.$$
+Let $G$ be a subgroup of $W(C_{m})$, acting naturally on the set ${\pm 1, \ldots, \pm m}$. If the projection $G \to S_m$ is surjective  then 
+$$G \cong  W(C_{m}) \text{ or } W(D_{m}) \text{ or } S_2 \times S_m \text{ or } S_{m}.$$
 \end{lemma}
 
 \begin{proofsketch}(with help from Chenji Fu)
-Let $H$ denote the kernel of the natural quotient map $G \to S_m$. Then $H$ is stable under the action of $S_n$. There are only three possible forms that $H$ can take:
+Let $H$ denote the kernel of the natural quotient map $G \to S_m$. Then $H \subseteq (S_2)^{\oplus m}$ is stable under the action of $S_n$. There are only three possible forms that $H$ can take:
 \begin{itemize}
 \item $H=0$. Then $G\cong S_m$.
+\item $H=\left< (-1,\ldots,-1) \right> \cong S_2$. Then $G\cong S_2 \times S_m$.
 \item $H=(S_2^{\oplus m})_{0}$. Then $G$ is a index $2$ subgroup of $W(C_{m})$, so $G \cong W(D_{m})$.\footnote{Check \href{https://math.stackexchange.com/questions/3202823/wikipedia-inconsistency-with-the-index-2-subgroups-of-the-hyperoctahedral-group}{stackexchange discussions}} 
 \item $H=S_2^{\oplus m}$. Then $G=W(C_{m})$.
 \end{itemize}
@@ -822,7 +826,7 @@ is the zero set of section $\omega \in \Hnm^0(X,\Omega_X)$. The number $(-1)^r \
 \begin{remark}
 One can define the monodromy group in the real (or topological) setting in an analogous manner. Consider the set
 $$U:=\left\{\,\omega \in \Gamma(\Omega_M)      \;\middle|\; \rule{0mm}{3.0mm}  \text{ the zeros of $\omega$ are isolated with local index $1$ }  \right\}.$$
-A loop in $U$ induces a permutation of the zeros of $\omega$, and the monodromy group is defined as the group of all such permutations.
+A closed loop in $U$ induces a permutation of the zeros of $\omega$, and the monodromy group is defined as the group of all such permutations.
 
 However, when $\dim_{\mathbb{C}} M > 1$, the corresponding monodromy group is always the full symmetric group (as all transpositions occur). As a result, it does not yield any further insight into the topology of the manifold.
 \end{remark}
@@ -951,7 +955,7 @@ and $a: A \times A \longrightarrow A$ is the addition map in $A$. The general co
 To establish the claim, it suffices to show that $\Lambda_{Z_1} \circ \Lambda_{Z_2}$ defines a weighted conic Lagrangian cycle. The conic property follows directly from the definition, while the Lagrangian condition can be verified at a general point $(p_1 + p_2, \xi) \in \Lambda_{Z_1} \circ \Lambda_{Z_2}$.
 \end{proofsketch}
 
-We now consider the projective versions of all objects involved, so that we may make use of properness.
+We now consider the projective versions of all objects involved, so that we may make use of properness. To simplify notation, we abbreviate $\mathbb{P}T^{*}_{0}A$ by $\mathbb{P}^{\vee}$.
 
 \begin{lemma}\label{lem:mon_of_prod}\
 \begingroup
