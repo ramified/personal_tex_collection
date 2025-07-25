@@ -393,7 +393,7 @@ Further insight can be gained by analyzing the fibers of $\gamma_Z$. For instanc
 An important invariant arising from the fiber $\gamma_Z^{-1}(\xi)$ is the monodromy group $\Gal(\gamma_Z)$; for completeness, we recall its definition below.
 
 \begin{definition}
-Let $f: Y \to X$ be a generically finite morphism between algebraic varieties. Then there exists a non-empty Zariski-open subset $U \subseteq X$ such that the restriction $f^{-1}(U) \to U$ is a finite étale cover.
+Let $f: Y \to X$ be a generically finite morphism between algebraic varieties. Then there exists a non-empty open subset $U \subseteq X$ such that the restriction $f^{-1}(U) \to U$ is a finite étale cover.
 Moving along a closed loop in $U$ induces a permutation of the points in the fiber $f^{-1}(\xi_0)$, which defines the map\footnote{In the last isomorphism we implicitly give an order to the fiber $f^{-1}(\xi)$.}
 $$\rho_{f}: \pi_1(U, \xi_0) \longrightarrow \Aut (f^{-1}(\xi_0)) \cong S_{\deg f}.$$ 
 The monodromy group is then defined as the image of $\rho_{f}$, i.e.,
@@ -729,7 +729,75 @@ As a key example relevant to Question \ref{ques:mon_gp_for_classical_Prym}, I in
 \begin{remark}
 Take $i=2$, the line bundle $\mathcal{L}$ provides a counterexample to \eqref{eq:remove_extra_C}. However, this example does not directly yield a counterexample to Question \ref{ques:mon_gp_for_classical_Prym}. This is due to the uncertainty of whether there exist $C$ and $D$ satisfying $\mathcal{L}^{\otimes 2} \cong \mathcal{O}_C$, and whether the curve $C$ is sufficiently general for Proposition \ref{prop:fail_to_remove_extra_C} to hold. 
 
-I intend to revisit the proof in detail, especially the use of the base point free pencil trick and the Petri map. Should this yield any useful observations, they will be included here.
+%I intend to revisit the proof in detail, especially the use of the base point free pencil trick and the Petri map. Should this yield any useful observations, they will be included here.
+
+\begin{lemma}
+Let $Q$ and $\tilde{Q}$ be two reduced quartic surfaces in $\mathbb{P}^3$, and assume that $\tilde{Q}$ is smooth. Then $Q$ and $\tilde{Q}$ cannot intersect a line with multiplicity $4$.
+\end{lemma}
+\begin{proof}
+We prove by contradiction. Without loss of generality, assume that $Q \cap \tilde{Q} = 4L$, where $L = \left\{ [x:y:0:0] \right\} \subset \mathbb{P}^3$ is a line. We can write down the equations of the quartics:
+\begin{equation*}
+\begin{aligned}
+  Q:\;&  f(z_0,z_1,z_2,z_3)=0 \\ 
+  \tilde{Q}:\;&  \tilde{f}(z_0,z_1,z_2,z_3)=0 \\ 
+\end{aligned}
+\end{equation*}
+where
+\begin{equation*}
+\begin{aligned}
+ f(z_0,z_1,z_2,z_3) =\;& \sum_{i+j<2} a_{ij}(z_2,z_3)z_0^i z_1^j \\
+  =\;& a_{01}(z_2,z_3)z_0 + a_{10}(z_2,z_3) z_1 +a_{00}(z_2,z_3) \\
+  =\;& \left(b_{02}z_2+b_{03}z_3\right) z_0 + \left(b_{12}z_2+b_{13}z_3\right) z_1 +a_{00}(z_2,z_3)\\
+ \tilde{f}(z_0,z_1,z_2,z_3) =\;& \sum_{i+j<2} \tilde{a}_{ij}(z_2,z_3)z_0^i z_1^j \\
+  =\;& \tilde{a}_{01}(z_2,z_3)z_0 + \tilde{a}_{10}(z_2,z_3) z_1 +\tilde{a}_{00}(z_2,z_3) \\
+  =\;& \left(\tilde{b}_{02}z_2+\tilde{b}_{03}z_3\right) z_0 + \left(\tilde{b}_{12}z_2+\tilde{b}_{13}z_3\right) z_1 +\tilde{a}_{00}(z_2,z_3).\\
+\end{aligned}
+\end{equation*}
+Since $\tilde{Q}$ is smooth, 
+$$\tilde{b}_{02}\tilde{b}_{03},\tilde{b}_{12}\tilde{b}_{13},\tilde{b}_{02}\tilde{b}_{12},\tilde{b}_{03}\tilde{b}_{13} \neq 0.$$
+
+Fix $t \in \mathbb{C}$. Restricting $Q$ and $\tilde{Q}$ to the hyperplane $\{z_1 = t z_0\}$, we obtain two conics:
+\begin{equation*}
+\begin{cases}
+f(z_0,tz_0,z_2,z_3)=0 \\ 
+\tilde{f}(z_0,tz_0,z_2,z_3)=0
+\end{cases}
+\end{equation*}
+which intersect at the point $p_t: = [1:t:0:0]$ with multiplicity $4$. Writing down these equations explicitly, we get
+\begin{equation*}
+\begin{cases}
+\left( \rule{0mm}{3.4mm} (b_{02}+tb_{12})z_2 + (b_{03}+tb_{13})z_3 \right) z_0 + a_{00}(z_2,z_3)=0 \\[3mm]
+\left( \rule{0mm}{3.4mm} (\tilde{b}_{02}+t\tilde{b}_{12})z_2 + (\tilde{b}_{03}+t\tilde{b}_{13})z_3 \right) z_0 + \tilde{a}_{00}(z_2,z_3)=0,
+\end{cases}
+\end{equation*}
+so the corresponding tangent lines at $p_t$ are given by
+\begin{equation*}
+\begin{cases}
+ (b_{02}+tb_{12})z_2 + (b_{03}+tb_{13})z_3 =0 \\
+ (\tilde{b}_{02}+t\tilde{b}_{12})z_2 + (\tilde{b}_{03}+t\tilde{b}_{13})z_3 =0
+\end{cases}
+\end{equation*}
+Since the conics intersect with multiplicity $4$ at $p_t$, these tangent lines must coincide for every $t$, so
+$$
+(b_{02}+tb_{12})(\tilde{b}_{03}+t\tilde{b}_{13})=(b_{03}+tb_{13})(\tilde{b}_{02}+t\tilde{b}_{12}) \qquad \text{for every }t \in \mathbb{C}.
+$$
+
+By a change of coordinates, we may assume that $\tilde{a}_{10}(z_2,z_3)=z_3$. This implies that $\tilde{b}_{02} = 0$ and $\tilde{b}_{03} = 1$. Furthermore, we have $\tilde{b}_{12} \ne 0$, and 
+\begin{equation*}
+\begin{cases}
+ b_{12} \tilde{b}_{13} = \tilde{b}_{12} b_{13} \\
+ b_{02}=0 \\
+ b_{12} = b_{03} \tilde{b}_{12}
+\end{cases}
+\end{equation*}
+so $b_{13}=b_{03}\tilde{b}_{13}$.
+
+Now choose $(z_2,z_3) \neq (0,0)$ such that $a_{00}(z_2,z_3) = b_{03} \cdot \tilde{a}_{00}(z_2,z_3)$. Take $t\in \mathbb{C}$ such that
+$$(\tilde{b}_{02}+t\tilde{b}_{12})z_2 + (\tilde{b}_{03}+t\tilde{b}_{13})z_3 =  t\tilde{b}_{12}z_2 + (1+t\tilde{b}_{13})z_3\neq 0, $$
+and take 
+$$z_0:= \frac{\tilde{a}_{00}}{t\tilde{b}_{12}z_2 + (1+t\tilde{b}_{13})z_3} z_3.$$
+Then the point $[z_0:tz_0:z_2:z_3]$ lies in $Q \cap \tilde{Q}$ but not in $L$, yielding a contradiction.
+\end{proof}
 \end{remark}
 
 \subsection{Albanese variety}
