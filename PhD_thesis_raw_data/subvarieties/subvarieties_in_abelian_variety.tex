@@ -608,6 +608,17 @@ Can we find any curve $C \subset A$ not stable under any translation on $A$, and
 Assume that $n>2$. Can we find any curve $C \subset A$ not stable under any translation on $A$, whose Gauss map has degree $d>2$? 
 \end{ques}
 
+\begin{eg}
+If we replace $A$ with $\mathbb{C}^3$ in Question \ref{ques:monodromy_2}, we can construct curves $C \subset \mathbb{C}^3$ that are not preserved under any linear transformation but whose Gauss maps fail to be generically injective. Here is one such example: 
+
+Consider the curve $C \subset \mathbb{C}^3$ defined by the parametrization
+$$r(t)=\left( t, (t-1)e^t, \frac{1}{4} (2t^2-2t+1)e^{2t}\right).$$
+Its derivative is 
+$$r'(t)=\left(1,te^t, t^2e^{2t} \right),$$
+so the Gauss map fails to be generically injective.
+
+\end{eg}
+
 \subsection{Curves in Prym variety}
 To address Question \ref{ques:monodromy_2}, we seek explicit examples, and the case of a Prym curve mapping to its associated Prym variety offers a natural starting point for investigation.
 
@@ -727,11 +738,53 @@ As a key example relevant to Question \ref{ques:mon_gp_for_classical_Prym}, I in
 \end{proposition}
 
 \begin{remark}
-Take $i=2$, the line bundle $\mathcal{L}$ provides a counterexample to \eqref{eq:remove_extra_C}. However, this example does not directly yield a counterexample to Question \ref{ques:mon_gp_for_classical_Prym}. This is due to the uncertainty of whether there exist $C$ and $D$ satisfying $\mathcal{L}^{\otimes 2} \cong \mathcal{O}_C$, and whether the curve $C$ is sufficiently general for Proposition \ref{prop:fail_to_remove_extra_C} to hold. 
+Take $i=2$, the line bundle $\mathcal{L}$ provides a counterexample to \eqref{eq:remove_extra_C}. However, this example does not directly yield a counterexample to Question \ref{ques:mon_gp_for_classical_Prym}, due to Proposition \ref{prop:never_2_torsion}.
+
+%This is due to the uncertainty of whether there exist $C$ and $D$ satisfying $\mathcal{L}^{\otimes 2} \cong \mathcal{O}_C$, and whether the curve $C$ is sufficiently general for Proposition \ref{prop:fail_to_remove_extra_C} to hold. 
 
 %I intend to revisit the proof in detail, especially the use of the base point free pencil trick and the Petri map. Should this yield any useful observations, they will be included here.
+\begin{proposition}\label{prop:never_2_torsion}
+The line bundle $\mathcal{L}$ in Proposition \ref{prop:fail_to_remove_extra_C} never satisfies
+$$
+\mathcal{L}^{\otimes 2} \cong \mathcal{O}_C \quad\text{ but }\quad \mathcal{L} \ncong \mathcal{O}_C,
+$$
+i.e.,
+$$
+2K_C=4D \quad\text{ but }\quad K_C \neq 2D.
+$$
+\end{proposition}
+\begin{proof}
+Since $C$ is a smooth non-hyperelliptic curve of genus $4$, its canonical embedding realizes $C$ as a complete intersection of an irreducible quadric $\tilde{Q}$ and an irreducible cubic surface $\tilde{K}$ in $\mathbb{P}^3$. According to \cite[Lemma 2.1]{Looij24}, every divisor $D \in W_3^1(C)$ arises as the intersection $D = L \cap \tilde{K}$, where $L$ is a line contained in the quadric surface $\tilde{Q}$.
 
-\begin{lemma}
+When $\tilde{Q}$ is a quadric cone, there exists a hyperplane $H$ such that $H \cap \tilde{Q} = 2L$, implying $K_C = 2D$; when $\tilde{Q}$ is smooth, we have $H \cap \tilde{Q} = L + L'$, with $L'$ being the residual line. Interpreting $2K_C \in |\mathcal{O}_{\mathbb{P}^3}(2)|$ as a quadric $Q \subset \mathbb{P}^3$, we obtain
+\begin{equation*}
+\begin{aligned}
+\;&2K_C=4D\\
+  \Longleftrightarrow\;& \text{there exists a quadric } Q \subset \mathbb{P}^3 \text{ such that } Q \cap C = 4D  \\ 
+  \Longleftrightarrow\;& \text{there exists a quadric } Q \subset \mathbb{P}^3 \text{ such that } Q \cap \tilde{Q} \cap \tilde{K} = 4D  \\ 
+  \Longleftrightarrow\;& \text{there exists a quadric } Q \subset \mathbb{P}^3 \text{ such that } Q \cap \tilde{Q} = 4L \qquad\quad \text{by Lemma \ref{lem:SG}}  \\ 
+\end{aligned}
+\end{equation*}
+However, via Lemma \ref{lem:2_quartic_intersection}, such case won't happen at all.
+\end{proof}
+Lemma \ref{lem:SG} was inspired by a discussion with Søren Gammelgaard.
+\begin{lemma}\label{lem:SG}
+Let $Q$ and $\tilde{Q}$ be reduced quartic surfaces in $\mathbb{P}^3$, and let $\tilde{K} \subset \mathbb{P}^3$ be a cubic surface. Assume that $\tilde{Q}$ and $\tilde{K}$ are smooth and that $\tilde{Q} \cap \tilde{K}$ is a complete intersection. Let $L \subset \tilde{Q}$ be a line, and set $D := L \cap \tilde{K}$. Then, 
+$$
+Q \cap \tilde{Q} \cap \tilde{K} =4D \quad \Longleftrightarrow \quad Q \cap \tilde{Q}=4L.
+$$
+\end{lemma}
+\begin{proof}
+We only need to prove the ``$\Longrightarrow$" direction. Suppose that $Q \cap \tilde{Q} \cap \tilde{K} = 4D$. Then:
+\begin{itemize}
+\item Since $Q$ intersects $L$ in at least three points, we have $L \subset Q$.
+\item Write $Q \cap \tilde{Q} = L + R$, where $R$ is the residual curve. Then $\deg R = 3$ and $R \cap \tilde{K} = 3D$.
+\item If $R \subset \mathbb{P}^3$ is non-degenerate, then $R$ is a rational normal curve of degree $3$, which cannot pass through three distinct collinear points. This contradicts $3D \subset R \cap L$.
+\item If $R$ is degenerate, then it lies in a hyperplane $H \cong \mathbb{P}^2$. A degree $3$ plane curve is determined by $9$ points. Since $R \cap \tilde{K} = 3D$ gives $9$ points on $L$, it follows that $R = 3L$.
+\item Therefore, $Q \cap \tilde{Q} = L + R = 4L$.
+\end{itemize}
+\end{proof}
+\begin{lemma}\label{lem:2_quartic_intersection}
 Let $Q$ and $\tilde{Q}$ be two reduced quartic surfaces in $\mathbb{P}^3$, and assume that $\tilde{Q}$ is smooth. Then $Q$ and $\tilde{Q}$ cannot intersect a line with multiplicity $4$.
 \end{lemma}
 \begin{proof}
