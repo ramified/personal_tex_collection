@@ -279,7 +279,7 @@
 \DeclareMathOperator{\gon}{\operatorname{gon}}
 \DeclareMathOperator{\univ}{\operatorname{univ}}
 \DeclareMathOperator{\Abel}{\operatorname{Abel}}
-
+\DeclareMathOperator{\pr}{\operatorname{pr}}
 
 %%%%%%%newcommand
 
@@ -619,6 +619,8 @@ so the Gauss map fails to be generically injective.
 
 \end{eg}
 
+To answer Question \ref{ques:monodromy_2}, the starting point is to seek curves with decomposable Jacobians. A classical source of such examples is a covering $h: C \to C'$ of $\deg(h)>1$ where $g(C') > 0$, in which case $\Jac(C)$ decomposes. Nevertheless, this does not exhaust all possibilities: Paweł Borówka pointed out to me an example, proved in \cite[Exercise 11.7]{BO22}, where $\Jac(C)$ is decomposable although $C$ does not cover a curve of positive genus.
+
 \subsection{Curves in Prym variety}
 To address Question \ref{ques:monodromy_2}, we seek explicit examples, and the case of a Prym curve mapping to its associated Prym variety offers a natural starting point for investigation.
 
@@ -852,6 +854,73 @@ $$z_0:= \frac{\tilde{a}_{00}}{t\tilde{b}_{12}z_2 + (1+t\tilde{b}_{13})z_3} z_3.$
 Then the point $[z_0:tz_0:z_2:z_3]$ lies in $Q \cap \tilde{Q}$ but not in $L$, yielding a contradiction.
 \end{proof}
 \end{remark}
+
+Recently, we obtained a partial answer to Question \ref{ques:mon_gp_for_classical_Prym}, as illustrated in the following example.
+\begin{eg} \label{eg:bielliptic}
+Let $C'$ be a non-hyperelliptic bielliptic curve, and let $\pr: C' \to E$ denote a $2:1$ covering onto an elliptic curve. For any nontrivial $2$-torsion line bundle $\eta_0 \in \Pic^0(E)[2]$, the pullback $\eta := \pr^* \eta_0$ satisfies $\eta^{\otimes 2} \cong \mathcal{O}_{C'}$ and
+$$\eta^{\vee}+C' \subseteq C'+ C'- C'.$$
+\end{eg}
+\begin{proof}[{Proof of Example \ref{eg:bielliptic}}]
+For any $x \in C'$,
+$$ \deg \eta_0^{\vee} (x_0)=1 \quad \Longrightarrow \quad \text{ there exists } y_0 \in E \text{ such that } \eta_0^{\vee} (x_0)=\mathcal{O}_E(y_0).$$
+Write $\pr^{-1}(x_0)=\{x,x'\}$, $\pr^{-1}(y_0)=\{y,y'\}$, we get
+$$\eta^{\vee}(x+x')= \mathcal{O}_{C'}(y+y').$$
+i.e.,
+$$\eta^{\vee}(x)= \mathcal{O}_{C'}(y+y'-x).$$
+\end{proof}
+
+\begin{remark}
+We have not yet determined whether the resulting curve $C \subset A$ is invariant under any non-trivial translation of $A$, as the automorphism of $C'$ does not necessarily lift to an automorphism of $C$. Maybe I should check \cite{CMS21,JC92} for more information on Prym varieties of bielliptic curves.
+\end{remark}
+
+In fact, the Castelnuovo--Severi inequality, brought to my attention by Gavril Farkas, shows that Example \ref{eg:bielliptic} is the only example for Question \ref{ques:mon_gp_for_classical_Prym} when $g(C') > 9$.
+
+\begin{fact}[{Castelnuovo--Severi inequality, \cite[p26, Corollary]{Kani84}}]
+Let $C$ be a smooth projective curve equipped with two ramified coverings $f_i: C \to C_i$ of degrees $d_i$ $(i=1,2)$. Suppose that there is no morphism $h: C \to \tilde{C}$ with $\deg(h) > 1$ such that both $f_1$ and $f_2$ factor through $h$. Then
+$$g(C) \leqslant d_1 \cdot g(C_1) + d_2 \cdot g(C_2) + (d_1-1)(d_2-1).$$
+\end{fact}
+
+\begin{proposition}
+If, in Question \ref{ques:mon_gp_for_classical_Prym}, we additionally require that $C'$ be non-hyperelliptic and non-bielliptic, then any such curve must satisfy $g(C') \leqslant 9$.
+\end{proposition}
+
+\begin{proof}
+Assume that $C'$ is an example of Question \ref{ques:mon_gp_for_classical_Prym}.
+$\;$\\
+{\bfseries Step 1.} we can find two distinct $g_4^1$ of $C'$.
+
+For any $p \in C'$, there exist $q,p',q' \in C'$ such that  
+\[
+\eta^{\vee}(p+q) = \mathcal{O}_{C'}(p'+q') .
+\]
+This implies  
+\[
+\mathcal{O}_{C'}(2p+2q) = \mathcal{O}_{C'}(2p'+2q') ,
+\]
+which defines a degree-$4$ covering $f_1\colon C' \to \mathbb{P}^1$ ramified at $p,q,p',q'$.  
+Choosing $\tilde{p} \in C'$ outside the ramification locus of $f_1$ and repeating the construction yields another $g^1_4$, denoted $f_2\colon C' \to \mathbb{P}^1$.
+
+$\;$\\
+{\bfseries Step 2.} If $f_1$ and $f_2$ factor through a common map $h\colon C' \to \tilde{C}$ with $\deg(h) > 1$, then $C'$ is hyperelliptic or bielliptic.  
+
+Indeed, in this case $\deg(h) = 2$, and the Castelnuovo--Severi inequality applied to $(\tilde{C}, \tilde{f}_1, \tilde{f}_2)$ gives $g(\tilde{C}) \leqslant 1$, so $\tilde{C}$ is either $\mathbb{P}^1$ or an elliptic curve.
+
+% https://q.uiver.app/#q=WzAsNCxbMSwxLCJcXHRpbGRle0N9Il0sWzAsMiwiXFxtYXRoYmJ7UH1eMSJdLFsyLDIsIlxcbWF0aGJie1B9XjEiXSxbMSwwLCJDIl0sWzAsMSwiXFx0aWxkZXtmfV8xIl0sWzAsMiwiXFx0aWxkZXtmfV8yIiwyXSxbMywwLCJoIiwyXSxbMywxLCJmXzEiLDIseyJjdXJ2ZSI6Mn1dLFszLDIsImZfMiIsMCx7ImN1cnZlIjotMn1dXQ==
+\[\begin{tikzcd}[ampersand replacement=\&,row sep=5mm]
+	\& C \\
+	\& {\tilde{C}} \\
+	{\mathbb{P}^1} \&\& {\mathbb{P}^1}
+	\arrow["h"', from=1-2, to=2-2]
+	\arrow["{f_1}"', curve={height=12pt}, from=1-2, to=3-1]
+	\arrow["{f_2}", curve={height=-12pt}, from=1-2, to=3-3]
+	\arrow["{\tilde{f}_1}", from=2-2, to=3-1]
+	\arrow["{\tilde{f}_2}"', from=2-2, to=3-3]
+\end{tikzcd}\]
+
+$\;$\\
+{\bfseries Step 3.} If $C'$ is neither hyperelliptic nor bielliptic, then the Castelnuovo--Severi inequality yields $g(C') \leqslant 9$.
+\end{proof}
+
 
 \subsection{Albanese variety}
 Let $X$ be a smooth complex projective variety of dimension $r$, and set $n := \dim_{\mathbb{C}} \Hnm^0(X, \Omega_X) = h^{1,0}$.

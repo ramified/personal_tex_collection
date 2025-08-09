@@ -12,6 +12,18 @@ Christina Birkenhake and Herbert Lange.
   Wiss.}
 \newblock Berlin: Springer, 2nd augmented ed. edition, 2004.
 
+\bibitem{BO22}
+Pawe{\l} Bor{\'o}wka and Angela Ortega.
+\newblock Prym varieties and {Prym} map.
+\newblock {\em Rend. Ist. Mat. Univ. Trieste}, 54:34, 2022.
+\newblock Id/No 14.
+
+\bibitem{CMS21}
+Adrian Clingher, Andreas Malmendier, and Tony Shaska.
+\newblock Geometry of {Prym} varieties for certain bielliptic curves of genus
+  three and five.
+\newblock {\em Pure Appl. Math. Q.}, 17(5):1739--1784, 2021.
+
 \bibitem{CK22}
 Giulio Codogni and Thomas Kr{\"a}mer.
 \newblock Semicontinuity of {Gauss} maps and the {Schottky} problem.
@@ -31,6 +43,11 @@ Allen Hatcher.
 Ariyan Javanpeykar, Thomas Kr{\"a}mer, Christian Lehn, and Marco Maculan.
 \newblock The monodromy of families of subvarieties on abelian varieties.
 \newblock Preprint, {arXiv}:2210.05166 [math.{AG}] (2022), 2022.
+
+\bibitem{Kani84}
+Ernst Kani.
+\newblock On {Castelnuovo}'s equivalence defect.
+\newblock {\em J. Reine Angew. Math.}, 352:24--70, 1984.
 
 \bibitem{Kr16cubicthreefold}
 Thomas Kr{\"a}mer.
@@ -55,6 +72,11 @@ David Mumford.
   Lect. Notes Math.}
 \newblock Berlin: Springer, 2nd, expanded ed. with contributions by {Enrico}
   {Arbarello} edition, 1999.
+
+\bibitem{JC92}
+Juan-Carlos Naranjo.
+\newblock Prym varieties of bi-elliptic curves.
+\newblock {\em J. Reine Angew. Math.}, 424:47--106, 1992.
 
 \bibitem{vakil2017rising}
 Ravi Vakil.
