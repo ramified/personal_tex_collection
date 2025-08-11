@@ -861,7 +861,7 @@ Let $C'$ be a non-hyperelliptic bielliptic curve, and let $\pr: C' \to E$ denote
 $$\eta^{\vee}+C' \subseteq C'+ C'- C'.$$
 \end{eg}
 \begin{proof}[{Proof of Example \ref{eg:bielliptic}}]
-For any $x \in C'$,
+For any $x \in C'$, write $x_0: \pr(x)$, then
 $$ \deg \eta_0^{\vee} (x_0)=1 \quad \Longrightarrow \quad \text{ there exists } y_0 \in E \text{ such that } \eta_0^{\vee} (x_0)=\mathcal{O}_E(y_0).$$
 Write $\pr^{-1}(x_0)=\{x,x'\}$, $\pr^{-1}(y_0)=\{y,y'\}$, we get
 $$\eta^{\vee}(x+x')= \mathcal{O}_{C'}(y+y').$$
@@ -870,7 +870,9 @@ $$\eta^{\vee}(x)= \mathcal{O}_{C'}(y+y'-x).$$
 \end{proof}
 
 \begin{remark}
-We have not yet determined whether the resulting curve $C \subset A$ is invariant under any non-trivial translation of $A$, as the automorphism of $C'$ does not necessarily lift to an automorphism of $C$. Maybe I should check \cite{CMS21,JC92} for more information on Prym varieties of bielliptic curves.
+For the most time the resulting curve $C \subset A$ is not invariant under any non-trivial translation of $A$, as the automorphism of $C'$ does not necessarily lift to an automorphism of $C$. Therefore, Example \ref{eg:bielliptic} serve as an example of Question \ref{ques:mon_gp_for_classical_Prym} and \ref{ques:monodromy_2}.
+
+%Maybe I should check \cite{CMS21,JC92} for more information on Prym varieties of bielliptic curves.
 \end{remark}
 
 In fact, the Castelnuovo--Severi inequality, brought to my attention by Gavril Farkas, shows that Example \ref{eg:bielliptic} is the only example for Question \ref{ques:mon_gp_for_classical_Prym} when $g(C') > 9$.
