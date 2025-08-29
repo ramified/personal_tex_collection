@@ -869,11 +869,53 @@ i.e.,
 $$\eta^{\vee}(x)= \mathcal{O}_{C'}(y+y'-x).$$
 \end{proof}
 
-\begin{remark}
-For the most time the resulting curve $C \subset A$ is not invariant under any non-trivial translation of $A$, as the automorphism of $C'$ does not necessarily lift to an automorphism of $C$. Therefore, Example \ref{eg:bielliptic} serve as an example of Question \ref{ques:mon_gp_for_classical_Prym} and \ref{ques:monodromy_2}.
+The next proposition tells us, for the most time the resulting curve $C \subset A$ is not invariant under any non-trivial translation of $A$. Therefore, Example \ref{eg:bielliptic} serve as an example of Question \ref{ques:mon_gp_for_classical_Prym} and \ref{ques:monodromy_2}.
+
+\begin{proposition}
+In Example \ref{eg:bielliptic}, let $C$ be the curve corresponding to $\eta \in \Pic^{0}(C')[2]$. If $\Gal(C/E) \cong \mathbb{Z}/2\mathbb{Z} \oplus \mathbb{Z}/2\mathbb{Z}$, then $C$ admits three intermediate quotients over $E$. Denote them by $C'$, $C_1$, and $C_2$, where $C_1$ and $C_2$ are the two intermediate curves different from $C'$.
+
+% https://q.uiver.app/#q=WzAsMTIsWzAsMCwiQyJdLFswLDEsIkMnIl0sWzIsMCwiQyJdLFsyLDEsIkMnIl0sWzIsMiwiRSJdLFsyLDMsIlxcbWF0aGJie1B9XjEiXSxbMCwyLCJFIl0sWzAsMywiXFxtYXRoYmJ7UH1eMSJdLFsxLDEsIkNfMSJdLFszLDEsIkNfMiJdLFsyLDQsIlxcR2FsKEMvRSkgXFxjb25nIFxcbWF0aGJie1p9LzJcXG1hdGhiYntafSBcXG9wbHVzIFxcbWF0aGJie1p9LzJcXG1hdGhiYntafSJdLFswLDQsIlxcR2FsKEMvRSkgXFxjb25nIFxcbWF0aGJie1p9LzRcXG1hdGhiYntafSJdLFsxLDZdLFswLDEsImgiXSxbNiw3XSxbMiwzLCJoIl0sWzMsNF0sWzQsNV0sWzgsNF0sWzksNF0sWzIsOSwiaF8yIl0sWzIsOCwiaF8xIiwyXV0=
+\[\begin{tikzcd}[ampersand replacement=\&,column sep={10mm,between origins},row sep=5mm]
+	C \&[30mm]\&[2mm] C \\
+	{C'} \& {C_1} \& {C'} \& {C_2} \\
+	E \&\& E \\
+	{\mathbb{P}^1} \&\& {\mathbb{P}^1} \\[-3mm]
+	{\Gal(C/E) \cong \mathbb{Z}/4\mathbb{Z}} \&\& {\Gal(C/E) \cong \mathbb{Z}/2\mathbb{Z} \oplus \mathbb{Z}/2\mathbb{Z}}
+	\arrow["h", from=1-1, to=2-1]
+	\arrow["{h_1}"', from=1-3, to=2-2]
+	\arrow["h", from=1-3, to=2-3]
+	\arrow["{h_2}", from=1-3, to=2-4]
+	\arrow[from=2-1, to=3-1]
+	\arrow[from=2-2, to=3-3]
+	\arrow[from=2-3, to=3-3]
+	\arrow[from=2-4, to=3-3]
+	\arrow[from=3-1, to=4-1]
+	\arrow[from=3-3, to=4-3]
+\end{tikzcd}\]
+If either $\Gal(C/E) \cong \mathbb{Z}/4\mathbb{Z}$, or $\Gal(C/E) \cong \mathbb{Z}/2\mathbb{Z} \oplus \mathbb{Z}/2\mathbb{Z}$ with the coverings $h_i:C \to C_i$ ramified, then the curve $C \subset A$ is not fixed under any non-trivial translation on $A$.
+\end{proposition}
+
+\begin{proof}
+We prove by contradiction.
+Assume there exists a non-trivial translation $\sigma:A\to A$ preserving $C$. Then the restriction $\sigma|_{C}:C \to C$ is an automorphism, and the induced map
+$$h_{\sigma}: C \longrightarrow C/\sigma$$
+is an unramified double covering. Since $\sigma$ is a translation, the Gauss map $\gamma_C$ necessarily factors through $h_{\sigma}$:
+% https://q.uiver.app/#q=WzAsNixbMCwwLCJcXGdhbW1hX0PvvJoiXSxbMSwwLCJDIl0sWzIsMCwiQyciXSxbMywwLCJFIl0sWzQsMCwiXFxtYXRoYmJ7UH1ee24tMX0iXSxbMiwxLCJDL1xcc2lnbWEiXSxbMSwyLCIyOjEiXSxbMiwzLCIyOjEiXSxbMyw0LCJcXHN1YnNldCIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxLDUsImhfe1xcc2lnbWF9IiwyXSxbNSwzLCJcXGV4aXN0cyEiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=
+\[\begin{tikzcd}[ampersand replacement=\&,column sep=15mm,row sep=5mm]
+	{\gamma_C:} \&[-17mm] C \& {C'} \& E \&[-13mm] {\mathbb{P}^{n-1}} \\
+	\&\& {C/\sigma}
+	\arrow["{2:1}", from=1-2, to=1-3]
+	\arrow["{h_{\sigma}}"', from=1-2, to=2-3]
+	\arrow["{2:1}", from=1-3, to=1-4]
+	\arrow["\subset"{description}, draw=none, from=1-4, to=1-5]
+	\arrow["{\exists!}"', dashed, from=2-3, to=1-4]
+\end{tikzcd}\]
+Without loss of generality, we may assume that $\deg(h_\sigma)=2$. By assumption, $C/\sigma$ coincides with $C'$, and $\sigma|_C$ is the involution $\iota$ associated with the cover $h:C\to C'$, which extends to an involution $\tilde\iota$ of $A$. According to \cite[Proposition 12.4.2]{BL04}, $\tilde\iota$ is a reflection. Hence $\sigma \circ \tilde\iota^{-1}$ is another reflection fixing $C$, which is impossible.
+
+\end{proof}
 
 %Maybe I should check \cite{CMS21,JC92} for more information on Prym varieties of bielliptic curves.
-\end{remark}
+
 
 In fact, the Castelnuovo--Severi inequality, brought to my attention by Gavril Farkas, shows that Example \ref{eg:bielliptic} is the only example for Question \ref{ques:mon_gp_for_classical_Prym} when $g(C') > 9$.
 
