@@ -1,7 +1,7 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  29 AUG 2025 11:57
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  29 AUG 2025 12:12
 entering extended mode
-**./talkzxx.tex
-(talkzxx.tex
+**./Bologna_zxx_intro_to_Zchi.tex
+(Bologna_zxx_intro_to_Zchi.tex
 LaTeX2e <2018-12-01>
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\bea
@@ -1017,18 +1017,6 @@ Package: array 2018/11/13 v2.4j Tabular extension package (FMi)
 \rotheadsize=\dimen270
 \c@nlinenum=\count177
 \TeXr@lab=\toks47
-) (TooYoung.sty
-\Youngwidth=\dimen271
-\Youngheight=\dimen272
-\Youngvline=\dimen273
-\Younghline=\dimen274
-\Youngx=\dimen275
-\Youngy=\dimen276
-\Youngz=\dimen277
-\Youngw=\dimen278
-\n=\count178
-\Youngvhook=\dimen279
-\Younghhook=\dimen280
 )
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/fron
 tendlayer/tikz/libraries\tikzlibrarycalc.code.tex"
@@ -1049,8 +1037,8 @@ File: pgflibraryshapes.misc.code.tex 2019/01/05 v3.1 (3.1)
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/fron
 tendlayer/tikz/libraries/graphs\tikzlibrarygraphs.code.tex"
 File: tikzlibrarygraphs.code.tex 2019/01/05 v3.1 (3.1)
-\tikz@lib@auto@number=\count179
-\tikz@qnode@count=\count180
+\tikz@lib@auto@number=\count178
+\tikz@qnode@count=\count179
 )
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/fron
 tendlayer/tikz/libraries\tikzlibrarydecorations.pathreplacing.code.tex"
@@ -1058,22 +1046,22 @@ tendlayer/tikz/libraries\tikzlibrarydecorations.pathreplacing.code.tex"
 tendlayer/tikz/libraries\tikzlibrarydecorations.code.tex"
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/modu
 les\pgfmoduledecorations.code.tex"
-\pgfdecoratedcompleteddistance=\dimen281
-\pgfdecoratedremainingdistance=\dimen282
-\pgfdecoratedinputsegmentcompleteddistance=\dimen283
-\pgfdecoratedinputsegmentremainingdistance=\dimen284
-\pgf@decorate@distancetomove=\dimen285
-\pgf@decorate@repeatstate=\count181
-\pgfdecorationsegmentamplitude=\dimen286
-\pgfdecorationsegmentlength=\dimen287
+\pgfdecoratedcompleteddistance=\dimen271
+\pgfdecoratedremainingdistance=\dimen272
+\pgfdecoratedinputsegmentcompleteddistance=\dimen273
+\pgfdecoratedinputsegmentremainingdistance=\dimen274
+\pgf@decorate@distancetomove=\dimen275
+\pgf@decorate@repeatstate=\count180
+\pgfdecorationsegmentamplitude=\dimen276
+\pgfdecorationsegmentlength=\dimen277
 )
 \tikz@lib@dec@box=\box66
 )
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/pgf/libr
 aries/decorations\pgflibrarydecorations.pathreplacing.code.tex"))
-\c@exercise=\count182
-\c@remarks=\count183
-\c@short=\count184
+\c@exercise=\count181
+\c@remarks=\count182
+\c@short=\count183
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/beamer\bea
 merfontthemeserif.sty")
@@ -1128,40 +1116,27 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 (Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
-)
+) (Bologna_zxx_intro_to_Zchi.aux)
+\openout1 = `Bologna_zxx_intro_to_Zchi.aux'.
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 135.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 135.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 135.
-
-(talkzxx.aux)
-\openout1 = `talkzxx.aux'.
-
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 135.
-LaTeX Font Info:    ... okay on input line 135.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 140.
+LaTeX Font Info:    ... okay on input line 140.
 
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1198,7 +1173,7 @@ LaTeX Font Info:    ... okay on input line 135.
 
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box67
-Package hyperref Info: Link coloring OFF on input line 135.
+Package hyperref Info: Link coloring OFF on input line 140.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\n
 ameref.sty"
@@ -1212,14 +1187,15 @@ Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 \gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count185
+\c@section@level=\count184
 )
-LaTeX Info: Redefining \ref on input line 135.
-LaTeX Info: Redefining \pageref on input line 135.
-LaTeX Info: Redefining \nameref on input line 135.
- (talkzxx.out) (talkzxx.out)
+LaTeX Info: Redefining \ref on input line 140.
+LaTeX Info: Redefining \pageref on input line 140.
+LaTeX Info: Redefining \nameref on input line 140.
+ (Bologna_zxx_intro_to_Zchi.out)
+(Bologna_zxx_intro_to_Zchi.out)
 \@outlinefile=\write5
-\openout5 = `talkzxx.out'.
+\openout5 = `Bologna_zxx_intro_to_Zchi.out'.
 
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/translator
@@ -1245,533 +1221,100 @@ Dictionary: translator-numbers-dictionary, Language: English
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/translator
 \translator-theorem-dictionary-English.dict"
 Dictionary: translator-theorem-dictionary, Language: English 
-) (talkzxx.nav)
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 135.
+) (Bologna_zxx_intro_to_Zchi.nav)
+[1
 
+]
+\openout4 = `Bologna_zxx_intro_to_Zchi.vrb'.
+
+ (Bologna_zxx_intro_to_Zchi.vrb
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 4.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ot1lmr.
 fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 135.
-
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 4.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omllmm.
 fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 135
-.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 4.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omslmsy
 .fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 135
-.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 4.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omxlmex
 .fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 135.
+(Font)              <10.95> on input line 4.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 135.
-LaTeX Font Info:    Try loading font information for U+msa on input line 135.
+(Font)              <8> on input line 4.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 4.
+LaTeX Font Info:    Try loading font information for U+msa on input line 4.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 msa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 135.
+LaTeX Font Info:    Try loading font information for U+msb on input line 4.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 msb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+stmry on input line 135.
-
+LaTeX Font Info:    Try loading font information for U+stmry on input line 4.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/stmaryrd\u
 stmry.fd")
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 138.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 138.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 138.
- [1
-
-]
-\openout4 = `talkzxx.vrb'.
-
- (talkzxx.vrb
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 7.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 7.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 21.
 ) [2
 
 ]
-Overfull \hbox (5.38483pt too wide) in paragraph at lines 176--176
- [] 
- []
+\openout4 = `Bologna_zxx_intro_to_Zchi.vrb'.
 
-[3
-
-] [4
-
-]
-\openout4 = `talkzxx.vrb'.
-
- (talkzxx.vrb) [5
-
-] [6
-
-]
-File: figure/youngdiagram0.pdf Graphic file (type pdf)
-<use figure/youngdiagram0.pdf>
- [7
-
-]
-Overfull \vbox (110.1829pt too high) detected at line 267
- []
-
-File: figure/youngdiagram_order.pdf Graphic file (type pdf)
-<use figure/youngdiagram_order.pdf>
-[8
-
-]
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 296.
+ (Bologna_zxx_intro_to_Zchi.vrb
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <8> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 296.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 5.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 296.
-
-Overfull \vbox (23.87349pt too high) detected at line 296
- []
-
-[9
-
-]
-Overfull \vbox (23.87349pt too high) detected at line 296
- []
-
-[10
-
-]
-Overfull \vbox (23.87349pt too high) detected at line 296
- []
-
-[11
-
-]
-\openout4 = `talkzxx.vrb'.
-
- (talkzxx.vrb
-File: figure/shadow/tabloid.png Graphic file (type bmp)
-<figure/shadow/tabloid.png>
-File: figure/shadow/tabloid2.png Graphic file (type bmp)
-<figure/shadow/tabloid2.png>
-)
-Overfull \vbox (23.87349pt too high) detected at line 366
- []
-
-[12
-
-] (talkzxx.vrb)
-Overfull \vbox (23.87349pt too high) detected at line 366
- []
-
-[13
-
-] (talkzxx.vrb)
-Overfull \vbox (23.87349pt too high) detected at line 366
- []
-
-[14
-
-] (talkzxx.vrb)
-Overfull \vbox (23.87349pt too high) detected at line 366
- []
-
-[15
-
-]
-LaTeX Font Info:    Font shape `T1/lmss/bx/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/bx/sl' tried instead on input line 379.
-
- [16
-
-]
-File: figure/shadow/eg1.png Graphic file (type bmp)
-<figure/shadow/eg1.png>
-File: figure/shadow/eg2.png Graphic file (type bmp)
-<figure/shadow/eg2.png>
- [17
-
-] [18
-
-] [19
-
-] [20
-
-]
-Overfull \vbox (23.87349pt too high) detected at line 500
- []
-
-[21
-
-]
-Overfull \vbox (23.87349pt too high) detected at line 500
- []
-
-[22
-
-]
-File: figure/youngdiagram.pdf Graphic file (type pdf)
-<use figure/youngdiagram.pdf>
- [23
-
-]
-File: figure/youngdiagramseries.pdf Graphic file (type pdf)
-<use figure/youngdiagramseries.pdf>
- [24
-
-]
-Overfull \hbox (9.61679pt too wide) detected at line 526
-[][]
- []
-
-
-Overfull \vbox (23.87349pt too high) detected at line 526
- []
-
-[25
-
-]
-Overfull \hbox (6.57512pt too wide) detected at line 545
-[][]
- []
-
-
-Overfull \vbox (23.87349pt too high) detected at line 545
- []
-
-[26
-
-]
-Overfull \hbox (9.61679pt too wide) detected at line 562
-[][]
- []
-
-
-Overfull \vbox (23.87349pt too high) detected at line 562
- []
-
-[27
-
-] [28
-
-]
-\openout4 = `talkzxx.vrb'.
-
- (talkzxx.vrb
-File: figure/shadow/induction.png Graphic file (type bmp)
-<figure/shadow/induction.png>
-)
-Overfull \vbox (23.87349pt too high) detected at line 604
- []
-
-[29
-
-] (talkzxx.vrb
-File: figure/shadow/induction.png Graphic file (type bmp)
-<figure/shadow/induction.png>
-)
-Overfull \vbox (23.87349pt too high) detected at line 604
- []
-
-[30
-
-]
-File: figure/youngdiagram.pdf Graphic file (type pdf)
-<use figure/youngdiagram.pdf>
- [31
-
-]
-File: figure/youngdiagram1.pdf Graphic file (type pdf)
-<use figure/youngdiagram1.pdf>
- [32
-
-]
-\openout4 = `talkzxx.vrb'.
-
- (talkzxx.vrb) [33
-
-]
-\openout4 = `talkzxx.vrb'.
-
- (talkzxx.vrb
-File: figure/shadow/vote.png Graphic file (type bmp)
-<figure/shadow/vote.png>
-)
-Overfull \vbox (23.87349pt too high) detected at line 645
- []
-
-[34
-
-]
-\openout4 = `talkzxx.vrb'.
-
- (talkzxx.vrb)
-Overfull \vbox (23.87349pt too high) detected at line 657
- []
-
-[35
-
-] (talkzxx.vrb
-File: figure/shadow/crossingless2.png Graphic file (type bmp)
-<figure/shadow/crossingless2.png>
-)
-Overfull \vbox (23.87349pt too high) detected at line 657
- []
-
-[36
-
-] (talkzxx.vrb
-File: figure/shadow/crossingless.png Graphic file (type bmp)
-<figure/shadow/crossingless.png>
-)
-Overfull \vbox (23.87349pt too high) detected at line 657
- []
-
-[37
-
-] [38
-
-] [39
-
-]
-File: figure/shadow/defspringer.png Graphic file (type bmp)
-<figure/shadow/defspringer.png>
-LaTeX Font Info:    Try loading font information for U+euf on input line 706.
-
-("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
-euf.fd"
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [40
-
-]
-Overfull \vbox (1.0pt too high) detected at line 730
- []
-
-[41
-
-] [42
-
-]
-File: figure/youngdiagramseries.pdf Graphic file (type pdf)
-<use figure/youngdiagramseries.pdf>
- [43
-
-]
-Overfull \vbox (23.87349pt too high) detected at line 769
- []
-
-[44
-
-]
-Overfull \vbox (42.97353pt too high) detected at line 785
- []
-
-[45
-
-] [46
-
-]
-File: figure/shadow/case(2,1).png Graphic file (type bmp)
-<figure/shadow/case(2,1).png>
-
-Overfull \vbox (30.97351pt too high) detected at line 817
- []
-
-[47
-
-] [48
-
-]
-File: figure/shadow/myidea.png Graphic file (type bmp)
-<figure/shadow/myidea.png>
- [49
-
-]
-\openout4 = `talkzxx.vrb'.
-
- (talkzxx.vrb)
-Overfull \vbox (23.87349pt too high) detected at line 850
- []
-
-[50
-
-]
-\openout4 = `talkzxx.vrb'.
-
- (talkzxx.vrb
-File: figure/shadow/case(2,1)series1.png Graphic file (type bmp)
-<figure/shadow/case(2,1)series1.png>
-)
-Overfull \vbox (23.87349pt too high) detected at line 898
- []
-
-[51
-
-] (talkzxx.vrb
-File: figure/shadow/case(2,1)series1.png Graphic file (type bmp)
-<figure/shadow/case(2,1)series1.png>
-)
-Overfull \vbox (23.87349pt too high) detected at line 898
- []
-
-[52
-
-] (talkzxx.vrb
-File: figure/shadow/case(2,1)series2.png Graphic file (type bmp)
-<figure/shadow/case(2,1)series2.png>
-)
-Overfull \vbox (23.87349pt too high) detected at line 898
- []
-
-[53
-
-] (talkzxx.vrb
-File: figure/shadow/case(2,1)series3.png Graphic file (type bmp)
-<figure/shadow/case(2,1)series3.png>
-)
-Overfull \vbox (23.87349pt too high) detected at line 898
- []
-
-[54
-
-]
-File: figure/shadow/case(2,1,1)del.png Graphic file (type bmp)
-<figure/shadow/case(2,1,1)del.png>
-
-Overfull \vbox (42.97353pt too high) detected at line 916
- []
-
-[55
-
-]
-File: figure/shadow/case(2,1,1).png Graphic file (type bmp)
-<figure/shadow/case(2,1,1).png>
-
-Overfull \hbox (2.43333pt too wide) in paragraph at lines 916--916
- []  
- []
-
-
-Overfull \vbox (42.97353pt too high) detected at line 916
- []
-
-[56
-
-]
-File: figure/shadow/case(2,2)del.png Graphic file (type bmp)
-<figure/shadow/case(2,2)del.png>
-
-Overfull \vbox (30.97351pt too high) detected at line 934
- []
-
-[57
-
-]
-File: figure/shadow/case(2,2).png Graphic file (type bmp)
-<figure/shadow/case(2,2).png>
-
-Overfull \hbox (2.43333pt too wide) in paragraph at lines 934--934
- []  
- []
-
-
-Overfull \vbox (30.97351pt too high) detected at line 934
- []
-
-[58
-
-] [59
-
-]
-File: figure/youngdiagram0.pdf Graphic file (type pdf)
-<use figure/youngdiagram0.pdf>
- [60
-
-]
-File: figure/youngdiagram2.pdf Graphic file (type pdf)
-<use figure/youngdiagram2.pdf>
- [61
-
-]
-File: figure/youngdiagram1.pdf Graphic file (type pdf)
-<use figure/youngdiagram1.pdf>
- [62
-
-] [63
-
-]
-File: figure/youngdiagram0.pdf Graphic file (type pdf)
-<use figure/youngdiagram0.pdf>
- [64
-
-]
-Overfull \hbox (5.74059pt too wide) detected at line 1006
-[][]
- []
-
-[65
-
-]
-Overfull \hbox (5.74059pt too wide) detected at line 1006
-[][]
- []
-
-
-Overfull \hbox (0.91028pt too wide) detected at line 1006
-[][]
- []
-
-[66
-
-] [67
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 5.
+) [3
 
 ]
 \tf@nav=\write6
-\openout6 = `talkzxx.nav'.
+\openout6 = `Bologna_zxx_intro_to_Zchi.nav'.
 
 \tf@toc=\write7
-\openout7 = `talkzxx.toc'.
+\openout7 = `Bologna_zxx_intro_to_Zchi.toc'.
 
 \tf@snm=\write8
-\openout8 = `talkzxx.snm'.
+\openout8 = `Bologna_zxx_intro_to_Zchi.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1026.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1026.
- (talkzxx.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1026.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1026.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 199.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 199.
 
-Package rerunfilecheck Info: File `talkzxx.out' has not changed.
+(Bologna_zxx_intro_to_Zchi.aux)
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 199.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 199.
+Package rerunfilecheck Info: File `Bologna_zxx_intro_to_Zchi.out' has not chang
+ed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E.
  ) 
 Here is how much of TeX's memory you used:
- 27290 strings out of 427748
- 535116 string characters out of 3150981
- 709621 words of memory out of 3000000
- 30675 multiletter control sequences out of 15000+200000
- 66020 words of font info for 78 fonts, out of 3000000 for 9000
+ 26734 strings out of 427748
+ 524255 string characters out of 3150981
+ 607379 words of memory out of 3000000
+ 30197 multiletter control sequences out of 15000+200000
+ 43367 words of font info for 50 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 88i,31n,180p,796b,1174s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 58i,17n,84p,814b,754s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on talkzxx.pdf (67 pages).
+Output written on Bologna_zxx_intro_to_Zchi.pdf (3 pages).

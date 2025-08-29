@@ -1,0 +1,209 @@
+\documentclass[pdf]{beamer}
+\mode<presentation>{
+	\usetheme{Ilmenau}
+	
+}
+\usecolortheme{dolphin}
+%\usepackage[UTF8,indent]{ctexcap}%中文
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{indentfirst}
+\usepackage{enumerate}
+\usepackage{extpfeil}
+\usepackage{tikz-cd}
+\usepackage{longtable}
+\usepackage{makecell}
+\usepackage{array}
+\usepackage{xcolor}
+\usetikzlibrary {calc,positioning,shapes.misc,graphs,decorations.pathreplacing}
+
+
+\numberwithin{equation}{section}
+
+\theoremstyle{plain}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{defn}[theorem]{Definition}
+\newtheorem{eg}[theorem]{Example}
+\newtheorem{pf}[theorem]{Proof}
+\newtheorem{cor}[theorem]{Corollary}
+\newtheorem{setting}[theorem]{Setting}
+\newtheorem{goal}[theorem]{Goal}
+
+\newtheorem{tabloid}[theorem]{Tabloid: equivalence class of standard filling}
+
+
+\theoremstyle{plain}
+\newtheorem{exercise}{Exercise}[section]
+
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}{Remarks}
+\newtheorem{ex}[theorem]{Exercise}
+\newtheorem{question}[theorem]{Questions}
+\newtheorem{short}{ }
+
+
+
+\newcommand*{\thick}[1]{\text{\boldmath$#1$}}
+\newcommand*{\cir}[1]{\;$\ding{19#1}$\;}%临时使用
+\newcommand*{\norm}[1]{\lVert#1\rVert}
+\newcommand*{\ignore}[1]{\textcolor{gray}{#1}}
+\newcommand*{\stress}[1]{\textcolor{red}{#1}}
+\newcommand*{\bgpicb}[1]{\usebackgroundtemplate{%
+	\begin{tikzpicture}[path image/.style={
+		path picture={
+			\node at (path picture bounding box.center) {
+				\includegraphics[height=10cm]{#1}
+			};
+	}}]
+	
+	\draw [path image]
+	(current page.north west) rectangle
+	(current page.south east);
+	
+	\end{tikzpicture}
+}}
+\newcommand*{\bgpica}[1]{\usebackgroundtemplate{%
+		\begin{tikzpicture}[path image/.style={
+			path picture={
+				\node at (path picture bounding box.center) {
+					\includegraphics[height=7.5cm]{#1}
+				};
+		}}]
+		
+		\draw [path image]
+		(current page.north west) rectangle
+		(current page.south east);
+		
+		\end{tikzpicture}
+}}
+
+
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Proj}{\operatorname{Proj}}
+\DeclareMathOperator{\Aut}{\operatorname{Aut}}
+\DeclareMathOperator{\Img}{\operatorname{Im}}
+\DeclareMathOperator{\Sym}{\operatorname{Sym}}
+\DeclareMathOperator{\sgn}{\operatorname{sgn}}
+\DeclareMathOperator{\Id}{\operatorname{Id}}
+\DeclareMathOperator{\ques}{\;?\;}
+\DeclareMathOperator{\Fl}{\mathcal{F\ell}}
+\DeclareMathOperator{\Jac}{\operatorname{Jac}}
+\DeclareMathOperator{\Prym}{\operatorname{Prym}}
+\DeclareMathOperator{\AJ}{\operatorname{AJ}}
+\DeclareMathOperator{\AP}{\operatorname{AP}}
+%\setlength{\parindent}{1em}
+\newcommand{\character}[2]{\left[\begin{array}{c}{#1} \\ {#2}\end{array}\right]}
+\newcommand{\normalcharacter}{\character{\epsilon}{\epsilon'}}
+
+
+
+\setbeamertemplate{caption}[numbered]
+% 设置图形文件的搜索路径
+\graphicspath{{figures/}}
+\title{Subvarieties in Abelian Variety}
+\author{Xiaoxiang Zhou}
+\institute[HU berlin]{Humboldt-Universität zu Berlin}
+\date{\today}
+\tikzset{
+	invisible/.style={opacity=0,text opacity=0},
+	visible on/.style={alt=#1{}{invisible}},
+	alt/.code args={<#1>#2#3}{%
+		\alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}} % \pgfkeysalso doesn't change the path
+	},
+}
+%\setbeamercolor{section number projected}{fg=white!90!blue, bg=red!90!black}
+\definecolor{goodblue}{RGB}{71,71,186}
+\setbeamercolor{block body}{fg=black,bg=gray!10}
+\setbeamercolor{block title}{fg=white, bg=goodblue}
+\usefonttheme[onlymath]{serif}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\setbeamertemplate{headline}{
+	\begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex]{section in head/foot}%
+		\hspace{3ex}{\insertsectionhead}
+	\end{beamercolorbox}
+	%	\begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{subsection in head/foot}
+	%		\usebeamerfont{subsection in head/foot}\insertsubsectionhead
+	%\end{beamercolorbox}
+}%删除点
+\begin{document}
+\begin{frame}
+	\titlepage
+\end{frame}
+\begin{frame}[fragile]
+\begin{short}
+Setting:
+\begin{itemize}
+	\item $A/\mathbb{C}$: an abelian variety of dim $n$
+	\item $Z \subset A$: a (nondegenerate) subvariety of dim $r$
+
+\ignore{$Z$ is a curve $C$ in our talk.}
+	
+\end{itemize}
+\end{short}
+
+%\begin{short}
+%Goal:
+%\begin{itemize}
+%	\item Construct a family of subvarieties in $A$.
+%	\item Find their dimension and homology class.
+%	
+%\end{itemize}
+%\end{short}
+
+\begin{goal}
+\begin{itemize}
+	\item Construct a family of subvarieties in $A$.
+	\item Find their dimension and homology class.
+	
+\end{itemize}
+\end{goal}
+\end{frame}
+
+\begin{frame}[fragile]
+\begin{eg}[Jacobian case]
+When $C$ is a smooth projective curve over $\mathbb{C}$ of genus $g \geqslant 2$, 
+\begin{equation*}
+\begin{aligned}
+ A:=\Jac(C) &\qquad\qquad \text{the Jacobian of $C$}  \\ 
+ \AJ_C:C \hookrightarrow A &\qquad\qquad \text{Abel--Jacobi map}
+\end{aligned}
+\end{equation*}
+\end{eg}
+
+\begin{eg}[Prym case]
+When $h:C \longrightarrow C'$ is an unramified double cover of smooth projective curves, we can define
+\begin{equation*}
+\begin{aligned}
+ A:=\Prym(C/C') &\qquad\qquad \text{the Prym variety of $h$}  \\ 
+ \AP_{C/C'}:C \longrightarrow A &\qquad\qquad \text{Abel--Prym map}
+\end{aligned}
+\end{equation*}
+We need to assume $C$ is non-hyperelliptic so that $\AP_{C/C'}$ is injective.
+\end{eg}
+\end{frame}
+
+
+
+\end{document}
+
+
+%%%\stress -> \stress
+
+
+%\begin{equation*}
+%\begin{aligned}
+%内容...
+%\end{aligned}
+%\end{equation*}
