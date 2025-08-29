@@ -44,7 +44,8 @@
 \newtheorem{remark}[theorem]{Remark}
 \newtheorem{remarks}{Remarks}
 \newtheorem{ex}[theorem]{Exercise}
-\newtheorem{question}[theorem]{Questions}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{facts}[theorem]{Facts}
 \newtheorem{short}{ }
 
 
@@ -101,6 +102,7 @@
 \DeclareMathOperator{\Prym}{\operatorname{Prym}}
 \DeclareMathOperator{\AJ}{\operatorname{AJ}}
 \DeclareMathOperator{\AP}{\operatorname{AP}}
+\DeclareMathOperator{\univ}{\operatorname{univ}}
 %\setlength{\parindent}{1em}
 \newcommand{\character}[2]{\left[\begin{array}{c}{#1} \\ {#2}\end{array}\right]}
 \newcommand{\normalcharacter}{\character{\epsilon}{\epsilon'}}
@@ -111,7 +113,8 @@
 % 设置图形文件的搜索路径
 \graphicspath{{figures/}}
 \title{Subvarieties in Abelian Variety}
-\author{Xiaoxiang Zhou}
+\author[Xiaoxiang Zhou]{Xiaoxiang Zhou\\[10mm]{\small Supervisor: Thomas Krämer
+}}
 \institute[HU berlin]{Humboldt-Universität zu Berlin}
 \date{\today}
 \tikzset{
@@ -195,7 +198,101 @@ We need to assume $C$ is non-hyperelliptic so that $\AP_{C/C'}$ is injective.
 \end{frame}
 
 
+\begin{frame}[fragile]{Construct new subvarieties}
+Since $A$ has addition structure, one defines
+\begin{equation*}
+\begin{aligned}
+  C+C:=\;& \left\{ p+q \,\middle|\, p,q \in C  \right\} &&\subseteq A  \\ 
+  2C:=\;& \left\{ 2p \,\middle|\, p \in C  \right\} &&\subseteq A  \\ 
+\end{aligned}
+\end{equation*}
+and so on.
 
+\begin{remark}
+Since $C$ is nondegenerate,
+$$\underbrace{C + C + \cdots + C}_{\text{$\geqslant n$ many}} = A.$$
+\end{remark}
+
+\end{frame}
+
+\begin{frame}[fragile]{Construct new subvarieties}
+\begin{question}
+Can we define a family of subvarieties
+$$\left\{ m_1C+ \cdots + m_dC \subseteq A  \;\middle|\; m_1,\ldots,m_k \in \mathbb{Z} \right\}$$
+more respect to the addition structures?
+
+\ignore{They should not be $A$.}
+\end{question}
+In fact, we can construct a family of subvarieties
+$$\left\{ Z_{\chi} \subseteq A  \;\middle|\; \chi \in \mathbb{Z}^d \right\}$$
+via the conormal variety.
+\end{frame}
+
+\begin{frame}[fragile]{Conic Lagrangian cycle}
+For a (smooth) subvariety $Z \subset A$, one can define the conormal variety $\Lambda_Z \subset T^*A \cong A \times T_0^*A$  by 
+$$\Lambda_Z: = \left\{ (p,\xi) \in T^*A  \;\middle|\; \xi|_{T_p^* Z} = 0 \right\}.$$ 
+
+\begin{facts}
+\begin{itemize}
+	\item $\Lambda_Z$ is a conic Lagrangian cycle in $T^*A$;
+	\item We have one-to-one correspondence
+% https://q.uiver.app/#q=WzAsNixbMCwwLCJcXGxlZnRcXHsgXFx0ZXh0e2lyciBjb25pYyBMYWdyYW5naWFuIGN5Y2xlcyBpbiAkVF4qXFwhQSR9IFxccmlnaHRcXH0iXSxbMiwwLCJcXGxlZnRcXHsgXFx0ZXh0e2lyciBzdWJ2YXJpZXRpZXMgaW4gJEEkfSBcXHJpZ2h0XFx9Il0sWzEsMCwiXFxjb25nIl0sWzEsMSwiXFxsb25nbGVmdHJpZ2h0YXJyb3ciXSxbMCwxLCJcXExhbWJkYV9aIl0sWzIsMSwiWiJdXQ==
+\[\begin{tikzcd}[ampersand replacement=\&,column sep={-4mm}, row sep={-1mm}]
+	{\left\{ \text{irr conic Lagrangian cycles in $T^*\!A$} \right\}} \& \cong \& {\left\{ \text{irr subvarieties in $A$} \right\}} \\
+	{\Lambda_Z} \& \longleftrightarrow \& Z
+\end{tikzcd}\]
+	\item The map $\gamma_Z: \Lambda_Z \subset A \times T_0^*A \longrightarrow T_0^*A $ is a generically finite map, when $Z$ is nondegenerate.
+	
+\end{itemize}
+\end{facts}
+\end{frame}
+\begingroup
+\setlength{\abovedisplayskip}{4pt}
+\setlength{\belowdisplayskip}{4pt}
+\begin{frame}[fragile]{Family of subvarieties}
+\begin{definition}
+Fix a general point $\xi_0 \in T_0^*A$, and \ignore{$d:=\deg \gamma_Z$,}
+$$\gamma_Z^{-1}(\xi_0):= \left\{ p_1,\ldots,p_d \right\} \subset Z.$$
+Denote $\Lambda_Z^{\univ}$ as the irreducible component of 
+$$\underbrace{\Lambda_Z \times_{T_0^* A} \cdots \times_{T_0^* A} \Lambda_Z}_{\text{$d$ many}} \subset A \times \cdots \times A \times T_0^* A$$
+containing the point $(p_1,\ldots,p_d, \xi_0)$.
+\\[3mm]
+
+For $\chi=(m_1,\ldots,m_d) \in \mathbb{Z}^d$, define $\Lambda_{Z_{\chi}}:= f(\Lambda_Z^{\univ})$, where 
+% https://q.uiver.app/#q=WzAsNSxbMSwxLCIocV8xLFxcbGRvdHMscV9kLFxceGkpIl0sWzIsMSwiXFxsZWZ0KCBcXHN1bV9pIG1faXFfaSwgXFx4aSBcXHJpZ2h0KSJdLFsxLDAsIkEgXFx0aW1lcyBcXGNkb3RzIFxcdGltZXMgQSBcXHRpbWVzIFRfMF4qIEEiXSxbMiwwLCJBIFxcdGltZXMgVF8wXiogQSJdLFswLDAsImY6Il0sWzIsM10sWzAsMSwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibWFwcyB0byJ9fX1dXQ==
+\[\begin{tikzcd}[ampersand replacement=\&,column sep={between origins, 40mm},row sep={-1mm}]
+	{f:} \&[-21mm] {A \times \cdots \times A \times T_0^* A} \& {A \times T_0^* A} \\
+	\& {(q_1,\ldots,q_d,\xi)} \& {\left( \sum_i m_iq_i, \xi \right)}
+	\arrow[from=1-2, to=1-3]
+	\arrow[maps to, from=2-2, to=2-3]
+\end{tikzcd}\]
+$Z_{\chi}$ is then the corresponding subvariety of $\Lambda_{Z_{\chi}}$.
+\end{definition}
+\end{frame}
+\endgroup
+
+\begin{frame}[fragile]{Our work}
+We determine $\dim Z_{\chi}$ and $[Z_{\chi}] \in H_*(A;\mathbb{Z})$ in special cases.
+\begin{eg}
+In the Jacobian case, $d=\deg \gamma_C = 2g-2$.
+
+Assume that $C$ is non-hyperelliptic. For $\chi=(m_1,\ldots,m_d) \in \mathbb{Z}^d$, when no $g$ of $m_i$ equal to each other, we get 
+\begin{equation*}
+\begin{aligned}
+  &\hspace{10mm}\dim Z_{\chi} =\; g-1 \\ 
+  [Z_{\chi}]=\;\frac{1}{\deg f|_{\Lambda_Z^{\univ}}}&\left( \frac{1}{2^{g-1}} \sum_{\sigma \in S_{2g-2}} \prod_{l=1}^{g-1} \left( m_{\sigma(2l-1)}-m_{\sigma(2l)} \right)^2  \right) \cdot [\Theta]
+\end{aligned}
+\end{equation*}
+\end{eg}
+\end{frame}
+
+\begin{frame}[fragile]{Q \& A}
+Thank you for your listening! 
+
+Any questions?
+
+
+\end{frame}
 \end{document}
 
 
