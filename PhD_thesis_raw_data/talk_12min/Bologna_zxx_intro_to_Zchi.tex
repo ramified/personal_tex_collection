@@ -18,6 +18,12 @@
 \usepackage{makecell}
 \usepackage{array}
 \usepackage{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+colorlinks=true,
+linkcolor=blue,
+urlcolor=blue,
+}
 \usetikzlibrary {calc,positioning,shapes.misc,graphs,decorations.pathreplacing}
 
 
@@ -116,7 +122,7 @@
 \author[Xiaoxiang Zhou]{Xiaoxiang Zhou\\[10mm]{\small Supervisor: Thomas Krämer
 }}
 \institute[HU berlin]{Humboldt-Universität zu Berlin}
-\date{\today}
+\date{September 9 or 11, 2025}
 \tikzset{
 	invisible/.style={opacity=0,text opacity=0},
 	visible on/.style={alt=#1{}{invisible}},
@@ -144,17 +150,19 @@
 \begin{frame}
 	\titlepage
 \end{frame}
+
 \begin{frame}[fragile]
-\begin{short}
-Setting:
+\begin{overlayarea}{\textwidth}{8cm}
+\begin{block}{Setting}
 \begin{itemize}
 	\item $A/\mathbb{C}$: an abelian variety of dim $n$
-	\item $Z \subset A$: a (nondegenerate) subvariety of dim $r$
+	\item $Z \subsetneq A$: a (nondegenerate) subvariety of dim $r$
 
 \ignore{$Z$ is a curve $C$ in our talk.}
 	
 \end{itemize}
-\end{short}
+\end{block}
+
 
 %\begin{short}
 %Goal:
@@ -164,17 +172,21 @@ Setting:
 %	
 %\end{itemize}
 %\end{short}
-
+\only<2>
+{
+\vspace{10mm}
 \begin{goal}
 \begin{itemize}
-	\item Construct a family of subvarieties in $A$.
+	\item Construct a family \ignore{indexed by $\mathbb{Z}^d$} of subvarieties in $A$.
 	\item Find their dimension and homology class.
 	
 \end{itemize}
 \end{goal}
-\end{frame}
+}
 
-\begin{frame}[fragile]
+\only<3>
+{
+\vspace{5mm}
 \begin{eg}[Jacobian case]
 When $C$ is a smooth projective curve over $\mathbb{C}$ of genus $g \geqslant 2$, 
 \begin{equation*}
@@ -184,7 +196,10 @@ When $C$ is a smooth projective curve over $\mathbb{C}$ of genus $g \geqslant 2$
 \end{aligned}
 \end{equation*}
 \end{eg}
+}
 
+\only<4>
+{
 \begin{eg}[Prym case]
 When $h:C \longrightarrow C'$ is an unramified double cover of smooth projective curves, we can define
 \begin{equation*}
@@ -195,6 +210,8 @@ When $h:C \longrightarrow C'$ is an unramified double cover of smooth projective
 \end{equation*}
 We need to assume $C$ is non-hyperelliptic so that $\AP_{C/C'}$ is injective.
 \end{eg}
+}
+\end{overlayarea}
 \end{frame}
 
 
@@ -207,31 +224,34 @@ Since $A$ has addition structure, one defines
 \end{aligned}
 \end{equation*}
 and so on.
-
+\visible<2>{
 \begin{remark}
 Since $C$ is nondegenerate,
 $$\underbrace{C + C + \cdots + C}_{\text{$\geqslant n$ many}} = A.$$
 \end{remark}
-
+}
 \end{frame}
 
 \begin{frame}[fragile]{Construct new subvarieties}
 \begin{question}
-Can we define a family of subvarieties
-$$\left\{ m_1C+ \cdots + m_dC \subseteq A  \;\middle|\; m_1,\ldots,m_k \in \mathbb{Z} \right\}$$
-more respect to the addition structures?
+Can we define a family of subvarieties analogous to
+$$\left\{ m_1C+ \cdots + m_dC \subseteq A  \;\middle|\; m_1,\ldots,m_d \in \mathbb{Z} \right\}$$
+but constructed in a way that reflects the additive structure of $A$ more faithfully?
 
 \ignore{They should not be $A$.}
 \end{question}
-In fact, we can construct a family of subvarieties
+\visible<2>{
+In fact, we can construct a family of subvarieties 
 $$\left\{ Z_{\chi} \subseteq A  \;\middle|\; \chi \in \mathbb{Z}^d \right\}$$
 via the conormal variety.
+}
 \end{frame}
 
 \begin{frame}[fragile]{Conic Lagrangian cycle}
 For a (smooth) subvariety $Z \subset A$, one can define the conormal variety $\Lambda_Z \subset T^*A \cong A \times T_0^*A$  by 
-$$\Lambda_Z: = \left\{ (p,\xi) \in T^*A  \;\middle|\; \xi|_{T_p^* Z} = 0 \right\}.$$ 
+$$\Lambda_Z: = \left\{ (p,\xi) \in T^*A  \;\middle|\; p \in Z, \xi|_{T_p Z} = 0 \right\}.$$ 
 
+\visible<2>{
 \begin{facts}
 \begin{itemize}
 	\item $\Lambda_Z$ is a conic Lagrangian cycle in $T^*A$;
@@ -245,6 +265,7 @@ $$\Lambda_Z: = \left\{ (p,\xi) \in T^*A  \;\middle|\; \xi|_{T_p^* Z} = 0 \right\
 	
 \end{itemize}
 \end{facts}
+}
 \end{frame}
 \begingroup
 \setlength{\abovedisplayskip}{4pt}
@@ -253,11 +274,14 @@ $$\Lambda_Z: = \left\{ (p,\xi) \in T^*A  \;\middle|\; \xi|_{T_p^* Z} = 0 \right\
 \begin{definition}
 Fix a general point $\xi_0 \in T_0^*A$, and \ignore{$d:=\deg \gamma_Z$,}
 $$\gamma_Z^{-1}(\xi_0):= \left\{ p_1,\ldots,p_d \right\} \subset Z.$$
-Denote $\Lambda_Z^{\univ}$ as the irreducible component of 
+
+\visible<2->{
+Let $\Lambda_Z^{\univ}$ be the irreducible component of 
 $$\underbrace{\Lambda_Z \times_{T_0^* A} \cdots \times_{T_0^* A} \Lambda_Z}_{\text{$d$ many}} \subset A \times \cdots \times A \times T_0^* A$$
 containing the point $(p_1,\ldots,p_d, \xi_0)$.
-\\[3mm]
+\\[3mm]}
 
+\visible<3->{
 For $\chi=(m_1,\ldots,m_d) \in \mathbb{Z}^d$, define $\Lambda_{Z_{\chi}}:= f(\Lambda_Z^{\univ})$, where 
 % https://q.uiver.app/#q=WzAsNSxbMSwxLCIocV8xLFxcbGRvdHMscV9kLFxceGkpIl0sWzIsMSwiXFxsZWZ0KCBcXHN1bV9pIG1faXFfaSwgXFx4aSBcXHJpZ2h0KSJdLFsxLDAsIkEgXFx0aW1lcyBcXGNkb3RzIFxcdGltZXMgQSBcXHRpbWVzIFRfMF4qIEEiXSxbMiwwLCJBIFxcdGltZXMgVF8wXiogQSJdLFswLDAsImY6Il0sWzIsM10sWzAsMSwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibWFwcyB0byJ9fX1dXQ==
 \[\begin{tikzcd}[ampersand replacement=\&,column sep={between origins, 40mm},row sep={-1mm}]
@@ -266,7 +290,11 @@ For $\chi=(m_1,\ldots,m_d) \in \mathbb{Z}^d$, define $\Lambda_{Z_{\chi}}:= f(\La
 	\arrow[from=1-2, to=1-3]
 	\arrow[maps to, from=2-2, to=2-3]
 \end{tikzcd}\]
+}
+
+\visible<4->{
 $Z_{\chi}$ is then the corresponding subvariety of $\Lambda_{Z_{\chi}}$.
+}
 \end{definition}
 \end{frame}
 \endgroup
@@ -300,7 +328,7 @@ This slide is online available:
 \href{https://github.com/ramified/personal_tex_collection/raw/main/PhD_thesis_raw_data/talk_12min/Bologna_zxx_intro_to_Zchi.pdf}{https://shorturl.at/qqWDe}
 
 
-For more infos (and references) about this topic, please check \href{https://github.com/ramified/personal_tex_collection/blob/main/PhD_thesis_raw_data/dim_of_Zchi.pdf}{dim\_of\_Zchi.pdf} and \href{https://github.com/ramified/personal_tex_collection/raw/main/PhD_thesis_raw_data/subvarieties/subvarieties_in_abelian_variety.pdf}{subvarieties\_in\_abelian\_variety.pdf}.
+For more infos (and references) about this topic, please check my  \href{https://github.com/ramified/personal_tex_collection/blob/main/PhD_thesis_raw_data/dim_of_Zchi.pdf}{note1} and \href{https://github.com/ramified/personal_tex_collection/raw/main/PhD_thesis_raw_data/subvarieties/subvarieties_in_abelian_variety.pdf}{note2}.
 
 \vspace{8mm}
 Financial support by the Berlin Mathematical School is gratefully acknowledged.
