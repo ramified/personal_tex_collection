@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  31 AUG 2025 01:13
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  27 SEP 2025 16:16
 entering extended mode
 **./Bologna_zxx_intro_to_Zchi.tex
 (Bologna_zxx_intro_to_Zchi.tex
@@ -1368,11 +1368,11 @@ File: BMS_Logo_RGB.png Graphic file (type bmp)
 \tf@snm=\write8
 \openout8 = `Bologna_zxx_intro_to_Zchi.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 342.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 342.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 343.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 343.
  (Bologna_zxx_intro_to_Zchi.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 342.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 342.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 343.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 343.
 Package rerunfilecheck Info: File `Bologna_zxx_intro_to_Zchi.out' has not chang
 ed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E.
@@ -1380,7 +1380,7 @@ ed.
 Here is how much of TeX's memory you used:
  27168 strings out of 427748
  534789 string characters out of 3150981
- 620608 words of memory out of 3000000
+ 620609 words of memory out of 3000000
  30599 multiletter control sequences out of 15000+200000
  46137 words of font info for 51 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191

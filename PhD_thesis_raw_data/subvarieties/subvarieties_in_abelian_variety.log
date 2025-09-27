@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  29 AUG 2025 22:53
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  27 SEP 2025 16:48
 entering extended mode
 **./subvarieties_in_abelian_variety.tex
 (subvarieties_in_abelian_variety.tex
@@ -1695,11 +1695,11 @@ Package rerunfilecheck Info: File `subvarieties_in_abelian_variety.out' has not
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1343.
  ) 
 Here is how much of TeX's memory you used:
- 37743 strings out of 427748
- 705225 string characters out of 3150981
+ 37750 strings out of 427748
+ 705429 string characters out of 3150981
  748586 words of memory out of 3000000
- 41074 multiletter control sequences out of 15000+200000
- 544213 words of font info for 81 fonts, out of 3000000 for 9000
+ 41077 multiletter control sequences out of 15000+200000
+ 544237 words of font info for 84 fonts, out of 3000000 for 9000
  1489 hyphenation exceptions out of 8191
  61i,21n,82p,989b,1076s stack positions out of 5000i,500n,10000p,200000b,50000s
 

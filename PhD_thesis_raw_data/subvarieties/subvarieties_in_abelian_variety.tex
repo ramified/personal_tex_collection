@@ -767,30 +767,30 @@ When $\tilde{Q}$ is a quadric cone, there exists a hyperplane $H$ such that $H \
   \Longleftrightarrow\;& \text{there exists a quadric } Q \subset \mathbb{P}^3 \text{ such that } Q \cap \tilde{Q} = 4L \qquad\quad \text{by Lemma \ref{lem:SG}}  \\ 
 \end{aligned}
 \end{equation*}
-However, via Lemma \ref{lem:2_quartic_intersection}, such case won't happen at all.
+However, via Lemma \ref{lem:2_quardric_intersection}, such case won't happen at all.
 \end{proof}
 Lemma \ref{lem:SG} was inspired by a discussion with Søren Gammelgaard.
 \begin{lemma}\label{lem:SG}
-Let $Q$ and $\tilde{Q}$ be reduced quartic surfaces in $\mathbb{P}^3$, and let $\tilde{K} \subset \mathbb{P}^3$ be a cubic surface. Assume that $\tilde{Q}$ and $\tilde{K}$ are smooth and that $\tilde{Q} \cap \tilde{K}$ is a complete intersection. Let $L \subset \tilde{Q}$ be a line, and set $D := L \cap \tilde{K}$. Then, 
+Let $Q$ and $\tilde{Q}$ be reduced quardric surfaces in $\mathbb{P}^3$, and let $\tilde{K} \subset \mathbb{P}^3$ be a cubic surface. Assume that $\tilde{Q}$ and $\tilde{K}$ are smooth and that $\tilde{Q} \cap \tilde{K}$ is a complete intersection. Let $L \subset \tilde{Q}$ be a line, and set $D := L \cap \tilde{K}$. Then, 
 $$
 Q \cap \tilde{Q} \cap \tilde{K} =4D \quad \Longleftrightarrow \quad Q \cap \tilde{Q}=4L.
 $$
 \end{lemma}
 \begin{proof}
-We only need to prove the ``$\Longrightarrow$" direction. Suppose that $Q \cap \tilde{Q} \cap \tilde{K} = 4D$. Then:
+We only need to prove the ``$\Longrightarrow$" direction. Suppose that $Q \cap \tilde{Q} \cap \tilde{K} = 4D$. Then:\footnote{The previous argument is incorrect. For example, let $X = \{F=0\}$ be a smooth cubic plane curve and let $L = \{G=0\}$ be a line meeting $X$ at three points $p_1, p_2, p_3$. Then for some nonzero $a \in \mathbb{C}$, the cubic $Y_a := \{F + aG^3 = 0\}$ is smooth, and $X \cap Y_a = 3(p_1 + p_2 + p_3)$.}
 \begin{itemize}
 \item Since $Q$ intersects $L$ in at least three points, we have $L \subset Q$.
 \item Write $Q \cap \tilde{Q} = L + R$, where $R$ is the residual curve. Then $\deg R = 3$ and $R \cap \tilde{K} = 3D$.
 \item If $R \subset \mathbb{P}^3$ is non-degenerate, then $R$ is a rational normal curve of degree $3$, which cannot pass through three distinct collinear points. This contradicts $3D \subset R \cap L$.
-\item If $R$ is degenerate, then it lies in a hyperplane $H \cong \mathbb{P}^2$. A degree $3$ plane curve is determined by $9$ points. Since $R \cap \tilde{K} = 3D$ gives $9$ points on $L$, it follows that $R = 3L$.
+\item If $R$ is degenerate, then it lies in a hyperplane $H \cong \mathbb{P}^2$. Since $R \subset H \cap \tilde{Q}$ is contained in a conic, we can write $R = L' + R'$, where $L'$ is a line and $R'$ is a conic. From the inclusion $3D \subset (L' + R') \cap L$, it follows that $L' = L$ and $R' = 2L$.
 \item Therefore, $Q \cap \tilde{Q} = L + R = 4L$.
 \end{itemize}
 \end{proof}
-\begin{lemma}\label{lem:2_quartic_intersection}
-Let $Q$ and $\tilde{Q}$ be two reduced quartic surfaces in $\mathbb{P}^3$, and assume that $\tilde{Q}$ is smooth. Then $Q$ and $\tilde{Q}$ cannot intersect a line with multiplicity $4$.
+\begin{lemma}\label{lem:2_quardric_intersection}
+Let $Q$ and $\tilde{Q}$ be two reduced quardric surfaces in $\mathbb{P}^3$, and assume that $\tilde{Q}$ is smooth. Then $Q$ and $\tilde{Q}$ cannot intersect a line with multiplicity $4$.
 \end{lemma}
 \begin{proof}
-We prove by contradiction. Without loss of generality, assume that $Q \cap \tilde{Q} = 4L$, where $L = \left\{ [x:y:0:0] \right\} \subset \mathbb{P}^3$ is a line. We can write down the equations of the quartics:
+We prove by contradiction. Without loss of generality, assume that $Q \cap \tilde{Q} = 4L$, where $L = \left\{ [x:y:0:0] \right\} \subset \mathbb{P}^3$ is a line. We can write down the equations of the quardrics:
 \begin{equation*}
 \begin{aligned}
   Q:\;&  f(z_0,z_1,z_2,z_3)=0 \\ 
@@ -1074,7 +1074,7 @@ When $\alpha$ is finite onto its image,
 \begin{aligned}
   \;&  \phi_Z \text{ is not generic injective} \\ 
   \Longleftrightarrow\;\;& \text{For general $p \in X$, exists $q \neq p$ such that $h^0(X,\Omega_X(-p-q))=n-r$} \\ 
-  \Longleftrightarrow\;\;& \text{For general $p \in X$, exists $S \in X^{[2]}$ such that $p\in S$ and $h^0(X,\Omega_X \otimes \mathcal{I}_S)=n-r$} \\ 
+  \stackrel{\textcolor{purple}{\textbf{?}}}{\Longleftrightarrow}\;\;& \text{For general $p \in X$, exists $S \in X^{[2]}$ such that $p\in S$ and $h^0(X,\Omega_X \otimes \mathcal{I}_S)=n-r$} \\ 
   \Longleftrightarrow\;\;& \text{For all $p \in X$, exists $S \in X^{[2]}$ such that $p\in S$ and $h^0(X,\Omega_X \otimes \mathcal{I}_S)=n-r$.} \\ 
 \end{aligned}
 \end{equation*}
