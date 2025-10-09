@@ -1074,11 +1074,18 @@ When $\alpha$ is finite onto its image,
 \begin{aligned}
   \;&  \phi_Z \text{ is not generic injective} \\ 
   \Longleftrightarrow\;\;& \text{For general $p \in X$, exists $q \neq p$ such that $h^0(X,\Omega_X(-p-q))=n-r$} \\ 
-  \stackrel{\textcolor{purple}{\textbf{?}}}{\Longleftrightarrow}\;\;& \text{For general $p \in X$, exists $S \in X^{[2]}$ such that $p\in S$ and $h^0(X,\Omega_X \otimes \mathcal{I}_S)=n-r$} \\ 
+  \stackrel{\textcolor{purple}{\textbf{?}\footnotemark}}{\Longleftrightarrow}\;\;& \text{For general $p \in X$, exists $S \in X^{[2]}$ such that $p\in S$ and $h^0(X,\Omega_X \otimes \mathcal{I}_S)=n-r$} \\ 
   \Longleftrightarrow\;\;& \text{For all $p \in X$, exists $S \in X^{[2]}$ such that $p\in S$ and $h^0(X,\Omega_X \otimes \mathcal{I}_S)=n-r$.} \\ 
 \end{aligned}
 \end{equation*}
 \end{proposition}
+\footnotetext{When $n = r$, the map $\varphi_Z$ has a point as its target, so the equivalence is trivial.
+When $n > r$, the implication ``$\Rightarrow$” is clear. For the converse ``$\Leftarrow$”, it suffices to show that the image of 
+$$\left\{ S \in X^{[2]} \;\middle|\; h^0(X,\Omega_X \otimes \mathcal{I}_S)=n-r   \right\}$$
+ under the map $\pi_X:X^{[2]} \longrightarrow X^{(2)} $ does not include the diagonal. Indeed, we can choose a section $s \in \Hnm^0(X,\Omega_X)$ that cuts out finitely many reduced points $p_1,\ldots,p_d$ in $X$.
+Then for any $S \in \pi_X^{-1}(p_i)$, we have 
+$$\Hnm^0(X,\Omega_X \otimes \mathcal{I}_S)  \subsetneqq \Hnm^0(X,\Omega_X(-p_i)).$$
+}
 This last step relies on the following lemma, combined with the closedness of the tautological correspondence in $X \times X^{[2]}$.
 \begin{lemma}
 Let $m \in \mathbb{Z}_{>0}$. The function $$h^{\Omega}: X^{[m]} \longrightarrow \mathbb{Z}_{\geqslant 0} \qquad
