@@ -280,6 +280,7 @@
 \DeclareMathOperator{\univ}{\operatorname{univ}}
 \DeclareMathOperator{\Abel}{\operatorname{Abel}}
 \DeclareMathOperator{\pr}{\operatorname{pr}}
+\DeclareMathOperator{\aff}{\operatorname{aff}}
 
 %%%%%%%newcommand
 
@@ -372,17 +373,23 @@ For the dimension and homology class of a subvariety $Z$, both invariants can be
 
 I would like to express my sincere gratitude to my supervisor, Thomas Krämer, without whose support this work would not have been possible. He proposed the problem, guided me throughout the project, and generously spent many hours discussing drafts and explaining important ideas. I am also thankful to Haohao Liu, Vincent Ariksoy, Aaron Beumer, Roben de Preter, Andreas Kretschmer, Andrés Rojas, Søren Gammelgaard, Paweł Borówka, and Gavril Farkas for their insightful discussions and valuable comments. Funding is provided by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under Germany´s Excellence Strategy – The Berlin Mathematics Research Center MATH+ (EXC-2046/1, project ID: 390685689).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Basic setting}
+\section{Tangent Gauss map and Conormal Gauss map}
 For simplicity, we work over the base field $\kappa = \mathbb{C}$, and by a variety we mean a integral separated scheme of finite type over $\mathbb{C}$. Let $A/\mathbb{C}$ be an abelian variety of dimension $n$, and let $Z \subseteq A$ be an irreducible closed subvariety of dimension $r$. We denote by $\iota_Z: Z \hookrightarrow A$ the inclusion morphism.\footnote{I'm not sure whether we should consider the more general cases in the future—such as working over a field of characteristic $p$, letting $A$ be a semiabelian variety or a complex torus, or allowing $\iota$ to be a covering onto its image. For now, I will omit these possibilities from this document.}
 
-\subsection{Gauss map}
-The goal of my research is to understand the geometry of $Z$, and the main tool for the subvariety geometry is the Gauss map. The Gauss map describe the tangent space information at each point: 
+\subsection{Gauss map and monodromy group}
+\begin{definition}
+For a subvariety $Z \subset A$, the tangent Gauss map of $Z$ is defined as 
 $$\phi_Z: \Zsm \longrightarrow \Gr(r,T_0 A) \qquad p \longmapsto T_pZ \;\;\subseteq T_pA \cong T_0 A$$
+which describes the tangent space information at each point.
+\end{definition} 
+
+\begin{remark}
 Any map $X\longrightarrow\Gr(r, V)$ is induced by a rank $r$ vector bundle $\mathcal{E}$ on $X$ together with an epimorphism $V^{*}\otimes \mathcal{O}_X \twoheadrightarrow \mathcal{E}$. In our case, the map $\phi_Z$ is induced by the tangent bundle $\mathcal{T}_{\Zsm}$ and the sections
 $$T_0^{*} A \otimes_{\mathbb{C}} \mathcal{O}_{\Zsm} \subseteq\Hnm^0(\Zsm,\mathcal{T}_{\Zsm}^{\vee}) \otimes_{\mathbb{C}} \mathcal{O}_{\Zsm} \twoheadrightarrow \mathcal{T}_{\Zsm}^{\vee}.$$
+\end{remark}
 
-\subsection{Conormal variety}
-This concept may already be familiar to many readers, so we briefly recall the definition. On the smooth locus, the normal and conormal bundles behave well as vector bundles:\footnote{This is more symmetric when writing them as short exact sequences:
+
+The definition of the conormal Gauss map requires a brief recollection of the conormal variety. On the smooth locus, the normal and conormal bundles behave well as vector bundles:\footnote{This is more symmetric when writing them as short exact sequences:
 % https://q.uiver.app/#q=WzAsMTAsWzMsMCwiXFxtYXRoY2Fse059X3tcXFpzbS9BfSJdLFsxLDAsIlxcbWF0aGNhbHtUfV97XFxac219Il0sWzIsMCwiXFxtYXRoY2Fse1R9X0F8X3tcXFpzbX0iXSxbMSwxLCJcXExhbWJkYV97XFxac219ICJdLFsyLDEsIlxcT21lZ2FfQXxfe1xcWnNtfSAiXSxbMywxLCJcXE9tZWdhX3tcXFpzbX0gIl0sWzQsMCwiMCJdLFs0LDEsIjAiXSxbMCwwLCIwIl0sWzAsMSwiMCJdLFsxLDJdLFsyLDBdLFszLDRdLFs0LDVdLFswLDZdLFs1LDddLFs4LDFdLFs5LDNdXQ==
 \[\begin{tikzcd}[ampersand replacement=\&,column sep=2.25em,row sep=tiny]
 	0 \& {\mathcal{T}_{\Zsm}} \& {\mathcal{T}_A|_{\Zsm}} \& {\mathcal{N}_{\Zsm/A}} \& 0 \\
@@ -401,13 +408,18 @@ $$\mathcal{N}_{\Zsm/A} := \mathcal{T}_A|_{\Zsm} \;/\; \mathcal{T}_{\Zsm} \qquad 
 We write $\Lambda_{\Zsm}$ as the total space of $\mathcal{N}_{\Zsm/A}^*$.
 The conormal variety $\Lambda_{Z}$ is the closure of $\Lambda_{\Zsm}$ viewed as a subvariety in $T^*A$:
 $$\Lambda_{Z}:=\;\; \overline{\Lambda_{\Zsm}} \;\; \subset T^*A \;\cong\; A \times T^{*}_{0}A$$
-this is a conical Lagrangian cycle in $T^*A$.
+this is a conical Lagrangian cycle in $T^*A$. The (affine) conormal Gauss map is defined as
+$$\gamma_Z^{\aff}: \Lambda_{Z} \subset A \times T^{*}_{0}A \longrightarrow T^{*}_{0}A$$
 
-Moreover, the projectivized conormal variety
+For intersection-theoretic purposes it is more natural to work with projectivized conormal spaces. We therefore pass from the affine conormal Gauss map to its projectivized version:
+\begin{definition}
+the projectivized conormal variety
 $$\mathbb{P}\Lambda_{Z}:=\;\; \overline{\mathbb{P}\Lambda_{\Zsm}} \;\; \subset \mathbb{P}T^*A \;\cong\; A \times \mathbb{P}T^{*}_{0}A$$
 is a Legendrian cycle in the contact variety $A \times \mathbb{P}T^{*}_{0}A$. $\mathbb{P}\Lambda_{\Zsm}$ is a $\mathbb{P}^{r-1}$-bundle over $\Zsm$, and the map 
 $$\gamma_Z: \mathbb{P}\Lambda_{Z} \subset A \times \mathbb{P}T^{*}_{0}A \longrightarrow \mathbb{P}T^{*}_{0}A$$
-is generically finite when $Z$ is (an integral variety) of general type, see \cite[Theorem 2.8 (1)]{JKLM22}.
+is called the (projectivized) conormal Gauss map.
+\end{definition} 
+By \cite[Theorem 2.8 (1)]{JKLM22}, $\gamma_Z$ is generically finite when $Z$ is (an integral variety) of general type.
 
 A lot of geometry of $Z$ is encoded in the map $\gamma_Z$. For instance, if $Z \subset A$ is smooth, then 
 $$\deg \gamma_Z = (-1)^r \chi(Z),$$
@@ -425,14 +437,10 @@ The monodromy group is then defined as the image of $\rho_{f}$, i.e.,
 $$\Gal(f):= \Img \rho_{f}.$$
 It is clear that $\Gal(f)$ doesn't depend on the choice of $U$.
 \end{definition}
-\begin{ques}\label{ques:monodromy}
-Suppose that the subvariety $Z \subset A$ is not stable under any translation on $A$. Are there criterias to compute the monodromy group $\Gal(\gamma_Z)$? Furthermore, what kinds of groups can appear as $\Gal(\gamma_Z)$ for suitable choices of $Z \subset A$?
-\end{ques}
 
-We will try to compute $\Gal(\gamma_Z)$ for a number of specific cases in Section \ref{sec:mon_examples}. Three special cases are already treated in \cite[Theorem 9]{Kr16cubicthreefold}, and we will generalize the strategies there.
 
 \subsection{Interpolation via hyperplanes}
-Before delving into examples, we reinterpret $\gamma_Z$ using a functorial and more transparent framework, enabling us to decompose Question \ref{ques:monodromy} into two primary subquestions. 
+In this subsection, we reinterpret $\gamma_Z$ using a functorial and more transparent framework. This permits the definition of the conormal Gauss map and its monodromy group for any morphism $\phi: Z \to \Gr(r,n)$ with $\dim Z = r$, and clarifies the relation between the monodromy group and $\deg \phi$.
 
 Since each non-zero conormal vector $\xi  \in T^{*}_{0}A$ determines a hyperplane $H_{\xi} \in \Gr(n-1, T_0A)$, we have the isomorphisms (To simplify notation, we abbreviate $T^{*}_{0}A$ by $W$.)
 \begin{equation*}
@@ -481,21 +489,373 @@ Consider the diagram below:
 \end{tikzcd}\]
 The fiber $\phi^{-1}\left( \Gr(r,H_0) \right)$ splits into $d/k$ groups of points, with the monodromy group acting by permutations within each group and among the groups.
 \end{proof}
-Based on the discussion above, Question \ref{ques:monodromy} reduces to Question \ref{ques:mon_Grass} and Question \ref{ques:when_are_maps_Gauss}, with Question \ref{ques:mon_Grass_sub} appearing as a special case of Question \ref{ques:mon_Grass}.
 
+\subsection{Interpolation via higher Brill--Noether theory}
+Examples of subvarieties of abelian varieties can be obtained in two ways: one may fix an abelian variety and consider cycles within it, or begin with a variety $Z$ and construct a map to an abelian variety, such as the Albanese map. When adopting the latter perspective, we write $X$ for the same variety $Z$ to stress the focus on the variety itself.
 
-\begin{ques}\label{ques:mon_Grass}
-In the situation of Definition \ref{def:general_monodromy}, how can we compute $\Mon(\phi)$?
+In this subsection, we begin with the case $X \to \Alb(X)$, from which we derive some basic properties of the Albanese map and the tangent Gauss map. The remaining cases can then be treated in an analogous manner.
+
+Let $X$ be a smooth complex projective variety of dimension $r$, and set $n := \dim_{\mathbb{C}} \Hnm^0(X, \Omega_X) = h^{1,0}$.
+Recall that the Albanese variety of $X$ is defined as
+$$\Alb(X):=\Hnm^0(X, \Omega_X)^* / \Hnm_1(X, \mathbb{Z})_{\mathrm{free}},$$
+and the Albanese map is given by (pick a base point $p_0 \in X$)
+$$\alpha: X \longrightarrow \Alb(X) \qquad 
+\qquad p \longmapsto \left[ \;\;\omega \mapsto \int_{\gamma: p_0 \sim p} \omega \;\;\right].$$
+
+One classical question is the dimension of $\alpha(X)$. For this, consider the cotangent map of $\alpha$ at $p \in X$:
+$$T_p^* \alpha: H^0(X,\Omega_X) \longrightarrow T_p^*X=H^0(X,\Omega_X|_p).$$
+Consider the short exact sequence of coherent sheaves on $X$ (For convenient, we write $\Omega_X(-p):= \Omega_X \otimes \mathcal{I}_p$)
+% https://q.uiver.app/#q=WzAsNSxbMSwwLCJcXE9tZWdhX1goLXApIl0sWzIsMCwiXFxPbWVnYV9YIl0sWzMsMCwiXFxPbWVnYV9YfF9wIl0sWzAsMCwiMCJdLFs0LDAsIjAiXSxbMywwXSxbMCwxXSxbMSwyXSxbMiw0XV0=
+\[\begin{tikzcd}[column sep={18mm}]
+	0 & {\Omega_X(-p)} & {\Omega_X} & {\Omega_X|_p} & 0
+	\arrow[from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+	\arrow[from=1-3, to=1-4]
+	\arrow[from=1-4, to=1-5]
+\end{tikzcd}\]
+which induces a long exact sequence
+\begin{center}
+\begin{tikzpicture}[descr/.style={fill=white,inner sep=1.5pt}]
+        \matrix (m) [
+            matrix of math nodes,
+            row sep=1.8em,
+            column sep=2.5em,
+            text height=1.5ex, text depth=0.25ex
+        ]
+        {  & \Hnm^1(X, \Omega_X(-p)) &  \Hnm^1(X, \Omega_X) & 0 &  \\
+          0  & \Hnm^0(X, \Omega_X(-p)) & \Hnm^0(X, \Omega_X) & \Hnm^0(X, \Omega_X|_p) &  \\
+        };
+
+        \path[overlay,->, font=\scriptsize]
+        
+        (m-1-2) edge (m-1-3)
+        (m-1-3) edge (m-1-4)
+        (m-2-4) edge[out=10,in=188] (m-1-2)
+        (m-2-1) edge (m-2-2)
+        (m-2-2) edge (m-2-3)
+        (m-2-3) edge node[above, yshift=-2pt] {$T_p^* \alpha$} (m-2-4)
+        ;
+\end{tikzpicture}
+\end{center}
+The proposition below follows from standard arguments in homological algebra:
+
+\begin{proposition}\label{prop:dim_of_Albanese_image}
+For a general point $p \in X$,
+\begin{equation*}
+\begin{aligned}
+ \dim_{\mathbb{C}} \alpha(X) =\;& \rank T_p^* \alpha  \\ 
+ =\;& n-h^0(X, \Omega_X(-p))  \\ 
+ =\;& h^1(X, \Omega_X(-p))-h^1(X, \Omega_X).  \\ 
+\end{aligned}
+\end{equation*}
+In particular,
+\begin{equation*}
+\begin{aligned}
+  & \alpha \text{ is surjective} & \Longleftrightarrow\quad& h^0(X, \Omega_X(-p))=0 \\ 
+  & \alpha \text{ is finite onto image} & \Longleftrightarrow\quad& h^0(X, \Omega_X(-p))=n-r \\ 
+  & \alpha \text{ is constant} & \Longleftrightarrow\quad& h^0(X, \Omega_X(-p))=n \\ 
+  & & \Longleftrightarrow\quad& h^1(X, \Omega_X(-p))=h^1(X, \Omega_X) \\ 
+  & & \Longleftrightarrow\quad& n=0. \\ 
+\end{aligned}
+\end{equation*}
+\end{proposition}
+We will concentrate on the case where $\alpha$ is finite onto its image.\footnote{The general method remains valid in the broader setting, but the Gauss map then takes values in a different space.} Under this assumption, we set $Z = X$ and $A = \Alb(Z)$. The corresponding Gauss map is then a rational map:
+% https://q.uiver.app/#q=WzAsNixbMCwwLCJcXHBoaV9aOiJdLFsyLDAsIlxcR3IocixUXjBBKSJdLFsxLDAsIloiXSxbMywwLCJcXEdyKG4tcixcXEhubV4wKFgsXFxPbWVnYV9YKSkiXSxbMywxLCJcXEhubV4wKFgsXFxPbWVnYV9YKC1wKSkiXSxbMSwxLCJwIl0sWzUsNCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibWFwcyB0byJ9fX1dLFsyLDEsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsxLDMsIlxcY29uZyIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
+\[\begin{tikzcd}[row sep={-1mm}]
+	{\phi_Z:} &[-10mm] Z &[5mm] {\Gr(r,T^0A)} & [-7mm] {\Gr(n-r,\Hnm^0(X,\Omega_X))} \\
+	& p && {\Hnm^0(X,\Omega_X(-p))}
+	\arrow[dashed, from=1-2, to=1-3]
+	\arrow["\cong"{description}, draw=none, from=1-3, to=1-4]
+	\arrow[maps to, from=2-2, to=2-4]
+\end{tikzcd}\]
+and we have the isomorphisms 
+\begin{equation*}
+\begin{aligned}
+   \mathbb{P}T^{*}_{0}A \cong\;& \mathbb{P}\Hnm^0(X,\Omega_X), \\ 
+    \mathbb{P}\Lambda_{Z}=\;& \left\{\, (p,[\omega])  \in Z \times \mathbb{P}T^{*}_{0}A \;\middle|\; \omega(p)=0 \,\right\}  \\ 
+    \cong\;& \left\{\,\rule{0mm}{3.2mm} (p,[\omega])  \in Z \times \mathbb{P}T^{*}_{0}A \;\middle|\; \omega \in \Hnm^0(X,\Omega_X(-p)) \,\right\}  \\ 
+    \cong\;& \left(\phi_Z, \Id \right)^{-1} I_{n-r, 1},  \\ 
+\end{aligned}
+\end{equation*}
+where 
+$$I_{n-r, 1}:= \left\{\, \rule{0mm}{3.2mm} (V,[\omega])  \in \Gr(n-r,n) \times \Gr(1, n) \;\middle|\; \omega \in V \,\right\}$$ 
+is the incidence variety relating $\Gr(n-r,n)$ and $\Gr(1, n)$. In that case, 
+\begin{equation*}
+\begin{aligned}
+    \gamma_Z^{-1}([\omega])=\;& \left\{\, p  \in X  \;\middle|\; \omega(p)=0 \,\right\}  \\  
+\end{aligned}
+\end{equation*}
+is the zero set of section $\omega \in \Hnm^0(X,\Omega_X)$. The number $(-1)^r \deg \gamma_Z$ is the index in the Poincaré--Hopf index formula, and the monodromy group $\Gal(\gamma_Z)$ serves as a more refined invariant, encoding subtler aspects of the geometry.
+
+The next proposition shows when the Gauss map $\phi_Z$ is not generic injective.
+\begin{proposition}
+When $\alpha$ is finite onto its image,
+\begin{equation*}
+\begin{aligned}
+  \;&  \phi_Z \text{ is not generic injective} \\ 
+  \Longleftrightarrow\;\;& \text{For general $p \in X$, exists $q \neq p$ such that $h^0(X,\Omega_X(-p-q))=n-r$} \\ 
+  \stackrel{\textcolor{purple}{\textbf{?}\footnotemark}}{\Longleftrightarrow}\;\;& \text{For general $p \in X$, exists $S \in X^{[2]}$ such that $p\in S$ and $h^0(X,\Omega_X \otimes \mathcal{I}_S)=n-r$} \\ 
+  \Longleftrightarrow\;\;& \text{For all $p \in X$, exists $S \in X^{[2]}$ such that $p\in S$ and $h^0(X,\Omega_X \otimes \mathcal{I}_S)=n-r$.} \\ 
+\end{aligned}
+\end{equation*}
+\end{proposition}
+\footnotetext{When $n = r$, the map $\varphi_Z$ has a point as its target, so the equivalence is trivial.
+When $n > r$, the implication ``$\Rightarrow$" is immediate. For the converse ``$\Leftarrow$", it suffices to show that the image of 
+$$\left\{ S \in X^{[2]} \;\middle|\; h^0(X,\Omega_X \otimes \mathcal{I}_S)=n-r   \right\}$$
+ under the map $\pi_X:X^{[2]} \longrightarrow X^{(2)} $ does not include the diagonal. Indeed, we can choose a section $s \in \Hnm^0(X,\Omega_X)$ that cuts out finitely many reduced points $p_1,\ldots,p_d$ in $X$. (Well this maybe not so true, since $\phi_Z$ is not always regular, such a section $s$ may vanish along some indeterminacy locus. However, for a general $s$, there will always be at least one isolated zero $p_1$, which is sufficient for our purposes.)
+Then for any $S \in \pi_X^{-1}(p_1)$, we have 
+$$\Hnm^0(X,\Omega_X \otimes \mathcal{I}_S)  \subsetneqq \Hnm^0(X,\Omega_X(-p_1)).$$
+}
+This last step relies on the following lemma, combined with the closedness of the tautological correspondence in $X \times X^{[2]}$.
+\begin{lemma}
+Let $m \in \mathbb{Z}_{>0}$. The function $$h^{\Omega}: X^{[m]} \longrightarrow \mathbb{Z}_{\geqslant 0} \qquad
+ S \longmapsto h^0(X,\Omega_X \otimes \mathcal{I}_S)$$ 
+is Zariski upper semicontinuous.
+\end{lemma}
+\begin{proofsketch}
+Consider the coherent sheaf $\mathcal{F} \in \Coh(X^{[m]} \times X)$ characterized by the property
+$$\mathcal{F}|_{\{S\} \times X} \cong \Omega_X \otimes \mathcal{I}_S,$$
+The proposition then follows directly from the semicontinuity theorem \cite[28.1.1]{vakil2017rising}.
+\end{proofsketch}
+
+The stratification of $X^{[m]}$ by $h^{\Omega}$ offers a natural generalization of Brill--Noether theory beyond the setting of curves.
+
+$\,$
+
+At the end of this subsection, let us turn to the setting of a general abelian variety $A$ and a smooth subvariety $\iota_Z: Z \hookrightarrow A$, where $n = \dim_{\mathbb{C}} A$ and $r = \dim_{\mathbb{C}} Z$. Observe that $\iota_Z$ factors through the Albanese variety of $Z$:
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJcXGlvdGFfWjogWiAgIl0sWzEsMCwiXFxBbGIoWikiXSxbMiwwLCJBIl0sWzAsMSwiXFxhbHBoYV9aIl0sWzEsMiwiXFxwaSJdXQ==
+\[\begin{tikzcd}[column sep=large]
+	{\iota_Z: Z  } & {\Alb(Z)} & A
+	\arrow["{\alpha_Z}", from=1-1, to=1-2]
+	\arrow["\pi", from=1-2, to=1-3]
+\end{tikzcd}\]
+
+We shall also assume that $Z$ generates $A$; it then follows that the map $\pi$ is surjective. The cotangent map of $\iota_Z$ at a point $p \in Z$ factors through $\Hnm^0(Z, \Omega_Z)$:
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJUX3BeKiBcXGlvdGFfWjogVF9wXipBICAiXSxbMSwwLCJcXEhubV4wKFosIFxcT21lZ2FfWikiXSxbMiwwLCJUX3BeKloiXSxbMCwxLCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsxLDJdXQ==
+\[\begin{tikzcd}[column sep=large]
+	{T_p^* \iota_Z: T_p^*A  } & {\Hnm^0(Z, \Omega_Z)} & {T_p^*Z}
+	\arrow[hook, from=1-1, to=1-2]
+	\arrow[from=1-2, to=1-3]
+\end{tikzcd}\]
+For convenience, abbreviate $V := T_0^*A \cong T_p^*A$, and view $V$ as a subspace of $\Hnm^0(Z, \Omega_Z)$.
+\begin{proposition}
+Assume that $Z$ is embedded in $A$ and generates $A$, and let $V := T_0^*A$. Then
+$$\dim_{\mathbb{C}} \Hnm^0(Z,\Omega_Z(-p)) \cap V =n-r \qquad \text{ for all $p \in Z$}$$
+It follows that the Gauss map is a regular morphism
+\[\begin{tikzcd}[row sep={-1mm}]
+	{\phi_Z:} &[-10mm] Z &[5mm] {\Gr(r,T^0A)} & [-7mm] {\Gr(n-r,V)} \\
+	& p && {\Hnm^0(Z,\Omega_Z(-p)) \cap V}
+	\arrow[from=1-2, to=1-3]
+	\arrow["\cong"{description}, draw=none, from=1-3, to=1-4]
+	\arrow[maps to, from=2-2, to=2-4]
+\end{tikzcd}\]
+ Furthermore, 
+\begin{equation*}
+\begin{aligned}
+  \;&  \phi_Z \text{ is not generic injective} \\ 
+  \Longleftrightarrow\;\;& \text{For general $p \in Z$, exists $q \neq p$ such that $h^0(Z,\Omega_Z(-p-q)) \cap V =n-r$} \\ 
+  \Longleftrightarrow\;\;& \text{For all $p \in Z$, exists $S \in Z^{[2]}$ such that $p\in S$ and $h^0(Z,\Omega_Z \otimes \mathcal{I}_S) \cap V=n-r$.} \\ 
+\end{aligned}
+\end{equation*}
+\end{proposition}
+
+\begin{ques}
+For an $r$-dimensional smooth variety $Z$ whose Albanese map $\alpha_Z$ is an embedding, which subspaces $V \subset \Hnm^0(Z, \Omega_Z)$ can arise as the cotangent space of some abelian quotient variety of $\Alb(Z)$?
 \end{ques}
 
-\begin{ques}\label{ques:mon_Grass_sub}
-Let $Z \subseteq \Gr(r,n)$ be a subvariety of dimension $r$ such that $[Z] \cdot [\Gr(r,H)] \neq 0$ in $H_r(\Gr(r,n);\mathbb{Z})$. What can be said about its monodromy group? 
+The precise formulation of this question is somewhat ambiguous, and depending on the interpretation, it may turn out to be either relatively straightforward or extremely difficult. On the one hand, the classification of abelian subvarieties of $A$ via symmetric idempotents in $\End_{\mathbb{Q}}(A)$ is well established \cite[Theorem 5.3.2]{BL04}. On the other hand, explicitly computing $\End_{\mathbb{Q}}(A)$ can be highly nontrivial when $A$ is a non-simple Albanese variety—even in the case where $A$ arises from a curve.
+
+
+
+
+
+\section{Families of subvarieties}
+
+In this section, we move from the study of monodromy groups to a more direct analysis of the subvarieties themselves. Given an initial subvariety, one can naturally generate a family of subvarieties. Our goal here is to define these families and investigate their properties.
+
+\begin{proposition}
+All irreducible conic Lagrangian cycles in $T^*A$ are of the form $\Lambda_Z$ for some irreducible subvariety $Z \subset A$. This yields a one-to-one correspondence between irreducible conic Lagrangian cycles in $T^*A$ and irreducible subvarieties of $A$:
+$$\left\{\text{ irreducible conic Lagrangian cycles in $T^*A$ }   \right\} \longleftrightarrow \left\{\text{ irreducible subvarieties in $A$ }   \right\}$$
+\end{proposition}
+
+\begin{proofsketch}
+For any irreducible conic Lagrangian cycle $\mathbf{\Lambda} \subset T^*A$, let $Z$ denote the image of $\mathbf{\Lambda}$ under the natural projection $T^*A \to A$. Our goal is to show that $\mathbf{\Lambda} = \Lambda_Z$.
+\begin{itemize}
+\item By definition, $\mathbf{\Lambda} \subset T^*A|_Z$.
+\item Since $\mathbf{\Lambda}$ is conic, we have $s(Z) \subset \mathbf{\Lambda}$, where $s : A \to T^*A$ denotes the zero section.
+\item Since $\mathbf{\Lambda}$ is Lagrangian and $s(Z) \subset \mathbf{\Lambda}$, we have $\mathbf{\Lambda} \subset \Lambda_Z$.
+\item Since $\Lambda_Z$ is irreducible with $\dim_{\mathbb{C}} \mathbf{\Lambda} = \dim_{\mathbb{C}} \Lambda_Z = n$, we have $\mathbf{\Lambda} = \Lambda_Z$.
+\end{itemize}
+\end{proofsketch}
+
+Why do we shift attention from $Z$ to $\Lambda_Z$ as the main object of study? One reason is the uniformity of $\Lambda_Z$: it always has dimension $n$, and in most cases, the natural map $\Lambda_Z \to T_0^* A$ is generically finite, with fibers lying inside $A$.
+
+\begin{definition}[Clean cycle]
+An irreducible Lagrangian cycle $\mathbf{\Lambda} \subset T^*A$ is called clean if the composed projection
+$$\mathbf{\Lambda} \longrightarrow T^*A \twoheadrightarrow T_0^*A$$
+is generically finite.
+\end{definition}
+
+Another important reason is that the space of weighted clean conic Lagrangian cycles naturally acquires a convolution structure, arising from the group law on $A$, which plays a central role in the analysis.
+
+\begin{proposition}
+The group of weighted clean conic Lagrangian cycles
+\begin{equation*}
+\begin{aligned}
+  \mathcal{L}(A):=\;& \left\{ \text{weighted clean conic Lagrangian cycles in }T^*A \right\}  \\ 
+  =\;& \left\{ \raisebox{1.5mm}{$\displaystyle\sum_{\substack{Z_i \subset A \\ \text{irr clean}}}$}n_i \Lambda_{Z_i}\; \middle|\; n_i \in \mathbb{Z} \right\}  \\ 
+\end{aligned}
+\end{equation*}
+has a natural convolution structure as follows: 
+\begin{equation*}
+\begin{aligned}
+  \Lambda_{Z_1} \circ \Lambda_{Z_2}=\;& \text{ the clean part of }(a,\Id_{T_0^* A})_* \left( \Lambda_{Z_1} \times_{T_0^* A} \Lambda_{Z_2} \right) \\ 
+  =\;& \overline{(a,\Id_{U})_* \left( \Lambda_{Z_1}|_U \times_{U} \Lambda_{Z_2}|_U \right)} \\ 
+\end{aligned}
+\end{equation*}
+where 
+$$U:=\left\{ \xi \in T_0^*A \; \middle|\; \rule{0mm}{3.4mm}\deg \phi_{Z_i}= \# \phi_{Z_i}^{-1}(\xi) \text{ for } i=1,2 \right\}$$
+and $a: A \times A \longrightarrow A$ is the addition map in $A$. The general convolution is defined by $\mathbb{Z}$-linear extension.
+\end{proposition}
+
+\begin{proofsketch}
+To establish the claim, it suffices to show that $\Lambda_{Z_1} \circ \Lambda_{Z_2}$ defines a weighted conic Lagrangian cycle. The conic property follows directly from the definition, while the Lagrangian condition can be verified at a general point $(p_1 + p_2, \xi) \in \Lambda_{Z_1} \circ \Lambda_{Z_2}$.
+\end{proofsketch}
+
+We now consider the projective versions of all objects involved, so that we may make use of properness. To simplify notation, we abbreviate $\mathbb{P}T^{*}_{0}A$ by $\mathbb{P}^{\vee}$.
+
+\begin{lemma}\label{lem:mon_of_prod}\
+\begingroup
+\upshape
+%\setlist{itemsep=-0.4em}
+\renewcommand\labelenumi{(\theenumi)}
+\begin{enumerate}[(1)]
+\item Suppose that $\mathbb{P}\Lambda_{Z_1}, \mathbb{P}\Lambda_{Z_1} \subset \mathbb{P}T^*A$ admit monodromy representations $$\rho_{\gamma_{Z_i}}: \pi_1(U,\xi_0) \longrightarrow \Aut\left(\gamma_{Z_i}^{-1}(\xi_0)\right),$$ 
+then $\mathbb{P}\Lambda_{Z_1} \times_{\mathbb{P}^{\vee}} \mathbb{P}\Lambda_{Z_2} \subset A\times A \times \mathbb{P}^{\vee}$ admits monodromy representation given by
+$$(\rho_{\gamma_{Z_1}},\rho_{\gamma_{Z_2}}): \pi_1(U,\xi_0) \longrightarrow \Aut\left(\gamma_{Z_1}^{-1}(\xi_0) \times \gamma_{Z_2}^{-1}(\xi_0)\right),$$ 
+\item When $Z_1=Z_2=Z$, we obtain an one-to-one correspondence:
+$$\left\{ 
+\begin{aligned}
+  &\text{ irr components of } \mathbb{P}\Lambda_{Z} \times_{\mathbb{P}^{\vee}} \mathbb{P}\Lambda_{Z}  \\ 
+  &\hspace{10mm}\text{ with a surjection to } \mathbb{P}^{\vee}
+\end{aligned}
+ \right\} \longleftrightarrow 
+\left\{ 
+\begin{aligned}
+  &\Gal(\gamma_{Z})\text{-orbits of }  \\ 
+  &\;\;\gamma_{Z}^{-1}(\xi_0) \times \gamma_{Z}^{-1}(\xi_0)
+\end{aligned}
+ \right\} 
+ $$
+\end{enumerate}
+\endgroup
+\end{lemma}
+\begin{proofsketch}
+Statement (1) holds by definition. The proof of (2) reduces to the following purely topological statement:
+\begin{claim}
+Let $\pi: E \longrightarrow B$ be a (unramified) covering space over a manifold $B$ with deck transformation group $G$, then
+$$\left\{ \rule{0mm}{3.1mm}\text{ connected components of }E \times_B E \;\right\} \longleftrightarrow \left\{   \;G\text{-orbits of } \pi^{-1}(b_0) \times \pi^{-1}(b_0)\; \right\}. $$
+\end{claim}
+\noindent The claim follows directly from the correspondence between covering spaces over $B$ and $\pi_1(B)$-sets; see \cite[Theorem 1.38]{Ha02}.
+\end{proofsketch}
+
+Generalizing the argument of Lemma \ref{lem:mon_of_prod}, we arrive at the following lemma.
+
+\begin{lemma}
+For $d=\deg \gamma_{Z}$, $\xi_0 \in T_0^* A$ a general point, write
+\begin{equation*}
+\begin{aligned}
+  \mathbb{P}\Lambda_{Z}^{\times d} :=\;&\;\; \mathbb{P}\Lambda_{Z} \times_{\mathbb{P}^{\vee}}\mathbb{P}\Lambda_{Z} \times_{\mathbb{P}^{\vee}} \cdots \times_{\mathbb{P}^{\vee}} \mathbb{P}\Lambda_{Z} && \subset A^d \times \mathbb{P}^{\vee}\\ 
+  \gamma_{Z}^{-1}(\xi_0)^{d} :=\;& \gamma_{Z}^{-1}(\xi_0) \times \gamma_{Z}^{-1}(\xi_0) \times \cdots \times \gamma_{Z}^{-1}(\xi_0) && \subset A^d \\ 
+\end{aligned}
+\end{equation*}
+\begingroup
+\upshape
+%\setlist{itemsep=-0.4em}
+\renewcommand\labelenumi{(\theenumi)}
+\begin{enumerate}[(1)]
+\item we obtain an one-to-one correspondence:
+$$\left\{ 
+\begin{aligned}
+  &\text{ irr components of } \mathbb{P}\Lambda_{Z}^{\times d}  \\ 
+  &\hspace{0mm}\text{ with a surjection to } \mathbb{P}^{\vee}
+\end{aligned}
+ \right\} \longleftrightarrow 
+\left\{ 
+\begin{aligned}
+  &\Gal(\gamma_{Z})\text{-orbits of }  \\ 
+  &\hspace{8mm}\gamma_{Z}^{-1}(\xi_0) ^d
+\end{aligned}
+ \right\} 
+ $$
+\item Write
+\begin{equation*}
+\begin{aligned}
+  \Delta_d :=\;&\left\{ (p_1,\ldots,p_d) \in A^d \;\middle|\; p_i=p_j \text{ for some } i \neq j  \right\} && \subset A^d \\ 
+  \mathbb{P}\Lambda_{Z}^{[d]} :=\;& \overline{\left( \mathbb{P}\Lambda_{Z}^{\times d} \smallsetminus \left( \Delta_d \times \mathbb{P}^{\vee} \right) \right)|_U} && \subset A^d \times \mathbb{P}^{\vee}\\ 
+\end{aligned}
+\end{equation*}
+Fix a general point $\xi_0 \in \mathbb{P}^{\vee}$ and a well-order for $\gamma_{Z}^{-1}(\xi_0)$, one can identify $S_d \cong \gamma_{Z}^{-1}(\xi_0)^d \smallsetminus \Delta_d$, and 
+$$\left\{ 
+\text{ irr components of } \mathbb{P}\Lambda_{Z}^{[d]}  
+ \;\right\} \longleftrightarrow 
+\left\{ \;\rule{0mm}{3.3mm}
+\Gal(\gamma_{Z})\text{-orbits of }  S_d
+ \;\right\} 
+ $$
+ In reference, $\Delta_d$ is usually called the big diagonal.
+\end{enumerate}
+\endgroup
+\end{lemma}
+
+From this point on, we fix an irreducible component of $\mathbb{P}\Lambda_{Z}^{[d]}$, denoted by $\mathbb{P}\Lambda_{Z}^{\univ}$. As we will see in Definition A, this variety generates all subvarieties within the families under consideration.
+
+\begin{definition}[The subvariety $Z^{(m)}$]
+For any tuple $(m) = (m_1, \ldots, m_d) \in \mathbb{Z}^d$, we define the weighted sum map
+$$a^{(m)}: A^d \longrightarrow A \qquad (p_1,\ldots,p_d) \longmapsto \sum_{i=1}^{d} m_ip_i.$$
+We also define 
+$$\mathbb{P}\Lambda_{Z}^{(m)}: = \left( a^{(m)},\Id_{\mathbb{P}^{\vee}}  \right)_* \mathbb{P}\Lambda_{Z}^{\univ}.$$
+as the (projectivized) weighted Lagrangian cycle in $\mathbb{P}T^*A$. The projective cycle $\mathbb{P}\Lambda_{Z}^{(m)}$ is irreducible but may appear with multiplicities. We can therefore write
+$$\mathbb{P}\Lambda_{Z}^{(m)} = c_Z^{(m)}  \mathbb{P}\Lambda_{Z^{(m)}}$$
+where $c_Z^{(m)} \in \mathbb{Z}_{>0}$ and $Z^{(m)} \subset A$ are uniquely determined. This gives rise to a family of subvarieties parametrized by $\mathbb{Z}^d$.
+\end{definition}
+
+The next lemma gathers some basic properties of $Z^{(m)}$. Observe that $S_d=\Aut\left(\gamma_{Z}^{-1}(\xi_0)\right)$ acts naturally on $\mathbb{Z}^d$ via
+$$g(m)=\left(m_{g(1)},\ldots , m_{g(d)}\right) \in \mathbb{Z}^d.$$
+
+\begin{lemma}\
+\begingroup
+\upshape
+%\setlist{itemsep=-0.4em}
+\renewcommand\labelenumi{(\theenumi)}
+\begin{enumerate}[(1)]
+\item For all $g\in \Gal(\gamma_{Z})$, we have $ Z^{g(m)}=Z^{(m)}$, $c_Z^{g(m)}=c_Z^{(m)}$;
+\item For $(m)=(1,0,\ldots,0)\in \mathbb{Z}^d$, $Z^{(m)}=Z$;
+\item For all $(m), (m') \in \mathbb{Z}^d$, we have  $\mathbb{P}\Lambda_{Z}^{(m)} \circ \mathbb{P}\Lambda_{Z}^{(m')} = \mathbb{P}\Lambda_{Z}^{(m+m')}$;
+\item The group $\left< \mathbb{P}\Lambda_{Z^{(m)}} \right>_{\Abel}$ is closed under the convolution product.
+\end{enumerate}
+\endgroup
+\end{lemma}
+
+\begin{ques}\label{ques:homo_class_of_subvarieties}
+Can we compute the dimension and the homology class for these subvarieties $Z^{(m)}$?
 \end{ques}
 
-\begin{ques}\label{ques:when_are_maps_Gauss}
-For a map $\phi:Z \longrightarrow \Gr(r,n)$, when is it induced from some inclusion $Z \subset A$?
+At first glance, this question may appear naive, but it turns out to be extremely challenging. The main difficulty lies in determining the homology class of $\mathbb{P}\Lambda_{Z}^{\univ}$. Once this is known, one can compute the pushforward to obtain the homology class of $\mathbb{P}\Lambda_{Z}^{(m)}$, from which both $\dim_{\mathbb{C}} Z^{(m)}$ and the homology class of $Z^{(m)}$ (up to a scalar factor $c_Z^{(m)}$) can be extracted.
+
+However, standard intersection theory yields only the homology class of $\mathbb{P}\Lambda_Z^{[d]}$, via the Chern–Mather class of $Z$. At present, there is no known method for computing the homology class of a single irreducible component of $\mathbb{P}\Lambda_Z^{[d]}$. Although we can distinguish these components topologically, we lack tools to compute their topological invariants, which presents an unfortunate limitation.
+
+Nevertheless, Question \ref{ques:homo_class_of_subvarieties} can still be addressed in certain special situations. For instance, when $\Gal(\gamma_Z) = S_n$, the space $\mathbb{P} \Lambda_Z^{[d]}$ is known to be irreducible, enabling explicit computation. Similarly, when $Z = -Z$ and $\Gal(\gamma_Z) = W(C_{d/2})$, one can impose additional conditions (e.g., $p_{2l-1} = -p_{2l}$) to guarantee the uniqueness of $\mathbb{P} \Lambda_Z^{\univ}$, which again allows us to perform the computation.
+
+\begin{ques}
+Suppose $d = 2d_0$ with $d_0$ even, $(m) \in \mathbb{Z}^d$, and $g \in W(C_{d/2}) \smallsetminus W(D_{d/2})$. Is it possible to construct an example with $Z = -Z$ and $\Gal(\gamma_Z) = W(D_{d/2})$, yet $\dim_{\mathbb{C}} Z^{g(m)} \neq \dim_{\mathbb{C}} Z^{(m)}$?
 \end{ques}
-\section{Searching for examples}\label{sec:mon_examples}
+
+\begin{ques}
+Suppose that $Z$ is the Fano surface of a smooth cubic threefold, and let $A := \Alb(Z)$. How can we compute the homology class of $Z^{(m)}$?
+\end{ques}
+
+\section{When is monodromy group small}\label{sec:mon_examples}
 
 In this section, we discuss examples drawn from my ongoing work, focusing on the construction of subvarieties and the computation of their monodromy groups.
 
@@ -990,370 +1350,11 @@ $\;$\\
 \end{proof}
 
 
-\subsection{Albanese variety}
-Let $X$ be a smooth complex projective variety of dimension $r$, and set $n := \dim_{\mathbb{C}} \Hnm^0(X, \Omega_X) = h^{1,0}$.
-Recall that the Albanese variety of $X$ is defined as
-$$\Alb(X):=\Hnm^0(X, \Omega_X)^* / \Hnm_1(X, \mathbb{Z})_{\mathrm{free}},$$
-and the Albanese map is given by (pick a base point $p_0 \in X$)
-$$\alpha: X \longrightarrow \Alb(X) \qquad 
-\qquad p \longmapsto \left[ \;\;\omega \mapsto \int_{\gamma: p_0 \sim p} \omega \;\;\right].$$
 
-One classical question is the dimension of $\alpha(X)$. For this, consider the cotangent map of $\alpha$ at $p \in X$:
-$$T_p^* \alpha: H^0(X,\Omega_X) \longrightarrow T_p^*X=H^0(X,\Omega_X|_p).$$
-Consider the short exact sequence of coherent sheaves on $X$ 
-% https://q.uiver.app/#q=WzAsNSxbMSwwLCJcXE9tZWdhX1goLXApIl0sWzIsMCwiXFxPbWVnYV9YIl0sWzMsMCwiXFxPbWVnYV9YfF9wIl0sWzAsMCwiMCJdLFs0LDAsIjAiXSxbMywwXSxbMCwxXSxbMSwyXSxbMiw0XV0=
-\[\begin{tikzcd}[column sep={18mm}]
-	0 & {\Omega_X(-p)} & {\Omega_X} & {\Omega_X|_p} & 0
-	\arrow[from=1-1, to=1-2]
-	\arrow[from=1-2, to=1-3]
-	\arrow[from=1-3, to=1-4]
-	\arrow[from=1-4, to=1-5]
-\end{tikzcd}\]
-which induces a long exact sequence
-\begin{center}
-\begin{tikzpicture}[descr/.style={fill=white,inner sep=1.5pt}]
-        \matrix (m) [
-            matrix of math nodes,
-            row sep=1.8em,
-            column sep=2.5em,
-            text height=1.5ex, text depth=0.25ex
-        ]
-        {  & \Hnm^1(X, \Omega_X(-p)) &  \Hnm^1(X, \Omega_X) & 0 &  \\
-          0  & \Hnm^0(X, \Omega_X(-p)) & \Hnm^0(X, \Omega_X) & \Hnm^0(X, \Omega_X|_p) &  \\
-        };
-
-        \path[overlay,->, font=\scriptsize]
-        
-        (m-1-2) edge (m-1-3)
-        (m-1-3) edge (m-1-4)
-        (m-2-4) edge[out=10,in=188] (m-1-2)
-        (m-2-1) edge (m-2-2)
-        (m-2-2) edge (m-2-3)
-        (m-2-3) edge node[above, yshift=-2pt] {$T_p^* \alpha$} (m-2-4)
-        ;
-\end{tikzpicture}
-\end{center}
-The proposition below follows from standard arguments in homological algebra:
-
-\begin{proposition}\label{prop:dim_of_Albanese_image}
-For a general point $p \in X$,
-\begin{equation*}
-\begin{aligned}
- \dim_{\mathbb{C}} \alpha(X) =\;& \rank T_p^* \alpha  \\ 
- =\;& n-h^0(X, \Omega_X(-p))  \\ 
- =\;& h^1(X, \Omega_X(-p))-h^1(X, \Omega_X).  \\ 
-\end{aligned}
-\end{equation*}
-In particular,
-\begin{equation*}
-\begin{aligned}
-  & \alpha \text{ is surjective} & \Longleftrightarrow\quad& h^0(X, \Omega_X(-p))=0 \\ 
-  & \alpha \text{ is finite onto image} & \Longleftrightarrow\quad& h^0(X, \Omega_X(-p))=n-r \\ 
-  & \alpha \text{ is constant} & \Longleftrightarrow\quad& h^0(X, \Omega_X(-p))=n \\ 
-  & & \Longleftrightarrow\quad& h^1(X, \Omega_X(-p))=h^1(X, \Omega_X) \\ 
-  & & \Longleftrightarrow\quad& n=0. \\ 
-\end{aligned}
-\end{equation*}
-\end{proposition}
-We will concentrate on the case where $\alpha$ is finite onto its image.\footnote{The general method remains valid in the broader setting, but the Gauss map then takes values in a different space.} Under this assumption, we set $Z = X$ and $A = \Alb(Z)$. The corresponding Gauss map is then a rational map:
-% https://q.uiver.app/#q=WzAsNixbMCwwLCJcXHBoaV9aOiJdLFsyLDAsIlxcR3IocixUXjBBKSJdLFsxLDAsIloiXSxbMywwLCJcXEdyKG4tcixcXEhubV4wKFgsXFxPbWVnYV9YKSkiXSxbMywxLCJcXEhubV4wKFgsXFxPbWVnYV9YKC1wKSkiXSxbMSwxLCJwIl0sWzUsNCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibWFwcyB0byJ9fX1dLFsyLDEsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsxLDMsIlxcY29uZyIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
-\[\begin{tikzcd}[row sep={-1mm}]
-	{\phi_Z:} &[-10mm] Z &[5mm] {\Gr(r,T^0A)} & [-7mm] {\Gr(n-r,\Hnm^0(X,\Omega_X))} \\
-	& p && {\Hnm^0(X,\Omega_X(-p))}
-	\arrow[dashed, from=1-2, to=1-3]
-	\arrow["\cong"{description}, draw=none, from=1-3, to=1-4]
-	\arrow[maps to, from=2-2, to=2-4]
-\end{tikzcd}\]
-and we have the isomorphisms 
-\begin{equation*}
-\begin{aligned}
-   \mathbb{P}T^{*}_{0}A \cong\;& \mathbb{P}\Hnm^0(X,\Omega_X), \\ 
-    \mathbb{P}\Lambda_{Z}=\;& \left\{\, (p,[\omega])  \in Z \times \mathbb{P}T^{*}_{0}A \;\middle|\; \omega(p)=0 \,\right\}  \\ 
-    \cong\;& \left\{\,\rule{0mm}{3.2mm} (p,[\omega])  \in Z \times \mathbb{P}T^{*}_{0}A \;\middle|\; \omega \in \Hnm^0(X,\Omega_X(-p)) \,\right\}  \\ 
-    \cong\;& \left(\phi_Z, \Id \right)^{-1} I_{n-r, 1},  \\ 
-\end{aligned}
-\end{equation*}
-where 
-$$I_{n-r, 1}:= \left\{\, \rule{0mm}{3.2mm} (V,[\omega])  \in \Gr(n-r,n) \times \Gr(1, n) \;\middle|\; \omega \in V \,\right\}$$ 
-is the incidence variety relating $\Gr(n-r,n)$ and $\Gr(1, n)$. In that case, 
-\begin{equation*}
-\begin{aligned}
-    \gamma_Z^{-1}([\omega])=\;& \left\{\, p  \in X  \;\middle|\; \omega(p)=0 \,\right\}  \\  
-\end{aligned}
-\end{equation*}
-is the zero set of section $\omega \in \Hnm^0(X,\Omega_X)$. The number $(-1)^r \deg \gamma_Z$ is the index in the Poincaré--Hopf index formula, and the monodromy group $\Gal(\gamma_Z)$ serves as a more refined invariant, encoding subtler aspects of the geometry.
-
-\begin{remark}
-One can define the monodromy group in the real (or topological) setting in an analogous manner. Consider the set
-$$U:=\left\{\,\omega \in \Gamma(\Omega_M)      \;\middle|\; \rule{0mm}{3.0mm}  \text{ the zeros of $\omega$ are isolated with local index $1$ }  \right\}.$$
-A closed loop in $U$ induces a permutation of the zeros of $\omega$, and the monodromy group is defined as the group of all such permutations.
-
-However, when $\dim_{\mathbb{C}} M > 1$, the corresponding monodromy group is always the full symmetric group (as all transpositions occur). As a result, it does not yield any further insight into the topology of the manifold.
-\end{remark}
-
-The next proposition shows when the Gauss map $\phi_Z$ is not generic injective.
-\begin{proposition}
-When $\alpha$ is finite onto its image,
-\begin{equation*}
-\begin{aligned}
-  \;&  \phi_Z \text{ is not generic injective} \\ 
-  \Longleftrightarrow\;\;& \text{For general $p \in X$, exists $q \neq p$ such that $h^0(X,\Omega_X(-p-q))=n-r$} \\ 
-  \stackrel{\textcolor{purple}{\textbf{?}\footnotemark}}{\Longleftrightarrow}\;\;& \text{For general $p \in X$, exists $S \in X^{[2]}$ such that $p\in S$ and $h^0(X,\Omega_X \otimes \mathcal{I}_S)=n-r$} \\ 
-  \Longleftrightarrow\;\;& \text{For all $p \in X$, exists $S \in X^{[2]}$ such that $p\in S$ and $h^0(X,\Omega_X \otimes \mathcal{I}_S)=n-r$.} \\ 
-\end{aligned}
-\end{equation*}
-\end{proposition}
-\footnotetext{When $n = r$, the map $\varphi_Z$ has a point as its target, so the equivalence is trivial.
-When $n > r$, the implication ``$\Rightarrow$" is immediate. For the converse ``$\Leftarrow$", it suffices to show that the image of 
-$$\left\{ S \in X^{[2]} \;\middle|\; h^0(X,\Omega_X \otimes \mathcal{I}_S)=n-r   \right\}$$
- under the map $\pi_X:X^{[2]} \longrightarrow X^{(2)} $ does not include the diagonal. Indeed, we can choose a section $s \in \Hnm^0(X,\Omega_X)$ that cuts out finitely many reduced points $p_1,\ldots,p_d$ in $X$. (Well this maybe not so true, since $\phi_Z$ is not always regular, such a section $s$ may vanish along some indeterminacy locus. However, for a general $s$, there will always be at least one isolated zero $p_1$, which is sufficient for our purposes.)
-Then for any $S \in \pi_X^{-1}(p_1)$, we have 
-$$\Hnm^0(X,\Omega_X \otimes \mathcal{I}_S)  \subsetneqq \Hnm^0(X,\Omega_X(-p_1)).$$
-}
-This last step relies on the following lemma, combined with the closedness of the tautological correspondence in $X \times X^{[2]}$.
-\begin{lemma}
-Let $m \in \mathbb{Z}_{>0}$. The function $$h^{\Omega}: X^{[m]} \longrightarrow \mathbb{Z}_{\geqslant 0} \qquad
- S \longmapsto h^0(X,\Omega_X \otimes \mathcal{I}_S)$$ 
-is Zariski upper semicontinuous.
-\end{lemma}
-\begin{proofsketch}
-Consider the coherent sheaf $\mathcal{F} \in \Coh(X^{[m]} \times X)$ characterized by the property
-$$\mathcal{F}|_{\{S\} \times X} \cong \Omega_X \otimes \mathcal{I}_S,$$
-The proposition then follows directly from the semicontinuity theorem \cite[28.1.1]{vakil2017rising}.
-\end{proofsketch}
-
-The stratification of $X^{[m]}$ by $h^{\Omega}$ offers a natural generalization of Brill--Noether theory beyond the setting of curves.
-
-At the end of this subsection, let us turn to the setting of a general abelian variety $A$ and a smooth subvariety $\iota_Z: Z \hookrightarrow A$, where $n = \dim_{\mathbb{C}} A$ and $r = \dim_{\mathbb{C}} Z$. Observe that $\iota_Z$ factors through the Albanese variety of $Z$:
-% https://q.uiver.app/#q=WzAsMyxbMCwwLCJcXGlvdGFfWjogWiAgIl0sWzEsMCwiXFxBbGIoWikiXSxbMiwwLCJBIl0sWzAsMSwiXFxhbHBoYV9aIl0sWzEsMiwiXFxwaSJdXQ==
-\[\begin{tikzcd}[column sep=large]
-	{\iota_Z: Z  } & {\Alb(Z)} & A
-	\arrow["{\alpha_Z}", from=1-1, to=1-2]
-	\arrow["\pi", from=1-2, to=1-3]
-\end{tikzcd}\]
-
-We shall also assume that $Z$ generates $A$; it then follows that the map $\pi$ is surjective. The cotangent map of $\iota_Z$ at a point $p \in Z$ factors through $\Hnm^0(Z, \Omega_Z)$:
-% https://q.uiver.app/#q=WzAsMyxbMCwwLCJUX3BeKiBcXGlvdGFfWjogVF9wXipBICAiXSxbMSwwLCJcXEhubV4wKFosIFxcT21lZ2FfWikiXSxbMiwwLCJUX3BeKloiXSxbMCwxLCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFsxLDJdXQ==
-\[\begin{tikzcd}[column sep=large]
-	{T_p^* \iota_Z: T_p^*A  } & {\Hnm^0(Z, \Omega_Z)} & {T_p^*Z}
-	\arrow[hook, from=1-1, to=1-2]
-	\arrow[from=1-2, to=1-3]
-\end{tikzcd}\]
-For convenience, abbreviate $V := T_0^*A \cong T_p^*A$, and view $V$ as a subspace of $\Hnm^0(Z, \Omega_Z)$.
-\begin{proposition}
-Assume that $Z$ is embedded in $A$ and generates $A$, and let $V := T_0^*A$. Then
-$$\dim_{\mathbb{C}} \Hnm^0(Z,\Omega_Z(-p)) \cap V =n-r \qquad \text{ for all $p \in Z$}$$
-It follows that the Gauss map is a regular morphism
-\[\begin{tikzcd}[row sep={-1mm}]
-	{\phi_Z:} &[-10mm] Z &[5mm] {\Gr(r,T^0A)} & [-7mm] {\Gr(n-r,V)} \\
-	& p && {\Hnm^0(Z,\Omega_Z(-p)) \cap V}
-	\arrow[from=1-2, to=1-3]
-	\arrow["\cong"{description}, draw=none, from=1-3, to=1-4]
-	\arrow[maps to, from=2-2, to=2-4]
-\end{tikzcd}\]
- Furthermore, 
-\begin{equation*}
-\begin{aligned}
-  \;&  \phi_Z \text{ is not generic injective} \\ 
-  \Longleftrightarrow\;\;& \text{For general $p \in X$, exists $q \neq p$ such that $h^0(X,\Omega_X(-p-q)) \cap V =n-r$} \\ 
-  \Longleftrightarrow\;\;& \text{For all $p \in X$, exists $S \in X^{[2]}$ such that $p\in S$ and $h^0(X,\Omega_X \otimes \mathcal{I}_S) \cap V=n-r$.} \\ 
-\end{aligned}
-\end{equation*}
-\end{proposition}
-
-\begin{ques}
-For an $r$-dimensional smooth variety $Z$ whose Albanese map $\alpha_Z$ is an embedding, which subspaces $V \subset \Hnm^0(Z, \Omega_Z)$ can arise as the cotangent space of some abelian quotient variety of $\Alb(Z)$?
-\end{ques}
-
-The precise formulation of this question is somewhat ambiguous, and depending on the interpretation, it may turn out to be either relatively straightforward or extremely difficult. On the one hand, the classification of abelian subvarieties of $A$ via symmetric idempotents in $\End_{\mathbb{Q}}(A)$ is well established \cite[Theorem 5.3.2]{BL04}. On the other hand, explicitly computing $\End_{\mathbb{Q}}(A)$ can be highly nontrivial when $A$ is a non-simple Albanese variety—even in the case where $A$ arises from a curve.
 
  
 
-\section{Families of subvarieties}
 
-In this section, we move from the study of monodromy groups to a more direct analysis of the subvarieties themselves. Given an initial subvariety, one can naturally generate a family of subvarieties. Our goal here is to define these families and investigate their properties.
-
-\begin{proposition}
-All irreducible conic Lagrangian cycles in $T^*A$ are of the form $\Lambda_Z$ for some irreducible subvariety $Z \subset A$. This yields a one-to-one correspondence between irreducible conic Lagrangian cycles in $T^*A$ and irreducible subvarieties of $A$:
-$$\left\{\text{ irreducible conic Lagrangian cycles in $T^*A$ }   \right\} \longleftrightarrow \left\{\text{ irreducible subvarieties in $A$ }   \right\}$$
-\end{proposition}
-
-\begin{proofsketch}
-For any irreducible conic Lagrangian cycle $\mathbf{\Lambda} \subset T^*A$, let $Z$ denote the image of $\mathbf{\Lambda}$ under the natural projection $T^*A \to A$. Our goal is to show that $\mathbf{\Lambda} = \Lambda_Z$.
-\begin{itemize}
-\item By definition, $\mathbf{\Lambda} \subset T^*A|_Z$.
-\item Since $\mathbf{\Lambda}$ is conic, we have $s(Z) \subset \mathbf{\Lambda}$, where $s : A \to T^*A$ denotes the zero section.
-\item Since $\mathbf{\Lambda}$ is Lagrangian and $s(Z) \subset \mathbf{\Lambda}$, we have $\mathbf{\Lambda} \subset \Lambda_Z$.
-\item Since $\Lambda_Z$ is irreducible with $\dim_{\mathbb{C}} \mathbf{\Lambda} = \dim_{\mathbb{C}} \Lambda_Z = n$, we have $\mathbf{\Lambda} = \Lambda_Z$.
-\end{itemize}
-\end{proofsketch}
-
-Why do we shift attention from $Z$ to $\Lambda_Z$ as the main object of study? One reason is the uniformity of $\Lambda_Z$: it always has dimension $n$, and in most cases, the natural map $\Lambda_Z \to T_0^* A$ is generically finite, with fibers lying inside $A$.
-
-\begin{definition}[Clean cycle]
-An irreducible Lagrangian cycle $\mathbf{\Lambda} \subset T^*A$ is called clean if the composed projection
-$$\mathbf{\Lambda} \longrightarrow T^*A \twoheadrightarrow T_0^*A$$
-is generically finite.
-\end{definition}
-
-Another important reason is that the space of weighted clean conic Lagrangian cycles naturally acquires a convolution structure, arising from the group law on $A$, which plays a central role in the analysis.
-
-\begin{proposition}
-The group of weighted clean conic Lagrangian cycles
-\begin{equation*}
-\begin{aligned}
-  \mathcal{L}(A):=\;& \left\{ \text{weighted clean conic Lagrangian cycles in }T^*A \right\}  \\ 
-  =\;& \left\{ \raisebox{1.5mm}{$\displaystyle\sum_{\substack{Z_i \subset A \\ \text{irr clean}}}$}n_i \Lambda_{Z_i}\; \middle|\; n_i \in \mathbb{Z} \right\}  \\ 
-\end{aligned}
-\end{equation*}
-has a natural convolution structure as follows: 
-\begin{equation*}
-\begin{aligned}
-  \Lambda_{Z_1} \circ \Lambda_{Z_2}=\;& \text{ the clean part of }(a,\Id_{T_0^* A})_* \left( \Lambda_{Z_1} \times_{T_0^* A} \Lambda_{Z_2} \right) \\ 
-  =\;& \overline{(a,\Id_{U})_* \left( \Lambda_{Z_1}|_U \times_{U} \Lambda_{Z_2}|_U \right)} \\ 
-\end{aligned}
-\end{equation*}
-where 
-$$U:=\left\{ \xi \in T_0^*A \; \middle|\; \rule{0mm}{3.4mm}\deg \phi_{Z_i}= \# \phi_{Z_i}^{-1}(\xi) \text{ for } i=1,2 \right\}$$
-and $a: A \times A \longrightarrow A$ is the addition map in $A$. The general convolution is defined by $\mathbb{Z}$-linear extension.
-\end{proposition}
-
-\begin{proofsketch}
-To establish the claim, it suffices to show that $\Lambda_{Z_1} \circ \Lambda_{Z_2}$ defines a weighted conic Lagrangian cycle. The conic property follows directly from the definition, while the Lagrangian condition can be verified at a general point $(p_1 + p_2, \xi) \in \Lambda_{Z_1} \circ \Lambda_{Z_2}$.
-\end{proofsketch}
-
-We now consider the projective versions of all objects involved, so that we may make use of properness. To simplify notation, we abbreviate $\mathbb{P}T^{*}_{0}A$ by $\mathbb{P}^{\vee}$.
-
-\begin{lemma}\label{lem:mon_of_prod}\
-\begingroup
-\upshape
-%\setlist{itemsep=-0.4em}
-\renewcommand\labelenumi{(\theenumi)}
-\begin{enumerate}[(1)]
-\item Suppose that $\mathbb{P}\Lambda_{Z_1}, \mathbb{P}\Lambda_{Z_1} \subset \mathbb{P}T^*A$ admit monodromy representations $$\rho_{\gamma_{Z_i}}: \pi_1(U,\xi_0) \longrightarrow \Aut\left(\gamma_{Z_i}^{-1}(\xi_0)\right),$$ 
-then $\mathbb{P}\Lambda_{Z_1} \times_{\mathbb{P}^{\vee}} \mathbb{P}\Lambda_{Z_2} \subset A\times A \times \mathbb{P}^{\vee}$ admits monodromy representation given by
-$$(\rho_{\gamma_{Z_1}},\rho_{\gamma_{Z_2}}): \pi_1(U,\xi_0) \longrightarrow \Aut\left(\gamma_{Z_1}^{-1}(\xi_0) \times \gamma_{Z_2}^{-1}(\xi_0)\right),$$ 
-\item When $Z_1=Z_2=Z$, we obtain an one-to-one correspondence:
-$$\left\{ 
-\begin{aligned}
-  &\text{ irr components of } \mathbb{P}\Lambda_{Z} \times_{\mathbb{P}^{\vee}} \mathbb{P}\Lambda_{Z}  \\ 
-  &\hspace{10mm}\text{ with a surjection to } \mathbb{P}^{\vee}
-\end{aligned}
- \right\} \longleftrightarrow 
-\left\{ 
-\begin{aligned}
-  &\Gal(\gamma_{Z})\text{-orbits of }  \\ 
-  &\;\;\gamma_{Z}^{-1}(\xi_0) \times \gamma_{Z}^{-1}(\xi_0)
-\end{aligned}
- \right\} 
- $$
-\end{enumerate}
-\endgroup
-\end{lemma}
-\begin{proofsketch}
-Statement (1) holds by definition. The proof of (2) reduces to the following purely topological statement:
-\begin{claim}
-Let $\pi: E \longrightarrow B$ be a (unramified) covering space over a manifold $B$ with deck transformation group $G$, then
-$$\left\{ \rule{0mm}{3.1mm}\text{ connected components of }E \times_B E \;\right\} \longleftrightarrow \left\{   \;G\text{-orbits of } \pi^{-1}(b_0) \times \pi^{-1}(b_0)\; \right\}. $$
-\end{claim}
-\noindent The claim follows directly from the correspondence between covering spaces over $B$ and $\pi_1(B)$-sets; see \cite[Theorem 1.38]{Ha02}.
-\end{proofsketch}
-
-Generalizing the argument of Lemma \ref{lem:mon_of_prod}, we arrive at the following lemma.
-
-\begin{lemma}
-For $d=\deg \gamma_{Z}$, $\xi_0 \in T_0^* A$ a general point, write
-\begin{equation*}
-\begin{aligned}
-  \mathbb{P}\Lambda_{Z}^{\times d} :=\;&\;\; \mathbb{P}\Lambda_{Z} \times_{\mathbb{P}^{\vee}}\mathbb{P}\Lambda_{Z} \times_{\mathbb{P}^{\vee}} \cdots \times_{\mathbb{P}^{\vee}} \mathbb{P}\Lambda_{Z} && \subset A^d \times \mathbb{P}^{\vee}\\ 
-  \gamma_{Z}^{-1}(\xi_0)^{d} :=\;& \gamma_{Z}^{-1}(\xi_0) \times \gamma_{Z}^{-1}(\xi_0) \times \cdots \times \gamma_{Z}^{-1}(\xi_0) && \subset A^d \\ 
-\end{aligned}
-\end{equation*}
-\begingroup
-\upshape
-%\setlist{itemsep=-0.4em}
-\renewcommand\labelenumi{(\theenumi)}
-\begin{enumerate}[(1)]
-\item we obtain an one-to-one correspondence:
-$$\left\{ 
-\begin{aligned}
-  &\text{ irr components of } \mathbb{P}\Lambda_{Z}^{\times d}  \\ 
-  &\hspace{0mm}\text{ with a surjection to } \mathbb{P}^{\vee}
-\end{aligned}
- \right\} \longleftrightarrow 
-\left\{ 
-\begin{aligned}
-  &\Gal(\gamma_{Z})\text{-orbits of }  \\ 
-  &\hspace{8mm}\gamma_{Z}^{-1}(\xi_0) ^d
-\end{aligned}
- \right\} 
- $$
-\item Write
-\begin{equation*}
-\begin{aligned}
-  \Delta_d :=\;&\left\{ (p_1,\ldots,p_d) \in A^d \;\middle|\; p_i=p_j \text{ for some } i \neq j  \right\} && \subset A^d \\ 
-  \mathbb{P}\Lambda_{Z}^{[d]} :=\;& \overline{\left( \mathbb{P}\Lambda_{Z}^{\times d} \smallsetminus \left( \Delta_d \times \mathbb{P}^{\vee} \right) \right)|_U} && \subset A^d \times \mathbb{P}^{\vee}\\ 
-\end{aligned}
-\end{equation*}
-Fix a general point $\xi_0 \in \mathbb{P}^{\vee}$ and a well-order for $\gamma_{Z}^{-1}(\xi_0)$, one can identify $S_d \cong \gamma_{Z}^{-1}(\xi_0)^d \smallsetminus \Delta_d$, and 
-$$\left\{ 
-\text{ irr components of } \mathbb{P}\Lambda_{Z}^{[d]}  
- \;\right\} \longleftrightarrow 
-\left\{ \;\rule{0mm}{3.3mm}
-\Gal(\gamma_{Z})\text{-orbits of }  S_d
- \;\right\} 
- $$
- In reference, $\Delta_d$ is usually called the big diagonal.
-\end{enumerate}
-\endgroup
-\end{lemma}
-
-From this point on, we fix an irreducible component of $\mathbb{P}\Lambda_{Z}^{[d]}$, denoted by $\mathbb{P}\Lambda_{Z}^{\univ}$. As we will see in Definition A, this variety generates all subvarieties within the families under consideration.
-
-\begin{definition}[The subvariety $Z^{(m)}$]
-For any tuple $(m) = (m_1, \ldots, m_d) \in \mathbb{Z}^d$, we define the weighted sum map
-$$a^{(m)}: A^d \longrightarrow A \qquad (p_1,\ldots,p_d) \longmapsto \sum_{i=1}^{d} m_ip_i.$$
-We also define 
-$$\mathbb{P}\Lambda_{Z}^{(m)}: = \left( a^{(m)},\Id_{\mathbb{P}^{\vee}}  \right)_* \mathbb{P}\Lambda_{Z}^{\univ}.$$
-as the (projectivized) weighted Lagrangian cycle in $\mathbb{P}T^*A$. The projective cycle $\mathbb{P}\Lambda_{Z}^{(m)}$ is irreducible but may appear with multiplicities. We can therefore write
-$$\mathbb{P}\Lambda_{Z}^{(m)} = c_Z^{(m)}  \mathbb{P}\Lambda_{Z^{(m)}}$$
-where $c_Z^{(m)} \in \mathbb{Z}_{>0}$ and $Z^{(m)} \subset A$ are uniquely determined. This gives rise to a family of subvarieties parametrized by $\mathbb{Z}^d$.
-\end{definition}
-
-The next lemma gathers some basic properties of $Z^{(m)}$. Observe that $S_d=\Aut\left(\gamma_{Z}^{-1}(\xi_0)\right)$ acts naturally on $\mathbb{Z}^d$ via
-$$g(m)=\left(m_{g(1)},\ldots , m_{g(d)}\right) \in \mathbb{Z}^d.$$
-
-\begin{lemma}\
-\begingroup
-\upshape
-%\setlist{itemsep=-0.4em}
-\renewcommand\labelenumi{(\theenumi)}
-\begin{enumerate}[(1)]
-\item For all $g\in \Gal(\gamma_{Z})$, we have $ Z^{g(m)}=Z^{(m)}$, $c_Z^{g(m)}=c_Z^{(m)}$;
-\item For $(m)=(1,0,\ldots,0)\in \mathbb{Z}^d$, $Z^{(m)}=Z$;
-\item For all $(m), (m') \in \mathbb{Z}^d$, we have  $\mathbb{P}\Lambda_{Z}^{(m)} \circ \mathbb{P}\Lambda_{Z}^{(m')} = \mathbb{P}\Lambda_{Z}^{(m+m')}$;
-\item The group $\left< \mathbb{P}\Lambda_{Z^{(m)}} \right>_{\Abel}$ is closed under the convolution product.
-\end{enumerate}
-\endgroup
-\end{lemma}
-
-\begin{ques}\label{ques:homo_class_of_subvarieties}
-Can we compute the dimension and the homology class for these subvarieties $Z^{(m)}$?
-\end{ques}
-
-At first glance, this question may appear naive, but it turns out to be extremely challenging. The main difficulty lies in determining the homology class of $\mathbb{P}\Lambda_{Z}^{\univ}$. Once this is known, one can compute the pushforward to obtain the homology class of $\mathbb{P}\Lambda_{Z}^{(m)}$, from which both $\dim_{\mathbb{C}} Z^{(m)}$ and the homology class of $Z^{(m)}$ (up to a scalar factor $c_Z^{(m)}$) can be extracted.
-
-However, standard intersection theory yields only the homology class of $\mathbb{P}\Lambda_Z^{[d]}$, via the Chern–Mather class of $Z$. At present, there is no known method for computing the homology class of a single irreducible component of $\mathbb{P}\Lambda_Z^{[d]}$. Although we can distinguish these components topologically, we lack tools to compute their topological invariants, which presents an unfortunate limitation.
-
-Nevertheless, Question \ref{ques:homo_class_of_subvarieties} can still be addressed in certain special situations. For instance, when $\Gal(\gamma_Z) = S_n$, the space $\mathbb{P} \Lambda_Z^{[d]}$ is known to be irreducible, enabling explicit computation. Similarly, when $Z = -Z$ and $\Gal(\gamma_Z) = W(C_{d/2})$, one can impose additional conditions (e.g., $p_{2l-1} = -p_{2l}$) to guarantee the uniqueness of $\mathbb{P} \Lambda_Z^{\univ}$, which again allows us to perform the computation.
-
-\begin{ques}
-Suppose $d = 2d_0$ with $d_0$ even, $(m) \in \mathbb{Z}^d$, and $g \in W(C_{d/2}) \smallsetminus W(D_{d/2})$. Is it possible to construct an example with $Z = -Z$ and $\Gal(\gamma_Z) = W(D_{d/2})$, yet $\dim_{\mathbb{C}} Z^{g(m)} \neq \dim_{\mathbb{C}} Z^{(m)}$?
-\end{ques}
-
-\begin{ques}
-Suppose that $Z$ is the Fano surface of a smooth cubic threefold, and let $A := \Alb(Z)$. How can we compute the homology class of $Z^{(m)}$?
-\end{ques}
 
 
 \section{Tannakian formalism}
@@ -1364,7 +1365,25 @@ For simplicity, we work over the base field $\kappa = \mathbb{C}$. Let $A$ denot
 Following the approach of \cite{KW15vanishing}, we work in the quotient category $\overline{\Perv}(A) = \Perv(A) / N(A)$, where $N(A) \subset \Perv(A)$ is the Serre subcategory of negligible complexes. A complex $\mathcal{F}$ is defined to be negligible if $\chi(A, \mathcal{F}) = 0$. This quotient category admits a natural convolution structure, and every finitely generated tensor subcategory of it is Tannakian, with a reductive Tannaka group $G$ (see \cite[Thm 7.1 \& Cor 9.2]{KW15vanishing}). In particular, for any perverse sheaf $\delta \in \overline{\Perv}(A)$, the full subcategory generated by $\delta$ is categorically equivalent to the representation category of an algebraic group $G$:
 $$\left< \delta, * \right> \cong \Rep(G).$$
 
+\section{delete later}
+\begin{ques}\label{ques:monodromy}
+Suppose that the subvariety $Z \subset A$ is not stable under any translation on $A$. Are there criterias to compute the monodromy group $\Gal(\gamma_Z)$? Furthermore, what kinds of groups can appear as $\Gal(\gamma_Z)$ for suitable choices of $Z \subset A$?
+\end{ques}
 
+Based on the discussion above, Question \ref{ques:monodromy} reduces to Question \ref{ques:mon_Grass} and Question \ref{ques:when_are_maps_Gauss}, with Question \ref{ques:mon_Grass_sub} appearing as a special case of Question \ref{ques:mon_Grass}.
+
+
+\begin{ques}\label{ques:mon_Grass}
+In the situation of Definition \ref{def:general_monodromy}, how can we compute $\Mon(\phi)$?
+\end{ques}
+
+\begin{ques}\label{ques:mon_Grass_sub}
+Let $Z \subseteq \Gr(r,n)$ be a subvariety of dimension $r$ such that $[Z] \cdot [\Gr(r,H)] \neq 0$ in $H_r(\Gr(r,n);\mathbb{Z})$. What can be said about its monodromy group? 
+\end{ques}
+
+\begin{ques}\label{ques:when_are_maps_Gauss}
+For a map $\phi:Z \longrightarrow \Gr(r,n)$, when is it induced from some inclusion $Z \subset A$?
+\end{ques}
 %\nocite{Eberhardt2022Koszul}	% cite articles which are not cited in the document yet
 
 % Remember to protect the uppercase of people's name and LaTeX symbols
