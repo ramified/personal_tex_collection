@@ -1,0 +1,80 @@
+\begin{thebibliography}{10}
+
+\bibitem{Ar85I}
+E.~Arbarello, M.~Cornalba, P.~A. Griffiths, and J.~Harris.
+\newblock {\em Geometry of algebraic curves. {Volume} {I}}, volume 267 of {\em
+  Grundlehren Math. Wiss.}
+\newblock Springer, Cham, 1985.
+
+\bibitem{BL04}
+Christina Birkenhake and Herbert Lange.
+\newblock {\em Complex abelian varieties}, volume 302 of {\em Grundlehren Math.
+  Wiss.}
+\newblock Berlin: Springer, 2nd augmented ed. edition, 2004.
+
+\bibitem{BO22}
+Pawe{\l} Bor{\'o}wka and Angela Ortega.
+\newblock Prym varieties and {Prym} map.
+\newblock {\em Rend. Ist. Mat. Univ. Trieste}, 54:34, 2022.
+\newblock Id/No 14.
+
+\bibitem{CK22}
+Giulio Codogni and Thomas Kr{\"a}mer.
+\newblock Semicontinuity of {Gauss} maps and the {Schottky} problem.
+\newblock {\em Math. Ann.}, 382(1-2):607--630, 2022.
+
+\bibitem{FK16}
+Gavril Farkas and Michael Kemeny.
+\newblock The generic {Green}-{Lazarsfeld} secant conjecture.
+\newblock {\em Invent. Math.}, 203(1):265--301, 2016.
+
+\bibitem{Ha02}
+Allen Hatcher.
+\newblock {\em Algebraic topology}.
+\newblock Cambridge: Cambridge University Press, 2002.
+
+\bibitem{JKLM22}
+Ariyan Javanpeykar, Thomas Kr{\"a}mer, Christian Lehn, and Marco Maculan.
+\newblock The monodromy of families of subvarieties on abelian varieties.
+\newblock Preprint, {arXiv}:2210.05166 [math.{AG}] (2022), 2022.
+
+\bibitem{Kani84}
+Ernst Kani.
+\newblock On {Castelnuovo}'s equivalence defect.
+\newblock {\em J. Reine Angew. Math.}, 352:24--70, 1984.
+
+\bibitem{Kr16cubicthreefold}
+Thomas Kr{\"a}mer.
+\newblock Cubic threefolds, {Fano} surfaces and the monodromy of the {Gauss}
+  map.
+\newblock {\em Manuscr. Math.}, 149(3-4):303--314, 2016.
+
+\bibitem{Kr20}
+Thomas Kr{\"a}mer.
+\newblock Summands of theta divisors on {Jacobians}.
+\newblock {\em Compos. Math.}, 156(7):1457--1475, 2020.
+
+\bibitem{KW15vanishing}
+Thomas Kr{\"a}mer and Rainer Weissauer.
+\newblock Vanishing theorems for constructible sheaves on abelian varieties.
+\newblock {\em J. Algebr. Geom.}, 24(3):531--568, 2015.
+
+\bibitem{Looij24}
+Eduard Looijenga.
+\newblock A ball quotient parametrizing trigonal genus 4 curves.
+\newblock {\em Nagoya Math. J.}, 254:366--378, 2024.
+
+\bibitem{Mum74}
+David Mumford.
+\newblock {\em The red book of varieties and schemes. {Includes} the {Michigan}
+  lectures (1974) on ``{Curves} and their {Jacobians}''.}, volume 1358 of {\em
+  Lect. Notes Math.}
+\newblock Berlin: Springer, 2nd, expanded ed. with contributions by {Enrico}
+  {Arbarello} edition, 1999.
+
+\bibitem{vakil2017rising}
+Ravi Vakil.
+\newblock The rising sea: Foundations of algebraic geometry.
+\newblock {\em preprint}, 2017.
+
+\end{thebibliography}

@@ -344,8 +344,33 @@ Berlin, 12489\\ Germany\\}
 \maketitle
 \tableofcontents
 
-This document is intended to collect the questions and doubts that arose during my research this year. For many of these problems, I have consulted my fellow students, my supervisor, and various other people I’ve met. However, most of them remain in the realm of folklore—problems that are likely known but for which I could not find a reference. On the other hand, some of the questions may not appear particularly interesting unless their underlying motivations are clearly explained. Therefore, I’ll try to provide relevant background and outline some initial, perhaps naive, ideas while listing the problems along the way. Any responses, answers, or references are most welcome and will be added to keep this document updated.
+\section{Introduction}
+From any subvariety of an abelian variety one obtains a reductive group via the convolution of perverse sheaves; in this way, traditional questions in algebraic geometry can be reinterpreted in representation-theoretic terms, providing new geometric perspectives.
 
+In \cite{Kr20}, Prof. Krämer shows that Weyl group orbits correspond to conic Lagrangian cycles in the cotangent bundle, which are realized as the conormal bundles of certain subvarieties. A careful analysis of these subvarieties is frequently central to resolving the problems at hand, cf. \cite[\S 5-\S 8]{JKLM22}. Here we investigate three principal properties of these subvarieties: irreducibility, dimension, and homology class.
+
+Concerning irreducibility, we observe that the irreducible components correspond precisely to the orbits of the monodromy group. Hence, the discrepancy between the monodromy group and the Weyl group provides a measure of the failure of irreducibility of these subvarieties. Recently, we constructed an example where the monodromy group is significantly smaller than expected, thereby disproving \cite[Conjecture~8]{Kr16cubicthreefold}:
+
+\begin{proposition}
+There exists an étale double cover $h: C \to C'$ of smooth projective curves such that the Abel--Prym map
+$$\AP_{C/C'}: C \longrightarrow A \qquad p \longmapsto \mathcal{O}_{C}(p-\iota(p))$$
+is an embedding, and 
+\begin{equation*}
+\begin{aligned}
+  W_C\cong\;& S_2^{\oplus d/2} \rtimes S_{d/2}  \\ 
+   M_C\subseteqq\;& S_4^{\oplus d/4} \rtimes S_{d/4}  \\ 
+\end{aligned}
+\end{equation*}
+where $d = 2g(C')-2$, and $W_C$, $M_C$ denote the Weyl and monodromy groups, respectively.
+\end{proposition}
+This turns out to be the only nontrivial example in the Prym setting when $g(C') > 9$.
+
+For the dimension and homology class of a subvariety $Z$, both invariants can be recovered from the homology class of $\mathbb{P}\Lambda_{Z} \subset \mathbb{P}T^*A$ — that is, from the Chern--Mather class of $Z$. Standard computational techniques are available when the group is a full or signed symmetric group. This applies in particular to the Jacobian case, which will be analyzed in detail in Section ???.
+
+\section*{Acknowledgement}
+%\addcontentsline{toc}{section}{Acknowledgement}
+
+I would like to express my sincere gratitude to my supervisor, Thomas Krämer, without whose support this work would not have been possible. He proposed the problem, guided me throughout the project, and generously spent many hours discussing drafts and explaining important ideas. I am also thankful to Haohao Liu, Vincent Ariksoy, Aaron Beumer, Roben de Preter, Andreas Kretschmer, Andrés Rojas, Søren Gammelgaard, Paweł Borówka, and Gavril Farkas for their insightful discussions and valuable comments. Funding is provided by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under Germany´s Excellence Strategy – The Berlin Mathematics Research Center MATH+ (EXC-2046/1, project ID: 390685689).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Basic setting}
 For simplicity, we work over the base field $\kappa = \mathbb{C}$, and by a variety we mean a integral separated scheme of finite type over $\mathbb{C}$. Let $A/\mathbb{C}$ be an abelian variety of dimension $n$, and let $Z \subseteq A$ be an irreducible closed subvariety of dimension $r$. We denote by $\iota_Z: Z \hookrightarrow A$ the inclusion morphism.\footnote{I'm not sure whether we should consider the more general cases in the future—such as working over a field of characteristic $p$, letting $A$ be a semiabelian variety or a complex torus, or allowing $\iota$ to be a covering onto its image. For now, I will omit these possibilities from this document.}
@@ -664,7 +689,6 @@ In the Prym setting, the corresponding Gauss map $\gamma_C$ factors through $h$:
 	\arrow[maps to, from=3-3, to=3-6]
 \end{tikzcd}\]
 
-Unfortunately, in the Prym setting, no example has been found for Question \ref{ques:monodromy_2}, and such an example is likely to exist only when the gonality $\gon(C)$ is sufficiently small.
 
 \begin{lemma}
 When $\gon(C')>4$, $|\omega_{C'} \otimes \eta|$ is injective. As a result, the monodromy group is big.
