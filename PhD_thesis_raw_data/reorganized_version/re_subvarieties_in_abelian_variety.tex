@@ -359,7 +359,7 @@ is an embedding, and
 \begin{equation*}
 \begin{aligned}
   W_C\cong\;& S_2^{\oplus d/2} \rtimes S_{d/2}  \\ 
-   M_C\subseteqq\;& S_4^{\oplus d/4} \rtimes S_{d/4}  \\ 
+   M_C\subseteq\;& S_4^{\oplus d/4} \rtimes S_{d/4}  \\ 
 \end{aligned}
 \end{equation*}
 where $d = 2g(C')-2$, and $W_C$, $M_C$ denote the Weyl and monodromy groups, respectively.
@@ -841,7 +841,7 @@ $$g(m)=\left(m_{g(1)},\ldots , m_{g(d)}\right) \in \mathbb{Z}^d.$$
 
 \section{Monodromy group}\label{sec:mon_examples}
 
-\subsection{Curves in Prym variety}
+\subsection{Curves in Prym variety with small monodromy group}
 This subsection is devoted to presenting an example that demonstrates Proposition \ref{prop: smallmongp}.
 
 
@@ -907,7 +907,7 @@ Write $\pr^{-1}(x_0)=\{x,x'\}$, $\pr^{-1}(y_0)=\{y,y'\}$, we get
 
 The next proposition tells us, for the most time the resulting curve $C \subset A$ is not invariant under any non-trivial translation of $A$. 
 
-\begin{proposition}
+\begin{proposition}\label{prop:Galois_condition}
 In Example \ref{eg:bielliptic}, let $C$ be the curve corresponding to $\eta \in \Pic^{0}(C')[2]$. If $\Gal(C/E) \cong \mathbb{Z}/2\mathbb{Z} \oplus \mathbb{Z}/2\mathbb{Z}$, then $C$ admits three intermediate quotients over $E$. Denote them by $C'$, $C_1$, and $C_2$, where $C_1$ and $C_2$ are the two intermediate curves different from $C'$.
 
 % https://q.uiver.app/#q=WzAsMTIsWzAsMCwiQyJdLFswLDEsIkMnIl0sWzIsMCwiQyJdLFsyLDEsIkMnIl0sWzIsMiwiRSJdLFsyLDMsIlxcbWF0aGJie1B9XjEiXSxbMCwyLCJFIl0sWzAsMywiXFxtYXRoYmJ7UH1eMSJdLFsxLDEsIkNfMSJdLFszLDEsIkNfMiJdLFsyLDQsIlxcR2FsKEMvRSkgXFxjb25nIFxcbWF0aGJie1p9LzJcXG1hdGhiYntafSBcXG9wbHVzIFxcbWF0aGJie1p9LzJcXG1hdGhiYntafSJdLFswLDQsIlxcR2FsKEMvRSkgXFxjb25nIFxcbWF0aGJie1p9LzRcXG1hdGhiYntafSJdLFsxLDZdLFswLDEsImgiXSxbNiw3XSxbMiwzLCJoIl0sWzMsNF0sWzQsNV0sWzgsNF0sWzksNF0sWzIsOSwiaF8yIl0sWzIsOCwiaF8xIiwyXV0=
@@ -951,6 +951,14 @@ Without loss of generality, we may assume that $\deg(h_\sigma)=2$. By assumption
 \end{proof}
 
 %Maybe I should check \cite{CMS21,JC92} for more information on Prym varieties of bielliptic curves.
+
+\begin{proof}[Proof of Proposition \ref{prop: smallmongp}]
+From Example \ref{eg:bielliptic}, we know that $\deg \gamma_C = 4$, hence by Lemma \ref{lem:wreath_product} we get
+$$M_C = \Mon(\gamma_C) \subseteq S_4^{\oplus d/4} \rtimes S_{d/4}.$$
+
+Assuming further that $\Gal(C/E) \cong \mathbb{Z}/4\mathbb{Z}$, Proposition \ref{prop:Galois_condition} implies that $C \subset A$ is divisible. In this case, by \cite[p.~5, Corollary (1)]{JKLM22}, the associated Tannaka group is big, namely
+$$W_C\cong\; S_2^{\oplus d/2} \rtimes S_{d/2}.$$
+\end{proof}
 
 
 \subsection{Criteria for big monodromy group}
