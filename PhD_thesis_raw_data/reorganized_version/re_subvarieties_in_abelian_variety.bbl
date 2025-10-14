@@ -1,4 +1,4 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{1}
 
 \bibitem{Ar85I}
 E.~Arbarello, M.~Cornalba, P.~A. Griffiths, and J.~Harris.
@@ -12,21 +12,10 @@ Christina Birkenhake and Herbert Lange.
   Wiss.}
 \newblock Berlin: Springer, 2nd augmented ed. edition, 2004.
 
-\bibitem{BO22}
-Pawe{\l} Bor{\'o}wka and Angela Ortega.
-\newblock Prym varieties and {Prym} map.
-\newblock {\em Rend. Ist. Mat. Univ. Trieste}, 54:34, 2022.
-\newblock Id/No 14.
-
 \bibitem{CK22}
 Giulio Codogni and Thomas Kr{\"a}mer.
 \newblock Semicontinuity of {Gauss} maps and the {Schottky} problem.
 \newblock {\em Math. Ann.}, 382(1-2):607--630, 2022.
-
-\bibitem{FK16}
-Gavril Farkas and Michael Kemeny.
-\newblock The generic {Green}-{Lazarsfeld} secant conjecture.
-\newblock {\em Invent. Math.}, 203(1):265--301, 2016.
 
 \bibitem{Ha02}
 Allen Hatcher.
@@ -53,24 +42,6 @@ Thomas Kr{\"a}mer.
 Thomas Kr{\"a}mer.
 \newblock Summands of theta divisors on {Jacobians}.
 \newblock {\em Compos. Math.}, 156(7):1457--1475, 2020.
-
-\bibitem{KW15vanishing}
-Thomas Kr{\"a}mer and Rainer Weissauer.
-\newblock Vanishing theorems for constructible sheaves on abelian varieties.
-\newblock {\em J. Algebr. Geom.}, 24(3):531--568, 2015.
-
-\bibitem{Looij24}
-Eduard Looijenga.
-\newblock A ball quotient parametrizing trigonal genus 4 curves.
-\newblock {\em Nagoya Math. J.}, 254:366--378, 2024.
-
-\bibitem{Mum74}
-David Mumford.
-\newblock {\em The red book of varieties and schemes. {Includes} the {Michigan}
-  lectures (1974) on ``{Curves} and their {Jacobians}''.}, volume 1358 of {\em
-  Lect. Notes Math.}
-\newblock Berlin: Springer, 2nd, expanded ed. with contributions by {Enrico}
-  {Arbarello} edition, 1999.
 
 \bibitem{vakil2017rising}
 Ravi Vakil.

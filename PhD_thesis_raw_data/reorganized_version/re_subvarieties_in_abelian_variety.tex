@@ -352,9 +352,9 @@ In \cite{Kr20}, Prof. Krämer shows that Weyl group orbits correspond to conic L
 
 Concerning irreducibility, we observe that the irreducible components correspond precisely to the orbits of the monodromy group. Hence, the discrepancy between the monodromy group and the Weyl group provides a measure of the failure of irreducibility of these subvarieties. Recently, we constructed an example where the monodromy group is significantly smaller than expected, thereby disproving \cite[Conjecture~8]{Kr16cubicthreefold}:
 
-\begin{proposition}
+\begin{proposition}\label{prop: smallmongp}
 There exists an étale double cover $h: C \to C'$ of smooth projective curves such that the Abel--Prym map
-$$\AP_{C/C'}: C \longrightarrow A \qquad p \longmapsto \mathcal{O}_{C}(p-\iota(p))$$
+$\AP_{C/C'}: C \longrightarrow A$
 is an embedding, and 
 \begin{equation*}
 \begin{aligned}
@@ -371,9 +371,9 @@ For the dimension and homology class of a subvariety $Z$, both invariants can be
 \section*{Acknowledgement}
 %\addcontentsline{toc}{section}{Acknowledgement}
 
-I would like to express my sincere gratitude to my supervisor, Thomas Krämer, without whose support this work would not have been possible. He proposed the problem, guided me throughout the project, and generously spent many hours discussing drafts and explaining important ideas. I am also thankful to Haohao Liu, Vincent Ariksoy, Aaron Beumer, Roben de Preter, Andreas Kretschmer, Andrés Rojas, Søren Gammelgaard, Paweł Borówka, and Gavril Farkas for their insightful discussions and valuable comments. Funding is provided by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under Germany´s Excellence Strategy – The Berlin Mathematics Research Center MATH+ (EXC-2046/1, project ID: 390685689).
+I would like to express my sincere gratitude to my supervisor, Thomas Krämer, without whose support this work would not have been possible. He proposed the problem, guided me throughout the project, and generously spent many hours discussing drafts and explaining important ideas. I am also thankful to Haohao Liu, Chenji Fu, Zhixing Chen, Vincent Ariksoy, Aaron Beumer, Roben de Preter, Andreas Kretschmer, Andrés Rojas, Søren Gammelgaard, Paweł Borówka, and Gavril Farkas for their insightful discussions and valuable comments. Funding is provided by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under Germany´s Excellence Strategy – The Berlin Mathematics Research Center MATH+ (EXC-2046/1, project ID: 390685689).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Tangent Gauss map and Conormal Gauss map}
+\section{Tangent Gauss map and conormal Gauss map}
 For simplicity, we work over the base field $\kappa = \mathbb{C}$, and by a variety we mean a integral separated scheme of finite type over $\mathbb{C}$. Let $A/\mathbb{C}$ be an abelian variety of dimension $n$, and let $Z \subseteq A$ be an irreducible closed subvariety of dimension $r$. We denote by $\iota_Z: Z \hookrightarrow A$ the inclusion morphism.\footnote{I'm not sure whether we should consider the more general cases in the future—such as working over a field of characteristic $p$, letting $A$ be a semiabelian variety or a complex torus, or allowing $\iota$ to be a covering onto its image. For now, I will omit these possibilities from this document.}
 
 \subsection{Gauss map and monodromy group}
@@ -595,7 +595,7 @@ When $\alpha$ is finite onto its image,
   \;&  \phi_Z \text{ is not generic injective} \\ 
   \Longleftrightarrow\;\;& \text{For general $p \in X$, exists $q \neq p$ such that $h^0(X,\Omega_X(-p-q))=n-r$} \\ 
   \stackrel{\textcolor{purple}{\textbf{?}\footnotemark}}{\Longleftrightarrow}\;\;& \text{For general $p \in X$, exists $S \in X^{[2]}$ such that $p\in S$ and $h^0(X,\Omega_X \otimes \mathcal{I}_S)=n-r$} \\ 
-  \Longleftrightarrow\;\;& \text{For all $p \in X$, exists $S \in X^{[2]}$ such that $p\in S$ and $h^0(X,\Omega_X \otimes \mathcal{I}_S)=n-r$.} \\ 
+  \Longleftrightarrow\;\;& \text{For all $p \in X$, exists $S \in X^{[2]}$ such that $p\in S$ and $h^0(X,\Omega_X \otimes \mathcal{I}_S)\geqslant n-r$.} \\ 
 \end{aligned}
 \end{equation*}
 \end{proposition}
@@ -831,192 +831,28 @@ $$g(m)=\left(m_{g(1)},\ldots , m_{g(d)}\right) \in \mathbb{Z}^d.$$
 \begin{enumerate}[(1)]
 \item For all $g\in \Gal(\gamma_{Z})$, we have $ Z^{g(m)}=Z^{(m)}$, $c_Z^{g(m)}=c_Z^{(m)}$;
 \item For $(m)=(1,0,\ldots,0)\in \mathbb{Z}^d$, $Z^{(m)}=Z$;
-\item For all $(m), (m') \in \mathbb{Z}^d$, we have  $\mathbb{P}\Lambda_{Z}^{(m)} \circ \mathbb{P}\Lambda_{Z}^{(m')} = \mathbb{P}\Lambda_{Z}^{(m+m')}$;
+\item For all $(m), (m') \in \mathbb{Z}^d$, we have  $\mathbb{P}\Lambda_{Z}^{(m)} \circ \mathbb{P}\Lambda_{Z}^{(m')} \supseteq \mathbb{P}\Lambda_{Z}^{(m+m')}$;
 \item The group $\left< \mathbb{P}\Lambda_{Z^{(m)}} \right>_{\Abel}$ is closed under the convolution product.
 \end{enumerate}
 \endgroup
 \end{lemma}
 
-\begin{ques}\label{ques:homo_class_of_subvarieties}
-Can we compute the dimension and the homology class for these subvarieties $Z^{(m)}$?
-\end{ques}
-
-At first glance, this question may appear naive, but it turns out to be extremely challenging. The main difficulty lies in determining the homology class of $\mathbb{P}\Lambda_{Z}^{\univ}$. Once this is known, one can compute the pushforward to obtain the homology class of $\mathbb{P}\Lambda_{Z}^{(m)}$, from which both $\dim_{\mathbb{C}} Z^{(m)}$ and the homology class of $Z^{(m)}$ (up to a scalar factor $c_Z^{(m)}$) can be extracted.
-
-However, standard intersection theory yields only the homology class of $\mathbb{P}\Lambda_Z^{[d]}$, via the Chern–Mather class of $Z$. At present, there is no known method for computing the homology class of a single irreducible component of $\mathbb{P}\Lambda_Z^{[d]}$. Although we can distinguish these components topologically, we lack tools to compute their topological invariants, which presents an unfortunate limitation.
-
-Nevertheless, Question \ref{ques:homo_class_of_subvarieties} can still be addressed in certain special situations. For instance, when $\Gal(\gamma_Z) = S_n$, the space $\mathbb{P} \Lambda_Z^{[d]}$ is known to be irreducible, enabling explicit computation. Similarly, when $Z = -Z$ and $\Gal(\gamma_Z) = W(C_{d/2})$, one can impose additional conditions (e.g., $p_{2l-1} = -p_{2l}$) to guarantee the uniqueness of $\mathbb{P} \Lambda_Z^{\univ}$, which again allows us to perform the computation.
-
-\begin{ques}
-Suppose $d = 2d_0$ with $d_0$ even, $(m) \in \mathbb{Z}^d$, and $g \in W(C_{d/2}) \smallsetminus W(D_{d/2})$. Is it possible to construct an example with $Z = -Z$ and $\Gal(\gamma_Z) = W(D_{d/2})$, yet $\dim_{\mathbb{C}} Z^{g(m)} \neq \dim_{\mathbb{C}} Z^{(m)}$?
-\end{ques}
-
-\begin{ques}
-Suppose that $Z$ is the Fano surface of a smooth cubic threefold, and let $A := \Alb(Z)$. How can we compute the homology class of $Z^{(m)}$?
-\end{ques}
-
-\section{When is monodromy group small}\label{sec:mon_examples}
-
-In this section, we discuss examples drawn from my ongoing work, focusing on the construction of subvarieties and the computation of their monodromy groups.
-
-Broadly speaking, there are two approaches to constructing examples. One may start with a given variety $Z$ and attempt to embed it into an abelian variety—this always factors through its Albanese $\Alb(Z)$. Alternatively, one may begin with an abelian variety $A$ and construct subvarieties by intersecting suitable divisors. Unfortunately, even in the case where $Z$ is a curve, we have not fully resolved Question \ref{ques:monodromy}.
-
-\subsection{Curves, basic results}
-A complete answer to Question \ref{ques:mon_Grass_sub} is known when $Z = C$ is a curve. A curve $C \subseteq \mathbb{P}^{n-1}$ is said to be nondegenerate if it is not contained in any hyperplane $H \subseteq \mathbb{P}^{n-1}$.
 
 
-\begin{proposition}[See {\cite[p111]{Ar85I}} for a detailed proof]\label{prop:mon_of_embedded_curve}
-Suppose that $\iota_C: C \subseteq \mathbb{P}^{n-1}$ is an irreducible nondegenerate curve of degree $d$, then $\Mon(\iota_C) \cong S_d$.
-\end{proposition}
-
-\begin{proofsketch}
-Because $S_d$ is generated by its transpositions, we are reduced to verifying that:
-\begin{itemize}
-\item $\Mon(\iota_C)$ acts doubly transitively on the fiber;
-\item $\Mon(\iota_C)$ contains a transposition.
-\end{itemize}
-\end{proofsketch}
-
-\begin{proposition}\label{prop:mon_of_nonembedded_curve}
-Let $\iota_{C'} : C' \hookrightarrow \mathbb{P}^{n-1}$ be an irreducible nondegenerate curve of degree $d/2$, and let $\covermap: C \to C'$ be a degree $2$ ramified covering, with ramification occurring at at least one smooth point of $C'$. Then $\Mon(\iota_{C'} \circ \covermap) \cong S_2^{\oplus d/2} \rtimes S_{d/2}$ is the hyperoctahedral group/signed symmetric group.
-\end{proposition}
-
-\begin{proofsketch}
-By Lemma \ref{lem:wreath_product} we know that $\Mon(\iota_{C'} \circ \covermap) \subseteq S_2^{\oplus d/2} \rtimes S_{d/2}$.
-By Lemma \ref{lem: type_C_Weyl_group}, we are reduced to verifying that:
-\begin{itemize}
-\item The quotient map $\Mon(\iota_{C'} \circ \covermap) \longrightarrow \Mon(\iota_{C'}) \cong S_{d/2}$ is surjective;
-\item $\Mon(\iota_{C'} \circ \covermap)$ contains a transposition of a pair of points in the fiber of $\covermap$.
-\end{itemize}
-\end{proofsketch}
-
-\begin{lemma}\label{lem: type_C_Weyl_group}
-Let $G$ be a subgroup of $S_2^{\oplus m} \rtimes S_m$, acting naturally on the set ${\pm 1, \ldots, \pm m}$. If the projection $G \to S_m$ is surjective and the transposition $\sigma_0$ of $\pm 1$ lies in $G$, then $G = S_2^{\oplus m} \rtimes S_m$.
-\end{lemma}
-
-\begin{proofsketch}(with help from Chenji Fu)
-Let $\varepsilon_i$ denote the transposition of $\pm i$. For any $\sigma \in S_m$, choose a lift $\tilde{\sigma} \in G$, then 
-$$\varepsilon_{\sigma(1)}=\tilde{\sigma} \circ \sigma_0 \circ \tilde{\sigma}^{-1}   \in G.$$
-Thus, $S_2^{\oplus m} \subset G$, and since $G$ maps onto $S_m$, we obtain $G = S_2^{\oplus m} \rtimes S_m$.
-\end{proofsketch}
-
-
-\begin{eg}
-Let $C$ be a smooth curve of genus $g$ embedded in its Jacobian $A := \Jac(C)$ via the Abel–Jacobi map $\AJ_C: C \hookrightarrow A$.
-
-When $C$ is non-hyperelliptic, the corresponding Gauss map 
-$$|\omega_C|: C\longrightarrow \mathbb{P}^{g-1}$$
-makes $C$ as an irreducible nondegenerate curve of degree $2g-2$, by Proposition \ref{prop:mon_of_embedded_curve} we get
-$$\Gal(\gamma_C) \cong S_{2g-2}.$$
-
-When $C$ is hyperelliptic, the corresponding Gauss map is $2:1$ onto a rational normal curve $R \subset \mathbb{P}^{g-1}$:
-% https://q.uiver.app/#q=WzAsMyxbMCwwLCJ8XFxvbWVnYV9DfDogQyJdLFsyLDAsIlxcbWF0aGJie1B9XntnLTF9Il0sWzEsMCwiUiJdLFswLDIsIjI6MSIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsyLDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV1d
-\[\begin{tikzcd}
-	{|\omega_C|: C} & R & {\mathbb{P}^{g-1}}
-	\arrow["{2:1}", two heads, from=1-1, to=1-2]
-	\arrow[hook, from=1-2, to=1-3]
-\end{tikzcd}\]
-By Proposition \ref{prop:mon_of_nonembedded_curve} we get
-$$\Gal(\gamma_C) \cong S_2^{\oplus g-1} \rtimes S_{g-1}.$$
-\end{eg}
-
-In fact, a degree $2:1$ map does not give rise to any exceptional monodromy groups beyond those listed in Table \ref{table:big_mono}.
-
-\begin{definition}[big monodromy group]\label{def:big_mono}
-We refer to the big monodromy group as any group of the following types:
-{
-\def\arraystretch{1.2}
-\begin{table}[ht]
-\begin{tabular}{l|r|r}
-\hline
-\multicolumn{1}{c|}{notation}               & \multicolumn{1}{c|}{name}   & \multicolumn{1}{c}{alias}                     \\ \hline
-$W(A_{m+1})=S_m$                            & full symmetric group        &                           \\ \hline
-$\hspace{4mm}W(C_{m})=S_2^{\oplus m} \rtimes S_m$       & signed symmetric group      & hyperoctahedral group     \\ \hline
-$\hspace{4mm}W(D_{m})=(S_2^{\oplus m})_{0} \rtimes S_m$ & even-signed symmetric group & demihyperoctahedral group \\ \hline
-\end{tabular}
-\medskip
-\caption{big monodromy group}
-\label{table:big_mono}
-\vspace*{-\baselineskip}
-\end{table}
-}
-
-In practice, the term ``big monodromy group'' refers to the full symmetric group $S_n$ when the subset $Z \subset A$ is not symmetric, and to the (even-)signed symmetric group when $Z \subset A$ is symmetric.
-
-\end{definition}
-
-\begin{proposition}\label{prop:mon_of_nonembedded_curve2}
-Let $\iota_{C'} : C' \hookrightarrow \mathbb{P}^{n-1}$ be an irreducible nondegenerate curve of degree $d/2$, and let $\covermap: C \to C'$ be a degree $2$ ramified covering. Then $$\Mon(\iota_{C'} \circ \covermap) \cong W(C_{d/2}) \text{ or } W(D_{d/2}).$$
-\end{proposition}
-
-\begin{proofsketch}
-By Lemma \ref{lem:wreath_product} we know that $\Mon(\iota_{C'} \circ \covermap) \subseteq W(C_{d/2})$.
-By Lemma \ref{lem: type_C_Weyl_group2}, we are reduced to verifying that:
-\begin{itemize}
-\item The quotient map $\Mon(\iota_{C'} \circ \covermap) \longrightarrow \Mon(\iota_{C'}) \cong S_{d/2}$ is surjective;
-\item (signed doubly transitive) $\Mon(\iota_{C'} \circ \covermap)$ acts transitively on pairs $(x,y)$ with $x\neq \pm y$. 
-\end{itemize}
-\end{proofsketch}
-
-\begin{lemma}\label{lem: type_C_Weyl_group2}
-Let $G$ be a subgroup of $W(C_{m})$, acting naturally on the set ${\pm 1, \ldots, \pm m}$. If the projection $G \to S_m$ is surjective  then 
-$$G \cong  W(C_{m}) \text{ or } W(D_{m}) \text{ or } S_2 \times S_m \text{ or } S_{m}.$$
-\end{lemma}
-
-\begin{proofsketch}(with help from Chenji Fu)
-Let $H$ denote the kernel of the natural quotient map $G \to S_m$. Then $H \subseteq (S_2)^{\oplus m}$ is stable under the action of $S_n$. There are only four possible forms that $H$ can take:\footnote{Here is a brief argument showing that $H$ must be one of $0$, $S_2$, $(S_2^{\oplus m})_0$, or $S_2^{\oplus m}$. If $H$ contains an element $h = (a_1, \ldots, a_m)$ with $a_i \neq a_j$ for some $i \neq j$, then $$(ij)h + h = (1,\ldots,\underset{\underset{i\text{-th}}{\uparrow}}{-1},\ldots,\underset{\underset{j\text{-th}}{\uparrow}}{-1},\ldots,1) \in H,$$ 
-implying $(S_2^{\oplus m})_0 \subseteq H$. Hence, $H$ must be either $(S_2^{\oplus m})_0$ or $S_2^{\oplus m}$. Otherwise, if all $h \in H$ have identical coordinates, then $H$ is either $0$ or $S_2$.}
-\begin{itemize}
-\item $H=0$. Then $G\cong S_m$.
-\item $H=\left< (-1,\ldots,-1) \right> \cong S_2$. Then $G\cong S_2 \times S_m$.
-\item $H=(S_2^{\oplus m})_{0}$. Then $G$ is a index $2$ subgroup of $W(C_{m})$, so $G \cong W(D_{m})$.\footnote{Check \href{https://math.stackexchange.com/questions/3202823/wikipedia-inconsistency-with-the-index-2-subgroups-of-the-hyperoctahedral-group}{stackexchange discussions}} 
-\item $H=S_2^{\oplus m}$. Then $G=W(C_{m})$.
-\end{itemize}
-
-\end{proofsketch}
-
-
-%When ramification occurring only in the smooth point of $C'$, I try to collect the following links:
-%\href{https://mathoverflow.net/questions/310299/characterizing-subgroups-of-semidirect-products-with-a-fixed-intersection-with-t}{subgroups of semidirect products}
-%\href{https://mathoverflow.net/questions/321698/first-group-cohomology-for-the-standard-representation-of-s-n-over-mathbbf}{first group cohomology for the standard representation of $S_n$}
-
-We are particularly interested in identifying cases where the monodromy group is small(i.e., not big), which can occur only when $k > 2$, where $k$ denotes the degree of the map $\phi: C \to \mathbb{P}^{n-1}$. On the other hand, when both $k > 2$ and $n > 2$, Lemma \ref{lem:wreath_product} ensures that the resulting monodromy group is indeed small. Thus, in the case of curves, Question \ref{ques:monodromy} is resolved except in the following three cases:
-\begin{enumerate}
-\item $n>2$ and $k=2$. By Proposition \ref{prop:mon_of_nonembedded_curve2}, the monodromy group is known to be large, although its precise structure remains undetermined.
-\item $n=2$. Here, $A$ is an abelian surface and $C$ corresponds to a divisor.
-\item $n>2$ and $k>2$. Finding an example of this would guarantee a case of small monodromy.
-\end{enumerate}
-
-\begin{ques}\label{ques:monodromy_2}
-Can we find any curve $C \subset A$ not stable under any translation on $A$, and for which the associated monodromy group is small?
-
-Assume that $n>2$. Can we find any curve $C \subset A$ not stable under any translation on $A$, whose Gauss map has degree $d>2$? 
-\end{ques}
-
-\begin{eg}
-If we replace $A$ with $\mathbb{C}^3$ in Question \ref{ques:monodromy_2}, we can construct curves $C \subset \mathbb{C}^3$ that are not preserved under any linear transformation but whose Gauss maps fail to be generically injective. Here is one such example: 
-
-Consider the curve $C \subset \mathbb{C}^3$ defined by the parametrization
-$$r(t)=\left( t, (t-1)e^t, \frac{1}{4} (2t^2-2t+1)e^{2t}\right).$$
-Its derivative is 
-$$r'(t)=\left(1,te^t, t^2e^{2t} \right),$$
-so the Gauss map fails to be generically injective.
-
-\end{eg}
-
-To answer Question \ref{ques:monodromy_2}, the starting point is to seek curves with decomposable Jacobians. A classical source of such examples is a covering $h: C \to C'$ of $\deg(h)>1$ where $g(C') > 0$, in which case $\Jac(C)$ decomposes. Nevertheless, this does not exhaust all possibilities: Paweł Borówka pointed out to me an example, proved in \cite[Exercise 11.7]{BO22}, where $\Jac(C)$ is decomposable although $C$ does not cover a curve of positive genus.
+\section{Monodromy group}\label{sec:mon_examples}
 
 \subsection{Curves in Prym variety}
-To address Question \ref{ques:monodromy_2}, we seek explicit examples, and the case of a Prym curve mapping to its associated Prym variety offers a natural starting point for investigation.
+This subsection is devoted to presenting an example that demonstrates Proposition \ref{prop: smallmongp}.
 
-\begin{notation}
+
+\begin{setting}\label{set: Prym}
 Suppose $C'$ is a smooth projective curve of genus $g(C')$, and let $B$ be an effective (possibly zero) divisor on $C'$. For any line bundle $\eta \in \Pic(C')$ such that $\eta^{\otimes 2} \cong \mathcal{O}_{C'}(B)$, one obtains a double cover $h: C \to C'$ of smooth projective curves, ramified precisely over $B$. The associated involution on $C$ is denoted by $\iota$, and the triple $(C, C', h)$ is referred to as the Prym pair.
 
 Recall that the Prym variety $A := \Prym(C/C')$ is defined as the connected component of the identity in 
 $$\ker \left[\Nm:\rule{0mm}{3.4mm}\Jac(C) \longrightarrow \Jac(C') \right].$$ 
 The Abel--Prym map is defined by
 $$\AP_{C/C'}: C \longrightarrow A \qquad p \longmapsto \mathcal{O}_{C}(p-\iota(p)).$$
-\end{notation}
+\end{setting}
 
 The classical theory treats the case where the Prym variety $A$ is principally polarized—this occurs exactly when $B = \varnothing$ or $B =\{p_0, q_0\}$, that is, when $h$ is either unramified or ramified at two points.\footnote{See \cite[Theorem 3.2.6]{CK22} for the proof.} For clarity and focus, we restrict our attention to these cases. Table \ref{table:Prym_numerical_data} lists the relevant numerical data.\footnote{As usual, $n=\dim_{\mathbb{C}} A$ is the dimension of the abelian variety.}
 
@@ -1050,210 +886,26 @@ In the Prym setting, the corresponding Gauss map $\gamma_C$ factors through $h$:
 \end{tikzcd}\]
 
 
-\begin{lemma}
-When $\gon(C')>4$, $|\omega_{C'} \otimes \eta|$ is injective. As a result, the monodromy group is big.
-\end{lemma}
-
-\begin{proof}
-Suppose that $|\omega_{C'} \otimes \eta|$ is not injective, we need to find a line bundle of degree $4$ and rank $\geqslant 1$. In fact, for $p\neq q$,
-\begin{equation*}
-\begin{aligned}
-\;& |\omega_{C'} \otimes \eta|(p)=|\omega_{C'} \otimes \eta|(q) &&\\
-  \Longleftrightarrow\;& h^0 \left(\omega_{C'} \otimes \eta\right) -  h^0 \left(\omega_{C'} \otimes \eta(-p-q)\right) = 1\qquad && \text{By \cite[19.2.8]{vakil2017rising}}\\ 
-  \Longleftrightarrow\;& h^0 \left(\omega_{C'} \otimes \eta(-p-q)\right) = n - 1 && \text{Since $\dim_{\mathbb{C}} A = n$}\\
-  \Longleftrightarrow\;& h^0 \left( \eta^{\vee}(p+q)\right) = 1 && \text{Via Riemann--Roch}\\   
-\end{aligned}
-\end{equation*}
-When $B=\varnothing$, write $\eta^{\vee}(p+q)=\mathcal{O}_{C'}(p'+q')$, then
-$$\mathcal{O}_{C'}(2p+2q) = \left(\eta^{\vee}\right)^{\otimes 2}(2p+2q) = \mathcal{O}_{C'}(2p'+2q') \hspace{25mm}\in g_4^1;$$
-When $B=\{p_0,q_0\}$, write $\eta^{\vee}(p+q)=\mathcal{O}_{C'}(p')$, then
-$$\mathcal{O}_{C'}(2p+2q) = \left(\eta^{\vee}\right)^{\otimes 2}(2p+2q+p_0+q_0) = \mathcal{O}_{C'}(2p'+p_0+q_0) \quad\in g_4^1.$$
-\end{proof}
-
-\begin{remark}
-Based on the strategy used in the proof of Lemma 2.10, we can in fact obtain stronger results. For $p \in C'$,
-\begin{equation*}
-\begin{aligned}
-\;& |\omega_{C'} \otimes \eta|\text{ is ramified at $p$} && \text{(i.e., the tangent map is $0$ at $p$)}\\
-  \Longleftrightarrow\;& h^0 \left(\omega_{C'} \otimes \eta\right) -  h^0 \left(\omega_{C'} \otimes \eta(-2p)\right) = 1\qquad && \text{By \cite[19.2.9]{vakil2017rising}}\\ 
-  \Longleftrightarrow\;& h^0 \left(\omega_{C'} \otimes \eta(-2p)\right) = n - 1 && \text{Since $\dim_{\mathbb{C}} A = n$}\\
-  \Longleftrightarrow\;& h^0 \left( \eta^{\vee}(2p)\right) = 1 && \text{Via Riemann--Roch}\\   
-\end{aligned}
-\end{equation*}
-
-For the remainder of this discussion, we focus exclusively on the case $B = \varnothing$. Combining both,
-\begin{equation*}
-\begin{aligned}
-\;& |\omega_{C'} \otimes \eta|\text{ is not generically injective} \\
-  \Longleftrightarrow\;&\text{For any } p \in C', \text{ there exist } q \in C' \text{ such that } h^0 \left( \eta^{\vee}(p+q)\right) = 1 \\   
-\Longleftrightarrow\;&\text{For any } p \in C', \text{ there exist } q \in C' \text{ such that }  \eta^{\vee}+p \in C'+C'-q \\  
-\Longleftrightarrow\;&  \eta^{\vee}+C' \subseteq C'+ C'- C'. \\ 
-\end{aligned}
-\end{equation*}
-
-It is expected that
-\begin{equation}\label{eq:remove_extra_C}
-\eta^{\vee}+C' \subseteq C'+ C'- C' \quad\Longleftrightarrow\quad \eta^{\vee} \in C'- C'.
-\end{equation}
-If so, writing $\eta^{\vee}=\mathcal{O}_{C'}(p-q)$, we obtain
-$$\mathcal{O}_{C'}(2p)=\mathcal{O}_{C'}(2q) \in g_2^1,$$
-which implies that $C'$ is hyperelliptic. By Fact \ref{fact:etale_cover_of_hyperelliptic_curves}, this forces $C$ to be hyperelliptic as well, and hence it lies outside the scope of our discussion.
-
-Unfortunately, \eqref{eq:remove_extra_C} does not hold in general. A counterexample, communicated to me by Gavril Farkas, will be presented in Proposition \ref{prop:fail_to_remove_extra_C}.
-\end{remark}
-
-\begin{fact}[{From \cite[p346]{Mum74}}]\label{fact:etale_cover_of_hyperelliptic_curves}
-We have an explicit classification of $2:1$ unramified covers of a hyperelliptic curve $C'$. Let $\pi: C' \to \mathbb{P}^1$ be the double cover ramified at $\{p_1, \ldots, p_{2g+2}\}$, then every such unramified double cover of $C'$ arises from some line bundle in $C$ of the form
-$$\eta:= \mathcal{O}_{C'}(p_{i_1} + \cdots + p_{i_l} - p_{i_{l+1}}-\cdots - p_{i_{2l}}) = \mathcal{O}_{C'}\left( \sum_{j=1}^{2l}p_{i_j}-2l \cdot p_{1}  \right).$$ 
-When $l = 1$, the associated covering curve $C$ is also hyperelliptic.
-\end{fact}
-
-\begin{ques}\label{ques:mon_gp_for_classical_Prym}
-Can one find a non-hyperelliptic curve $C'$ and a nontrivial line bundle $\eta \in \Jac(C')$ satisfying $\eta^{\otimes 2} \cong \mathcal{O}_{C'}$, such that 
-$$\eta^{\vee}+C' \subseteq C'+ C'- C'?$$
-If such a pair exists, can we find a case where the resulting curve $C \subset A$ is not preserved under any translation on $A$?
-\end{ques}
-
-As a key example relevant to Question \ref{ques:mon_gp_for_classical_Prym}, I include here a result of Gavril Farkas.
-
-\begin{proposition}[{See \cite[Proposition 2.8]{FK16}}]\label{prop:fail_to_remove_extra_C}
- Let $C$ be a general smooth curve of genus $g = 2i$, and suppose $D \in W_{i+1}^1(C)$ is a pencil of minimal degree—i.e., a line bundle $\mathcal{O}_{C}(D) \in \Pic^{i+1}(C)$ with $h^0(C, \mathcal{O}_{C}(D)) = 2$. Define
- $$\mathcal{L}:= K_C-2D \in \Pic^{2i-4}(C),$$
- then $\mathcal{L}$ satisfies 
- $$\mathcal{L} + C \subset C_{2i-2}-C, \quad \text{but} \quad\mathcal{L} \notin C_{2i-3}-C.$$
-\end{proposition}
-
-\begin{remark}
-Take $i=2$, the line bundle $\mathcal{L}$ provides a counterexample to \eqref{eq:remove_extra_C}. However, this example does not directly yield a counterexample to Question \ref{ques:mon_gp_for_classical_Prym}, due to Proposition \ref{prop:never_2_torsion}.
-
-%This is due to the uncertainty of whether there exist $C$ and $D$ satisfying $\mathcal{L}^{\otimes 2} \cong \mathcal{O}_C$, and whether the curve $C$ is sufficiently general for Proposition \ref{prop:fail_to_remove_extra_C} to hold. 
-
-%I intend to revisit the proof in detail, especially the use of the base point free pencil trick and the Petri map. Should this yield any useful observations, they will be included here.
-\begin{proposition}\label{prop:never_2_torsion}
-The line bundle $\mathcal{L}$ in Proposition \ref{prop:fail_to_remove_extra_C} never satisfies
-$$
-\mathcal{L}^{\otimes 2} \cong \mathcal{O}_C \quad\text{ but }\quad \mathcal{L} \ncong \mathcal{O}_C,
-$$
-i.e.,
-$$
-2K_C=4D \quad\text{ but }\quad K_C \neq 2D.
-$$
-\end{proposition}
-\begin{proof}
-Since $C$ is a smooth non-hyperelliptic curve of genus $4$, its canonical embedding realizes $C$ as a complete intersection of an irreducible quadric $\tilde{Q}$ and an irreducible cubic surface $\tilde{K}$ in $\mathbb{P}^3$. According to \cite[Lemma 2.1]{Looij24}, every divisor $D \in W_3^1(C)$ arises as the intersection $D = L \cap \tilde{K}$, where $L$ is a line contained in the quadric surface $\tilde{Q}$.
-
-When $\tilde{Q}$ is a quadric cone, there exists a hyperplane $H$ such that $H \cap \tilde{Q} = 2L$, implying $K_C = 2D$; when $\tilde{Q}$ is smooth, we have $H \cap \tilde{Q} = L + L'$, with $L'$ being the residual line. Interpreting $2K_C \in |\mathcal{O}_{\mathbb{P}^3}(2)|$ as a quadric $Q \subset \mathbb{P}^3$, we obtain
-\begin{equation*}
-\begin{aligned}
-\;&2K_C=4D\\
-  \Longleftrightarrow\;& \text{there exists a quadric } Q \subset \mathbb{P}^3 \text{ such that } Q \cap C = 4D  \\ 
-  \Longleftrightarrow\;& \text{there exists a quadric } Q \subset \mathbb{P}^3 \text{ such that } Q \cap \tilde{Q} \cap \tilde{K} = 4D  \\ 
-  \Longleftrightarrow\;& \text{there exists a quadric } Q \subset \mathbb{P}^3 \text{ such that } Q \cap \tilde{Q} = 4L \qquad\quad \text{by Lemma \ref{lem:SG}}  \\ 
-\end{aligned}
-\end{equation*}
-However, via Lemma \ref{lem:2_quardric_intersection}, such case won't happen at all.
-\end{proof}
-Lemma \ref{lem:SG} was inspired by a discussion with Søren Gammelgaard.
-\begin{lemma}\label{lem:SG}
-Let $Q$ and $\tilde{Q}$ be reduced quardric surfaces in $\mathbb{P}^3$, and let $\tilde{K} \subset \mathbb{P}^3$ be a cubic surface. Assume that $\tilde{Q}$ and $\tilde{K}$ are smooth and that $\tilde{Q} \cap \tilde{K}$ is a complete intersection. Let $L \subset \tilde{Q}$ be a line, and set $D := L \cap \tilde{K}$. Then, 
-$$
-Q \cap \tilde{Q} \cap \tilde{K} =4D \quad \Longleftrightarrow \quad Q \cap \tilde{Q}=4L.
-$$
-\end{lemma}
-\begin{proof}
-We only need to prove the ``$\Longrightarrow$" direction. Suppose that $Q \cap \tilde{Q} \cap \tilde{K} = 4D$. Then:\footnote{The previous argument is incorrect. For example, let $X = \{F=0\}$ be a smooth cubic plane curve and let $L = \{G=0\}$ be a line meeting $X$ at three points $p_1, p_2, p_3$. Then for some nonzero $a \in \mathbb{C}$, the cubic $Y_a := \{F + aG^3 = 0\}$ is smooth, and $X \cap Y_a = 3(p_1 + p_2 + p_3)$.}
-\begin{itemize}
-\item Since $Q$ intersects $L$ in at least three points, we have $L \subset Q$.
-\item Write $Q \cap \tilde{Q} = L + R$, where $R$ is the residual curve. Then $\deg R = 3$ and $R \cap \tilde{K} = 3D$.
-\item If $R \subset \mathbb{P}^3$ is non-degenerate, then $R$ is a rational normal curve of degree $3$, which cannot pass through three distinct collinear points. This contradicts $3D \subset R \cap L$.
-\item If $R$ is degenerate, then it lies in a hyperplane $H \cong \mathbb{P}^2$. Since $R \subset H \cap \tilde{Q}$ is contained in a conic, we can write $R = L' + R'$, where $L'$ is a line and $R'$ is a conic. From the inclusion $3D \subset (L' + R') \cap L$, it follows that $L' = L$ and $R' = 2L$.
-\item Therefore, $Q \cap \tilde{Q} = L + R = 4L$.
-\end{itemize}
-\end{proof}
-\begin{lemma}\label{lem:2_quardric_intersection}
-Let $Q$ and $\tilde{Q}$ be two reduced quardric surfaces in $\mathbb{P}^3$, and assume that $\tilde{Q}$ is smooth. Then $Q$ and $\tilde{Q}$ cannot intersect a line with multiplicity $4$.
-\end{lemma}
-\begin{proof}
-We prove by contradiction. Without loss of generality, assume that $Q \cap \tilde{Q} = 4L$, where $L = \left\{ [x:y:0:0] \right\} \subset \mathbb{P}^3$ is a line. We can write down the equations of the quardrics:
-\begin{equation*}
-\begin{aligned}
-  Q:\;&  f(z_0,z_1,z_2,z_3)=0 \\ 
-  \tilde{Q}:\;&  \tilde{f}(z_0,z_1,z_2,z_3)=0 \\ 
-\end{aligned}
-\end{equation*}
-where
-\begin{equation*}
-\begin{aligned}
- f(z_0,z_1,z_2,z_3) =\;& \sum_{i+j<2} a_{ij}(z_2,z_3)z_0^i z_1^j \\
-  =\;& a_{01}(z_2,z_3)z_0 + a_{10}(z_2,z_3) z_1 +a_{00}(z_2,z_3) \\
-  =\;& \left(b_{02}z_2+b_{03}z_3\right) z_0 + \left(b_{12}z_2+b_{13}z_3\right) z_1 +a_{00}(z_2,z_3)\\
- \tilde{f}(z_0,z_1,z_2,z_3) =\;& \sum_{i+j<2} \tilde{a}_{ij}(z_2,z_3)z_0^i z_1^j \\
-  =\;& \tilde{a}_{01}(z_2,z_3)z_0 + \tilde{a}_{10}(z_2,z_3) z_1 +\tilde{a}_{00}(z_2,z_3) \\
-  =\;& \left(\tilde{b}_{02}z_2+\tilde{b}_{03}z_3\right) z_0 + \left(\tilde{b}_{12}z_2+\tilde{b}_{13}z_3\right) z_1 +\tilde{a}_{00}(z_2,z_3).\\
-\end{aligned}
-\end{equation*}
-Since $\tilde{Q}$ is smooth, 
-$$\tilde{b}_{02}\tilde{b}_{03},\tilde{b}_{12}\tilde{b}_{13},\tilde{b}_{02}\tilde{b}_{12},\tilde{b}_{03}\tilde{b}_{13} \neq 0.$$
-
-Fix $t \in \mathbb{C}$. Restricting $Q$ and $\tilde{Q}$ to the hyperplane $\{z_1 = t z_0\}$, we obtain two conics:
-\begin{equation*}
-\begin{cases}
-f(z_0,tz_0,z_2,z_3)=0 \\ 
-\tilde{f}(z_0,tz_0,z_2,z_3)=0
-\end{cases}
-\end{equation*}
-which intersect at the point $p_t: = [1:t:0:0]$ with multiplicity $4$. Writing down these equations explicitly, we get
-\begin{equation*}
-\begin{cases}
-\left( \rule{0mm}{3.4mm} (b_{02}+tb_{12})z_2 + (b_{03}+tb_{13})z_3 \right) z_0 + a_{00}(z_2,z_3)=0 \\[3mm]
-\left( \rule{0mm}{3.4mm} (\tilde{b}_{02}+t\tilde{b}_{12})z_2 + (\tilde{b}_{03}+t\tilde{b}_{13})z_3 \right) z_0 + \tilde{a}_{00}(z_2,z_3)=0,
-\end{cases}
-\end{equation*}
-so the corresponding tangent lines at $p_t$ are given by
-\begin{equation*}
-\begin{cases}
- (b_{02}+tb_{12})z_2 + (b_{03}+tb_{13})z_3 =0 \\
- (\tilde{b}_{02}+t\tilde{b}_{12})z_2 + (\tilde{b}_{03}+t\tilde{b}_{13})z_3 =0
-\end{cases}
-\end{equation*}
-Since the conics intersect with multiplicity $4$ at $p_t$, these tangent lines must coincide for every $t$, so
-$$
-(b_{02}+tb_{12})(\tilde{b}_{03}+t\tilde{b}_{13})=(b_{03}+tb_{13})(\tilde{b}_{02}+t\tilde{b}_{12}) \qquad \text{for every }t \in \mathbb{C}.
-$$
-
-By a change of coordinates, we may assume that $\tilde{a}_{10}(z_2,z_3)=z_3$. This implies that $\tilde{b}_{02} = 0$ and $\tilde{b}_{03} = 1$. Furthermore, we have $\tilde{b}_{12} \ne 0$, and 
-\begin{equation*}
-\begin{cases}
- b_{12} \tilde{b}_{13} = \tilde{b}_{12} b_{13} \\
- b_{02}=0 \\
- b_{12} = b_{03} \tilde{b}_{12}
-\end{cases}
-\end{equation*}
-so $b_{13}=b_{03}\tilde{b}_{13}$.
-
-Now choose $(z_2,z_3) \neq (0,0)$ such that $a_{00}(z_2,z_3) = b_{03} \cdot \tilde{a}_{00}(z_2,z_3)$. Take $t\in \mathbb{C}$ such that
-$$(\tilde{b}_{02}+t\tilde{b}_{12})z_2 + (\tilde{b}_{03}+t\tilde{b}_{13})z_3 =  t\tilde{b}_{12}z_2 + (1+t\tilde{b}_{13})z_3\neq 0, $$
-and take 
-$$z_0:= \frac{\tilde{a}_{00}}{t\tilde{b}_{12}z_2 + (1+t\tilde{b}_{13})z_3} z_3.$$
-Then the point $[z_0:tz_0:z_2:z_3]$ lies in $Q \cap \tilde{Q}$ but not in $L$, yielding a contradiction.
-\end{proof}
-\end{remark}
-
-Recently, we obtained a partial answer to Question \ref{ques:mon_gp_for_classical_Prym}, as illustrated in the following example.
 \begin{eg} \label{eg:bielliptic}
-Let $C'$ be a non-hyperelliptic bielliptic curve, and let $\pr: C' \to E$ denote a $2:1$ covering onto an elliptic curve. For any nontrivial $2$-torsion line bundle $\eta_0 \in \Pic^0(E)[2]$, the pullback $\eta := \pr^* \eta_0$ satisfies $\eta^{\otimes 2} \cong \mathcal{O}_{C'}$ and
-$$\eta^{\vee}+C' \subseteq C'+ C'- C'.$$
+Let $C'$ be a non-hyperelliptic bielliptic curve, and let $\pr: C' \to E$ denote a $2:1$ covering onto an elliptic curve. For any nontrivial $2$-torsion line bundle $\eta_0 \in \Pic^0(E)[2]$, the pullback $\eta := \pr^* \eta_0$ satisfies $\eta^{\otimes 2} \cong \mathcal{O}_{C'}$ and the map $|\omega_{C'} \otimes \eta|$ factors through $\pr$.
 \end{eg}
 \begin{proof}[{Proof of Example \ref{eg:bielliptic}}]
-For any $x \in C'$, write $x_0: \pr(x)$, then
+For any $x \in C'$, write $x_0:= \pr(x)$, then
 $$ \deg \eta_0^{\vee} (x_0)=1 \quad \Longrightarrow \quad \text{ there exists } y_0 \in E \text{ such that } \eta_0^{\vee} (x_0)=\mathcal{O}_E(y_0).$$
 Write $\pr^{-1}(x_0)=\{x,x'\}$, $\pr^{-1}(y_0)=\{y,y'\}$, we get
-$$\eta^{\vee}(x+x')= \mathcal{O}_{C'}(y+y').$$
-i.e.,
-$$\eta^{\vee}(x)= \mathcal{O}_{C'}(y+y'-x).$$
+\begin{equation*}
+\begin{aligned}
+\;& \eta_0^{\vee} (x_0)=\mathcal{O}_E(y_0) && \\ 
+\Longrightarrow\;& \eta^{\vee}(x+x')= \mathcal{O}_{C'}(y+y') && \text{Via pulling back along $\pr$} \\ 
+  \Longrightarrow\;& h^0 \left(\rule{0mm}{3mm} \eta^{\vee}(x+x')\right) = 1 && \\ 
+  \Longleftrightarrow\;& h^0 \left(\rule{0mm}{3mm}\omega_{C'} \otimes \eta(-x-x')\right) = n - 1 && \text{Via Riemann--Roch}\\
+  \Longleftrightarrow\;& \Hnm^0 \left(\rule{0mm}{3mm}\omega_{C'} \otimes \eta(-x)\right) \cong  \Hnm^0 \left(\rule{0mm}{3mm}\omega_{C'} \otimes \eta(-x')\right) \qquad && \\ 
+  \Longleftrightarrow\;& |\omega_{C'} \otimes \eta|(x)=|\omega_{C'} \otimes \eta|(x') &&
+\end{aligned}
+\end{equation*}
 \end{proof}
 
-The next proposition tells us, for the most time the resulting curve $C \subset A$ is not invariant under any non-trivial translation of $A$. Therefore, Example \ref{eg:bielliptic} serve as an example of Question \ref{ques:mon_gp_for_classical_Prym} and \ref{ques:monodromy_2}.
+The next proposition tells us, for the most time the resulting curve $C \subset A$ is not invariant under any non-trivial translation of $A$. 
 
 \begin{proposition}
 In Example \ref{eg:bielliptic}, let $C$ be the curve corresponding to $\eta \in \Pic^{0}(C')[2]$. If $\Gal(C/E) \cong \mathbb{Z}/2\mathbb{Z} \oplus \mathbb{Z}/2\mathbb{Z}$, then $C$ admits three intermediate quotients over $E$. Denote them by $C'$, $C_1$, and $C_2$, where $C_1$ and $C_2$ are the two intermediate curves different from $C'$.
@@ -1301,7 +953,190 @@ Without loss of generality, we may assume that $\deg(h_\sigma)=2$. By assumption
 %Maybe I should check \cite{CMS21,JC92} for more information on Prym varieties of bielliptic curves.
 
 
-In fact, the Castelnuovo--Severi inequality, brought to my attention by Gavril Farkas, shows that Example \ref{eg:bielliptic} is the only example for Question \ref{ques:mon_gp_for_classical_Prym} when $g(C') > 9$.
+\subsection{Criteria for big monodromy group}
+
+Proposition \ref{prop: smallmongp} shows that a small monodromy group can indeed occur, even in the case of curves. Nevertheless, there exist criteria ensuring that the monodromy group is large, which we describe in this subsection.
+
+
+
+\begin{definition}[big monodromy group]\label{def:big_mono}
+We refer to the big monodromy group as any group of the following types:
+{
+\def\arraystretch{1.2}
+\begin{table}[ht]
+\begin{tabular}{l|r|r}
+\hline
+\multicolumn{1}{c|}{notation}               & \multicolumn{1}{c|}{name}   & \multicolumn{1}{c}{alias}                     \\ \hline
+$W(A_{m+1})=S_m$                            & full symmetric group        &                           \\ \hline
+$\hspace{4mm}W(C_{m})=S_2^{\oplus m} \rtimes S_m$       & signed symmetric group      & hyperoctahedral group     \\ \hline
+$\hspace{4mm}W(D_{m})=(S_2^{\oplus m})_{0} \rtimes S_m$ & even-signed symmetric group & demihyperoctahedral group \\ \hline
+\end{tabular}
+\medskip
+\caption{big monodromy group}
+\label{table:big_mono}
+\vspace*{-\baselineskip}
+\end{table}
+}
+
+In practice, the term ``big monodromy group'' refers to the full symmetric group $S_n$ when the subset $Z \subset A$ is not symmetric, and to the (even-)signed symmetric group when $Z \subset A$ is symmetric.
+
+\end{definition}
+
+
+\begin{proposition}[See {\cite[p111]{Ar85I}} for a detailed proof]\label{prop:mon_of_embedded_curve}
+Suppose that $\iota_C: C \subseteq \mathbb{P}^{n-1}$ is an irreducible nondegenerate\footnote{A curve $C \subseteq \mathbb{P}^{n-1}$ is said to be nondegenerate if it is not contained in any hyperplane $H \subseteq \mathbb{P}^{n-1}$.} curve of degree $d$, then $\Mon(\iota_C) \cong S_d$.
+\end{proposition}
+
+\begin{proofsketch}
+Because $S_d$ is generated by its transpositions, we are reduced to verifying that:
+\begin{itemize}
+\item $\Mon(\iota_C)$ acts doubly transitively on the fiber;
+\item $\Mon(\iota_C)$ contains a transposition.
+\end{itemize}
+\end{proofsketch}
+
+
+
+
+
+
+In fact, a degree $2:1$ map does not give rise to any exceptional monodromy groups beyond those listed in Table \ref{table:big_mono}.
+
+
+
+\begin{proposition}\label{prop:mon_of_nonembedded_curve2}
+Let $\iota_{C'} : C' \hookrightarrow \mathbb{P}^{n-1}$ be an irreducible nondegenerate curve of degree $d/2$, and let $\covermap: C \to C'$ be a degree $2$ ramified covering. Then $$\Mon(\iota_{C'} \circ \covermap) \cong W(C_{d/2}) \text{ or } W(D_{d/2}).$$
+\end{proposition}
+
+\begin{proofsketch}
+By Lemma \ref{lem:wreath_product} we know that $\Mon(\iota_{C'} \circ \covermap) \subseteq W(C_{d/2})$.
+By Lemma \ref{lem: type_C_Weyl_group2}, we are reduced to verifying that:
+\begin{itemize}
+\item The quotient map $\Mon(\iota_{C'} \circ \covermap) \longrightarrow \Mon(\iota_{C'}) \cong S_{d/2}$ is surjective;
+\item (signed doubly transitive) $\Mon(\iota_{C'} \circ \covermap)$ acts transitively on pairs $(x,y)$ with $x\neq \pm y$. 
+\end{itemize}
+\end{proofsketch}
+
+\begin{lemma}\label{lem: type_C_Weyl_group2}
+Let $G$ be a subgroup of $W(C_{m})$, acting naturally on the set ${\pm 1, \ldots, \pm m}$. If the projection $G \to S_m$ is surjective  then 
+$$G \cong  W(C_{m}) \text{ or } W(D_{m}) \text{ or } S_2 \times S_m \text{ or } S_{m}.$$
+\end{lemma}
+
+\begin{proofsketch}
+Let $H$ denote the kernel of the natural quotient map $G \to S_m$. Then $H \subseteq (S_2)^{\oplus m}$ is stable under the action of $S_n$. There are only four possible forms that $H$ can take:\footnote{Here is a brief argument showing that $H$ must be one of $0$, $S_2$, $(S_2^{\oplus m})_0$, or $S_2^{\oplus m}$. If $H$ contains an element $h = (a_1, \ldots, a_m)$ with $a_i \neq a_j$ for some $i \neq j$, then $$(ij)h + h = (1,\ldots,\underset{\underset{i\text{-th}}{\uparrow}}{-1},\ldots,\underset{\underset{j\text{-th}}{\uparrow}}{-1},\ldots,1) \in H,$$ 
+implying $(S_2^{\oplus m})_0 \subseteq H$. Hence, $H$ must be either $(S_2^{\oplus m})_0$ or $S_2^{\oplus m}$. Otherwise, if all $h \in H$ have identical coordinates, then $H$ is either $0$ or $S_2$.}
+\begin{itemize}
+\item $H=0$. Then $G\cong S_m$.
+\item $H=\left< (-1,\ldots,-1) \right> \cong S_2$. Then $G\cong S_2 \times S_m$.
+\item $H=(S_2^{\oplus m})_{0}$. Then $G$ is a index $2$ subgroup of $W(C_{m})$, so $G \cong W(D_{m})$.\footnote{Check \href{https://math.stackexchange.com/questions/3202823/wikipedia-inconsistency-with-the-index-2-subgroups-of-the-hyperoctahedral-group}{stackexchange discussions}} 
+\item $H=S_2^{\oplus m}$. Then $G=W(C_{m})$.
+\end{itemize}
+
+\end{proofsketch}
+
+
+\begin{proposition}\label{prop:mon_of_nonembedded_curve}
+Let $\iota_{C'} : C' \hookrightarrow \mathbb{P}^{n-1}$ be an irreducible nondegenerate curve of degree $d/2$, and let $\covermap: C \to C'$ be a degree $2$ ramified covering, with ramification occurring at at least one smooth point of $C'$. Then $\Mon(\iota_{C'} \circ \covermap) \cong S_2^{\oplus d/2} \rtimes S_{d/2}$ is the hyperoctahedral group/signed symmetric group.
+\end{proposition}
+
+\begin{proofsketch}
+By Lemma \ref{lem:wreath_product} we know that $\Mon(\iota_{C'} \circ \covermap) \subseteq S_2^{\oplus d/2} \rtimes S_{d/2}$.
+By Lemma \ref{lem: type_C_Weyl_group}, we are reduced to verifying that:
+\begin{itemize}
+\item The quotient map $\Mon(\iota_{C'} \circ \covermap) \longrightarrow \Mon(\iota_{C'}) \cong S_{d/2}$ is surjective;
+\item $\Mon(\iota_{C'} \circ \covermap)$ contains a transposition of a pair of points in the fiber of $\covermap$.
+\end{itemize}
+\end{proofsketch}
+
+\begin{lemma}\label{lem: type_C_Weyl_group}
+Let $G$ be a subgroup of $S_2^{\oplus m} \rtimes S_m$, acting naturally on the set ${\pm 1, \ldots, \pm m}$. If the projection $G \to S_m$ is surjective and the transposition $\sigma_0$ of $\pm 1$ lies in $G$, then $G = S_2^{\oplus m} \rtimes S_m$.
+\end{lemma}
+
+\begin{proofsketch}
+Let $\varepsilon_i$ denote the transposition of $\pm i$. For any $\sigma \in S_m$, choose a lift $\tilde{\sigma} \in G$, then 
+$$\varepsilon_{\sigma(1)}=\tilde{\sigma} \circ \sigma_0 \circ \tilde{\sigma}^{-1}   \in G.$$
+Thus, $S_2^{\oplus m} \subset G$, and since $G$ maps onto $S_m$, we obtain $G = S_2^{\oplus m} \rtimes S_m$.
+\end{proofsketch}
+
+
+%When ramification occurring only in the smooth point of $C'$, I try to collect the following links:
+%\href{https://mathoverflow.net/questions/310299/characterizing-subgroups-of-semidirect-products-with-a-fixed-intersection-with-t}{subgroups of semidirect products}
+%\href{https://mathoverflow.net/questions/321698/first-group-cohomology-for-the-standard-representation-of-s-n-over-mathbbf}{first group cohomology for the standard representation of $S_n$}
+
+
+\subsection{Curves with big monodromy group}
+
+The availability of these criteria permits the systematic construction of numerous cases where the associated monodromy group is large.
+
+\begin{eg}
+Let $C$ be a smooth curve of genus $g$ embedded in its Jacobian $A := \Jac(C)$ via the Abel–Jacobi map $\AJ_C: C \hookrightarrow A$.
+
+When $C$ is non-hyperelliptic, the corresponding Gauss map 
+$$|\omega_C|: C\longrightarrow \mathbb{P}^{g-1}$$
+makes $C$ as an irreducible nondegenerate curve of degree $2g-2$, by Proposition \ref{prop:mon_of_embedded_curve} we get
+$$\Gal(\gamma_C) \cong S_{2g-2}.$$
+
+When $C$ is hyperelliptic, the corresponding Gauss map is $2:1$ onto a rational normal curve $R \subset \mathbb{P}^{g-1}$:
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJ8XFxvbWVnYV9DfDogQyJdLFsyLDAsIlxcbWF0aGJie1B9XntnLTF9Il0sWzEsMCwiUiJdLFswLDIsIjI6MSIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6ImVwaSJ9fX1dLFsyLDEsIiIsMCx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoidG9wIn19fV1d
+\[\begin{tikzcd}
+	{|\omega_C|: C} & R & {\mathbb{P}^{g-1}}
+	\arrow["{2:1}", two heads, from=1-1, to=1-2]
+	\arrow[hook, from=1-2, to=1-3]
+\end{tikzcd}\]
+By Proposition \ref{prop:mon_of_nonembedded_curve} we get
+$$\Gal(\gamma_C) \cong S_2^{\oplus g-1} \rtimes S_{g-1}.$$
+\end{eg}
+
+
+
+The Prym case is more intricate, since the associated monodromy group may fail to be large. To proceed, we fix Setting \ref{set: Prym} and impose the additional condition that $C$ be non-hyperelliptic, thereby excluding trivial counterexamples.
+
+\begin{lemma}
+When $\gon(C')>4$, $|\omega_{C'} \otimes \eta|$ is injective. As a result, the monodromy group is big.
+\end{lemma}
+
+\begin{proof}
+Suppose that $|\omega_{C'} \otimes \eta|$ is not injective, we need to find a line bundle of degree $4$ and rank $\geqslant 1$. In fact, for $p\neq q$,
+\begin{equation*}
+\begin{aligned}
+\;& |\omega_{C'} \otimes \eta|(p)=|\omega_{C'} \otimes \eta|(q) &&\\
+  \Longleftrightarrow\;& h^0 \left(\omega_{C'} \otimes \eta\right) -  h^0 \left(\omega_{C'} \otimes \eta(-p-q)\right) = 1\qquad && \text{By \cite[19.2.8]{vakil2017rising}}\\ 
+  \Longleftrightarrow\;& h^0 \left(\omega_{C'} \otimes \eta(-p-q)\right) = n - 1 && \text{Since $\dim_{\mathbb{C}} A = n$}\\
+  \Longleftrightarrow\;& h^0 \left( \eta^{\vee}(p+q)\right) = 1 && \text{Via Riemann--Roch}\\   
+\end{aligned}
+\end{equation*}
+When $B=\varnothing$, write $\eta^{\vee}(p+q)=\mathcal{O}_{C'}(p'+q')$, then
+$$\mathcal{O}_{C'}(2p+2q) = \left(\eta^{\vee}\right)^{\otimes 2}(2p+2q) = \mathcal{O}_{C'}(2p'+2q') \hspace{25mm}\in g_4^1;$$
+When $B=\{p_0,q_0\}$, write $\eta^{\vee}(p+q)=\mathcal{O}_{C'}(p')$, then
+$$\mathcal{O}_{C'}(2p+2q) = \left(\eta^{\vee}\right)^{\otimes 2}(2p+2q+p_0+q_0) = \mathcal{O}_{C'}(2p'+p_0+q_0) \quad\in g_4^1.$$
+\end{proof}
+
+\begin{remark}
+Based on the strategy used in the proof of Lemma 2.10, we can in fact obtain stronger results. For $p \in C'$,
+\begin{equation*}
+\begin{aligned}
+\;& |\omega_{C'} \otimes \eta|\text{ is ramified at $p$} && \text{(i.e., the tangent map is $0$ at $p$)}\\
+  \Longleftrightarrow\;& h^0 \left(\omega_{C'} \otimes \eta\right) -  h^0 \left(\omega_{C'} \otimes \eta(-2p)\right) = 1\qquad && \text{By \cite[19.2.9]{vakil2017rising}}\\ 
+  \Longleftrightarrow\;& h^0 \left(\omega_{C'} \otimes \eta(-2p)\right) = n - 1 && \text{Since $\dim_{\mathbb{C}} A = n$}\\
+  \Longleftrightarrow\;& h^0 \left( \eta^{\vee}(2p)\right) = 1 && \text{Via Riemann--Roch}\\   
+\end{aligned}
+\end{equation*}
+
+
+For the remainder of this discussion, we focus exclusively on the case $B = \varnothing$. Combining both,
+\begin{equation*}
+\begin{aligned}
+\;& |\omega_{C'} \otimes \eta|\text{ is not generically injective} \\
+  \Longleftrightarrow\;&\text{For any } p \in C', \text{ there exist } q \in C' \text{ such that } h^0 \left( \eta^{\vee}(p+q)\right) = 1 \\   
+\Longleftrightarrow\;&\text{For any } p \in C', \text{ there exist } q \in C' \text{ such that }  \eta^{\vee}+p \in C'+C'-q \\  
+\Longleftrightarrow\;&  \eta^{\vee}+C' \subseteq C'+ C'- C'. \\ 
+\end{aligned}
+\end{equation*}
+\end{remark}
+
+
+
+Gonality is not the only invariant forcing the monodromy group to be large. Indeed, the Castelnuovo–Severi inequality implies that Example \ref{eg:bielliptic} is the sole instance of a non-trivial small monodromy group when $g(C') > 9$.
 
 \begin{fact}[{Castelnuovo--Severi inequality, \cite[p26, Corollary]{Kani84}}]
 Let $C$ be a smooth projective curve equipped with two ramified coverings $f_i: C \to C_i$ of degrees $d_i$ $(i=1,2)$. Suppose that there is no morphism $h: C \to \tilde{C}$ with $\deg(h) > 1$ such that both $f_1$ and $f_2$ factor through $h$. Then
@@ -1309,11 +1144,12 @@ $$g(C) \leqslant d_1 \cdot g(C_1) + d_2 \cdot g(C_2) + (d_1-1)(d_2-1).$$
 \end{fact}
 
 \begin{proposition}
-If, in Question \ref{ques:mon_gp_for_classical_Prym}, we additionally require that $C'$ be non-hyperelliptic and non-bielliptic, then any such curve must satisfy $g(C') \leqslant 9$.
+If, in Setting \ref{set: Prym}, we additionally require that $C'$ be non-hyperelliptic and non-bielliptic, and $h: C \longrightarrow C'$ is étale, then any such curve with $g(C') \leqslant 9$ must have big monodromy group.
 \end{proposition}
 
 \begin{proof}
-Assume that $C'$ is an example of Question \ref{ques:mon_gp_for_classical_Prym}.
+Assume that $C'$ and $\eta$ satisfies
+$$\eta^{\vee}+C' \subseteq C'+ C'- C'.$$
 $\;$\\
 {\bfseries Step 1.} we can find two distinct $g_4^1$ of $C'$.
 
@@ -1357,13 +1193,7 @@ $\;$\\
 
 
 
-\section{Tannakian formalism}
 
-
-For simplicity, we work over the base field $\kappa = \mathbb{C}$. Let $A$ denote a fixed complex abelian variety, and let $\Perv(A)$ denote the category of perverse sheaves on $A$ with coefficients in $\mathbb{Q}$. For any algebraic group $G$, we denote by $\Rep(G)$ the category of algebraic representations of $G$.
-
-Following the approach of \cite{KW15vanishing}, we work in the quotient category $\overline{\Perv}(A) = \Perv(A) / N(A)$, where $N(A) \subset \Perv(A)$ is the Serre subcategory of negligible complexes. A complex $\mathcal{F}$ is defined to be negligible if $\chi(A, \mathcal{F}) = 0$. This quotient category admits a natural convolution structure, and every finitely generated tensor subcategory of it is Tannakian, with a reductive Tannaka group $G$ (see \cite[Thm 7.1 \& Cor 9.2]{KW15vanishing}). In particular, for any perverse sheaf $\delta \in \overline{\Perv}(A)$, the full subcategory generated by $\delta$ is categorically equivalent to the representation category of an algebraic group $G$:
-$$\left< \delta, * \right> \cong \Rep(G).$$
 
 \section{delete later}
 \begin{ques}\label{ques:monodromy}

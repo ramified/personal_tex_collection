@@ -861,7 +861,7 @@ Let $C'$ be a non-hyperelliptic bielliptic curve, and let $\pr: C' \to E$ denote
 $$\eta^{\vee}+C' \subseteq C'+ C'- C'.$$
 \end{eg}
 \begin{proof}[{Proof of Example \ref{eg:bielliptic}}]
-For any $x \in C'$, write $x_0: \pr(x)$, then
+For any $x \in C'$, write $x_0: =\pr(x)$, then
 $$ \deg \eta_0^{\vee} (x_0)=1 \quad \Longrightarrow \quad \text{ there exists } y_0 \in E \text{ such that } \eta_0^{\vee} (x_0)=\mathcal{O}_E(y_0).$$
 Write $\pr^{-1}(x_0)=\{x,x'\}$, $\pr^{-1}(y_0)=\{y,y'\}$, we get
 $$\eta^{\vee}(x+x')= \mathcal{O}_{C'}(y+y').$$
@@ -1075,7 +1075,7 @@ When $\alpha$ is finite onto its image,
   \;&  \phi_Z \text{ is not generic injective} \\ 
   \Longleftrightarrow\;\;& \text{For general $p \in X$, exists $q \neq p$ such that $h^0(X,\Omega_X(-p-q))=n-r$} \\ 
   \stackrel{\textcolor{purple}{\textbf{?}\footnotemark}}{\Longleftrightarrow}\;\;& \text{For general $p \in X$, exists $S \in X^{[2]}$ such that $p\in S$ and $h^0(X,\Omega_X \otimes \mathcal{I}_S)=n-r$} \\ 
-  \Longleftrightarrow\;\;& \text{For all $p \in X$, exists $S \in X^{[2]}$ such that $p\in S$ and $h^0(X,\Omega_X \otimes \mathcal{I}_S)=n-r$.} \\ 
+  \Longleftrightarrow\;\;& \text{For all $p \in X$, exists $S \in X^{[2]}$ such that $p\in S$ and $h^0(X,\Omega_X \otimes \mathcal{I}_S)\geqslant  n-r$.} \\ 
 \end{aligned}
 \end{equation*}
 \end{proposition}
@@ -1307,7 +1307,7 @@ $$g(m)=\left(m_{g(1)},\ldots , m_{g(d)}\right) \in \mathbb{Z}^d.$$
 \begin{enumerate}[(1)]
 \item For all $g\in \Gal(\gamma_{Z})$, we have $ Z^{g(m)}=Z^{(m)}$, $c_Z^{g(m)}=c_Z^{(m)}$;
 \item For $(m)=(1,0,\ldots,0)\in \mathbb{Z}^d$, $Z^{(m)}=Z$;
-\item For all $(m), (m') \in \mathbb{Z}^d$, we have  $\mathbb{P}\Lambda_{Z}^{(m)} \circ \mathbb{P}\Lambda_{Z}^{(m')} = \mathbb{P}\Lambda_{Z}^{(m+m')}$;
+\item For all $(m), (m') \in \mathbb{Z}^d$, we have  $\mathbb{P}\Lambda_{Z}^{(m)} \circ \mathbb{P}\Lambda_{Z}^{(m')} \supseteq \mathbb{P}\Lambda_{Z}^{(m+m')}$;
 \item The group $\left< \mathbb{P}\Lambda_{Z^{(m)}} \right>_{\Abel}$ is closed under the convolution product.
 \end{enumerate}
 \endgroup
