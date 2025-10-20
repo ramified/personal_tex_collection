@@ -350,10 +350,11 @@ From any subvariety of an abelian variety one obtains a reductive group via the 
 
 In \cite{Kr20}, Prof. Krämer shows that Weyl group orbits correspond to conic Lagrangian cycles in the cotangent bundle, which are realized as the conormal bundles of certain subvarieties. A careful analysis of these subvarieties is frequently central to resolving the problems at hand, cf. \cite[\S 5-\S 8]{JKLM22}. Here we investigate three principal properties of these subvarieties: irreducibility, dimension, and homology class.
 
-Concerning irreducibility, we observe that the irreducible components correspond precisely to the orbits of the monodromy group. Hence, the discrepancy between the monodromy group and the Weyl group provides a measure of the failure of irreducibility of these subvarieties. Recently, we constructed an example where the monodromy group is significantly smaller than expected, thereby disproving \cite[Conjecture~8]{Kr16cubicthreefold}:
+Concerning irreducibility, we observe that the irreducible components correspond precisely to the orbits of the monodromy group. Hence, the discrepancy between the monodromy group and the Weyl group provides a measure of the failure of irreducibility of these subvarieties. Recently, we constructed an example where the monodromy group is significantly smaller than expected:
+%thereby disproving \cite[Conjecture~8]{Kr16cubicthreefold}:
 
 \begin{proposition}\label{prop: smallmongp}
-There exists an étale double cover $h: C \to C'$ of smooth projective curves such that the Abel--Prym map
+(Wrong proposition) There exists an étale double cover $h: C \to C'$ of smooth projective curves such that the Abel--Prym map
 $\AP_{C/C'}: C \longrightarrow A$
 is an embedding, and 
 \begin{equation*}
@@ -905,7 +906,7 @@ Write $\pr^{-1}(x_0)=\{x,x'\}$, $\pr^{-1}(y_0)=\{y,y'\}$, we get
 \end{equation*}
 \end{proof}
 
-The next proposition tells us, for the most time the resulting curve $C \subset A$ is not invariant under any non-trivial translation of $A$. 
+The next proposition tells us, if we put some Galois condition for the covering, then the resulting curve $C \subset A$ is not invariant under any non-trivial translation of $A$. 
 
 \begin{proposition}\label{prop:Galois_condition}
 In Example \ref{eg:bielliptic}, let $C$ be the curve corresponding to $\eta \in \Pic^{0}(C')[2]$. If $\Gal(C/E) \cong \mathbb{Z}/2\mathbb{Z} \oplus \mathbb{Z}/2\mathbb{Z}$, then $C$ admits three intermediate quotients over $E$. Denote them by $C'$, $C_1$, and $C_2$, where $C_1$ and $C_2$ are the two intermediate curves different from $C'$.
@@ -952,12 +953,41 @@ Without loss of generality, we may assume that $\deg(h_\sigma)=2$. By assumption
 
 %Maybe I should check \cite{CMS21,JC92} for more information on Prym varieties of bielliptic curves.
 
-\begin{proof}[Proof of Proposition \ref{prop: smallmongp}]
-From Example \ref{eg:bielliptic}, we know that $\deg \gamma_C = 4$, hence by Lemma \ref{lem:wreath_product} we get
-$$M_C = \Mon(\gamma_C) \subseteq S_4^{\oplus d/4} \rtimes S_{d/4}.$$
+Unfortunately, the condition in Proposition \ref{prop:Galois_condition} is never met, and consequently the curve $C \subset A$ is preserved by a $2$-torsion translation of $A$, as explained below.
 
-Assuming further that $\Gal(C/E) \cong \mathbb{Z}/4\mathbb{Z}$, Proposition \ref{prop:Galois_condition} implies that $C \subset A$ is divisible. In this case, by \cite[p.~5, Corollary (1)]{JKLM22}, the associated Tannaka group is big, namely
-$$W_C\cong\; S_2^{\oplus d/2} \rtimes S_{d/2}.$$
+\begin{lemma}
+In Example \ref{eg:bielliptic}, let $(\mathcal{L}_3, , \mathcal{L}_3^{\otimes 2} \cong \mathcal{O}_E(R))$ denote the line bundle associated with the double cover $C' \to E$, where $R$ is its branch divisor. Set $\mathcal{L}_1 := \eta_0$, $\mathcal{L}_2 := \eta_0 \otimes \mathcal{L}_3$, and let $u_i \colon C_i \to E$ be the ramified covering determined by $\mathcal{L}_i$.
+\begin{enumerate}
+\item We have $C_3=C'$, $g(C_1)=1$ and $g(C_2)=g(C_3)=n+1$.
+\item The curve $C$ arises as the fiber product $C = C_3 \times_E C_1$. The covering $C \to E$ is Galois with
+$$\Gal(C/E) \cong \mathbb{Z}/2\mathbb{Z} \oplus \mathbb{Z}/2\mathbb{Z} \;\hat{=}\; \{ \Id, \sigma_1, \sigma_2, \sigma_3 \} ,$$
+where each $\sigma_i$ is the involution associated with the projection $h_i : C \to C_i$ (so that $\iota = \sigma_3$). By the Riemann–Hurwitz formula, the maps $u_1$, $h_2$, and $h_3$ are unramified.
+
+\item  With $\sigma = \{\sigma_2, \sigma_3\} \in \Gal(C_1/E)$ the involution of $u_1$, one can define
+$$\mathcal{L}_0: = \mathcal{O}_{C_1}\left(p_0-\sigma(p_0)\right) \in \Pic^0(C_1)[2],$$
+independent of the choice of $p_0 \in C_1$. The curve $C \subset A$ is invariant under the translation corresponding to $h_1^*\mathcal{L}_0$. Concretely, for every $p \in C$, one has
+$$\mathcal{O}_{C}\left(\rule{0mm}{3mm}p-\sigma_3(p)\right) \cong \mathcal{O}_{C}\left(\rule{0mm}{3mm}\sigma_2(p)-\sigma_3\sigma_2(p)\right) \otimes h_1^* \mathcal{L}_0.$$
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}\
+\begin{enumerate}
+\item Since
+$$\mathcal{L}_1^{\otimes 2} \cong \mathcal{O}_E, \qquad \mathcal{L}_2^{\otimes 2} \cong \mathcal{O}_E(R), \qquad 
+\mathcal{L}_3^{\otimes 2} \cong \mathcal{O}_E(R),$$
+he Riemann–Hurwitz formula yields the genus of $C_i$.
+\item Notice that the curve $C$ corresponds to the line bundle $\eta: = \pr^* \eta_0$.
+\item Since $u_1$ is unramified, the involution $\sigma \in \Aut(C_1/E)$ acts by translation and thus preserves the Jacobian:
+$$\mathcal{O}_{C_1}\left(p_0-q_0\right) \cong \mathcal{O}_{C_1}\left(\sigma(p_0-q_0)\right), \qquad \text{for any }p_0,q_0 \in C_1.$$
+For $p \in C$, write $p_0=h_1(p)$, one can computes that 
+\begin{equation*}
+\begin{aligned}
+  h_1^*\mathcal{L}_0\cong\;& h_1^*\mathcal{O}_{C_1}\left(\rule{0mm}{3mm}p_0-\sigma(p_0)\right) \\ 
+  \cong\;& \mathcal{O}_{C}\left(\rule{0mm}{3mm}p+\sigma_1(p)-\sigma_2(p)-\sigma_3(p)\right) \\ 
+  \cong\;& \mathcal{O}_{C}\left(\rule{0mm}{3mm}p-\sigma_3(p)\right) \otimes \mathcal{O}_{C}\left(\rule{0mm}{3mm}-\sigma_2(p)+\sigma_3\sigma_2(p)\right)\\
+\end{aligned}
+\end{equation*}
+\end{enumerate}
 \end{proof}
 
 
@@ -1151,8 +1181,8 @@ Let $C$ be a smooth projective curve equipped with two ramified coverings $f_i: 
 $$g(C) \leqslant d_1 \cdot g(C_1) + d_2 \cdot g(C_2) + (d_1-1)(d_2-1).$$
 \end{fact}
 
-\begin{proposition}
-If, in Setting \ref{set: Prym}, we additionally require that $C'$ be non-hyperelliptic and non-bielliptic, and $h: C \longrightarrow C'$ is étale, then any such curve with $g(C') \leqslant 9$ must have big monodromy group.
+\begin{proposition}\label{prop:big_genus_Prym_case}
+If, in Setting \ref{set: Prym}, we additionally require that $C'$ be non-hyperelliptic and non-bielliptic, and $h: C \longrightarrow C'$ is étale, then any such curve with $g(C') > 9$ must have big monodromy group.
 \end{proposition}
 
 \begin{proof}
@@ -1193,8 +1223,28 @@ $\;$\\
 {\bfseries Step 3.} If $C'$ is neither hyperelliptic nor bielliptic, then the Castelnuovo--Severi inequality yields $g(C') \leqslant 9$.
 \end{proof}
 
+The following lemma tells us that all bielliptic curve case with small monodromy group are contained in Example \ref{eg:bielliptic}, when $g(C')>9$.
 
+\begin{lemma}
+Let $C'$ be a non-hyperelliptic bielliptic curve with $g(C') > 9$, and let $\pr: C' \to E$ be the double covering onto an elliptic curve. Assume that there exists a nontrivial $2$-torsion line bundle $\eta \in \Pic^0(C')[2]$ such that the linear system $|\omega_{C'} \otimes \eta|$ fails to be generically injective. Then $\eta$ arises as the pullback of some $\eta_0 \in \Pic^0(E)[2]$, i.e. $\eta = \pr^* \eta_0$.
+\end{lemma}
 
+\begin{proof}
+When $|\omega_{C'} \otimes \eta|$ is not generically injective, one has
+$$\eta^{\vee}+C' \subseteq C'+ C'- C'.$$
+Let $R'$ denote the ramification locus of $\pr$, which is a finite subset of $C'$. Since $C'$ is non-hyperelliptic, the set
+$$U:= \left\{ p \in C' \;\middle|\; p \notin R', \eta^{\vee}+p \notin R'+ R'- C' \right\}$$
+is a non-empty open subset. Consequently, there exist points $p,p' \in C'\setminus R'$ and $q,q' \in C'$ with 
+$$\eta^{\vee}(p+q) = \mathcal{O}_{C'}(p'+q').$$
+Following the same strategy as in Proposition \ref{prop:big_genus_Prym_case}, the map $f:C'\to \mathbb{P}^1$ of degree $4$, corresponding to the linear system $g^1_4=\mathcal{O}_{C'}(2p+2q)=\mathcal{O}_{C'}(2p'+2q')$, must factor through $\pr$.\footnote{For $g(C')>5$, Castelnuovo--Severi implies that $C'$ admits exactly one ramified double cover onto an elliptic curve.} Let $\iota \in \Gal(C'/E)$ be the involution associated with $\pr$. Since $p$ and $\iota(p)$ are contained in the same fiber of $f$, we obtain $q=\iota(p)$. Similarly, one has $q'=\iota(p')$. It follows that
+\begin{equation*}
+\begin{aligned}
+  \eta^{\vee}\cong\;& \mathcal{O}_{C'}(p'+q'-p-q)\\ 
+  \cong\;& \mathcal{O}_{C'}\left(\rule{0mm}{3mm}p'+\iota(p')-p-\iota(p)\right)\\ 
+  \cong\;& \pr^*\mathcal{O}_{E}(p'-p).\\ 
+\end{aligned}
+\end{equation*}
+\end{proof}
 
  
 
