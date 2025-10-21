@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{10}
 
 \bibitem{Ar85I}
 E.~Arbarello, M.~Cornalba, P.~A. Griffiths, and J.~Harris.
@@ -32,16 +32,22 @@ Ernst Kani.
 \newblock On {Castelnuovo}'s equivalence defect.
 \newblock {\em J. Reine Angew. Math.}, 352:24--70, 1984.
 
-\bibitem{Kr16cubicthreefold}
-Thomas Kr{\"a}mer.
-\newblock Cubic threefolds, {Fano} surfaces and the monodromy of the {Gauss}
-  map.
-\newblock {\em Manuscr. Math.}, 149(3-4):303--314, 2016.
-
 \bibitem{Kr20}
 Thomas Kr{\"a}mer.
 \newblock Summands of theta divisors on {Jacobians}.
 \newblock {\em Compos. Math.}, 156(7):1457--1475, 2020.
+
+\bibitem{Kr21GaussII}
+Thomas Kr{\"a}mer.
+\newblock Characteristic cycles and the microlocal geometry of the {Gauss} map.
+  {II}.
+\newblock {\em J. Reine Angew. Math.}, 774:53--92, 2021.
+
+\bibitem{Kr22GaussI}
+Thomas Kr{\"a}mer.
+\newblock Characteristic cycles and the microlocal geometry of the {Gauss} map.
+  {I}.
+\newblock {\em Ann. Sci. {\'E}c. Norm. Sup{\'e}r. (4)}, 55(6):1475--1527, 2022.
 
 \bibitem{vakil2017rising}
 Ravi Vakil.

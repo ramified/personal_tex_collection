@@ -281,7 +281,7 @@
 \DeclareMathOperator{\Abel}{\operatorname{Abel}}
 \DeclareMathOperator{\pr}{\operatorname{pr}}
 \DeclareMathOperator{\aff}{\operatorname{aff}}
-
+\DeclareMathOperator{\charcycle}{\operatorname{cc}}
 %%%%%%%newcommand
 
 %%%basic symbols
@@ -838,12 +838,42 @@ $$g(m)=\left(m_{g(1)},\ldots , m_{g(d)}\right) \in \mathbb{Z}^d.$$
 \endgroup
 \end{lemma}
 
+\subsection{Realized as characteristic cycles}
 
+In fact, the Lagrangian cycles $\mathbb{P}\Lambda_{Z^{(m)}}$ coincide with the irreducible components of the clean cycles described in \cite[2.c]{Kr20} and \cite[p5, Theorem 1.7]{Kr22GaussI}, leading to the following relations:
+% https://q.uiver.app/#q=WzAsNixbMCwwLCJcXFBlcnYoQSkvTihBKSJdLFsxLDAsIlxcbGVmdDwgXFxkZWx0YV9aIFxccmlnaHQ+Il0sWzIsMCwiXFxSZXAgXFxsZWZ0KFxccnVsZXswbW19ezNtbX1HX3VcXHJpZ2h0KSJdLFswLDEsIlxcbWF0aGNhbHtMfShBKSJdLFsxLDEsIlxcbGVmdDwgXFxjaGFyY3ljbGUoXFxkZWx0YV9aKSBcXHJpZ2h0PiJdLFsyLDEsIlxcUmVwIFxcbGVmdChcXHJ1bGV7MG1tfXszbW19VF91IFxccnRpbWVzIFxcR2FsKFxcZ2FtbWFfWilcXHJpZ2h0KSJdLFsxLDAsIlxcc3Vwc2V0IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsNCwiXFxjaGFyY3ljbGUiXSxbMSwyLCJcXGNvbmciLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMiw1XSxbNCw1LCJcXHN0YWNrcmVsez99e1xcY29uZ30iLDEseyJvZmZzZXQiOi0xLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNCwzLCJcXHN1cHNldCIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
+\[\begin{tikzcd}[column sep=5mm,row sep=5mm]
+	{\Perv(A)/N(A)} & {\left< \delta_Z \right>} & {\Rep \left(\rule{0mm}{3mm}G_u\right)} \\
+	{\hspace{14mm}\mathcal{L}(A)} & {\left< \charcycle(\delta_Z) \right>} & {\Rep \left(\rule{0mm}{3mm}T_u \rtimes \Gal(\gamma_Z)\right)}
+	\arrow["\supset"{description}, draw=none, from=1-2, to=1-1]
+	\arrow["\cong"{description}, draw=none, from=1-2, to=1-3]
+	\arrow["\charcycle", from=1-2, to=2-2]
+	\arrow[from=1-3, to=2-3]
+	\arrow["\supset"{description}, draw=none, from=2-2, to=2-1]
+	\arrow["{\stackrel{\footnotemark}{\cong}}"{description}, shift left, draw=none, from=2-2, to=2-3]
+\end{tikzcd}\]
+\footnotetext{I believe that this isomorphism should be already known, so I should probably cite it somewhere(rather than making it up all by myself).}
+Here, $\delta_Z$ denotes the perverse intersection complex associated with the subvariety $Z$ (in particular, $\delta_Z = \iota_{Z,*}\underline{\mathbb{Q}}_Z[-\dim Z]$ when $Z$ is smooth), and $\mathcal{L}(A)$ stands for the $\lambda$-ring of clean conic Lagrangian cycles on $T^*A$ \cite[p5]{Kr21GaussII}.
+
+\begin{remark}
+Suppose that $Z \subset A$ is smooth of general type. Then the characteristic cycle $\charcycle(\delta_Z)$ is irreducible and equals $\mathbb{P}\Lambda_Z$. In this situation, let ${\lambda_1, \ldots, \lambda_d} \subset X^(T_u)$ denote the weights corresponding to the points $p_1, \ldots, p_d \in \gamma_Z^{-1}(\xi_0)$.
+For each tuple $(m) \in \mathbb{Z}^d$, define $\lambda^{(m)} = \sum m_i \lambda_i \in X^*(T_u)$, and consider the ``highest weight representation"
+$$V_{\lambda^{(m)}}=\bigoplus_{\lambda \in \Gal(\gamma_{Z}) \cdot \lambda^{(m)}} \mathbb{C}_{\lambda} \in \Rep
+\left(\rule{0mm}{3mm}T_u \rtimes \Gal(\gamma_Z)\right)$$
+where $\mathbb{C}_\lambda$ is the one-dimensional representation of $T_u$ with weight $\lambda$. Under this correspondence, one has an explicit identification
+$$\left< \mathbb{P}\Lambda_{Z} \right> \cong \Rep
+\left(\rule{0mm}{3mm}T_u \rtimes \Gal(\gamma_Z)\right) \qquad \mathbb{P}\Lambda_{Z^{(m)}} \longleftrightarrow V_{\lambda^{(m)}}.$$
+
+Moreover, the Weyl group $W_Z$ acts naturally on $X^(T)$. For the orbit $W_Z \cdot \chi_0 \subset X^(T)$, the associated Lagrangian cycle is given by
+$$\sum_{\sigma \in W_Z/\Gal(\gamma_Z)} \mathbb{P}\Lambda_{Z^{\sigma (\chi_0)}}.$$
+
+
+\end{remark}
 
 \section{Monodromy group}\label{sec:mon_examples}
 
 \subsection{Curves in Prym variety with small monodromy group}
-This subsection is devoted to presenting an example that demonstrates Proposition \ref{prop: smallmongp}.
+This subsection is devoted to presenting an example that has small monodromy group.
 
 
 \begin{setting}\label{set: Prym}
@@ -1246,32 +1276,63 @@ Following the same strategy as in Proposition \ref{prop:big_genus_Prym_case}, th
 \end{equation*}
 \end{proof}
 
- 
+\section{Dimension and homology class}
+In this section, all cohomology groups are taken with $\mathbb{Q}$-coefficients for convenience in applying the Künneth formula.
+\subsection{Reminder on the (homological) Chern--Mather class}
+We begin by recalling the definition of the Chern--Mather class. Suppose $\dim A = n$, and denote by
+$$p: \mathbb{P}T^*A \cong A \otimes \mathbb{P}^{\vee} \longrightarrow \mathbb{P}^{\vee}$$
+the natural projection.
 
+\begin{definition}
+For a conic Lagrangian cycle $\Lambda$ on $T^*A$ and $i \geqslant 0$, the Chern–Mather class is defined as
+$$c_{M,i}(\Lambda)=p_*\left(\rule{0mm}{3mm} [\mathbb{P}\Lambda] \cdot [A \times H_i] \right) \in \Hnm_{2i}(A) \cong \Hnm^{2(n-i)}(A),$$
+where $H_i \subseteq \mathbb{P}^\vee$ denotes a general linear subspace of dimension $i$. For brevity, we may later write $c_{M,i}(\Lambda)$ as $c_i(\Lambda)$, and $c_{M,i}(\Lambda_Z)$ simply as $c_i$.
+\end{definition}
 
+By the Künneth formula, we may write
+$$[\mathbb{P}\Lambda] = \sum_{i=0}^{n-1} a_i \otimes H^i,$$
+where $H \in H^2(\mathbb{P}^{\vee})$ denotes the hyperplane class and $a_i \in H^{2(n-i)}(A)$. A direct computation gives 
+\begin{equation*}
+\begin{aligned}
+ c_i(\Lambda) =\;&  p_* \left(\rule{0mm}{3mm} [\mathbb{P}\Lambda] \cdot [A \times H_i] \right)\\ 
+  =\;&  p_* \left(\rule{0mm}{3mm}  \sum_{j=0}^{n-1} \left(a_j \otimes H^j \right)\cup \left(1 \otimes H^{n-1-i} \right)  \right)\\ 
+  =\;&  p_* \left(\rule{0mm}{3mm}  \sum_{j=0}^{n-1} a_j \otimes H^{n-1-i+j} \right) \\ 
+  =\;& a_i.
+\end{aligned}
+\end{equation*}
+Consequently,
+$$[\mathbb{P}\Lambda] = \sum_{i=0}^{n-1} c_i(\Lambda) \otimes H^i \in \Hnm^{2n}(A \times \mathbb{P}^{\vee}),$$
+showing that the Chern–Mather classes $c_i(\Lambda)$ are precisely the coefficients of the class $[\mathbb{P}\Lambda]$ in the Künneth decomposition. \footnote{If the Chern–Mather classes are considered in the Chow ring, this argument does not apply, since the Künneth decomposition is unavailable at the level of Chow groups.}
 
+\begin{remark}\label{rem:CMclass_know_dim}
+For a subvariety $Z \subset A$, both its dimension $\dim Z$ and its cohomology class $[Z] \in \Hnm^{2(n - \dim Z)}(A)$ can be determined from $[\mathbb{P}\Lambda] \in \Hnm^{2n}(A \times \mathbb{P}^{\vee})$, as shown in \cite[Lemma 3.1.2(2)]{Kr21GaussII}. Indeed,
+\begin{equation*}
+\begin{aligned}
+  \dim Z=\;& \max \left\{ i \in \mathbb{Z} \;\middle|\; c_i \neq 0 \right\}, \\ 
+ [Z]=\;& c_{\dim Z}. \\ 
+\end{aligned}
+\end{equation*}
+\end{remark}
 
+\subsection{The homology class of $\mathbb{P}\Lambda_{Z}^{\times d}$}
+By Remark \ref{rem:CMclass_know_dim}, it suffices to consider the homology class $\mathbb{P}\Lambda_{Z^{(m)}}$. If we are not concerned with the scalar factor $c_Z^{(m)}$, we may equivalently compute $\mathbb{P}\Lambda_{Z}^{(m)}$, which coincides with the pushforward of $[\mathbb{P}\Lambda_{Z}^{\univ}]$. Consequently, the problem reduces to determining $[\mathbb{P}\Lambda_{Z}^{\univ}] \in \Hnm^{2dn}(A^d \times \mathbb{P}^{\vee})$.
 
+Typically, for an initial subvariety $Z \subset A$, the Chern–Mather classes are known. Our ultimate goal is to express $[\mathbb{P}\Lambda_{Z}^{\univ}]$ in terms of these classes; as a preparatory step, we first examine $[\mathbb{P}\Lambda_{Z}^{\times d}]$.
 
-\section{delete later}
-\begin{ques}\label{ques:monodromy}
-Suppose that the subvariety $Z \subset A$ is not stable under any translation on $A$. Are there criterias to compute the monodromy group $\Gal(\gamma_Z)$? Furthermore, what kinds of groups can appear as $\Gal(\gamma_Z)$ for suitable choices of $Z \subset A$?
-\end{ques}
+By definition,
+\[
+\mathbb{P}\Lambda_{Z}^{\times d} = \underbrace{\mathbb{P}\Lambda_{Z} \times_{\mathbb{P}^{\vee}} \cdots \times_{\mathbb{P}^{\vee}} \mathbb{P}\Lambda_{Z}}_{d \text{ factors}} = \bigcap_{i=1}^{d} \pi_{i,\mathbb{P}^{\vee}}^{-1}(\mathbb{P}\Lambda_{Z}),
+\] 
+where $\pi_{i,\mathbb{P}^{\vee}}: A^d \times \mathbb{P}^{\vee} \to A \times \mathbb{P}^{\vee}$ denotes the projection onto the $i$-th factor. The transversality of these intersections is immediate, so
+\begin{equation*}
+\begin{aligned}
+  [][\mathbb{P}\Lambda_{Z}^{\times d}]=\;& \cup_{i=1}^{d} \pi_{i,\mathbb{P}^{\vee}}^{*}[\mathbb{P}\Lambda_{Z}]\\ 
+  =\;& \cup_{i=1}^{d} \pi_{i,\mathbb{P}^{\vee}}^{*}\left(  \sum_{j=0}^{n-1} c_j \otimes H^j \right)\\ 
+  =\;& \cup_{i=1}^{d} \sum_{j=0}^{n-1}\left( 1\otimes \cdots \otimes \underset{\underset{i\text{-th}}{\uparrow}}{c_j} \otimes \cdots \otimes H^j \right)\\ 
+  =\;&  \sum_{j=0}^{n-1}\left( \sum_{\sum_{k=1}^{d}j_k=j} c_{j_1}\otimes \cdots \otimes c_{j_d}\right) \otimes H^j. \\ 
+\end{aligned}
+\end{equation*}
 
-Based on the discussion above, Question \ref{ques:monodromy} reduces to Question \ref{ques:mon_Grass} and Question \ref{ques:when_are_maps_Gauss}, with Question \ref{ques:mon_Grass_sub} appearing as a special case of Question \ref{ques:mon_Grass}.
-
-
-\begin{ques}\label{ques:mon_Grass}
-In the situation of Definition \ref{def:general_monodromy}, how can we compute $\Mon(\phi)$?
-\end{ques}
-
-\begin{ques}\label{ques:mon_Grass_sub}
-Let $Z \subseteq \Gr(r,n)$ be a subvariety of dimension $r$ such that $[Z] \cdot [\Gr(r,H)] \neq 0$ in $H_r(\Gr(r,n);\mathbb{Z})$. What can be said about its monodromy group? 
-\end{ques}
-
-\begin{ques}\label{ques:when_are_maps_Gauss}
-For a map $\phi:Z \longrightarrow \Gr(r,n)$, when is it induced from some inclusion $Z \subset A$?
-\end{ques}
 %\nocite{Eberhardt2022Koszul}	% cite articles which are not cited in the document yet
 
 % Remember to protect the uppercase of people's name and LaTeX symbols
