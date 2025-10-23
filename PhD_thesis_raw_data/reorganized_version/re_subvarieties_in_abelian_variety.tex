@@ -1333,6 +1333,30 @@ where $\pi_{i,\mathbb{P}^{\vee}}: A^d \times \mathbb{P}^{\vee} \to A \times \mat
 \end{aligned}
 \end{equation*}
 
+\subsection{The homology class of $\mathbb{P}\Lambda_{Z}^{[d]}$}
+
+This subsection explains how to eliminate the contribution of the big diagonal and how to compute $\mathbb{P}\Lambda_{Z}^{[d]}$ from $\mathbb{P}\Lambda_{Z}^{\times d}$. For this purpose, we introduce some combinatorial preliminaries.
+
+\begin{definition}
+For $n \in \mathbb{N}_{>0}$, let $[n] := \{1, \ldots, n\}$, and denote by $\mathcal{P}(n)$ the lattice of partitions of $[n]$, ordered by refinement: $\alpha' \leqslant \alpha$ if and only if any two elements $i, j$ belonging to the same block of $\alpha'$ also belong to the same block of $\alpha$. For a partition $\alpha = \{A_1, \ldots, A_k\} \in \mathcal{P}(d)$, we associate a surjective map
+$$f_{\alpha}:[d] \longrightarrow [k] \qquad a \longmapsto j \quad\text{ if } a \in A_j$$
+which is well-defined up to the natural $S_k$-action; this indeterminacy will not affect our discussion.
+Each map $f_{\alpha}$ naturally gives rise to a partial diagonal embedding
+$$\Delta_{\alpha}: A^k \times \mathbb{P}^{\vee} \longrightarrow A^d \times \mathbb{P}^{\vee} \qquad \left(\rule{0mm}{3mm}(p_i),\xi\right) \longmapsto \left((p_{f_{\alpha}(i)}),\xi\right). $$
+This construction determines a subvariety of $\mathbb{P}\Lambda_{Z}^{\times d}$, defined by
+\begin{equation*}
+\begin{aligned}
+\mathbb{P}\Lambda_{Z}^{\geqslant \alpha}:=\;&\Delta_d \left( \mathbb{P}\Lambda_{Z}^{\times k} \right) \\
+  =\;&\left\{ \left(\rule{0mm}{3mm}(p_i),\xi\right) \in \mathbb{P}\Lambda_{Z}^{\times d} \;\middle|\; p_i=p_j \text{ if } i \sim_{\alpha} j  \right\}.\\ 
+\end{aligned}
+\end{equation*}
+We can in addition define the locus corresponding precisely to $\alpha$:
+\begin{equation*}
+\begin{aligned}
+\mathbb{P}\Lambda_{Z}^{\alpha}:=\;&\overline{\left\{ \left(\rule{0mm}{3mm}(p_i),\xi\right) \in \mathbb{P}\Lambda_{Z}^{\times d} \;\middle|\; p_i=p_j \text{ iff } i \sim_{\alpha} j  \right\}}.\\ 
+\end{aligned}
+\end{equation*}
+\end{definition}
 %\nocite{Eberhardt2022Koszul}	% cite articles which are not cited in the document yet
 
 % Remember to protect the uppercase of people's name and LaTeX symbols

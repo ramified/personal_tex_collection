@@ -13,4 +13,5 @@
 \contentsline {section}{\tocsection {}{5}{Dimension and homology class}}{16}{section.5}% 
 \contentsline {subsection}{\tocsubsection {}{5.1}{Reminder on the (homological) Chern--Mather class}}{16}{subsection.5.1}% 
 \contentsline {subsection}{\tocsubsection {}{5.2}{The homology class of $\mathbb {P}\Lambda _{Z}^{\times d}$}}{17}{subsection.5.2}% 
-\contentsline {section}{\tocsection {}{}{References}}{17}{section*.5}% 
+\contentsline {subsection}{\tocsubsection {}{5.3}{The homology class of $\mathbb {P}\Lambda _{Z}^{[d]}$}}{17}{subsection.5.3}% 
+\contentsline {section}{\tocsection {}{}{References}}{18}{section*.5}% 
