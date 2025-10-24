@@ -286,7 +286,7 @@
 
 %%%basic symbols
 \newcommand{\norm}[1]{\Vert{#1}\Vert}
-
+\newcommand{\bigast}{\mathop{\scalebox{1.5}{\raisebox{-0.2ex}{$\ast$}}}}%
 
 
 
@@ -1315,7 +1315,7 @@ For a subvariety $Z \subset A$, both its dimension $\dim Z$ and its cohomology c
 \end{remark}
 
 \subsection{The homology class of $\mathbb{P}\Lambda_{Z}^{\times d}$}
-By Remark \ref{rem:CMclass_know_dim}, it suffices to consider the homology class $\mathbb{P}\Lambda_{Z^{(m)}}$. If we are not concerned with the scalar factor $c_Z^{(m)}$, we may equivalently compute $\mathbb{P}\Lambda_{Z}^{(m)}$, which coincides with the pushforward of $[\mathbb{P}\Lambda_{Z}^{\univ}]$. Consequently, the problem reduces to determining $[\mathbb{P}\Lambda_{Z}^{\univ}] \in \Hnm^{2dn}(A^d \times \mathbb{P}^{\vee})$.
+By Remark \ref{rem:CMclass_know_dim}, it suffices to consider the homology class $\mathbb{P}\Lambda_{Z^{(m)}}$. If we are not concerned with the scalar factor $c_Z^{(m)}$, we may equivalently compute $[\mathbb{P}\Lambda_{Z}^{(m)}]$, which coincides with the pushforward of $[\mathbb{P}\Lambda_{Z}^{\univ}]$. Consequently, the problem reduces to determining $[\mathbb{P}\Lambda_{Z}^{\univ}] \in \Hnm^{2dn}(A^d \times \mathbb{P}^{\vee})$.
 
 Typically, for an initial subvariety $Z \subset A$, the Chern–Mather classes are known. Our ultimate goal is to express $[\mathbb{P}\Lambda_{Z}^{\univ}]$ in terms of these classes; as a preparatory step, we first examine $[\mathbb{P}\Lambda_{Z}^{\times d}]$.
 
@@ -1346,7 +1346,7 @@ $$\Delta_{\alpha}: A^k \times \mathbb{P}^{\vee} \longrightarrow A^d \times \math
 This construction determines a subvariety of $\mathbb{P}\Lambda_{Z}^{\times d}$, defined by
 \begin{equation*}
 \begin{aligned}
-\mathbb{P}\Lambda_{Z}^{\geqslant \alpha}:=\;&\Delta_d \left( \mathbb{P}\Lambda_{Z}^{\times k} \right) \\
+\mathbb{P}\Lambda_{Z}^{\geqslant \alpha}:=\;&\Delta_{\alpha} \left( \mathbb{P}\Lambda_{Z}^{\times k} \right) \\
   =\;&\left\{ \left(\rule{0mm}{3mm}(p_i),\xi\right) \in \mathbb{P}\Lambda_{Z}^{\times d} \;\middle|\; p_i=p_j \text{ if } i \sim_{\alpha} j  \right\}.\\ 
 \end{aligned}
 \end{equation*}
@@ -1357,6 +1357,104 @@ We can in addition define the locus corresponding precisely to $\alpha$:
 \end{aligned}
 \end{equation*}
 \end{definition}
+
+\begin{remark}
+Denote by 
+$$\hat{0}:= \left\{ \rule{0mm}{3mm} \{1\}, \ldots,\{d\} \right\} \in \mathcal{P}(d)$$ 
+the finest partition. Then 
+$\mathbb{P}\Lambda_{Z}^{\times d}=\mathbb{P}\Lambda_{Z}^{\geqslant \hat{0}}$, and $\mathbb{P}\Lambda_{Z}^{[d]}=\mathbb{P}\Lambda_{Z}^{\hat{0}}$.
+
+\end{remark}
+By definition, 
+$$[\mathbb{P}\Lambda_{Z}^{\geqslant \alpha}]= \sum_{\alpha'\geqslant \alpha} [\mathbb{P}\Lambda_{Z}^{\alpha'}].$$
+Applying Möbius inversion on the partition lattice yields
+$$[\mathbb{P}\Lambda_{Z}^{\alpha}]= \sum_{\alpha'\geqslant \alpha} \mu(\alpha,\alpha')\; [\mathbb{P}\Lambda_{Z}^{\geqslant\alpha'}],$$
+where $\mu(\alpha, \alpha')$ denotes the Möbius function as defined in \cite[p141]{Ai12}.
+\begin{fact}[{See \cite[IV.3]{Ai12}}]\label{fact:moebius_explicit}
+Let $\alpha' \geqslant \alpha$ be two partitions of $[d]$, where $\alpha' = \{A_1, \ldots, A_k\}$. For each $i$, denote by $r_i$ the number of blocks of $\alpha$ that are contained in $A_i$. Then
+$$\mu(\alpha, \alpha') = (-1)^{|\alpha|-k} \prod_{i=1}^{k}\; (r_i-1)!$$
+In particular,
+$$\mu(\hat{0}, \alpha') = (-1)^{d-k} \prod_{i=1}^{k}\, \left(\rule{0mm}{3mm}|A_i|-1\right)!\!$$
+\end{fact}
+
+With Fact \ref{fact:moebius_explicit}, one can compute $[\mathbb{P}\Lambda_{Z}^{[d]}]=[\mathbb{P}\Lambda_{Z}^{\hat{0}}]$ by the Möbius inverse formula:
+\begin{equation*}
+\begin{aligned}
+  [][\mathbb{P}\Lambda_{Z}^{[d]}]=\;& \sum_{\alpha'}\; \mu(\hat{0},\alpha')\; [\mathbb{P}\Lambda_{Z}^{\geqslant\alpha'}] \\ 
+  =\;& \sum_{k=1}^{d}\sum_{\alpha'=\{A_1, \ldots, A_k\}} (-1)^{d-k} \prod_{i=1}^{k}\, \left(\rule{0mm}{3mm}|A_i|-1\right)!\; \cdot \Delta_{\alpha,*}\! \left[ \mathbb{P}\Lambda_{Z}^{\times k} \right] \\ 
+\end{aligned}
+\end{equation*}
+
+The computation of pushforwards along diagonal embeddings can be rather cumbersome. However, upon composing with $a^{(m)}$, it suffices to compute those of certain weighted sum maps. These pushforwards admit a more transparent description via the Pontryagin product, whose definition we now recall.
+
+\begin{definition}[Pontryagin product]
+Let $A$ be an abelian variety, and denote by $a: A \times A \to A$ the addition map. The Pontryagin product on $A$ is defined by
+$$\Hnm^{2n-i}(A) \times \Hnm^{2n-j}(A)\subseteq \Hnm^{4n-i-j}(A \times A) \stackrel{a_*}{\longrightarrow} \Hnm^{2n-i-j}(A) \qquad a \otimes b \longmapsto a*b.$$
+\end{definition}
+
+\begin{remark}
+The Pontryagin product is unital and associative, but in general only anti-commutative \cite[1.5.(7) b)]{BL04}. In the context of our work, we are concerned with Chern--Mather classes, which have even degrees; consequently, the anti-commutativity of the Pontryagin product does not pose any complications.
+
+In particular, for any sum map $a:A^k \longrightarrow A$, one can unambiguously write
+$$a_*(a_1 \otimes \cdots \otimes a_k)=a_1 * \cdots * a_k \;\hat{=}\; \bigast_{i=1}^k a_i $$
+where no additional parentheses are required.
+\end{remark}
+
+\begin{lemma}
+For any tuple $(m)=(m_1,\ldots,m_k) \in \mathbb{Z}^k$, $a_i \in \Hnm^{2(n-l_i)}(A)$, 
+$$a^{(m)}_*(a_1 \otimes \cdots \otimes a_k)= \left(\prod_{i=1}^{k} m_i^{2l_i} \right) \cdot \bigast_{i=1}^k a_i. $$
+\end{lemma}
+\begin{proof}
+Notice that $a^{(m)}$ can be written as compositions of basic functions:
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJhXnsobSl9OiBBXmsiXSxbMSwwLCJBXmsiXSxbMiwwLCJBIl0sWzEsMiwiYSJdLFswLDEsIihtXzEsIFxcbGRvdHMsIG1faykiXV0=
+\[\begin{tikzcd}[column sep=huge]
+	{a^{(m)}: A^k} & {A^k} & A
+	\arrow["{(m_1, \ldots, m_k)}", from=1-1, to=1-2]
+	\arrow["a", from=1-2, to=1-3]
+\end{tikzcd}\]
+\end{proof}
+
+\begin{definition}
+For any tuple $(m)=(m_1,\ldots,m_d) \in \mathbb{Z}^d$ and any partition $\alpha = \{A_1, \ldots, A_k\} \in \mathcal{P}(d)$, we define
+$$\alpha(m):= \left( \sum_{i \in A_1}m_i, \ldots, \sum_{i \in A_k}m_i  \right) \in \mathbb{Z}^k.$$
+Moreover, for $\textbf{l}=(l_1,\ldots,l_k) \in \mathbb{N}_{\geqslant 0}^d$ with $\sum l_i=l$, we set
+$$\alpha(m)^{2\textbf{l}}:=  \left( \sum_{i \in A_1}m_i \right)^{2l_1} \cdots \left( \sum_{i \in A_k}m_i \right)^{2l_k}$$
+which defines a homogeneous polynomial of degree $2l$ in $\mathbb{Z}[m_1,\ldots,m_k]$. 
+\end{definition}
+
+We can now determine $[\mathbb{P}\Lambda_{Z}^{(m)}]$ in the case where the monodromy group is $S_d$:
+\begin{equation*}
+\begin{aligned}
+  [][\mathbb{P}\Lambda_{Z}^{(m)}]=\;& \left( a^{(m)},\Id_{\mathbb{P}^{\vee}}  \right)_* [\mathbb{P}\Lambda_{Z}^{\univ}] \\ 
+  =\;& \left( a^{(m)},\Id_{\mathbb{P}^{\vee}}  \right)_* [\mathbb{P}\Lambda_{Z}^{[d]}] \\ 
+  =\;& \sum_{\alpha}\; \mu(\hat{0},\alpha)  \left( a^{(m)},\Id_{\mathbb{P}^{\vee}}  \right)_* \Delta_{\alpha,*}\! \left[ \mathbb{P}\Lambda_{Z}^{\times k} \right] \\ 
+  =\;& \sum_{\alpha}\; \mu(\hat{0},\alpha)  \left( a^{\alpha(m)},\Id_{\mathbb{P}^{\vee}}  \right)_* \left[ \mathbb{P}\Lambda_{Z}^{\times k} \right] \\ 
+  =\;& \sum_{\alpha}\; \mu(\hat{0},\alpha)  \left( a^{\alpha(m)},\Id_{\mathbb{P}^{\vee}}  \right)_* \left(\sum_{l=0}^{n-1}\left( \sum_{\sum l_i=l} c_{l_1}\otimes \cdots \otimes c_{l_k}\right) \otimes H^l\right) \\
+  =\;& \sum_{\alpha}\; \mu(\hat{0},\alpha)   \sum_{l=0}^{n-1}\sum_{\sum l_i=l} \alpha(m)^{2\textbf{l}} \left(\bigast_{i=1}^k c_{l_i} \otimes H^l\right) \\  
+  =\;& \sum_{l=0}^{n-1} \left(\sum_{\alpha} \sum_{\sum l_i=l}  \left(\mu(\hat{0},\alpha)    \alpha(m)^{2\textbf{l}} \bigast_{i=1}^k c_{l_i}\right)\right) \otimes H^l \\  
+\end{aligned}
+\end{equation*}
+Therefore,
+\begin{equation}\label{eq:CMclass_sym}
+c_l\left(\Lambda_{Z^{(m)}}\right)=\frac{1}{c_Z^{(m)}}\sum_{\alpha} \sum_{\sum l_i=l}  \left(\mu(\hat{0},\alpha)    \alpha(m)^{2\textbf{l}} \bigast_{i=1}^k c_{l_i}\right)
+\end{equation}
+The following corollary collects some quantitative implications of \eqref{eq:CMclass_sym}.
+\begin{corollary}
+Assume that $\Gal(\gamma_{Z})=S_d$.
+\begin{enumerate}[(1)]
+\item  The Chern--Mather class
+$$c_l\left(\Lambda_{Z^{(m)}}\right) \in \Hnm^{2l}(A)[m_1,\ldots,m_d]^{S_d}$$
+is a polynomial of degree $2l$ with exponent at most $2r$, when expressed in the variables $m_1,\ldots,m_d$.
+\item If $Z \subset A$ is a smooth curve, there exists a homogeneous symmetric polynomial $f_{Z,l} \in \mathbb{Q}[m_1, \ldots, m_{d}]^{S_{d}}$ of degree $2l$ and exponent at most $2$, such that
+$$c_l\left(\Lambda_{Z^{(m)}}\right)=f_{Z,l}(m_1,\ldots,m_d)  \left(\bigast_{i=1}^k c_{1}\right).$$
+In this case, 
+$$Z^{(m)} \subset A \text{ is a divisor } \quad\Longleftrightarrow\quad f_{Z,n-1}(m_1,\ldots,m_d) \neq 0.$$
+\end{enumerate}
+\end{corollary}
+
+\subsection{The homology class in type $C$ case}
+
+
 %\nocite{Eberhardt2022Koszul}	% cite articles which are not cited in the document yet
 
 % Remember to protect the uppercase of people's name and LaTeX symbols
