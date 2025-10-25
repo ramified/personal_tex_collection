@@ -1460,7 +1460,7 @@ denote the set of all perfect matchings of $[d]$. Each $\alpha \in \mathcal{P}2(
 \begin{equation*}
 \begin{aligned}
   \mathbb{P}\Lambda_{Z}^{\widetilde{[\alpha]}}:=\;&\left\{ \left(\rule{0mm}{3mm}(p_i),\xi\right) \in \mathbb{P}\Lambda_{Z}^{[d]} \;\middle|\; p_{\tau_{\alpha}(i)}=-p_{i} \text{ for all } i  \right\} \\ 
-\Delta_{\widetilde{\alpha}}:=\;& A^{d/2} \times \mathbb{P}^{\vee} \longrightarrow A^d \times \mathbb{P}^{\vee} \qquad \left(\rule{0mm}{3mm}(p_i),\xi\right) \longmapsto \left((\pm p_{f_{\alpha}(i)}),\xi\right)\\
+\Delta_{\widetilde{\alpha}}:\; A^{d/2}& \times \mathbb{P}^{\vee} \longrightarrow A^d \times \mathbb{P}^{\vee} \qquad \left(\rule{0mm}{3mm}(p_i),\xi\right) \longmapsto \left((\pm p_{f_{\alpha}(i)}),\xi\right)\\
 \end{aligned}
 \end{equation*}
 where the sign is chosen so that $p_{\tau_{\alpha}(i)}=-p_i$. Furthermore, there exists a distinguished subvariety in $\mathbb{P}\Lambda_{Z}^{\times d/2}$:
@@ -1479,7 +1479,35 @@ With these conventions, we can now express the following decomposition:
 
 Evidently, determining $[\mathbb{P}\Lambda_{Z}^{\widetilde{[\alpha]}}]$ amounts to determining $[\mathbb{P}\Lambda_{Z}^{\widetilde{[d/2]}}]$, and the latter computation reduces again to combinatorics.
 
+For $\beta \in \mathbb{P}(d/2)$, define
+\begin{equation*}
+\begin{aligned}
+\mathbb{P}\Lambda_{Z}^{\widetilde{\geqslant \beta}}:=\;&\left\{ \left(\rule{0mm}{3mm}(p_i),\xi\right) \in \mathbb{P}\Lambda_{Z}^{\times d/2} \;\middle|\; p_i = \pm p_j \text{ if } i \sim_{\beta} j  \right\}\\ 
+\mathbb{P}\Lambda_{Z}^{\widetilde{\beta}}:=\;&\overline{\left\{ \left(\rule{0mm}{3mm}(p_i),\xi\right) \in \mathbb{P}\Lambda_{Z}^{\times d/2} \;\middle|\; p_i = \pm p_j \text{ iff } i \sim_{\beta} j  \right\}}\\ 
+\end{aligned}
+\end{equation*}
+Then one has the relations
+\begin{equation*}
+\begin{aligned}
+  [][\mathbb{P}\Lambda_{Z}^{\widetilde{\geqslant\beta}}]=\;& \sum_{\beta'\geqslant \beta}  [\mathbb{P}\Lambda_{Z}^{\widetilde{\beta'}}], \\
+  [\mathbb{P}\Lambda_{Z}^{\widetilde{\beta}}]=\;& \sum_{\beta'\geqslant \beta} \mu(\beta,\beta')\; [\mathbb{P}\Lambda_{Z}^{\widetilde{\geqslant\beta'}}],
+\end{aligned}
+\end{equation*}
+where $\mu(\beta, \beta')$ denotes the Möbius function of the poset $\mathbb{P}(d/2)$. 
 
+Furthermore, the classes $[\mathbb{P}\Lambda_{Z}^{\widetilde{\geqslant \beta}}]$ admit a decomposition as sums of pushforwards of $[\mathbb{P}\Lambda_{Z}^{\times k}]$ under appropriately defined signed diagonal maps. Explicitly, for every pair of maps $f_{\beta}:[d/2] \longrightarrow [k]$ and $\eta: [d/2] \longrightarrow \{ \pm 1\}$, one introduces the signed diagonal embedding
+
+\begin{equation*}
+\begin{aligned}
+\Delta_{\beta}^{\eta}:\;& A^{k} \times \mathbb{P}^{\vee} \longrightarrow A^{d/2} \times \mathbb{P}^{\vee} \qquad \left(\rule{0mm}{3mm}(p_i),\xi\right) \longmapsto \left((\eta(i) p_{f_{\beta}(i)}),\xi\right),\\
+\end{aligned}
+\end{equation*}
+which yields the expression
+\begin{equation*}
+\begin{aligned}
+  [][\mathbb{P}\Lambda_{Z}^{\widetilde{\geqslant\beta}}]=\;& \frac{1}{2^k}\sum_{\eta: [d/2] \longrightarrow \{ \pm 1\}}  \Delta_{\beta,*}^{\eta}[\mathbb{P}\Lambda_{Z}^{\times k}]. 
+\end{aligned}
+\end{equation*}
 %\nocite{Eberhardt2022Koszul}	% cite articles which are not cited in the document yet
 
 % Remember to protect the uppercase of people's name and LaTeX symbols
