@@ -674,6 +674,7 @@ The precise formulation of this question is somewhat ambiguous, and depending on
 
 In this section, we move from the study of monodromy groups to a more direct analysis of the subvarieties themselves. Given an initial subvariety, one can naturally generate a family of subvarieties. Our goal here is to define these families and investigate their properties.
 
+\subsection{Clean Lagrangian cycles}
 \begin{proposition}
 All irreducible conic Lagrangian cycles in $T^*A$ are of the form $\Lambda_Z$ for some irreducible subvariety $Z \subset A$. This yields a one-to-one correspondence between irreducible conic Lagrangian cycles in $T^*A$ and irreducible subvarieties of $A$:
 $$\left\{\text{ irreducible conic Lagrangian cycles in $T^*A$ }   \right\} \longleftrightarrow \left\{\text{ irreducible subvarieties in $A$ }   \right\}$$
@@ -809,9 +810,9 @@ $$\left\{
 \endgroup
 \end{lemma}
 
-From this point on, we fix an irreducible component of $\mathbb{P}\Lambda_{Z}^{[d]}$, denoted by $\mathbb{P}\Lambda_{Z}^{\univ}$. As we will see in Definition A, this variety generates all subvarieties within the families under consideration.
+From this point on, we fix an irreducible component of $\mathbb{P}\Lambda_{Z}^{[d]}$, denoted by $\mathbb{P}\Lambda_{Z}^{\univ}$. As we will see in Definition \ref{def:subvar_Z^{(m)}}, this variety generates all subvarieties within the families under consideration.
 
-\begin{definition}[The subvariety $Z^{(m)}$]
+\begin{definition}[The subvariety $Z^{(m)}$]\label{def:subvar_Z^{(m)}}
 For any tuple $(m) = (m_1, \ldots, m_d) \in \mathbb{Z}^d$, we define the weighted sum map
 $$a^{(m)}: A^d \longrightarrow A \qquad (p_1,\ldots,p_d) \longmapsto \sum_{i=1}^{d} m_ip_i.$$
 We also define 
@@ -1560,12 +1561,12 @@ The following corollary collects some quantitative implications of \eqref{eq:CMc
 Suppose that $Z=-Z$ and $\Gal(\gamma_{Z}) \cong W(C_{d/2})$, and assume that $(m):= (m_1, \ldots, m_{d/2},0,\ldots,0) \in \mathbb{Z}^d$.
 \begin{enumerate}[(1)]
 \item  The Chern--Mather class
-$$c_l\left(\Lambda_{Z^{(m)}}\right) \in \Hnm^{2l}(A)[m_1,\ldots,m_{d/2}]^{S_{d/2}}$$
-is a polynomial of degree $2l$ with exponent at most $2r$, when expressed in the variables $m_1,\ldots,m_{d/2}$.
-\item If $Z \subset A$ is a smooth curve, there exists a homogeneous symmetric polynomial $\widetilde{f}_{Z,l} \in \mathbb{Q}[m_1, \ldots, m_{d/2}]^{S_{d/2}}$ of degree $2l$ and exponent at most $2$, such that
-$$c_l\left(\Lambda_{Z^{(m)}}\right)=\widetilde{f}_{Z,l}(m_1,\ldots,m_{d/2})  \left(\bigast_{i=1}^k c_{1}\right).$$
+$$c_l\left(\Lambda_{Z^{(m)}}\right) \in \Hnm^{2l}(A)[m_1^2,\ldots,m_{d/2}^2]^{S_{d/2}}$$
+is a polynomial of degree $l$ with exponent at most $2r$, when expressed in the variables $m_1^2,\ldots,m_{d/2}^2$.
+\item If $Z \subset A$ is a smooth curve, there exists a homogeneous symmetric polynomial $\widetilde{f}_{Z,l} \in \mathbb{Q}[m_1^2, \ldots, m_{d/2}^2]^{S_{d/2}}$ of degree $l$ and exponent at most $2$, such that
+$$c_l\left(\Lambda_{Z^{(m)}}\right)=\widetilde{f}_{Z,l}(m_1^2,\ldots,m_{d/2}^2)  \left(\bigast_{i=1}^k c_{1}\right).$$
 In this case, 
-$$Z^{(m)} \subset A \text{ is a divisor } \quad\Longleftrightarrow\quad f_{Z,n-1}(m_1,\ldots,m_{d/2}) \neq 0.$$
+$$Z^{(m)} \subset A \text{ is a divisor } \quad\Longleftrightarrow\quad \widetilde{f}_{Z,n-1}(m_1^2,\ldots,m_{d/2}^2) \neq 0.$$
 \end{enumerate}
 \end{corollary}
 
