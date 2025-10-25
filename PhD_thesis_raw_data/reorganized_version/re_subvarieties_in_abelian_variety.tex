@@ -1454,6 +1454,31 @@ $$Z^{(m)} \subset A \text{ is a divisor } \quad\Longleftrightarrow\quad f_{Z,n-1
 
 \subsection{The homology class in type $C$ case}
 
+In many instances, the subvariety $Z \subset A$ is invariant under a reflection, and we may, without loss of generality, assume that the reflection is taken with respect to the origin, so that $Z = -Z$. In this situation, the degree $d = \deg \gamma_Z$ is necessarily even, and the locus $[\mathbb{P}\Lambda_Z^{[d]}]$ admits a decomposition into a finite union of subvarieties. To describe these components, let
+$$\mathcal{P}_2(d):=\left\{\rule{0mm}{3mm} \alpha \in \mathcal{P}(d) \;\middle|\;  |A|=2 \text{ for all } A \in \alpha \right\}$$
+denote the set of all perfect matchings of $[d]$. Each $\alpha \in \mathcal{P}2(d)$ induces an involution $\tau{\alpha}$ of $[d]$, and we define
+\begin{equation*}
+\begin{aligned}
+  \mathbb{P}\Lambda_{Z}^{\widetilde{[\alpha]}}:=\;&\left\{ \left(\rule{0mm}{3mm}(p_i),\xi\right) \in \mathbb{P}\Lambda_{Z}^{[d]} \;\middle|\; p_{\tau_{\alpha}(i)}=-p_{i} \text{ for all } i  \right\} \\ 
+\Delta_{\widetilde{\alpha}}:=\;& A^{d/2} \times \mathbb{P}^{\vee} \longrightarrow A^d \times \mathbb{P}^{\vee} \qquad \left(\rule{0mm}{3mm}(p_i),\xi\right) \longmapsto \left((\pm p_{f_{\alpha}(i)}),\xi\right)\\
+\end{aligned}
+\end{equation*}
+where the sign is chosen so that $p_{\tau_{\alpha}(i)}=-p_i$. Furthermore, there exists a distinguished subvariety in $\mathbb{P}\Lambda_{Z}^{\times d/2}$:
+\begin{equation*}
+\begin{aligned}
+\mathbb{P}\Lambda_{Z}^{\widetilde{[d/2]}}:=\;&\overline{\left\{ \left(\rule{0mm}{3mm}(p_i),\xi\right) \in \mathbb{P}\Lambda_{Z}^{\times d/2} \;\middle|\; p_i \neq \pm p_j \text{ iff } i \neq j  \right\}}.\\ 
+\end{aligned}
+\end{equation*}
+With these conventions, we can now express the following decomposition:
+\begin{equation*}
+\begin{aligned}
+\mathbb{P}\Lambda_{Z}^{[d]}=\;&\bigcup_{\alpha \in \mathcal{P}_2(d)} \mathbb{P}\Lambda_{Z}^{\widetilde{[\alpha]}}  \\ 
+=\;&\bigcup_{\alpha \in \mathcal{P}_2(d)} \Delta_{\widetilde{\alpha}} \left( \mathbb{P}\Lambda_{Z}^{\widetilde{[d/2]}} \right)  \\ 
+\end{aligned}
+\end{equation*}
+
+Evidently, determining $[\mathbb{P}\Lambda_{Z}^{\widetilde{[\alpha]}}]$ amounts to determining $[\mathbb{P}\Lambda_{Z}^{\widetilde{[d/2]}}]$, and the latter computation reduces again to combinatorics.
+
 
 %\nocite{Eberhardt2022Koszul}	% cite articles which are not cited in the document yet
 
