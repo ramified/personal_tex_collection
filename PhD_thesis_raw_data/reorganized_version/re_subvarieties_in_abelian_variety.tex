@@ -1417,7 +1417,7 @@ Notice that $a^{(m)}$ can be written as compositions of basic functions:
 \begin{definition}
 For any tuple $(m)=(m_1,\ldots,m_d) \in \mathbb{Z}^d$ and any partition $\alpha = \{A_1, \ldots, A_k\} \in \mathcal{P}(d)$, we define
 $$\alpha(m):= \left( \sum_{i \in A_1}m_i, \ldots, \sum_{i \in A_k}m_i  \right) \in \mathbb{Z}^k.$$
-Moreover, for $\textbf{l}=(l_1,\ldots,l_k) \in \mathbb{N}_{\geqslant 0}^d$ with $\sum l_i=l$, we set
+Moreover, for $\textbf{l}=(l_1,\ldots,l_k) \in \mathbb{N}_{\geqslant 0}^k$ with $\sum l_i=l$, we set
 $$\alpha(m)^{2\textbf{l}}:=  \left( \sum_{i \in A_1}m_i \right)^{2l_1} \cdots \left( \sum_{i \in A_k}m_i \right)^{2l_k}$$
 which defines a homogeneous polynomial of degree $2l$ in $\mathbb{Z}[m_1,\ldots,m_k]$. 
 \end{definition}
@@ -1508,6 +1508,67 @@ which yields the expression
   [][\mathbb{P}\Lambda_{Z}^{\widetilde{\geqslant\beta}}]=\;& \frac{1}{2^k}\sum_{\eta: [d/2] \longrightarrow \{ \pm 1\}}  \Delta_{\beta,*}^{\eta}[\mathbb{P}\Lambda_{Z}^{\times k}]. 
 \end{aligned}
 \end{equation*}
+
+Assuming that the monodromy group is the signed symmetric group, we may identify $\mathbb{P}\Lambda_{Z}^{\univ}$ with one of the components $\mathbb{P}\Lambda_{Z}^{\widetilde{[\alpha]}}$. Without loss of generality, we choose
+$$\alpha=\left\{\rule{0mm}{3mm} \{i, i+d/2\} \;\middle|\; i=1,\ldots,d/2  \right\}$$
+and fix the sign convention for $\Delta_{\widetilde{\alpha}}$:
+% https://q.uiver.app/#q=WzAsMyxbMCwwLCJcXERlbHRhX3tcXHdpZGV0aWxkZXtcXGFscGhhfX06IEFee2QvMn0gXFx0aW1lcyBcXG1hdGhiYntQfV57XFx2ZWV9Il0sWzEsMCwiQV57ZC8yfSBcXHRpbWVzIEFee2QvMn0gXFx0aW1lcyBcXG1hdGhiYntQfV57XFx2ZWV9Il0sWzIsMCwiQV57ZH0gXFx0aW1lcyBcXG1hdGhiYntQfV57XFx2ZWV9Il0sWzEsMiwiKFxcSWQsLVxcSWQsIFxcSWQpIl0sWzAsMSwiKFxcRGVsdGEsXFxJZCkiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dXQ==
+\[\begin{tikzcd}[column sep=huge]
+	{\Delta_{\widetilde{\alpha}}: A^{d/2} \times \mathbb{P}^{\vee}} & {A^{d/2} \times A^{d/2} \times \mathbb{P}^{\vee}} & {A^{d} \times \mathbb{P}^{\vee}}
+	\arrow["{(\Delta,\Id)}", hook, from=1-1, to=1-2]
+	\arrow["{(\Id,-\Id, \Id)}", from=1-2, to=1-3]
+\end{tikzcd}\]
+Under this convention, the tuples $(m_1, \ldots, m_d)$ and $(m_1 - m_{d/2 + 1}, \ldots, m_{d/2} - m_d, 0, \ldots, 0)$ define the same subvariety. Hence, without loss of generality, we may assume that
+\begin{equation*}
+\begin{aligned}
+  (m):=\;&  (m_1, \ldots, m_{d/2},0,\ldots,0) \in \mathbb{Z}^d. \\ 
+\end{aligned}
+\end{equation*}
+We now introduce some notations for later computations:
+\begin{equation*}
+\begin{aligned}
+  (\widetilde{m}):=\;&  (m_1, \ldots, m_{d/2}) \in \mathbb{Z}^{d/2} \\ 
+  \beta^{\eta}(\widetilde{m}):=\;&  \left(\sum_{i \in A_1} \eta(i)m_i, \ldots, \sum_{i \in A_k} \eta(i)m_i\right) \in \mathbb{Z}^{k} \\ 
+  \beta^{\eta}(\widetilde{m})^{2\textbf{l}}:=\;&  \left(\sum_{i \in A_1} \eta(i)m_i\right)^{2l_1} \cdots \left(\sum_{i \in A_k} \eta(i)m_i\right)^{2l_k} \\ 
+  \beta(\widetilde{m}^2)^{\textbf{l}}:=\;&  \left(\sum_{i \in A_1} m_i^2\right)^{l_1} \cdots \left(\sum_{i \in A_k} m_i^2\right)^{l_k} \\   
+\end{aligned}
+\end{equation*}
+where $\beta= \{A_1, \ldots, A_k\} \in \mathcal{P}(d/2)$ is a partition of length $k$, $\eta:[d/2] \longrightarrow \{ \pm 1\}$ is a sign function, and $\textbf{l}=(l_1,\ldots,l_k) \in \mathbb{N}_{\geqslant 0}^k$ with $\sum l_i=l$. Notice that 
+$$\sum_{\eta}\beta^{\eta}(\widetilde{m})^{2\textbf{l}} = 2^{d/2}\,\beta(\widetilde{m}^2)^{\textbf{l}}.$$
+
+We can now determine $[\mathbb{P}\Lambda_{Z}^{(m)}]$ in the case where $Z=-Z$ and $\Gal(\gamma_{Z}) \cong W(C_{d/2})$:
+\begin{equation*}
+\begin{aligned}
+  [][\mathbb{P}\Lambda_{Z}^{(m)}]=\;& \left( a^{(m)},\Id_{\mathbb{P}^{\vee}}  \right)_* [\mathbb{P}\Lambda_{Z}^{\widetilde{[\alpha]}}] \\ 
+  =\;& \left( a^{(\widetilde{m})},\Id_{\mathbb{P}^{\vee}}  \right)_* [\mathbb{P}\Lambda_{Z}^{[d/2]}] \\ 
+  =\;& \left( a^{(\widetilde{m})},\Id_{\mathbb{P}^{\vee}}  \right)_* [\mathbb{P}\Lambda_{Z}^{\widetilde{\hat{0}}}] \\
+  =\;& \sum_{\beta}\; \mu(\hat{0},\beta)  \left( a^{(\widetilde{m})},\Id_{\mathbb{P}^{\vee}}  \right)_* \Delta_{\beta,*}\! \left[ \mathbb{P}\Lambda_{Z}^{\widetilde{\geqslant \beta}} \right] \\ 
+  =\;& \sum_{\beta,\eta}\; \frac{1}{2^k}\,\mu(\hat{0},\beta)  \left( a^{\beta^{\eta}(\widetilde{m})},\Id_{\mathbb{P}^{\vee}}  \right)_* \left[ \mathbb{P}\Lambda_{Z}^{\times k} \right] \\ 
+  =\;& \sum_{\beta,\eta}\; \frac{1}{2^k}\,\mu(\hat{0},\beta)  \left( a^{\beta^{\eta}(\widetilde{m})},\Id_{\mathbb{P}^{\vee}}  \right)_* \left(\sum_{l=0}^{n-1}\left( \sum_{\sum l_i=l} c_{l_1}\otimes \cdots \otimes c_{l_k}\right) \otimes H^l\right) \\
+  =\;& \sum_{\beta,\eta}\; \frac{1}{2^k}\,\mu(\hat{0},\beta)   \sum_{l=0}^{n-1}\sum_{\sum l_i=l} \beta^{\eta}(\widetilde{m})^{2\textbf{l}} \left(\bigast_{i=1}^k c_{l_i} \otimes H^l\right) \\  
+  =\;& \sum_{l=0}^{n-1} \left(\sum_{\beta,\eta} \sum_{\sum l_i=l}  \left( \frac{1}{2^k}\, \mu(\hat{0},\beta)    \beta^{\eta}(\widetilde{m})^{2\textbf{l}} \bigast_{i=1}^k c_{l_i}\right)\right) \otimes H^l \\  
+  =\;& \sum_{l=0}^{n-1} \left(\sum_{\beta} \sum_{\sum l_i=l}  \left( 2^{d/2-k}\, \mu(\hat{0},\beta)    \beta(\widetilde{m}^2)^{\textbf{l}} \bigast_{i=1}^k c_{l_i}\right)\right) \otimes H^l \\ 
+\end{aligned}
+\end{equation*}
+
+Therefore,
+\begin{equation}\label{eq:CMclass_signsym}
+c_l\left(\Lambda_{Z^{(m)}}\right)=\frac{1}{c_Z^{(m)}}\sum_{\beta} \sum_{\sum l_i=l}  \left( 2^{d/2-k}\, \mu(\hat{0},\beta)    \beta(\widetilde{m}^2)^{\textbf{l}} \bigast_{i=1}^k c_{l_i}\right)
+\end{equation}
+The following corollary collects some quantitative implications of \eqref{eq:CMclass_signsym}.
+\begin{corollary}
+Suppose that $Z=-Z$ and $\Gal(\gamma_{Z}) \cong W(C_{d/2})$, and assume that $(m):= (m_1, \ldots, m_{d/2},0,\ldots,0) \in \mathbb{Z}^d$.
+\begin{enumerate}[(1)]
+\item  The Chern--Mather class
+$$c_l\left(\Lambda_{Z^{(m)}}\right) \in \Hnm^{2l}(A)[m_1,\ldots,m_{d/2}]^{S_{d/2}}$$
+is a polynomial of degree $2l$ with exponent at most $2r$, when expressed in the variables $m_1,\ldots,m_{d/2}$.
+\item If $Z \subset A$ is a smooth curve, there exists a homogeneous symmetric polynomial $\widetilde{f}_{Z,l} \in \mathbb{Q}[m_1, \ldots, m_{d/2}]^{S_{d/2}}$ of degree $2l$ and exponent at most $2$, such that
+$$c_l\left(\Lambda_{Z^{(m)}}\right)=\widetilde{f}_{Z,l}(m_1,\ldots,m_{d/2})  \left(\bigast_{i=1}^k c_{1}\right).$$
+In this case, 
+$$Z^{(m)} \subset A \text{ is a divisor } \quad\Longleftrightarrow\quad f_{Z,n-1}(m_1,\ldots,m_{d/2}) \neq 0.$$
+\end{enumerate}
+\end{corollary}
+
 %\nocite{Eberhardt2022Koszul}	% cite articles which are not cited in the document yet
 
 % Remember to protect the uppercase of people's name and LaTeX symbols

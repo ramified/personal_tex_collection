@@ -15,4 +15,4 @@
 \contentsline {subsection}{\tocsubsection {}{5.2}{The homology class of $\mathbb {P}\Lambda _{Z}^{\times d}$}}{17}{subsection.5.2}% 
 \contentsline {subsection}{\tocsubsection {}{5.3}{The homology class of $\mathbb {P}\Lambda _{Z}^{[d]}$}}{17}{subsection.5.3}% 
 \contentsline {subsection}{\tocsubsection {}{5.4}{The homology class in type $C$ case}}{20}{subsection.5.4}% 
-\contentsline {section}{\tocsection {}{}{References}}{21}{section*.5}% 
+\contentsline {section}{\tocsection {}{}{References}}{22}{section*.5}% 

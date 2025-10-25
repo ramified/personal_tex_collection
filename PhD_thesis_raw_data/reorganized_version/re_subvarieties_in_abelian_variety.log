@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  25 OCT 2025 15:11
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  25 OCT 2025 20:31
 entering extended mode
 **./re_subvarieties_in_abelian_variety.tex
 (re_subvarieties_in_abelian_variety.tex
@@ -1682,26 +1682,26 @@ LaTeX Font Warning: Font shape `U/wasy/b/n' in size <7> not available
 (Font)              Font shape `U/wasy/m/n' tried instead on input line 357.
 
 [1] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17]
-[18] [19] (re_subvarieties_in_abelian_variety.bbl [20]) [21]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1517.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1517.
+[18] [19] [20] [21] (re_subvarieties_in_abelian_variety.bbl) [22]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1578.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1578.
 
 (re_subvarieties_in_abelian_variety.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1517.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1517.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1578.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1578.
 
 Package rerunfilecheck Info: File `re_subvarieties_in_abelian_variety.out' has 
 not changed.
 (rerunfilecheck)             Checksum: CF47B826C5EACB0A8CE54272364A153B.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1517.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1578.
  ) 
 Here is how much of TeX's memory you used:
- 37865 strings out of 427748
- 708323 string characters out of 3150981
- 755311 words of memory out of 3000000
- 41188 multiletter control sequences out of 15000+200000
+ 37896 strings out of 427748
+ 709096 string characters out of 3150981
+ 755375 words of memory out of 3000000
+ 41219 multiletter control sequences out of 15000+200000
  544253 words of font info for 86 fonts, out of 3000000 for 9000
  1489 hyphenation exceptions out of 8191
  61i,21n,82p,992b,1074s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on re_subvarieties_in_abelian_variety.pdf (21 pages).
+Output written on re_subvarieties_in_abelian_variety.pdf (22 pages).
