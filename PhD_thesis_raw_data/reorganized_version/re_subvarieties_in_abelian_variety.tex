@@ -121,13 +121,13 @@
 \newenvironment{proofsketch}
   {\begin{proof}[Sketch of proof]}
   {\end{proof}}
-%%% for important theorems
-%\newtheoremstyle{theoremletter}{4mm}{1mm}{\itshape}{ }{\bfseries}{}{ }{}
-%\theoremstyle{theoremletter}
-%\newtheorem{theoremA}{Theorem}
-%\renewcommand{\thetheoremA}{A}
-%\newtheorem{theoremB}{Theorem}
-%\renewcommand{\thetheoremB}{B}
+%% for important theorems
+\newtheoremstyle{theoremletter}{2mm}{1mm}{\itshape}{ }{\bfseries}{}{ }{}
+\theoremstyle{theoremletter}
+\newtheorem{theoremA}{Theorem}
+\renewcommand{\thetheoremA}{A}
+\newtheorem{theoremB}{Theorem}
+\renewcommand{\thetheoremB}{B}
 
 
 
@@ -346,35 +346,82 @@ Berlin, 12489\\ Germany\\}
 \tableofcontents
 
 \section{Introduction}
-From any subvariety of an abelian variety one obtains a reductive group via the convolution of perverse sheaves; in this way, traditional questions in algebraic geometry can be reinterpreted in representation-theoretic terms, providing new geometric perspectives.
+From any subvariety of an abelian variety, one can associate a reductive group through the convolution of perverse sheaves. This correspondence allows traditional problems in algebraic geometry to be reformulated in representation-theoretic terms, thereby offering new geometric insights. The characteristic cycle serves as a fundamental invariant attached to a perverse sheaf, and its detailed analysis often plays a crucial role in addressing these problems, cf. \cite[\S 5–\S 8]{JKLM22}. Recent work demonstrates that one can approach these characteristic cycles directly as conic Lagrangian cycles, without invoking the full machinery of perverse sheaves.
 
-In \cite{Kr20}, Prof. Krämer shows that Weyl group orbits correspond to conic Lagrangian cycles in the cotangent bundle, which are realized as the conormal bundles of certain subvarieties. A careful analysis of these subvarieties is frequently central to resolving the problems at hand, cf. \cite[\S 5-\S 8]{JKLM22}. Here we investigate three principal properties of these subvarieties: irreducibility, dimension, and homology class.
+In \cite{Kr20}, Prof. Krämer establishes a correspondence between Weyl group orbits and conic Lagrangian cycles in the cotangent bundle, where these cycles arise as the conormal bundles of certain subvarieties. Despite this correspondence, an explicit geometric description of these cycles themselves remains elusive. In this article, we propose a purely geometric construction of these cycles and analyze three key properties of the associated subvarieties: irreducibility, dimension, and homology class.
 
-Concerning irreducibility, we observe that the irreducible components correspond precisely to the orbits of the monodromy group. Hence, the discrepancy between the monodromy group and the Weyl group provides a measure of the failure of irreducibility of these subvarieties. Recently, we constructed an example where the monodromy group is significantly smaller than expected:
-%thereby disproving \cite[Conjecture~8]{Kr16cubicthreefold}:
+$\,$
 
-\begin{proposition}\label{prop: smallmongp}
-(Wrong proposition) There exists an étale double cover $h: C \to C'$ of smooth projective curves such that the Abel--Prym map
-$\AP_{C/C'}: C \longrightarrow A$
-is an embedding, and 
+Concerning irreducibility, we observe that the irreducible components correspond precisely to the orbits of the monodromy group. Hence, the discrepancy between the monodromy group and the Weyl group provides a measure of the failure of irreducibility of these subvarieties. A natural question is how big this discrepancy could be. For this, we formulate a conjecture that refines \cite[Conjecture~8]{Kr16cubicthreefold}:
+
+\begin{conjecture}\label{conj:big_mon_for_curve}
+Let $A$ be an abelian variety of dimension $n$, and let $C \subset A$ be a non-degenerate curve that is not invariant under any non-trivial translation. Then, the monodromy group $\Gal(\gamma_C)$ is expected to be big (see Definition \ref{def:big_mono}).
+\end{conjecture}
+For $n>2$, this conjecture admits a purely geometric formulation:
+\begin{conjecture}
+Let $A$ be an abelian variety of dimension $n$, $n>2$, and let $C \subset A$ be a non-degenerate curve that is not invariant under any non-trivial translation. Then:
+\begin{itemize}[-]
+\item If $C$ is invariant under some reflection, the tangent Gauss map $\phi_C: C \longrightarrow \mathbb{P}^{n-1}$ is a double cover onto its image;
+\item If $C$ is not invariant under any reflection, the tangent Gauss map $\phi_C: C \longrightarrow \mathbb{P}^{n-1}$ is generically injective.
+\end{itemize}
+\end{conjecture}
+A complete proof or counterexample of Conjecture \ref{conj:big_mon_for_curve} is not yet known. In the course of our study, we analyze the Prym case thoroughly, which is summarized in Theorem \ref{thm:A}:
+
+\begin{theoremA}\label{thm:A}
+For any étale double cover $h: C \longrightarrow C'$ of smooth, projective, non-hyperelliptic curves with $g(C') > 9$, one may view $C$ as a subvariety of the Prym variety $\Prym(C/C')$ via the Abel–Prym map. Then the associated monodromy group is typically big, except in the case where $C'$ is bielliptic and $h$ arises as the pullback of an étale double cover of elliptic curves. In this exceptional situation, the curve $C \subset \Prym(C/C')$ is stabilized by a non-trivial translation.
+\end{theoremA}
+
+Theorem \ref{thm:A} follows from a combination of Proposition \ref{prop:big_genus_Prym_case} and Lemma \ref{lem:bielliptic_with_big_mon}. The bielliptic case, which constitutes an exception, is analyzed thoroughly in Subsection \ref{subsec:small_mon}.
+
+$\,$
+
+For the dimension and homology class of a subvariety $Z$, both invariants can be recovered from the homology class of $\mathbb{P}\Lambda_{Z} \subset \mathbb{P}T^*A$ — that is, from the Chern--Mather class of $Z$. Standard computational techniques are available when the group is a full or signed symmetric group. 
+
+\begin{theoremB}\label{thm:B}
+Consider a non-degenerate subvariety $Z \subset A$ and a tuple $(m) = (m_1, \ldots, m_d) \in \mathbb{Z}^d$. Let $Z^{(m)} \subset A$ be as in Definition \ref{def:subvar_Z^{(m)}}. Denote $d = \deg \gamma_Z$, $\widetilde{d} = d/2$, and set $c_l := c_{c,l}(\Lambda_Z)$ to be the Chern--Mather class of $Z$, with $*$ representing the Pontryagin product.
+\begingroup
+\upshape
+%\setlist{itemsep=-0.4em}
+\renewcommand\labelenumi{(\theenumi)}
+\begin{enumerate}[(1)]
+\item When $\Gal(\gamma_{Z})=S_d$, the Chern--Mather class of $Z^{(m)}$ can be written as
 \begin{equation*}
 \begin{aligned}
-  W_C\cong\;& S_2^{\oplus d/2} \rtimes S_{d/2}  \\ 
-   M_C\subseteq\;& S_4^{\oplus d/4} \rtimes S_{d/4}  \\ 
+  c_l\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{c_Z^{(m)}} \sum_{\lambda \dashv l} \;\mu_d^{\lambda} \left( \bigast_{i=1}^r c_{\lambda_i}\right) \\ 
 \end{aligned}
 \end{equation*}
-where $d = 2g(C')-2$, and $W_C$, $M_C$ denote the Weyl and monodromy groups, respectively.
-\end{proposition}
-This turns out to be the only nontrivial example in the Prym setting when $g(C') > 9$.
+for some $c_Z^{(m)} \in \mathbb{N}_{>0}$ and $\mu_d^{\lambda} \in \mathbb{Z}$.
+\item When $Z=-Z$ and $\Gal(\gamma_{Z})=W(C_{d/2})$, the Chern--Mather class of $Z^{(m)}$ can be written as
+\begin{equation*}
+\begin{aligned}
+  c_l\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{c_Z^{(m)}} \sum_{\lambda \dashv l} \;\widetilde{\mu}_{\widetilde{d}}^{\lambda} \left( \bigast_{i=1}^r c_{\lambda_i}\right) \\
+\end{aligned}
+\end{equation*}
+for some $c_Z^{(m)} \in \mathbb{N}_{>0}$ and $\widetilde{\mu}_{\widetilde{d}}^{\lambda} \in \mathbb{Z}$.
+\end{enumerate}
+\endgroup
+\end{theoremB}
+Theorem \ref{thm:B} will occupy the whole Section \ref{sec:CM_class} to prove. In fact, we will show (1) in \eqref{eq:CMclass_sym}, and (2) in \eqref{eq:CMclass_signsym}. The combinatorial coefficients $\mu_d^{\lambda}$ and $\widetilde{\mu}_{\widetilde{d}}^{\lambda}$ appearing in the formulas are defined in Definition \ref{def:Moebius_block-sum}, while the case of Jacobian is discussed in detail in Example \ref{eg:dim_in_Jac_case}.
 
-For the dimension and homology class of a subvariety $Z$, both invariants can be recovered from the homology class of $\mathbb{P}\Lambda_{Z} \subset \mathbb{P}T^*A$ — that is, from the Chern--Mather class of $Z$. Standard computational techniques are available when the group is a full or signed symmetric group. This applies in particular to the Jacobian case, which will be analyzed in detail in Section ???.
+$\,$
+
+The structure of the article is as follows.
+
+In Section \ref{sec:Gauss_map}, we fix notation and describe the Gauss map from three different perspectives. We also define the monodromy group and highlight its connection to the degree of the tangent Gauss map.
+
+In Section \ref{sec:subvarieties}, we define the subvariety $Z^{(m)}$, which serves as the central object of this study. In Subsection \ref{subsec:relation_with_perverse_sheaf}, we briefly discuss the background of these varieties, explaining how they naturally arise as the characteristic cycles of certain perverse sheaves.
+
+Section \ref{sec:mon_examples} is devoted to the explicit computation of the monodromy group in selected cases, with a particular focus on the Prym curve situation. Subsection \ref{subsec:small_mon} presents an example in which the monodromy group is small; however, this does not constitute a counterexample to Conjecture \ref{conj:big_mon_for_curve}, as the group remains invariant under a non-trivial translation, as discussed in Lemma \ref{lem:small_mon_but_translation_invariant}. In Subsection \ref{subsec:criteria_big_mon} collects several sufficient conditions for the monodromy group to be large, which we then employ in Subsection \ref{subsec:big_mon_case} to show that, for all remaining Prym curve cases with $g(C')>9$, the monodromy group is necessarily large.
+
+In Section \ref{sec:CM_class}, we focus on the computation of the dimension and the homology class of $Z^{(m)}$. Following the introduction of the Chern-Mather class in Subsection \ref{subsec:CM_class}, the task reduces to computing $[\mathbb{P} \Lambda_{Z^{(m)}}]$, which can be carried out via a standard procedure. Subsections \ref{subsec:CMclass_typeA} and \ref{subsec:CMclass_typeC} treat the cases of type $A$ and type $C$, respectively. The derivation of the formulas involves certain coefficients that are purely combinatorial in nature. These technical combinatorial contributions are treated separately in Subsection \ref{subsec:Moebius_block-sum}.
+
 
 \section*{Acknowledgement}
 %\addcontentsline{toc}{section}{Acknowledgement}
 
 I would like to express my sincere gratitude to my supervisor, Thomas Krämer, without whose support this work would not have been possible. He proposed the problem, guided me throughout the project, and generously spent many hours discussing drafts and explaining important ideas. I am also thankful to Haohao Liu, Chenji Fu, Zhixing Chen, Vincent Ariksoy, Aaron Beumer, Roben de Preter, Andreas Kretschmer, Andrés Rojas, Søren Gammelgaard, Paweł Borówka, and Gavril Farkas for their insightful discussions and valuable comments. Funding is provided by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under Germany´s Excellence Strategy – The Berlin Mathematics Research Center MATH+ (EXC-2046/1, project ID: 390685689).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Tangent Gauss map and conormal Gauss map}
+\section{Tangent Gauss map and conormal Gauss map}\label{sec:Gauss_map}
 For simplicity, we work over the base field $\kappa = \mathbb{C}$, and by a variety we mean a integral separated scheme of finite type over $\mathbb{C}$. Let $A/\mathbb{C}$ be an abelian variety of dimension $n$, and let $Z \subseteq A$ be an irreducible closed subvariety of dimension $r$. We denote by $\iota_Z: Z \hookrightarrow A$ the inclusion morphism.\footnote{I'm not sure whether we should consider the more general cases in the future—such as working over a field of characteristic $p$, letting $A$ be a semiabelian variety or a complex torus, or allowing $\iota$ to be a covering onto its image. For now, I will omit these possibilities from this document.}
 
 \subsection{Gauss map and monodromy group}
@@ -670,7 +717,7 @@ The precise formulation of this question is somewhat ambiguous, and depending on
 
 
 
-\section{Families of subvarieties}
+\section{Families of subvarieties}\label{sec:subvarieties}
 
 In this section, we move from the study of monodromy groups to a more direct analysis of the subvarieties themselves. Given an initial subvariety, one can naturally generate a family of subvarieties. Our goal here is to define these families and investigate their properties.
 
@@ -839,7 +886,7 @@ $$g(m)=\left(m_{g(1)},\ldots , m_{g(d)}\right) \in \mathbb{Z}^d.$$
 \endgroup
 \end{lemma}
 
-\subsection{Realized as characteristic cycles}
+\subsection{Realized as characteristic cycles}\label{subsec:relation_with_perverse_sheaf}
 
 In fact, the Lagrangian cycles $\mathbb{P}\Lambda_{Z^{(m)}}$ coincide with the irreducible components of the clean cycles described in \cite[2.c]{Kr20} and \cite[p5, Theorem 1.7]{Kr22GaussI}, leading to the following relations:
 % https://q.uiver.app/#q=WzAsNixbMCwwLCJcXFBlcnYoQSkvTihBKSJdLFsxLDAsIlxcbGVmdDwgXFxkZWx0YV9aIFxccmlnaHQ+Il0sWzIsMCwiXFxSZXAgXFxsZWZ0KFxccnVsZXswbW19ezNtbX1HX3VcXHJpZ2h0KSJdLFswLDEsIlxcbWF0aGNhbHtMfShBKSJdLFsxLDEsIlxcbGVmdDwgXFxjaGFyY3ljbGUoXFxkZWx0YV9aKSBcXHJpZ2h0PiJdLFsyLDEsIlxcUmVwIFxcbGVmdChcXHJ1bGV7MG1tfXszbW19VF91IFxccnRpbWVzIFxcR2FsKFxcZ2FtbWFfWilcXHJpZ2h0KSJdLFsxLDAsIlxcc3Vwc2V0IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsNCwiXFxjaGFyY3ljbGUiXSxbMSwyLCJcXGNvbmciLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMiw1XSxbNCw1LCJcXHN0YWNrcmVsez99e1xcY29uZ30iLDEseyJvZmZzZXQiOi0xLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNCwzLCJcXHN1cHNldCIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
@@ -873,11 +920,11 @@ $$\sum_{\sigma \in W_Z/\Gal(\gamma_Z)} \mathbb{P}\Lambda_{Z^{\sigma (\chi_0)}}.$
 
 \section{Monodromy group}\label{sec:mon_examples}
 
-\subsection{Curves in Prym variety with small monodromy group}
+\subsection{Curves in Prym variety with small monodromy group}\label{subsec:small_mon}
 This subsection is devoted to presenting an example that has small monodromy group.
 
 
-\begin{setting}\label{set: Prym}
+\begin{setting}\label{set:Prym}
 Suppose $C'$ is a smooth projective curve of genus $g(C')$, and let $B$ be an effective (possibly zero) divisor on $C'$. For any line bundle $\eta \in \Pic(C')$ such that $\eta^{\otimes 2} \cong \mathcal{O}_{C'}(B)$, one obtains a double cover $h: C \to C'$ of smooth projective curves, ramified precisely over $B$. The associated involution on $C$ is denoted by $\iota$, and the triple $(C, C', h)$ is referred to as the Prym pair.
 
 Recall that the Prym variety $A := \Prym(C/C')$ is defined as the connected component of the identity in 
@@ -986,8 +1033,12 @@ Without loss of generality, we may assume that $\deg(h_\sigma)=2$. By assumption
 
 Unfortunately, the condition in Proposition \ref{prop:Galois_condition} is never met, and consequently the curve $C \subset A$ is preserved by a $2$-torsion translation of $A$, as explained below.
 
-\begin{lemma}
+\begin{lemma}\label{lem:small_mon_but_translation_invariant}
 In Example \ref{eg:bielliptic}, let $(\mathcal{L}_3, , \mathcal{L}_3^{\otimes 2} \cong \mathcal{O}_E(R))$ denote the line bundle associated with the double cover $C' \to E$, where $R$ is its branch divisor. Set $\mathcal{L}_1 := \eta_0$, $\mathcal{L}_2 := \eta_0 \otimes \mathcal{L}_3$, and let $u_i \colon C_i \to E$ be the ramified covering determined by $\mathcal{L}_i$.
+\begingroup
+\upshape
+%\setlist{itemsep=-0.4em}
+\renewcommand\labelenumi{(\theenumi)}
 \begin{enumerate}
 \item We have $C_3=C'$, $g(C_1)=1$ and $g(C_2)=g(C_3)=n+1$.
 \item The curve $C$ arises as the fiber product $C = C_3 \times_E C_1$. The covering $C \to E$ is Galois with
@@ -999,6 +1050,7 @@ $$\mathcal{L}_0: = \mathcal{O}_{C_1}\left(p_0-\sigma(p_0)\right) \in \Pic^0(C_1)
 independent of the choice of $p_0 \in C_1$. The curve $C \subset A$ is invariant under the translation corresponding to $h_1^*\mathcal{L}_0$. Concretely, for every $p \in C$, one has
 $$\mathcal{O}_{C}\left(\rule{0mm}{3mm}p-\sigma_3(p)\right) \cong \mathcal{O}_{C}\left(\rule{0mm}{3mm}\sigma_2(p)-\sigma_3\sigma_2(p)\right) \otimes h_1^* \mathcal{L}_0.$$
 \end{enumerate}
+\endgroup
 \end{lemma}
 
 \begin{proof}\
@@ -1022,7 +1074,7 @@ For $p \in C$, write $p_0=h_1(p)$, one can computes that
 \end{proof}
 
 
-\subsection{Criteria for big monodromy group}
+\subsection{Criteria for big monodromy group}\label{subsec:criteria_big_mon}
 
 Proposition \ref{prop: smallmongp} shows that a small monodromy group can indeed occur, even in the case of curves. Nevertheless, there exist criteria ensuring that the monodromy group is large, which we describe in this subsection.
 
@@ -1133,11 +1185,11 @@ Thus, $S_2^{\oplus m} \subset G$, and since $G$ maps onto $S_m$, we obtain $G = 
 %\href{https://mathoverflow.net/questions/321698/first-group-cohomology-for-the-standard-representation-of-s-n-over-mathbbf}{first group cohomology for the standard representation of $S_n$}
 
 
-\subsection{Curves with big monodromy group}
+\subsection{Curves with big monodromy group}\label{subsec:big_mon_case}
 
 The availability of these criteria permits the systematic construction of numerous cases where the associated monodromy group is large.
 
-\begin{eg}
+\begin{eg} \label{eg:mon_of_Jac}
 Let $C$ be a smooth curve of genus $g$ embedded in its Jacobian $A := \Jac(C)$ via the Abel–Jacobi map $\AJ_C: C \hookrightarrow A$.
 
 When $C$ is non-hyperelliptic, the corresponding Gauss map 
@@ -1158,7 +1210,7 @@ $$\Gal(\gamma_C) \cong S_2^{\oplus g-1} \rtimes S_{g-1}.$$
 
 
 
-The Prym case is more intricate, since the associated monodromy group may fail to be large. To proceed, we fix Setting \ref{set: Prym} and impose the additional condition that $C$ be non-hyperelliptic, thereby excluding trivial counterexamples.
+The Prym case is more intricate, since the associated monodromy group may fail to be large. To proceed, we fix Setting \ref{set:Prym} and impose the additional condition that $C$ be non-hyperelliptic, thereby excluding trivial counterexamples.
 
 \begin{lemma}
 When $\gon(C')>4$, $|\omega_{C'} \otimes \eta|$ is injective. As a result, the monodromy group is big.
@@ -1213,7 +1265,7 @@ $$g(C) \leqslant d_1 \cdot g(C_1) + d_2 \cdot g(C_2) + (d_1-1)(d_2-1).$$
 \end{fact}
 
 \begin{proposition}\label{prop:big_genus_Prym_case}
-If, in Setting \ref{set: Prym}, we additionally require that $C'$ be non-hyperelliptic and non-bielliptic, and $h: C \longrightarrow C'$ is étale, then any such curve with $g(C') > 9$ must have big monodromy group.
+If, in Setting \ref{set:Prym}, we additionally require that $C'$ be non-hyperelliptic and non-bielliptic, and $h: C \longrightarrow C'$ is étale, then any such curve with $g(C') > 9$ must have big monodromy group.
 \end{proposition}
 
 \begin{proof}
@@ -1256,7 +1308,7 @@ $\;$\\
 
 The following lemma tells us that all bielliptic curve case with small monodromy group are contained in Example \ref{eg:bielliptic}, when $g(C')>9$.
 
-\begin{lemma}
+\begin{lemma}\label{lem:bielliptic_with_big_mon}
 Let $C'$ be a non-hyperelliptic bielliptic curve with $g(C') > 9$, and let $\pr: C' \to E$ be the double covering onto an elliptic curve. Assume that there exists a nontrivial $2$-torsion line bundle $\eta \in \Pic^0(C')[2]$ such that the linear system $|\omega_{C'} \otimes \eta|$ fails to be generically injective. Then $\eta$ arises as the pullback of some $\eta_0 \in \Pic^0(E)[2]$, i.e. $\eta = \pr^* \eta_0$.
 \end{lemma}
 
@@ -1277,9 +1329,9 @@ Following the same strategy as in Proposition \ref{prop:big_genus_Prym_case}, th
 \end{equation*}
 \end{proof}
 
-\section{Dimension and homology class}
+\section{Dimension and homology class}\label{sec:CM_class}
 In this section, all cohomology groups are taken with $\mathbb{Q}$-coefficients for convenience in applying the Künneth formula.
-\subsection{Reminder on the (homological) Chern--Mather class}
+\subsection{Reminder on the (homological) Chern--Mather class}\label{subsec:CM_class}
 We begin by recalling the definition of the Chern--Mather class. Suppose $\dim A = n$, and denote by
 $$p: \mathbb{P}T^*A \cong A \otimes \mathbb{P}^{\vee} \longrightarrow \mathbb{P}^{\vee}$$
 the natural projection.
@@ -1287,7 +1339,7 @@ the natural projection.
 \begin{definition}
 For a conic Lagrangian cycle $\Lambda$ on $T^*A$ and $i \geqslant 0$, the Chern–Mather class is defined as
 $$c_{M,i}(\Lambda)=p_*\left(\rule{0mm}{3mm} [\mathbb{P}\Lambda] \cdot [A \times H_i] \right) \in \Hnm_{2i}(A) \cong \Hnm^{2(n-i)}(A),$$
-where $H_i \subseteq \mathbb{P}^\vee$ denotes a general linear subspace of dimension $i$. For brevity, we may later write $c_{M,i}(\Lambda)$ as $c_i(\Lambda)$, and $c_{M,i}(\Lambda_Z)$ simply as $c_i$.
+where $H_i \subseteq \mathbb{P}^\vee$ denotes a general linear subspace of dimension $i$. For brevity, we may later write $c_{M,i}(\Lambda)$ as $c_i(\Lambda)$, and $c_{M,i}(\Lambda_Z)$ simply as $c_i$. \footnote{Note that although $c_i$ arises as the pushforward of the classical Chern class in the smooth case, the indexing order is reversed. In particular, $c_0 = d$, rather than $1$.}
 \end{definition}
 
 By the Künneth formula, we may write
@@ -1316,7 +1368,7 @@ For a subvariety $Z \subset A$, both its dimension $\dim Z$ and its cohomology c
 \end{remark}
 
 \subsection{The homology class of $\mathbb{P}\Lambda_{Z}^{\times d}$}
-By Remark \ref{rem:CMclass_know_dim}, it suffices to consider the homology class $\mathbb{P}\Lambda_{Z^{(m)}}$. If we are not concerned with the scalar factor $c_Z^{(m)}$, we may equivalently compute $[\mathbb{P}\Lambda_{Z}^{(m)}]$, which coincides with the pushforward of $[\mathbb{P}\Lambda_{Z}^{\univ}]$. Consequently, the problem reduces to determining $[\mathbb{P}\Lambda_{Z}^{\univ}] \in \Hnm^{2dn}(A^d \times \mathbb{P}^{\vee})$.
+By Remark \ref{rem:CMclass_know_dim}, it suffices to consider the homology class of $\mathbb{P}\Lambda_{Z^{(m)}}$. If we are not concerned with the scalar factor $c_Z^{(m)}$, we may equivalently compute $[\mathbb{P}\Lambda_{Z}^{(m)}]$, which by definition is the pushforward of $[\mathbb{P}\Lambda_{Z}^{\univ}]$. Consequently, the problem reduces to determining $[\mathbb{P}\Lambda_{Z}^{\univ}] \in \Hnm^{2dn}(A^d \times \mathbb{P}^{\vee})$.
 
 Typically, for an initial subvariety $Z \subset A$, the Chern–Mather classes are known. Our ultimate goal is to express $[\mathbb{P}\Lambda_{Z}^{\univ}]$ in terms of these classes; as a preparatory step, we first examine $[\mathbb{P}\Lambda_{Z}^{\times d}]$.
 
@@ -1334,7 +1386,7 @@ where $\pi_{i,\mathbb{P}^{\vee}}: A^d \times \mathbb{P}^{\vee} \to A \times \mat
 \end{aligned}
 \end{equation*}
 
-\subsection{The homology class of $\mathbb{P}\Lambda_{Z}^{[d]}$}
+\subsection{The homology class of $\mathbb{P}\Lambda_{Z}^{[d]}$}\label{subsec:CMclass_typeA}
 
 This subsection explains how to eliminate the contribution of the big diagonal and how to compute $\mathbb{P}\Lambda_{Z}^{[d]}$ from $\mathbb{P}\Lambda_{Z}^{\times d}$. For this purpose, we introduce some combinatorial preliminaries.
 
@@ -1442,6 +1494,10 @@ c_l\left(\Lambda_{Z^{(m)}}\right)=\frac{1}{c_Z^{(m)}}\sum_{\alpha} \sum_{\sum l_
 The following corollary collects some quantitative implications of \eqref{eq:CMclass_sym}.
 \begin{corollary}
 Assume that $\Gal(\gamma_{Z})=S_d$.
+\begingroup
+\upshape
+%\setlist{itemsep=-0.4em}
+\renewcommand\labelenumi{(\theenumi)}
 \begin{enumerate}[(1)]
 \item  The Chern--Mather class
 $$c_l\left(\Lambda_{Z^{(m)}}\right) \in \Hnm^{2l}(A)[m_1,\ldots,m_d]^{S_d}$$
@@ -1451,13 +1507,14 @@ $$c_l\left(\Lambda_{Z^{(m)}}\right)=f_{Z,l}(m_1,\ldots,m_d)  \left(\bigast_{i=1}
 In this case, 
 $$Z^{(m)} \subset A \text{ is a divisor } \quad\Longleftrightarrow\quad f_{Z,n-1}(m_1,\ldots,m_d) \neq 0.$$
 \end{enumerate}
+\endgroup
 \end{corollary}
 
-\subsection{The homology class in type $C$ case}
+\subsection{The homology class in type $C$ case}\label{subsec:CMclass_typeC}
 
 In many instances, the subvariety $Z \subset A$ is invariant under a reflection, and we may, without loss of generality, assume that the reflection is taken with respect to the origin, so that $Z = -Z$. In this situation, the degree $d = \deg \gamma_Z$ is necessarily even, and the locus $[\mathbb{P}\Lambda_Z^{[d]}]$ admits a decomposition into a finite union of subvarieties. To describe these components, let
 $$\mathcal{P}_2(d):=\left\{\rule{0mm}{3mm} \alpha \in \mathcal{P}(d) \;\middle|\;  |A|=2 \text{ for all } A \in \alpha \right\}$$
-denote the set of all perfect matchings of $[d]$. Each $\alpha \in \mathcal{P}2(d)$ induces an involution $\tau{\alpha}$ of $[d]$, and we define
+denote the set of all perfect matchings of $[d]$. Each $\alpha \in \mathcal{P}_2(d)$ induces an involution $\tau_{\alpha}$ of $[d]$, and we define
 \begin{equation*}
 \begin{aligned}
   \mathbb{P}\Lambda_{Z}^{\widetilde{[\alpha]}}:=\;&\left\{ \left(\rule{0mm}{3mm}(p_i),\xi\right) \in \mathbb{P}\Lambda_{Z}^{[d]} \;\middle|\; p_{\tau_{\alpha}(i)}=-p_{i} \text{ for all } i  \right\} \\ 
@@ -1494,7 +1551,7 @@ Then one has the relations
   [\mathbb{P}\Lambda_{Z}^{\widetilde{\beta}}]=\;& \sum_{\beta'\geqslant \beta} \mu(\beta,\beta')\; [\mathbb{P}\Lambda_{Z}^{\widetilde{\geqslant\beta'}}],
 \end{aligned}
 \end{equation*}
-where $\mu(\beta, \beta')$ denotes the Möbius function of the poset $\mathbb{P}(d/2)$. 
+where $\mu(\beta, \beta')$ denotes the Möbius function of the poset $\mathcal{P}(d/2)$. 
 
 Furthermore, the classes $[\mathbb{P}\Lambda_{Z}^{\widetilde{\geqslant \beta}}]$ admit a decomposition as sums of pushforwards of $[\mathbb{P}\Lambda_{Z}^{\times k}]$ under appropriately defined signed diagonal maps. Explicitly, for every pair of maps $f_{\beta}:[d/2] \longrightarrow [k]$ and $\eta: [d/2] \longrightarrow \{ \pm 1\}$, one introduces the signed diagonal embedding
 
@@ -1543,7 +1600,7 @@ We can now determine $[\mathbb{P}\Lambda_{Z}^{(m)}]$ in the case where $Z=-Z$ an
   [][\mathbb{P}\Lambda_{Z}^{(m)}]=\;& \left( a^{(m)},\Id_{\mathbb{P}^{\vee}}  \right)_* [\mathbb{P}\Lambda_{Z}^{\widetilde{[\alpha]}}] \\ 
   =\;& \left( a^{(\widetilde{m})},\Id_{\mathbb{P}^{\vee}}  \right)_* [\mathbb{P}\Lambda_{Z}^{[d/2]}] \\ 
   =\;& \left( a^{(\widetilde{m})},\Id_{\mathbb{P}^{\vee}}  \right)_* [\mathbb{P}\Lambda_{Z}^{\widetilde{\hat{0}}}] \\
-  =\;& \sum_{\beta}\; \mu(\hat{0},\beta)  \left( a^{(\widetilde{m})},\Id_{\mathbb{P}^{\vee}}  \right)_* \Delta_{\beta,*}\! \left[ \mathbb{P}\Lambda_{Z}^{\widetilde{\geqslant \beta}} \right] \\ 
+  =\;& \sum_{\beta}\; \mu(\hat{0},\beta)  \left( a^{(\widetilde{m})},\Id_{\mathbb{P}^{\vee}}  \right)_*  \left[ \mathbb{P}\Lambda_{Z}^{\widetilde{\geqslant \beta}} \right] \\ 
   =\;& \sum_{\beta,\eta}\; \frac{1}{2^k}\,\mu(\hat{0},\beta)  \left( a^{\beta^{\eta}(\widetilde{m})},\Id_{\mathbb{P}^{\vee}}  \right)_* \left[ \mathbb{P}\Lambda_{Z}^{\times k} \right] \\ 
   =\;& \sum_{\beta,\eta}\; \frac{1}{2^k}\,\mu(\hat{0},\beta)  \left( a^{\beta^{\eta}(\widetilde{m})},\Id_{\mathbb{P}^{\vee}}  \right)_* \left(\sum_{l=0}^{n-1}\left( \sum_{\sum l_i=l} c_{l_1}\otimes \cdots \otimes c_{l_k}\right) \otimes H^l\right) \\
   =\;& \sum_{\beta,\eta}\; \frac{1}{2^k}\,\mu(\hat{0},\beta)   \sum_{l=0}^{n-1}\sum_{\sum l_i=l} \beta^{\eta}(\widetilde{m})^{2\textbf{l}} \left(\bigast_{i=1}^k c_{l_i} \otimes H^l\right) \\  
@@ -1559,6 +1616,10 @@ c_l\left(\Lambda_{Z^{(m)}}\right)=\frac{1}{c_Z^{(m)}}\sum_{\beta} \sum_{\sum l_i
 The following corollary collects some quantitative implications of \eqref{eq:CMclass_signsym}.
 \begin{corollary}
 Suppose that $Z=-Z$ and $\Gal(\gamma_{Z}) \cong W(C_{d/2})$, and assume that $(m):= (m_1, \ldots, m_{d/2},0,\ldots,0) \in \mathbb{Z}^d$.
+\begingroup
+\upshape
+%\setlist{itemsep=-0.4em}
+\renewcommand\labelenumi{(\theenumi)}
 \begin{enumerate}[(1)]
 \item  The Chern--Mather class
 $$c_l\left(\Lambda_{Z^{(m)}}\right) \in \Hnm^{2l}(A)[m_1^2,\ldots,m_{d/2}^2]^{S_{d/2}}$$
@@ -1568,7 +1629,59 @@ $$c_l\left(\Lambda_{Z^{(m)}}\right)=\widetilde{f}_{Z,l}(m_1^2,\ldots,m_{d/2}^2) 
 In this case, 
 $$Z^{(m)} \subset A \text{ is a divisor } \quad\Longleftrightarrow\quad \widetilde{f}_{Z,n-1}(m_1^2,\ldots,m_{d/2}^2) \neq 0.$$
 \end{enumerate}
+\endgroup
 \end{corollary}
+
+
+\subsection{Möbius-transforms block-sum polynomial}\label{subsec:Moebius_block-sum}
+The formulas \eqref{eq:CMclass_sym} and \eqref{eq:CMclass_signsym} admit further simplifications in certain special situations, such as the case of curves. In what follows, we extract the corresponding polynomial coefficient, which may be of independent combinatorial interest.
+
+\begin{definition}\label{def:Moebius_block-sum}
+Fix $d$ and $\tilde{d} = d/2$, and let $l \in \mathbb{N}_{\geqslant 0}$. For a partition $\lambda = [\lambda_1, \ldots, \lambda_r]$ of $l$ with $\lambda_1 \geqslant \cdots \geqslant \lambda_r > 0$, the Möbius-transforms block-sum polynomial of type A (resp. type C) is defined by
+\begin{equation*}
+\begin{aligned}
+  \mu_d^{\lambda}:=\;& \sum_{\alpha \in \mathcal{P}(d)} \sum_{\substack{\textbf{l} \dashv \lambda\\\textbf{l}:\text{ length }k}} \phantom{2^{\widetilde{d}-k}} \mu(\hat{0},\alpha)    \alpha(m)^{2\textbf{l}} d^{k-r} &&\in \mathbb{Z}[m_1,\ldots, m_d]^{S_d} \\ 
+  \widetilde{\mu}_{\widetilde{d}}^{\lambda}:=\;& \sum_{\beta \in \mathcal{P}(\widetilde{d})}  \sum_{\substack{\textbf{l} \dashv \lambda\\\textbf{l}:\text{ length }k}} 2^{\widetilde{d}-k} \mu(\hat{0},\beta)    \beta(\widetilde{m}^2)^{\textbf{l}} (2\widetilde{d})^{k-r} &&\in \mathbb{Z}[m_1^2,\ldots, m_{\widetilde{d}}^2]^{S_{\widetilde{d}}} \\ 
+\end{aligned}
+\end{equation*}
+In this definition:
+\begin{itemize}
+\item $\alpha=\{A_1,\ldots,A_k\} \in \mathcal{P}(d)$ is a set partition with $k = \#\alpha$ blocks (analogously for $\beta$);
+\item $\textbf{l}=(l_1,\ldots,l_k) \in \mathbb{Z}^k$, and $\mathbf{l} \dashv \lambda$ indicates that $\mathbf{l}$ is of type $\lambda$, meaning that its nonzero components, counted with multiplicities, form the partition $\lambda$;
+\item $\mu(\hat{0}, \alpha) = (-1)^{d-k} \prod_{i=1}^{k}\, \left(\rule{0mm}{3mm}|A_i|-1\right)$ is the Möbius function;
+\item $\alpha(m)^{2\textbf{l}}=  \left( \sum_{i \in A_1}m_i \right)^{2l_1} \cdots \left( \sum_{i \in A_k}m_i \right)^{2l_k}$ and $ \beta(\widetilde{m}^2)^{\textbf{l}}=  \left(\sum_{i \in A_1} m_i^2\right)^{l_1} \cdots \left(\sum_{i \in A_k} m_i^2\right)^{l_k}$.
+\end{itemize}
+\end{definition}
+Now, the formulas \eqref{eq:CMclass_sym} and \eqref{eq:CMclass_signsym} can be written as
+\begin{equation*}
+\begin{aligned}
+  c_l\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{c_Z^{(m)}} \sum_{\lambda \dashv l} \;\mu_d^{\lambda} \left( \bigast_{i=1}^r c_{\lambda_i}\right)\qquad && \text{type $A$ case} \\ 
+  c_l\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{c_Z^{(m)}} \sum_{\lambda \dashv l} \;\widetilde{\mu}_{\widetilde{d}}^{\lambda} \left( \bigast_{i=1}^r c_{\lambda_i}\right)\qquad && \text{type $C$ case} \\
+\end{aligned}
+\end{equation*}
+
+The following identities have been verified in low-degree cases using SageMath, though a purely combinatorial explanation, as well as a general formulation for the remaining types, is still lacking.
+\begin{fact}
+Let $1^r := [1, \ldots, 1] \dashv r$. When $r < \widetilde{d}$, we have
+\begin{equation*}
+\begin{aligned}
+  \mu_d^{1^r}=\;& \phantom{2^{\widetilde{d}}}\frac{1}{2^{r}r!} \sum_{\sigma \in S_{d}} \prod_{i=1}^{r} \left( m_{\sigma(2i-1)}-m_{\sigma(2i)} \right)^2 \\
+  \widetilde{\mu}_{\widetilde{d}}^{1^r}=\;& 2^{\widetilde{d}}\frac{1}{2^{r}r!} \sum_{\sigma \in S_{d}} \prod_{i=1}^{r} m_{\sigma(i)}^2 \\
+  =\;& 2^{\widetilde{d}-r}(\tilde{d}-r)! \sum_{1 \leqslant i_1 < \cdots l_r \leqslant d} m_{i_1}^2\cdots m_{i_r}^2 \\
+\end{aligned}
+\end{equation*}
+
+\end{fact}
+
+\begin{eg}[Continuation of Example \ref{eg:mon_of_Jac}]\label{eg:dim_in_Jac_case}
+Let $C$ be a smooth curve of genus $g$ embedded in its Jacobian $A := \Jac(C)$ via the Abel–Jacobi map $\AJ_C: C \hookrightarrow A$.
+
+When $C$ is non-hyperelliptic, we get
+$$\dim Z^{(m)} = \min_{k \in \mathbb{Z}} \left\{ \rule{0mm}{3mm} g-1, \# \left\{ i \in [2g-2] \;\middle|\; m_i \neq k \right\} \right\}.$$
+
+When $C$ is hyperelliptic, with $(m)=\left( m_1,\ldots,m_{g-1},0,\ldots,0 \right)$, we get
+$$\dim Z^{(m)} =  \# \left\{ i \in [g-1] \;\middle|\; m_i \neq 0 \right\} .$$
+\end{eg}
 
 %\nocite{Eberhardt2022Koszul}	% cite articles which are not cited in the document yet
 
