@@ -422,7 +422,7 @@ In Section \ref{sec:CM_class}, we focus on the computation of the dimension and 
 I would like to express my sincere gratitude to my supervisor, Thomas Krämer, without whose support this work would not have been possible. He proposed the problem, guided me throughout the project, and generously spent many hours discussing drafts and explaining important ideas. I am also thankful to Haohao Liu, Chenji Fu, Zhixing Chen, Vincent Ariksoy, Aaron Beumer, Roben de Preter, Andreas Kretschmer, Andrés Rojas, Søren Gammelgaard, Paweł Borówka, and Gavril Farkas for their insightful discussions and valuable comments. Funding is provided by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under Germany´s Excellence Strategy – The Berlin Mathematics Research Center MATH+ (EXC-2046/1, project ID: 390685689).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Tangent Gauss map and conormal Gauss map}\label{sec:Gauss_map}
-For simplicity, we work over the base field $\kappa = \mathbb{C}$, and by a variety we mean a integral separated scheme of finite type over $\mathbb{C}$. Let $A/\mathbb{C}$ be an abelian variety of dimension $n$, and let $Z \subseteq A$ be an irreducible closed subvariety of dimension $r$. We denote by $\iota_Z: Z \hookrightarrow A$ the inclusion morphism.\footnote{I'm not sure whether we should consider the more general cases in the future—such as working over a field of characteristic $p$, letting $A$ be a semiabelian variety or a complex torus, or allowing $\iota$ to be a covering onto its image. For now, I will omit these possibilities from this document.}
+For simplicity, we work over the base field $\kappa = \mathbb{C}$, and by a variety we mean a integral separated scheme of finite type over $\mathbb{C}$. Let $A/\mathbb{C}$ be an abelian variety of dimension $n$, and let $Z \subseteq A$ be an irreducible closed subvariety of dimension $r$. We denote by $\iota_Z: Z \hookrightarrow A$ the inclusion morphism.
 
 \subsection{Gauss map and monodromy group}
 \begin{definition}
@@ -433,7 +433,7 @@ which describes the tangent space information at each point.
 
 \begin{remark}
 Any map $X\longrightarrow\Gr(r, V)$ is induced by a rank $r$ vector bundle $\mathcal{E}$ on $X$ together with an epimorphism $V^{*}\otimes \mathcal{O}_X \twoheadrightarrow \mathcal{E}$. In our case, the map $\phi_Z$ is induced by the tangent bundle $\mathcal{T}_{\Zsm}$ and the sections
-$$T_0^{*} A \otimes_{\mathbb{C}} \mathcal{O}_{\Zsm} \subseteq\Hnm^0(\Zsm,\mathcal{T}_{\Zsm}^{\vee}) \otimes_{\mathbb{C}} \mathcal{O}_{\Zsm} \twoheadrightarrow \mathcal{T}_{\Zsm}^{\vee}.$$
+$$T_0^{*} A \otimes_{\mathbb{C}} \mathcal{O}_{\Zsm} \rightarrow\Hnm^0(\Zsm,\mathcal{T}_{\Zsm}^{\vee}) \otimes_{\mathbb{C}} \mathcal{O}_{\Zsm} \twoheadrightarrow \mathcal{T}_{\Zsm}^{\vee}.$$
 \end{remark}
 
 
@@ -473,7 +473,7 @@ A lot of geometry of $Z$ is encoded in the map $\gamma_Z$. For instance, if $Z \
 $$\deg \gamma_Z = (-1)^r \chi(Z),$$
 where $\chi(Z)=\sum_i (-1)^i b_i(Z)$ is the topological Euler characteristic of $Z$.
 
-Further insight can be gained by analyzing the fibers of $\gamma_Z$. For instance, if $Z$ is preserved by a translation $t_v: A\longrightarrow A$, then each fiber $\gamma_Z^{-1}(\xi)$ is also invariant under $t_v$. Likewise, if $Z = -Z$, then the fiber satisfies $\gamma_Z^{-1}(\xi) = -\gamma_Z^{-1}(\xi)$. Finding further constraints is more challenging.\footnote{You can imagine the fiber $\gamma_Z^{-1}(\xi)$ as a cluster of stars projected onto a celestial dome. As $\xi$ varies, these points shift, tracing out paths much like stars drifting across the night sky. The constraints that govern them are subtle, like the imagined lines that shape constellations. And in the long arc of variation, monodromy emerges—like the slow turning that replaces Kochab with Polaris among the stars.}
+Further insight can be gained by analyzing the fibers of $\gamma_Z$. For instance, if $Z$ is preserved by a translation $t_v: A\longrightarrow A$, then each fiber $\gamma_Z^{-1}(\xi) \subset A$ is also invariant under $t_v$. Likewise, if $Z = -Z$, then the fiber satisfies $\gamma_Z^{-1}(\xi) = -\gamma_Z^{-1}(\xi)$. Finding further constraints is more challenging.\footnote{You can imagine the fiber $\gamma_Z^{-1}(\xi)$ as a cluster of stars projected onto a celestial dome. As $\xi$ varies, these points shift, tracing out paths much like stars drifting across the night sky. The constraints that govern them are subtle, like the imagined lines that shape constellations. And in the long arc of variation, monodromy emerges—like the slow turning that replaces Kochab with Polaris among the stars.}
 
 An important invariant arising from the fiber $\gamma_Z^{-1}(\xi)$ is the monodromy group $\Gal(\gamma_Z)$; for completeness, we recall its definition below.
 
@@ -488,7 +488,7 @@ It is clear that $\Gal(f)$ doesn't depend on the choice of $U$.
 
 
 \subsection{Interpolation via hyperplanes}
-In this subsection, we reinterpret $\gamma_Z$ using a functorial and more transparent framework. This permits the definition of the conormal Gauss map and its monodromy group for any morphism $\phi: Z \to \Gr(r,n)$ with $\dim Z = r$, and clarifies the relation between the monodromy group and $\deg \phi$.
+In this subsection, we reinterpret $\gamma_Z$ using a functorial and more transparent framework. This permits the definition of the conormal Gauss map and its monodromy group for any morphism $\phi_Z: Z \to \Gr(r,n)$ with $\dim Z = r$, and clarifies the relation between the monodromy group and $\deg \phi$.
 
 Since each non-zero conormal vector $\xi  \in T^{*}_{0}A$ determines a hyperplane $H_{\xi} \in \Gr(n-1, T_0A)$, we have the isomorphisms (To simplify notation, we abbreviate $T^{*}_{0}A$ by $W$.)
 \begin{equation*}
@@ -706,14 +706,6 @@ It follows that the Gauss map is a regular morphism
 \end{aligned}
 \end{equation*}
 \end{proposition}
-
-\begin{ques}
-For an $r$-dimensional smooth variety $Z$ whose Albanese map $\alpha_Z$ is an embedding, which subspaces $V \subset \Hnm^0(Z, \Omega_Z)$ can arise as the cotangent space of some abelian quotient variety of $\Alb(Z)$?
-\end{ques}
-
-The precise formulation of this question is somewhat ambiguous, and depending on the interpretation, it may turn out to be either relatively straightforward or extremely difficult. On the one hand, the classification of abelian subvarieties of $A$ via symmetric idempotents in $\End_{\mathbb{Q}}(A)$ is well established \cite[Theorem 5.3.2]{BL04}. On the other hand, explicitly computing $\End_{\mathbb{Q}}(A)$ can be highly nontrivial when $A$ is a non-simple Albanese variety—even in the case where $A$ arises from a curve.
-
-
 
 
 
@@ -933,7 +925,7 @@ The Abel--Prym map is defined by
 $$\AP_{C/C'}: C \longrightarrow A \qquad p \longmapsto \mathcal{O}_{C}(p-\iota(p)).$$
 \end{setting}
 
-The classical theory treats the case where the Prym variety $A$ is principally polarized—this occurs exactly when $B = \varnothing$ or $B =\{p_0, q_0\}$, that is, when $h$ is either unramified or ramified at two points.\footnote{See \cite[Theorem 3.2.6]{CK22} for the proof.} For clarity and focus, we restrict our attention to these cases. Table \ref{table:Prym_numerical_data} lists the relevant numerical data.\footnote{As usual, $n=\dim_{\mathbb{C}} A$ is the dimension of the abelian variety.}
+The classical theory treats the case where the Prym variety $A$ is principally polarized—this occurs exactly when $B = \varnothing$ or $B =\{p_0, q_0\}$, that is, when $h$ is either unramified or ramified at two points.\footnote{See \cite[Theorem 3.2.6]{CK22} for the proof.} For clarity, we restrict our attention to these cases. Table \ref{table:Prym_numerical_data} lists the relevant numerical data.\footnote{As usual, $n=\dim_{\mathbb{C}} A$ is the dimension of the abelian variety.}
 
 {
 \def\arraystretch{1.2}
@@ -1034,7 +1026,7 @@ Without loss of generality, we may assume that $\deg(h_\sigma)=2$. By assumption
 Unfortunately, the condition in Proposition \ref{prop:Galois_condition} is never met, and consequently the curve $C \subset A$ is preserved by a $2$-torsion translation of $A$, as explained below.
 
 \begin{lemma}\label{lem:small_mon_but_translation_invariant}
-In Example \ref{eg:bielliptic}, let $(\mathcal{L}_3, , \mathcal{L}_3^{\otimes 2} \cong \mathcal{O}_E(R))$ denote the line bundle associated with the double cover $C' \to E$, where $R$ is its branch divisor. Set $\mathcal{L}_1 := \eta_0$, $\mathcal{L}_2 := \eta_0 \otimes \mathcal{L}_3$, and let $u_i \colon C_i \to E$ be the ramified covering determined by $\mathcal{L}_i$.
+In Example \ref{eg:bielliptic}, let $(\mathcal{L}_3,  \mathcal{L}_3^{\otimes 2} \cong \mathcal{O}_E(R))$ denote the line bundle associated with the double cover $C' \to E$, where $R$ is its branch divisor. Set $\mathcal{L}_1 := \eta_0$, $\mathcal{L}_2 := \eta_0 \otimes \mathcal{L}_3$, and let $u_i \colon C_i \to E$ be the ramified covering determined by $\mathcal{L}_i$.
 \begingroup
 \upshape
 %\setlist{itemsep=-0.4em}
@@ -1190,7 +1182,7 @@ Thus, $S_2^{\oplus m} \subset G$, and since $G$ maps onto $S_m$, we obtain $G = 
 The availability of these criteria permits the systematic construction of numerous cases where the associated monodromy group is large.
 
 \begin{eg} \label{eg:mon_of_Jac}
-Let $C$ be a smooth curve of genus $g$ embedded in its Jacobian $A := \Jac(C)$ via the Abel–Jacobi map $\AJ_C: C \hookrightarrow A$.
+Let $C$ be a smooth curve of genus $g$ embedded in its Jacobian $A := \Jac(C)$ via the Abel–Jacobi map $\AJ_C: C \hookrightarrow A$. In this case, the tangent Gauss map is the canonical map $|\omega_C|$.
 
 When $C$ is non-hyperelliptic, the corresponding Gauss map 
 $$|\omega_C|: C\longrightarrow \mathbb{P}^{g-1}$$
@@ -1646,7 +1638,7 @@ Fix $d$ and $\tilde{d} = d/2$, and let $l \in \mathbb{N}_{\geqslant 0}$. For a p
 \end{equation*}
 In this definition:
 \begin{itemize}
-\item $\alpha=\{A_1,\ldots,A_k\} \in \mathcal{P}(d)$ is a set partition with $k = \#\alpha$ blocks (analogously for $\beta$);
+\item $\alpha=\{A_1,\ldots,A_k\} \in \mathcal{P}(d)$ is a set partition of $[d]$ with $k = \#\alpha$ blocks (analogously for $\beta$);
 \item $\boldsymbol{l}=(l_1,\ldots,l_k) \in \mathbb{Z}^k$, and $\boldsymbol{l} \dashv \lambda$ indicates that $\boldsymbol{l}$ is of type $\lambda$, meaning that its nonzero components, counted with multiplicities, form the partition $\lambda$;
 \item $\mu(\hat{0}, \alpha) = (-1)^{d-k} \prod_{i=1}^{k}\, \left(\rule{0mm}{3mm}|A_i|-1\right)$ is the Möbius function;
 \item $\alpha(m)^{2\boldsymbol{l}}=  \left( \sum_{i \in A_1}m_i \right)^{2l_1} \cdots \left( \sum_{i \in A_k}m_i \right)^{2l_k}$ and $ \beta(\widetilde{m}^2)^{\boldsymbol{l}}=  \left(\sum_{i \in A_1} m_i^2\right)^{l_1} \cdots \left(\sum_{i \in A_k} m_i^2\right)^{l_k}$.
