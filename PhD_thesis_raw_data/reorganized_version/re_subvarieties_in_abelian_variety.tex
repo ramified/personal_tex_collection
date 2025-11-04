@@ -346,62 +346,62 @@ Berlin, 12489\\ Germany\\}
 \tableofcontents
 
 \section{Introduction}
-From any subvariety of an abelian variety, one can associate a reductive group through the convolution of perverse sheaves. This correspondence allows traditional problems in algebraic geometry to be reformulated in representation-theoretic terms, thereby offering new geometric insights. The characteristic cycle serves as a fundamental invariant attached to a perverse sheaf, and its detailed analysis often plays a crucial role in addressing these problems, cf. \cite[\S 5–\S 8]{JKLM22}. Recent work demonstrates that one can approach these characteristic cycles directly as conic Lagrangian cycles, without invoking the full machinery of perverse sheaves.
+To any subvariety of an abelian variety, one can associate a reductive group through the convolution of perverse sheaves. This correspondence allows to reformulate problems in algebraic geometry in representation-theoretic terms, thereby offering new geometric insights. A crucial role in this context is played by the characteristic cycle, a fundamental invariant attached to a perverse sheaf, \cite[\S 5–\S 8]{JKLM22}. Recent work demonstrates that one can approach these characteristic cycles directly as conic Lagrangian cycles, without invoking the full machinery of perverse sheaves.
 
-In \cite{Kr20}, Prof. Krämer establishes a correspondence between Weyl group orbits and conic Lagrangian cycles in the cotangent bundle, where these cycles arise as the conormal bundles of certain subvarieties. Despite this correspondence, an explicit geometric description of these cycles themselves remains elusive. In this article, we propose a purely geometric construction of these cycles and analyze three key properties of the associated subvarieties: irreducibility, dimension, and homology class.
+In \cite{Kr20}, Krämer establishes a correspondence between Weyl group orbits and conic Lagrangian cycles in the cotangent bundle which arise as the conormal varieties of certain subvarieties. Despite this correspondence, an explicit geometric description of these cycles themselves remains elusive. In this article, we propose a purely geometric construction of these cycles and analyze three key properties of the associated subvarieties: irreducibility, dimension, and homology class.
 
 $\,$
 
-Concerning irreducibility, we observe that the irreducible components correspond precisely to the orbits of the monodromy group. Hence, the discrepancy between the monodromy group and the Weyl group provides a measure of the failure of irreducibility of these subvarieties. A natural question is how big this discrepancy could be. For this, we formulate a conjecture that refines \cite[Conjecture~8]{Kr16cubicthreefold}:
+Concerning irreducibility, it follows from the constructions in \cite[2.c]{Kr20} that the irreducible components of the appearing cycles correspond precisely to the orbits of a certain monodromy group. The discrepancy between the monodromy group and a closely related Weyl group provides a measure of the failure of irreducibility of these subvarieties. A natural question is how big this discrepancy could be. For this, we formulate a conjecture that refines \cite[Conjecture~8]{Kr16cubicthreefold}:
 
 \begin{conjecture}\label{conj:big_mon_for_curve}
-Let $A$ be an abelian variety of dimension $n$, and let $C \subset A$ be a non-degenerate curve that is not invariant under any non-trivial translation. Then, the monodromy group $\Gal(\gamma_C)$ is expected to be big (see Definition \ref{def:big_mono}).
+Let $A$ be an abelian variety of dimension $n$, and let $C \subset A$ be a non-degenerate curve that is not invariant under any non-trivial translation. Then, the monodromy group $\Gal(\gamma_C)$ is big (see Definition \ref{def:big_mono}).
 \end{conjecture}
-For $n>2$, this conjecture admits a purely geometric formulation:
+For $n>2$, this conjecture admits a purely geometric reformulation:
 \begin{conjecture}
-Let $A$ be an abelian variety of dimension $n$, $n>2$, and let $C \subset A$ be a non-degenerate curve that is not invariant under any non-trivial translation. Then:
+Let $A$ be an abelian variety of dimension $n>2$, and let $C \subset A$ be a non-degenerate curve that is not invariant under any non-trivial translation in $A$. Then:
 \begin{itemize}[-]
 \item If $C$ is invariant under some reflection, the tangent Gauss map $\phi_C: C \longrightarrow \mathbb{P}^{n-1}$ is a double cover onto its image;
 \item If $C$ is not invariant under any reflection, the tangent Gauss map $\phi_C: C \longrightarrow \mathbb{P}^{n-1}$ is generically injective.
 \end{itemize}
 \end{conjecture}
-A complete proof or counterexample of Conjecture \ref{conj:big_mon_for_curve} is not yet known. In the course of our study, we analyze the Prym case thoroughly, which is summarized in Theorem \ref{thm:A}:
+In general Conjecture \ref{conj:big_mon_for_curve} is still open. We analyze the Prym case thoroughly, which will lead to the following result:
 
 \begin{theoremA}\label{thm:A}
-For any étale double cover $h: C \longrightarrow C'$ of smooth, projective, non-hyperelliptic curves with $g(C') > 9$, one may view $C$ as a subvariety of the Prym variety $\Prym(C/C')$ via the Abel–Prym map. Then the associated monodromy group is typically big, except in the case where $C'$ is bielliptic and $h$ arises as the pullback of an étale double cover of elliptic curves. In this exceptional situation, the curve $C \subset \Prym(C/C')$ is stabilized by a non-trivial translation.
+For any étale double cover $h: C \longrightarrow C'$ of smooth, projective, non-hyperelliptic curves, one may view $C$ as a subvariety of the Prym variety $\Prym(C/C')$ via the Abel–Prym map. Then the associated monodromy group is big, except in the case where $C'$ is bielliptic and $h$ arises as the pullback of an étale double cover of elliptic curves. In this exceptional situation, the curve $C \subset \Prym(C/C')$ is stable under a non-trivial translation.
 \end{theoremA}
 
 Theorem \ref{thm:A} follows from a combination of Proposition \ref{prop:big_genus_Prym_case} and Lemma \ref{lem:bielliptic_with_big_mon}. The bielliptic case, which constitutes an exception, is analyzed thoroughly in Subsection \ref{subsec:small_mon}.
 
 $\,$
 
-For the dimension and homology class of a subvariety $Z$, both invariants can be recovered from the homology class of $\mathbb{P}\Lambda_{Z} \subset \mathbb{P}T^*A$ — that is, from the Chern--Mather class of $Z$. Standard computational techniques are available when the group is a full or signed symmetric group. 
+For the dimension and homology class of a subvariety $Z$, both invariants can be recovered from the homology class of $\mathbb{P}\Lambda_{Z} \subset \mathbb{P}T^*A$ — that is, from the total Chern--Mather class of $Z$. Standard computational techniques are available when the monodromy group is a full or signed symmetric group. 
 
 \begin{theoremB}\label{thm:B}
-Consider a non-degenerate subvariety $Z \subset A$ and a tuple $(m) = (m_1, \ldots, m_d) \in \mathbb{Z}^d$. Let $Z^{(m)} \subset A$ be as in Definition \ref{def:subvar_Z^{(m)}}. Denote $d = \deg \gamma_Z$, $\widetilde{d} = d/2$, and set $c_l := c_{M,l}(\Lambda_Z)$ to be the Chern--Mather class of $Z$, with $*$ representing the Pontryagin product.
+Consider a non-degenerate subvariety $Z \subset A$ and a tuple $(m) = (m_1, \ldots, m_d) \in \mathbb{Z}^d$. Let $Z^{(m)} \subset A$ be as in Definition \ref{def:subvar_Z^{(m)}}. Let $d = \deg \gamma_Z$, $\widetilde{d} = d/2$, and let $c_l := c_{M,l}(\Lambda_Z)$ be the Chern--Mather class of $Z$. Let $*$ be the Pontryagin product.
 \begingroup
 \upshape
 %\setlist{itemsep=-0.4em}
 \renewcommand\labelenumi{(\theenumi)}
 \begin{enumerate}[(1)]
-\item When $\Gal(\gamma_{Z})=S_d$, the Chern--Mather class of $Z^{(m)}$ can be written as
+\item When $\Gal(\gamma_{Z})=S_d$, the Chern--Mather classes of $Z^{(m)}$ can be written as
 \begin{equation*}
 \begin{aligned}
   c_{M,l}\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{c_Z^{(m)}} \sum_{\lambda \dashv l} \;\mu_d^{\lambda} \left( \bigast_{i=1}^r c_{\lambda_i}\right) \\ 
 \end{aligned}
 \end{equation*}
-for some $c_Z^{(m)} \in \mathbb{N}_{>0}$ and $\mu_d^{\lambda} \in \mathbb{Z}$.
-\item When $Z=-Z$ and $\Gal(\gamma_{Z})=W(C_{d/2})$, the Chern--Mather class of $Z^{(m)}$ can be written as
+for certain explicit coefficients $c_Z^{(m)} \in \mathbb{N}_{>0}$ and $\mu_d^{\lambda} \in \mathbb{Z}$.
+\item When $Z=-Z$ and $\Gal(\gamma_{Z})=W(C_{d/2})$, the Chern--Mather classes of $Z^{(m)}$ can be written as
 \begin{equation*}
 \begin{aligned}
   c_{M,l}\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{c_Z^{(m)}} \sum_{\lambda \dashv l} \;\widetilde{\mu}_{\widetilde{d}}^{\lambda} \left( \bigast_{i=1}^r c_{\lambda_i}\right) \\
 \end{aligned}
 \end{equation*}
-for some $c_Z^{(m)} \in \mathbb{N}_{>0}$ and $\widetilde{\mu}_{\widetilde{d}}^{\lambda} \in \mathbb{Z}$.
+for certain explicit coefficients $c_Z^{(m)} \in \mathbb{N}_{>0}$ and $\widetilde{\mu}_{\widetilde{d}}^{\lambda} \in \mathbb{Z}$.
 \end{enumerate}
 \endgroup
 \end{theoremB}
-Theorem \ref{thm:B} will occupy the whole Section \ref{sec:CM_class} to prove. In fact, we will show (1) in \eqref{eq:CMclass_sym}, and (2) in \eqref{eq:CMclass_signsym}. The combinatorial coefficients $\mu_d^{\lambda}$ and $\widetilde{\mu}_{\widetilde{d}}^{\lambda}$ appearing in the formulas are defined in Definition \ref{def:Moebius_block-sum}, while the case of Jacobian is discussed in detail in Example \ref{eg:dim_in_Jac_case}.
+The proof of theorem \ref{thm:B} will occupy Section \ref{sec:CM_class}. In fact, we will show (1) in \eqref{eq:CMclass_sym}, and (2) in \eqref{eq:CMclass_signsym}. The combinatorial coefficients $\mu_d^{\lambda}$ and $\widetilde{\mu}_{\widetilde{d}}^{\lambda}$ appearing in the formulas are defined in Definition \ref{def:Moebius_block-sum}, while the case of Jacobian varieties is discussed in detail in Example \ref{eg:dim_in_Jac_case}.
 
 $\,$
 
@@ -409,35 +409,36 @@ The structure of the article is as follows.
 
 In Section \ref{sec:Gauss_map}, we fix notation and describe the Gauss map from three different perspectives. We also define the monodromy group and highlight its connection to the degree of the tangent Gauss map.
 
-In Section \ref{sec:subvarieties}, we define the subvariety $Z^{(m)}$, which serves as the central object of this study. In Subsection \ref{subsec:relation_with_perverse_sheaf}, we briefly discuss the background of these varieties, explaining how they naturally arise as the characteristic cycles of certain perverse sheaves.
+In Section \ref{sec:subvarieties}, we define the subvarieties $Z^{(m)}$, which serve as the central objects of this study. In Subsection \ref{subsec:relation_with_perverse_sheaf}, we briefly discuss how these varieties naturally arise as the characteristic cycles of certain perverse sheaves.
 
-Section \ref{sec:mon_examples} is devoted to the explicit computation of the monodromy group in selected cases, with a particular focus on the Prym curve situation. Subsection \ref{subsec:small_mon} presents an example in which the monodromy group is small; however, this does not constitute a counterexample to Conjecture \ref{conj:big_mon_for_curve}, as the group remains invariant under a non-trivial translation, as discussed in Lemma \ref{lem:small_mon_but_translation_invariant}. In Subsection \ref{subsec:criteria_big_mon}, we collects several sufficient conditions for the monodromy group to be large, which we then employ in Subsection \ref{subsec:big_mon_case} to show that, for all remaining Prym curve cases with $g(C')>9$, the monodromy group is necessarily large.
+Section \ref{sec:mon_examples} is devoted to the explicit computation of the monodromy group in selected cases, with a particular focus on the Prym curve situation. Subsection \ref{subsec:small_mon} presents an example in which the monodromy group is small; however, this does not constitute a counterexample to Conjecture \ref{conj:big_mon_for_curve}, as the curve remains invariant under a non-trivial translation, as discussed in Lemma \ref{lem:small_mon_but_translation_invariant}. In Subsection \ref{subsec:criteria_big_mon}, we collect several sufficient conditions for the monodromy group to be large, which we then employ in Subsection \ref{subsec:big_mon_case} to show that, for all remaining Prym curve cases with $g(C')>9$, the monodromy group is necessarily large.
 
-In Section \ref{sec:CM_class}, we focus on the computation of the dimension and the homology class of $Z^{(m)}$. After recalling the Chern-Mather class in Subsection \ref{subsec:CM_class}, the task reduces to computing $[\mathbb{P} \Lambda_{Z^{(m)}}]$, which can be carried out via a standard procedure. Subsections \ref{subsec:CMclass_typeA} and \ref{subsec:CMclass_typeC} treat the cases of type $A$ and type $C$, respectively. The derivation of the formulas involves certain coefficients that are purely combinatorial in nature. These technical combinatorial contributions are treated separately in Subsection \ref{subsec:Moebius_block-sum}.
+In Section \ref{sec:CM_class}, we focus on the computation of the dimension and the homology class of $Z^{(m)}$. After recalling the definition of the Chern-Mather class in Subsection \ref{subsec:CM_class}, the task reduces to computing $[\mathbb{P} \Lambda_{Z^{(m)}}]$. Subsections \ref{subsec:CMclass_typeA} and \ref{subsec:CMclass_typeC} treat the cases of type $A$ and type $C$, respectively. The derivation of the formulas involves certain coefficients that are purely combinatorial in nature. These combinatorial contributions are treated separately in Subsection \ref{subsec:Moebius_block-sum}.
 
 
 \section*{Acknowledgement}
 %\addcontentsline{toc}{section}{Acknowledgement}
 
-I would like to express my sincere gratitude to my supervisor, Thomas Krämer, without whose support this work would not have been possible. He proposed the problem, guided me throughout the project, and generously spent many hours discussing drafts and explaining important ideas. I am also thankful to Haohao Liu, Chenji Fu, Zhixing Chen, Vincent Ariksoy, Aaron Beumer, Roben de Preter, Andreas Kretschmer, Andrés Rojas, Søren Gammelgaard, Paweł Borówka, and Gavril Farkas for their insightful discussions and valuable comments. Funding is provided by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) under Germany´s Excellence Strategy – The Berlin Mathematics Research Center MATH+ (EXC-2046/1, project ID: 390685689).
+I would like to express my sincere gratitude to my supervisor, Thomas Krämer, without whose support this work would not have been possible. He proposed the problem, guided me throughout the project, and generously spent many hours discussing drafts and explaining important ideas. I am also thankful to Haohao Liu, Chenji Fu, Zhixing Chen, Vincent Ariksoy, Aaron Beumer, Roben de Preter, Andreas Kretschmer, Andrés Rojas, Søren Gammelgaard, Paweł Borówka, and Gavril Farkas for their insightful discussions and valuable comments. Funding is provided by the DFG (German Research Foundation) under Germany´s Excellence Strategy – The Berlin Mathematics Research Center MATH+ (EXC-2046/1, project ID: 390685689).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Tangent Gauss map and conormal Gauss map}\label{sec:Gauss_map}
-For simplicity, we work over the base field $\kappa = \mathbb{C}$, and by a variety we mean a integral separated scheme of finite type over $\mathbb{C}$. Let $A/\mathbb{C}$ be an abelian variety of dimension $n$, and let $Z \subseteq A$ be an irreducible closed subvariety of dimension $r$. We denote by $\iota_Z: Z \hookrightarrow A$ the inclusion morphism.
+We work over the base field $\kappa = \mathbb{C}$, and by a variety we mean a integral separated scheme of finite type over $\mathbb{C}$. Let $A/\mathbb{C}$ be an abelian variety of dimension $n$, and let $Z \subseteq A$ be an irreducible closed subvariety of dimension $r$. We denote by $\iota_Z: Z \hookrightarrow A$ the inclusion morphism.
 
 \subsection{Gauss map and monodromy group}
 \begin{definition}
-For a subvariety $Z \subset A$, the tangent Gauss map of $Z$ is defined as 
+For a subvariety $Z \subset A$, the tangent Gauss map of $Z$ is the map
 $$\phi_Z: \Zsm \longrightarrow \Gr(r,T_0 A) \qquad p \longmapsto T_pZ \;\;\subseteq T_pA \cong T_0 A$$
-which describes the tangent space information at each point.
+sending a smooth point to the tangent space at that point (seen as a subspace of $T_0 A$).
 \end{definition} 
 
 \begin{remark}
 Any map $X\longrightarrow\Gr(r, V)$ is induced by a rank $r$ vector bundle $\mathcal{E}$ on $X$ together with an epimorphism $V^{*}\otimes \mathcal{O}_X \twoheadrightarrow \mathcal{E}$. In our case, the map $\phi_Z$ is induced by the tangent bundle $\mathcal{T}_{\Zsm}$ and the sections
-$$T_0^{*} A \otimes_{\mathbb{C}} \mathcal{O}_{\Zsm} \rightarrow\Hnm^0(\Zsm,\mathcal{T}_{\Zsm}^{\vee}) \otimes_{\mathbb{C}} \mathcal{O}_{\Zsm} \twoheadrightarrow \mathcal{T}_{\Zsm}^{\vee}.$$
+$$T_0^{*} A \otimes_{\mathbb{C}} \mathcal{O}_{\Zsm} \rightarrow\Hnm^0(\Zsm,\mathcal{T}_{\Zsm}^{*}) \otimes_{\mathbb{C}} \mathcal{O}_{\Zsm} \twoheadrightarrow \mathcal{T}_{\Zsm}^{*}.$$
 \end{remark}
 
 
-The definition of the conormal Gauss map requires a brief recollection of the conormal variety. On the smooth locus, the normal and conormal bundles behave well as vector bundles:\footnote{This is more symmetric when writing them as short exact sequences:
+The definition of the conormal Gauss map requires a brief recollection of the conormal variety. On the smooth locus, the normal and conormal bundles are the vector bundles $\mathcal{N}_{\Zsm/A}$ resp. $\mathcal{N}_{\Zsm/A}^*$ defined by the short exact sequences
+
 % https://q.uiver.app/#q=WzAsMTAsWzMsMCwiXFxtYXRoY2Fse059X3tcXFpzbS9BfSJdLFsxLDAsIlxcbWF0aGNhbHtUfV97XFxac219Il0sWzIsMCwiXFxtYXRoY2Fse1R9X0F8X3tcXFpzbX0iXSxbMSwxLCJcXExhbWJkYV97XFxac219ICJdLFsyLDEsIlxcT21lZ2FfQXxfe1xcWnNtfSAiXSxbMywxLCJcXE9tZWdhX3tcXFpzbX0gIl0sWzQsMCwiMCJdLFs0LDEsIjAiXSxbMCwwLCIwIl0sWzAsMSwiMCJdLFsxLDJdLFsyLDBdLFszLDRdLFs0LDVdLFswLDZdLFs1LDddLFs4LDFdLFs5LDNdXQ==
 \[\begin{tikzcd}[ampersand replacement=\&,column sep=2.25em,row sep=tiny]
 	0 \& {\mathcal{T}_{\Zsm}} \& {\mathcal{T}_A|_{\Zsm}} \& {\mathcal{N}_{\Zsm/A}} \& 0 \\
@@ -451,21 +452,18 @@ The definition of the conormal Gauss map requires a brief recollection of the co
 	\arrow[from=2-3, to=2-4]
 	\arrow[from=2-4, to=2-5]
 \end{tikzcd}\]
-}
-$$\mathcal{N}_{\Zsm/A} := \mathcal{T}_A|_{\Zsm} \;/\; \mathcal{T}_{\Zsm} \qquad \mathcal{N}_{\Zsm/A}^* = \ker \left( \Omega_A|_{\Zsm} \rightarrow \rule{0mm}{3.4mm} \Omega_{\Zsm} \right).$$
-We write $\Lambda_{\Zsm}$ as the total space of $\mathcal{N}_{\Zsm/A}^*$.
+We write $\Lambda_{\Zsm}$ for the total space of $\mathcal{N}_{\Zsm/A}^*$.
 The conormal variety $\Lambda_{Z}$ is the closure of $\Lambda_{\Zsm}$ viewed as a subvariety in $T^*A$:
 $$\Lambda_{Z}:=\;\; \overline{\Lambda_{\Zsm}} \;\; \subset T^*A \;\cong\; A \times T^{*}_{0}A$$
-this is a conical Lagrangian cycle in $T^*A$. The (affine) conormal Gauss map is defined as
+It is a conical Lagrangian subvariety of $T^*A$. The (affine) conormal Gauss map is defined as
 $$\gamma_Z^{\aff}: \Lambda_{Z} \subset A \times T^{*}_{0}A \longrightarrow T^{*}_{0}A$$
 
 For intersection-theoretic purposes it is more natural to work with projectivized conormal spaces. We therefore pass from the affine conormal Gauss map to its projectivized version:
 \begin{definition}
-the projectivized conormal variety
-$$\mathbb{P}\Lambda_{Z}:=\;\; \overline{\mathbb{P}\Lambda_{\Zsm}} \;\; \subset \mathbb{P}T^*A \;\cong\; A \times \mathbb{P}T^{*}_{0}A$$
-is a Legendrian cycle in the contact variety $A \times \mathbb{P}T^{*}_{0}A$. $\mathbb{P}\Lambda_{\Zsm}$ is a $\mathbb{P}^{r-1}$-bundle over $\Zsm$, and the map 
-$$\gamma_Z: \mathbb{P}\Lambda_{Z} \subset A \times \mathbb{P}T^{*}_{0}A \longrightarrow \mathbb{P}T^{*}_{0}A$$
-is called the (projectivized) conormal Gauss map.
+The projectivized conormal variety of a subvariety $Z \subset A$ is defined by
+$$\mathbb{P}\Lambda_{Z}:=\;\; \overline{\mathbb{P}\Lambda_{\Zsm}} \;\; \subset \mathbb{P}T^*A \;\cong\; A \times \mathbb{P}T^{*}_{0}A,$$
+ and the (projectivized) conormal Gauss map is defined by
+$$\gamma_Z: \mathbb{P}\Lambda_{Z} \subset A \times \mathbb{P}T^{*}_{0}A \longrightarrow \mathbb{P}T^{*}_{0}A.$$
 \end{definition} 
 By \cite[Theorem 2.8 (1)]{JKLM22}, $\gamma_Z$ is generically finite when $Z$ is (an integral variety) of general type.
 
@@ -473,24 +471,24 @@ A lot of geometry of $Z$ is encoded in the map $\gamma_Z$. For instance, if $Z \
 $$\deg \gamma_Z = (-1)^r \chi(Z),$$
 where $\chi(Z)=\sum_i (-1)^i b_i(Z)$ is the topological Euler characteristic of $Z$.
 
-Further insight can be gained by analyzing the fibers of $\gamma_Z$. For instance, if $Z$ is preserved by a translation $t_v: A\longrightarrow A$, then each fiber $\gamma_Z^{-1}(\xi) \subset A$ is also invariant under $t_v$. Likewise, if $Z = -Z$, then the fiber satisfies $\gamma_Z^{-1}(\xi) = -\gamma_Z^{-1}(\xi)$. Finding further constraints is more challenging.\footnote{You can imagine the fiber $\gamma_Z^{-1}(\xi)$ as a cluster of stars projected onto a celestial dome. As $\xi$ varies, these points shift, tracing out paths much like stars drifting across the night sky. The constraints that govern them are subtle, like the imagined lines that shape constellations. And in the long arc of variation, monodromy emerges—like the slow turning that replaces Kochab with Polaris among the stars.}
+Further insight can be gained by analyzing the fibers of $\gamma_Z$. For instance, if $Z$ is preserved by a translation $t_v: A\longrightarrow A$, then each fiber $\gamma_Z^{-1}(\xi) \subset A$ is also invariant under $t_v$. Likewise, if $Z = -Z$, then the fiber satisfies $\gamma_Z^{-1}(\xi) = -\gamma_Z^{-1}(\xi)$. Finding further constraints is more challenging.
 
 An important invariant arising from the fiber $\gamma_Z^{-1}(\xi)$ is the monodromy group $\Gal(\gamma_Z)$; for completeness, we recall its definition below.
 
 \begin{definition}
 Let $f: Y \to X$ be a generically finite morphism between algebraic varieties. Then there exists a non-empty open subset $U \subseteq X$ such that the restriction $f^{-1}(U) \to U$ is a finite étale cover.
-Moving along a closed loop in $U$ induces a permutation of the points in the fiber $f^{-1}(\xi_0)$, which defines the map\footnote{In the last isomorphism we implicitly give an order to the fiber $f^{-1}(\xi)$.}
+Moving along a closed loop in $U$ induces a permutation of the points in the fiber $f^{-1}(\xi_0)$, which defines the map\footnote{In the last isomorphism we implicitly give a labelling from $\{1,2,\ldots, \deg f\}$ to the fiber $f^{-1}(\xi)$.}
 $$\rho_{f}: \pi_1(U, \xi_0) \longrightarrow \Aut (f^{-1}(\xi_0)) \cong S_{\deg f}.$$ 
 The monodromy group is then defined as the image of $\rho_{f}$, i.e.,
 $$\Gal(f):= \Img \rho_{f}.$$
-It is clear that $\Gal(f)$ doesn't depend on the choice of $U$.
+When $U$ is smooth, the isomorphism class of $\Gal(f)$ doesn't depend on the choice of $U$.
 \end{definition}
 
 
 \subsection{Interpolation via hyperplanes}
-In this subsection, we reinterpret $\gamma_Z$ using a functorial and more transparent framework. This permits the definition of the conormal Gauss map and its monodromy group for any morphism $\phi_Z: Z \to \Gr(r,n)$ with $\dim Z = r$, and clarifies the relation between the monodromy group and $\deg \phi$.
+In this subsection, we reinterpret $\gamma_Z$ using a functorial and more transparent framework. This permits to define the conormal Gauss map and its monodromy group for any morphism $\phi_Z: Z \to \Gr(r,n)$ with $\dim Z = r$, and clarifies the relation between the monodromy group and $\deg \phi_Z$.
 
-Since each non-zero conormal vector $\xi  \in T^{*}_{0}A$ determines a hyperplane $H_{\xi} \in \Gr(n-1, T_0A)$, we have the isomorphisms (To simplify notation, we abbreviate $T^{*}_{0}A$ by $W$.)
+To simplify notation, we abbreviate $T^{*}_{0}A$ by $W$. Since each non-zero conormal vector $\xi  \in T^{*}_{0}A$ determines a hyperplane $H_{\xi} \in \Gr(n-1, T_0A)$, we have the isomorphisms 
 \begin{equation*}
 \begin{aligned}
    \mathbb{P}T^{*}_{0}A \cong\;& \Gr(n-1, T_0A), \\ 
@@ -510,7 +508,7 @@ is the incidence variety relating $\Gr(r,W)$ and $\Gr(n-1, W)$. In these terms,
 \end{equation*}
 is the collection of points whose tangent spaces lie entirely within $H$.
 
-Geometrically, the monodromy can be described as follows: given a general hyperplane $H \in \mathbb{P}T^{*}_{0}A$, its preimage consists of $d$ points ${ p_1, \ldots, p_d }$. Moving $H$ continuously along a closed loop causes these points to permute, and the monodromy group $\Gal(\gamma_Z)$ consists of all permutations obtained this way. With this formulation, it suffices to consider the Gauss map $\phi_Z$ alone; the inclusion $\iota_Z: Z \to A$ is no longer required for computing the monodromy group.
+Geometrically, the monodromy can be described as follows: Given a general hyperplane $H \in \mathbb{P}T^{*}_{0}A$, its preimage under $\gamma_{Z}$ consists of $d$ points ${ p_1, \ldots, p_d }$. Moving $H$ continuously along a closed loop we obtain a permutation of these points, and the monodromy group $\Gal(\gamma_Z)$ consists of all permutations obtained this way. With this formulation, it suffices to consider the Gauss map $\phi_Z$ alone; the inclusion $\iota_Z: Z \to A$ is no longer required for computing the monodromy group.
 
 \begin{definition}\label{def:general_monodromy}
 Let $Z$ be an $r$-dimensional variety and $\phi: Z \longrightarrow \Gr(r,n)$ a morphism. The monodromy group $\Mon(\phi)$ is defined as $\Gal(f_{\phi})$, where
@@ -522,7 +520,7 @@ Let $\phi: Z \to \Gr(r,n)$ be generically $k$-to-$1$ onto its image. With a suit
 $$S_k \wr S_{d/k}:= \left( S_k^{\oplus d/k} \right) \rtimes S_{d/k}. $$
 \end{lemma}
 \begin{proof}
-Consider the diagram below:  
+For a general hyperplane $H$, consider the Cartesian diagram below:  
 % https://q.uiver.app/#q=WzAsNyxbMCwwLCJcXHBoaToiXSxbMiwwLCJcXEltZyBaIl0sWzEsMCwiWiJdLFszLDAsIlxcR3IocixuKSJdLFszLDEsIlxcR3IocixIKSJdLFsyLDEsIlxce3FfMSxcXGxkb3RzLHFfe2Qva31cXH0iXSxbMSwxLCJcXHtwXzEsXFxsZG90cyxwX2RcXH0iXSxbMiwxLCJrOjEiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMSwzLCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs2LDVdLFs1LDRdLFs2LDIsIlxccm90YXRlYm94W29yaWdpbj1jXXs5MH17JFxcc3Vic2V0JH0iLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNSwxLCJcXHJvdGF0ZWJveFtvcmlnaW49Y117OTB9eyRcXHN1YnNldCR9IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzQsMywiXFxyb3RhdGVib3hbb3JpZ2luPWNdezkwfXskXFxzdWJzZXQkfSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
 \[\begin{tikzcd}[ampersand replacement=\&,row sep=small]
 	{\phi:} \&[-10mm] Z \& {\Img Z} \& {\Gr(r,n)} \\
@@ -538,15 +536,15 @@ Consider the diagram below:
 The fiber $\phi^{-1}\left( \Gr(r,H_0) \right)$ splits into $d/k$ groups of points, with the monodromy group acting by permutations within each group and among the groups.
 \end{proof}
 
-\subsection{Interpolation via higher Brill--Noether theory}
+\subsection{Interpolation via Albanese morphisms}
 Examples of subvarieties of abelian varieties can be obtained in two ways: one may fix an abelian variety and consider cycles within it, or begin with a variety $Z$ and construct a map to an abelian variety, such as the Albanese map. When adopting the latter perspective, we write $X$ for the same variety $Z$ to stress the focus on the variety itself.
 
-In this subsection, we begin with the case $X \to \Alb(X)$, from which we derive some basic properties of the Albanese map and the tangent Gauss map. The remaining cases can then be treated in an analogous manner.
+In this subsection, we begin with the Albanese morphism $X \to \Alb(X)$, from which we derive some basic properties of the tangent Gauss map. Any other morphism to an abelian variety factors over the Albanese morphism, and then analogous methods apply, see Proposition \ref{prop:tangent_Gauss_outside_Albanese}.
 
 Let $X$ be a smooth complex projective variety of dimension $r$, and set $n := \dim_{\mathbb{C}} \Hnm^0(X, \Omega_X) = h^{1,0}$.
 Recall that the Albanese variety of $X$ is defined as
 $$\Alb(X):=\Hnm^0(X, \Omega_X)^* / \Hnm_1(X, \mathbb{Z})_{\mathrm{free}},$$
-and the Albanese map is given by (pick a base point $p_0 \in X$)
+and the Albanese map is given by (for some fixed base point $p_0 \in X$)
 $$\alpha: X \longrightarrow \Alb(X) \qquad 
 \qquad p \longmapsto \left[ \;\;\omega \mapsto \int_{\gamma: p_0 \sim p} \omega \;\;\right].$$
 
@@ -600,17 +598,19 @@ In particular,
 \begin{equation*}
 \begin{aligned}
   & \alpha \text{ is surjective} & \Longleftrightarrow\quad& h^0(X, \Omega_X(-p))=0 \\ 
-  & \alpha \text{ is finite onto image} & \Longleftrightarrow\quad& h^0(X, \Omega_X(-p))=n-r \\ 
+  & \alpha \text{ is generically finite onto its image} & \Longleftrightarrow\quad& h^0(X, \Omega_X(-p))=n-r \\ 
   & \alpha \text{ is constant} & \Longleftrightarrow\quad& h^0(X, \Omega_X(-p))=n \\ 
   & & \Longleftrightarrow\quad& h^1(X, \Omega_X(-p))=h^1(X, \Omega_X) \\ 
   & & \Longleftrightarrow\quad& n=0. \\ 
 \end{aligned}
 \end{equation*}
 \end{proposition}
+
+
 We will concentrate on the case where $\alpha$ is finite onto its image.\footnote{The general method remains valid in the broader setting, but the Gauss map then takes values in a different space.} Under this assumption, we set $Z = X$ and $A = \Alb(Z)$. The corresponding Gauss map is then a rational map:
 % https://q.uiver.app/#q=WzAsNixbMCwwLCJcXHBoaV9aOiJdLFsyLDAsIlxcR3IocixUXjBBKSJdLFsxLDAsIloiXSxbMywwLCJcXEdyKG4tcixcXEhubV4wKFgsXFxPbWVnYV9YKSkiXSxbMywxLCJcXEhubV4wKFgsXFxPbWVnYV9YKC1wKSkiXSxbMSwxLCJwIl0sWzUsNCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibWFwcyB0byJ9fX1dLFsyLDEsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsxLDMsIlxcY29uZyIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
 \[\begin{tikzcd}[row sep={-1mm}]
-	{\phi_Z:} &[-10mm] Z &[5mm] {\Gr(r,T^0A)} & [-7mm] {\Gr(n-r,\Hnm^0(X,\Omega_X))} \\
+	{\phi_Z:} &[-10mm] Z &[5mm] {\Gr(r,T_0A)} & [-7mm] {\Gr(n-r,\Hnm^0(X,\Omega_X))} \\
 	& p && {\Hnm^0(X,\Omega_X(-p))}
 	\arrow[dashed, from=1-2, to=1-3]
 	\arrow["\cong"{description}, draw=none, from=1-3, to=1-4]
@@ -633,17 +633,17 @@ is the incidence variety relating $\Gr(n-r,n)$ and $\Gr(1, n)$. In that case,
     \gamma_Z^{-1}([\omega])=\;& \left\{\, p  \in X  \;\middle|\; \omega(p)=0 \,\right\}  \\  
 \end{aligned}
 \end{equation*}
-is the zero set of section $\omega \in \Hnm^0(X,\Omega_X)$. The number $(-1)^r \deg \gamma_Z$ is the index in the Poincaré--Hopf index formula, and the monodromy group $\Gal(\gamma_Z)$ serves as a more refined invariant, encoding subtler aspects of the geometry.
+is the zero set of the section $\omega \in \Hnm^0(X,\Omega_X)$. The number $(-1)^r \deg \gamma_Z$ is the index in the Poincaré--Hopf index formula, and the monodromy group $\Gal(\gamma_Z)$ serves as a more refined invariant.
 
-The next proposition shows when the Gauss map $\phi_Z$ is not generic injective.
+The next proposition shows when the Gauss map $\phi_Z$ is not generically injective.
 \begin{proposition}
-When $\alpha$ is finite onto its image,
+When $\alpha$ is generically finite onto its image,
 \begin{equation*}
 \begin{aligned}
-  \;&  \phi_Z \text{ is not generic injective} \\ 
-  \Longleftrightarrow\;\;& \text{For general $p \in X$, exists $q \neq p$ such that $h^0(X,\Omega_X(-p-q))=n-r$} \\ 
-  \stackrel{\textcolor{purple}{\textbf{?}\footnotemark}}{\Longleftrightarrow}\;\;& \text{For general $p \in X$, exists $S \in X^{[2]}$ such that $p\in S$ and $h^0(X,\Omega_X \otimes \mathcal{I}_S)=n-r$} \\ 
-  \Longleftrightarrow\;\;& \text{For all $p \in X$, exists $S \in X^{[2]}$ such that $p\in S$ and $h^0(X,\Omega_X \otimes \mathcal{I}_S)\geqslant n-r$.} \\ 
+  \;&  \phi_Z \text{ is not generically injective} \\ 
+  \Longleftrightarrow\;\;& \text{For general $p \in X$, there exists $q \neq p$ such that $h^0(X,\Omega_X(-p-q))=n-r$} \\ 
+  \stackrel{\textcolor{purple}{\textbf{?}\footnotemark}}{\Longleftrightarrow}\;\;& \text{For general $p \in X$, there exists $S \in X^{[2]}$ such that $p\in S$ and $h^0(X,\Omega_X \otimes \mathcal{I}_S)=n-r$} \\ 
+  \Longleftrightarrow\;\;& \text{For all $p \in X$, there exists $S \in X^{[2]}$ such that $p\in S$ and $h^0(X,\Omega_X \otimes \mathcal{I}_S)\geqslant n-r$.} \\ 
 \end{aligned}
 \end{equation*}
 \end{proposition}
@@ -686,7 +686,7 @@ We shall also assume that $Z$ generates $A$; it then follows that the map $\pi$ 
 	\arrow[from=1-2, to=1-3]
 \end{tikzcd}\]
 For convenience, abbreviate $V := T_0^*A \cong T_p^*A$, and view $V$ as a subspace of $\Hnm^0(Z, \Omega_Z)$.
-\begin{proposition}
+\begin{proposition}\label{prop:tangent_Gauss_outside_Albanese}
 Assume that $Z$ is embedded in $A$ and generates $A$, and let $V := T_0^*A$. Then
 $$\dim_{\mathbb{C}} \Hnm^0(Z,\Omega_Z(-p)) \cap V =n-r \qquad \text{ for all $p \in Z$}$$
 It follows that the Gauss map is a regular morphism
@@ -700,9 +700,9 @@ It follows that the Gauss map is a regular morphism
  Furthermore, 
 \begin{equation*}
 \begin{aligned}
-  \;&  \phi_Z \text{ is not generic injective} \\ 
-  \Longleftrightarrow\;\;& \text{For general $p \in Z$, exists $q \neq p$ such that $h^0(Z,\Omega_Z(-p-q)) \cap V =n-r$} \\ 
-  \Longleftrightarrow\;\;& \text{For all $p \in Z$, exists $S \in Z^{[2]}$ such that $p\in S$ and $h^0(Z,\Omega_Z \otimes \mathcal{I}_S) \cap V=n-r$.} \\ 
+  \;&  \phi_Z \text{ is not generically injective} \\ 
+  \Longleftrightarrow\;\;& \text{For general $p \in Z$, there exists $q \neq p$ such that $h^0(Z,\Omega_Z(-p-q)) \cap V =n-r$} \\ 
+  \Longleftrightarrow\;\;& \text{For all $p \in Z$, there exists $S \in Z^{[2]}$ such that $p\in S$ and $h^0(Z,\Omega_Z \otimes \mathcal{I}_S) \cap V=n-r$.} \\ 
 \end{aligned}
 \end{equation*}
 \end{proposition}
@@ -1491,9 +1491,9 @@ Assume that $\Gal(\gamma_{Z})=S_d$.
 %\setlist{itemsep=-0.4em}
 \renewcommand\labelenumi{(\theenumi)}
 \begin{enumerate}[(1)]
-\item  The Chern--Mather class
+\item  The Chern--Mather classes
 $$c_l\left(\Lambda_{Z^{(m)}}\right) \in \Hnm^{2(n-l)}(A)[m_1,\ldots,m_d]^{S_d}$$
-is a polynomial of degree $2l$ with exponent at most $2r$, when expressed in the variables $m_1,\ldots,m_d$.
+are polynomials of degree $2l$ with exponent at most $2r$, when expressed in the variables $m_1,\ldots,m_d$.
 \item If $Z \subset A$ is a smooth curve, there exists a homogeneous symmetric polynomial $f_{Z,l} \in \mathbb{Q}[m_1, \ldots, m_{d}]^{S_{d}}$ of degree $2l$ and exponent at most $2$, such that
 $$c_l\left(\Lambda_{Z^{(m)}}\right)=f_{Z,l}(m_1,\ldots,m_d)  \left(\bigast_{i=1}^k c_{1}\right).$$
 In this case, 
@@ -1613,9 +1613,9 @@ Suppose that $Z=-Z$ and $\Gal(\gamma_{Z}) \cong W(C_{d/2})$, and assume that $(m
 %\setlist{itemsep=-0.4em}
 \renewcommand\labelenumi{(\theenumi)}
 \begin{enumerate}[(1)]
-\item  The Chern--Mather class
+\item  The Chern--Mather classes
 $$c_l\left(\Lambda_{Z^{(m)}}\right) \in \Hnm^{2(n-l)}(A)[m_1^2,\ldots,m_{d/2}^2]^{S_{d/2}}$$
-is a polynomial of degree $l$ with exponent at most $2r$, when expressed in the variables $m_1^2,\ldots,m_{d/2}^2$.
+are polynomials of degree $l$ with exponent at most $2r$, when expressed in the variables $m_1^2,\ldots,m_{d/2}^2$.
 \item If $Z \subset A$ is a smooth curve, there exists a homogeneous symmetric polynomial $\widetilde{f}_{Z,l} \in \mathbb{Q}[m_1^2, \ldots, m_{d/2}^2]^{S_{d/2}}$ of degree $l$ and exponent at most $2$, such that
 $$c_l\left(\Lambda_{Z^{(m)}}\right)=\widetilde{f}_{Z,l}(m_1^2,\ldots,m_{d/2}^2)  \left(\bigast_{i=1}^k c_{1}\right).$$
 In this case, 
