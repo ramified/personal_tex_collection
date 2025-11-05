@@ -966,6 +966,49 @@ $\;$\\
 \end{proof}
 
 
+Unfortunately, the condition in Proposition \ref{prop:Galois_condition} is never met, and consequently the curve $C \subset A$ is preserved by a $2$-torsion translation of $A$, as explained below.
+
+\begin{lemma}\label{lem:small_mon_but_translation_invariant}
+In Example \ref{eg:bielliptic}, let $(\mathcal{L}_3,  \mathcal{L}_3^{\otimes 2} \cong \mathcal{O}_E(R))$ denote the line bundle associated with the double cover $C' \to E$, where $R$ is its branch divisor. Set $\mathcal{L}_1 := \eta_0$, $\mathcal{L}_2 := \eta_0 \otimes \mathcal{L}_3$, and let $u_i \colon C_i \to E$ be the ramified covering determined by $\mathcal{L}_i$.
+\begingroup
+\upshape
+%\setlist{itemsep=-0.4em}
+\renewcommand\labelenumi{(\theenumi)}
+\begin{enumerate}
+\item We have $C_3=C'$, $g(C_1)=1$ and $g(C_2)=g(C_3)=n+1$.
+\item The curve $C$ arises as the fiber product $C = C_3 \times_E C_1$. The covering $C \to E$ is Galois with
+$$\Gal(C/E) \cong \mathbb{Z}/2\mathbb{Z} \oplus \mathbb{Z}/2\mathbb{Z} \;\hat{=}\; \{ \Id, \sigma_1, \sigma_2, \sigma_3 \} ,$$
+where each $\sigma_i$ is the involution associated with the projection $h_i : C \to C_i$ (so that $\iota = \sigma_3$). By the Riemann–Hurwitz formula, the maps $u_1$, $h_2$, and $h_3$ are unramified.
+
+\item  With $\sigma = \{\sigma_2, \sigma_3\} \in \Gal(C_1/E)$ the involution of $u_1$, one can define
+$$\mathcal{L}_0: = \mathcal{O}_{C_1}\left(p_0-\sigma(p_0)\right) \in \Pic^0(C_1)[2],$$
+independent of the choice of $p_0 \in C_1$. The curve $C \subset A$ is invariant under the translation corresponding to $h_1^*\mathcal{L}_0$. Concretely, for every $p \in C$, one has
+$$\mathcal{O}_{C}\left(\rule{0mm}{3mm}p-\sigma_3(p)\right) \cong \mathcal{O}_{C}\left(\rule{0mm}{3mm}\sigma_2(p)-\sigma_3\sigma_2(p)\right) \otimes h_1^* \mathcal{L}_0.$$
+\end{enumerate}
+\endgroup
+\end{lemma}
+
+\begin{proof}\
+\begin{enumerate}
+\item Since
+$$\mathcal{L}_1^{\otimes 2} \cong \mathcal{O}_E, \qquad \mathcal{L}_2^{\otimes 2} \cong \mathcal{O}_E(R), \qquad 
+\mathcal{L}_3^{\otimes 2} \cong \mathcal{O}_E(R),$$
+he Riemann–Hurwitz formula yields the genus of $C_i$.
+\item Notice that the curve $C$ corresponds to the line bundle $\eta: = \pr^* \eta_0$.
+\item Since $u_1$ is unramified, the involution $\sigma \in \Aut(C_1/E)$ acts by translation and thus preserves the Jacobian:
+$$\mathcal{O}_{C_1}\left(p_0-q_0\right) \cong \mathcal{O}_{C_1}\left(\sigma(p_0-q_0)\right), \qquad \text{for any }p_0,q_0 \in C_1.$$
+For $p \in C$, write $p_0=h_1(p)$, one can computes that 
+\begin{equation*}
+\begin{aligned}
+  h_1^*\mathcal{L}_0\cong\;& h_1^*\mathcal{O}_{C_1}\left(\rule{0mm}{3mm}p_0-\sigma(p_0)\right) \\ 
+  \cong\;& \mathcal{O}_{C}\left(\rule{0mm}{3mm}p+\sigma_1(p)-\sigma_2(p)-\sigma_3(p)\right) \\ 
+  \cong\;& \mathcal{O}_{C}\left(\rule{0mm}{3mm}p-\sigma_3(p)\right) \otimes \mathcal{O}_{C}\left(\rule{0mm}{3mm}-\sigma_2(p)+\sigma_3\sigma_2(p)\right)\\
+\end{aligned}
+\end{equation*}
+\end{enumerate}
+\end{proof}
+
+
 \subsection{Albanese variety}
 Let $X$ be a smooth complex projective variety of dimension $r$, and set $n := \dim_{\mathbb{C}} \Hnm^0(X, \Omega_X) = h^{1,0}$.
 Recall that the Albanese variety of $X$ is defined as
