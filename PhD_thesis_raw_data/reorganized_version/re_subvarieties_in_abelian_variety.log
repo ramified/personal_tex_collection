@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  5 NOV 2025 12:19
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  5 NOV 2025 19:36
 entering extended mode
 **./re_subvarieties_in_abelian_variety.tex
 (re_subvarieties_in_abelian_variety.tex
@@ -1681,46 +1681,46 @@ File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 )
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <7> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 353.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 349.
 
 [1]
 
 LaTeX Warning: Reference `prop:big_genus_Prym_case' on page 2 undefined on inpu
-t line 374.
+t line 378.
 
 
 LaTeX Warning: Reference `lem:bielliptic_with_big_mon' on page 2 undefined on i
-nput line 374.
+nput line 378.
 
 
 LaTeX Warning: Reference `subsec:small_mon' on page 2 undefined on input line 3
-74.
+78.
 
 
 LaTeX Warning: Reference `subsec:small_mon' on page 2 undefined on input line 4
-14.
+16.
 
 
 LaTeX Warning: Reference `lem:small_mon_but_translation_invariant' on page 2 un
-defined on input line 414.
+defined on input line 416.
 
 [2] [3] [4] [5] [6]
 
-LaTeX Warning: Reference `eg:bielliptic' on page 7 undefined on input line 723.
+LaTeX Warning: Reference `eg:bielliptic' on page 7 undefined on input line 728.
 
 
 [7] [8]
 
-LaTeX Warning: Reference `set:Prym' on page 9 undefined on input line 857.
+LaTeX Warning: Reference `set:Prym' on page 9 undefined on input line 862.
 
 [9] [10] [11] [12] [13] [14] [15] [16] [17] [18]
 (re_subvarieties_in_abelian_variety.bbl [19]) [20]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1422.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1422.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1427.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1427.
 
 (re_subvarieties_in_abelian_variety.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1422.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1422.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1427.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1427.
 
 Package rerunfilecheck Info: File `re_subvarieties_in_abelian_variety.out' has 
 not changed.
@@ -1729,15 +1729,15 @@ not changed.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1422.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1427.
  ) 
 Here is how much of TeX's memory you used:
- 37580 strings out of 427748
- 700853 string characters out of 3150981
- 743639 words of memory out of 3000000
- 40907 multiletter control sequences out of 15000+200000
+ 37584 strings out of 427748
+ 700938 string characters out of 3150981
+ 743991 words of memory out of 3000000
+ 40911 multiletter control sequences out of 15000+200000
  544237 words of font info for 84 fonts, out of 3000000 for 9000
  1489 hyphenation exceptions out of 8191
- 61i,18n,82p,992b,1052s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 61i,18n,82p,1206b,1052s stack positions out of 5000i,500n,10000p,200000b,50000s
 
 Output written on re_subvarieties_in_abelian_variety.pdf (20 pages).

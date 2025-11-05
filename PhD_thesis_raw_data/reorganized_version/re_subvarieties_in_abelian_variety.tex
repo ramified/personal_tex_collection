@@ -346,9 +346,13 @@ Berlin, 12489\\ Germany\\}
 \tableofcontents
 
 \section{Introduction}
-To any subvariety of an abelian variety, one can associate a reductive group through the convolution of perverse sheaves. This correspondence allows to reformulate problems in algebraic geometry in representation-theoretic terms, thereby offering new geometric insights. A crucial role in this context is played by the characteristic cycle, a fundamental invariant attached to a perverse sheaf, \cite[\S 5–\S 8]{JKLM22}. Recent work demonstrates that one can approach these characteristic cycles directly as conic Lagrangian cycles, without invoking the full machinery of perverse sheaves.
+Let $A$ be a complex abelian variety of dimension $n$. To any closed subvariety $Z \subset A$ of dimension $r$, one can associate a reductive group $G_Z$ through the convolution of perverse sheaves. This correspondence allows to reformulate problems in algebraic geometry in representation-theoretic terms, thereby offering new geometric insights. A crucial role in this context is played by the characteristic cycle, a fundamental invariant attached to a perverse sheaf, \cite[\S 5–\S 8]{JKLM22}. Recent work demonstrates that one can approach these characteristic cycles directly as conic Lagrangian cycles, without invoking the full machinery of perverse sheaves.
 
 In \cite{Kr20}, Krämer establishes a correspondence between Weyl group orbits and conic Lagrangian cycles in the cotangent bundle which arise as the conormal varieties of certain subvarieties. Despite this correspondence, an explicit geometric description of these cycles themselves remains elusive. In this article, we propose a purely geometric construction of these cycles and analyze three key properties of the associated subvarieties: irreducibility, dimension, and homology class.
+
+$\,$
+
+To present our results, we begin by recalling several fundamental notions, which will be discussed in detail in Section \ref{sec:Gauss_map}. On a complex abelian variety $A$, the \textit{translations} and \textit{reflections} are special automorphisms of $A$ of the form $x \mapsto x + p$ and $x \mapsto -x + p$, respectively. For $\sigma \in \Aut(A)$ and a closed subvariety $Z \subset A$, we say that $Z$ is \textit{invariant} under $\sigma$ if $\sigma(Z) = Z$. Given a subvariety $Z \subset A$, the \textit{tangent Gauss map} $\phi_Z$ assigns to $p \in Z^{\mathrm{sm}}$ the embedded tangent space to $Z$ at $p$ (cf. Definition \ref{def:tangent_Gauss_map}), while the \textit{conormal Gauss map} $\gamma_Z : \mathbb{P}\Lambda_Z \subset A \times \mathbb{P}T^{}_{0}A \to \mathbb{P}T^{}_{0}A$ (cf. Definition \ref{def:conormal_Gauss_map}) arises from the projectivized conormal variety of $Z$ and is typically generically finite. The \textit{monodromy group} $\Gal(\gamma_Z)$ encodes the permutation of the sheets of the covering $\gamma_Z$ around its branch locus, while $W_Z$ denotes the \textit{Weyl group} of the reductive group $G_Z$.
 
 $\,$
 
@@ -375,7 +379,7 @@ Theorem \ref{thm:A} follows from a combination of Proposition \ref{prop:big_genu
 
 $\,$
 
-For the dimension and homology class of a subvariety $Z$, both invariants can be recovered from the homology class of $\mathbb{P}\Lambda_{Z} \subset \mathbb{P}T^*A$ — that is, from the total Chern--Mather class of $Z$. Standard computational techniques are available when the monodromy group is a full or signed symmetric group. 
+For the dimension and homology class of a subvariety $Z$, both invariants can be recovered from the homology class of $\mathbb{P}\Lambda_{Z} \subset \mathbb{P}T^*A$ — that is, from the total Chern--Mather class of $Z$. Standard computational techniques are available when the monodromy group $\Gal(\gamma_{Z})$ is a full or signed symmetric group. The notions of the Chern–Mather class and the Pontryagin product will be recalled in Definition \ref{def:CM_class} and Definition \ref{def:Pontryagin_product}, respectively.
 
 \begin{theoremB}\label{thm:B}
 Consider a non-degenerate subvariety $Z \subset A$ and a tuple $(m) = (m_1, \ldots, m_d) \in \mathbb{Z}^d$. Let $Z^{(m)} \subset A$ be as in Definition \ref{def:subvar_Z^{(m)}}. Let $d = \deg \gamma_Z$, $\widetilde{d} = d/2$, and let $c_l := c_{M,l}(\Lambda_Z)$ be the Chern--Mather class of $Z$. Let $*$ be the Pontryagin product.
@@ -409,9 +413,10 @@ The structure of the article is as follows.
 
 In Section \ref{sec:Gauss_map}, we fix notation and describe the Gauss map from three different perspectives. We also define the monodromy group and highlight its connection to the degree of the tangent Gauss map.
 
+Section \ref{sec:mon_examples} is devoted to the explicit computation of the monodromy group in selected cases, with a particular focus on the Prym curve situation. Subsection \ref{subsec:small_mon} presents an example in which the monodromy group is small; however, this does not constitute a counterexample to Conjecture \ref{conj:big_mon_for_curve}, as the curve remains invariant under a non-trivial translation, as discussed in Lemma \ref{lem:small_mon_but_translation_invariant}. In Subsection \ref{subsec:criteria_big_mon}, we collect several sufficient conditions for the monodromy group to be large, which we then employ in Subsection \ref{subsec:big_mon_case} to show that, for all remaining Prym curve cases with $g(C')>9$, the monodromy group is necessarily large.
+
 In Section \ref{sec:subvarieties}, we define the subvarieties $Z^{(m)}$, which serve as the central objects of this study. In Subsection \ref{subsec:relation_with_perverse_sheaf}, we briefly discuss how these varieties naturally arise as the characteristic cycles of certain perverse sheaves.
 
-Section \ref{sec:mon_examples} is devoted to the explicit computation of the monodromy group in selected cases, with a particular focus on the Prym curve situation. Subsection \ref{subsec:small_mon} presents an example in which the monodromy group is small; however, this does not constitute a counterexample to Conjecture \ref{conj:big_mon_for_curve}, as the curve remains invariant under a non-trivial translation, as discussed in Lemma \ref{lem:small_mon_but_translation_invariant}. In Subsection \ref{subsec:criteria_big_mon}, we collect several sufficient conditions for the monodromy group to be large, which we then employ in Subsection \ref{subsec:big_mon_case} to show that, for all remaining Prym curve cases with $g(C')>9$, the monodromy group is necessarily large.
 
 In Section \ref{sec:CM_class}, we focus on the computation of the dimension and the homology class of $Z^{(m)}$. After recalling the definition of the Chern-Mather class in Subsection \ref{subsec:CM_class}, the task reduces to computing $[\mathbb{P} \Lambda_{Z^{(m)}}]$. Subsections \ref{subsec:CMclass_typeA} and \ref{subsec:CMclass_typeC} treat the cases of type $A$ and type $C$, respectively. The derivation of the formulas involves certain coefficients that are purely combinatorial in nature. These combinatorial contributions are treated separately in Subsection \ref{subsec:Moebius_block-sum}.
 
@@ -425,7 +430,7 @@ I would like to express my sincere gratitude to my supervisor, Thomas Krämer, w
 We work over the base field $\kappa = \mathbb{C}$, and by a variety we mean a integral separated scheme of finite type over $\mathbb{C}$. Let $A/\mathbb{C}$ be an abelian variety of dimension $n$, and let $Z \subseteq A$ be an irreducible closed subvariety of dimension $r$. We denote by $\iota_Z: Z \hookrightarrow A$ the inclusion morphism.
 
 \subsection{Gauss map and monodromy group}
-\begin{definition}
+\begin{definition}\label{def:tangent_Gauss_map}
 For a subvariety $Z \subset A$, the tangent Gauss map of $Z$ is the map
 $$\phi_Z: \Zsm \longrightarrow \Gr(r,T_0 A) \qquad p \longmapsto T_pZ \;\;\subseteq T_pA \cong T_0 A$$
 sending a smooth point to the tangent space at that point (seen as a subspace of $T_0 A$).
@@ -459,7 +464,7 @@ It is a conical Lagrangian subvariety of $T^*A$. The (affine) conormal Gauss map
 $$\gamma_Z^{\aff}: \Lambda_{Z} \subset A \times T^{*}_{0}A \longrightarrow T^{*}_{0}A$$
 
 For intersection-theoretic purposes it is more natural to work with projectivized conormal spaces. We therefore pass from the affine conormal Gauss map to its projectivized version:
-\begin{definition}
+\begin{definition}\label{def:conormal_Gauss_map}
 The projectivized conormal variety of a subvariety $Z \subset A$ is defined by
 $$\mathbb{P}\Lambda_{Z}:=\;\; \overline{\mathbb{P}\Lambda_{\Zsm}} \;\; \subset \mathbb{P}T^*A \;\cong\; A \times \mathbb{P}T^{*}_{0}A,$$
  and the (projectivized) conormal Gauss map is defined by
@@ -1068,7 +1073,7 @@ We begin by recalling the definition of the Chern--Mather class. Suppose $\dim A
 $$p: \mathbb{P}T^*A \cong A \otimes \mathbb{P}^{\vee} \longrightarrow \mathbb{P}^{\vee}$$
 the natural projection.
 
-\begin{definition}
+\begin{definition}\label{def:CM_class}
 For a conic Lagrangian cycle $\Lambda$ on $T^*A$ and $i \geqslant 0$, the Chern–Mather class is defined as
 $$c_{M,i}(\Lambda)=p_*\left(\rule{0mm}{3mm} [\mathbb{P}\Lambda] \cdot [A \times H_i] \right) \in \Hnm_{2i}(A) \cong \Hnm^{2(n-i)}(A),$$
 where $H_i \subseteq \mathbb{P}^\vee$ denotes a general linear subspace of dimension $i$. For brevity, we may later write $c_{M,i}(\Lambda)$ as $c_i(\Lambda)$, and $c_{M,i}(\Lambda_Z)$ simply as $c_i$. \footnote{Note that although $c_i$ arises as the pushforward of the classical Chern class in the smooth case, the indexing order is reversed. In particular, $c_0 = d$, rather than $1$.}
@@ -1172,7 +1177,7 @@ With Fact \ref{fact:moebius_explicit}, one can compute $[\mathbb{P}\Lambda_{Z}^{
 
 The computation of pushforwards along diagonal embeddings can be rather cumbersome. However, upon composing with $a^{(m)}$, it suffices to compute those of certain weighted sum maps. These pushforwards admit a more transparent description via the Pontryagin product, whose definition we now recall.
 
-\begin{definition}[Pontryagin product]
+\begin{definition}[Pontryagin product]\label{def:Pontryagin_product}
 Let $A$ be an abelian variety, and denote by $a: A \times A \to A$ the addition map. The Pontryagin product on $A$ is defined by
 $$\Hnm^{2n-i}(A) \times \Hnm^{2n-j}(A)\subseteq \Hnm^{4n-i-j}(A \times A) \stackrel{a_*}{\longrightarrow} \Hnm^{2n-i-j}(A) \qquad a \otimes b \longmapsto a*b.$$
 \end{definition}
