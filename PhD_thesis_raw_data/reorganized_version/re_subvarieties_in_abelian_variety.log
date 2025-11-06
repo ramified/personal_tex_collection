@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  5 NOV 2025 19:36
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  6 NOV 2025 01:45
 entering extended mode
 **./re_subvarieties_in_abelian_variety.tex
 (re_subvarieties_in_abelian_variety.tex
@@ -1704,23 +1704,23 @@ LaTeX Warning: Reference `subsec:small_mon' on page 2 undefined on input line 4
 LaTeX Warning: Reference `lem:small_mon_but_translation_invariant' on page 2 un
 defined on input line 416.
 
-[2] [3] [4] [5] [6]
+[2] [3] [4] [5] [6] [7]
 
-LaTeX Warning: Reference `eg:bielliptic' on page 7 undefined on input line 728.
+LaTeX Warning: Reference `eg:bielliptic' on page 8 undefined on input line 753.
 
 
-[7] [8]
+[8] [9]
 
-LaTeX Warning: Reference `set:Prym' on page 9 undefined on input line 862.
+LaTeX Warning: Reference `set:Prym' on page 10 undefined on input line 887.
 
-[9] [10] [11] [12] [13] [14] [15] [16] [17] [18]
-(re_subvarieties_in_abelian_variety.bbl [19]) [20]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1427.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1427.
+[10] [11] [12] [13] [14] [15] [16] [17] [18] [19]
+(re_subvarieties_in_abelian_variety.bbl) [20]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1452.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1452.
 
 (re_subvarieties_in_abelian_variety.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1427.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1427.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 1452.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1452.
 
 Package rerunfilecheck Info: File `re_subvarieties_in_abelian_variety.out' has 
 not changed.
@@ -1729,14 +1729,14 @@ not changed.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1427.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1452.
  ) 
 Here is how much of TeX's memory you used:
- 37584 strings out of 427748
- 700938 string characters out of 3150981
- 743991 words of memory out of 3000000
- 40911 multiletter control sequences out of 15000+200000
- 544237 words of font info for 84 fonts, out of 3000000 for 9000
+ 37577 strings out of 427748
+ 700747 string characters out of 3150981
+ 742892 words of memory out of 3000000
+ 40908 multiletter control sequences out of 15000+200000
+ 544213 words of font info for 81 fonts, out of 3000000 for 9000
  1489 hyphenation exceptions out of 8191
  61i,18n,82p,1206b,1052s stack positions out of 5000i,500n,10000p,200000b,50000s
 

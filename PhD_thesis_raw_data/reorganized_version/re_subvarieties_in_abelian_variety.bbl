@@ -18,11 +18,6 @@ Christina Birkenhake and Herbert Lange.
   Wiss.}
 \newblock Berlin: Springer, 2nd augmented ed. edition, 2004.
 
-\bibitem{CK22}
-Giulio Codogni and Thomas Kr{\"a}mer.
-\newblock Semicontinuity of {Gauss} maps and the {Schottky} problem.
-\newblock {\em Math. Ann.}, 382(1-2):607--630, 2022.
-
 \bibitem{Ha02}
 Allen Hatcher.
 \newblock {\em Algebraic topology}.
@@ -32,11 +27,6 @@ Allen Hatcher.
 Ariyan Javanpeykar, Thomas Kr{\"a}mer, Christian Lehn, and Marco Maculan.
 \newblock The monodromy of families of subvarieties on abelian varieties.
 \newblock {\em Duke Math. J.}, 174(6):1045--1149, 2025.
-
-\bibitem{Kani84}
-Ernst Kani.
-\newblock On {Castelnuovo}'s equivalence defect.
-\newblock {\em J. Reine Angew. Math.}, 352:24--70, 1984.
 
 \bibitem{Kr16cubicthreefold}
 Thomas Kr{\"a}mer.
@@ -60,6 +50,12 @@ Thomas Kr{\"a}mer.
 \newblock Characteristic cycles and the microlocal geometry of the {Gauss} map.
   {I}.
 \newblock {\em Ann. Sci. {\'E}c. Norm. Sup{\'e}r. (4)}, 55(6):1475--1527, 2022.
+
+\bibitem{Mil65}
+John~W. Milnor.
+\newblock Topology from the differentiable viewpoint.
+\newblock Charlottesville: {The} {University} {Press} of {Virginia}. {IX}, 64
+  p. (1965)., 1965.
 
 \bibitem{vakil2017rising}
 Ravi Vakil.

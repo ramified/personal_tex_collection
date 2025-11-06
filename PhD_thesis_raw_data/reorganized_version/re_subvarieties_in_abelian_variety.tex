@@ -382,7 +382,7 @@ $\,$
 For the dimension and homology class of a subvariety $Z$, both invariants can be recovered from the homology class of $\mathbb{P}\Lambda_{Z} \subset \mathbb{P}T^*A$ — that is, from the total Chern--Mather class of $Z$. Standard computational techniques are available when the monodromy group $\Gal(\gamma_{Z})$ is a full or signed symmetric group. The notions of the Chern–Mather class and the Pontryagin product will be recalled in Definition \ref{def:CM_class} and Definition \ref{def:Pontryagin_product}, respectively.
 
 \begin{theoremB}\label{thm:B}
-Consider a non-degenerate subvariety $Z \subset A$ and a tuple $(m) = (m_1, \ldots, m_d) \in \mathbb{Z}^d$. Let $Z^{(m)} \subset A$ be as in Definition \ref{def:subvar_Z^{(m)}}. Let $d = \deg \gamma_Z$, $\widetilde{d} = d/2$, and let $c_l := c_{M,l}(\Lambda_Z)$ be the Chern--Mather class of $Z$. Let $*$ be the Pontryagin product.
+Consider a non-degenerate subvariety $Z \subset A$ and a tuple $(m) = (m_1, \ldots, m_d) \in \mathbb{Z}^d$. Let $Z^{(m)} \subset A$ be as in Definition \ref{def:subvar_Z^{(m)}}. Let $d = \deg \gamma_Z$, $\widetilde{d} = d/2$, and let $c_l := c_{M,l}(\Lambda_Z)$ be the Chern--Mather class of $Z$. Let $*$ be the Pontryagin product. We write $\lambda \dashv l$ to indicate that $\lambda=[\lambda_1,\ldots,\lambda_{k'}]$ is a partition of $l$.
 \begingroup
 \upshape
 %\setlist{itemsep=-0.4em}
@@ -391,14 +391,14 @@ Consider a non-degenerate subvariety $Z \subset A$ and a tuple $(m) = (m_1, \ldo
 \item When $\Gal(\gamma_{Z})=S_d$, the Chern--Mather classes of $Z^{(m)}$ can be written as
 \begin{equation*}
 \begin{aligned}
-  c_{M,l}\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{c_Z^{(m)}} \sum_{\lambda \dashv l} \;\mu_d^{\lambda} \left( \bigast_{i=1}^r c_{\lambda_i}\right) \\ 
+  c_{M,l}\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{c_Z^{(m)}} \sum_{\lambda \dashv l} \;\mu_d^{\lambda} \left( \bigast_{i=1}^{k'} c_{\lambda_i}\right) \\ 
 \end{aligned}
 \end{equation*}
 for certain explicit coefficients $c_Z^{(m)} \in \mathbb{N}_{>0}$ and $\mu_d^{\lambda} \in \mathbb{Z}$.
 \item When $Z=-Z$ and $\Gal(\gamma_{Z})=W(C_{d/2})$, the Chern--Mather classes of $Z^{(m)}$ can be written as
 \begin{equation*}
 \begin{aligned}
-  c_{M,l}\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{c_Z^{(m)}} \sum_{\lambda \dashv l} \;\widetilde{\mu}_{\widetilde{d}}^{\lambda} \left( \bigast_{i=1}^r c_{\lambda_i}\right) \\
+  c_{M,l}\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{c_Z^{(m)}} \sum_{\lambda \dashv l} \;\widetilde{\mu}_{\widetilde{d}}^{\lambda} \left( \bigast_{i=1}^{k'} c_{\lambda_i}\right) \\
 \end{aligned}
 \end{equation*}
 for certain explicit coefficients $c_Z^{(m)} \in \mathbb{N}_{>0}$ and $\widetilde{\mu}_{\widetilde{d}}^{\lambda} \in \mathbb{Z}$.
@@ -418,7 +418,7 @@ Section \ref{sec:mon_examples} is devoted to the explicit computation of the mon
 In Section \ref{sec:subvarieties}, we define the subvarieties $Z^{(m)}$, which serve as the central objects of this study. In Subsection \ref{subsec:relation_with_perverse_sheaf}, we briefly discuss how these varieties naturally arise as the characteristic cycles of certain perverse sheaves.
 
 
-In Section \ref{sec:CM_class}, we focus on the computation of the dimension and the homology class of $Z^{(m)}$. After recalling the definition of the Chern-Mather class in Subsection \ref{subsec:CM_class}, the task reduces to computing $[\mathbb{P} \Lambda_{Z^{(m)}}]$. Subsections \ref{subsec:CMclass_typeA} and \ref{subsec:CMclass_typeC} treat the cases of type $A$ and type $C$, respectively. The derivation of the formulas involves certain coefficients that are purely combinatorial in nature. These combinatorial contributions are treated separately in Subsection \ref{subsec:Moebius_block-sum}.
+In Section \ref{sec:CM_class}, we focus on the computation of the dimension and the homology class of $Z^{(m)}$. After recalling the definition of the Chern-Mather class in Subsection \ref{subsec:CM_class}, the task reduces to computing $[\mathbb{P} \Lambda_{Z^{(m)}}]$. Subsections \ref{subsec:CMclass_typeA} and \ref{subsec:CMclass_typeC} treat the type $A$ case, where $\Gal(\gamma_Z)=S_d$, and the type $C$ case, where $\Gal(\gamma_Z)=W(C_{d/2})$, respectively. The derivation of the formulas involves certain coefficients that are purely combinatorial in nature. These combinatorial contributions are treated separately in Subsection \ref{subsec:Moebius_block-sum}.
 
 
 \section*{Acknowledgement}
@@ -474,7 +474,7 @@ By \cite[Theorem 2.8 (1)]{JKLM22}, $\gamma_Z$ is generically finite when $Z$ is 
 
 A lot of geometry of $Z$ is encoded in the map $\gamma_Z$. For instance, if $Z \subset A$ is smooth, then 
 $$\deg \gamma_Z = (-1)^r \chi(Z),$$
-where $\chi(Z)=\sum_i (-1)^i b_i(Z)$ is the topological Euler characteristic of $Z$.
+where $\chi(Z)=\sum_i (-1)^i b_i(Z)$ is the topological Euler characteristic of $Z$, see \cite[Theorem 1.1.1]{Kr21GaussII}.
 
 Further insight can be gained by analyzing the fibers of $\gamma_Z$. For instance, if $Z$ is preserved by a translation $t_v: A\longrightarrow A$, then each fiber $\gamma_Z^{-1}(\xi) \subset A$ is also invariant under $t_v$. Likewise, if $Z = -Z$, then the fiber satisfies $\gamma_Z^{-1}(\xi) = -\gamma_Z^{-1}(\xi)$. Finding further constraints is more challenging.
 
@@ -542,7 +542,7 @@ The fiber $\phi^{-1}\left( \Gr(r,H_0) \right)$ splits into $d/k$ groups of point
 \end{proof}
 
 \subsection{Interpolation via Albanese morphisms}
-Examples of subvarieties of abelian varieties can be obtained in two ways: one may fix an abelian variety and consider cycles within it, or begin with a variety $Z$ and construct a map to an abelian variety, such as the Albanese map. When adopting the latter perspective, we write $X$ for the same variety $Z$ to stress the focus on the variety itself.
+Examples of subvarieties of abelian varieties can be obtained in two ways: one may fix an abelian variety and consider cycles within it, or begin with a variety $Z$ and construct a map to an abelian variety, such as the Albanese map. In the latter perspective, the setting changes slightly: $X$ is a smooth projective variety of dimension $r$, $\iota_X: X \to A$ is a morphism to an abelian variety $A$ of dimension $n$, and $Z := \iota_X(X)$ denotes its image in $A$.
 
 In this subsection, we begin with the Albanese morphism $X \to \Alb(X)$, from which we derive some basic properties of the tangent Gauss map. Any other morphism to an abelian variety factors over the Albanese morphism, and then analogous methods apply, see Proposition \ref{prop:tangent_Gauss_outside_Albanese}.
 
@@ -553,9 +553,9 @@ and the Albanese map is given by (for some fixed base point $p_0 \in X$)
 $$\alpha: X \longrightarrow \Alb(X) \qquad 
 \qquad p \longmapsto \left[ \;\;\omega \mapsto \int_{\gamma: p_0 \sim p} \omega \;\;\right].$$
 
-One classical question is the dimension of $\alpha(X)$. For this, consider the cotangent map of $\alpha$ at $p \in X$:
-$$T_p^* \alpha: H^0(X,\Omega_X) \longrightarrow T_p^*X=H^0(X,\Omega_X|_p).$$
-Consider the short exact sequence of coherent sheaves on $X$ (For convenient, we write $\Omega_X(-p):= \Omega_X \otimes \mathcal{I}_p$)
+One classical question is the dimension of $\alpha(X)$. Before proceeding, we fix the following notation: For any closed subscheme $S \subset X$, let $\mathcal{I}_S \subset \mathcal{O}_X$ be its ideal sheaf. Given a point $p \in X$ with inclusion $i_p : {p} \hookrightarrow X$, we denote by $i_{p,*} \mathcal{O}_p$ the skyscraper sheaf at $p$. We set $\Omega_X(-p):= \Omega_X \otimes \mathcal{I}_p$, and denote by $\Omega_X|_p:= \Omega_X \otimes i_{p,*} \mathcal{O}_p = i_{p,*}i_{p}^* \Omega_X$ the fiber of $\Omega_X$ at $p$. With this notation, the cotangent map of $\alpha$ at $p \in X$ is
+$$T_p^* \alpha: T_{\alpha(p)}^* \Alb(X)= H^0(X,\Omega_X) \longrightarrow T_p^*X=H^0(X,\Omega_X|_p).$$
+Consider the short exact sequence of coherent sheaves on $X$ 
 % https://q.uiver.app/#q=WzAsNSxbMSwwLCJcXE9tZWdhX1goLXApIl0sWzIsMCwiXFxPbWVnYV9YIl0sWzMsMCwiXFxPbWVnYV9YfF9wIl0sWzAsMCwiMCJdLFs0LDAsIjAiXSxbMywwXSxbMCwxXSxbMSwyXSxbMiw0XV0=
 \[\begin{tikzcd}[column sep={18mm}]
 	0 & {\Omega_X(-p)} & {\Omega_X} & {\Omega_X|_p} & 0
@@ -610,12 +610,24 @@ In particular,
 \end{aligned}
 \end{equation*}
 \end{proposition}
+\begin{proof}
+We know that
+\begin{equation*}
+\begin{aligned}
+  & \alpha \text{ is surjective} & \Longleftrightarrow\quad& \dim_{\mathbb{C}} \alpha(X) = n \\ 
+  & \alpha \text{ is generically finite onto its image} & \Longleftrightarrow\quad& \dim_{\mathbb{C}} \alpha(X) = r \\ 
+  & \alpha \text{ is constant} & \Longleftrightarrow\quad& \dim_{\mathbb{C}} \alpha(X) = 0 \\ 
+  & & \Longleftrightarrow\quad& \Alb(X)=0. \\ 
+\end{aligned}
+\end{equation*}
+\end{proof}
 
-
-We will concentrate on the case where $\alpha$ is finite onto its image.\footnote{The general method remains valid in the broader setting, but the Gauss map then takes values in a different space.} Under this assumption, we set $Z = X$ and $A = \Alb(Z)$. The corresponding Gauss map is then a rational map:
+We will concentrate on the case where $\alpha$ is generically injective.\footnote{The general method remains valid in the broader setting, but the Gauss map then takes values in a different space. In fact, there is always a semicontinuous map
+$$\phi_X: X \longrightarrow \bigsqcup_{i=0}^{r} \Gr \left( n-i, \Hnm^0(X,\Omega_X)  \right) \qquad p \longmapsto \Hnm^0(X,\Omega_X(-p)).$$
+} Under this assumption, we set $Z = \iota_X(X)$ and $A = \Alb(Z)$. The corresponding Gauss map is then a rational map:
 % https://q.uiver.app/#q=WzAsNixbMCwwLCJcXHBoaV9aOiJdLFsyLDAsIlxcR3IocixUXjBBKSJdLFsxLDAsIloiXSxbMywwLCJcXEdyKG4tcixcXEhubV4wKFgsXFxPbWVnYV9YKSkiXSxbMywxLCJcXEhubV4wKFgsXFxPbWVnYV9YKC1wKSkiXSxbMSwxLCJwIl0sWzUsNCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibWFwcyB0byJ9fX1dLFsyLDEsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsxLDMsIlxcY29uZyIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
 \[\begin{tikzcd}[row sep={-1mm}]
-	{\phi_Z:} &[-10mm] Z &[5mm] {\Gr(r,T_0A)} & [-7mm] {\Gr(n-r,\Hnm^0(X,\Omega_X))} \\
+	{\phi_Z:} &[-10mm] Z &[5mm] {\Gr(r,T_0A)} & [-7mm] {\Gr\left(n-r,\Hnm^0(X,\Omega_X)\right)} \\
 	& p && {\Hnm^0(X,\Omega_X(-p))}
 	\arrow[dashed, from=1-2, to=1-3]
 	\arrow["\cong"{description}, draw=none, from=1-3, to=1-4]
@@ -638,38 +650,51 @@ is the incidence variety relating $\Gr(n-r,n)$ and $\Gr(1, n)$. In that case,
     \gamma_Z^{-1}([\omega])=\;& \left\{\, p  \in X  \;\middle|\; \omega(p)=0 \,\right\}  \\  
 \end{aligned}
 \end{equation*}
-is the zero set of the section $\omega \in \Hnm^0(X,\Omega_X)$. The number $(-1)^r \deg \gamma_Z$ is the index in the Poincaré--Hopf index formula, and the monodromy group $\Gal(\gamma_Z)$ serves as a more refined invariant.
+is the zero set of the section $\omega \in \Hnm^0(X,\Omega_X)$. The number $(-1)^r \deg \gamma_Z$ is the index (of the vector field) in the Poincaré--Hopf index formula (see \cite[p35]{Mil65}), and the monodromy group $\Gal(\gamma_Z)$ serves as a more refined invariant.
 
-The next proposition shows when the Gauss map $\phi_Z$ is not generically injective.
+The next proposition shows when the Gauss map $\phi_Z$ is not generically injective. We denote by $X^{[m]}$ the Hilbert scheme of $m$-points on $X$.
 \begin{proposition}
 When $\alpha$ is generically finite onto its image,
 \begin{equation*}
 \begin{aligned}
   \;&  \phi_Z \text{ is not generically injective} \\ 
   \Longleftrightarrow\;\;& \text{For general $p \in X$, there exists $q \neq p$ such that $h^0(X,\Omega_X(-p-q))=n-r$} \\ 
-  \stackrel{\textcolor{purple}{\textbf{?}\footnotemark}}{\Longleftrightarrow}\;\;& \text{For general $p \in X$, there exists $S \in X^{[2]}$ such that $p\in S$ and $h^0(X,\Omega_X \otimes \mathcal{I}_S)=n-r$} \\ 
-  \Longleftrightarrow\;\;& \text{For all $p \in X$, there exists $S \in X^{[2]}$ such that $p\in S$ and $h^0(X,\Omega_X \otimes \mathcal{I}_S)\geqslant n-r$.} \\ 
+  \stackrel{(1)}{\Longleftrightarrow}\;\;& \text{For general $p \in X$, there exists $S \in X^{[2]}$ such that $p\in S$ and $h^0(X,\Omega_X \otimes \mathcal{I}_S)=n-r$} \\ 
+  \stackrel{(2)}{\Longleftrightarrow}\;\;& \text{For all $p \in X$, there exists $S \in X^{[2]}$ such that $p\in S$ and $h^0(X,\Omega_X \otimes \mathcal{I}_S)\geqslant n-r$.} \\ 
 \end{aligned}
 \end{equation*}
 \end{proposition}
-\footnotetext{When $n = r$, the map $\varphi_Z$ has a point as its target, so the equivalence is trivial.
-When $n > r$, the implication ``$\Rightarrow$" is immediate. For the converse ``$\Leftarrow$", it suffices to show that the image of 
+
+\begin{proof}
+When $n = r$, the map $\varphi_Z$ has a point as its target, so the equivalence is trivial. We shall thus restrict to the case $n > r$ in the subsequent discussion.
+
+$(1)$: The implication ``$\Rightarrow$" is immediate. For the converse ``$\Leftarrow$", it suffices to show that the image of 
 $$\left\{ S \in X^{[2]} \;\middle|\; h^0(X,\Omega_X \otimes \mathcal{I}_S)=n-r   \right\}$$
  under the map $\pi_X:X^{[2]} \longrightarrow X^{(2)} $ does not include the diagonal. Indeed, we can choose a section $s \in \Hnm^0(X,\Omega_X)$ that cuts out finitely many reduced points $p_1,\ldots,p_d$ in $X$. (Well this maybe not so true, since $\phi_Z$ is not always regular, such a section $s$ may vanish along some indeterminacy locus. However, for a general $s$, there will always be at least one isolated zero $p_1$, which is sufficient for our purposes.)
 Then for any $S \in \pi_X^{-1}(p_1)$, we have 
 $$\Hnm^0(X,\Omega_X \otimes \mathcal{I}_S)  \subsetneqq \Hnm^0(X,\Omega_X(-p_1)).$$
-}
+
+$(2)$: The implication “$\Rightarrow$” follows from the geometry of the projection $\pr_1: X \times X^{[2]} \to X$.
+By Lemma \ref{lem:Hilb_semicont} and the closedness of the tautological correspondence in $X \times X^{[2]}$, the subset
+$$I^{n-r}:= \left\{ (p,S) \in X \times X^{[2]} \;\middle|\; p \in S \text{ and } h^0(X,\Omega_X \otimes \mathcal{I}_S) \geqslant n-r   \right\}$$
+is closed in $X \times X^{[2]}$. Consequently, its image
+$$\pr_1(I^{n-r})=\left\{ p \in X  \;\middle|\; \text{there exists $S \in X^{[2]}$ such that $p\in S$ and $h^0(X,\Omega_X \otimes \mathcal{I}_S)=n-r$}   \right\}$$
+is closed in $X$. Since the hypothesis ensures that $\pr_1(I^{n-r})$ contains a nonempty open subset of $X$, we obtain $\pr_1(I^{n-r}) = X$.
+
+For “$\Leftarrow$”: as $\alpha$ is generically injective, one has $h^0(X, \Omega_X(-p)) = n-r$ for a general point $p \in X$. Therefore, for any subscheme $S$ containing such a general point, $h^0(X, \Omega_X \otimes \mathcal{I}_S) \leqslant n-r$.
+\end{proof}
+
 This last step relies on the following lemma, combined with the closedness of the tautological correspondence in $X \times X^{[2]}$.
-\begin{lemma}
+\begin{lemma}\label{lem:Hilb_semicont}
 Let $m \in \mathbb{Z}_{>0}$. The function $$h^{\Omega}: X^{[m]} \longrightarrow \mathbb{Z}_{\geqslant 0} \qquad
  S \longmapsto h^0(X,\Omega_X \otimes \mathcal{I}_S)$$ 
 is Zariski upper semicontinuous.
 \end{lemma}
-\begin{proofsketch}
+\begin{proof}
 Consider the coherent sheaf $\mathcal{F} \in \Coh(X^{[m]} \times X)$ characterized by the property
 $$\mathcal{F}|_{\{S\} \times X} \cong \Omega_X \otimes \mathcal{I}_S,$$
 The proposition then follows directly from the semicontinuity theorem \cite[28.1.1]{vakil2017rising}.
-\end{proofsketch}
+\end{proof}
 
 The stratification of $X^{[m]}$ by $h^{\Omega}$ offers a natural generalization of Brill--Noether theory beyond the setting of curves.
 
@@ -696,7 +721,7 @@ Assume that $Z$ is embedded in $A$ and generates $A$, and let $V := T_0^*A$. The
 $$\dim_{\mathbb{C}} \Hnm^0(Z,\Omega_Z(-p)) \cap V =n-r \qquad \text{ for all $p \in Z$}$$
 It follows that the Gauss map is a regular morphism
 \[\begin{tikzcd}[row sep={-1mm}]
-	{\phi_Z:} &[-10mm] Z &[5mm] {\Gr(r,T^0A)} & [-7mm] {\Gr(n-r,V)} \\
+	{\phi_Z:} &[-10mm] Z &[5mm] {\Gr(r,T_ 0A)} & [-7mm] {\Gr(n-r,V)} \\
 	& p && {\Hnm^0(Z,\Omega_Z(-p)) \cap V}
 	\arrow[from=1-2, to=1-3]
 	\arrow["\cong"{description}, draw=none, from=1-3, to=1-4]
@@ -1374,11 +1399,11 @@ $$Z^{(m)} \subset A \text{ is a divisor } \quad\Longleftrightarrow\quad \widetil
 The formulas \eqref{eq:CMclass_sym} and \eqref{eq:CMclass_signsym} admit further simplifications in certain special situations, such as the case of curves. In what follows, we extract the corresponding polynomial coefficient, which may be of independent combinatorial interest.
 
 \begin{definition}\label{def:Moebius_block-sum}
-Fix $d$ and $\tilde{d} = d/2$, and let $l \in \mathbb{N}_{\geqslant 0}$. For a partition $\lambda = [\lambda_1, \ldots, \lambda_r]$ of $l$ with $\lambda_1 \geqslant \cdots \geqslant \lambda_r > 0$, the Möbius-transforms block-sum polynomial of type A (resp. type C) is defined by
+Fix $d$ and $\tilde{d} = d/2$, and let $l \in \mathbb{N}_{\geqslant 0}$. For a partition $\lambda = [\lambda_1, \ldots, \lambda_{k'}]$ of $l$ with $\lambda_1 \geqslant \cdots \geqslant \lambda_{k'} > 0$, the Möbius-transforms block-sum polynomial of type A (resp. type C) is defined by
 \begin{equation*}
 \begin{aligned}
-  \mu_d^{\lambda}:=\;& \sum_{\alpha \in \mathcal{P}(d)} \sum_{\substack{\boldsymbol{l} \dashv \lambda\\\boldsymbol{l}:\text{ length }k}} \phantom{2^{\widetilde{d}-k}} \mu(\hat{0},\alpha)    \alpha(m)^{2\boldsymbol{l}} d^{k-r} &&\in \mathbb{Z}[m_1,\ldots, m_d]^{S_d} \\ 
-  \widetilde{\mu}_{\widetilde{d}}^{\lambda}:=\;& \sum_{\beta \in \mathcal{P}(\widetilde{d})}  \sum_{\substack{\boldsymbol{l} \dashv \lambda\\\boldsymbol{l}:\text{ length }k}} 2^{\widetilde{d}-k} \mu(\hat{0},\beta)    \beta(\widetilde{m}^2)^{\boldsymbol{l}} (2\widetilde{d})^{k-r} &&\in \mathbb{Z}[m_1^2,\ldots, m_{\widetilde{d}}^2]^{S_{\widetilde{d}}} \\ 
+  \mu_d^{\lambda}:=\;& \sum_{\alpha \in \mathcal{P}(d)} \sum_{\substack{\boldsymbol{l} \dashv \lambda\\\boldsymbol{l}:\text{ length }k}} \phantom{2^{\widetilde{d}-k}} \mu(\hat{0},\alpha)    \alpha(m)^{2\boldsymbol{l}} d^{k-k'} &&\in \mathbb{Z}[m_1,\ldots, m_d]^{S_d} \\ 
+  \widetilde{\mu}_{\widetilde{d}}^{\lambda}:=\;& \sum_{\beta \in \mathcal{P}(\widetilde{d})}  \sum_{\substack{\boldsymbol{l} \dashv \lambda\\\boldsymbol{l}:\text{ length }k}} 2^{\widetilde{d}-k} \mu(\hat{0},\beta)    \beta(\widetilde{m}^2)^{\boldsymbol{l}} (2\widetilde{d})^{k-k'} &&\in \mathbb{Z}[m_1^2,\ldots, m_{\widetilde{d}}^2]^{S_{\widetilde{d}}} \\ 
 \end{aligned}
 \end{equation*}
 In this definition:
@@ -1392,19 +1417,19 @@ In this definition:
 Now, the formulas \eqref{eq:CMclass_sym} and \eqref{eq:CMclass_signsym} can be written as
 \begin{equation*}
 \begin{aligned}
-  c_l\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{c_Z^{(m)}} \sum_{\lambda \dashv l} \;\mu_d^{\lambda} \left( \bigast_{i=1}^r c_{\lambda_i}\right)\qquad && \text{type $A$ case} \\ 
-  c_l\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{c_Z^{(m)}} \sum_{\lambda \dashv l} \;\widetilde{\mu}_{\widetilde{d}}^{\lambda} \left( \bigast_{i=1}^r c_{\lambda_i}\right)\qquad && \text{type $C$ case} \\
+  c_l\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{c_Z^{(m)}} \sum_{\lambda \dashv l} \;\mu_d^{\lambda} \left( \bigast_{i=1}^{k'} c_{\lambda_i}\right)\qquad && \text{type $A$ case} \\ 
+  c_l\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{c_Z^{(m)}} \sum_{\lambda \dashv l} \;\widetilde{\mu}_{\widetilde{d}}^{\lambda} \left( \bigast_{i=1}^{k'} c_{\lambda_i}\right)\qquad && \text{type $C$ case} \\
 \end{aligned}
 \end{equation*}
 
 The following identities have been verified in low-degree cases using SageMath, though a purely combinatorial explanation, as well as a general formulation for the remaining types, is still lacking.
 \begin{fact}
-Let $1^r := [1, \ldots, 1] \dashv r$. When $r < \widetilde{d}$, we have
+Let $1^{k'} := [1, \ldots, 1] \dashv k'$. When $k' < \widetilde{d}$, we have
 \begin{equation*}
 \begin{aligned}
-  \mu_d^{1^r}=\;& \phantom{2^{\widetilde{d}}}\frac{1}{2^{r}r!} \sum_{\sigma \in S_{d}} \prod_{i=1}^{r} \left( m_{\sigma(2i-1)}-m_{\sigma(2i)} \right)^2 \\
-  \widetilde{\mu}_{\widetilde{d}}^{1^r}=\;& 2^{\widetilde{d}}\frac{1}{2^{r}r!} \sum_{\sigma \in S_{d}} \prod_{i=1}^{r} m_{\sigma(i)}^2 \\
-  =\;& 2^{\widetilde{d}-r}(\tilde{d}-r)! \sum_{1 \leqslant i_1 < \cdots l_r \leqslant d} m_{i_1}^2\cdots m_{i_r}^2 \\
+  \mu_d^{1^{k'}}=\;& \phantom{2^{\widetilde{d}}}\frac{1}{2^{k'}k'!} \sum_{\sigma \in S_{d}} \prod_{i=1}^{k'} \left( m_{\sigma(2i-1)}-m_{\sigma(2i)} \right)^2 \\
+  \widetilde{\mu}_{\widetilde{d}}^{1^{k'}}=\;& 2^{\widetilde{d}}\frac{1}{2^{k'}k'!} \sum_{\sigma \in S_{d}} \prod_{i=1}^{k'} m_{\sigma(i)}^2 \\
+  =\;& 2^{\widetilde{d}-k'}(\tilde{d}-k')! \sum_{1 \leqslant i_1 < \cdots l_{k'} \leqslant d} m_{i_1}^2\cdots m_{i_{k'}}^2 \\
 \end{aligned}
 \end{equation*}
 
