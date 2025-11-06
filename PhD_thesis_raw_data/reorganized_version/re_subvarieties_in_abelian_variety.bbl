@@ -12,11 +12,28 @@ E.~Arbarello, M.~Cornalba, P.~A. Griffiths, and J.~Harris.
   Grundlehren Math. Wiss.}
 \newblock Springer, Cham, 1985.
 
+\bibitem{Bar04}
+Wolf~P. Barth, Klaus Hulek, Chris A.~M. Peters, and Antonius Van~de Ven.
+\newblock {\em Compact complex surfaces}, volume~4 of {\em Ergeb. Math.
+  Grenzgeb., 3. Folge}.
+\newblock Berlin: Springer, 2nd enlarged ed. edition, 2004.
+
 \bibitem{BL04}
 Christina Birkenhake and Herbert Lange.
 \newblock {\em Complex abelian varieties}, volume 302 of {\em Grundlehren Math.
   Wiss.}
 \newblock Berlin: Springer, 2nd augmented ed. edition, 2004.
+
+\bibitem{Cil20}
+Ciro Ciliberto, Thomas Dedieu, Concettina Galati, and Andreas~Leopold Knutsen.
+\newblock On the locus of {Prym} curves where the {Prym}-canonical map is not
+  an embedding.
+\newblock {\em Ark. Mat.}, 58(1):71--85, 2020.
+
+\bibitem{CK22}
+Giulio Codogni and Thomas Kr{\"a}mer.
+\newblock Semicontinuity of {Gauss} maps and the {Schottky} problem.
+\newblock {\em Math. Ann.}, 382(1-2):607--630, 2022.
 
 \bibitem{Ha02}
 Allen Hatcher.
@@ -27,6 +44,11 @@ Allen Hatcher.
 Ariyan Javanpeykar, Thomas Kr{\"a}mer, Christian Lehn, and Marco Maculan.
 \newblock The monodromy of families of subvarieties on abelian varieties.
 \newblock {\em Duke Math. J.}, 174(6):1045--1149, 2025.
+
+\bibitem{Kani84}
+Ernst Kani.
+\newblock On {Castelnuovo}'s equivalence defect.
+\newblock {\em J. Reine Angew. Math.}, 352:24--70, 1984.
 
 \bibitem{Kr16cubicthreefold}
 Thomas Kr{\"a}mer.

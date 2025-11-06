@@ -362,7 +362,7 @@ Concerning irreducibility, it follows from the constructions in \cite[2.c]{Kr20}
 Let $A$ be an abelian variety of dimension $n$, and let $C \subset A$ be a non-degenerate curve that is not invariant under any non-trivial translation. Then, the monodromy group $\Gal(\gamma_C)$ is big (see Definition \ref{def:big_mono}).
 \end{conjecture}
 For $n>2$, this conjecture admits a purely geometric reformulation:
-\begin{conjecture}
+\begin{conjecture}\label{conj:big_mon_for_curve_2}
 Let $A$ be an abelian variety of dimension $n>2$, and let $C \subset A$ be a non-degenerate curve that is not invariant under any non-trivial translation in $A$. Then:
 \begin{itemize}[-]
 \item If $C$ is invariant under some reflection, the tangent Gauss map $\phi_C: C \longrightarrow \mathbb{P}^{n-1}$ is a double cover onto its image;
@@ -382,7 +382,7 @@ $\,$
 For the dimension and homology class of a subvariety $Z$, both invariants can be recovered from the homology class of $\mathbb{P}\Lambda_{Z} \subset \mathbb{P}T^*A$ — that is, from the total Chern--Mather class of $Z$. Standard computational techniques are available when the monodromy group $\Gal(\gamma_{Z})$ is a full or signed symmetric group. The notions of the Chern–Mather class and the Pontryagin product will be recalled in Definition \ref{def:CM_class} and Definition \ref{def:Pontryagin_product}, respectively.
 
 \begin{theoremB}\label{thm:B}
-Consider a non-degenerate subvariety $Z \subset A$ and a tuple $(m) = (m_1, \ldots, m_d) \in \mathbb{Z}^d$. Let $Z^{(m)} \subset A$ be as in Definition \ref{def:subvar_Z^{(m)}}. Let $d = \deg \gamma_Z$, $\widetilde{d} = d/2$, and let $c_l := c_{M,l}(\Lambda_Z)$ be the Chern--Mather class of $Z$. Let $*$ be the Pontryagin product. We write $\lambda \dashv l$ to indicate that $\lambda=[\lambda_1,\ldots,\lambda_{k'}]$ is a partition of $l$.
+Consider a non-degenerate subvariety $Z \subset A$ and a tuple $(m) = (m_1, \ldots, m_d) \in \mathbb{Z}^d$. Let $Z^{(m)} \subset A$ be as in Definition \ref{def:subvar_Z^{(m)}}. Let $d = \deg \gamma_Z$, $\widetilde{d} = d/2$, and let $c_i := c_{M,i}(\Lambda_Z)$ be the Chern--Mather class of $Z$. Let $*$ be the Pontryagin product. We write $\lambda \dashv l$ to indicate that $\lambda=[\lambda_1,\ldots,\lambda_{k'}]$ is a partition of $l$.
 \begingroup
 \upshape
 %\setlist{itemsep=-0.4em}
@@ -516,8 +516,9 @@ is the collection of points whose tangent spaces lie entirely within $H$.
 Geometrically, the monodromy can be described as follows: Given a general hyperplane $H \in \mathbb{P}T^{*}_{0}A$, its preimage under $\gamma_{Z}$ consists of $d$ points ${ p_1, \ldots, p_d }$. Moving $H$ continuously along a closed loop we obtain a permutation of these points, and the monodromy group $\Gal(\gamma_Z)$ consists of all permutations obtained this way. With this formulation, it suffices to consider the Gauss map $\phi_Z$ alone; the inclusion $\iota_Z: Z \to A$ is no longer required for computing the monodromy group.
 
 \begin{definition}\label{def:general_monodromy}
-Let $Z$ be an $r$-dimensional variety and $\phi: Z \longrightarrow \Gr(r,n)$ a morphism. The monodromy group $\Mon(\phi)$ is defined as $\Gal(f_{\phi})$, where
-$$f_{\phi}: (\phi,\Id)^{-1} I_{r,n-1} \;\subset\; Z \times \Gr(n-1,n) \stackrel{\pi_2}{\longrightarrow} \Gr(n-1,n).$$
+Let $Z$ be an $r$-dimensional variety and $\phi: Z \longrightarrow \Gr(r,n)$ a morphism. Suppose that $\phi_*[Z] \cup [\Gr(r,H)]=d \neq 0$ in $\Hnm^{2r(n-r)} \left( \Gr(r,n);\mathbb{Q} \right)$. The monodromy group $\Mon(\phi)$ is defined as $\Gal(f_{\phi})$, where
+$$f_{\phi}: (\phi,\Id)^{-1} I_{r,n-1} \;\subset\; Z \times \Gr(n-1,n) \stackrel{\pi_2}{\longrightarrow} \Gr(n-1,n)$$
+is a generically finite morphism of degree $d$.
 \end{definition}
 When $\phi$ is not generically injective, the monodromy group is subject to additional constraints, as captured by the next lemma.
 \begin{lemma}\label{lem:wreath_product}
@@ -624,7 +625,7 @@ We know that
 
 We will concentrate on the case where $\alpha$ is generically injective.\footnote{The general method remains valid in the broader setting, but the Gauss map then takes values in a different space. In fact, there is always a semicontinuous map
 $$\phi_X: X \longrightarrow \bigsqcup_{i=0}^{r} \Gr \left( n-i, \Hnm^0(X,\Omega_X)  \right) \qquad p \longmapsto \Hnm^0(X,\Omega_X(-p)).$$
-} Under this assumption, we set $Z = \iota_X(X)$ and $A = \Alb(Z)$. The corresponding Gauss map is then a rational map:
+} Under this assumption, we set $Z = \iota_X(X)$ and $A = \Alb(X)$. The corresponding Gauss map is then a rational map:
 % https://q.uiver.app/#q=WzAsNixbMCwwLCJcXHBoaV9aOiJdLFsyLDAsIlxcR3IocixUXjBBKSJdLFsxLDAsIloiXSxbMywwLCJcXEdyKG4tcixcXEhubV4wKFgsXFxPbWVnYV9YKSkiXSxbMywxLCJcXEhubV4wKFgsXFxPbWVnYV9YKC1wKSkiXSxbMSwxLCJwIl0sWzUsNCwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibWFwcyB0byJ9fX1dLFsyLDEsIiIsMCx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dLFsxLDMsIlxcY29uZyIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
 \[\begin{tikzcd}[row sep={-1mm}]
 	{\phi_Z:} &[-10mm] Z &[5mm] {\Gr(r,T_0A)} & [-7mm] {\Gr\left(n-r,\Hnm^0(X,\Omega_X)\right)} \\
@@ -671,7 +672,7 @@ When $n = r$, the map $\varphi_Z$ has a point as its target, so the equivalence 
 $(1)$: The implication ``$\Rightarrow$" is immediate. For the converse ``$\Leftarrow$", it suffices to show that the image of 
 $$\left\{ S \in X^{[2]} \;\middle|\; h^0(X,\Omega_X \otimes \mathcal{I}_S)=n-r   \right\}$$
  under the map $\pi_X:X^{[2]} \longrightarrow X^{(2)} $ does not include the diagonal. Indeed, we can choose a section $s \in \Hnm^0(X,\Omega_X)$ that cuts out finitely many reduced points $p_1,\ldots,p_d$ in $X$. (Well this maybe not so true, since $\phi_Z$ is not always regular, such a section $s$ may vanish along some indeterminacy locus. However, for a general $s$, there will always be at least one isolated zero $p_1$, which is sufficient for our purposes.)
-Then for any $S \in \pi_X^{-1}(p_1)$, we have 
+Then for any $S \in \pi_X^{-1}(2p_1)$, we have 
 $$\Hnm^0(X,\Omega_X \otimes \mathcal{I}_S)  \subsetneqq \Hnm^0(X,\Omega_X(-p_1)).$$
 
 $(2)$: The implication “$\Rightarrow$” follows from the geometry of the projection $\pr_1: X \times X^{[2]} \to X$.
@@ -750,7 +751,6 @@ It follows that the Gauss map is a regular morphism
 
 \subsection{Criteria for big monodromy group}\label{subsec:criteria_big_mon}
 
-Example \ref{eg:bielliptic} shows that a small monodromy group can indeed occur, even in the case of curves. Nevertheless, there exist criteria ensuring that the monodromy group is large, which we describe in this subsection.
 
 
 
@@ -853,6 +853,8 @@ $$\varepsilon_{\sigma(1)}=\tilde{\sigma} \circ \sigma_0 \circ \tilde{\sigma}^{-1
 Thus, $S_2^{\oplus m} \subset G$, and since $G$ maps onto $S_m$, we obtain $G = W(C_{m})$.
 \end{proofsketch}
 
+\begin{proof}[Proof that Conjecture \ref{conj:big_mon_for_curve} is equivalent to Conjecture \ref{conj:big_mon_for_curve_2} when $n>2$]If $\phi_C$ is generically injective, Proposition \ref{prop:mon_of_embedded_curve} yields $\Gal(\gamma_C) \cong S_d$. When $C = -C$ and $\phi_C$ is a double cover, Proposition \ref{prop:mon_of_nonembedded_curve2} implies $\Gal(\gamma_C) \cong W(C_{d/2})$ or $W(D_{d/2})$, both of which are big monodromy groups. In all other cases, Lemma \ref{lem:wreath_product} shows that $\Gal(\gamma_C) \subseteq S_k \wr S_{d/k}$, which is not big whenever $k>2$ and $k \neq d$. Note that $k = d$ occurs only when $n=2$.
+\end{proof}
 
 %When ramification occurring only in the smooth point of $C'$, I try to collect the following links:
 %\href{https://mathoverflow.net/questions/310299/characterizing-subgroups-of-semidirect-products-with-a-fixed-intersection-with-t}{subgroups of semidirect products}
@@ -884,8 +886,297 @@ $$\Gal(\gamma_C) \cong S_2^{\oplus g-1} \rtimes S_{g-1}.$$
 
 
 
-The Prym case is more intricate, since the associated monodromy group may fail to be large. To proceed, we fix Setting \ref{set:Prym} and impose the additional condition that $C$ be non-hyperelliptic, thereby excluding trivial counterexamples.
+The Prym case is more intricate, since the associated monodromy group may fail to be large. 
 
+\begin{setting}\label{set:Prym}
+Let $C'/\mathbb{C}$ be a smooth projective curve, $\eta \in \Pic(C')$ a line bundle, and $B$ a reduced effective (possibly zero) divisor on $C'$. Suppose $k > 1$ and that there is an isomorphism $\eta^{\otimes k} \cong \mathcal{O}_{C'}(B)$. According to \cite[§17]{Bar04}, these data determine a cyclic $k$-fold covering $h : C \to C'$ of smooth projective curves, branched exactly along $B$. Denote by $\sigma$ the generator of the Galois group $\Gal(C/C') \cong \mathbb{Z}/k\mathbb{Z}$.
+
+Recall that the Prym variety $A := \Prym(C/C')$ is defined as the connected component of the identity in 
+$$\ker \left[\Nm:\rule{0mm}{3.4mm}\Jac(C) \longrightarrow \Jac(C') \right]$$
+Its dimension is denoted by $n$.
+
+The Abel--Prym map is defined by
+$$\AP_{C/C'}: C \longrightarrow A \qquad p \longmapsto \mathcal{O}_{C}(p-\sigma(p)).$$
+\end{setting}
+
+The following example, which essentially restates \cite[Corollary 2.2]{Cil20}, illustrates the case where the cover is an étale double cover.
+
+
+\begin{proposition}
+In Setting \ref{set:Prym}, assume further that $k = 2$, $B = \varnothing$, and that $C'$ is non-hyperelliptic of genus $g(C') \geqslant 4$. 
+\begin{itemize}
+\item If $C'$ is bielliptic and $\eta = \pr^* \eta_0$, where $\pr: C' \to E'$ is a bielliptic map and $\eta_0 \in \Pic^0(E')[2]$, then the tangent Gauss map $\phi_C: C \to \mathbb{P}^{n-1}$ has degree $4$, and the curve $C \subset A$ is invariant under a $2$-torsion translation in $A$.
+\item Otherwise, the tangent Gauss map $\phi_C: C \to \mathbb{P}^{n-1}$ is a double cover onto its image, and $\Gal(\gamma_C)$ is big.
+\end{itemize}
+\end{proposition}
+
+\begin{proof}
+When $k=2$, the corresponding Gauss map $\gamma_C$ factors through $h$: 
+% https://q.uiver.app/#q=WzAsMTEsWzAsMCwiXFxnYW1tYV9DOiJdLFsxLDAsIkMiXSxbMiwwLCJDJyJdLFszLDAsIlxcbWF0aGJie1B9XntuLTF9Il0sWzUsMCwiXFxtYXRoYmJ7UH1cXCFcXGxlZnQoIEheMChcXG9tZWdhX3tDJ30gXFxvdGltZXMgXFxldGEpXiogXFxyaWdodCkiXSxbNSwxLCJcXEdyXFxsZWZ0KG4tMSwgSF4wKFxcb21lZ2Ffe0MnfSBcXG90aW1lcyBcXGV0YSlcXHJpZ2h0KSJdLFs1LDIsIkheMFxcbGVmdChcXG9tZWdhX3tDJ30gXFxvdGltZXMgXFxldGEoLXApXFxyaWdodCkiXSxbMiwyLCJwIl0sWzEsMiwiXFx0aWxkZXtwfSJdLFs0LDAsIj0iXSxbNCwxLCJcXGNvbmciXSxbOCw3LCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtYXBzIHRvIn19fV0sWzIsMywifFxcb21lZ2Ffe0MnfSBcXG90aW1lcyBcXGV0YXwiXSxbMSwyLCJoIl0sWzcsNiwiIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoibWFwcyB0byJ9fX1dXQ==
+\[\begin{tikzcd}[column sep=10mm,row sep=-2mm]
+	{\gamma_C:} &[-12mm] C & {C'} & [5mm] {\mathbb{P}^{n-1}} & [-12mm]{=} &[-12mm] {\hspace{-10mm}\mathbb{P}\!\left( \Hnm^0(\omega_{C'} \otimes \eta)^* \right)} \\
+	&&&& \cong & {\Gr\left(n-1, \Hnm^0(\omega_{C'} \otimes \eta)\right)} \\[1mm]
+	& {\tilde{p}} & p &&& {\Hnm^0\left(\omega_{C'} \otimes \eta(-p)\right)}
+	\arrow["h", from=1-2, to=1-3]
+	\arrow["{|\omega_{C'} \otimes \eta|}", from=1-3, to=1-4]
+	\arrow[maps to, from=3-2, to=3-3]
+	\arrow[maps to, from=3-3, to=3-6]
+\end{tikzcd}\]
+where $|\omega_{C'} \otimes \eta|$ denotes the Prym–canonical map. According to \cite[Corollary 2.2]{Cil20}, one has $\deg |\omega_{C'} \otimes \eta| \in \{1, 2\}$, and the case $\deg |\omega_{C'} \otimes \eta| = 2$ occurs precisely when $C'$ is bielliptic and $\eta = \pr^* \eta_0$.
+\end{proof}
+
+\subsection{Curves in Prym variety with small monodromy group(Delete later)}\label{subsec:small_mon}
+This subsection is devoted to presenting an example that has small monodromy group.
+
+
+
+
+The classical theory treats the case where the Prym variety $A$ is principally polarized—this occurs exactly when $B = \varnothing$ or $B =\{p_0, q_0\}$, that is, when $h$ is either unramified or ramified at two points.\footnote{See \cite[Theorem 3.2.6]{CK22} for the proof.} For clarity, we restrict our attention to these cases. Table \ref{table:Prym_numerical_data} lists the relevant numerical data.\footnote{As usual, $n=\dim_{\mathbb{C}} A$ is the dimension of the abelian variety.}
+
+{
+\def\arraystretch{1.2}
+\begin{table}[ht]
+\begin{tabular}{c|c|c|c}
+\hline
+                  & $g(C)$ & $g(C')$ & $\deg \eta$ \\ \hline
+$B = \varnothing$ & $2n+1$ & $n+1$   & $0$         \\ \hline
+$B =\{p_0, q_0\}$ & $2n$   & $n$     & $1$         \\ \hline
+\end{tabular}
+\medskip
+\caption{numerical data of Prym pair}
+\label{table:Prym_numerical_data}
+\vspace*{-\baselineskip}
+\end{table}
+}
+The Abel–Prym map $\AP_{C/C'}$ does not always behave as nicely as the Abel–Jacobi map; it may fail to be an embedding. When $C$ is hyperelliptic, the map $\AP_{C/C'}$ fails to be generically injective, and therefore falls outside the scope of our discussion. When $C$ is non-hyperelliptic, we may regard it as a subvariety of $A$ for our purposes, although it may be not strictly embedded.\footnote{For a detailed description of the map $\AP_{C/C'}$, see \cite[Proposition 12.5.2, Corollary 12.5.6]{BL04}. Although $\AP_{C/C'}$ may collapse $p_0$ and $q_0$, this does not affect the relevant computation of $\Gal(\gamma_Z)$.} However, it remains unclear whether $C$ is stable under any translation in $A$.
+
+
+
+
+\begin{eg} \label{eg:bielliptic}
+Let $C'$ be a non-hyperelliptic bielliptic curve, and let $\pr: C' \to E$ denote a $2:1$ covering onto an elliptic curve. For any nontrivial $2$-torsion line bundle $\eta_0 \in \Pic^0(E)[2]$, the pullback $\eta := \pr^* \eta_0$ satisfies $\eta^{\otimes 2} \cong \mathcal{O}_{C'}$ and the map $|\omega_{C'} \otimes \eta|$ factors through $\pr$.
+\end{eg}
+\begin{proof}[{Proof of Example \ref{eg:bielliptic}}]
+For any $x \in C'$, write $x_0:= \pr(x)$, then
+$$ \deg \eta_0^{\vee} (x_0)=1 \quad \Longrightarrow \quad \text{ there exists } y_0 \in E \text{ such that } \eta_0^{\vee} (x_0)=\mathcal{O}_E(y_0).$$
+Write $\pr^{-1}(x_0)=\{x,x'\}$, $\pr^{-1}(y_0)=\{y,y'\}$, we get
+\begin{equation*}
+\begin{aligned}
+\;& \eta_0^{\vee} (x_0)=\mathcal{O}_E(y_0) && \\ 
+\Longrightarrow\;& \eta^{\vee}(x+x')= \mathcal{O}_{C'}(y+y') && \text{Via pulling back along $\pr$} \\ 
+  \Longrightarrow\;& h^0 \left(\rule{0mm}{3mm} \eta^{\vee}(x+x')\right) = 1 && \\ 
+  \Longleftrightarrow\;& h^0 \left(\rule{0mm}{3mm}\omega_{C'} \otimes \eta(-x-x')\right) = n - 1 && \text{Via Riemann--Roch}\\
+  \Longleftrightarrow\;& \Hnm^0 \left(\rule{0mm}{3mm}\omega_{C'} \otimes \eta(-x)\right) \cong  \Hnm^0 \left(\rule{0mm}{3mm}\omega_{C'} \otimes \eta(-x')\right) \qquad && \\ 
+  \Longleftrightarrow\;& |\omega_{C'} \otimes \eta|(x)=|\omega_{C'} \otimes \eta|(x') &&
+\end{aligned}
+\end{equation*}
+\end{proof}
+
+The next proposition tells us, if we put some Galois condition for the covering, then the resulting curve $C \subset A$ is not invariant under any non-trivial translation of $A$. 
+
+\begin{proposition}\label{prop:Galois_condition}
+In Example \ref{eg:bielliptic}, let $C$ be the curve corresponding to $\eta \in \Pic^{0}(C')[2]$. If $\Gal(C/E) \cong \mathbb{Z}/2\mathbb{Z} \oplus \mathbb{Z}/2\mathbb{Z}$, then $C$ admits three intermediate quotients over $E$. Denote them by $C'$, $C_1$, and $C_2$, where $C_1$ and $C_2$ are the two intermediate curves different from $C'$.
+
+% https://q.uiver.app/#q=WzAsMTIsWzAsMCwiQyJdLFswLDEsIkMnIl0sWzIsMCwiQyJdLFsyLDEsIkMnIl0sWzIsMiwiRSJdLFsyLDMsIlxcbWF0aGJie1B9XjEiXSxbMCwyLCJFIl0sWzAsMywiXFxtYXRoYmJ7UH1eMSJdLFsxLDEsIkNfMSJdLFszLDEsIkNfMiJdLFsyLDQsIlxcR2FsKEMvRSkgXFxjb25nIFxcbWF0aGJie1p9LzJcXG1hdGhiYntafSBcXG9wbHVzIFxcbWF0aGJie1p9LzJcXG1hdGhiYntafSJdLFswLDQsIlxcR2FsKEMvRSkgXFxjb25nIFxcbWF0aGJie1p9LzRcXG1hdGhiYntafSJdLFsxLDZdLFswLDEsImgiXSxbNiw3XSxbMiwzLCJoIl0sWzMsNF0sWzQsNV0sWzgsNF0sWzksNF0sWzIsOSwiaF8yIl0sWzIsOCwiaF8xIiwyXV0=
+\[\begin{tikzcd}[ampersand replacement=\&,column sep={10mm,between origins},row sep=5mm]
+	C \&[30mm]\&[2mm] C \\
+	{C'} \& {C_1} \& {C'} \& {C_2} \\
+	E \&\& E \\
+	{\mathbb{P}^1} \&\& {\mathbb{P}^1} \\[-3mm]
+	{\Gal(C/E) \cong \mathbb{Z}/4\mathbb{Z}} \&\& {\Gal(C/E) \cong \mathbb{Z}/2\mathbb{Z} \oplus \mathbb{Z}/2\mathbb{Z}}
+	\arrow["h", from=1-1, to=2-1]
+	\arrow["{h_1}"', from=1-3, to=2-2]
+	\arrow["h", from=1-3, to=2-3]
+	\arrow["{h_2}", from=1-3, to=2-4]
+	\arrow[from=2-1, to=3-1]
+	\arrow[from=2-2, to=3-3]
+	\arrow[from=2-3, to=3-3]
+	\arrow[from=2-4, to=3-3]
+	\arrow[from=3-1, to=4-1]
+	\arrow[from=3-3, to=4-3]
+\end{tikzcd}\]
+If either $\Gal(C/E) \cong \mathbb{Z}/4\mathbb{Z}$, or $\Gal(C/E) \cong \mathbb{Z}/2\mathbb{Z} \oplus \mathbb{Z}/2\mathbb{Z}$ with the coverings $h_i:C \to C_i$ ramified, then the curve $C \subset A$ is not fixed under any non-trivial translation on $A$.
+\end{proposition}
+
+\begin{proof}
+We prove by contradiction.
+Assume there exists a non-trivial translation $\sigma:A\to A$ preserving $C$. Then the restriction $\sigma|_{C}:C \to C$ is an automorphism, and the induced map
+$$h_{\sigma}: C \longrightarrow C/\sigma$$
+is an unramified double covering. Since $\sigma$ is a translation, the Gauss map $\gamma_C$ necessarily factors through $h_{\sigma}$:
+% https://q.uiver.app/#q=WzAsNixbMCwwLCJcXGdhbW1hX0PvvJoiXSxbMSwwLCJDIl0sWzIsMCwiQyciXSxbMywwLCJFIl0sWzQsMCwiXFxtYXRoYmJ7UH1ee24tMX0iXSxbMiwxLCJDL1xcc2lnbWEiXSxbMSwyLCIyOjEiXSxbMiwzLCIyOjEiXSxbMyw0LCJcXHN1YnNldCIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxLDUsImhfe1xcc2lnbWF9IiwyXSxbNSwzLCJcXGV4aXN0cyEiLDIseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkYXNoZWQifX19XV0=
+\[\begin{tikzcd}[ampersand replacement=\&,column sep=15mm,row sep=5mm]
+	{\gamma_C:} \&[-17mm] C \& {C'} \& E \&[-13mm] {\mathbb{P}^{n-1}} \\
+	\&\& {C/\sigma}
+	\arrow["{2:1}", from=1-2, to=1-3]
+	\arrow["{h_{\sigma}}"', from=1-2, to=2-3]
+	\arrow["{2:1}", from=1-3, to=1-4]
+	\arrow["\subset"{description}, draw=none, from=1-4, to=1-5]
+	\arrow["{\exists!}"', dashed, from=2-3, to=1-4]
+\end{tikzcd}\]
+Without loss of generality, we may assume that $\deg(h_\sigma)=2$. By assumption, $C/\sigma$ coincides with $C'$, and $\sigma|_C$ is the involution $\iota$ associated with the cover $h:C\to C'$, which extends to an involution $\tilde\iota$ of $A$. According to \cite[Proposition 12.4.2]{BL04}, $\tilde\iota$ is a reflection. Hence $\sigma \circ \tilde\iota^{-1}$ is another reflection fixing $C$, which is impossible.
+
+\end{proof}
+
+%Maybe I should check \cite{CMS21,JC92} for more information on Prym varieties of bielliptic curves.
+
+Unfortunately, the condition in Proposition \ref{prop:Galois_condition} is never met, and consequently the curve $C \subset A$ is preserved by a $2$-torsion translation of $A$, as explained below.
+
+\begin{lemma}\label{lem:small_mon_but_translation_invariant}
+In Example \ref{eg:bielliptic}, let $(\mathcal{L}_3,  \mathcal{L}_3^{\otimes 2} \cong \mathcal{O}_E(R))$ denote the line bundle associated with the double cover $C' \to E$, where $R$ is its branch divisor. Set $\mathcal{L}_1 := \eta_0$, $\mathcal{L}_2 := \eta_0 \otimes \mathcal{L}_3$, and let $u_i \colon C_i \to E$ be the ramified covering determined by $\mathcal{L}_i$.
+\begingroup
+\upshape
+%\setlist{itemsep=-0.4em}
+\renewcommand\labelenumi{(\theenumi)}
+\begin{enumerate}
+\item We have $C_3=C'$, $g(C_1)=1$ and $g(C_2)=g(C_3)=n+1$.
+\item The curve $C$ arises as the fiber product $C = C_3 \times_E C_1$. The covering $C \to E$ is Galois with
+$$\Gal(C/E) \cong \mathbb{Z}/2\mathbb{Z} \oplus \mathbb{Z}/2\mathbb{Z} \;\hat{=}\; \{ \Id, \sigma_1, \sigma_2, \sigma_3 \} ,$$
+where each $\sigma_i$ is the involution associated with the projection $h_i : C \to C_i$ (so that $\iota = \sigma_3$). By the Riemann–Hurwitz formula, the maps $u_1$, $h_2$, and $h_3$ are unramified.
+
+\item  With $\sigma = \{\sigma_2, \sigma_3\} \in \Gal(C_1/E)$ the involution of $u_1$, one can define
+$$\mathcal{L}_0: = \mathcal{O}_{C_1}\left(p_0-\sigma(p_0)\right) \in \Pic^0(C_1)[2],$$
+independent of the choice of $p_0 \in C_1$. The curve $C \subset A$ is invariant under the translation corresponding to $h_1^*\mathcal{L}_0$. Concretely, for every $p \in C$, one has
+$$\mathcal{O}_{C}\left(\rule{0mm}{3mm}p-\sigma_3(p)\right) \cong \mathcal{O}_{C}\left(\rule{0mm}{3mm}\sigma_2(p)-\sigma_3\sigma_2(p)\right) \otimes h_1^* \mathcal{L}_0.$$
+\end{enumerate}
+\endgroup
+\end{lemma}
+
+\begin{proof}\
+\begin{enumerate}
+\item Since
+$$\mathcal{L}_1^{\otimes 2} \cong \mathcal{O}_E, \qquad \mathcal{L}_2^{\otimes 2} \cong \mathcal{O}_E(R), \qquad 
+\mathcal{L}_3^{\otimes 2} \cong \mathcal{O}_E(R),$$
+he Riemann–Hurwitz formula yields the genus of $C_i$.
+\item Notice that the curve $C$ corresponds to the line bundle $\eta: = \pr^* \eta_0$.
+\item Since $u_1$ is unramified, the involution $\sigma \in \Aut(C_1/E)$ acts by translation and thus preserves the Jacobian:
+$$\mathcal{O}_{C_1}\left(p_0-q_0\right) \cong \mathcal{O}_{C_1}\left(\sigma(p_0-q_0)\right), \qquad \text{for any }p_0,q_0 \in C_1.$$
+For $p \in C$, write $p_0=h_1(p)$, one can computes that 
+\begin{equation*}
+\begin{aligned}
+  h_1^*\mathcal{L}_0\cong\;& h_1^*\mathcal{O}_{C_1}\left(\rule{0mm}{3mm}p_0-\sigma(p_0)\right) \\ 
+  \cong\;& \mathcal{O}_{C}\left(\rule{0mm}{3mm}p+\sigma_1(p)-\sigma_2(p)-\sigma_3(p)\right) \\ 
+  \cong\;& \mathcal{O}_{C}\left(\rule{0mm}{3mm}p-\sigma_3(p)\right) \otimes \mathcal{O}_{C}\left(\rule{0mm}{3mm}-\sigma_2(p)+\sigma_3\sigma_2(p)\right)\\
+\end{aligned}
+\end{equation*}
+\end{enumerate}
+\end{proof}
+
+\begin{lemma}
+When $\gon(C')>4$, $|\omega_{C'} \otimes \eta|$ is injective. As a result, the monodromy group is big.
+\end{lemma}
+
+\begin{proof}
+Suppose that $|\omega_{C'} \otimes \eta|$ is not injective, we need to find a line bundle of degree $4$ and rank $\geqslant 1$. In fact, for $p\neq q$,
+\begin{equation*}
+\begin{aligned}
+\;& |\omega_{C'} \otimes \eta|(p)=|\omega_{C'} \otimes \eta|(q) &&\\
+  \Longleftrightarrow\;& h^0 \left(\omega_{C'} \otimes \eta\right) -  h^0 \left(\omega_{C'} \otimes \eta(-p-q)\right) = 1\qquad && \text{By \cite[19.2.8]{vakil2017rising}}\\ 
+  \Longleftrightarrow\;& h^0 \left(\omega_{C'} \otimes \eta(-p-q)\right) = n - 1 && \text{Since $\dim_{\mathbb{C}} A = n$}\\
+  \Longleftrightarrow\;& h^0 \left( \eta^{\vee}(p+q)\right) = 1 && \text{Via Riemann--Roch}\\   
+\end{aligned}
+\end{equation*}
+When $B=\varnothing$, write $\eta^{\vee}(p+q)=\mathcal{O}_{C'}(p'+q')$, then
+$$\mathcal{O}_{C'}(2p+2q) = \left(\eta^{\vee}\right)^{\otimes 2}(2p+2q) = \mathcal{O}_{C'}(2p'+2q') \hspace{25mm}\in g_4^1;$$
+When $B=\{p_0,q_0\}$, write $\eta^{\vee}(p+q)=\mathcal{O}_{C'}(p')$, then
+$$\mathcal{O}_{C'}(2p+2q) = \left(\eta^{\vee}\right)^{\otimes 2}(2p+2q+p_0+q_0) = \mathcal{O}_{C'}(2p'+p_0+q_0) \quad\in g_4^1.$$
+\end{proof}
+
+\begin{remark}
+Based on the strategy used in the proof of Lemma 2.10, we can in fact obtain stronger results. For $p \in C'$,
+\begin{equation*}
+\begin{aligned}
+\;& |\omega_{C'} \otimes \eta|\text{ is ramified at $p$} && \text{(i.e., the tangent map is $0$ at $p$)}\\
+  \Longleftrightarrow\;& h^0 \left(\omega_{C'} \otimes \eta\right) -  h^0 \left(\omega_{C'} \otimes \eta(-2p)\right) = 1\qquad && \text{By \cite[19.2.9]{vakil2017rising}}\\ 
+  \Longleftrightarrow\;& h^0 \left(\omega_{C'} \otimes \eta(-2p)\right) = n - 1 && \text{Since $\dim_{\mathbb{C}} A = n$}\\
+  \Longleftrightarrow\;& h^0 \left( \eta^{\vee}(2p)\right) = 1 && \text{Via Riemann--Roch}\\   
+\end{aligned}
+\end{equation*}
+
+
+For the remainder of this discussion, we focus exclusively on the case $B = \varnothing$. Combining both,
+\begin{equation*}
+\begin{aligned}
+\;& |\omega_{C'} \otimes \eta|\text{ is not generically injective} \\
+  \Longleftrightarrow\;&\text{For any } p \in C', \text{ there exist } q \in C' \text{ such that } h^0 \left( \eta^{\vee}(p+q)\right) = 1 \\   
+\Longleftrightarrow\;&\text{For any } p \in C', \text{ there exist } q \in C' \text{ such that }  \eta^{\vee}+p \in C'+C'-q \\  
+\Longleftrightarrow\;&  \eta^{\vee}+C' \subseteq C'+ C'- C'. \\ 
+\end{aligned}
+\end{equation*}
+\end{remark}
+
+
+
+Gonality is not the only invariant forcing the monodromy group to be large. Indeed, the Castelnuovo–Severi inequality implies that Example \ref{eg:bielliptic} is the sole instance of a non-trivial small monodromy group when $g(C') > 9$.
+
+\begin{fact}[{Castelnuovo--Severi inequality, \cite[p26, Corollary]{Kani84}}]
+Let $C$ be a smooth projective curve equipped with two ramified coverings $f_i: C \to C_i$ of degrees $d_i$ $(i=1,2)$. Suppose that there is no morphism $h: C \to \tilde{C}$ with $\deg(h) > 1$ such that both $f_1$ and $f_2$ factor through $h$. Then
+$$g(C) \leqslant d_1 \cdot g(C_1) + d_2 \cdot g(C_2) + (d_1-1)(d_2-1).$$
+\end{fact}
+
+\begin{proposition}\label{prop:big_genus_Prym_case}
+If, in Setting \ref{set:Prym}, we additionally require that $C'$ be non-hyperelliptic and non-bielliptic, and $h: C \longrightarrow C'$ is étale, then any such curve with $g(C') > 9$ must have big monodromy group.
+\end{proposition}
+
+\begin{proof}
+Assume that $C'$ and $\eta$ satisfies
+$$\eta^{\vee}+C' \subseteq C'+ C'- C'.$$
+$\;$\\
+{\bfseries Step 1.} we can find two distinct $g_4^1$ of $C'$.
+
+For any $p \in C'$, there exist $q,p',q' \in C'$ such that  
+\[
+\eta^{\vee}(p+q) = \mathcal{O}_{C'}(p'+q') .
+\]
+This implies  
+\[
+\mathcal{O}_{C'}(2p+2q) = \mathcal{O}_{C'}(2p'+2q') ,
+\]
+which defines a degree-$4$ covering $f_1\colon C' \to \mathbb{P}^1$ ramified at $p,q,p',q'$.  
+Choosing $\tilde{p} \in C'$ outside the ramification locus of $f_1$ and repeating the construction yields another $g^1_4$, denoted $f_2\colon C' \to \mathbb{P}^1$.
+
+$\;$\\
+{\bfseries Step 2.} If $f_1$ and $f_2$ factor through a common map $h\colon C' \to \tilde{C}$ with $\deg(h) > 1$, then $C'$ is hyperelliptic or bielliptic.  
+
+Indeed, in this case $\deg(h) = 2$, and the Castelnuovo--Severi inequality applied to $(\tilde{C}, \tilde{f}_1, \tilde{f}_2)$ gives $g(\tilde{C}) \leqslant 1$, so $\tilde{C}$ is either $\mathbb{P}^1$ or an elliptic curve.
+
+% https://q.uiver.app/#q=WzAsNCxbMSwxLCJcXHRpbGRle0N9Il0sWzAsMiwiXFxtYXRoYmJ7UH1eMSJdLFsyLDIsIlxcbWF0aGJie1B9XjEiXSxbMSwwLCJDIl0sWzAsMSwiXFx0aWxkZXtmfV8xIl0sWzAsMiwiXFx0aWxkZXtmfV8yIiwyXSxbMywwLCJoIiwyXSxbMywxLCJmXzEiLDIseyJjdXJ2ZSI6Mn1dLFszLDIsImZfMiIsMCx7ImN1cnZlIjotMn1dXQ==
+\[\begin{tikzcd}[ampersand replacement=\&,row sep=5mm]
+	\& C \\
+	\& {\tilde{C}} \\
+	{\mathbb{P}^1} \&\& {\mathbb{P}^1}
+	\arrow["h"', from=1-2, to=2-2]
+	\arrow["{f_1}"', curve={height=12pt}, from=1-2, to=3-1]
+	\arrow["{f_2}", curve={height=-12pt}, from=1-2, to=3-3]
+	\arrow["{\tilde{f}_1}", from=2-2, to=3-1]
+	\arrow["{\tilde{f}_2}"', from=2-2, to=3-3]
+\end{tikzcd}\]
+
+$\;$\\
+{\bfseries Step 3.} If $C'$ is neither hyperelliptic nor bielliptic, then the Castelnuovo--Severi inequality yields $g(C') \leqslant 9$.
+\end{proof}
+
+The following lemma tells us that all bielliptic curve case with small monodromy group are contained in Example \ref{eg:bielliptic}, when $g(C')>9$.
+
+\begin{lemma}\label{lem:bielliptic_with_big_mon}
+Let $C'$ be a non-hyperelliptic bielliptic curve with $g(C') > 9$, and let $\pr: C' \to E$ be the double covering onto an elliptic curve. Assume that there exists a nontrivial $2$-torsion line bundle $\eta \in \Pic^0(C')[2]$ such that the linear system $|\omega_{C'} \otimes \eta|$ fails to be generically injective. Then $\eta$ arises as the pullback of some $\eta_0 \in \Pic^0(E)[2]$, i.e. $\eta = \pr^* \eta_0$.
+\end{lemma}
+
+\begin{proof}
+When $|\omega_{C'} \otimes \eta|$ is not generically injective, one has
+$$\eta^{\vee}+C' \subseteq C'+ C'- C'.$$
+Let $R'$ denote the ramification locus of $\pr$, which is a finite subset of $C'$. Since $C'$ is non-hyperelliptic, the set
+$$U:= \left\{ p \in C' \;\middle|\; p \notin R', \eta^{\vee}+p \notin R'+ R'- C' \right\}$$
+is a non-empty open subset. Consequently, there exist points $p,p' \in C'\setminus R'$ and $q,q' \in C'$ with 
+$$\eta^{\vee}(p+q) = \mathcal{O}_{C'}(p'+q').$$
+Following the same strategy as in Proposition \ref{prop:big_genus_Prym_case}, the map $f:C'\to \mathbb{P}^1$ of degree $4$, corresponding to the linear system $g^1_4=\mathcal{O}_{C'}(2p+2q)=\mathcal{O}_{C'}(2p'+2q')$, must factor through $\pr$.\footnote{For $g(C')>5$, Castelnuovo--Severi implies that $C'$ admits exactly one ramified double cover onto an elliptic curve.} Let $\iota \in \Gal(C'/E)$ be the involution associated with $\pr$. Since $p$ and $\iota(p)$ are contained in the same fiber of $f$, we obtain $q=\iota(p)$. Similarly, one has $q'=\iota(p')$. It follows that
+\begin{equation*}
+\begin{aligned}
+  \eta^{\vee}\cong\;& \mathcal{O}_{C'}(p'+q'-p-q)\\ 
+  \cong\;& \mathcal{O}_{C'}\left(\rule{0mm}{3mm}p'+\iota(p')-p-\iota(p)\right)\\ 
+  \cong\;& \pr^*\mathcal{O}_{E}(p'-p).\\ 
+\end{aligned}
+\end{equation*}
+\end{proof}
 
 
 
