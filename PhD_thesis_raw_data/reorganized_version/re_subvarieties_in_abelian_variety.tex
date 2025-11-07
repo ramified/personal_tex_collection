@@ -372,10 +372,10 @@ Let $A$ be an abelian variety of dimension $n>2$, and let $C \subset A$ be a non
 In general Conjecture \ref{conj:big_mon_for_curve} is still open. We analyze the Prym case thoroughly, which will lead to the following result:
 
 \begin{theoremA}\label{thm:A}
-For any étale double cover $h: C \longrightarrow C'$ of smooth, projective, non-hyperelliptic curves, one may view $C$ as a subvariety of the Prym variety $\Prym(C/C')$ via the Abel–Prym map. Then the associated monodromy group is big, except in the case where $C'$ is bielliptic and $h$ arises as the pullback of an étale double cover of elliptic curves. In this exceptional situation, the curve $C \subset \Prym(C/C')$ is stable under a non-trivial translation.
+For any double cover $h: C \longrightarrow C'$ of smooth, projective, non-hyperelliptic curves, one may view $C$ as a subvariety of the Prym variety $\Prym(C/C')$ via the Abel–Prym map. Then the associated monodromy group is big, except in the case where $C'$ is bielliptic and $h$ arises as the pullback of an étale double cover of elliptic curves. In this exceptional situation, the curve $C \subset \Prym(C/C')$ is stable under a non-trivial translation.
 \end{theoremA}
 
-Theorem \ref{thm:A} follows from a combination of Proposition \ref{prop:big_genus_Prym_case} and Lemma \ref{lem:bielliptic_with_big_mon}. The bielliptic case, which constitutes an exception, is analyzed thoroughly in Subsection \ref{subsec:small_mon}.
+Theorem \ref{thm:A} follows from a combination of Proposition \ref{prop:Prym_unramified_double_cover} and Corollary \ref{cor:Prym_ramified_double_cover}. 
 
 $\,$
 
@@ -685,7 +685,6 @@ is closed in $X$. Since the hypothesis ensures that $\pr_1(I^{n-r})$ contains a 
 For “$\Leftarrow$”: as $\alpha$ is generically injective, one has $h^0(X, \Omega_X(-p)) = n-r$ for a general point $p \in X$. Therefore, for any subscheme $S$ containing such a general point, $h^0(X, \Omega_X \otimes \mathcal{I}_S) \leqslant n-r$.
 \end{proof}
 
-This last step relies on the following lemma, combined with the closedness of the tautological correspondence in $X \times X^{[2]}$.
 \begin{lemma}\label{lem:Hilb_semicont}
 Let $m \in \mathbb{Z}_{>0}$. The function $$h^{\Omega}: X^{[m]} \longrightarrow \mathbb{Z}_{\geqslant 0} \qquad
  S \longmapsto h^0(X,\Omega_X \otimes \mathcal{I}_S)$$ 
@@ -863,7 +862,7 @@ Thus, $S_2^{\oplus m} \subset G$, and since $G$ maps onto $S_m$, we obtain $G = 
 
 \subsection{Curves with big monodromy group}\label{subsec:big_mon_case}
 
-The availability of these criteria permits the systematic construction of numerous cases where the associated monodromy group is large.
+The availability of these criteria permits the systematic construction of numerous cases where the associated monodromy group is big.
 
 \begin{eg} \label{eg:mon_of_Jac}
 Let $C$ be a smooth curve of genus $g$ embedded in its Jacobian $A := \Jac(C)$ via the Abel–Jacobi map $\AJ_C: C \hookrightarrow A$. In this case, the tangent Gauss map is the canonical map $|\omega_C|$.
@@ -902,7 +901,7 @@ $$\AP_{C/C'}: C \longrightarrow A \qquad p \longmapsto \mathcal{O}_{C}(p-\sigma(
 The following example, which essentially restates \cite[Corollary 2.2]{Cil20}, illustrates the case where the cover is an étale double cover.
 
 
-\begin{proposition}
+\begin{proposition}\label{prop:Prym_unramified_double_cover}
 In Setting \ref{set:Prym}, assume further that $k = 2$, $B = \varnothing$, and that $C'$ is non-hyperelliptic of genus $g(C') \geqslant 4$. 
 \begin{itemize}
 \item If $C'$ is bielliptic and $\eta = \pr^* \eta_0$, where $\pr: C' \to E'$ is a bielliptic map and $\eta_0 \in \Pic^0(E')[2]$, then the tangent Gauss map $\phi_C: C \to \mathbb{P}^{n-1}$ has degree $4$, and the curve $C \subset A$ is invariant under a $2$-torsion translation in $A$.
@@ -922,8 +921,42 @@ When $k=2$, the corresponding Gauss map $\gamma_C$ factors through $h$:
 	\arrow[maps to, from=3-2, to=3-3]
 	\arrow[maps to, from=3-3, to=3-6]
 \end{tikzcd}\]
-where $|\omega_{C'} \otimes \eta|$ denotes the Prym–canonical map. According to \cite[Corollary 2.2]{Cil20}, one has $\deg |\omega_{C'} \otimes \eta| \in \{1, 2\}$, and the case $\deg |\omega_{C'} \otimes \eta| = 2$ occurs precisely when $C'$ is bielliptic and $\eta = \pr^* \eta_0$.
+where $|\omega_{C'} \otimes \eta|$ denotes the Prym–canonical map. According to \cite[Corollary 2.2]{Cil20}, one has $\deg |\omega_{C'} \otimes \eta| \in \{1, 2\}$, and the case $\deg |\omega_{C'} \otimes \eta| = 2$ occurs precisely when $C'$ is bielliptic and $\eta = \pr^* \eta_0$. In this situation, let $h_E \colon E \to E'$ denote the unramified double covering corresponding to $\eta_0$, and let $\iota \in \Gal(E/E')$ be the associated involution. The following diagram is Cartesian:
+% https://q.uiver.app/#q=WzAsOCxbMiwxLCJcXGV0YV8wIl0sWzEsMiwiRSciXSxbMCwxLCJDJyJdLFsxLDAsIlxcZXRhIl0sWzMsMSwiQyciXSxbNCwyLCJFJyJdLFs0LDAsIkMiXSxbNSwxLCJFIl0sWzIsMSwiXFxwciAiLDJdLFszLDIsIiIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMCwxLCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzQsNSwiXFxwciAiLDJdLFs3LDUsImhfRSJdLFs2LDQsImgiLDJdLFs2LDcsInAiXV0=
+\[\begin{tikzcd}[column sep=2mm,row sep=5mm]
+	& \eta &&[12mm]& C \\
+	{C'} && {\eta_0} & {C'} && E \\
+	& {E'} &&& {E'}
+	\arrow[no head, from=1-2, to=2-1]
+	\arrow["h"', from=1-5, to=2-4]
+	\arrow["p", from=1-5, to=2-6]
+	\arrow["{\pr }"', from=2-1, to=3-2]
+	\arrow[no head, from=2-3, to=3-2]
+	\arrow["{\pr }"', from=2-4, to=3-5]
+	\arrow["{h_E}", from=2-6, to=3-5]
+\end{tikzcd}\]
+For any $p_0 \in E$, set
+$$\mathcal{L}_0: = \mathcal{O}_{E}\left(p_0-\iota(p_0)\right) \in \Pic^0(E)[2],$$
+which does not depend on the choice of $p_0$. The curve $C \subset A$ is then invariant under translation by $p^*\mathcal{L}_0 \in A$.
 \end{proof}
+We now examine all possible cases of double covers. Motivated by \cite[Lemma 2.1]{LO11}, we formulate the following result:
+\begin{lemma}
+Let $C'$ be a smooth projective curve of genus $g(C') \geqslant 2$, and let $\eta \in \Pic(C')$ be a line bundle of degree $s \geqslant 0$. Then the linear system $|\omega_{C'} \otimes \eta|$ is not generically injective if and only if one of the following holds:
+\begin{enumerate}[(a)]
+\item $s=2$ and for all $x \in C'$, there exists $y \in C'$ such that $\eta \cong \mathcal{O}_{C'}(x+y)$;
+\item $s=1$ and for all $x \in C'$, there exist $y, u \in C'$ such that $\eta \cong \mathcal{O}_{C'}(x+y-u)$;
+\item $s=0$ and for all $x \in C'$, there exist $y, u, v \in C'$ such that $\eta \cong \mathcal{O}_{C'}(x+y-u-v)$.
+\end{enumerate}
+Furthermore, in cases (a) and (b), the curve $C'$ must be hyperelliptic.
+\end{lemma}
+\begin{proof}
+This is a consequence of Riemann--Roch. In case (a), since $\eta \in g^1_2$, the curve $C'$ is hyperelliptic. In case (b), one obtains a family of $g^1_3$'s of the form $\mathcal{O}_{C'}(x+y+u)$, which implies that $\mathcal{O}_{C'}(x+y) \in g^1_2$.
+\end{proof}
+\begin{corollary}\label{cor:Prym_ramified_double_cover}
+In Setting \ref{set:Prym}, assume further that $k = 2$, $B \neq \varnothing$, and that $C'$ is non-hyperelliptic. Then the Prym-canonical map $|\omega_{C'} \otimes \eta|$ is generically injective, and therefore $\Gal(\gamma_C)$ is big.
+\end{corollary}
+
+In the process of persuing proving Conjecture \ref{conj:big_mon_for_curve_2}, we propose the following lema which will roll out a lot of trivial cases.
 
 \subsection{Curves in Prym variety with small monodromy group(Delete later)}\label{subsec:small_mon}
 This subsection is devoted to presenting an example that has small monodromy group.
@@ -1023,6 +1056,21 @@ Unfortunately, the condition in Proposition \ref{prop:Galois_condition} is never
 
 \begin{lemma}\label{lem:small_mon_but_translation_invariant}
 In Example \ref{eg:bielliptic}, let $(\mathcal{L}_3,  \mathcal{L}_3^{\otimes 2} \cong \mathcal{O}_E(R))$ denote the line bundle associated with the double cover $C' \to E$, where $R$ is its branch divisor. Set $\mathcal{L}_1 := \eta_0$, $\mathcal{L}_2 := \eta_0 \otimes \mathcal{L}_3$, and let $u_i \colon C_i \to E$ be the ramified covering determined by $\mathcal{L}_i$.
+
+% https://q.uiver.app/#q=WzAsNixbMSwwLCJDIl0sWzEsMSwiQ18zIl0sWzEsMiwiRSJdLFsxLDMsIlxcbWF0aGJie1B9XjEiXSxbMCwxLCJDXzEiXSxbMiwxLCJDXzIiXSxbMCwxLCJoXzMiXSxbMSwyLCJ1XzMiXSxbMiwzXSxbNCwyLCJ1XzEiLDJdLFs1LDIsInVfMiJdLFswLDUsImhfMiJdLFswLDQsImhfMSIsMl1d
+\[\begin{tikzcd}
+	& C \\
+	{C_1} & {C_3} & {C_2} \\
+	& E \\
+	& {\mathbb{P}^1}
+	\arrow["{h_1}"', from=1-2, to=2-1]
+	\arrow["{h_3}", from=1-2, to=2-2]
+	\arrow["{h_2}", from=1-2, to=2-3]
+	\arrow["{u_1}"', from=2-1, to=3-2]
+	\arrow["{u_3}", from=2-2, to=3-2]
+	\arrow["{u_2}", from=2-3, to=3-2]
+	\arrow[from=3-2, to=4-2]
+\end{tikzcd}\]
 \begingroup
 \upshape
 %\setlist{itemsep=-0.4em}

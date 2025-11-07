@@ -970,6 +970,21 @@ Unfortunately, the condition in Proposition \ref{prop:Galois_condition} is never
 
 \begin{lemma}\label{lem:small_mon_but_translation_invariant}
 In Example \ref{eg:bielliptic}, let $(\mathcal{L}_3,  \mathcal{L}_3^{\otimes 2} \cong \mathcal{O}_E(R))$ denote the line bundle associated with the double cover $C' \to E$, where $R$ is its branch divisor. Set $\mathcal{L}_1 := \eta_0$, $\mathcal{L}_2 := \eta_0 \otimes \mathcal{L}_3$, and let $u_i \colon C_i \to E$ be the ramified covering determined by $\mathcal{L}_i$.
+
+% https://q.uiver.app/#q=WzAsNixbMSwwLCJDIl0sWzEsMSwiQ18zIl0sWzEsMiwiRSJdLFsxLDMsIlxcbWF0aGJie1B9XjEiXSxbMCwxLCJDXzEiXSxbMiwxLCJDXzIiXSxbMCwxLCJoXzMiXSxbMSwyLCJ1XzMiXSxbMiwzXSxbNCwyLCJ1XzEiLDJdLFs1LDIsInVfMiJdLFswLDUsImhfMiJdLFswLDQsImhfMSIsMl1d
+\[\begin{tikzcd}
+	& C \\
+	{C_1} & {C_3} & {C_2} \\
+	& E \\
+	& {\mathbb{P}^1}
+	\arrow["{h_1}"', from=1-2, to=2-1]
+	\arrow["{h_3}", from=1-2, to=2-2]
+	\arrow["{h_2}", from=1-2, to=2-3]
+	\arrow["{u_1}"', from=2-1, to=3-2]
+	\arrow["{u_3}", from=2-2, to=3-2]
+	\arrow["{u_2}", from=2-3, to=3-2]
+	\arrow[from=3-2, to=4-2]
+\end{tikzcd}\]
 \begingroup
 \upshape
 %\setlist{itemsep=-0.4em}
