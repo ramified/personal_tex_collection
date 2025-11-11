@@ -282,6 +282,7 @@
 \DeclareMathOperator{\pr}{\operatorname{pr}}
 \DeclareMathOperator{\aff}{\operatorname{aff}}
 \DeclareMathOperator{\charcycle}{\operatorname{cc}}
+\DeclareMathOperator{\twist}{\operatorname{tw}}
 %%%%%%%newcommand
 
 %%%basic symbols
@@ -941,16 +942,16 @@ which does not depend on the choice of $p_0$. The curve $C \subset A$ is then in
 \end{proof}
 We now examine all possible cases of double covers. Motivated by \cite[Lemma 2.1]{LO11}, we formulate the following result:
 \begin{lemma}
-Let $C'$ be a smooth projective curve of genus $g(C') \geqslant 2$, and let $\eta \in \Pic(C')$ be a line bundle of degree $s \geqslant 0$. Then the linear system $|\omega_{C'} \otimes \eta|$ is not generically injective if and only if one of the following holds:
+Let $C'$ be a smooth projective curve of genus $g(C') \geqslant 4$, and let $\eta \in \Pic(C')$ be a line bundle of degree $s \geqslant 0$. Then the linear system $|\omega_{C'} \otimes \eta|$ is not generically injective if and only if one of the following holds:
 \begin{enumerate}[(a)]
 \item $s=2$ and for all $x \in C'$, there exists $y \in C'$ such that $\eta \cong \mathcal{O}_{C'}(x+y)$;
 \item $s=1$ and for all $x \in C'$, there exist $y, u \in C'$ such that $\eta \cong \mathcal{O}_{C'}(x+y-u)$;
 \item $s=0$ and for all $x \in C'$, there exist $y, u, v \in C'$ such that $\eta \cong \mathcal{O}_{C'}(x+y-u-v)$.
 \end{enumerate}
-Furthermore, in cases (a) and (b), the curve $C'$ must be hyperelliptic.
+Furthermore, in cases (a) and (b), the curve $C'$ must be hyperelliptic. In case (c), either $g(C') = 4$ and the linear system $|\omega_{C'} \otimes \eta|$ has degree $3$, or $C'$ is bielliptic and $\eta = \pr^*\eta_0$, where $\pr: C' \longrightarrow E'$ denotes the bielliptic map and $\eta_0 \in \Pic^0(E')$.
 \end{lemma}
 \begin{proof}
-This is a consequence of Riemann--Roch. In case (a), since $\eta \in g^1_2$, the curve $C'$ is hyperelliptic. In case (b), one obtains a family of $g^1_3$'s of the form $\mathcal{O}_{C'}(x+y+u)$, which implies that $\mathcal{O}_{C'}(x+y) \in g^1_2$.
+This is a consequence of Riemann--Roch. In case (a), since $\eta \in g^1_2$, the curve $C'$ is hyperelliptic. In case (b), one obtains a family of $g^1_3$'s of the form $\mathcal{O}_{C'}(x+y+u)$, which implies that $\mathcal{O}_{C'}(x+y) \in g^1_2$. Case (c) is a reformulation of \cite[Corollary 2.2]{Cil20}. The key argument is to bound the degree of the morphism defined by $|\omega_{C'} \otimes \eta| : C' \longrightarrow \mathbb{P}^{g-2}$. When this degree equals $2$, the image is a curve of almost minimal degree, which in this situation is a smooth elliptic curve.
 \end{proof}
 \begin{corollary}\label{cor:Prym_ramified_double_cover}
 In Setting \ref{set:Prym}, assume further that $k = 2$, $B \neq \varnothing$, and that $C'$ is non-hyperelliptic. Then the Prym-canonical map $|\omega_{C'} \otimes \eta|$ is generically injective, and therefore $\Gal(\gamma_C)$ is big.
@@ -958,12 +959,14 @@ In Setting \ref{set:Prym}, assume further that $k = 2$, $B \neq \varnothing$, an
 
 In the process of persuing proving Conjecture \ref{conj:big_mon_for_curve_2}, we propose the following lemma which will roll out a lot of trivial cases.
 
-\begin{lemma}
-Let $A$ be a complex abelian variety of dimension $n \geqslant 2$, and let $\tilde{C}$ be a smooth projective curve of genus $g_{\nu}$. Consider a morphism $\nu: \tilde{C} \longrightarrow A$ whose image $C = \nu(\tilde{C})$ is non-degenerate. Fix an automorphism $\tau \in \Aut(\tilde{C})$ of order $k$, inducing automorphisms
+\begin{setting}\label{set:curve_map_to_abelian}
+Let $A$ be a complex abelian variety of dimension $n \geqslant 2$, and let $\tilde{C}$ be a smooth projective curve of genus $g_{\nu}$. Consider a morphism $\nu: \tilde{C} \longrightarrow A$ whose image $C = \nu(\tilde{C})$ is non-degenerate, and let $\phi_{\nu} = \phi_C \circ \nu$ denote the tangent Gauss map of $\tilde{C}$. Fix an automorphism $\tau \in \Aut(\tilde{C})$ of order $k$, inducing automorphisms
 $$\tilde{\tau}: \Hnm^0(\omega_{\tilde{C}}) \longrightarrow \Hnm^0(\omega_{\tilde{C}}) \qquad \tilde{\tau}: \Jac(\tilde{C})  \longrightarrow \Jac(\tilde{C}). $$
 Denote $J = \Jac(\tilde{C})$, $\tilde{W} = \Hnm^0(\omega_{\tilde{C}}) = T_0^*J$, and $W = T_0^*A$. We regard $W$ as a subspace of $\tilde W$ via the fixed linear embedding $\iota_W: W \hookrightarrow \tilde{W}$, which is induced by the cotangent map associated to the morphism $J \longrightarrow A$.
+\end{setting}
 
-Let $\phi_{\nu} = \phi_C \circ \nu$ denote the tangent Gauss map of $\tilde{C}$. Suppose that for there exists a uniform number $c \in \mathbb{C}^*$ such that the following diagram commutes for every $p \in \tilde{C}$:
+\begin{lemma}\label{lem:triv_twist_works}
+ In Setting \ref{set:curve_map_to_abelian}, suppose that for there exists a uniform number $c \in \mathbb{C}^*$ such that the following diagram commutes for every $p \in \tilde{C}$:
 \begin{equation}\label{eq:uniform_scalar_condition}
  % https://q.uiver.app/#q=WzAsNixbMCwwLCJUX3AgXFx0aWxkZXtDfSAgIl0sWzEsMCwiVF97XFxudShwKX0gQSJdLFsyLDAsIldeKiJdLFsyLDEsIldeKiJdLFsxLDEsIlRfe1xcbnUoe1xcdGF1KHApfSl9IEEiXSxbMCwxLCJUX3tcXHRhdShwKX0gXFx0aWxkZXtDfSAgIl0sWzAsMSwiVF9wXFxudSJdLFswLDUsIlRfcFxcdGF1IiwyXSxbNSw0LCJUX3tcXHRhdShwKX1cXG51IiwyXSxbMSwyLCJcXGNvbmciLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMiwzLCIgYyJdLFs0LDMsIlxcY29uZyIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
  \begin{tikzcd}[ampersand replacement=\&,column sep=13mm,row sep=7mm]
@@ -973,7 +976,7 @@ Let $\phi_{\nu} = \phi_C \circ \nu$ denote the tangent Gauss map of $\tilde{C}$.
  	\arrow["{T_p\tau}"', from=1-1, to=2-1]
  	\arrow["\cong"{description}, draw=none, from=1-2, to=1-3]
  	\arrow["{ c}", from=1-3, to=2-3]
- 	\arrow["{T_{\tau(p)}\nu}"', from=2-1, to=2-2]
+ 	\arrow["{T_{\tau(p)}\nu}", from=2-1, to=2-2]
  	\arrow["\cong"{description}, draw=none, from=2-2, to=2-3]
  \end{tikzcd}
 \end{equation}
@@ -1369,6 +1372,56 @@ so the Gauss map fails to be generically injective.
 %\end{equation*}
 %\end{proof}
 
+\subsection{Comparing tangent spaces via automorphism}
+
+To further analyze the key condition in Lemma \ref{lem:triv_twist_works}, consider Setting \ref{set:curve_map_to_abelian} and assume $\phi_{\nu} \circ \tau = \phi_{\nu}$. One may compare $T_p\tilde{C}$ and $T_{\tau(p)}\tilde{C}$ either through the action of $\tau$ or via parallel transport along the flat connection on $A$. The difference between these two identifications defines a rational map $c: \tilde{C} \dashrightarrow \mathbb{G}_m$, as made precise below.
+\begin{definition}
+Let $p \in \tilde{C}$ such that $T_p\nu$ and $T_{\tau(p)}\nu$ are injective. The twisting coefficient $c(p) \in \mathbb{C}^*$ associated with $\tau$ is the unique scalar for which the diagram 
+\begin{equation}\label{eq:twisting_coefficient}
+ % https://q.uiver.app/#q=WzAsNixbMCwwLCJUX3AgXFx0aWxkZXtDfSAgIl0sWzEsMCwiVF97XFxudShwKX0gQSJdLFsyLDAsIldeKiJdLFsyLDEsIldeKiJdLFsxLDEsIlRfe1xcbnUoe1xcdGF1KHApfSl9IEEiXSxbMCwxLCJUX3tcXHRhdShwKX0gXFx0aWxkZXtDfSAgIl0sWzAsMSwiVF9wXFxudSJdLFswLDUsIlRfcFxcdGF1IiwyXSxbNSw0LCJUX3tcXHRhdShwKX1cXG51IiwyXSxbMSwyLCJcXGNvbmciLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMiwzLCIgYyJdLFs0LDMsIlxcY29uZyIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
+ \begin{tikzcd}[ampersand replacement=\&,column sep=13mm,row sep=7mm]
+ 	{T_p \tilde{C}  } \& {T_{\nu(p)} A} \&[-10mm] {W^*} \\
+ 	{T_{\tau(p)} \tilde{C}  } \& {T_{\nu({\tau(p)})} A} \& {W^*}
+ 	\arrow["{T_p\nu}", from=1-1, to=1-2]
+ 	\arrow["{T_p\tau}"', from=1-1, to=2-1]
+ 	\arrow["\cong"{description}, draw=none, from=1-2, to=1-3]
+ 	\arrow["{c(p)}", from=1-3, to=2-3]
+ 	\arrow["{T_{\tau(p)}\nu}", from=2-1, to=2-2]
+ 	\arrow["\cong"{description}, draw=none, from=2-2, to=2-3]
+ \end{tikzcd}
+\end{equation}
+commutes.
+\end{definition}
+\begin{proposition}
+The twisting map
+$$c:\tilde{C} \dashrightarrow \mathbb{G}_m \qquad p \longmapsto c(p) $$
+is algebraic. Consequently, it admits a unique extension to a morphism $c: \tilde{C} \longrightarrow \mathbb{P}^1$. If $T_p\nu$ is injective for all $p \in \tilde{C}$, then $c$ is constant.
+\end{proposition}
+\begin{proof}
+Since
+$$t^{-1}: \tilde{C} \times A \longrightarrow A \qquad (p,x) \longmapsto t_p^{-1}(x):=-\nu(p)+x$$
+is algebraic, its differential
+$$dt^{-1}: \tilde{C} \times TA \longrightarrow TA \qquad (p,v_x) \longmapsto (dt_p^{-1})(v_x)$$
+is also algebraic. In fact, every algebraic morphism $f: X \longrightarrow Y$ induces an algebraic morphism $df: TX \longrightarrow TY$. It follows that all maps in diagram \eqref{eq:comm_locus_are_alg} are algebraic,
+\begin{equation}\label{eq:comm_locus_are_alg}
+% https://q.uiver.app/#q=WzAsNyxbMCwwLCJUXFx0aWxkZXtDfSBcXHRpbWVzIFxcbWF0aGJie0d9X20iXSxbMCwxLCJUXFx0aWxkZXtDfSJdLFswLDIsIlRcXHRpbGRle0N9Il0sWzEsMCwiXFx0aWxkZXtDfSBcXHRpbWVzIFRBIFxcdGltZXMgXFxtYXRoYmJ7R31fbSJdLFsxLDIsIlxcdGlsZGV7Q30gXFx0aW1lcyBUQSJdLFsyLDAsIlRBIFxcdGltZXMgXFxtYXRoYmJ7R31fbSJdLFsyLDIsIlRBIl0sWzUsNiwibSJdLFs0LDYsImR0XnstMX0iXSxbMyw1LCJkdF57LTF9IFxcdGltZXMgXFxJZF97XFxtYXRoYmJ7R31fbX0iXSxbMCwzLCIoXFxwaV97XFx0aWxkZXtDfX0sZFxcbnUpIFxcdGltZXMgXFxJZF97XFxtYXRoYmJ7R31fbX0iXSxbMiw0LCIoXFxwaV97XFx0aWxkZXtDfX0sZFxcbnUpIl0sWzAsMSwiXFxwaV8xIiwyXSxbMSwyLCJkXFxzaWdtYSIsMl1d
+\begin{tikzcd}[column sep=20mm,row sep=4mm]
+	{T\tilde{C} \times \mathbb{G}_m} & {\tilde{C} \times TA \times \mathbb{G}_m} & {TA \times \mathbb{G}_m} \\
+	{T\tilde{C}} \\
+	{T\tilde{C}} & {\tilde{C} \times TA} & TA
+	\arrow["{(\pi_{\tilde{C}},d\nu) \times \Id_{\mathbb{G}_m}}", from=1-1, to=1-2]
+	\arrow["{\pi_1}"', from=1-1, to=2-1]
+	\arrow["{dt^{-1} \times \Id_{\mathbb{G}_m}}", from=1-2, to=1-3]
+	\arrow["m", from=1-3, to=3-3]
+	\arrow["{d\sigma}"', from=2-1, to=3-1]
+	\arrow["{(\pi_{\tilde{C}},d\nu)}", from=3-1, to=3-2]
+	\arrow["{dt^{-1}}", from=3-2, to=3-3]
+\end{tikzcd}
+\end{equation}
+and the subset $\mathcal{I}_{\twist} \subset T\tilde{C} \times \mathbb{G}_m$ where the diagram \eqref{eq:comm_locus_are_alg} commutes is algebraic. The graph of $c$ can be expressed algebraically as 
+$(\pi_{\tilde{C}} \times \Id_{\mathbb{G}_m}) \left( \mathcal{I}_{\twist} \smallsetminus\, \tilde{C} \!\times\! \mathbb{G}_m  \right)$
+outside finitely many points of $\tilde{C}$; therefore, $c$ itself is algebraic.
+\end{proof}
 
 
 \section{Families of subvarieties}\label{sec:subvarieties}
