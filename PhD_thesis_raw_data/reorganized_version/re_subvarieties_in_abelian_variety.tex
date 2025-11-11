@@ -348,7 +348,7 @@ Berlin, 12489\\ Germany\\}
 \section{Introduction}
 Let $A$ be a complex abelian variety of dimension $n$. To any closed subvariety $Z \subset A$ of dimension $r$, one can associate a reductive group $G_Z$ through the convolution of perverse sheaves. This correspondence allows to reformulate problems in algebraic geometry in representation-theoretic terms, thereby offering new geometric insights. A crucial role in this context is played by the characteristic cycle, a fundamental invariant attached to a perverse sheaf, \cite[\S 5–\S 8]{JKLM22}. Recent work demonstrates that one can approach these characteristic cycles directly as conic Lagrangian cycles, without invoking the full machinery of perverse sheaves.
 
-In \cite{Kr20}, Krämer establishes a correspondence between Weyl group orbits and conic Lagrangian cycles in the cotangent bundle which arise as the conormal varieties of certain subvarieties. Despite this correspondence, an explicit geometric description of these cycles themselves remains elusive. In this article, we propose a purely geometric construction of these cycles and analyze three key properties of the associated subvarieties: irreducibility, dimension, and homology class.
+In \cite[Remark 2.9]{Kr20}, Krämer establishes a correspondence between Weyl group orbits and conic Lagrangian cycles in the cotangent bundle which arise as the conormal varieties of certain subvarieties. Despite this correspondence, an explicit geometric description of these cycles themselves remains elusive. In this article, we propose a purely geometric construction of these cycles and analyze three key properties of the associated subvarieties: irreducibility, dimension, and homology class.
 
 $\,$
 
@@ -369,10 +369,10 @@ Let $A$ be an abelian variety of dimension $n>2$, and let $C \subset A$ be a non
 \item If $C$ is not invariant under any reflection, the tangent Gauss map $\phi_C: C \longrightarrow \mathbb{P}^{n-1}$ is generically injective.
 \end{itemize}
 \end{conjecture}
-In general Conjecture \ref{conj:big_mon_for_curve} is still open. We analyze the Prym case thoroughly, which will lead to the following result:
+Outside some counterexamples like Example \ref{eg:rotation_counterexample}, Conjecture \ref{conj:big_mon_for_curve} is still open. We analyze the Prym case thoroughly, which will lead to the following result:
 
 \begin{theoremA}\label{thm:A}
-For any double cover $h: C \longrightarrow C'$ of smooth, projective, non-hyperelliptic curves, one may view $C$ as a subvariety of the Prym variety $\Prym(C/C')$ via the Abel–Prym map. Then the associated monodromy group is big, except in the case where $C'$ is bielliptic and $h$ arises as the pullback of an étale double cover of elliptic curves. In this exceptional situation, the curve $C \subset \Prym(C/C')$ is stable under a non-trivial translation.
+For any double cover $h: C \longrightarrow C'$ of smooth, projective, non-hyperelliptic curves, one may view $C$ as a subvariety of the Prym variety $\Prym(C/C')$ via the Abel–Prym map. Assume that $n:= \dim_{\mathbb{C}}\Prym(C/C') >2$. Then the associated monodromy group is big, except in the case where $C'$ is bielliptic and $h$ arises as the pullback of an étale double cover of elliptic curves. In this exceptional situation, the curve $C \subset \Prym(C/C')$ is stable under a non-trivial translation.
 \end{theoremA}
 
 Theorem \ref{thm:A} follows from a combination of Proposition \ref{prop:Prym_unramified_double_cover} and Corollary \ref{cor:Prym_ramified_double_cover}. 
@@ -1083,6 +1083,23 @@ $\{v_1,\zeta_k v_1,\ldots,v_n,\zeta_k v_n\}$
 by successively selecting $v_i \in \Hnm_1(A;\mathbb{Z})$ outside the complex span $\left< v_1,\ldots,v_{i-1} \right>_{\mathbb{C}}$. Writing $E_i:= \mathbb{C}/(\mathbb{Z} \otimes \zeta_k \mathbb{Z})$, we have an isogeny
 $$E_1 \times \ldots \times E_n \longrightarrow A \qquad (z_1,\ldots,z_n) \longrightarrow \sum_{i=1}^{n} z_iv_i.$$
 \end{proof}
+
+We can now provide a counterexample for Conjecture \ref{conj:big_mon_for_curve_2}.
+\begin{eg}\label{eg:rotation_counterexample}
+Consider the elliptic curve $E = \mathbb{C} / \mathbb{Z}[\zeta_3]$ and the abelian threefold $A = E^3$. Let $\sigma \in \Aut(E)$ be an automorphism of order $3$, and define $\tau = (\sigma, \sigma, \sigma) \in \Aut(A)$. If a curve $C \subset A$ is invariant under $\tau$, then its Gauss map $\phi_C : C \longrightarrow \mathbb{P}^2$ factors through the quotient morphism $C \longrightarrow C / \tau$. Applying a Bertini argument yields the existence of a smooth curve $C \subset A$ invariant under $\tau$ and under no nontrivial translation or reflection. For instance, with $\mathcal{L} = \mathcal{O}_E(6 \cdot[0])^{\boxtimes 3} \in \Pic(A)$, two general sections $s_1, s_2 \in H^0(A, \mathcal{L})$ cut out such a smooth $\tau$-invariant curve $C$.
+\end{eg}
+
+\begin{eg}
+If we replace $A$ with $\mathbb{C}^3$ in Conjecture \ref{conj:big_mon_for_curve_2}, we can construct curves $C \subset \mathbb{C}^3$ that are not preserved under any linear transformation but whose Gauss maps fail to be generically injective. Here is one such example: 
+
+Consider the curve $C \subset \mathbb{C}^3$ defined by the parametrization
+$$r(t)=\left( t, (t-1)e^t, \frac{1}{4} (2t^2-2t+1)e^{2t}\right).$$
+Its derivative is 
+$$r'(t)=\left(1,te^t, t^2e^{2t} \right),$$
+so the Gauss map fails to be generically injective.
+
+\end{eg}
+
 
 %\subsection{Curves in Prym variety with small monodromy group(Delete later)}\label{subsec:small_mon}
 %This subsection is devoted to presenting an example that has small monodromy group.
