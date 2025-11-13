@@ -954,7 +954,7 @@ Furthermore, in cases (a) and (b), the curve $C'$ must be hyperelliptic. In case
 This is a consequence of Riemann--Roch. In case (a), since $\eta \in g^1_2$, the curve $C'$ is hyperelliptic. In case (b), one obtains a family of $g^1_3$'s of the form $\mathcal{O}_{C'}(x+y+u)$, which implies that $\mathcal{O}_{C'}(x+y) \in g^1_2$. Case (c) is a reformulation of \cite[Corollary 2.2]{Cil20}. The key argument is to bound the degree of the morphism defined by $|\omega_{C'} \otimes \eta| : C' \longrightarrow \mathbb{P}^{g-2}$. When this degree equals $2$, the image is a curve of almost minimal degree, which in this situation is a smooth elliptic curve.
 \end{proof}
 \begin{corollary}\label{cor:Prym_ramified_double_cover}
-In Setting \ref{set:Prym}, assume further that $k = 2$, $B \neq \varnothing$, and that $C'$ is non-hyperelliptic. Then the Prym-canonical map $|\omega_{C'} \otimes \eta|$ is generically injective, and therefore $\Gal(\gamma_C)$ is big.
+In Setting \ref{set:Prym}, assume further that $k = 2$, $B \neq \varnothing$, and that $C'$ is non-hyperelliptic of genus $g(C')\geqslant 4$. Then the Prym-canonical map $|\omega_{C'} \otimes \eta|$ is generically injective, and therefore $\Gal(\gamma_C)$ is big.
 \end{corollary}
 
 In the process of persuing proving Conjecture \ref{conj:big_mon_for_curve_2}, we propose the following lemma which will roll out a lot of trivial cases.
@@ -962,7 +962,7 @@ In the process of persuing proving Conjecture \ref{conj:big_mon_for_curve_2}, we
 \begin{setting}\label{set:curve_map_to_abelian}
 Let $A$ be a complex abelian variety of dimension $n \geqslant 2$, and let $\tilde{C}$ be a smooth projective curve of genus $g_{\nu}$. Consider a morphism $\nu: \tilde{C} \longrightarrow A$ whose image $C = \nu(\tilde{C})$ is non-degenerate, and let $\phi_{\nu} = \phi_C \circ \nu$ denote the tangent Gauss map of $\tilde{C}$. Fix an automorphism $\tau \in \Aut(\tilde{C})$ of order $k$, inducing automorphisms
 $$\tilde{\tau}: \Hnm^0(\omega_{\tilde{C}}) \longrightarrow \Hnm^0(\omega_{\tilde{C}}) \qquad \tilde{\tau}: \Jac(\tilde{C})  \longrightarrow \Jac(\tilde{C}). $$
-Denote $J = \Jac(\tilde{C})$, $\tilde{W} = \Hnm^0(\omega_{\tilde{C}}) = T_0^*J$, and $W = T_0^*A$. We regard $W$ as a subspace of $\tilde W$ via the fixed linear embedding $\iota_W: W \hookrightarrow \tilde{W}$, which is induced by the cotangent map associated to the morphism $J \longrightarrow A$.
+Denote $J = \Jac(\tilde{C})$, $\tilde{W} = \Hnm^0(\omega_{\tilde{C}}) = T_0^*J$, and $W = T_0^*A$. We regard $W$ as a subspace of $\tilde W$ via the fixed linear embedding $\iota_W: W \hookrightarrow \tilde{W}$, which is induced by the cotangent map associated to the morphism $J \longrightarrow A$. We would assume $\phi_{\nu} \circ \tau = \phi_{\nu}$ as the rational map.
 \end{setting}
 
 \begin{lemma}\label{lem:triv_twist_works}
@@ -980,7 +980,7 @@ Denote $J = \Jac(\tilde{C})$, $\tilde{W} = \Hnm^0(\omega_{\tilde{C}}) = T_0^*J$,
  	\arrow["\cong"{description}, draw=none, from=2-2, to=2-3]
  \end{tikzcd}
 \end{equation}
-In particular, $\phi_{\nu} \circ \tau = \phi_{\nu}$.
+
 
 In this situation, $W$ is contained in the eigenspace of $\tilde{\tau} \in \GL(\tilde{W})$ corresponding to the eigenvalue $c$. Furthermore, $\nu$ admits a lift $\tilde{\nu}: \tilde{C} \longrightarrow \tilde{A}$ to an isogeny of $A$, where $\tau$ extends to an automorphism of $\tilde{A}$ as a variety (not necessarily as an algebraic group), and this extension satisfies the compatibility relation:
 % https://q.uiver.app/#q=WzAsNCxbMCwwLCJcXHRpbGRle0N9Il0sWzEsMSwiXFx0aWxkZXtBfSJdLFsxLDAsIlxcdGlsZGV7QX0iXSxbMCwxLCJcXHRpbGRle0N9Il0sWzAsMywiXFx0YXUiLDJdLFsyLDFdLFszLDEsIlxcdGlsZGV7XFxudX0iXSxbMCwyLCJcXHRpbGRle1xcbnV9Il1d
@@ -1070,7 +1070,7 @@ Since the subgroup $\iota_W^* \Hnm_1(\tilde{C};\mathbb{Z}) \subseteq \Hnm_1(A;\m
 
 The resulting full automorphism of $\tilde{A}$ is always a rotation by $c$ composed with a translation. Such automorphisms occur only rarely, as established in the following lemma.
 
-\begin{lemma}
+\begin{lemma}\label{lem:rotation_auto_is_rare}
 Let $A$ be an abelian variety of dimension $n$. Each automorphism $\tau \in \Aut(A)$ induces a linear automorphism $\tilde{\tau}^* \in \GL(T_0A)$. If $\tilde{\tau}^* = \zeta_k \cdot \Id_{T_0A}$ for some $k$-th root of unity $\zeta_k$, then $k \in \{1,2,3,4,6\}$. Moreover, if $k \in \{3,4,6\}$, there exists an isogeny
 $$E_1 \times \ldots \times E_n \longrightarrow A,$$
 where each $E_i$ is an elliptic curve satisfying $\Aut(E_i) \supseteq \mathbb{Z}/k\mathbb{Z}$.
@@ -1089,7 +1089,7 @@ $$E_1 \times \ldots \times E_n \longrightarrow A \qquad (z_1,\ldots,z_n) \longri
 
 We can now provide a counterexample for Conjecture \ref{conj:big_mon_for_curve_2}.
 \begin{eg}\label{eg:rotation_counterexample}
-Consider the elliptic curve $E = \mathbb{C} / \mathbb{Z}[\zeta_3]$ and the abelian threefold $A = E^3$. Let $\sigma \in \Aut(E)$ be an automorphism of order $3$, and define $\tau = (\sigma, \sigma, \sigma) \in \Aut(A)$. If a curve $C \subset A$ is invariant under $\tau$, then its Gauss map $\phi_C : C \longrightarrow \mathbb{P}^2$ factors through the quotient morphism $C \longrightarrow C / \tau$. Applying a Bertini argument yields the existence of a smooth curve $C \subset A$ invariant under $\tau$ and under no nontrivial translation or reflection. For instance, with $\mathcal{L} = \mathcal{O}_E(6 \cdot[0])^{\boxtimes 3} \in \Pic(A)$, two general sections $s_1, s_2 \in H^0(A, \mathcal{L})$ cut out such a smooth $\tau$-invariant curve $C$.
+Consider the elliptic curve $E = \mathbb{C} / \mathbb{Z}[\zeta_3]$ and the abelian threefold $A = E^3$. Let $\sigma \in \Aut(E)$ be an automorphism of order $3$, and define $\tau = (\sigma, \sigma, \sigma) \in \Aut(A)$. If a curve $C \subset A$ is invariant under $\tau$, then its Gauss map $\phi_C : C \longrightarrow \mathbb{P}^2$ factors through the quotient morphism $C \longrightarrow C / \tau$. Applying a Bertini argument yields the existence of a smooth curve $C \subset A$ invariant under $\tau$ and under no nontrivial translation or reflection. For instance, with $\mathcal{L} = \mathcal{O}_E(6 \cdot[0])^{\boxtimes 3} \in \Pic(A)$, two general sections $s_1, s_2 \in H^0(A, \mathcal{L})^{\tau}$ cut out such a smooth $\tau$-invariant curve $C$.
 \end{eg}
 
 \begin{eg}
@@ -1374,7 +1374,8 @@ so the Gauss map fails to be generically injective.
 
 \subsection{Comparing tangent spaces via automorphism}
 
-To further analyze the key condition in Lemma \ref{lem:triv_twist_works}, consider Setting \ref{set:curve_map_to_abelian} and assume $\phi_{\nu} \circ \tau = \phi_{\nu}$. One may compare $T_p\tilde{C}$ and $T_{\tau(p)}\tilde{C}$ either through the action of $\tau$ or via parallel transport along the flat connection on $A$. The difference between these two identifications defines a rational map $c: \tilde{C} \dashrightarrow \mathbb{G}_m$, as made precise below.
+%To further analyze the key condition in Lemma \ref{lem:triv_twist_works}, consider Setting \ref{set:curve_map_to_abelian} and assume $\phi_{\nu} \circ \tau = \phi_{\nu}$. 
+Assuming $\phi_{\nu} \circ \tau = \phi_{\nu}$ in Setting \ref{set:curve_map_to_abelian} allows us to compare $T_p\tilde{C}$ and $T_{\tau(p)}\tilde{C}$ either through the action of $\tau$ or via parallel transport along the flat connection on $A$. The difference between these two identifications defines a rational map $c: \tilde{C} \dashrightarrow \mathbb{G}_m$, as made precise below.
 \begin{definition}
 Let $p \in \tilde{C}$ such that $T_p\nu$ and $T_{\tau(p)}\nu$ are injective. The twisting coefficient $c(p) \in \mathbb{C}^*$ associated with $\tau$ is the unique scalar for which the diagram 
 \begin{equation}\label{eq:twisting_coefficient}
@@ -1421,6 +1422,36 @@ is also algebraic. In fact, every algebraic morphism $f: X \longrightarrow Y$ in
 and the subset $\mathcal{I}_{\twist} \subset T\tilde{C} \times \mathbb{G}_m$ where the diagram \eqref{eq:comm_locus_are_alg} commutes is algebraic. The graph of $c$ can be expressed algebraically as 
 $(\pi_{\tilde{C}} \times \Id_{\mathbb{G}_m}) \left( \mathcal{I}_{\twist} \smallsetminus\, \tilde{C} \!\times\! \mathbb{G}_m  \right)$
 outside finitely many points of $\tilde{C}$; therefore, $c$ itself is algebraic.
+\end{proof}
+
+\begin{conjecture} \label{conj:const_twisting}
+In Setting \ref{set:curve_map_to_abelian}, the twisting map $c$ is a constant map when $n \geqslant 3$.
+\end{conjecture}
+
+\begin{proposition}
+Conjecture \ref{conj:const_twisting} implies a refined form of Conjecture \ref{conj:big_mon_for_curve_2}. To exclude the counterexamples of the type illustrated in Example \ref{eg:rotation_counterexample}, we require that either $\deg \phi_C = 2$ or that the abelian variety $A$ is not isogenous to $E_i^{\oplus n}$ or $E_{\rho}^{\oplus n}$, where $E_i = \mathbb{C}/\mathbb{Z}[i]$ and $E_{\rho} = \mathbb{C}/\mathbb{Z}[\zeta_3]$ are the only elliptic curves with extra automorphism groups.
+\end{proposition}
+
+\begin{proof}
+In Conjecture \ref{conj:big_mon_for_curve_2}, set $C' = \phi_C(C)$ and let $\nu: \tilde{C} \longrightarrow C$ be the natural map from the Galois closure $\tilde{C}$ of the covering $C/C'$. Then we are in Setting \ref{set:curve_map_to_abelian}, and every $\tau \in \Gal(\tilde{C}/C')$ satisfies $\phi_{\nu} \circ \tau = \phi_{\nu}$.
+
+If Conjecture \ref{conj:big_mon_for_curve_2} fails, there exists $\tau \in \Gal(\tilde{C}/C')$ that does not fix $C/\iota$ (when $C$ is invariant under a reflection $\iota$) or $C$ (when $C$ is not invariant under any reflection). Equivalently, one can fix $\tau \in \Gal(\tilde{C}/C')$ that does not extend to any reflection or translation of $A$. Note that, by assumption, the only translation preserving $C$ is $\Id_A$, and the reflection preserving $C$ is unique when it exists.
+
+By Conjecture \ref{conj:const_twisting}, the condition \eqref{eq:uniform_scalar_condition} in Lemma \ref{lem:triv_twist_works} is satisfied. Hence, $\tau$ extends to a full automorphism $\tilde{\tau}$ of an abelian variety $\tilde{A}$ that is isogenous to $A$, and the induced automorphism on $T_0\tilde{A}$ takes the form $\tilde{\tau}^* = \zeta_k \cdot \Id_{T_0\tilde{A}}$ for some $k$-th root of unity $\zeta_k$.
+By Lemma \ref{lem:rotation_auto_is_rare}, one has $k \in \{1,2,3,4,6\}$, and the additional degree/isogeny condition restricts $k$ to $\{1,2\}$. For either value of $k$, the automorphism $\tilde{\tau}: \tilde{A} \longrightarrow \tilde{A}$ descends to an automorphism $\tau_A: A \longrightarrow A$, making the diagram
+% https://q.uiver.app/#q=WzAsNixbMCwwLCJcXHRpbGRle0N9Il0sWzEsMSwiXFx0aWxkZXtBfSJdLFsxLDAsIlxcdGlsZGV7QX0iXSxbMCwxLCJcXHRpbGRle0N9Il0sWzIsMCwiQSJdLFsyLDEsIkEiXSxbMCwzLCJcXHRhdSIsMl0sWzIsMSwiXFx0aWxkZXtcXHRhdX0iXSxbMywxLCJcXHRpbGRle1xcbnV9Il0sWzAsMiwiXFx0aWxkZXtcXG51fSJdLFs0LDUsIlxcdGF1X0EiXSxbMiw0XSxbMSw1XV0=
+\[\begin{tikzcd}[column sep=7mm,row sep=7mm]
+	{\tilde{C}} & {\tilde{A}} & A \\
+	{\tilde{C}} & {\tilde{A}} & A
+	\arrow["{\tilde{\nu}}", from=1-1, to=1-2]
+	\arrow["\tau"', from=1-1, to=2-1]
+	\arrow[from=1-2, to=1-3]
+	\arrow["{\tilde{\tau}}", from=1-2, to=2-2]
+	\arrow["{\tau_A}", from=1-3, to=2-3]
+	\arrow["{\tilde{\nu}}", from=2-1, to=2-2]
+	\arrow[from=2-2, to=2-3]
+\end{tikzcd}\]
+commute. However, $\tau_A$ is necessarily a translation (if $k=1$) or a reflection (if $k=2$), contradicting our choice of $\tau$.
 \end{proof}
 
 
