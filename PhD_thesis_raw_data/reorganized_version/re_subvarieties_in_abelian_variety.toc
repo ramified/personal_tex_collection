@@ -17,4 +17,4 @@
 \contentsline {subsection}{\tocsubsection {}{5.3}{The homology class of $\mathbb {P}\Lambda _{Z}^{[d]}$}}{19}{subsection.5.3}% 
 \contentsline {subsection}{\tocsubsection {}{5.4}{The homology class in type $C$ case}}{22}{subsection.5.4}% 
 \contentsline {subsection}{\tocsubsection {}{5.5}{Möbius-transforms block-sum polynomial}}{24}{subsection.5.5}% 
-\contentsline {section}{\tocsection {}{}{References}}{25}{section*.4}% 
+\contentsline {section}{\tocsection {}{}{References}}{26}{section*.4}% 

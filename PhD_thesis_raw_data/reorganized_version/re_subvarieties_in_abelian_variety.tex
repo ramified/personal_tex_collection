@@ -1008,7 +1008,7 @@ Consider the following diagram:
 	\arrow["{|\omega_{\tilde{C}}|}", from=3-1, to=3-2]
 	\arrow["{\mathbb{P} \iota_W^*}"', dashed, from=3-2, to=2-3]
 \end{tikzcd}\]
-where $\iota_W^*: \tilde{W}^* \longrightarrow \tilde{W}^*$ is the dual linear map of $\iota_W$. By functoriality of $|\omega_{\tilde{C}}|$, the left square of the diagram commutes. From the definition of $\phi_{\nu}$, we have $\phi_{\nu}=\mathbb{P} \iota_W^* \circ |\omega_{\tilde{C}}|$, which ensures the outer boundary of the diagram commutes. Under condition \eqref{eq:uniform_scalar_condition}, the right triangular part also commutes, and furthermore
+where $\iota_W^*: \tilde{W}^* \longrightarrow W^*$ is the dual linear map of $\iota_W$. By functoriality of $|\omega_{\tilde{C}}|$, the left square of the diagram commutes. From the definition of $\phi_{\nu}$, we have $\phi_{\nu}=\mathbb{P} \iota_W^* \circ |\omega_{\tilde{C}}|$, which ensures the outer boundary of the diagram commutes. Under condition \eqref{eq:uniform_scalar_condition}, the right triangular part also commutes, and furthermore
 $$\iota_W^* \circ \tilde{\tau}^* = c \cdot \iota_W^*.$$
 Taking duals gives
 $$\tilde{\tau} \circ \iota_W = c \cdot \iota_W,$$
@@ -1083,7 +1083,7 @@ The rationality of this polynomial forces $k \in \{1,2,3,4,6\}$.
 
 When $k \in \{3,4,6\}$, one may choose an $\mathbb{R}$-basis of $T_0A$ of the form
 $\{v_1,\zeta_k v_1,\ldots,v_n,\zeta_k v_n\}$
-by successively selecting $v_i \in \Hnm_1(A;\mathbb{Z})$ outside the complex span $\left< v_1,\ldots,v_{i-1} \right>_{\mathbb{C}}$. Writing $E_i:= \mathbb{C}/(\mathbb{Z} \otimes \zeta_k \mathbb{Z})$, we have an isogeny
+by successively selecting $v_i \in \Hnm_1(A;\mathbb{Z})$ outside the complex span $\left< v_1,\ldots,v_{i-1} \right>_{\mathbb{C}}$. Writing $E_i:= \mathbb{C}/\mathbb{Z}  [\zeta_k]$, we have an isogeny
 $$E_1 \times \ldots \times E_n \longrightarrow A \qquad (z_1,\ldots,z_n) \longrightarrow \sum_{i=1}^{n} z_iv_i.$$
 \end{proof}
 
@@ -1393,7 +1393,7 @@ Let $p \in \tilde{C}$ such that $T_p\nu$ and $T_{\tau(p)}\nu$ are injective. The
 \end{equation}
 commutes.
 \end{definition}
-\begin{proposition}
+\begin{proposition}\label{prop:twisting_is_alg}
 The twisting map
 $$c:\tilde{C} \dashrightarrow \mathbb{G}_m \qquad p \longmapsto c(p) $$
 is algebraic. Consequently, it admits a unique extension to a morphism $c: \tilde{C} \longrightarrow \mathbb{P}^1$. If $T_p\nu$ is injective for all $p \in \tilde{C}$, then $c$ is constant.
@@ -1429,7 +1429,7 @@ In Setting \ref{set:curve_map_to_abelian}, the twisting map $c$ is a constant ma
 \end{conjecture}
 
 \begin{proposition}
-Conjecture \ref{conj:const_twisting} implies a refined form of Conjecture \ref{conj:big_mon_for_curve_2}. To exclude the counterexamples of the type illustrated in Example \ref{eg:rotation_counterexample}, we require that either $\deg \phi_C = 2$ or that the abelian variety $A$ is not isogenous to $E_i^{\oplus n}$ or $E_{\rho}^{\oplus n}$, where $E_i = \mathbb{C}/\mathbb{Z}[i]$ and $E_{\rho} = \mathbb{C}/\mathbb{Z}[\zeta_3]$ are the only elliptic curves with extra automorphism groups.
+Conjecture \ref{conj:const_twisting} implies a refined form of Conjecture \ref{conj:big_mon_for_curve_2}. To exclude the counterexamples of the type illustrated in Example \ref{eg:rotation_counterexample}, we require that either $\deg \phi_C = 2$ or that the abelian variety $A$ is not isogenous to $E_{\mathfrak{i}}^{\oplus n}$ or $E_{\rho}^{\oplus n}$, where $E_{\mathfrak{i}} = \mathbb{C}/\mathbb{Z}[i]$ and $E_{\rho} = \mathbb{C}/\mathbb{Z}[\zeta_3]$ are the only elliptic curves with extra automorphism groups.
 \end{proposition}
 
 \begin{proof}
@@ -1454,6 +1454,19 @@ By Lemma \ref{lem:rotation_auto_is_rare}, one has $k \in \{1,2,3,4,6\}$, and the
 commute. However, $\tau_A$ is necessarily a translation (if $k=1$) or a reflection (if $k=2$), contradicting our choice of $\tau$.
 \end{proof}
 
+\begin{corollary}
+Conjecture \ref{conj:const_twisting} (and thus the refined Conjecture \ref{conj:big_mon_for_curve_2}) holds in the following cases:
+\begin{itemize}
+\item $C \subset A$ is smooth and $\deg \phi_C=2$;
+\item $C \subset A$ is smooth and $\phi_C$ is unramified. 
+\end{itemize}
+Here, we set $C' = \phi_C(C)$ and let $\nu: \tilde{C} \longrightarrow C$ be the natural map from the Galois closure $\tilde{C}$ of the covering $C/C'$, with $\tau \in \Gal(\tilde{C}/C')$ fixed arbitrarily.
+\end{corollary}
+\begin{proof}
+In both cases, $\nu$ is unramified. Together with the smoothness of $C \subset A$, this ensures that
+$$T_p\nu: T_p \tilde{C} \cong T_{\nu(p)}C \longrightarrow T_{\nu(p)}A$$
+is injective for every $p \in \tilde{C}$. It follows from Proposition \ref{prop:twisting_is_alg} that $c$ is constant.
+\end{proof}
 
 \section{Families of subvarieties}\label{sec:subvarieties}
 
