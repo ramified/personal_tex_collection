@@ -1990,23 +1990,34 @@ Now, the formulas \eqref{eq:CMclass_sym} and \eqref{eq:CMclass_signsym} can be w
 
 The following identities have been verified in low-degree cases using SageMath, though a purely combinatorial explanation, as well as a general formulation for the remaining types, is still lacking.
 \begin{fact}
-Let $1^{k'} := [1, \ldots, 1] \dashv k'$. When $k' < \widetilde{d}$, we have
+Let $1^{l} := [1, \ldots, 1] \dashv l$. When $l < \widetilde{d}$, we have
 \begin{equation*}
 \begin{aligned}
-  \mu_d^{1^{k'}}=\;& \phantom{2^{\widetilde{d}}}\frac{1}{2^{k'}k'!} \sum_{\sigma \in S_{d}} \prod_{i=1}^{k'} \left( m_{\sigma(2i-1)}-m_{\sigma(2i)} \right)^2 \\
-  \widetilde{\mu}_{\widetilde{d}}^{1^{k'}}=\;& 2^{\widetilde{d}}\frac{1}{2^{k'}k'!} \sum_{\sigma \in S_{d}} \prod_{i=1}^{k'} m_{\sigma(i)}^2 \\
-  =\;& 2^{\widetilde{d}-k'}(\tilde{d}-k')! \sum_{1 \leqslant i_1 < \cdots l_{k'} \leqslant d} m_{i_1}^2\cdots m_{i_{k'}}^2 \\
+  \mu_d^{1^{l}}=\;& \phantom{2^{\widetilde{d}}}\frac{1}{2^{l}l!} \sum_{\sigma \in S_{d}} \prod_{i=1}^{l} \left( m_{\sigma(2i-1)}-m_{\sigma(2i)} \right)^2 \\
+  \widetilde{\mu}_{\widetilde{d}}^{1^{l}}=\;& 2^{\widetilde{d}}\frac{1}{2^{l}l!} \sum_{\sigma \in S_{\widetilde{d}}} \prod_{i=1}^{l} m_{\sigma(i)}^2 \\
+  =\;& 2^{\widetilde{d}-l}(\tilde{d}-l)! \sum_{1 \leqslant i_1 < \cdots i_{l} \leqslant d} m_{i_1}^2\cdots m_{i_{l}}^2 \\
 \end{aligned}
 \end{equation*}
 
 \end{fact}
 
 \begin{eg}[Continuation of Example \ref{eg:mon_of_Jac}]\label{eg:dim_in_Jac_case}
-Let $C$ be a smooth curve of genus $g$ embedded in its Jacobian $A := \Jac(C)$ via the Abel–Jacobi map $\AJ_C: C \hookrightarrow A$.\\
+Let $C$ be a smooth curve of genus $g$ embedded in its Jacobian $A := \Jac(C)$ via the Abel–Jacobi map $\AJ_C: C \hookrightarrow A$. In this case, write $\Theta$ as the theta divisor of $A$, we have formula \cite[p323]{BL04}
+$$\bigast_{i=1}^{l} c_{1} = \frac{l!}{(g-l)!} \cdot \Theta^{g-l}.$$
 When $C$ is non-hyperelliptic, we get
-$$\dim Z^{(m)} = \min_{k \in \mathbb{Z}} \left\{ \rule{0mm}{3mm} g-1, \# \left\{ i \in [2g-2] \;\middle|\; m_i \neq k \right\} \right\}.$$
+\begin{equation*}
+\begin{aligned}
+  c_l\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{c_Z^{(m)}} \frac{1}{2^{l}(g-l)!} \sum_{\sigma \in S_{2g-2}} \prod_{i=1}^{l} \left( m_{\sigma(2i-1)}-m_{\sigma(2i)} \right)^2 \cdot \Theta^{g-l} \\ 
+  \dim Z^{(m)} =\;& \min_{k \in \mathbb{Z}} \left\{ \rule{0mm}{3mm} g-1, \# \left\{ i \in [2g-2] \;\middle|\; m_i \neq k \right\} \right\} \\
+\end{aligned}
+\end{equation*}
 When $C$ is hyperelliptic, with $(m)=\left( m_1,\ldots,m_{g-1},0,\ldots,0 \right)$, we get
-$$\dim Z^{(m)} =  \# \left\{ i \in [g-1] \;\middle|\; m_i \neq 0 \right\} .$$
+\begin{equation*}
+\begin{aligned}
+  c_l\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{c_Z^{(m)}}  \frac{2^{g-1-l} l!}{g-l}  \sum_{1 \leqslant i_1 < \cdots i_{l} \leqslant g-1} m_{i_1}^2\cdots m_{i_{l}}^2 \cdot \Theta^{g-l} \\ 
+  \dim Z^{(m)} =\;&  \# \left\{ i \in [g-1] \;\middle|\; m_i \neq 0 \right\} \\
+\end{aligned}
+\end{equation*}
 \end{eg}
 
 %\nocite{Eberhardt2022Koszul}	% cite articles which are not cited in the document yet
