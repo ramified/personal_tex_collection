@@ -1068,6 +1068,25 @@ Since the subgroup $\iota_W^* \Hnm_1(\tilde{C};\mathbb{Z}) \subseteq \Hnm_1(A;\m
 
 \end{proof}
 
+\begin{remark}\label{rem:auto_induces_const_twisting}
+If $\tau \in \Aut(\tilde{C})$ extends to an automorphism $\tau_A : A \to A$ with linear part $\tau_A^{L}$, then condition \eqref{eq:uniform_scalar_condition} holds automatically. In fact, the following diagram commutes:
+% https://q.uiver.app/#q=WzAsNixbMCwwLCJUX3AgXFx0aWxkZXtDfSAgIl0sWzEsMCwiVF97XFxudShwKX0gQSJdLFsyLDAsIldeKiJdLFsyLDEsIldeKiJdLFsxLDEsIlRfe1xcbnUoe1xcdGF1KHApfSl9IEEiXSxbMCwxLCJUX3tcXHRhdShwKX0gXFx0aWxkZXtDfSAgIl0sWzAsMSwiVF9wXFxudSJdLFswLDUsIlRfcFxcdGF1IiwyXSxbNSw0LCJUX3tcXHRhdShwKX1cXG51Il0sWzEsMiwiXFxjb25nIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzIsMywiVF8wIFxcdGF1X0Fee0x9Il0sWzQsMywiXFxjb25nIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzEsNCwiVF97XFxudShwKX0gXFx0YXVfQSJdXQ==
+\[ 
+\begin{tikzcd}[ampersand replacement=\&,column sep=13mm,row sep=7mm]
+	{T_p \tilde{C}  } \& {T_{\nu(p)} A} \&[-10mm] {W^*} \\
+	{T_{\tau(p)} \tilde{C}  } \& {T_{\nu({\tau(p)})} A} \& {W^*}
+	\arrow["{T_p\nu}", from=1-1, to=1-2]
+	\arrow["{T_p\tau}"', from=1-1, to=2-1]
+	\arrow["\cong"{description}, draw=none, from=1-2, to=1-3]
+	\arrow["{T_{\nu(p)} \tau_A}", from=1-2, to=2-2]
+	\arrow["{T_0 \tau_A^{L}}", from=1-3, to=2-3]
+	\arrow["{T_{\tau(p)}\nu}", from=2-1, to=2-2]
+	\arrow["\cong"{description}, draw=none, from=2-2, to=2-3]
+\end{tikzcd}\]
+Since $\tau$ is of finite order, the endomorphism $T_0 \tau_A^{L}$ is diagonalizable.
+If $T_0 \tau_A^{L}$ possesses at least two eigenvalues, then by the non-degeneracy of $C$ there exists a point $p \in \tilde{C}$ such that $\phi_{\nu}(\tau(p)) \neq \phi_{\nu}(p)$.
+\end{remark}
+
 The resulting full automorphism of $\tilde{A}$ is always a rotation by $c$ composed with a translation. Such automorphisms occur only rarely, as established in the following lemma.
 
 \begin{lemma}\label{lem:rotation_auto_is_rare}
@@ -1428,7 +1447,7 @@ outside finitely many points of $\tilde{C}$; therefore, $c$ itself is algebraic.
 In Setting \ref{set:curve_map_to_abelian}, the twisting map $c$ is a constant map when $n \geqslant 3$.
 \end{conjecture}
 
-\begin{proposition}
+\begin{proposition}\label{prop:constant_twisting_imply_conj}
 Conjecture \ref{conj:const_twisting} implies a refined form of Conjecture \ref{conj:big_mon_for_curve_2}. To exclude the counterexamples of the type illustrated in Example \ref{eg:rotation_counterexample}, we require that either $\deg \phi_C = 2$ or that the abelian variety $A$ is not isogenous to $E_{\mathfrak{i}}^{\oplus n}$ or $E_{\rho}^{\oplus n}$, where $E_{\mathfrak{i}} = \mathbb{C}/\mathbb{Z}[i]$ and $E_{\rho} = \mathbb{C}/\mathbb{Z}[\zeta_3]$ are the only elliptic curves with extra automorphism groups.
 \end{proposition}
 
@@ -1466,6 +1485,26 @@ Here, we set $C' = \phi_C(C)$ and let $\nu: \tilde{C} \longrightarrow C$ be the 
 In both cases, $\nu$ is unramified. Together with the smoothness of $C \subset A$, this ensures that
 $$T_p\nu: T_p \tilde{C} \cong T_{\nu(p)}C \longrightarrow T_{\nu(p)}A$$
 is injective for every $p \in \tilde{C}$. It follows from Proposition \ref{prop:twisting_is_alg} that $c$ is constant.
+\end{proof}
+
+\begin{proposition}
+In Setting \ref{set:Prym}, suppose in addition that $k>2$, $g(C')\geqslant 1$, and that the Prym–canonical map $|\omega_{C'} \otimes \eta|$ is generically injective. Under these assumptions, the refined Conjecture \ref{conj:big_mon_for_curve_2} is satisfied.
+\end{proposition}
+\begin{proof}
+By \cite[Proposition 3.1]{LO11}, the Abel–Prym map $\AP_{C/C'}: C \to A$ is generically injective. Set $C'' = \phi_C(C)$; then the following diagram commutes:
+% https://q.uiver.app/#q=WzAsNSxbMCwwLCJDIl0sWzEsMCwiQycnIl0sWzAsMSwiQyciXSxbMiwwLCJcXG1hdGhiYntQfVRfMF4qQSJdLFsyLDEsIlxcbWF0aGJie1B9XFxIbm1eMChcXG9tZWdhX3tDJ30gXFxvdGltZXMgXFxldGEpXioiXSxbMCwxLCJ8XFxvbWVnYV97Q318Il0sWzMsNCwiIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzIsNCwifFxcb21lZ2Ffe0MnfSBcXG90aW1lcyBcXGV0YXwiXSxbMCwyLCJoIiwyXSxbMSwzLCJcXHN1YnNldCIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxLDIsIlxcZXhpc3RzIiwwLHsibGFiZWxfcG9zaXRpb24iOjIwLCJjb2xvdXIiOlsyNDAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19LFsyNDAsNjAsNjAsMV1dXQ==
+% https://q.uiver.app/#q=WzAsNSxbMCwwLCJDIl0sWzEsMCwiQycnIl0sWzAsMSwiQyciXSxbMiwwLCJcXG1hdGhiYntQfVRfMF4qQSJdLFsyLDEsIlxcbWF0aGJie1B9XFxIbm1eMChcXG9tZWdhX3tDJ30gXFxvdGltZXMgXFxldGEpXioiXSxbMCwxLCJcXHBoaV9DIl0sWzMsNCwiIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV0sWzIsNCwifFxcb21lZ2Ffe0MnfSBcXG90aW1lcyBcXGV0YXwiXSxbMCwyLCJoIiwyXSxbMSwzLCJcXHN1YnNldCIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsxLDIsIlxcZXhpc3RzIiwwLHsibGFiZWxfcG9zaXRpb24iOjQwLCJjb2xvdXIiOlsyNDAsNjAsNjBdLCJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJkb3R0ZWQifX19LFsyNDAsNjAsNjAsMV1dXQ==
+\[\begin{tikzcd}[ampersand replacement=\&,column sep=10mm,row sep=10mm]
+	C \& {C''} \&[-15mm] {\mathbb{P}T_0^*A} \\
+	{C'} \&\& {\mathbb{P}\Hnm^0(\omega_{C'} \otimes \eta)^*}
+	\arrow["{\phi_C}", from=1-1, to=1-2]
+	\arrow["h"', from=1-1, to=2-1]
+	\arrow["\subset"{description}, draw=none, from=1-2, to=1-3]
+	\arrow["\exists"{pos=0.4}, color={rgb,255:red,92;green,92;blue,214}, dotted, from=1-2, to=2-1]
+	\arrow[dashed, from=1-3, to=2-3]
+	\arrow["{|\omega_{C'} \otimes \eta|}", from=2-1, to=2-3]
+\end{tikzcd}\]
+Since the linear system $|\omega_{C'} \otimes \eta|$ is generically injective, the map $h$ factors through $\phi_C$. As $C/C'$ is Galois, it follows that $C/C''$ is Galois, $\tilde{C} = C$, and every $\tau \in \Gal(\tilde{C}/C'')$ fixes $C'$. Moreover, each $\tau \in \Gal(C/C')$ extends to an automorphism of $A$, so by Remark \ref{rem:auto_induces_const_twisting}, the twisting map $c$ is constant whenever $\phi_\nu \circ \tau = \phi_\nu$. The remaining argument proceeds as in the proof of Proposition \ref{prop:constant_twisting_imply_conj}.
 \end{proof}
 
 \section{Families of subvarieties}\label{sec:subvarieties}
