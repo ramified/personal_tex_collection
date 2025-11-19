@@ -269,6 +269,7 @@
 \DeclareMathOperator{\sign}{\operatorname{sign}}
 \DeclareMathOperator{\longleftmapsto}{\rotatebox[origin=c]{180}{$\;\longmapsto\;$}}
 \DeclareMathOperator{\Zsm}{Z^{\operatorname{sm}}}
+\DeclareMathOperator{\Csm}{C^{\operatorname{sm}}}
 \DeclareMathOperator{\Gal}{\operatorname{Gal}}
 \DeclareMathOperator{\Mon}{\operatorname{Mon}}
 \DeclareMathOperator{\AJ}{\operatorname{AJ}}
@@ -957,6 +958,8 @@ This is a consequence of Riemann--Roch. In case (a), since $\eta \in g^1_2$, the
 In Setting \ref{set:Prym}, assume further that $k = 2$, $B \neq \varnothing$, and that $C'$ is non-hyperelliptic of genus $g(C')\geqslant 4$. Then the Prym-canonical map $|\omega_{C'} \otimes \eta|$ is generically injective, and therefore $\Gal(\gamma_C)$ is big.
 \end{corollary}
 
+
+\subsection{Extend automorphism from curve to abelian variety}
 In the process of persuing proving Conjecture \ref{conj:big_mon_for_curve_2}, we propose the following lemma which will roll out a lot of trivial cases.
 
 \begin{setting}\label{set:curve_map_to_abelian}
@@ -1415,7 +1418,7 @@ commutes.
 \begin{proposition}\label{prop:twisting_is_alg}
 The twisting map
 $$c:\tilde{C} \dashrightarrow \mathbb{G}_m \qquad p \longmapsto c(p) $$
-is algebraic. Consequently, it admits a unique extension to a morphism $c: \tilde{C} \longrightarrow \mathbb{P}^1$. If $T_p\nu$ is injective for all $p \in \tilde{C}$, then $c$ is constant.
+is algebraic. Consequently, it admits a unique extension to a morphism $c: \tilde{C} \longrightarrow \mathbb{P}^1$. If $T_p\nu$ is injective for all $p \in \tilde{C}$, then $c$ is constant; moreover, this constant must be a root of unity.
 \end{proposition}
 \begin{proof}
 Since
@@ -1506,6 +1509,52 @@ By \cite[Proposition 3.1]{LO11}, the Abel–Prym map $\AP_{C/C'}: C \to A$ is ge
 \end{tikzcd}\]
 Since the linear system $|\omega_{C'} \otimes \eta|$ is generically injective, the map $h$ factors through $\phi_C$. As $C/C'$ is Galois, it follows that $C/C''$ is Galois, $\tilde{C} = C$, and every $\tau \in \Gal(\tilde{C}/C'')$ fixes $C'$. Moreover, each $\tau \in \Gal(C/C')$ extends to an automorphism of $A$, so by Remark \ref{rem:auto_induces_const_twisting}, the twisting map $c$ is constant whenever $\phi_\nu \circ \tau = \phi_\nu$. The remaining argument proceeds as in the proof of Proposition \ref{prop:constant_twisting_imply_conj}.
 \end{proof}
+
+\subsection{Conjecture in terms of curvature}
+The twisting map may also be interpreted as comparing the second fundamental forms (and hence the curvature) at $p$ and $\sigma(p)$. Indeed, the differential of $\phi_C$ at $p$ induces
+$$T_p\phi_C: T_pC \longrightarrow T_{\phi_C(p)} \Gr(1,n) = \Hom(T_pC, N_pC),$$
+where $N_pC := T_pA / T_pC$ denotes the normal space at $p$. This map is equivalent to specifying the second fundamental form
+$$\mathrm{II}_p: T_pC \times T_pC \longrightarrow N_pC.$$
+The construction is compatible with the action of $\sigma$ in the sense that the following diagram commutes:
+% https://q.uiver.app/#q=WzAsNixbMCwwLCJUX3BDICJdLFsxLDAsIlRfcEMiXSxbMiwwLCJOX3BDIl0sWzAsMSwiVF97XFxzaWdtYShwKX1DIl0sWzEsMSwiVF97XFxzaWdtYShwKX1DIl0sWzIsMSwiTl97XFxzaWdtYShwKX1DIl0sWzAsMSwiXFx0aW1lcyAiLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMSwyLCJcXG1hdGhybXtJSX1fcCJdLFsyLDUsIlxcY29uZyJdLFsxLDQsIlxcY29uZyJdLFswLDMsIlRfcCBcXHNpZ21hIiwyXSxbMyw0LCJcXHRpbWVzICIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs0LDUsIlxcbWF0aHJte0lJfV97XFxzaWdtYShwKX0iXV0=
+\[\begin{tikzcd}[ampersand replacement=\&,column sep=10mm,row sep=7mm]
+	{T_pC } \&[-10mm] {T_pC} \& {N_pC} \\
+	{T_{\sigma(p)}C} \& {T_{\sigma(p)}C} \& {N_{\sigma(p)}C}
+	\arrow["{\times }"{description}, draw=none, from=1-1, to=1-2]
+	\arrow["{T_p \sigma}"', from=1-1, to=2-1]
+	\arrow["{\mathrm{II}_p}", from=1-2, to=1-3]
+	\arrow["\cong", from=1-2, to=2-2]
+	\arrow["\cong", from=1-3, to=2-3]
+	\arrow["{\times }"{description}, draw=none, from=2-1, to=2-2]
+	\arrow["{\mathrm{II}_{\sigma(p)}}", from=2-2, to=2-3]
+\end{tikzcd}\]
+Upon identifying $T_pC$ with $T_{\sigma(p)}C$ via parallel transport, one obtains the relation $$\mathrm{II}_p = c(p) \cdot \mathrm{II}_{\sigma(p)}^2$$.
+
+From now on, we fix a Hermitian metric on $T_0A$, which induces a flat Hermitian metric on $A$. Its pullback along $C \subset A$ endows $\Csm$ with a Hermitian metric as well. For any point $p \in \Csm$, we denote by $\kappa(p)$ the Gauss curvature of $\Csm$ at $p$.
+
+\begin{lemma}\label{lem:curv_of_curve_in_A}
+The curve $\Csm$ is a minimal surface, and its Gauss curvature satisfies
+$$\kappa(p)=c \cdot \Nm(\mathrm{II}_p).$$
+\end{lemma}
+
+\begin{conjecture}\label{conj:curv}
+Let $A$ be an abelian variety of dimension $n>2$. For a curve $C \subset A$ and a general point $p \in \Img \phi_C$, all points in $\phi_C^{-1}(p)$ exhibit the same Gauss curvature.
+\end{conjecture}
+
+\begin{proposition}\label{prop:constant_twisting_equiv_curv}
+Conjecture \ref{conj:curv} is equivalent to Conjecture \ref{conj:const_twisting}.
+\end{proposition}
+\begin{proof}
+By Lemma \ref{lem:curv_of_curve_in_A}, we see that $\kappa(p)=|c(p)|^2 \cdot \kappa(\sigma(p))$. By Proposition \ref{prop:twisting_is_alg}, 
+\begin{equation*}
+\begin{aligned}
+& \text{$c$ is a constant map} \\
+  \Longleftrightarrow\;& |c(p)| \equiv 1 \text{ for all $p$ } \\ 
+  \Longleftrightarrow\;& \kappa(p)=\kappa(\sigma(p)) \text{ for all $p$ }
+\end{aligned}
+\end{equation*}
+\end{proof}
+
 
 \section{Families of subvarieties}\label{sec:subvarieties}
 

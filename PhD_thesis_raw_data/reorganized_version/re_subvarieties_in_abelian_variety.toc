@@ -7,14 +7,16 @@
 \contentsline {section}{\tocsection {}{3}{Monodromy group}}{8}{section.3}% 
 \contentsline {subsection}{\tocsubsection {}{3.1}{Criteria for big monodromy group}}{8}{subsection.3.1}% 
 \contentsline {subsection}{\tocsubsection {}{3.2}{Curves with big monodromy group}}{10}{subsection.3.2}% 
-\contentsline {subsection}{\tocsubsection {}{3.3}{Comparing tangent spaces via automorphism}}{14}{subsection.3.3}% 
+\contentsline {subsection}{\tocsubsection {}{3.3}{Extend automorphism from curve to abelian variety}}{11}{subsection.3.3}% 
+\contentsline {subsection}{\tocsubsection {}{3.4}{Comparing tangent spaces via automorphism}}{14}{subsection.3.4}% 
+\contentsline {subsection}{\tocsubsection {}{3.5}{Conjecture in terms of curvature}}{16}{subsection.3.5}% 
 \contentsline {section}{\tocsection {}{4}{Families of subvarieties}}{16}{section.4}% 
 \contentsline {subsection}{\tocsubsection {}{4.1}{Clean Lagrangian cycles}}{16}{subsection.4.1}% 
-\contentsline {subsection}{\tocsubsection {}{4.2}{Realized as characteristic cycles}}{18}{subsection.4.2}% 
-\contentsline {section}{\tocsection {}{5}{Dimension and homology class}}{18}{section.5}% 
+\contentsline {subsection}{\tocsubsection {}{4.2}{Realized as characteristic cycles}}{19}{subsection.4.2}% 
+\contentsline {section}{\tocsection {}{5}{Dimension and homology class}}{19}{section.5}% 
 \contentsline {subsection}{\tocsubsection {}{5.1}{Reminder on the (homological) Chern--Mather class}}{19}{subsection.5.1}% 
-\contentsline {subsection}{\tocsubsection {}{5.2}{The homology class of $\mathbb {P}\Lambda _{Z}^{\times d}$}}{19}{subsection.5.2}% 
-\contentsline {subsection}{\tocsubsection {}{5.3}{The homology class of $\mathbb {P}\Lambda _{Z}^{[d]}$}}{20}{subsection.5.3}% 
-\contentsline {subsection}{\tocsubsection {}{5.4}{The homology class in type $C$ case}}{22}{subsection.5.4}% 
+\contentsline {subsection}{\tocsubsection {}{5.2}{The homology class of $\mathbb {P}\Lambda _{Z}^{\times d}$}}{20}{subsection.5.2}% 
+\contentsline {subsection}{\tocsubsection {}{5.3}{The homology class of $\mathbb {P}\Lambda _{Z}^{[d]}$}}{21}{subsection.5.3}% 
+\contentsline {subsection}{\tocsubsection {}{5.4}{The homology class in type $C$ case}}{23}{subsection.5.4}% 
 \contentsline {subsection}{\tocsubsection {}{5.5}{Möbius-transforms block-sum polynomial}}{25}{subsection.5.5}% 
-\contentsline {section}{\tocsection {}{}{References}}{26}{section*.4}% 
+\contentsline {section}{\tocsection {}{}{References}}{27}{section*.4}% 
