@@ -10,13 +10,13 @@
 \contentsline {subsection}{\tocsubsection {}{3.3}{Extend automorphism from curve to abelian variety}}{11}{subsection.3.3}% 
 \contentsline {subsection}{\tocsubsection {}{3.4}{Comparing tangent spaces via automorphism}}{14}{subsection.3.4}% 
 \contentsline {subsection}{\tocsubsection {}{3.5}{Conjecture in terms of curvature}}{16}{subsection.3.5}% 
-\contentsline {section}{\tocsection {}{4}{Families of subvarieties}}{16}{section.4}% 
-\contentsline {subsection}{\tocsubsection {}{4.1}{Clean Lagrangian cycles}}{16}{subsection.4.1}% 
+\contentsline {section}{\tocsection {}{4}{Families of subvarieties}}{17}{section.4}% 
+\contentsline {subsection}{\tocsubsection {}{4.1}{Clean Lagrangian cycles}}{17}{subsection.4.1}% 
 \contentsline {subsection}{\tocsubsection {}{4.2}{Realized as characteristic cycles}}{19}{subsection.4.2}% 
-\contentsline {section}{\tocsection {}{5}{Dimension and homology class}}{19}{section.5}% 
-\contentsline {subsection}{\tocsubsection {}{5.1}{Reminder on the (homological) Chern--Mather class}}{19}{subsection.5.1}% 
-\contentsline {subsection}{\tocsubsection {}{5.2}{The homology class of $\mathbb {P}\Lambda _{Z}^{\times d}$}}{20}{subsection.5.2}% 
+\contentsline {section}{\tocsection {}{5}{Dimension and homology class}}{20}{section.5}% 
+\contentsline {subsection}{\tocsubsection {}{5.1}{Reminder on the (homological) Chern--Mather class}}{20}{subsection.5.1}% 
+\contentsline {subsection}{\tocsubsection {}{5.2}{The homology class of $\mathbb {P}\Lambda _{Z}^{\times d}$}}{21}{subsection.5.2}% 
 \contentsline {subsection}{\tocsubsection {}{5.3}{The homology class of $\mathbb {P}\Lambda _{Z}^{[d]}$}}{21}{subsection.5.3}% 
-\contentsline {subsection}{\tocsubsection {}{5.4}{The homology class in type $C$ case}}{23}{subsection.5.4}% 
-\contentsline {subsection}{\tocsubsection {}{5.5}{Möbius-transforms block-sum polynomial}}{25}{subsection.5.5}% 
-\contentsline {section}{\tocsection {}{}{References}}{27}{section*.4}% 
+\contentsline {subsection}{\tocsubsection {}{5.4}{The homology class in type $C$ case}}{24}{subsection.5.4}% 
+\contentsline {subsection}{\tocsubsection {}{5.5}{Möbius-transforms block-sum polynomial}}{26}{subsection.5.5}% 
+\contentsline {section}{\tocsection {}{}{References}}{28}{section*.4}% 
