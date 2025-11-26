@@ -1,0 +1,403 @@
+
+\documentclass{amsart}
+%Typical documenttypes: article/book
+%some examples:
+%\documentclass[reqno,11pt]{book}   %%%for books
+%\documentclass[]{minimal}			%%%for Minimal Working Example
+
+
+%for beamers, you have to change a lot. Especially, remove the package enumitem!!!
+
+
+
+%%%%%%%%%%%%%%%%%%%% setting for fast compiling
+
+%\special{dvipdfmx:config z 0}		% no compression
+
+\includeonly{chapters/chapter9}		% In practice, use an empty document called "chapter9"	% usually for printing books
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%% here we include packages
+
+%%%basic packages for math articles
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[shortlabels]{enumitem}	% It supersedes both enumerate and mdwlist. The package option shortlabels is included to configure the labels like in enumerate.
+
+%%%packages for special symbols
+\usepackage{pifont}					% Access to PostScript standard Symbol and Dingbats fonts
+\usepackage{wasysym}				% additional characters
+\usepackage{bm}						% bold fonts: \bm{...}
+\usepackage{extarrows}				% may be replaced by tikz-cd
+%\usepackage{unicode-math}			% unicode maths for math fonts, now I don't know how to include it
+
+%%%basic packages for fancy electronic documents
+\usepackage[colorlinks]{hyperref}
+\usepackage[table,hyperref]{xcolor} 			% before tikz-cd. 
+%\usepackage[table,hyperref,monochrome]{xcolor}	% disable colored output (black and white)
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+
+%%%packages for figures and tables (general setting)
+\usepackage{float}				%Improved interface for floating objects
+\usepackage{caption,subcaption}
+\usepackage{adjustbox}			% for me it is usually used in tables 
+\usepackage{stackengine}		%baseline changes
+
+%%%packages for commutative diagrams
+\usepackage{tikz-cd}
+%\usepackage{quiver}			% see https://q.uiver.app/
+
+%%%packages for pictures
+\usepackage[width=0.5,tiewidth=0.7]{strands}
+\usepackage{graphicx}			% Enhanced support for graphics
+
+%%%packages for tables and general settings
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{diagbox}
+
+%%%packages for ToC, LoF and LoT
+
+
+
+
+
+
+
+ %https://tex.stackexchange.com/questions/58852/possible-incompatibility-with-enumitem
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%% here we include theoremstyles
+
+\numberwithin{equation}{section}
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+
+\newtheorem{setting}[theorem]{Setting}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{eg}[theorem]{Example}
+\newtheorem{ex}[theorem]{Exercise}
+\newtheorem{fact}[theorem]{Fact}
+\newtheorem{ques}[theorem]{Question}
+\newtheorem{warning}[theorem]{Warning}
+
+
+
+\newtheorem*{bbox}{Black box}
+\newtheorem*{notation}{Conventions and Notations}
+
+
+\numberwithin{equation}{section}
+
+
+\theoremstyle{remark}
+
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem*{remarks}{Remarks}
+
+%%% for important theorems
+%\newtheoremstyle{theoremletter}{4mm}{1mm}{\itshape}{ }{\bfseries}{}{ }{}
+%\theoremstyle{theoremletter}
+%\newtheorem{theoremA}{Theorem}
+%\renewcommand{\thetheoremA}{A}
+%\newtheorem{theoremB}{Theorem}
+%\renewcommand{\thetheoremB}{B}
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%% here we declare some symbols
+
+%%%%%%%DeclareMathOperator
+%see here for why newcommand is better for DeclareMathOperator: https://tex.stackexchange.com/questions/67506/newcommand-vs-declaremathoperator
+
+%%%%%basic symbols. Keep them!
+
+%%%symbols for sets and maps
+\DeclareMathOperator{\pt}{\operatorname{pt}}	%points. Other possibilities are \{pt\}, ...
+\DeclareMathOperator{\Id}{\operatorname{Id}}	%identity in groups.
+\DeclareMathOperator{\Img}{\operatorname{Im}}
+
+\DeclareMathOperator{\Ob}{\operatorname{Ob}}
+\DeclareMathOperator{\Mor}{\operatorname{Mor}}	%difference of Mor and Hom: Hom is usually for abelian categories
+\DeclareMathOperator{\Hom}{\operatorname{Hom}}	\DeclareMathOperator{\End}{\operatorname{End}}
+\DeclareMathOperator{\Aut}{\operatorname{Aut}}
+
+%%%symbols for linear algebras and 
+%%linear algebras
+\DeclareMathOperator{\tr}{\operatorname{tr}}
+\DeclareMathOperator{\diag}{\operatorname{diag}}	%for diagonal matrices
+
+%%abstract algebras
+\DeclareMathOperator{\ord}{\operatorname{ord}}
+\DeclareMathOperator{\gr}{\operatorname{gr}}
+\DeclareMathOperator{\Frac}{\operatorname{Frac}}
+
+%%%symbols for basic geometries
+\DeclareMathOperator{\vol}{\operatorname{vol}}	%volume
+\DeclareMathOperator{\dist}{\operatorname{dist}}
+\DeclareMathOperator{\supp}{\operatorname{supp}}
+
+%%%symbols for category
+%%names of categories
+\DeclareMathOperator{\Mod}{\operatorname{Mod}}
+\DeclareMathOperator{\Vect}{\operatorname{Vect}}
+\DeclareMathOperator{\rep}{\operatorname{rep}} %usually rep means the category of finite dimensional representations, while Rep means the category of representations.
+\DeclareMathOperator{\Rep}{\operatorname{Rep}}
+
+
+%%%symbols for homological algebras
+\DeclareMathOperator{\Tor}{\operatorname{Tor}}
+\DeclareMathOperator{\Ext}{\operatorname{Ext}}
+\DeclareMathOperator{\gldim}{\operatorname{gl.dim}}
+\DeclareMathOperator{\projdim}{\operatorname{proj.dim}}
+\DeclareMathOperator{\injdim}{\operatorname{inj.dim}}
+\DeclareMathOperator{\rad}{\operatorname{rad}}
+
+
+%%%symbols for algebraic groups
+\DeclareMathOperator{\GL}{\operatorname{GL}}
+\DeclareMathOperator{\SL}{\operatorname{SL}}
+
+%%%symbols for typical varieties
+\DeclareMathOperator{\Gr}{\operatorname{Gr}}
+\DeclareMathOperator{\Flag}{\operatorname{Flag}}
+
+%%%symbols for basic algebraic geometry
+\DeclareMathOperator{\Spec}{\operatorname{Spec}}
+\DeclareMathOperator{\Coh}{\operatorname{Coh}}
+\newcommand{\Dcoh}{\mathcal{D}_{\operatorname{Coh}}}%%%This one shows the difference between \DeclareMathOperator and \newcommand
+\DeclareMathOperator{\Pic}{\operatorname{Pic}}
+\DeclareMathOperator{\Jac}{\operatorname{Jac}}
+
+%%%%%advanced symbols. Choose the part you need!
+
+%%%symbols for algebraic representation theory
+\DeclareMathOperator{\Irr}{\operatorname{Irr}}
+\DeclareMathOperator{\ind}{\operatorname{ind}}	%\ind(Q) means the set of  equivalence classes of finite dimensional indecomposable representations
+\DeclareMathOperator{\Res}{\operatorname{Res}}
+\DeclareMathOperator{\Ind}{\operatorname{Ind}}
+\DeclareMathOperator{\cInd}{\operatorname{c-Ind}}
+
+
+%%%symbols for algebraic topology
+\DeclareMathOperator{\EGG}{\operatorname{E}\!}
+\DeclareMathOperator{\BGG}{\operatorname{B}\!}
+
+\DeclareMathOperator{\chern}{\operatorname{ch}^{*}}
+\DeclareMathOperator{\Td}{\operatorname{Td}}
+\DeclareMathOperator{\AS}{\operatorname{AS}}	%Atiyah--Segal completion theorem 
+
+%%%symbols for Auslander--Reiten theory 
+\DeclareMathOperator{\Modup}{\overline{\operatorname{mod}}}
+\DeclareMathOperator{\Moddown}{\underline{\operatorname{mod}}}
+\DeclareMathOperator{\Homup}{\overline{\operatorname{Hom}}}
+\DeclareMathOperator{\Homdown}{\underline{\operatorname{Hom}}}
+
+
+%%%symbols for operad
+\DeclareMathOperator{\Com}{\operatorname{\mathcal{C}om}}
+\DeclareMathOperator{\Ass}{\operatorname{\mathcal{A}ss}}
+\DeclareMathOperator{\Lie}{\operatorname{\mathcal{L}ie}}
+\DeclareMathOperator{\calEnd}{\operatorname{\mathcal{E}nd}} %cal=\mathcal
+
+
+%%%%%personal symbols. Use at your own risk!
+
+%%%symbols only for master thesis
+\DeclareMathOperator{\ptt}{\operatorname{par}}	%the partition map
+\DeclareMathOperator{\str}{\operatorname{str}}	%strict case
+\DeclareMathOperator{\RRep}{\widetilde{\operatorname{Rep}}}
+\DeclareMathOperator{\Rpt}{\operatorname{R}}
+\DeclareMathOperator{\Rptc}{\operatorname{\mathcal{R}}}
+\DeclareMathOperator{\Spt}{\operatorname{S}}
+\DeclareMathOperator{\Sptc}{\operatorname{\mathcal{S}}}
+\DeclareMathOperator{\Kcurl}{\operatorname{\mathcal{K}}}
+\DeclareMathOperator{\Hcurl}{\operatorname{\mathcal{H}}}
+\DeclareMathOperator{\eu}{\operatorname{eu}}
+\DeclareMathOperator{\Eu}{\operatorname{Eu}}
+\DeclareMathOperator{\dimv}{\operatorname{\underline{\mathbf{dim}}}}
+\DeclareMathOperator{\St}{\mathcal{Z}}
+
+%%%%%symbols which haven't been classified. Add your own math operators here!
+
+
+\DeclareMathOperator{\Modr}{\operatorname{-Mod}}
+
+
+
+
+
+%%%%%%%newcommand
+
+%%%basic symbols
+\newcommand{\norm}[1]{\Vert{#1}\Vert}
+
+%%%symbols only for master thesis
+\newcommand{\dimvec}[1]{\mathbf{#1}}
+\newcommand{\abdimvec}[1]{|\dimvec{#1}|}
+\newcommand{\ftdimvec}[1]{\underline{\dimvec{#1}}}
+
+\newcommand{\absgp}[1]{\mathbb{#1}}
+\newcommand{\WWd}{\absgp{W}_{\abdimvec{d}}}
+\newcommand{\Wd}{W_{\dimvec{d}}}
+\newcommand{\MinWd}{\operatorname{Min}(\absgp{W}_{\abdimvec{d}},W_{\dimvec{d}})}
+\newcommand{\Compd}{\operatorname{Comp}_{\dimvec{d}}}
+\newcommand{\Shuffled}{\operatorname{Shuffle}_{\dimvec{d}}}
+
+\newcommand{\Omcell}{\Omega}
+\newcommand{\OOmcell}{\boldsymbol{\Omega}}
+\newcommand{\Vcell}{\mathcal{V}}
+\newcommand{\VVcell}{\boldsymbol{\mathcal{V}}}
+\newcommand{\Ocell}{\mathcal{O}}
+\newcommand{\OOcell}{\boldsymbol{\mathcal{O}}}
+\newcommand{\preimage}[1]{\widetilde{#1}}
+\newcommand{\orde}{\operatorname{ord}_e}
+\newcommand{\fakestar}{*}
+
+%as the subscription of Hom
+\newcommand{\Alggp}{\text{-Alg gp}}
+\newcommand{\Gal}{\operatorname{Gal}}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%% here we make some blocks for special features. 
+
+%%%% todo notes %%%%
+\usepackage[colorinlistoftodos,textsize=footnotesize]{todonotes}
+\setlength{\marginparwidth}{2.5cm}
+\newcommand{\leftnote}[1]{\reversemarginpar\marginnote{\footnotesize #1}}
+\newcommand{\rightnote}[1]{\normalmarginpar\marginnote{\footnotesize #1}\reversemarginpar}
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%% here we make some global settings. Understand everything here before you make a document!
+
+\usepackage[a4paper,left=3cm,right=3cm,bottom=4cm]{geometry}
+\usepackage{indentfirst}	% Indent first paragraph after section header
+
+\setcounter{tocdepth}{2}
+
+
+%https://latexref.xyz/_005cparindent-_0026-_005cparskip.html
+\setlength{\parindent}{15pt}	
+\setlength{\parskip}{3pt plus5pt}
+
+%\setlength\intextsep{0cm}
+%\setlength\textfloatsep{0cm}
+\def\arraystretch{1}
+%\setcounter{secnumdepth}{3}
+
+\allowdisplaybreaks
+
+\makeatletter
+% we use \prefix@<level> only if it is defined
+\renewcommand{\@seccntformat}[1]{%
+  \ifcsname prefix@#1\endcsname
+    \csname prefix@#1\endcsname
+  \else
+    \csname the#1\endcsname\quad
+  \fi}
+% define \prefix@subsection
+\newcommand\prefix@subsection{}
+\makeatother
+
+
+\begin{document}
+
+% The beginning depends on the documentclass. Rewrite this part if you use different documentclass!
+\date{\today}
+
+\title
+{Research Statement
+}
+\author{Xiaoxiang Zhou}
+\address{Institut für Mathematik\\
+Humboldt-Universität zu Berlin\\
+Berlin, 12489\\ Germany\\} 
+\email{email:xiaoxiang.zhou@hu-berlin.de}
+
+
+
+\maketitle
+
+
+
+
+My research lies in algebraic geometry and geometric representation theory, with a particular focus on using geometric methods to reveal hidden combinatorial and representation-theoretic structures. Throughout my work—ranging from affine pavings of quiver varieties and equivariant $K$-theory of Steinberg varieties to the geometry of characteristic cycles of perverse sheaves—I have been motivated by understanding how rich algebraic and representation-theoretic phenomena naturally emerge from geometry. By employing tools from algebraic geometry, topology, and Auslander–Reiten theory in novel ways, I have bridged seemingly distinct areas and developed a unifying perspective that guides my current and future research.
+
+\section{Past and Current Research}
+\subsection{\href{https://doi.org/10.1016/j.jpaa.2025.107953}{Affine pavings of quiver partial flag varieties}}$\,$\\[-5mm]
+
+In my master’s thesis, I studied quiver partial flag varieties for Dynkin quivers and constructed affine pavings for these varieties. The construction uses a systematic stratification combined with Auslander--Reiten combinatorics to reduce the geometry to explicit combinatorial data. These pavings give a transparent description of the cohomology groups of these varieties.
+
+\subsection{\href{https://github.com/ramified/master_thesis/raw/main/master_thesis_Xiaoxiang_Zhou.pdf}{Equivariant $K$-theory of Steinberg varieties}}$\,$\\[-5mm]
+
+Another component of my master’s work was the computation of the equivariant $K$-theory of Steinberg varieties. The $K_0$-groups acquire an algebra structure analogous to the affine Hecke algebra, where the action of generators can be described through combinatorial strand diagrams. This project sparked my interest in the geometrical representation theory.
+
+\subsection{\href{https://github.com/ramified/personal_tex_collection/raw/main/PhD_thesis_raw_data/reorganized_version/re_subvarieties_in_abelian_variety.pdf}{Characteristic cycles of perverse sheaves on abelian varieties}}$\,$\\[-5mm]
+
+During my PhD, I shifted focus to the geometry of characteristic cycles of perverse sheaves on an abelian variety $A$, which can be expressed as formal sums of the conormal varieties of certain subvarieties in $A$. Building on Prof. Krämer’s work, we developed a purely geometric construction of these subvarieties and studied their fundamental properties, including irreducibility, dimension, and homology classes.
+
+We also gained new insights into the monodromy of the conormal Gauss maps in the curve case. In particular, we obtained a family of cases where the monodromy group $\Gal(\gamma_Z)$ is strictly smaller than the associated Weyl group, and we formulated a conjecture precisely characterizing when this occurs, stated in terms of the Gauss curvature of the corresponding curve.
+
+\section{Future Research Directions}
+
+My future research aims to deepen the geometric understanding of representation-theoretic structures and to connect my current work to broader themes in geometric representation theory, particularly those surrounding Hecke algebras, Schubert varieties, and Langlands duality.
+
+\subsection{Algebraic structures in equivariant $K$-theory of Steinberg varieties}$\,$\\[-5mm]
+ 
+
+I plan to revisit my earlier work on the equivariant $K$-theory of Steinberg varieties with the goal of identifying the “big algebra’’ in $K_0$. Beginning with the type A full flag variety, I aim to clarify the relationship between this algebra structure, convolution geometry, and the geometry of Schubert varieties. Understanding this interaction may shed new light on Hecke algebras from a geometric viewpoint, with potential relevance to the geometric Langlands program.
+
+\subsection{Characteristic cycles on Schubert varieties}$\,$\\[-5mm]
+
+A second research direction is to extend my work on characteristic cycles from abelian varieties to Schubert varieties. Since the $K$-theory of the Steinberg variety and the category of perverse sheaves are related by the Bezrukavnikov equivalence, which is the categorification of the Kazhdan–Lusztig isomorphism, I plan to describe characteristic cycles of perverse sheaves on Schubert varieties and trace their images under the equivalence. This project connects naturally to the Springer correspondence, the geometry of conic Lagrangians, and Langlands correspondence.
+
+\section{Outlook}
+
+Across my projects, my goal is to develop geometric frameworks that reveal the underlying combinatorial and representation-theoretic structures. The Hausel group, with its emphasis on geometric representation theory, equivariant geometry, and Langlands correspondence, offers an ideal environment for advancing these ideas. I look forward to developing new geometric frameworks that illuminate deep connections between algebraic geometry, representation theory, and combinatorics, while contributing to and learning from the Hausel group’s vibrant research environment.
+
+
+
+
+% Remember to protect the uppercase of people's name and LaTeX symbols
+\end{document}
