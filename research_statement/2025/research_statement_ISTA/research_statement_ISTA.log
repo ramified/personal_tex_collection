@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  23 NOV 2025 00:48
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  27 NOV 2025 02:22
 entering extended mode
 **./research_statement_ISTA.tex
 (research_statement_ISTA.tex
@@ -1606,14 +1606,14 @@ Package caption Info: End \AtBeginDocument code.
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: twoside 
-* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
+* h-part:(L,W,R)=(93.89418pt, 409.71951pt, 93.89418pt)
 * v-part:(T,H,B)=(101.40665pt, 629.82918pt, 113.81102pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=426.79135pt
+* \textwidth=409.71951pt
 * \textheight=629.82918pt
-* \oddsidemargin=13.08827pt
-* \evensidemargin=13.08827pt
+* \oddsidemargin=21.62419pt
+* \evensidemargin=21.62419pt
 * \topmargin=7.13666pt
 * \headheight=8.0pt
 * \headsep=14.0pt
@@ -1634,7 +1634,7 @@ Package caption Info: End \AtBeginDocument code.
 
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <7> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 365.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 364.
 
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek
@@ -1642,64 +1642,76 @@ LaTeX Font Warning: Font shape `U/wasy/b/n' in size <7> not available
 File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 368--369
+Underfull \hbox (badness 10000) in paragraph at lines 367--368
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 372.
+(hyperref)                removing `math shift' on input line 383.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 372.
+(hyperref)                removing `math shift' on input line 383.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 372--373
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 376--377
-
- []
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 386.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 386.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 386--387
+Underfull \hbox (badness 10000) in paragraph at lines 383--384
 
  []
 
 [1]
-Underfull \hbox (badness 10000) in paragraph at lines 391--392
+Underfull \hbox (badness 10000) in paragraph at lines 397--398
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 406--407
 
  []
 
 [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 403.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 403.
+LaTeX Font Info:    Try loading font information for U+euf on input line 417.
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
+euf.fd"
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 430.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 430.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 430--431
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 435--436
+
+ []
+
+[3] (research_statement_ISTA.bbl) [4]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 450.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 450.
  (research_statement_ISTA.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 403.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 403.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 450.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 450.
 Package rerunfilecheck Info: File `research_statement_ISTA.out' has not changed
 .
-(rerunfilecheck)             Checksum: 690E47B4CA75B09BEB1074F8BC66B9C3.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 403.
+(rerunfilecheck)             Checksum: 496E982CC53A4E6F2EA8CCA241034348.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 450.
  ) 
 Here is how much of TeX's memory you used:
- 36485 strings out of 427748
- 676830 string characters out of 3150981
- 726583 words of memory out of 3000000
- 39842 multiletter control sequences out of 15000+200000
- 544173 words of font info for 76 fonts, out of 3000000 for 9000
+ 36523 strings out of 427748
+ 677447 string characters out of 3150981
+ 729184 words of memory out of 3000000
+ 39871 multiletter control sequences out of 15000+200000
+ 545353 words of font info for 81 fonts, out of 3000000 for 9000
  1489 hyphenation exceptions out of 8191
- 61i,6n,82p,981b,443s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 61i,7n,82p,1060b,443s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on research_statement_ISTA.pdf (2 pages).
+Output written on research_statement_ISTA.pdf (4 pages).

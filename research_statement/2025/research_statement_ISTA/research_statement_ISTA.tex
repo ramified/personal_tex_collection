@@ -311,7 +311,7 @@
 
 %%%%%%%%%%%%%%%%%%%% here we make some global settings. Understand everything here before you make a document!
 
-\usepackage[a4paper,left=3cm,right=3cm,bottom=4cm]{geometry}
+\usepackage[a4paper,left=3.3cm,right=3.3cm,bottom=4cm]{geometry}
 \usepackage{indentfirst}	% Indent first paragraph after section header
 
 \setcounter{tocdepth}{2}
@@ -361,27 +361,71 @@ Berlin, 12489\\ Germany\\}
 
 
 
+My research lies in algebraic geometry and geometric representation theory, with a focus on geometric approaches to hidden combinatorial and representation-theoretic structures. My work ranges from affine pavings of quiver varieties and equivariant $K$-theory of Steinberg varieties to the geometry of characteristic cycles and perverse sheaves on abelian varieties. Throughout I have been motivated by the richness of algebraic and representation-theoretic phenomena that naturally emerge from geometry. By combining tools from algebraic geometry, topology, and Auslander–Reiten theory in novel ways, my work builds new connections between different areas from a unifying perspective that guides my current and future research.
 
-My research lies in algebraic geometry and geometric representation theory, with a particular focus on using geometric methods to reveal hidden combinatorial and representation-theoretic structures. Throughout my work—ranging from affine pavings of quiver varieties and equivariant $K$-theory of Steinberg varieties to the geometry of characteristic cycles of perverse sheaves—I have been motivated by understanding how rich algebraic and representation-theoretic phenomena naturally emerge from geometry. By employing tools from algebraic geometry, topology, and Auslander–Reiten theory in novel ways, I have bridged seemingly distinct areas and developed a unifying perspective that guides my current and future research.
-
-\section{Past and Current Research}
+\section{Master’s Research}
 \subsection{\href{https://doi.org/10.1016/j.jpaa.2025.107953}{Affine pavings of quiver partial flag varieties}}$\,$\\[-5mm]
 
-In my master’s thesis, I studied quiver partial flag varieties for Dynkin quivers and constructed affine pavings for these varieties. The construction uses a systematic stratification combined with Auslander--Reiten combinatorics to reduce the geometry to explicit combinatorial data. These pavings give a transparent description of the cohomology groups of these varieties.
+%\textcolor{red}{TODO: Why not say a few words about the notion of affine pavings / cellular decomposition in algebraic geometry? Give a few other examples where cell decompositions play a role, and explain why and where quiver partial flag varieties are interesting. Also you should quote some of the results in other Dynkin types that you generalize in this paper: Mention a few names and/or give references to put things into context!}
+
+In my master’s thesis, I studied quiver partial flag varieties, which parameterize subrepresentations of a fixed indecomposable representation of a quiver. These varieties may be viewed as quiver analogues of Springer fibers, whose geometry controls the representation theory of Weyl groups via their top Borel–Moore homology. Although the geometry of Springer fibers can be quite involved, they often admit affine pavings, as do quiver partial flag varieties.
+
+A complex algebraic variety $X$ has an affine paving if $X$ has a filtration
+$$\varnothing= X_0 \subset X_1 \subset \cdots \subset X_d=X$$
+with $X_i$ closed and $X_{i+1} \setminus X_i$ isomorphic to some affine space $\mathbb{A}^k_{\mathbb{C}}$. This notion plays the same role in algebraic geometry as cellular decompositions do in topology, and implies nice properties about the cohomology of varieties, for example the vanishing of cohomology in odd degrees.
+ 
+Affine pavings have been constructed in many cases, as for Grassmannians \cite[Theorem 4.1]{3264}, flag varieties \cite[Theorem 9.9.5]{Dmoduleperv}, as well as certain Springer fibers \cite{E7paving}, quiver Grassmannians \cite[Theorem 4]{irelli2019cell}, and quiver flag varieties \cite[Theorem 1.2]{maksimau2019flag}. 
+
+In my article, we extend these results by constructing affine pavings for all quiver partial flag varieties of Dynkin type and of affine types $\widetilde{A}$ and $\widetilde{D}$. Our construction is based on a systematic stratification of the partial flag varieties together with Auslander–Reiten combinatorics, which reduces the geometric problem to explicit combinatorial data.
+
+\vspace{6mm}
 
 \subsection{\href{https://github.com/ramified/master_thesis/raw/main/master_thesis_Xiaoxiang_Zhou.pdf}{Equivariant $K$-theory of Steinberg varieties}}$\,$\\[-5mm]
 
-Another component of my master’s work was the computation of the equivariant $K$-theory of Steinberg varieties. The $K_0$-groups acquire an algebra structure analogous to the affine Hecke algebra, where the action of generators can be described through combinatorial strand diagrams. This project sparked my interest in the geometrical representation theory.
+%\textcolor{red}{TODO: Say briefly where Steinberg varieties arise. Was your computation new? What was known before? Again include more context.}
+
+The Steinberg variety $\St$ was introduced in \cite{steinberg1976desingularization} and, in type $A$, consists of triples of a nilpotent operator and two flags fixed by this operator. Its top Borel–Moore homology carries a convolution product identifying it with the group algebra of the Weyl group \cite{kazhdan1980topological}. Lusztig later showed \cite{lusztig1985equivariant} that the affine Hecke algebra is naturally realized as the $G\times\mathbb{C}^\times$-equivariant $K$-theory of $\St$, a result often referred to as the Kazhdan–Lusztig isomorphism. Khovanov--Lauda \cite{https://doi.org/10.48550/arxiv.0803.4121} and Rouquier \cite{https://doi.org/10.48550/arxiv.0812.5023} subsequently introduced an algebra, called the quiver Hecke algebra or KLR algebra, in order to categorify quantum groups. Varagnolo–Vasserot \cite{varagnolo2011canonical} identified these algebras with the $G$-equivariant cohomology of a quiver version $\St_{\mathbf d}$ of the Steinberg variety.
+
+Motivated by these ideas, we compute the equivariant $K$-theory of Steinberg varieties, yielding a $K$-theoretic analogue of the KLR algebra. Using the formulas for pullback, proper pushforward, and tensor product in $K$-theory, we obtain an explicit basis together with the convolution product, described combinatorially via strand diagrams. Furthermore, we discussed the Atiyah--Segal completion theorem, which links $K$-theory and cohomology and allows the Chern class and Todd class to appear explicitly in illustrative examples.
+
+This project sparked my interest in the geometrical representation theory. Even now, I am still amazed by how the Euler class appears as a correction term in the excess base change formula and how this topological object can be explicitly expressed to capture rich representation-theoretic information.
+
+\vspace{6mm}
+
+\section{PhD Research}
 
 \subsection{\href{https://github.com/ramified/personal_tex_collection/raw/main/PhD_thesis_raw_data/reorganized_version/re_subvarieties_in_abelian_variety.pdf}{Characteristic cycles of perverse sheaves on abelian varieties}}$\,$\\[-5mm]
 
-During my PhD, I shifted focus to the geometry of characteristic cycles of perverse sheaves on an abelian variety $A$, which can be expressed as formal sums of the conormal varieties of certain subvarieties in $A$. Building on Prof. Krämer’s work, we developed a purely geometric construction of these subvarieties and studied their fundamental properties, including irreducibility, dimension, and homology classes.
+During my PhD, I changed gears towards algebraic geometry. In my thesis I am studying the geometry of perverse sheaves on complex abelian varieties. In particular, I am investigating the correspondence between characteristic cycles and Weyl group orbits of dominant weights that arise from the Tannakian description of perverse sheaves in Krämer's work. The cycles that appear are Lagrangian cones inside the cotangent bundle to the abelian varieties, and as such they can be written as formal sums of conormal varieties to certain subvarieties of the abelian variety. I have provided a purely geometric construction of these subvarieties and have studied their basic properties. Among other things, I have computed their dimensions, their homology classes, and have investigated when these varieties are irreducible. 
 
-We also gained new insights into the monodromy of the conormal Gauss maps in the curve case. In particular, we obtained a family of cases where the monodromy group $\Gal(\gamma_Z)$ is strictly smaller than the associated Weyl group, and we formulated a conjecture precisely characterizing when this occurs, stated in terms of the Gauss curvature of the corresponding curve.
+
+The dimensions and homology classes of these subvarieties are determined by their total Chern--Mather class. Using the Möbius function in combination with the Pontryagin product, we can derive an explicit combinatorial expression for the Chern--Mather class. Regarding irreducibility, the constructions in \cite[2.c]{Kr20} imply that the irreducible components correspond precisely to the orbits of the monodromy group, whose structure we will examine in detail in the next section.
+
+\vspace{6mm}
+
+\subsection{\href{https://github.com/ramified/personal_tex_collection/raw/main/PhD_thesis_raw_data/reorganized_version/re_subvarieties_in_abelian_variety.pdf}{Monodromy groups of conormal Gauss maps}}$\,$\\[-5mm]
+
+Let $A$ be a complex abelian variety and $Z \subset A$ be a non-degenerated closed subvariety.
+More recently I have studied the conormal Gauss maps $\gamma_Z$ that are obtained by projecting from conormal varieties to the fiber direction, using that abelian varieties have trivial cotangent bundle. Gauss maps of this type have a long history in algebraic geometry starting from the work of Ran \cite{Ran84}, Zak \cite{Zak93} and others. 
+
+In the case at hand, these conormal Gauss maps are generically finite covers. You can imagine the fiber of  $\gamma_Z$ as a cluster of stars projected onto a celestial dome. As the fiber direction varies, these points shift, tracing out paths much like stars drifting across the night sky. The constraints that govern them are subtle, like the imagined lines that shape constellations. And in the long arc of variation, monodromy emerges—like the slow turning that replaces Kochab with Polaris among the stars.
+
+The study of monodromy groups is already very interesting from a purely geometric viewpoint, and substantial progress has been made in many cases: for instance, for Weierstrass points on a general curve \cite{EH87}, for the Prym map $\mathcal{R}_6 \longrightarrow \mathcal{A}_5$ \cite[Theorem 4.2]{Don92}, and numerous other cases \cite{Harris79}. Typically, monodromy groups are as large as possible, unless constrained by intrinsic geometric structures. In the context of conormal Gauss maps, establishing criteria for the ``bigness" of the monodromy group would yield important advances in our understanding of the Tannaka groups of perverse sheaves on abelian varieties, with further applications in moduli theory and in arithmetic geometry along the lines of Lawrence--Sawin \cite{LS25} and Javanpeykar--Krämer--Lehn--Maculan \cite{JKLM22}.
+
+Can we find cases where the monodromy group is not as big as expected? There are two situations where this can occur, though they are considered reducible and hence excluded from our focus. First, if $Z$ is invariant under a nontrivial translation (i.e., $Z = Z + p$ for some $p \neq 0$), then the geometry effectively descends to a quotient variety, and the monodromy is governed by that simpler setting. Second, if $Z$ can be written as a sum $Z = X + Y$ of positive-dimensional subvarieties, the monodromy group is often constrained by the structure of the summands. To study genuinely new phenomena, we therefore restrict attention to ``primitive" subvarieties that do not arise in these ways.
+
+The earliest known example arises when $Z$ is the Fano surface of lines on a smooth cubic threefold, where the monodromy group coincides with the Weyl group of type $E_6$. Recently, we have identified a new family of examples with notably small monodromy groups. In these cases, the abelian variety $A$ must be isogenous to $E_{\mathfrak{i}}^{\oplus n}$ or $E_{\rho}^{\oplus n}$, and the subvariety $Z$ is preserved under a certain "rotation" in $A$. Consequently, the monodromy group is strictly smaller than the associated Weyl group, and the subvarieties associated with Weyl group orbits become highly reducible.
+
+Focusing on curves, one naturally asks whether all instances with small monodromy groups have been found. I have proposed a conjecture asserting that this is indeed the case, which can also be formulated equivalently in terms of the Gaussian curvature of the curve. We have checked the conjecture in the most Prym case, especially when the cover has degree $2$ or when the base curve is non-hyperelliptic; in these situations, the statement holds true. We are still working toward a proof, and a more thorough understanding is likely to reveal deeper underlying structures.
+
+\vspace{6mm}
+
+
+%\textcolor{red}{Feel free to change the above, but the text needs to have some motivation and context}
 
 \section{Future Research Directions}
 
-My future research aims to deepen the geometric understanding of representation-theoretic structures and to connect my current work to broader themes in geometric representation theory, particularly those surrounding Hecke algebras, Schubert varieties, and Langlands duality.
+In my future research I plan to deepen the geometric understanding of representation-theoretic structures and to connect my current work to broader themes in geometric representation theory, particularly those surrounding Hecke algebras, Schubert varieties, and Langlands duality.
 
 \subsection{Algebraic structures in equivariant $K$-theory of Steinberg varieties}$\,$\\[-5mm]
  
@@ -394,10 +438,13 @@ A second research direction is to extend my work on characteristic cycles from a
 
 \section{Outlook}
 
-Across my projects, my goal is to develop geometric frameworks that reveal the underlying combinatorial and representation-theoretic structures. The Hausel group, with its emphasis on geometric representation theory, equivariant geometry, and Langlands correspondence, offers an ideal environment for advancing these ideas. I look forward to developing new geometric frameworks that illuminate deep connections between algebraic geometry, representation theory, and combinatorics, while contributing to and learning from the Hausel group’s vibrant research environment.
+Across my projects, my goal is to develop geometric frameworks that reveal the underlying combinatorial and representation-theoretic structures. The research group of Tamás Hausel, with its emphasis on geometric representation theory, equivariant geometry, and the Langlands correspondence, offers an ideal environment for advancing these ideas. I look forward to pursuing new ideas at the interface of algebraic geometry, representation theory, and combinatorics, contributing to the group’s research activities, and learning from interactions with members such as Tanguy Vernet, Olga Trapeznikova, and Shiyu Shen.
+
+%\textcolor{red}{Maybe also mention some other people at ISTA or in his group?}
 
 
-
+\bibliographystyle{plain}
+\bibliography{reference}
 
 % Remember to protect the uppercase of people's name and LaTeX symbols
 \end{document}
