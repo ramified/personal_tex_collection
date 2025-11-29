@@ -1,12 +1,12 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{JKLM25}
 
-\bibitem{E7paving}
+\bibitem[DCM22]{E7paving}
 Corrado De~Concini and Andrea Maffei.
 \newblock Paving {Springer} fibers for {{\(E7\)}}.
 \newblock {\em Proc. Indian Acad. Sci., Math. Sci.}, 132(2):21, 2022.
 \newblock Id/No 69.
 
-\bibitem{Don92}
+\bibitem[Don92]{Don92}
 Ron Donagi.
 \newblock The fibers of the {Prym} map.
 \newblock In {\em Curves, Jacobians, and Abelian varieties. Proceedings of an
@@ -14,95 +14,100 @@ Ron Donagi.
   June 21- 27, 1990 at the University of Massachusetts, Amherst, MA, USA},
   pages 55--125. Providence, RI: American Mathematical Society, 1992.
 
-\bibitem{EH87}
+\bibitem[EH87]{EH87}
 David Eisenbud and Joe Harris.
 \newblock The monodromy of {Weierstrass} points.
 \newblock {\em Invent. Math.}, 90:333--341, 1987.
 
-\bibitem{3264}
+\bibitem[EH16]{3264}
 David Eisenbud and Joe Harris.
 \newblock {\em 3264 and all that. {A} second course in algebraic geometry}.
 \newblock Cambridge: Cambridge University Press, 2016.
 
-\bibitem{Harris79}
+\bibitem[Har79]{Harris79}
 Joe Harris.
 \newblock Galois groups of enumerative problems.
 \newblock {\em Duke Math. J.}, 46:685--724, 1979.
 
-\bibitem{Dmoduleperv}
+\bibitem[HTT08]{Dmoduleperv}
 Ryoshi Hotta, Kiyoshi Takeuchi, and Toshiyuki Tanisaki.
 \newblock {\em {{\(D\)}}-modules, perverse sheaves, and representation theory.
   {Translated} from the {Japanese} by {Kiyoshi} {Takeuchi}}, volume 236 of {\em
   Prog. Math.}
 \newblock Basel: Birkh{\"a}user, expanded edition, 2008.
 
-\bibitem{irelli2019cell}
+\bibitem[IEFR21]{irelli2019cell}
 Giovanni~Cerulli Irelli, Francesco Esposito, Hans Franzen, and Markus Reineke.
 \newblock Cell decompositions and algebraicity of cohomology for quiver
   {Grassmannians}.
 \newblock {\em Adv. Math.}, 379:48, 2021.
 \newblock Id/No 107544.
 
-\bibitem{JKLM22}
+\bibitem[JKLM25]{JKLM22}
 Ariyan Javanpeykar, Thomas Kr{\"a}mer, Christian Lehn, and Marco Maculan.
 \newblock The monodromy of families of subvarieties on abelian varieties.
 \newblock {\em Duke Math. J.}, 174(6):1045--1149, 2025.
 
-\bibitem{kazhdan1980topological}
+\bibitem[KL80]{kazhdan1980topological}
 David Kazhdan and George Lusztig.
 \newblock A topological approach to {Springer}'s representations.
 \newblock {\em Adv. Math.}, 38:222--228, 1980.
 
-\bibitem{https://doi.org/10.48550/arxiv.0803.4121}
+\bibitem[KL09]{https://doi.org/10.48550/arxiv.0803.4121}
 Mikhail Khovanov and Aaron~D. Lauda.
 \newblock A diagrammatic approach to categorification of quantum groups. {I}.
 \newblock {\em Represent. Theory}, 13:309--347, 2009.
 
-\bibitem{Kr20}
+\bibitem[Kr{\"a}20]{Kr20}
 Thomas Kr{\"a}mer.
 \newblock Summands of theta divisors on {Jacobians}.
 \newblock {\em Compos. Math.}, 156(7):1457--1475, 2020.
 
-\bibitem{LS25}
+\bibitem[LS25]{LS25}
 Brian Lawrence and Will Sawin.
 \newblock The {Shafarevich} conjecture for hypersurfaces in abelian varieties.
 \newblock Preprint, {arXiv}:2004.09046 [math.{NT}] (2025), 2025.
 
-\bibitem{lusztig1985equivariant}
+\bibitem[Lus85]{lusztig1985equivariant}
 George Lusztig.
 \newblock Equivariant ${K}$-theory and representations of {Hecke} algebras.
 \newblock {\em Proc. Am. Math. Soc.}, 94:337--342, 1985.
 
-\bibitem{maksimau2019flag}
+\bibitem[Mak25]{maksimau2019flag}
 Ruslan Maksimau.
 \newblock Flag versions of quiver {Grassmannians} for {Dynkin} quivers have no
   odd cohomology.
 \newblock {\em Adv. Math.}, 461:20, 2025.
 \newblock Id/No 110078.
 
-\bibitem{Ran84}
+\bibitem[Ran84]{Ran84}
 Ziv Ran.
 \newblock The structure of {Gauss}-like maps.
 \newblock {\em Compos. Math.}, 52:171--177, 1984.
 
-\bibitem{https://doi.org/10.48550/arxiv.0812.5023}
+\bibitem[Rou08]{https://doi.org/10.48550/arxiv.0812.5023}
 Raphael Rouquier.
 \newblock 2-{K}ac-{M}oody algebras, 2008.
 
-\bibitem{steinberg1976desingularization}
+\bibitem[Ste76]{steinberg1976desingularization}
 Robert Steinberg.
 \newblock On the desingularization of the unipotent variety.
 \newblock {\em Invent. Math.}, 36:209--224, 1976.
 
-\bibitem{varagnolo2011canonical}
+\bibitem[VV11]{varagnolo2011canonical}
 M.~Varagnolo and E.~Vasserot.
 \newblock Canonical bases and {KLR}-algebras.
 \newblock {\em J. Reine Angew. Math.}, 659:67--100, 2011.
 
-\bibitem{Zak93}
+\bibitem[Zak93]{Zak93}
 F.~L. Zak.
 \newblock {\em Tangents and secants of algebraic varieties}, volume 127 of {\em
   Transl. Math. Monogr.}
 \newblock Providence, RI: American Mathematical Society, 1993.
+
+\bibitem[Zho25]{Zhou25}
+Xiaoxiang Zhou.
+\newblock Affine pavings of quiver flag varieties.
+\newblock {\em Journal of Pure and Applied Algebra}, 229(6):107953, 2025.
 
 \end{thebibliography}

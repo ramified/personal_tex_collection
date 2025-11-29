@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  28 NOV 2025 00:10
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  29 NOV 2025 12:23
 entering extended mode
 **./research_statement_Strasbourg.tex
 (research_statement_Strasbourg.tex
@@ -402,8 +402,8 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 47.
-Package hyperref Info: Option `breaklinks' set `true' on input line 47.
+Package hyperref Info: Option `colorlinks' set `true' on input line 48.
+Package hyperref Info: Option `breaklinks' set `true' on input line 48.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\floa
 t.sty"
@@ -1523,37 +1523,37 @@ Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 ) (research_statement_Strasbourg.aux)
 \openout1 = `research_statement_Strasbourg.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 344.
-LaTeX Font Info:    ... okay on input line 344.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 344.
-LaTeX Font Info:    ... okay on input line 344.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 344.
-LaTeX Font Info:    ... okay on input line 344.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 344.
-LaTeX Font Info:    ... okay on input line 344.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 344.
-LaTeX Font Info:    ... okay on input line 344.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 344.
-LaTeX Font Info:    ... okay on input line 344.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 344.
-LaTeX Font Info:    ... okay on input line 344.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 344.
-LaTeX Font Info:    ... okay on input line 344.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 344.
-LaTeX Font Info:    ... okay on input line 344.
-LaTeX Font Info:    Try loading font information for U+msa on input line 344.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 345.
+LaTeX Font Info:    ... okay on input line 345.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 345.
+LaTeX Font Info:    ... okay on input line 345.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 345.
+LaTeX Font Info:    ... okay on input line 345.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 345.
+LaTeX Font Info:    ... okay on input line 345.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 345.
+LaTeX Font Info:    ... okay on input line 345.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 345.
+LaTeX Font Info:    ... okay on input line 345.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 345.
+LaTeX Font Info:    ... okay on input line 345.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 345.
+LaTeX Font Info:    ... okay on input line 345.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 345.
+LaTeX Font Info:    ... okay on input line 345.
+LaTeX Font Info:    Try loading font information for U+msa on input line 345.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 msa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 344.
+LaTeX Font Info:    Try loading font information for U+msb on input line 345.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 msb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 344.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 345.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/wasysym\uw
 asy.fd"
@@ -1561,18 +1561,18 @@ File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <8> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 344.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 345.
 
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <6> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 344.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 345.
 
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <5> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 344.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 345.
 
 \AtBeginShipoutBox=\box98
-Package hyperref Info: Link coloring ON on input line 344.
+Package hyperref Info: Link coloring ON on input line 345.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\n
 ameref.sty"
@@ -1588,9 +1588,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count332
 )
-LaTeX Info: Redefining \ref on input line 344.
-LaTeX Info: Redefining \pageref on input line 344.
-LaTeX Info: Redefining \nameref on input line 344.
+LaTeX Info: Redefining \ref on input line 345.
+LaTeX Info: Redefining \pageref on input line 345.
+LaTeX Info: Redefining \nameref on input line 345.
  (research_statement_Strasbourg.out)
 (research_statement_Strasbourg.out)
 \@outlinefile=\write4
@@ -1634,7 +1634,7 @@ Package caption Info: End \AtBeginDocument code.
 
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <7> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 364.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 365.
 
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek
@@ -1642,65 +1642,65 @@ LaTeX Font Warning: Font shape `U/wasy/b/n' in size <7> not available
 File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 
 )
-Underfull \hbox (badness 10000) in paragraph at lines 369--370
+Underfull \hbox (badness 10000) in paragraph at lines 370--371
 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 385.
+(hyperref)                removing `math shift' on input line 386.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 385.
+(hyperref)                removing `math shift' on input line 386.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 385--386
+Underfull \hbox (badness 10000) in paragraph at lines 386--387
 
  []
 
 [1]
-Underfull \hbox (badness 10000) in paragraph at lines 399--400
+Underfull \hbox (badness 10000) in paragraph at lines 400--401
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 408--409
+Underfull \hbox (badness 10000) in paragraph at lines 409--410
 
  []
 
 [2]
-LaTeX Font Info:    Try loading font information for U+euf on input line 419.
+LaTeX Font Info:    Try loading font information for U+euf on input line 420.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 euf.fd"
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
-Underfull \hbox (badness 10000) in paragraph at lines 434--435
+Underfull \hbox (badness 10000) in paragraph at lines 435--436
 
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 445--446
+Underfull \hbox (badness 10000) in paragraph at lines 446--447
 
  []
 
 (research_statement_Strasbourg.bbl [4]) [5]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 460.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 460.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 461.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 461.
  (research_statement_Strasbourg.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 460.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 460.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 461.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 461.
 Package rerunfilecheck Info: File `research_statement_Strasbourg.out' has not c
 hanged.
 (rerunfilecheck)             Checksum: CAD7D5C750E635C6894088CCFD2A5CAB.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 460.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 461.
  ) 
 Here is how much of TeX's memory you used:
- 36524 strings out of 427748
- 677552 string characters out of 3150981
- 729331 words of memory out of 3000000
- 39872 multiletter control sequences out of 15000+200000
+ 36525 strings out of 427748
+ 677560 string characters out of 3150981
+ 729365 words of memory out of 3000000
+ 39873 multiletter control sequences out of 15000+200000
  545353 words of font info for 81 fonts, out of 3000000 for 9000
  1489 hyphenation exceptions out of 8191
  61i,6n,82p,1066b,495s stack positions out of 5000i,500n,10000p,200000b,50000s

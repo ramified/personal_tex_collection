@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  27 NOV 2025 12:43
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  28 NOV 2025 17:51
 entering extended mode
 **./research_statement_ISTA.tex
 (research_statement_ISTA.tex
@@ -1695,21 +1695,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 437--438
  []
 
 [3] (research_statement_ISTA.bbl) [4]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 452.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 452.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 453.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 453.
  (research_statement_ISTA.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 452.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 452.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 453.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 453.
 Package rerunfilecheck Info: File `research_statement_ISTA.out' has not changed
 .
 (rerunfilecheck)             Checksum: 496E982CC53A4E6F2EA8CCA241034348.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 452.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 453.
  ) 
 Here is how much of TeX's memory you used:
- 36523 strings out of 427748
- 677447 string characters out of 3150981
- 729185 words of memory out of 3000000
- 39871 multiletter control sequences out of 15000+200000
+ 36524 strings out of 427748
+ 677455 string characters out of 3150981
+ 730282 words of memory out of 3000000
+ 39872 multiletter control sequences out of 15000+200000
  545353 words of font info for 81 fonts, out of 3000000 for 9000
  1489 hyphenation exceptions out of 8191
  61i,6n,82p,1060b,443s stack positions out of 5000i,500n,10000p,200000b,50000s
