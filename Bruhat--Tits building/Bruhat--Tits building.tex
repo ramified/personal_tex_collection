@@ -1,0 +1,429 @@
+\documentclass[pdf]{beamer}
+\mode<presentation>{
+	\usetheme{Ilmenau}
+	
+}
+\usecolortheme{dolphin}
+%\usepackage[UTF8,indent]{ctexcap}%中文
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+%\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage{indentfirst}
+\usepackage{enumerate}
+\usepackage{extpfeil}
+\usepackage{tikz-cd}
+\usepackage{longtable}
+\usepackage{makecell}
+\usepackage{TooYoung}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{arydshln}
+
+\usetikzlibrary {calc,positioning,shapes.misc,graphs,decorations.pathreplacing}
+
+
+\numberwithin{equation}{section}
+
+\theoremstyle{plain}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{defn}[theorem]{Definition}
+\newtheorem{eg}[theorem]{Example}
+\newtheorem{pf}[theorem]{Proof}
+\newtheorem{cor}[theorem]{Corollary}
+
+\newtheorem{tabloid}[theorem]{Tabloid: equivalence class of standard filling}
+
+
+\theoremstyle{plain}
+\newtheorem{exercise}{Exercise}[section]
+
+
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{remarks}{Remarks}
+\newtheorem{ex}[theorem]{Exercise}
+\newtheorem{question}[theorem]{Questions}
+\newtheorem{short}{ }
+
+
+
+\newcommand*{\thick}[1]{\text{\boldmath$#1$}}
+\newcommand*{\cir}[1]{\;$\ding{19#1}$\;}%临时使用
+\newcommand*{\norm}[1]{\lVert#1\rVert}
+\newcommand*{\ignore}[1]{\textcolor{lightgray}{#1}}
+\newcommand*{\stress}[1]{\textcolor{red}{#1}}
+\newcommand*{\bgpicb}[1]{\usebackgroundtemplate{%
+	\begin{tikzpicture}[path image/.style={
+		path picture={
+			\node at (path picture bounding box.center) {
+				\includegraphics[height=10cm]{#1}
+			};
+	}}]
+	
+	\draw [path image]
+	(current page.north west) rectangle
+	(current page.south east);
+	
+	\end{tikzpicture}
+}}
+\newcommand*{\bgpica}[1]{\usebackgroundtemplate{%
+		\begin{tikzpicture}[path image/.style={
+			path picture={
+				\node at (path picture bounding box.center) {
+					\includegraphics[height=7.5cm]{#1}
+				};
+		}}]
+		
+		\draw [path image]
+		(current page.north west) rectangle
+		(current page.south east);
+		
+		\end{tikzpicture}
+}}
+
+
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\vol}{vol}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Proj}{\operatorname{Proj}}
+\DeclareMathOperator{\Aut}{\operatorname{Aut}}
+\DeclareMathOperator{\Img}{\operatorname{Im}}
+\DeclareMathOperator{\Sym}{\operatorname{Sym}}
+\DeclareMathOperator{\sgn}{\operatorname{sgn}}
+\DeclareMathOperator{\Id}{\operatorname{Id}}
+\DeclareMathOperator{\ques}{\;?\;}
+\DeclareMathOperator{\Fl}{\mathcal{F\ell}}
+%%%symbols for algebraic groups
+\DeclareMathOperator{\GL}{\operatorname{GL}}
+\DeclareMathOperator{\SL}{\operatorname{SL}}
+\DeclareMathOperator{\PGL}{\operatorname{PGL}}
+%%%symbols for typical varieties
+\DeclareMathOperator{\Gr}{\operatorname{Gr}}
+\DeclareMathOperator{\Flag}{\operatorname{Flag}}
+\DeclareMathOperator{\Hom}{\operatorname{Hom}}
+
+%\setlength{\parindent}{1em}
+\newcommand{\character}[2]{\left[\begin{array}{c}{#1} \\ {#2}\end{array}\right]}
+\newcommand{\normalcharacter}{\character{\epsilon}{\epsilon'}}
+\renewcommand{\Fontinbox}[1]{\scriptstyle #1}
+
+\setlength{\abovedisplayskip}{2pt}   % space above the display
+\setlength{\belowdisplayskip}{2pt}
+
+
+
+\setbeamertemplate{caption}[]
+% 设置图形文件的搜索路径
+\graphicspath{{figures/}}
+\title{Bruhat--Tits building}
+\author{Xiaoxiang Zhou}
+\institute[HU berlin]{Humboldt-Universität zu Berlin}
+\date{\today}
+\tikzset{
+	invisible/.style={opacity=0,text opacity=0},
+	visible on/.style={alt=#1{}{invisible}},
+	alt/.code args={<#1>#2#3}{%
+		\alt<#1>{\pgfkeysalso{#2}}{\pgfkeysalso{#3}} % \pgfkeysalso doesn't change the path
+	},
+}
+
+
+%\setbeamercolor{section number projected}{fg=white!90!blue, bg=red!90!black}
+\definecolor{goodblue}{RGB}{71,71,186}
+\setbeamercolor{block body}{fg=black,bg=gray!10}
+\setbeamercolor{block title}{fg=white, bg=goodblue}
+\usefonttheme[onlymath]{serif}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+
+\setbeamertemplate{headline}{
+	\begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex]{section in head/foot}%
+		\hspace{3ex}{\insertsectionhead}
+	\end{beamercolorbox}
+	%	\begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{subsection in head/foot}
+	%		\usebeamerfont{subsection in head/foot}\insertsubsectionhead
+	%\end{beamercolorbox}
+}%删除点
+\begin{document}
+\begin{frame}
+	\titlepage
+\end{frame}
+\begin{frame}[fragile]{Figures of Bruhat--Tits building}
+\only<1>{
+  \begin{figure}
+    \centering
+    \includegraphics[height=60mm]{figure/pretty_building.png}
+    \caption{$\mathcal{B}_{\SL_3(\mathbb{Q}_p)}$, from Annette Werner's \href{https://www.math-berlin.de/images/stories/bruhat-tits.pdf}{talk}}
+  \end{figure}
+}
+\only<2>{
+  \begin{figure}
+    \centering
+    \href{https://buildings.gallery/}{
+    \includegraphics[height=50mm]{figure/gallary_figure.png}}
+    \caption{$\mathcal{B}_{\SL_3(\mathbb{Q}_p)}$, from  \href{https://buildings.gallery/}{buildings.gallery}
+    }
+  \end{figure}
+}
+\only<3>{
+  \begin{figure}
+    \centering
+    \href{https://buildings.gallery/}{
+    \includegraphics[height=50mm]{figure/ABC_1.png}}
+    \caption{$\mathcal{B}_{\SL_2(\mathbb{Q}_2)}$
+    }
+  \end{figure}
+}
+\only<4>{
+  \begin{figure}
+    \centering
+    \href{https://buildings.gallery/}{
+    \includegraphics[height=50mm]{figure/ABC_2.png}}
+    \caption{$\mathcal{B}_{\SL_2(\mathbb{Q}_2)}$
+    }
+  \end{figure}
+}		
+\end{frame}
+
+
+
+\begin{frame}[fragile]{Recap: standard Lie theory}
+Restrict to \textbf{complex} representations, we have a nice theory:
+
+\begin{itemize}
+	\item Any representation can be written as a direct sum of \textbf{irreducible representation};
+	\item We can extract information of irreducible representations from the \textbf{character table}:\\[-0.5cm]
+	\begin{equation*}
+	\begin{aligned}
+	\#\{ \text{irreducible representations} \} =& \#\{ \text{conjugation classes} \}\\
+	\sum_{\chi: \text{irr}} (\dim \chi)^2 =& \#G
+	\end{aligned}
+	\end{equation*}
+	
+\end{itemize}
+However, in general, 
+\begin{itemize}
+	\item NO standard way finding an \textbf{explicit construction} of all irreducible representations; 
+	\item NO \textbf{one-to-one correspondence} between irreducible representations and conjugation classes.
+\end{itemize}
+\end{frame}
+
+%\begin{frame}[fragile]{Standard subgroups}
+%
+%$$B={\setlength{\arraycolsep}{2pt}\renewcommand{\arraystretch}{0.8}\begin{pmatrix}
+%* & * & * \\ &*&*\\&&*
+%\end{pmatrix}}
+%\qquad
+%P = {\setlength{\arraycolsep}{2pt}\renewcommand{\arraystretch}{0.8}
+%\left(
+%\begin{array}{c;{2pt/2pt}cc}
+%    * &  \;\;*\;\;  \\ \hdashline[2pt/2pt]
+%      &  \rule{0mm}{5mm}\;\;*\;\;   \\
+%\end{array}
+%\right)
+%}
+%\qquad
+%T = {\setlength{\arraycolsep}{1.5pt}\renewcommand{\arraystretch}{0.8}\begin{pmatrix}
+%* &  &  \\[-2mm] &\ddots&\\[-1mm]&&*
+%\end{pmatrix}}
+%$$
+%
+%\begin{equation*}
+%\begin{aligned}
+%  \GL_n(\kappa)/B=\;& \left\{ \text{ flags of } \kappa^n  \right\} \\
+%  =\;& \left\{ V_1 \subset \cdots \subset V_n = \kappa^n \;\middle| \; \dim V_i=i  \right\} 
+%\end{aligned}
+%\end{equation*}
+%
+%\begin{equation*}
+%\begin{aligned}
+%  \GL_n(\kappa)/P=\;& \Gr(r,n) \\
+%  =\;& \left\{ V \subset \kappa^n \;\middle| \; \dim V=r  \right\} 
+%\end{aligned}
+%\end{equation*}
+%
+%\begin{equation*}
+%\begin{aligned}
+%  \GL_n(\kappa)/T
+%  =\;& \left\{ \kappa^n= W_1\oplus \cdots \oplus W_n \;\middle| \; \dim W_i=1  \right\} 
+%\end{aligned}
+%\end{equation*}
+%
+%\end{frame}
+
+\begin{frame}[fragile]{Standard subgroups}
+%\begin{table}[]
+\[
+\begin{array}{lll}
+B={\setlength{\arraycolsep}{2pt}\renewcommand{\arraystretch}{0.8}\begin{pmatrix}
+* & * & * \\ &*&*\\&&*
+\end{pmatrix}} & \rightsquigarrow &  \begin{aligned}
+  \GL_n(\kappa)/B=\;& \left\{ \text{ flags of } \kappa^n  \right\} \\
+  =\;& \left\{ V_1 \subset \cdots \subset V_n = \kappa^n \;\middle| \; \dim V_i=i  \right\} 
+\end{aligned}\\[8mm]
+P = {\setlength{\arraycolsep}{2pt}\renewcommand{\arraystretch}{0.8}
+\left(
+\begin{array}{c;{2pt/2pt}cc}
+    * &  \;\;*\;\;  \\ \hdashline[2pt/2pt]
+      &  \rule{0mm}{5mm}\;\;*\;\;   \\
+\end{array}
+\right)
+} & \rightsquigarrow & \begin{aligned}
+  \GL_n(\kappa)/P=\;& \Gr(r,n) \\
+  =\;& \left\{ V \subset \kappa^n \;\middle| \; \dim V=r  \right\} 
+\end{aligned} \\[8mm]
+T = {\setlength{\arraycolsep}{1.5pt}\renewcommand{\arraystretch}{0.8}\begin{pmatrix}
+* &  &  \\[-2mm] &\ddots&\\[-1mm]&&*
+\end{pmatrix}} & \rightsquigarrow & \begin{aligned}
+  \GL_n(\kappa)/T
+  =\;& \left\{ \kappa^n= W_1\!\oplus \cdots \oplus\! W_n \;\middle| \; \dim W_i\!=\!1  \right\} 
+\end{aligned}
+\end{array}
+\]
+%\end{table}
+\begin{short}
+$T$ is comm, so every rep decomposes as direct sum of $1$-dim reps.
+\end{short}
+\vspace{-5mm}
+\begin{equation*}
+\begin{aligned}
+  X^*(T)=:\;& \Hom(T,\mathbb{G}_m) \cong \mathbb{Z}^n\quad && \text{\phantom{co}characters (1-dim reps)} \\ 
+  X_*(T)=:\;& \Hom(\mathbb{G}_m,T) \cong \mathbb{Z}^n && \text{cocharacters (1-parameter subgps)}
+\end{aligned}
+\end{equation*}
+\end{frame}
+
+\begin{frame}[fragile]{Weyl group}
+\begin{definition}[Weyl group]
+$\,$\\[-6mm]
+$$W:= N_G(T)/T.$$
+\end{definition}
+\begin{eg}
+When $G=\GL_n$, 
+{
+\setlength{\abovedisplayskip}{2pt}   % space above the display
+\setlength{\belowdisplayskip}{2pt}
+\begin{equation*}
+\begin{aligned}
+  N_G(T)\phantom{/T}=\;& \left\{ \text{ monoidal matrixes } \right\} \\ 
+  N_G(T)/T \cong\;& \;S_n \qquad\qquad \text{\ignore{Weyl group of type $A$}} \\
+\end{aligned}
+\end{equation*}
+}
+\end{eg}
+
+\begin{remark}
+We have Bruhat decomposition \ignore{proved by Gauss elimination}
+{
+\setlength{\abovedisplayskip}{2pt}   % space above the display
+\setlength{\belowdisplayskip}{2pt}
+$$G=\bigsqcup_{\omega\in W} B \omega B.$$
+}
+So the Weyl group is the ``heart'' of the reductive group.
+\end{remark}
+\end{frame}
+
+\begin{frame}[fragile]{Weyl group}
+
+\begin{remark}
+We have Bruhat decomposition \ignore{proved by Gauss elimination}
+{
+\setlength{\abovedisplayskip}{2pt}   % space above the display
+\setlength{\belowdisplayskip}{2pt}
+$$G=\bigsqcup_{\omega\in W} B \omega B.$$
+}
+So the Weyl group is the ``heart'' of the reductive group.
+\end{remark}
+  \begin{figure}
+    \centering
+    \href{https://buildings.gallery/}{
+    \includegraphics[height=35mm]{figure/Pinnedbutterfly.jpg}}
+    \caption{\href{https://jmilne.org/math/Books/iag.html}{Pinned butterfly}
+    }
+  \end{figure}
+\end{frame}
+
+
+\begin{frame}[fragile]{Weyl group action on cocharacter lattices}
+内容...
+\end{frame}
+
+\begin{frame}[fragile]{Non-standard subgroups}
+\begin{short}
+The subgroup $T = {\setlength{\arraycolsep}{1.5pt}\renewcommand{\arraystretch}{0.8}\begin{pmatrix}
+* &  &  \\[-2mm] &\ddots&\\[-1mm]&&*
+\end{pmatrix}}$ is not the only maximal torus.
+\end{short}
+\begin{fact}
+All non-standard subgroups are conjugated to standard subgroups. Therefore,
+\begin{equation*}
+\begin{aligned}
+  \left\{ \text{ Borel subgroups } \right\} =\;& \left\{ gBg^{-1} \right\} \cong G/B \\ 
+  \left\{ \text{ parabolic subgroups } \right\} =\;& \left\{ gPg^{-1} \right\} \cong G/P \\ 
+  \left\{ \text{ maximal tori } \right\} =\;& \left\{ gTg^{-1} \right\} \cong G/N_G(T) \\ 
+\end{aligned}
+\end{equation*}
+\end{fact}
+\end{frame}
+
+\begin{frame}[fragile]{p-adic notation}
+\centering
+{\setlength{\arraycolsep}{50pt}\renewcommand{\arraystretch}{1.4}
+\begin{table}[]
+\begin{tabular}{l|l|l}
+\hline
+\multicolumn{1}{c|}{symbol}                          & \multicolumn{1}{c|}{name} & \multicolumn{1}{c}{example}        \\ \hline
+$F$                                                  & local field               & $\mathbb{Q}_p$                     \\
+$\mathcal{O}=\mathcal{O}_F$                          & integral ring             & $\mathbb{Z}_p$                     \\
+$\mathfrak{p}=\mathfrak{p}_F$                        & maximal ideal             & $p\mathbb{Z}_p$                    \\
+$\kappa=\mathcal{O}/\mathfrak{p}$                    & residue field             & $\mathbb{F}_p$                     \\
+$\pi \in \mathfrak{p} \smallsetminus \mathfrak{p}^2$ & uniformizer               & $p$                                \\
+$v:F^* \longrightarrow \mathbb{Z}$                   & valuation                 & $v\left(\frac{a}{b} p^k \right)=k$ \\ \hline
+\end{tabular}
+\end{table}
+}
+
+\end{frame}
+
+\begin{frame}[fragile]{standard subgroups in p-adic world}
+内容...
+\end{frame}
+
+\begin{frame}[fragile]{Extended Weyl group}
+内容...
+\end{frame}
+
+\begin{frame}[fragile]{Non-standard subgroups in p-adic world}
+内容...
+\end{frame}
+
+\begin{frame}[fragile]{p-adic building}
+内容...
+\end{frame}
+
+\begin{frame}[fragile]{Gromov-Schoen theorem}
+内容...
+\end{frame}
+
+\begin{frame}[fragile]{test}
+内容...
+\end{frame}
+
+
+\end{document}
+
+
+%%%\stress -> \stress
+
+
+%\begin{equation*}
+%\begin{aligned}
+%内容...
+%\end{aligned}
+%\end{equation*}
