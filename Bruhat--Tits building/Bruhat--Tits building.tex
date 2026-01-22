@@ -108,6 +108,7 @@
 \DeclareMathOperator{\Flag}{\operatorname{Flag}}
 \DeclareMathOperator{\Hom}{\operatorname{Hom}}
 \DeclareMathOperator{\codim}{\operatorname{codim}}
+\DeclareMathOperator{\ext}{\operatorname{ext}}
 
 %\setlength{\parindent}{1em}
 \newcommand{\character}[2]{\left[\begin{array}{c}{#1} \\ {#2}\end{array}\right]}
@@ -642,7 +643,21 @@ They also have moduli intepretations. For example,
 \end{frame}
 
 \begin{frame}[fragile]{Extended Weyl group}
-内容...
+To get the Iwahori decompositionn
+$$G(F)= \bigsqcup_{\varpi\in W_{\ext}} I \varpi I,$$
+we define the extended Weyl group as
+$$W_{\ext}:= N_G(T(\mathcal{O}))/T(\mathcal{O}) \cong X_*(T) \rtimes W_f.$$
+\begin{eg}
+When $G=\GL_n(F)$,
+$$W_{\ext}=\left\{ \text{ monoidal matrixes } \right\} \Big/_{\setlength{\arraycolsep}{0pt}\renewcommand{\arraystretch}{0.8}\left(\begin{smallmatrix}
+  \mathcal{O}^*\!\!\!\!\!\! & &  \\[-3mm] &\ddots&\\[-1mm] & &\!\!\mathcal{O}^*
+  \end{smallmatrix}\!\right)} \cong \mathbb{Z}^n \rtimes S_n.$$
+\end{eg}
+\end{frame}
+
+\begin{frame}[fragile]{Extended Weyl group action}
+$W_{\ext}$ acts on $X_*(T)$ by ``twisted conjugation'':
+$$W_{\ext} \times X_*(T) \longrightarrow X_*(T) \qquad (\mu \rtimes u, \lambda) \longmapsto \mu+u\lambda u^{-1}$$
 \end{frame}
 
 \begin{frame}[fragile]{Non-standard subgroups in p-adic world}
