@@ -1,3 +1,0 @@
-\beamer@sectionintoc {1}{Spherical building}{7}{0}{1}
-\beamer@sectionintoc {2}{p-adic building}{62}{0}{2}
-\beamer@sectionintoc {3}{Gromov-Schoen theorem}{103}{0}{3}
