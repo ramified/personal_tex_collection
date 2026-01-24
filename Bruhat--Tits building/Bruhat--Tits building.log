@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  24 JAN 2026 12:45
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  24 JAN 2026 15:33
 entering extended mode
 **"./Bruhat--Tits building.tex"
 ("Bruhat--Tits building.tex"
@@ -1327,6 +1327,11 @@ File: figure/ABC_2.png Graphic file (type bmp)
 <figure/ABC_2.png>
 ) [5
 
+] ("Bruhat--Tits building.toc") [6
+
+]
+("Bruhat--Tits building.toc") [7
+
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
 
@@ -1338,36 +1343,205 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <6> on input line 2.
 
-Overfull \hbox (41.41823pt too wide) detected at line 28
+Overfull \hbox (42.02655pt too wide) detected at line 28
 []
  []
 
 
-Overfull \hbox (10.21439pt too wide) detected at line 39
+Overfull \hbox (10.21439pt too wide) detected at line 40
 [][]
  []
 
-) [6
+) [8
+
+] ("Bruhat--Tits building.vrb"
+Overfull \hbox (42.02655pt too wide) detected at line 28
+[]
+ []
+
+
+Overfull \hbox (10.21439pt too wide) detected at line 40
+[][]
+ []
+
+) [9
+
+] ("Bruhat--Tits building.vrb"
+Overfull \hbox (42.02655pt too wide) detected at line 28
+[]
+ []
+
+
+Overfull \hbox (10.21439pt too wide) detected at line 40
+[][]
+ []
+
+) [10
+
+] ("Bruhat--Tits building.vrb"
+Overfull \hbox (42.02655pt too wide) detected at line 28
+[]
+ []
+
+
+Overfull \hbox (10.21439pt too wide) detected at line 40
+[][]
+ []
+
+) [11
+
+] ("Bruhat--Tits building.vrb"
+Overfull \hbox (42.02655pt too wide) detected at line 28
+[]
+ []
+
+
+Overfull \hbox (10.21439pt too wide) detected at line 40
+[][]
+ []
+
+) [12
+
+] ("Bruhat--Tits building.vrb"
+Overfull \hbox (42.02655pt too wide) detected at line 28
+[]
+ []
+
+
+Overfull \hbox (10.21439pt too wide) detected at line 40
+[][]
+ []
+
+) [13
+
+] ("Bruhat--Tits building.vrb"
+Overfull \hbox (42.02655pt too wide) detected at line 28
+[]
+ []
+
+
+Overfull \hbox (10.21439pt too wide) detected at line 40
+[][]
+ []
+
+) [14
+
+] ("Bruhat--Tits building.vrb"
+Overfull \hbox (42.02655pt too wide) detected at line 28
+[]
+ []
+
+
+Overfull \hbox (10.21439pt too wide) detected at line 40
+[][]
+ []
+
+) [15
+
+] ("Bruhat--Tits building.vrb"
+Overfull \hbox (42.02655pt too wide) detected at line 28
+[]
+ []
+
+
+Overfull \hbox (10.21439pt too wide) detected at line 40
+[][]
+ []
+
+) [16
+
+] ("Bruhat--Tits building.vrb"
+Overfull \hbox (42.02655pt too wide) detected at line 28
+[]
+ []
+
+
+Overfull \hbox (10.21439pt too wide) detected at line 40
+[][]
+ []
+
+) [17
+
+] ("Bruhat--Tits building.vrb"
+Overfull \hbox (42.02655pt too wide) detected at line 28
+[]
+ []
+
+
+Overfull \hbox (10.21439pt too wide) detected at line 40
+[][]
+ []
+
+) [18
+
+] ("Bruhat--Tits building.vrb"
+Overfull \hbox (42.02655pt too wide) detected at line 28
+[]
+ []
+
+
+Overfull \hbox (10.21439pt too wide) detected at line 40
+[][]
+ []
+
+) [19
+
+] ("Bruhat--Tits building.vrb"
+Overfull \hbox (42.02655pt too wide) detected at line 28
+[]
+ []
+
+
+Overfull \hbox (10.21439pt too wide) detected at line 40
+[][]
+ []
+
+) [20
+
+] ("Bruhat--Tits building.vrb"
+Overfull \hbox (42.02655pt too wide) detected at line 28
+[]
+ []
+
+
+Overfull \hbox (10.21439pt too wide) detected at line 40
+[][]
+ []
+
+) [21
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
 
  ("Bruhat--Tits building.vrb"
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 6.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 18.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <8> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 13.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 18.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 13.
-) [7
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 18.
+) [22
+
+] ("Bruhat--Tits building.vrb")
+[23
+
+] ("Bruhat--Tits building.vrb") [24
+
+] ("Bruhat--Tits building.vrb") [25
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
 
- ("Bruhat--Tits building.vrb"
+
+("Bruhat--Tits building.vrb"
 File: figure/Pinnedbutterfly.jpg Graphic file (type bmp)
 <figure/Pinnedbutterfly.jpg>
-) [8
+) [26
+
+] ("Bruhat--Tits building.vrb"
+File: figure/Pinnedbutterfly.jpg Graphic file (type bmp)
+<figure/Pinnedbutterfly.jpg>
+) [27
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
@@ -1388,7 +1562,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
 
-) [9
+) [28
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
@@ -1396,19 +1570,101 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--46
  ("Bruhat--Tits building.vrb"
 File: figure/SL_2_apartment.png Graphic file (type bmp)
 <figure/SL_2_apartment.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 14--15
-
- []
-
 File: figure/SL_3_apartment.png Graphic file (type bmp)
 <figure/SL_3_apartment.png>
-
-Underfull \hbox (badness 10000) in paragraph at lines 38--40
-
+)
+Overfull \vbox (12.59044pt too high) detected at line 464
  []
 
-) [10
+[29
+
+] ("Bruhat--Tits building.vrb"
+File: figure/SL_2_apartment.png Graphic file (type bmp)
+<figure/SL_2_apartment.png>
+File: figure/SL_3_apartment.png Graphic file (type bmp)
+<figure/SL_3_apartment.png>
+)
+Overfull \vbox (12.59044pt too high) detected at line 464
+ []
+
+[30
+
+] ("Bruhat--Tits building.vrb"
+File: figure/SL_2_apartment.png Graphic file (type bmp)
+<figure/SL_2_apartment.png>
+File: figure/SL_3_apartment.png Graphic file (type bmp)
+<figure/SL_3_apartment.png>
+)
+Overfull \vbox (12.59044pt too high) detected at line 464
+ []
+
+[31
+
+] ("Bruhat--Tits building.vrb"
+File: figure/SL_2_apartment.png Graphic file (type bmp)
+<figure/SL_2_apartment.png>
+File: figure/SL_3_apartment.png Graphic file (type bmp)
+<figure/SL_3_apartment.png>
+)
+Overfull \vbox (12.59044pt too high) detected at line 464
+ []
+
+[32
+
+] ("Bruhat--Tits building.vrb"
+File: figure/SL_2_apartment.png Graphic file (type bmp)
+<figure/SL_2_apartment.png>
+File: figure/SL_3_apartment.png Graphic file (type bmp)
+<figure/SL_3_apartment.png>
+)
+Overfull \vbox (12.59044pt too high) detected at line 464
+ []
+
+[33
+
+] ("Bruhat--Tits building.vrb"
+File: figure/SL_2_apartment.png Graphic file (type bmp)
+<figure/SL_2_apartment.png>
+File: figure/SL_3_apartment.png Graphic file (type bmp)
+<figure/SL_3_apartment.png>
+)
+Overfull \vbox (12.59044pt too high) detected at line 464
+ []
+
+[34
+
+] ("Bruhat--Tits building.vrb"
+File: figure/SL_2_apartment.png Graphic file (type bmp)
+<figure/SL_2_apartment.png>
+File: figure/SL_3_apartment.png Graphic file (type bmp)
+<figure/SL_3_apartment.png>
+)
+Overfull \vbox (12.59044pt too high) detected at line 464
+ []
+
+[35
+
+] ("Bruhat--Tits building.vrb"
+File: figure/SL_2_apartment.png Graphic file (type bmp)
+<figure/SL_2_apartment.png>
+File: figure/SL_3_apartment.png Graphic file (type bmp)
+<figure/SL_3_apartment.png>
+)
+Overfull \vbox (12.59044pt too high) detected at line 464
+ []
+
+[36
+
+] ("Bruhat--Tits building.vrb"
+File: figure/SL_2_apartment.png Graphic file (type bmp)
+<figure/SL_2_apartment.png>
+File: figure/SL_3_apartment.png Graphic file (type bmp)
+<figure/SL_3_apartment.png>
+)
+Overfull \vbox (12.59044pt too high) detected at line 464
+ []
+
+[37
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
@@ -1428,51 +1684,140 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--40
 
  []
 
-) [11
+) [38
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
 
- ("Bruhat--Tits building.vrb") [12
+ ("Bruhat--Tits building.vrb") [39
+
+] ("Bruhat--Tits building.vrb")
+[40
+
+] ("Bruhat--Tits building.vrb") [41
+
+] ("Bruhat--Tits building.vrb") [42
+
+]
+("Bruhat--Tits building.vrb") [43
+
+] ("Bruhat--Tits building.vrb") [44
+
+]
+("Bruhat--Tits building.vrb") [45
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
 
  ("Bruhat--Tits building.vrb"
-Overfull \hbox (2.61852pt too wide) detected at line 27
+Overfull \hbox (2.61852pt too wide) detected at line 42
 []
  []
 
 )
-Overfull \vbox (0.98009pt too high) detected at line 573
+Overfull \vbox (11.84259pt too high) detected at line 592
  []
 
-[13
+[46
+
+] ("Bruhat--Tits building.vrb"
+Overfull \hbox (2.61852pt too wide) detected at line 42
+[]
+ []
+
+)
+Overfull \vbox (11.84259pt too high) detected at line 592
+ []
+
+[47
+
+] ("Bruhat--Tits building.vrb"
+Overfull \hbox (2.61852pt too wide) detected at line 42
+[]
+ []
+
+)
+Overfull \vbox (11.84259pt too high) detected at line 592
+ []
+
+[48
+
+] ("Bruhat--Tits building.vrb"
+Overfull \hbox (2.61852pt too wide) detected at line 42
+[]
+ []
+
+)
+Overfull \vbox (11.84259pt too high) detected at line 592
+ []
+
+[49
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
 
  ("Bruhat--Tits building.vrb"
+File: figure/SL_2_apartment_Weyl.png Graphic file (type bmp)
+<figure/SL_2_apartment_Weyl.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
+
+ []
+
+File: figure/SL_3_apartment_Weyl.png Graphic file (type bmp)
+<figure/SL_3_apartment_Weyl.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--42
+
+ []
+
+)
+Overfull \vbox (12.7296pt too high) detected at line 653
+ []
+
+[50
+
+] ("Bruhat--Tits building.vrb"
 File: figure/SL_2_apartment_Borel.png Graphic file (type bmp)
 <figure/SL_2_apartment_Borel.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--15
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
+
+ []
+
+File: figure/SL_3_apartment_Weyl.png Graphic file (type bmp)
+<figure/SL_3_apartment_Weyl.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 40--42
+
+ []
+
+) [51
+
+] ("Bruhat--Tits building.vrb"
+File: figure/SL_2_apartment_Borel.png Graphic file (type bmp)
+<figure/SL_2_apartment_Borel.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 15--16
 
  []
 
 File: figure/SL_3_apartment_Borel.png Graphic file (type bmp)
 <figure/SL_3_apartment_Borel.png>
 
-Underfull \hbox (badness 10000) in paragraph at lines 38--40
+Underfull \hbox (badness 10000) in paragraph at lines 40--42
 
  []
 
-) [14
+) [52
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
 
- ("Bruhat--Tits building.vrb") [15
+ ("Bruhat--Tits building.vrb") [53
+
+] ("Bruhat--Tits building.vrb")
+[54
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
@@ -1480,50 +1825,131 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--40
  ("Bruhat--Tits building.vrb"
 File: figure/SL_2(F_2)_building.png Graphic file (type bmp)
 <figure/SL_2(F_2)_building.png>
-)
-[16
+) [55
+
+] ("Bruhat--Tits building.vrb"
+File: figure/SL_2(F_2)_building.png Graphic file (type bmp)
+<figure/SL_2(F_2)_building.png>
+) [56
+
+]
+("Bruhat--Tits building.vrb"
+File: figure/SL_2(F_2)_building.png Graphic file (type bmp)
+<figure/SL_2(F_2)_building.png>
+) [57
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
 
- ("Bruhat--Tits building.vrb") [17
+ ("Bruhat--Tits building.vrb") [58
+
+]
+("Bruhat--Tits building.vrb") [59
+
+] ("Bruhat--Tits building.vrb") [60
+
+]
+("Bruhat--Tits building.vrb") [61
+
+] ("Bruhat--Tits building.toc") [62
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
 
- ("Bruhat--Tits building.vrb"
+
+("Bruhat--Tits building.vrb"
 LaTeX Font Info:    Try loading font information for U+euf on input line 10.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 euf.fd"
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-)) [18
+)) [63
+
+] ("Bruhat--Tits building.vrb") [64
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
 
- ("Bruhat--Tits building.vrb") [19
+ ("Bruhat--Tits building.vrb") [65
+
+] ("Bruhat--Tits building.vrb") [66
+
+] ("Bruhat--Tits building.vrb") [67
+
+]
+("Bruhat--Tits building.vrb") [68
+
+] ("Bruhat--Tits building.vrb") [69
+
+]
+("Bruhat--Tits building.vrb") [70
+
+] ("Bruhat--Tits building.vrb") [71
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
 
- ("Bruhat--Tits building.vrb") [20
+
+("Bruhat--Tits building.vrb") [72
+
+] ("Bruhat--Tits building.vrb") [73
+
+]
+("Bruhat--Tits building.vrb") [74
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
 
- ("Bruhat--Tits building.vrb"
+ ("Bruhat--Tits building.vrb") [75
+
+]
+("Bruhat--Tits building.vrb") [76
+
+] ("Bruhat--Tits building.vrb") [77
+
+]
+("Bruhat--Tits building.vrb") [78
+
+] ("Bruhat--Tits building.vrb"
+File: figure/SL_2(F)_apartment.png Graphic file (type bmp)
+<figure/SL_2(F)_apartment.png>
+) [79
+
+]
+("Bruhat--Tits building.vrb"
 File: figure/SL_2(F)_apartment_Weyl.png Graphic file (type bmp)
 <figure/SL_2(F)_apartment_Weyl.png>
-) [21
+) [80
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
 
  ("Bruhat--Tits building.vrb"
+File: figure/SL_3(F)_apartment.png Graphic file (type bmp)
+<figure/SL_3(F)_apartment.png>
+) [81
+
+]
+("Bruhat--Tits building.vrb"
+File: figure/SL_3(F)_apartment.png Graphic file (type bmp)
+<figure/SL_3(F)_apartment.png>
+) [82
+
+] ("Bruhat--Tits building.vrb"
+File: figure/SL_3(F)_apartment.png Graphic file (type bmp)
+<figure/SL_3(F)_apartment.png>
+) [83
+
+]
+("Bruhat--Tits building.vrb"
+File: figure/SL_3(F)_apartment_Weyl.png Graphic file (type bmp)
+<figure/SL_3(F)_apartment_Weyl.png>
+) [84
+
+] ("Bruhat--Tits building.vrb"
 File: figure/SL_3(F)_apartment_Weyl2.png Graphic file (type bmp)
 <figure/SL_3(F)_apartment_Weyl2.png>
-) [22
+) [85
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
@@ -1532,21 +1958,65 @@ File: figure/SL_3(F)_apartment_Weyl2.png Graphic file (type bmp)
 ("Bruhat--Tits building.vrb"
 File: figure/Lievis.png Graphic file (type bmp)
 <figure/Lievis.png>
-) [23
+) [86
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
 
  ("Bruhat--Tits building.vrb"
-Overfull \hbox (3.9905pt too wide) detected at line 12
+Overfull \hbox (3.9905pt too wide) detected at line 13
 [][]
  []
 
 )
-Overfull \vbox (5.02289pt too high) detected at line 824
+Overfull \vbox (15.88539pt too high) detected at line 862
  []
 
-[24
+[87
+
+] ("Bruhat--Tits building.vrb"
+Overfull \hbox (3.9905pt too wide) detected at line 13
+[][]
+ []
+
+)
+Overfull \vbox (15.88539pt too high) detected at line 862
+ []
+
+[88
+
+] ("Bruhat--Tits building.vrb"
+Overfull \hbox (3.9905pt too wide) detected at line 13
+[][]
+ []
+
+)
+Overfull \vbox (15.88539pt too high) detected at line 862
+ []
+
+[89
+
+] ("Bruhat--Tits building.vrb"
+Overfull \hbox (3.9905pt too wide) detected at line 13
+[][]
+ []
+
+)
+Overfull \vbox (15.88539pt too high) detected at line 862
+ []
+
+[90
+
+] ("Bruhat--Tits building.vrb"
+Overfull \hbox (3.9905pt too wide) detected at line 13
+[][]
+ []
+
+)
+Overfull \vbox (15.88539pt too high) detected at line 862
+ []
+
+[91
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
@@ -1559,15 +2029,26 @@ Overfull \hbox (15.36542pt too wide) in paragraph at lines 4--5
  [] 
  []
 
-) [25
+) [92
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
 
  ("Bruhat--Tits building.vrb"
+File: figure/SL_2(F)_apartment_Weyl.png Graphic file (type bmp)
+<figure/SL_2(F)_apartment_Weyl.png>
+) [93
+
+] ("Bruhat--Tits building.vrb"
+File: figure/SL_2(F)_apartment_Iwahori.png Graphic file (type bmp)
+<figure/SL_2(F)_apartment_Iwahori.png>
+)
+[94
+
+] ("Bruhat--Tits building.vrb"
 File: figure/SL_2(F)_apartment_Parahoric.png Graphic file (type bmp)
 <figure/SL_2(F)_apartment_Parahoric.png>
-) [26
+) [95
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
@@ -1575,41 +2056,91 @@ File: figure/SL_2(F)_apartment_Parahoric.png Graphic file (type bmp)
  ("Bruhat--Tits building.vrb"
 File: figure/SL_3(F)_apartment_Weyl2.png Graphic file (type bmp)
 <figure/SL_3(F)_apartment_Weyl2.png>
-)
-[27
-
-]
-\openout4 = `"Bruhat--Tits building.vrb"'.
-
- ("Bruhat--Tits building.vrb"
-File: figure/SL_3(F)_apartment_parahoric.png Graphic file (type bmp)
-<figure/SL_3(F)_apartment_parahoric.png>
-) [28
-
-]
-\openout4 = `"Bruhat--Tits building.vrb"'.
-
- ("Bruhat--Tits building.vrb") [29
-
-]
-\openout4 = `"Bruhat--Tits building.vrb"'.
-
-
-("Bruhat--Tits building.vrb") [30
-
-]
-\openout4 = `"Bruhat--Tits building.vrb"'.
-
- ("Bruhat--Tits building.vrb") [31
+) [96
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
 
 
 ("Bruhat--Tits building.vrb"
+File: figure/SL_3(F)_apartment_Weyl3.png Graphic file (type bmp)
+<figure/SL_3(F)_apartment_Weyl3.png>
+) [97
+
+] ("Bruhat--Tits building.vrb"
+File: figure/SL_3(F)_apartment_Iwahori.png Graphic file (type bmp)
+<figure/SL_3(F)_apartment_Iwahori.png>
+) [98
+
+]
+("Bruhat--Tits building.vrb"
+File: figure/SL_3(F)_apartment_parahoric.png Graphic file (type bmp)
+<figure/SL_3(F)_apartment_parahoric.png>
+) [99
+
+]
+\openout4 = `"Bruhat--Tits building.vrb"'.
+
+ ("Bruhat--Tits building.vrb") [100
+
+]
+("Bruhat--Tits building.vrb") [101
+
+] ("Bruhat--Tits building.vrb") [102
+
+]
+("Bruhat--Tits building.toc") [103
+
+]
+\openout4 = `"Bruhat--Tits building.vrb"'.
+
+ ("Bruhat--Tits building.vrb") [104
+
+]
+("Bruhat--Tits building.vrb") [105
+
+] ("Bruhat--Tits building.vrb") [106
+
+]
+("Bruhat--Tits building.vrb") [107
+
+] ("Bruhat--Tits building.vrb") [108
+
+]
+\openout4 = `"Bruhat--Tits building.vrb"'.
+
+
+("Bruhat--Tits building.vrb")
+Overfull \vbox (1.02402pt too high) detected at line 980
+ []
+
+[109
+
+] ("Bruhat--Tits building.vrb")
+Overfull \vbox (1.02402pt too high) detected at line 980
+ []
+
+[110
+
+] ("Bruhat--Tits building.vrb")
+Overfull \vbox (1.02402pt too high) detected at line 980
+ []
+
+[111
+
+] ("Bruhat--Tits building.vrb")
+Overfull \vbox (1.02402pt too high) detected at line 980
+ []
+
+[112
+
+]
+\openout4 = `"Bruhat--Tits building.vrb"'.
+
+ ("Bruhat--Tits building.vrb"
 Missing character: There is no 内 in font ec-lmss10!
 Missing character: There is no 容 in font ec-lmss10!
-) [32
+) [113
 
 ]
 \tf@nav=\write6
@@ -1621,22 +2152,22 @@ Missing character: There is no 容 in font ec-lmss10!
 \tf@snm=\write8
 \openout8 = `"Bruhat--Tits building.snm"'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 933.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 933.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 987.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 987.
  ("Bruhat--Tits building.aux")
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 933.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 933.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 987.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 987.
 Package rerunfilecheck Info: File `"Bruhat--Tits building".out' has not changed
 .
 (rerunfilecheck)             Checksum: .
  ) 
 Here is how much of TeX's memory you used:
- 28156 strings out of 427748
- 554426 string characters out of 3150981
- 651462 words of memory out of 3000000
- 31521 multiletter control sequences out of 15000+200000
+ 30431 strings out of 427748
+ 612749 string characters out of 3150981
+ 692663 words of memory out of 3000000
+ 33628 multiletter control sequences out of 15000+200000
  55521 words of font info for 67 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 58i,32n,84p,812b,1623s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 58i,32n,84p,812b,1661s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Bruhat--Tits building.pdf (32 pages).
+Output written on Bruhat--Tits building.pdf (113 pages).
