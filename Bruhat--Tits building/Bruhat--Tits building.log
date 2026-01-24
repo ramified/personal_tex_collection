@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  24 JAN 2026 02:44
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  24 JAN 2026 12:45
 entering extended mode
 **"./Bruhat--Tits building.tex"
 ("Bruhat--Tits building.tex"
@@ -1384,11 +1384,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--16
 File: figure/SL_2_apartment.png Graphic file (type bmp)
 <figure/SL_2_apartment.png>
 
-Overfull \hbox (3.60956pt too wide) in paragraph at lines 42--43
- [][] 
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
@@ -1401,11 +1396,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--46
  ("Bruhat--Tits building.vrb"
 File: figure/SL_2_apartment.png Graphic file (type bmp)
 <figure/SL_2_apartment.png>
-
-Overfull \hbox (3.60956pt too wide) in paragraph at lines 11--12
- [][] 
- []
-
 
 Underfull \hbox (badness 10000) in paragraph at lines 14--15
 
@@ -1643,7 +1633,7 @@ Package rerunfilecheck Info: File `"Bruhat--Tits building".out' has not changed
 Here is how much of TeX's memory you used:
  28156 strings out of 427748
  554426 string characters out of 3150981
- 651457 words of memory out of 3000000
+ 651462 words of memory out of 3000000
  31521 multiletter control sequences out of 15000+200000
  55521 words of font info for 67 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
