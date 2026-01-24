@@ -109,6 +109,7 @@
 \DeclareMathOperator{\Hom}{\operatorname{Hom}}
 \DeclareMathOperator{\codim}{\operatorname{codim}}
 \DeclareMathOperator{\ext}{\operatorname{ext}}
+\DeclareMathOperator{\Zar}{\operatorname{Zar}}
 
 %\setlength{\parindent}{1em}
 \newcommand{\character}[2]{\left[\begin{array}{c}{#1} \\ {#2}\end{array}\right]}
@@ -195,26 +196,6 @@
 
 
 
-\begin{frame}[fragile]{Recap: standard Lie theory}
-Restrict to \textbf{complex} representations, we have a nice theory:
-
-\begin{itemize}
-	\item Any representation can be written as a direct sum of \textbf{irreducible representation};
-	\item We can extract information of irreducible representations from the \textbf{character table}:\\[-0.5cm]
-	\begin{equation*}
-	\begin{aligned}
-	\#\{ \text{irreducible representations} \} =& \#\{ \text{conjugation classes} \}\\
-	\sum_{\chi: \text{irr}} (\dim \chi)^2 =& \#G
-	\end{aligned}
-	\end{equation*}
-	
-\end{itemize}
-However, in general, 
-\begin{itemize}
-	\item NO standard way finding an \textbf{explicit construction} of all irreducible representations; 
-	\item NO \textbf{one-to-one correspondence} between irreducible representations and conjugation classes.
-\end{itemize}
-\end{frame}
 
 %\begin{frame}[fragile]{Standard subgroups}
 %
@@ -547,8 +528,7 @@ All non-standard subgroups are conjugated to standard subgroups. Therefore,
 \end{frame}
 
 \begin{frame}[fragile]{Non-standard subgroups}
-\begin{fact}
-All non-standard subgroups are conjugated to standard subgroups. Therefore,
+\begin{short}
 \vspace{-4mm}
 \begin{equation*}
 \begin{aligned}
@@ -558,10 +538,99 @@ All non-standard subgroups are conjugated to standard subgroups. Therefore,
   \left\{ (B,T)\;\middle|\;B \supset T \right\} =\;& \left\{ (gB_0g^{-1},gT_0g^{-1}) \right\} &&\cong G/T_0  
 \end{aligned}
 \end{equation*}
-\end{fact}
-\vspace{5cm}
-$\,$
+\end{short}
+% https://q.uiver.app/#q=WzAsNSxbMCwwLCJcXGxlZnRcXHsgVCBcXDtcXG1pZGRsZXxcXDsgVCBcXHN1YnNldCBCXzAgIFxccmlnaHRcXH0iXSxbNCwwLCJcXGxlZnRcXHsgQiBcXDtcXG1pZGRsZXxcXDsgQiBcXHN1cHNldCBUXzAgIFxccmlnaHRcXH0iXSxbMiwxLCJcXGxlZnRcXHsgKEIsVCkgIFxccmlnaHRcXH0iXSxbMSwyLCJcXGxlZnRcXHsgQiAgXFxyaWdodFxcfSJdLFszLDIsIlxcbGVmdFxceyB0ICBcXHJpZ2h0XFx9Il0sWzIsM10sWzIsNF0sWzAsMiwiIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyLDEsIiIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=
+
+\vspace{-5mm}
+  \begin{minipage}[t]{.48\textwidth}
+    \vspace{0pt}
+  	\centering
+\[\begin{tikzcd}[ampersand replacement=\&,column sep=0mm,row sep=5mm]
+	{\scriptstyle\left\{ T \;\middle|\; T \subset B_0  \right\}} \&[-12mm]\&\&\&[-12mm] {\scriptstyle\left\{ B \;\middle|\; B \supset T_0  \right\}} \\[-3mm]
+	\&\& {\left\{ (B,T)  \right\}} \\[2mm]
+	\& {\left\{ B  \right\}} \&\& {\left\{ T  \right\}}
+	\arrow[no head, from=1-1, to=2-3]
+	\arrow[no head, from=2-3, to=1-5]
+	\arrow[from=2-3, to=3-2]
+	\arrow[from=2-3, to=3-4]
+\end{tikzcd}\]
+  \end{minipage}
+  \begin{minipage}[t]{.48\textwidth}
+    \vspace{0pt}
+  	\centering
+\[\begin{tikzcd}[ampersand replacement=\&,column sep=0mm,row sep=5mm]
+	{\scriptstyle B_0/T_0} \&[-12mm]\&\&\&[-25mm] {\scriptstyle N_G(T_0)/T_0=W} \\[-3mm]
+	\&\& G/T_0 \\[2mm]
+	\& G/B_0 \&\& G/N_G(T_0)
+	\arrow[no head, from=1-1, to=2-3]
+	\arrow[no head, from=2-3, to=1-5]
+	\arrow[from=2-3, to=3-2]
+	\arrow[from=2-3, to=3-4]
+\end{tikzcd}\]  	
+  \end{minipage}
+  $$\left\{ \text{ (Weyl) chambers } \right\} \quad\stackrel{1:1}{\longleftrightarrow}\quad W \quad\stackrel{1:1}{\longleftrightarrow}\quad  \left\{ B \;\middle|\; B \supset T_0  \right\}$$
+
 \end{frame}
+
+\begin{frame}[fragile]{Weyl group action on cocharacter lattices}
+\begin{short}
+When $G=\SL_2(\kappa)$, $T= \left( \begin{smallmatrix}
+a &  \\  & a^{-1} 
+\end{smallmatrix} \right)$, $X_*(T)=\mathbb{Z}\varepsilon$, where
+\vspace{-5mm}
+  \begin{figure}[th]
+  \begin{minipage}[t]{.55\textwidth}
+    \vspace{0pt}
+  	\centering
+  	\includegraphics[height=18mm]{figure/SL_2_apartment_Borel.png}
+  \end{minipage}
+  \begin{minipage}[t]{.43\textwidth}
+  $\,$\\[-4mm]
+\[\begin{tikzcd}[ampersand replacement=\&,column sep=5mm,row sep=-2mm]
+	{\varepsilon:} \&[-6mm] {\mathbb{G}_m} \& T \\
+	\& x \& \begin{array}{c} \left( \begin{smallmatrix} x &  \\  & x^{-1}  \end{smallmatrix} \right) \end{array}
+	\arrow[from=1-2, to=1-3]
+	\arrow[maps to, from=2-2, to=2-3]
+\end{tikzcd}\]
+\vspace{-5mm}
+$$W=S_2=\{\Id,s_1 \}$$
+  \end{minipage}
+  \end{figure}
+\end{short}
+\begin{short}
+When $G=\SL_3(\kappa)$, $T= \left( \begin{smallmatrix}
+a &  \\  & b 
+\end{smallmatrix} \right)$, $X_*(T)=\mathbb{Z}\varepsilon_1 \oplus \mathbb{Z}\varepsilon_2$, where
+\vspace{-5mm}
+  \begin{figure}[th]
+  \begin{minipage}[t]{.55\textwidth}
+    \vspace{0pt}
+  	\centering
+  	\includegraphics[height=35mm]{figure/SL_3_apartment_Borel.png}
+  \end{minipage}
+  \begin{minipage}[t]{.43\textwidth}
+  $\,$\\[-4mm]
+% https://q.uiver.app/#q=WzAsNSxbMCwwLCJcXHZhcmVwc2lsb25fMToiXSxbMSwwLCJcXG1hdGhiYntHfV9tIl0sWzIsMSwiXFxsZWZ0KCBcXGJlZ2lue3NtYWxsbWF0cml4fSB4ICYgIFxcXFwgICYgMSAgXFxlbmR7c21hbGxtYXRyaXh9IFxccmlnaHQpIl0sWzIsMCwiVCJdLFsxLDEsIngiXSxbNCwyLCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJtYXBzIHRvIn19fV0sWzEsM11d
+\[\begin{tikzcd}[ampersand replacement=\&,column sep=5mm,row sep=-2mm]
+	{\varepsilon_1:} \&[-6mm] {\mathbb{G}_m} \& T \\
+	\& x \& \begin{array}{c} \left( \begin{smallmatrix} x & & \\ & x^{-1} & \\ & & 1  \end{smallmatrix} \right) \end{array}
+	\arrow[from=1-2, to=1-3]
+	\arrow[maps to, from=2-2, to=2-3]
+\end{tikzcd}\]
+\vspace{-3mm}
+\[\begin{tikzcd}[ampersand replacement=\&,column sep=5mm,row sep=-2mm]
+	{\varepsilon_2:} \&[-6mm] {\mathbb{G}_m} \& T \\
+	\& x \& \begin{array}{c} \left( \begin{smallmatrix} 1 & & \\  & x & \\ & & x^{-1} \end{smallmatrix} \right) \end{array}
+	\arrow[from=1-2, to=1-3]
+	\arrow[maps to, from=2-2, to=2-3]
+\end{tikzcd}\]
+\vspace{-3mm}
+$$W=S_3=\left< s_1,s_2 \right>$$
+  \end{minipage}
+  \end{figure}
+\end{short}
+\end{frame}
+
 
 \begin{frame}[fragile]
 \begin{definition}[chamber, apartment and building]
@@ -575,6 +644,11 @@ $$\mathcal{B}:=\; \left(\bigsqcup_T \mathcal{A}_T\right)/_{\sim} \;= \;\bigcup_{
 \begin{frame}[fragile]{Example of spherical building}
 \begin{short}
 When $G=\SL_2(\mathbb{F}_2)$, the building $\mathcal{B}$ has $3$ apartments and $3$ chambers. 
+  \begin{figure}
+    \centering
+    \includegraphics[height=35mm]{figure/SL_2(F_2)_building.png}
+    \caption{$\mathcal{B}_{\SL_2(\mathbb{F}_2)}$}
+  \end{figure}
 \end{short}
 \begin{short}
 When $G=\SL_3(\mathbb{F}_2)$, the building \href{https://buildings.gallery/}{$\mathcal{B}$} has $28$ apartments and $21$ chambers. 
@@ -592,6 +666,7 @@ When $\kappa=\mathbb{F}_p$, $\mathcal{B}$ is finite.
 \item Two chambers lie in one apartment.
 \item There is a unique geodesic passing any two points $p_1,p_2 \in \mathcal{B}$.
 \end{itemize}
+\vspace{30mm}
 \end{proposition}
 \end{frame}
 
@@ -646,7 +721,7 @@ They also have moduli intepretations. For example,
 To get the Iwahori decompositionn
 $$G(F)= \bigsqcup_{\varpi\in W_{\ext}} I \varpi I,$$
 we define the extended Weyl group as
-$$W_{\ext}:= N_G(T(\mathcal{O}))/T(\mathcal{O}) \cong X_*(T) \rtimes W_f.$$
+$$W_{\ext}:= N_G(T\ignore{(\mathcal{O})})/T\ignore{(\mathcal{O})} \cong X_*(T) \rtimes W_f.$$
 \begin{eg}
 When $G=\GL_n(F)$,
 $$W_{\ext}=\left\{ \text{ monoidal matrixes } \right\} \Big/_{\setlength{\arraycolsep}{0pt}\renewcommand{\arraystretch}{0.8}\left(\begin{smallmatrix}
@@ -658,10 +733,154 @@ $$W_{\ext}=\left\{ \text{ monoidal matrixes } \right\} \Big/_{\setlength{\arrayc
 \begin{frame}[fragile]{Extended Weyl group action}
 $W_{\ext}$ acts on $X_*(T)$ by ``twisted conjugation'':
 $$W_{\ext} \times X_*(T) \longrightarrow X_*(T) \qquad (\mu \rtimes u, \lambda) \longmapsto \mu+u\lambda u^{-1}$$
+\begin{short}
+When $G=\SL_2(F)$, $W_{\ext}=\left< s_0, s_1 \right>$, where
+$$s_1=\begin{pmatrix}
+ & 1 \\ -1 &
+\end{pmatrix} \qquad 
+s_0=\begin{pmatrix}
+ & \pi^{-1} \\ -\pi &
+\end{pmatrix}
+$$
+\vspace{-5mm}
+  \begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{figure/SL_2(F)_apartment_Weyl.png}
+  \end{figure}
+\end{short}
+\end{frame}
+
+\begin{frame}[fragile]{Extended Weyl group action}
+\begin{short}
+When $G=\SL_3(F)$, $W_{\ext}=\left< s_0, s_1, s_2 \right>$, where
+\vspace{-3mm}
+$$s_1={\setlength{\arraycolsep}{0pt}\renewcommand{\arraystretch}{0.8}\begin{pmatrix}
+ & \phantom{-}1 & \\ -1 & & \\ & & \phantom{-}1
+\end{pmatrix} \quad 
+s_2=\begin{pmatrix}
+\,1\, &  & \\  & &\phantom{-}1 \\ & -1 & 
+\end{pmatrix} \quad 
+s_0=\begin{pmatrix}
+ & & \phantom{-}\pi^{-1} \\ & \phantom{-}1 & \\ -\pi & &
+\end{pmatrix}}
+$$
+\vspace{-5mm}
+  \begin{figure}
+    \centering
+    \includegraphics[width=.45\linewidth]{figure/SL_3(F)_apartment_Weyl2.png}
+  \end{figure}
+\end{short}
+\end{frame}
+
+\begin{frame}[fragile]{Extended Weyl group action}
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[width=.6\linewidth]{figure/Lievis.png}
+    \caption{Reduced expressions labels, from  \href{https://www.jgibson.id.au/lievis/}{Lievis}}
+  \end{figure}
 \end{frame}
 
 \begin{frame}[fragile]{Non-standard subgroups in p-adic world}
-内容...
+\begin{short}
+Similarly,
+\vspace{-4mm}
+\begin{equation*}
+\begin{aligned}
+  \left\{ \text{ Iwahori subgroups } \right\} =\;& \left\{ gI_0g^{-1} \right\} &&\cong G/I_0 \\ 
+  \left\{ \text{ paraholic subgroups } \right\} =\;& \left\{ g\widetilde{P}_0g^{-1} \right\} &&\cong G/\widetilde{P}_0 \\ 
+  \left\{ \text{ maximal tori over $\mathcal{O}$ } \right\} =\;& \left\{ gT_0g^{-1} \right\} &&\cong G/N_G(T_0\ignore{(\mathcal{O})}) \\ 
+  \left\{ (I,T)\;\middle|\;I \supset T \right\} =\;& \left\{ (gI_0g^{-1},gT_0g^{-1}) \right\} &&\cong G/T_0\ignore{(\mathcal{O})}  
+\end{aligned}
+\end{equation*}
+\end{short}
+\vspace{-7mm}
+  \begin{minipage}[t]{.48\textwidth}
+    \vspace{0pt}
+  	\centering
+\[\begin{tikzcd}[ampersand replacement=\&,column sep=0mm,row sep=5mm]
+	{\scriptstyle\left\{ T \;\middle|\; T \subset I_0  \right\}} \&[-12mm]\&\&\&[-12mm] {\scriptstyle\left\{ I \;\middle|\; I \supset T_0  \right\}} \\[-3mm]
+	\&\& {\left\{ (I,T)  \right\}} \\[2mm]
+	\& {\left\{ I  \right\}} \&\& {\left\{ T  \right\}}
+	\arrow[no head, from=1-1, to=2-3]
+	\arrow[no head, from=2-3, to=1-5]
+	\arrow[from=2-3, to=3-2]
+	\arrow[from=2-3, to=3-4]
+\end{tikzcd}\]
+  \end{minipage}
+  \begin{minipage}[t]{.48\textwidth}
+    \vspace{0pt}
+  	\centering
+\[\begin{tikzcd}[ampersand replacement=\&,column sep=0mm,row sep=5mm]
+	{\scriptstyle I_0/T_0} \&[-12mm]\&\&\&[-25mm] {\scriptstyle N_G(T_0)/T_0=W_{\ext}} \\[-3mm]
+	\&\& G/T_0 \\[2mm]
+	\& G/I_0 \&\& G/N_G(T_0)
+	\arrow[no head, from=1-1, to=2-3]
+	\arrow[no head, from=2-3, to=1-5]
+	\arrow[from=2-3, to=3-2]
+	\arrow[from=2-3, to=3-4]
+\end{tikzcd}\]  	
+  \end{minipage}
+  $$\left\{ \text{ chambers } \right\} \quad\stackrel{1:1}{\longleftrightarrow}\quad W_{\ext} \quad\stackrel{1:1}{\longleftrightarrow}\quad  \left\{ I \;\middle|\; I \supset T_0  \right\}$$
+\end{frame}
+
+\begin{frame}[fragile]{Comparison}
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[width=1.05\linewidth]{figure/comparison.png}
+  \end{figure}
+\end{frame}
+
+\begin{frame}[fragile]{Extended Weyl group action}
+$W_{\ext}$ acts on $X_*(T)$ by ``twisted conjugation'':
+$$W_{\ext} \times X_*(T) \longrightarrow X_*(T) \qquad (\mu \rtimes u, \lambda) \longmapsto \mu+u\lambda u^{-1}$$
+\begin{short}
+When $G=\SL_2(F)$, $W_{\ext}=\left< s_0, s_1 \right>$, where
+$$s_1=\begin{pmatrix}
+ & 1 \\ -1 &
+\end{pmatrix} \qquad 
+s_0=\begin{pmatrix}
+ & \pi^{-1} \\ -\pi &
+\end{pmatrix}
+$$
+\vspace{-5mm}
+  \begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{figure/SL_2(F)_apartment_Parahoric.png}
+  \end{figure}
+\end{short}
+\end{frame}
+
+\begin{frame}[fragile]{Extended Weyl group action}
+\begin{short}
+When $G=\SL_3(F)$, $W_{\ext}=\left< s_0, s_1, s_2 \right>$, where
+\vspace{-3mm}
+$$s_1={\setlength{\arraycolsep}{0pt}\renewcommand{\arraystretch}{0.8}\begin{pmatrix}
+ & \phantom{-}1 & \\ -1 & & \\ & & \phantom{-}1
+\end{pmatrix} \quad 
+s_2=\begin{pmatrix}
+\,1\, &  & \\  & &\phantom{-}1 \\ & -1 & 
+\end{pmatrix} \quad 
+s_0=\begin{pmatrix}
+ & & \phantom{-}\pi^{-1} \\ & \phantom{-}1 & \\ -\pi & &
+\end{pmatrix}}
+$$
+\vspace{-5mm}
+  \begin{figure}
+    \centering
+    \includegraphics[width=.45\linewidth]{figure/SL_3(F)_apartment_Weyl2.png}
+  \end{figure}
+\end{short}
+\end{frame}
+
+\begin{frame}[fragile]{Extended Weyl group action}
+\begin{short}
+  \begin{figure}
+    \centering
+%    \includegraphics[width=.55\linewidth]{figure/SL_3(F)_apartment_Weyl3.png}
+%    \includegraphics[width=.55\linewidth]{figure/SL_3(F)_apartment_Iwahori.png}
+\includegraphics[width=.65\linewidth]{figure/SL_3(F)_apartment_parahoric.png}
+  \end{figure}
+\end{short}
 \end{frame}
 
 \begin{frame}[fragile]{p-adic building}
@@ -686,6 +905,7 @@ $$\rho: \pi_1(M) \longrightarrow \GL_n(F),$$
 there exists a $\pi_1(M)$-equivariant Lipschitz continuous regular harmonic map
 $$h_{\rho}:\widetilde{M} \longrightarrow \mathcal{B}_{\GL_n(F)}$$
 \end{theorem}
+We call $\rho$ reductive when $\overline{\rho(\pi_1(M))}^{\Zar} \subseteq \GL_n(F)$ is reductive.
 \end{frame}
 
 \begin{frame}[fragile]{regularity}

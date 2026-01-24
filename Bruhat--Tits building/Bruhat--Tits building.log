@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  22 JAN 2026 14:46
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  24 JAN 2026 02:44
 entering extended mode
 **"./Bruhat--Tits building.tex"
 ("Bruhat--Tits building.tex"
@@ -1155,24 +1155,24 @@ LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 ) ("Bruhat--Tits building.aux")
 \openout1 = `"Bruhat--Tits building.aux"'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 155.
-LaTeX Font Info:    ... okay on input line 155.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 155.
-LaTeX Font Info:    ... okay on input line 155.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 155.
-LaTeX Font Info:    ... okay on input line 155.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 155.
-LaTeX Font Info:    ... okay on input line 155.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 155.
-LaTeX Font Info:    ... okay on input line 155.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 155.
-LaTeX Font Info:    ... okay on input line 155.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 155.
-LaTeX Font Info:    ... okay on input line 155.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 155.
-LaTeX Font Info:    ... okay on input line 155.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 155.
-LaTeX Font Info:    ... okay on input line 155.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 156.
+LaTeX Font Info:    ... okay on input line 156.
 
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -1209,7 +1209,7 @@ LaTeX Font Info:    ... okay on input line 155.
 
 ABD: EveryShipout initializing macros
 \AtBeginShipoutBox=\box68
-Package hyperref Info: Link coloring OFF on input line 155.
+Package hyperref Info: Link coloring OFF on input line 156.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\n
 ameref.sty"
@@ -1225,9 +1225,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count195
 )
-LaTeX Info: Redefining \ref on input line 155.
-LaTeX Info: Redefining \pageref on input line 155.
-LaTeX Info: Redefining \nameref on input line 155.
+LaTeX Info: Redefining \ref on input line 156.
+LaTeX Info: Redefining \pageref on input line 156.
+LaTeX Info: Redefining \nameref on input line 156.
  ("Bruhat--Tits building.out") ("Bruhat--Tits building.out")
 \@outlinefile=\write5
 \openout5 = `"Bruhat--Tits building.out"'.
@@ -1332,18 +1332,12 @@ File: figure/ABC_2.png Graphic file (type bmp)
 
  ("Bruhat--Tits building.vrb"
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 7.
+(Font)              <10.95> on input line 2.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 7.
+(Font)              <8> on input line 2.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 7.
-) [6
+(Font)              <6> on input line 2.
 
-]
-\openout4 = `"Bruhat--Tits building.vrb"'.
-
-
-("Bruhat--Tits building.vrb"
 Overfull \hbox (41.41823pt too wide) detected at line 28
 []
  []
@@ -1353,7 +1347,7 @@ Overfull \hbox (10.21439pt too wide) detected at line 39
 [][]
  []
 
-) [7
+) [6
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
@@ -1365,7 +1359,7 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <8> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 13.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 13.
-) [8
+) [7
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
@@ -1373,7 +1367,7 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <6> not available
  ("Bruhat--Tits building.vrb"
 File: figure/Pinnedbutterfly.jpg Graphic file (type bmp)
 <figure/Pinnedbutterfly.jpg>
-) [9
+) [8
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
@@ -1399,7 +1393,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
 
-) [10
+) [9
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
@@ -1424,7 +1418,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--40
 
  []
 
-) [11
+) [10
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
@@ -1444,21 +1438,46 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--40
 
  []
 
-) [12
+) [11
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
 
- ("Bruhat--Tits building.vrb") [13
+ ("Bruhat--Tits building.vrb") [12
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
 
- ("Bruhat--Tits building.vrb")
-Overfull \vbox (74.90924pt too high) detected at line 564
+ ("Bruhat--Tits building.vrb"
+Overfull \hbox (2.61852pt too wide) detected at line 27
+[]
  []
 
-[14
+)
+Overfull \vbox (0.98009pt too high) detected at line 573
+ []
+
+[13
+
+]
+\openout4 = `"Bruhat--Tits building.vrb"'.
+
+ ("Bruhat--Tits building.vrb"
+File: figure/SL_2_apartment_Borel.png Graphic file (type bmp)
+<figure/SL_2_apartment_Borel.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 14--15
+
+ []
+
+File: figure/SL_3_apartment_Borel.png Graphic file (type bmp)
+<figure/SL_3_apartment_Borel.png>
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--40
+
+ []
+
+) [14
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
@@ -1468,13 +1487,16 @@ Overfull \vbox (74.90924pt too high) detected at line 564
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
 
- ("Bruhat--Tits building.vrb") [16
+ ("Bruhat--Tits building.vrb"
+File: figure/SL_2(F_2)_building.png Graphic file (type bmp)
+<figure/SL_2(F_2)_building.png>
+)
+[16
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
 
-
-("Bruhat--Tits building.vrb") [17
+ ("Bruhat--Tits building.vrb") [17
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
@@ -1500,40 +1522,104 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
 
- ("Bruhat--Tits building.vrb") [21
+ ("Bruhat--Tits building.vrb"
+File: figure/SL_2(F)_apartment_Weyl.png Graphic file (type bmp)
+<figure/SL_2(F)_apartment_Weyl.png>
+) [21
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
 
  ("Bruhat--Tits building.vrb"
-Missing character: There is no 内 in font ec-lmss10!
-Missing character: There is no 容 in font ec-lmss10!
+File: figure/SL_3(F)_apartment_Weyl2.png Graphic file (type bmp)
+<figure/SL_3(F)_apartment_Weyl2.png>
 ) [22
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
 
 
-("Bruhat--Tits building.vrb") [23
-
-]
-\openout4 = `"Bruhat--Tits building.vrb"'.
-
- ("Bruhat--Tits building.vrb") [24
-
-]
-\openout4 = `"Bruhat--Tits building.vrb"'.
-
-
-("Bruhat--Tits building.vrb") [25
+("Bruhat--Tits building.vrb"
+File: figure/Lievis.png Graphic file (type bmp)
+<figure/Lievis.png>
+) [23
 
 ]
 \openout4 = `"Bruhat--Tits building.vrb"'.
 
  ("Bruhat--Tits building.vrb"
+Overfull \hbox (3.9905pt too wide) detected at line 12
+[][]
+ []
+
+)
+Overfull \vbox (5.02289pt too high) detected at line 824
+ []
+
+[24
+
+]
+\openout4 = `"Bruhat--Tits building.vrb"'.
+
+ ("Bruhat--Tits building.vrb"
+File: figure/comparison.png Graphic file (type bmp)
+<figure/comparison.png>
+
+Overfull \hbox (15.36542pt too wide) in paragraph at lines 4--5
+ [] 
+ []
+
+) [25
+
+]
+\openout4 = `"Bruhat--Tits building.vrb"'.
+
+ ("Bruhat--Tits building.vrb"
+File: figure/SL_2(F)_apartment_Parahoric.png Graphic file (type bmp)
+<figure/SL_2(F)_apartment_Parahoric.png>
+) [26
+
+]
+\openout4 = `"Bruhat--Tits building.vrb"'.
+
+ ("Bruhat--Tits building.vrb"
+File: figure/SL_3(F)_apartment_Weyl2.png Graphic file (type bmp)
+<figure/SL_3(F)_apartment_Weyl2.png>
+)
+[27
+
+]
+\openout4 = `"Bruhat--Tits building.vrb"'.
+
+ ("Bruhat--Tits building.vrb"
+File: figure/SL_3(F)_apartment_parahoric.png Graphic file (type bmp)
+<figure/SL_3(F)_apartment_parahoric.png>
+) [28
+
+]
+\openout4 = `"Bruhat--Tits building.vrb"'.
+
+ ("Bruhat--Tits building.vrb") [29
+
+]
+\openout4 = `"Bruhat--Tits building.vrb"'.
+
+
+("Bruhat--Tits building.vrb") [30
+
+]
+\openout4 = `"Bruhat--Tits building.vrb"'.
+
+ ("Bruhat--Tits building.vrb") [31
+
+]
+\openout4 = `"Bruhat--Tits building.vrb"'.
+
+
+("Bruhat--Tits building.vrb"
 Missing character: There is no 内 in font ec-lmss10!
 Missing character: There is no 容 in font ec-lmss10!
-) [26
+) [32
 
 ]
 \tf@nav=\write6
@@ -1545,23 +1631,22 @@ Missing character: There is no 容 in font ec-lmss10!
 \tf@snm=\write8
 \openout8 = `"Bruhat--Tits building.snm"'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 713.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 713.
-
-("Bruhat--Tits building.aux")
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 713.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 713.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 933.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 933.
+ ("Bruhat--Tits building.aux")
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 933.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 933.
 Package rerunfilecheck Info: File `"Bruhat--Tits building".out' has not changed
 .
 (rerunfilecheck)             Checksum: .
  ) 
 Here is how much of TeX's memory you used:
- 27731 strings out of 427748
- 543807 string characters out of 3150981
- 646609 words of memory out of 3000000
- 31116 multiletter control sequences out of 15000+200000
- 58289 words of font info for 68 fonts, out of 3000000 for 9000
+ 28156 strings out of 427748
+ 554426 string characters out of 3150981
+ 651457 words of memory out of 3000000
+ 31521 multiletter control sequences out of 15000+200000
+ 55521 words of font info for 67 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  58i,32n,84p,812b,1623s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on Bruhat--Tits building.pdf (26 pages).
+Output written on Bruhat--Tits building.pdf (32 pages).
