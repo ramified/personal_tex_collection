@@ -297,7 +297,7 @@
 \]
 %\end{table}
 \visible<10->{\begin{short}
-$T$ is comm, so every rep decomposes as direct sum of $1$-dim reps.
+$T$ is a torus, so every rep decomposes as direct sum of $1$-dim reps.
 \end{short}
 }
 \vspace{-5mm}
@@ -321,7 +321,7 @@ When $G=\GL_n(\kappa)$,
 \setlength{\belowdisplayskip}{2pt}
 \begin{equation*}
 \begin{aligned}
-  N_G(T)\phantom{/T}=\;& \left\{ \text{ monoidal matrixes } \right\} \\ 
+  N_G(T)\phantom{/T}=\;& \left\{ \text{ monoidal matrices } \right\} \\ 
   N_G(T)/T \cong\;& \;S_n \qquad\qquad \text{\ignore{Weyl group of type $A$}} \\
 \end{aligned}
 \end{equation*}
@@ -450,7 +450,7 @@ $$W=S_2=\{\Id,s_1 \}$$
 \end{short}
 \visible<2->{\begin{short}
 When $G=\SL_3(\kappa)$, $T= \left( \begin{smallmatrix}
-a &  \\  & b 
+a & & \\  & b & \\ & & a^{-1}b^{-1}
 \end{smallmatrix} \right)$, $X_*(T)=\mathbb{Z}\varepsilon_1 \oplus \mathbb{Z}\varepsilon_2$, where
 \vspace{-5mm}
   \begin{figure}[th]
@@ -554,9 +554,9 @@ The subgroup $T = {\setlength{\arraycolsep}{1.5pt}\renewcommand{\arraystretch}{0
 All non-standard subgroups are conjugated to standard subgroups. Therefore,
 \visible<4->{\begin{equation*}
 \begin{aligned}
-  \left\{ \text{ Borel subgroups } \right\} =\;& \left\{ gBg^{-1} \right\} \hspace{20mm}&&\visible<5->{\cong G/B} \\ 
-  \left\{ \text{ parabolic subgroups } \right\} =\;& \left\{ gPg^{-1} \right\} &&\visible<6->{\cong G/P} \\ 
-  \left\{ \text{ maximal tori } \right\} =\;& \left\{ gTg^{-1} \right\} &&\visible<7->{\cong G/N_G(T)} \\ 
+  \left\{ \text{ Borel subgroups } \right\} =\;& \left\{ gBg^{-1} \ignore{\;\Big|\; g\in G} \right\} \hspace{7mm}&&\visible<5->{\cong G/B} \\ 
+  \left\{ \text{ parabolic subgroups } \right\} =\;& \left\{ gPg^{-1} \ignore{\;\Big|\; g\in G} \right\} &&\visible<6->{\cong G/P} \\ 
+  \left\{ \text{ maximal tori } \right\} =\;& \left\{ gTg^{-1} \ignore{\;\Big|\; g\in G} \right\} &&\visible<7->{\cong G/N_G(T)} \\ 
 \end{aligned}
 \end{equation*}
 }
@@ -567,19 +567,32 @@ All non-standard subgroups are conjugated to standard subgroups. Therefore,
 \begin{frame}[fragile]{Non-standard subgroups}
 \begin{short}
 \vspace{-4mm}
+\only<1-2>{
 \begin{equation*}
 \begin{aligned}
-  \left\{ \text{ Borel subgroups } \right\} =\;& \left\{ gBg^{-1} \right\} &&\cong G/B \\ 
-  \left\{ \text{ parabolic subgroups } \right\} =\;& \left\{ gPg^{-1} \right\} &&\cong G/P \\ 
-  \left\{ \text{ maximal tori } \right\} =\;& \left\{ gTg^{-1} \right\} &&\cong G/N_G(T) \\ 
+  \left\{ \text{ Borel subgroups } \right\} =\;& \left\{ gBg^{-1}\ignore{\;\Big|\; g\in G} \right\} &&\cong G/B \\ 
+  \left\{ \text{ parabolic subgroups } \right\} =\;& \left\{ gPg^{-1}\ignore{\;\Big|\; g\in G} \right\} &&\cong G/P \\ 
+  \left\{ \text{ maximal tori } \right\} =\;& \left\{ gTg^{-1}\ignore{\;\Big|\; g\in G} \right\} &&\cong G/N_G(T) \\ 
   \visible<2->{\left\{ (B,T)\;\middle|\;B \supset T \right\} =\;& \left\{ (gB_0g^{-1},gT_0g^{-1}) \right\} &&\cong G/T_0  }
 \end{aligned}
 \end{equation*}
+\vspace{-5mm}
+}
+\only<3->{
+\begin{equation*}
+\begin{aligned}
+  \left\{ \text{ Borel subgroups } \right\} =\;& \left\{ gB_0g^{-1}\ignore{\;\Big|\; g\in G} \right\} &&\cong G/B_0 \\ 
+  \left\{ \text{ parabolic subgroups } \right\} =\;& \left\{ gP_0g^{-1}\ignore{\;\Big|\; g\in G} \right\} &&\cong G/P_0 \\ 
+  \left\{ \text{ maximal tori } \right\} =\;& \left\{ gT_0g^{-1}\ignore{\;\Big|\; g\in G} \right\} &&\cong G/N_G(T_0) \\ 
+  \left\{ (B,T)\;\middle|\;B \supset T \right\} =\;& \left\{ (gB_0g^{-1},gT_0g^{-1}) \right\} &&\cong G/T_0 
+\end{aligned}
+\end{equation*}
+}
 \end{short}
 % https://q.uiver.app/#q=WzAsNSxbMCwwLCJcXGxlZnRcXHsgVCBcXDtcXG1pZGRsZXxcXDsgVCBcXHN1YnNldCBCXzAgIFxccmlnaHRcXH0iXSxbNCwwLCJcXGxlZnRcXHsgQiBcXDtcXG1pZGRsZXxcXDsgQiBcXHN1cHNldCBUXzAgIFxccmlnaHRcXH0iXSxbMiwxLCJcXGxlZnRcXHsgKEIsVCkgIFxccmlnaHRcXH0iXSxbMSwyLCJcXGxlZnRcXHsgQiAgXFxyaWdodFxcfSJdLFszLDIsIlxcbGVmdFxceyB0ICBcXHJpZ2h0XFx9Il0sWzIsM10sWzIsNF0sWzAsMiwiIiwyLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFsyLDEsIiIsMix7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XV0=
 
 \vspace{-5mm}
-\visible<3->{
+\visible<4->{
   \begin{minipage}[t]{.48\textwidth}
     \vspace{0pt}
   	\centering
@@ -606,7 +619,7 @@ All non-standard subgroups are conjugated to standard subgroups. Therefore,
 	\arrow[from=2-3, to=3-4]
 \end{tikzcd}\]  	
   \end{minipage}}
-\visible<4->{  $$\left\{ \text{ (Weyl) chambers } \right\} \quad\stackrel{1:1}{\longleftrightarrow}\quad W \quad\stackrel{1:1}{\longleftrightarrow}\quad  \left\{ B \;\middle|\; B \supset T_0  \right\}$$}
+\visible<5->{  $$\left\{ \text{ (Weyl) chambers } \right\} \quad\stackrel{1:1}{\longleftrightarrow}\quad W \quad\stackrel{1:1}{\longleftrightarrow}\quad  \left\{ B \;\middle|\; B \supset T_0  \right\}$$}
 
 \end{frame}
 
@@ -636,6 +649,7 @@ $$W=S_2=\{\Id,s_1 \}$$
   \end{minipage}
   \end{figure}
 \end{short}
+\visible<3->{
 \begin{short}
 When $G=\SL_3(\kappa)$, $T= \left( \begin{smallmatrix}
 a & & \\  & b & \\ & & a^{-1}b^{-1}
@@ -645,9 +659,9 @@ a & & \\  & b & \\ & & a^{-1}b^{-1}
   \begin{minipage}[t]{.55\textwidth}
     \vspace{0pt}
   	\centering
-  	\only<1-2>{\includegraphics[height=35mm]{figure/SL_3_apartment_Weyl.png}}
-  	\only<3>{\includegraphics[height=35mm]{figure/SL_3_apartment_Borel.png}}
-  	\only<4->{\includegraphics[height=35mm]{figure/SL_3_apartment_parabolic.png}}
+  	\only<1-3>{\includegraphics[height=35mm]{figure/SL_3_apartment_Weyl.png}}
+  	\only<4>{\includegraphics[height=35mm]{figure/SL_3_apartment_Borel.png}}
+  	\only<5->{\includegraphics[height=35mm]{figure/SL_3_apartment_parabolic.png}}
   \end{minipage}
   \begin{minipage}[t]{.43\textwidth}
   $\,$\\[-4mm]
@@ -670,6 +684,7 @@ $$W=S_3=\left< s_1,s_2 \right>$$
   \end{minipage}
   \end{figure}
 \end{short}
+}
 \end{frame}
 
 
@@ -717,12 +732,12 @@ When $\kappa=\mathbb{F}_p$, $\mathcal{B}$ is finite. \ignore{i.e., having finite
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{p-adic buildings}
+\section{$p$-adic buildings}
 \begin{frame}{Plan of the talk}
 \tableofcontents[currentsection,hideallsubsections]
 \end{frame}
 
-\begin{frame}[fragile]{p-adic notation}
+\begin{frame}[fragile]{$p$-adic notation}
 \centering
 {\setlength{\arraycolsep}{50pt}\renewcommand{\arraystretch}{1.4}
 \begin{table}[]
@@ -741,9 +756,8 @@ $v:F^* \longrightarrow \mathbb{Z}$                   & valuation                
 
 \end{frame}
 
-\begin{frame}[fragile]{standard subgroups in the  p-adic world}
+\begin{frame}[fragile]{standard subgroups in the  $p$-adic world}
 \visible<2->{$$\pi: \GL_n(\mathcal{O}) \longrightarrow \GL_n(\kappa)$$}
-
 \begin{equation*}
 \begin{aligned}
   \visible<3->{I=\;& \pi^{-1}(B)= {\setlength{\arraycolsep}{2pt}\renewcommand{\arraystretch}{0.8}\begin{pmatrix}
@@ -756,11 +770,12 @@ $v:F^* \longrightarrow \mathbb{Z}$                   & valuation                
        \mathfrak{p} &  \rule{0mm}{5mm}\;\;\mathcal{O}\;\;   \\
   \end{array}
   \right)
-  }} \qquad&& \visible<6->{\text{Parahoric subgroup}} \\ 
+  }} \qquad&& \visible<6->{\text{Parahoric subgroup}} \\[-5mm]
+  &&& \visible<6->{\text{\ignore{\hspace{-3mm}=Parabolic Iwahori subgroup}}}
 \end{aligned}
 \end{equation*}
 \visible<7->{\begin{remark}
-They also have moduli intepretations. For example,
+They also have moduli interpretations. For example,
 \begin{equation*}
 \begin{aligned}
   \GL_n(F)/I\cong\;& \left\{ \mathfrak{p}L=L_0 \subset L_1 \subset \cdots \subset L_n = L  \;\middle| \; L_{i+1}/L_i \cong \kappa  \right\}\\
@@ -771,13 +786,13 @@ They also have moduli intepretations. For example,
 \end{frame}
 
 \begin{frame}[fragile]{Extended Weyl group}
-\visible<2->{To get the Iwahori decompositionn
+\visible<2->{To get the Iwahori decomposition
 $$G(F)= \bigsqcup_{\varpi\in W_{\ext}} I \varpi I,$$
 we define the extended Weyl group as
 $$W_{\ext}:= N_G(T\ignore{(\mathcal{O})})/T\ignore{(\mathcal{O})} \cong X_*(T) \rtimes W_f.$$}
 \visible<3->{\begin{eg}
 When $G=\GL_n(F)$,
-$$W_{\ext}=\left\{ \text{ monoidal matrixes } \right\} \Big/_{\setlength{\arraycolsep}{0pt}\renewcommand{\arraystretch}{0.8}\left(\begin{smallmatrix}
+$$W_{\ext}=\left\{ \text{ monoidal matrices } \right\} \Big/_{\setlength{\arraycolsep}{0pt}\renewcommand{\arraystretch}{0.8}\left(\begin{smallmatrix}
   \mathcal{O}^*\!\!\!\!\!\! & &  \\[-3mm] &\ddots&\\[-1mm] & &\!\!\mathcal{O}^*
   \end{smallmatrix}\!\right)} \cong \mathbb{Z}^n \rtimes S_n.$$
 \end{eg}}
@@ -838,15 +853,15 @@ $$}
   \end{figure}
 \end{frame}
 
-\begin{frame}[fragile]{Non-standard subgroups in the p-adic world}
+\begin{frame}[fragile]{Non-standard subgroups in the $p$-adic world}
 \visible<2->{\begin{short}
 Similarly,
 \vspace{-4mm}
 \begin{equation*}
 \begin{aligned}
-  \left\{ \text{ Iwahori subgroups } \right\} =\;& \left\{ gI_0g^{-1} \right\} &&\cong G/I_0 \\ 
-  \left\{ \text{ paraholic subgroups } \right\} =\;& \left\{ g\widetilde{P}_0g^{-1} \right\} &&\cong G/\widetilde{P}_0 \\ 
-  \left\{ \text{ maximal tori over $\mathcal{O}$ } \right\} =\;& \left\{ gT_0g^{-1} \right\} &&\cong G/N_G(T_0\ignore{(\mathcal{O})}) \\ 
+  \left\{ \text{ Iwahori subgroups } \right\} =\;& \left\{ gI_0g^{-1}\ignore{\;\Big|\; g\in G} \right\} &&\cong G/I_0 \\ 
+  \left\{ \text{ paraholic subgroups } \right\} =\;& \left\{ g\widetilde{P}_0g^{-1}\ignore{\;\Big|\; g\in G} \right\} &&\cong G/\widetilde{P}_0 \\ 
+  \left\{ \text{ maximal tori over $\mathcal{O}$ } \right\} =\;& \left\{ gT_0g^{-1}\ignore{\;\Big|\; g\in G} \right\} &&\cong G/N_G(T_0\ignore{(\mathcal{O})}) \\ 
   \visible<3->{\left\{ (I,T)\;\middle|\;I \supset T \right\} =\;& \left\{ (gI_0g^{-1},gT_0g^{-1}) \right\} &&\cong G/T_0\ignore{(\mathcal{O})} } 
 \end{aligned}
 \end{equation*}
@@ -944,11 +959,11 @@ $$
 \end{short}
 \end{frame}
 
-\begin{frame}[fragile]{p-adic building}
+\begin{frame}[fragile]{$p$-adic building}
 \visible<2->{\begin{definition}[chamber, apartment and building]
 Given a maximal torus $T$ over $\mathcal{O}$, the apartment is
 $$\mathcal{A}_T:=X_*(T)_{\mathbb{R}} = \bigcup_{I \supset T} \mathcal{C}_I,$$
-and the p-adic building is 
+and the $p$-adic building is 
 $$\mathcal{B}:=\; \left(\bigsqcup_T \mathcal{A}_T\right)/_{\sim} \;= \;\bigcup_{I}\; \mathcal{C}_I.$$
 \end{definition}
 }
@@ -970,13 +985,13 @@ and there is a unique geodesic through $p_1,p_2 \in \mathcal{B}$.
 \visible<2->{\begin{theorem}
 Let $F$ be a NA local field, $(M,g)$ be a cpt conn Riemannian manifold with the universal covering space $\widetilde{M}$.\\[3mm]
 
-\visible<3->{For any reductive map
+\visible<3->{For any reductive homomorphism
 $$\rho: \pi_1(M) \longrightarrow \GL_n(F),$$
-\visible<4->{there exists a $\pi_1(M)$-equivariant Lipschitz continuous regular harmonic map
+\visible<5->{there exists a $\pi_1(M)$-equivariant Lipschitz continuous regular harmonic map
 $$h_{\rho}:\widetilde{M} \longrightarrow \mathcal{B}_{\GL_n(F)}$$
 \vspace{-5mm}}}
 \end{theorem}
-\visible<5->{We call $\rho$ reductive when $\overline{\rho(\pi_1(M))}^{\Zar} \subseteq \GL_n(F)$ is reductive.
+\visible<4->{We call $\rho$ reductive when $\overline{\rho(\pi_1(M))}^{\Zar} \subseteq \GL_n(F)$ is reductive.
 }
 }
 \end{frame}
@@ -995,6 +1010,24 @@ The map
 $$f: \mathbb{R}^2 \longrightarrow \left\{ y^2=x^2 \right\} \qquad (a,b) \longmapsto (a|b|,b|a|)$$
 is regular.
 \end{eg}}
+\end{frame}
+
+\begin{frame}[fragile]{regularity}
+\begin{eg}
+The map
+$$f: \mathbb{R}^2 \longrightarrow \left\{ y^2=x^2 \right\} \qquad (a,b) \longmapsto (a|b|,b|a|)$$
+is regular.
+\vspace{-2mm}
+\visible<2->{\begin{short}
+  \begin{figure}
+    \centering
+    \only<1-2>{\includegraphics[width=.8\linewidth]{figure/regular_map_1.png}}
+    \only<3>{\includegraphics[width=.8\linewidth]{figure/regular_map_2.png}}
+	\only<4>{\includegraphics[width=.8\linewidth]{figure/regular_map_3.png}}
+  \end{figure}
+\end{short}
+}
+\end{eg}
 \end{frame}
 
 \begin{frame}[fragile]{Thanks for listening!}
