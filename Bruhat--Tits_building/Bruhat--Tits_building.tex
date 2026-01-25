@@ -121,6 +121,22 @@
 
 
 
+
+%gets rid of bottom navigation bars
+\setbeamertemplate{footline}[frame number]{}
+
+%gets rid of bottom navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+%gets rid of footer
+%will override 'frame number' instruction above
+%comment out to revert to previous/default definitions
+\setbeamertemplate{headline}{}
+\setbeamertemplate{footline}{}
+
+
+
+
 \setbeamertemplate{caption}[]
 % 设置图形文件的搜索路径
 \graphicspath{{figures/}}
@@ -145,14 +161,14 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 
-\setbeamertemplate{headline}{
-	\begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex]{section in head/foot}%
-		\hspace{3ex}{\insertsectionhead}
-	\end{beamercolorbox}
-	%	\begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{subsection in head/foot}
-	%		\usebeamerfont{subsection in head/foot}\insertsubsectionhead
-	%\end{beamercolorbox}
-}%删除点
+%\setbeamertemplate{headline}{
+%	\begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.125ex]{section in head/foot}%
+%		\hspace{3ex}{\insertsectionhead}
+%	\end{beamercolorbox}
+%	%	\begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{subsection in head/foot}
+%	%		\usebeamerfont{subsection in head/foot}\insertsubsectionhead
+%	%\end{beamercolorbox}
+%}%删除点
 \begin{document}
 \begin{frame}
 	\titlepage
@@ -162,7 +178,7 @@
   \begin{figure}
     \centering
     \includegraphics[height=60mm]{figure/pretty_building.png}
-    \caption{$\mathcal{B}_{\SL_3(\mathbb{Q}_p)}$, from Annette Werner's \href{https://www.math-berlin.de/images/stories/bruhat-tits.pdf}{talk}}
+    \caption{$\mathcal{B}_{\SL_3(\mathbb{Q}_p)}$, from \href{https://www.math-berlin.de/images/stories/bruhat-tits.pdf}{a talk by Annette Werner}}
   \end{figure}
 }
 \only<2>{
@@ -239,13 +255,13 @@
 %\end{equation*}
 %
 %\end{frame}
-\begin{frame}{Process}
+\begin{frame}{Plan of the talk}
 \tableofcontents[hideallsubsections]
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Spherical building}
-\begin{frame}{Process}
+\section{Spherical buildings}
+\begin{frame}{Plan of the talk}
 \tableofcontents[currentsection,hideallsubsections]
 \end{frame}
 
@@ -594,7 +610,7 @@ All non-standard subgroups are conjugated to standard subgroups. Therefore,
 
 \end{frame}
 
-\begin{frame}[fragile]{Weyl group action on cocharacter lattices(revisit)}
+\begin{frame}[fragile]{Weyl group action on cocharacter lattices(revisited)}
 \begin{short}
 When $G=\SL_2(\kappa)$, $T= \left( \begin{smallmatrix}
 a &  \\  & a^{-1} 
@@ -687,13 +703,13 @@ When $G=\SL_3(\mathbb{F}_2)$, the building \href{https://buildings.gallery/}{$\m
 \visible<1->{\begin{remark}
 $\mathcal{B}$ inherits the metric structure from $\mathcal{A}_T=X_*(T)_{\mathbb{R}}$.\\
 \visible<2->{$\mathcal{B}$ has also polysimplicial complex structure.\\
-When $\kappa=\mathbb{F}_p$, $\mathcal{B}$ is finite.}
+When $\kappa=\mathbb{F}_p$, $\mathcal{B}$ is finite. \ignore{i.e., having finite many chambers}}
 \end{remark}}
 \visible<3->{
 \begin{proposition}
 \begin{itemize}
-\item Two chambers lie in one apartment.
-\visible<4->{\item There is a unique geodesic passing any two points $p_1,p_2 \in \mathcal{B}$.}
+\item Any two chambers lie in one apartment.
+\visible<4->{\item There is a unique geodesic through any two points $p_1,p_2 \in \mathcal{B}$.}
 \end{itemize}
 }
 \vspace{30mm}
@@ -701,8 +717,8 @@ When $\kappa=\mathbb{F}_p$, $\mathcal{B}$ is finite.}
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{p-adic building}
-\begin{frame}{Process}
+\section{p-adic buildings}
+\begin{frame}{Plan of the talk}
 \tableofcontents[currentsection,hideallsubsections]
 \end{frame}
 
@@ -714,7 +730,7 @@ When $\kappa=\mathbb{F}_p$, $\mathcal{B}$ is finite.}
 \hline
 \multicolumn{1}{c|}{symbol}                          & \multicolumn{1}{c|}{name} & \multicolumn{1}{c}{example}        \\ \hline
 $F$                                                  & NA local field               & \visible<2->{$\mathbb{Q}_p$}                     \\
-$\mathcal{O}=\mathcal{O}_F$                          & integral ring             & \visible<2->{$\mathbb{Z}_p$}                     \\
+$\mathcal{O}=\mathcal{O}_F$                          & ring of integers             & \visible<2->{$\mathbb{Z}_p$}                     \\
 $\mathfrak{p}=\mathfrak{p}_F$                        & maximal ideal             & \visible<2->{$p\mathbb{Z}_p$}                    \\
 $\kappa=\mathcal{O}/\mathfrak{p}$                    & residue field             & \visible<2->{$\mathbb{F}_p$}                     \\
 $\pi \in \mathfrak{p} \smallsetminus \mathfrak{p}^2$ & uniformizer               & \visible<2->{$p$}                                \\
@@ -725,7 +741,7 @@ $v:F^* \longrightarrow \mathbb{Z}$                   & valuation                
 
 \end{frame}
 
-\begin{frame}[fragile]{standard subgroups in p-adic world}
+\begin{frame}[fragile]{standard subgroups in the  p-adic world}
 \visible<2->{$$\pi: \GL_n(\mathcal{O}) \longrightarrow \GL_n(\kappa)$$}
 
 \begin{equation*}
@@ -747,7 +763,7 @@ $v:F^* \longrightarrow \mathbb{Z}$                   & valuation                
 They also have moduli intepretations. For example,
 \begin{equation*}
 \begin{aligned}
-  \GL_n(F)/I\cong\;& \left\{ L=L_0 \subset L_1 \subset \cdots \subset L_n = \mathfrak{p}L  \;\middle| \; L_{i+1}/L_i \cong \kappa  \right\}\\
+  \GL_n(F)/I\cong\;& \left\{ \mathfrak{p}L=L_0 \subset L_1 \subset \cdots \subset L_n = L  \;\middle| \; L_{i+1}/L_i \cong \kappa  \right\}\\
   = \;& \left\{ \mathcal{O}\text{-lattice chains in } F^n \right\}
 \end{aligned}
 \end{equation*}
@@ -822,7 +838,7 @@ $$}
   \end{figure}
 \end{frame}
 
-\begin{frame}[fragile]{Non-standard subgroups in p-adic world}
+\begin{frame}[fragile]{Non-standard subgroups in the p-adic world}
 \visible<2->{\begin{short}
 Similarly,
 \vspace{-4mm}
@@ -872,7 +888,7 @@ Similarly,
   \end{figure}
 \end{frame}
 
-\begin{frame}[fragile]{Extended Weyl group action(revisit)}
+\begin{frame}[fragile]{Extended Weyl group action(revisited)}
 $W_{\ext}$ acts on $X_*(T)$ by ``twisted conjugation'':
 $$W_{\ext} \times X_*(T) \longrightarrow X_*(T) \qquad (\mu \rtimes u, \lambda) \longmapsto \mu+u\lambda u^{-1}$$
 \begin{short}
@@ -894,7 +910,7 @@ $$
 \end{short}
 \end{frame}
 
-\begin{frame}[fragile]{Extended Weyl group action(revisit)}
+\begin{frame}[fragile]{Extended Weyl group action(revisited)}
 \begin{short}
 When $G=\SL_3(F)$, $W_{\ext}=\left< s_0, s_1, s_2 \right>$, where
 \vspace{-3mm}
@@ -917,7 +933,7 @@ $$
 \end{short}
 \end{frame}
 
-\begin{frame}[fragile]{Extended Weyl group action(revisit)}
+\begin{frame}[fragile]{Extended Weyl group action(revisited)}
 \begin{short}
   \begin{figure}
     \centering
@@ -938,19 +954,19 @@ $$\mathcal{B}:=\; \left(\bigsqcup_T \mathcal{A}_T\right)/_{\sim} \;= \;\bigcup_{
 }
 \visible<3->{
 \begin{remark}
-Similarly, two chambers lie in one apartment,\\
-and there is a unique geodesic passing $p_1,p_2 \in \mathcal{B}$.
+Similarly, any two chambers lie in one apartment,\\
+and there is a unique geodesic through $p_1,p_2 \in \mathcal{B}$.
 \end{remark}
 }
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Gromov-Schoen theorem}
-\begin{frame}{Process}
+\section{The Gromov-Schoen theorem}
+\begin{frame}{Plan of the talk}
 \tableofcontents[currentsection,hideallsubsections]
 \end{frame}
 
-\begin{frame}[fragile]{Gromov-Schoen theorem}
+\begin{frame}[fragile]{The Gromov-Schoen theorem}
 \visible<2->{\begin{theorem}
 Let $F$ be a NA local field, $(M,g)$ be a cpt conn Riemannian manifold with the universal covering space $\widetilde{M}$.\\[3mm]
 
