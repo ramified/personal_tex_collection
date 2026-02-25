@@ -1,80 +1,80 @@
-\begin{thebibliography}{10}
+\begin{thebibliography}{BHPVdV04}
 
-\bibitem{Ai12}
-Martin Aigner.
-\newblock {\em Combinatorial theory}, volume 234 of {\em Grundlehren Math.
-  Wiss.}
-\newblock Springer, Cham, 1979.
-
-\bibitem{Ar85I}
+\bibitem[ACGH85]{Ar85I}
 E.~Arbarello, M.~Cornalba, P.~A. Griffiths, and J.~Harris.
 \newblock {\em Geometry of algebraic curves. {Volume} {I}}, volume 267 of {\em
   Grundlehren Math. Wiss.}
 \newblock Springer, Cham, 1985.
 
-\bibitem{Bar04}
+\bibitem[Aig79]{Ai12}
+Martin Aigner.
+\newblock {\em Combinatorial theory}, volume 234 of {\em Grundlehren Math.
+  Wiss.}
+\newblock Springer, Cham, 1979.
+
+\bibitem[BHPVdV04]{Bar04}
 Wolf~P. Barth, Klaus Hulek, Chris A.~M. Peters, and Antonius Van~de Ven.
 \newblock {\em Compact complex surfaces}, volume~4 of {\em Ergeb. Math.
   Grenzgeb., 3. Folge}.
 \newblock Berlin: Springer, 2nd enlarged ed. edition, 2004.
 
-\bibitem{BL04}
+\bibitem[BL04]{BL04}
 Christina Birkenhake and Herbert Lange.
 \newblock {\em Complex abelian varieties}, volume 302 of {\em Grundlehren Math.
   Wiss.}
 \newblock Berlin: Springer, 2nd augmented ed. edition, 2004.
 
-\bibitem{Cil20}
+\bibitem[CDGK20]{Cil20}
 Ciro Ciliberto, Thomas Dedieu, Concettina Galati, and Andreas~Leopold Knutsen.
 \newblock On the locus of {Prym} curves where the {Prym}-canonical map is not
   an embedding.
 \newblock {\em Ark. Mat.}, 58(1):71--85, 2020.
 
-\bibitem{Ha02}
+\bibitem[Hat02]{Ha02}
 Allen Hatcher.
 \newblock {\em Algebraic topology}.
 \newblock Cambridge: Cambridge University Press, 2002.
 
-\bibitem{JKLM22}
+\bibitem[JKLM25]{JKLM22}
 Ariyan Javanpeykar, Thomas Kr{\"a}mer, Christian Lehn, and Marco Maculan.
 \newblock The monodromy of families of subvarieties on abelian varieties.
 \newblock {\em Duke Math. J.}, 174(6):1045--1149, 2025.
 
-\bibitem{Kr16cubicthreefold}
+\bibitem[Kr{\"a}16]{Kr16cubicthreefold}
 Thomas Kr{\"a}mer.
 \newblock Cubic threefolds, {Fano} surfaces and the monodromy of the {Gauss}
   map.
 \newblock {\em Manuscr. Math.}, 149(3-4):303--314, 2016.
 
-\bibitem{Kr20}
+\bibitem[Kr{\"a}20]{Kr20}
 Thomas Kr{\"a}mer.
 \newblock Summands of theta divisors on {Jacobians}.
 \newblock {\em Compos. Math.}, 156(7):1457--1475, 2020.
 
-\bibitem{Kr21GaussII}
+\bibitem[Kr{\"a}21]{Kr21GaussII}
 Thomas Kr{\"a}mer.
 \newblock Characteristic cycles and the microlocal geometry of the {Gauss} map.
   {II}.
 \newblock {\em J. Reine Angew. Math.}, 774:53--92, 2021.
 
-\bibitem{Kr22GaussI}
+\bibitem[Kr{\"a}22]{Kr22GaussI}
 Thomas Kr{\"a}mer.
 \newblock Characteristic cycles and the microlocal geometry of the {Gauss} map.
   {I}.
 \newblock {\em Ann. Sci. {\'E}c. Norm. Sup{\'e}r. (4)}, 55(6):1475--1527, 2022.
 
-\bibitem{LO11}
+\bibitem[LO11]{LO11}
 Herbert Lange and Angela Ortega.
 \newblock Prym varieties of cyclic coverings.
 \newblock {\em Geom. Dedicata}, 150:391--403, 2011.
 
-\bibitem{Mil65}
+\bibitem[Mil65]{Mil65}
 John~W. Milnor.
 \newblock Topology from the differentiable viewpoint.
 \newblock Charlottesville: {The} {University} {Press} of {Virginia}. {IX}, 64
   p. (1965)., 1965.
 
-\bibitem{vakil2017rising}
+\bibitem[Vak17]{vakil2017rising}
 Ravi Vakil.
 \newblock The rising sea: Foundations of algebraic geometry.
 \newblock {\em preprint}, 2017.

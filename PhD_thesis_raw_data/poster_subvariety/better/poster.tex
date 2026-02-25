@@ -1,0 +1,354 @@
+% Gemini theme
+% https://github.com/anishathalye/gemini
+
+\documentclass[final]{beamer}
+
+% ====================
+% Packages
+% ====================
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[orientation=portrait, size=a0, scale=1.25]{beamerposter}
+\usetheme{gemini}
+\usecolortheme{mit}
+\usepackage{graphicx}
+\usepackage{booktabs}
+%\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.14}
+\usepackage{anyfontsize}
+\usepackage{tikz-cd}
+\usepackage{quiver}
+\usepackage{tcolorbox}
+%\usepackage[dvipsnames]{xcolor}
+% ====================
+% Lengths
+% ====================
+
+\numberwithin{equation}{section}
+
+\theoremstyle{plain}
+
+\newtheorem{setting}[theorem]{Setting}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{eg}[theorem]{Example}
+\newtheorem{ex}[theorem]{Exercise}
+\newtheorem{ques}[theorem]{Question}
+\newtheorem{answ}[theorem]{Answer}
+\newtheorem{warning}[theorem]{Warning}
+\newtheorem{notation}[theorem]{Notations}
+
+
+
+% If you have N columns, choose \sepwidth and \colwidth such that
+% (N+1)*\sepwidth + N*\colwidth = \paperwidth
+\newlength{\sepwidth}
+\newlength{\colwidth}
+\setlength{\sepwidth}{0.024\paperwidth}
+\setlength{\colwidth}{0.464\paperwidth}
+
+\newcommand{\separatorcolumn}{\begin{column}{\sepwidth}\end{column}}
+
+% ====================
+% Title
+% ====================
+
+
+
+%Title: A User-Friendly Introduction to Six-Functor Formalism
+%
+%Abstract: Instead of delving into abstract and highly general formulations, this poster aims to introduce traditional six-functor formalism in an accessible manner. It presents a user-friendly toolkit designed to simplify the understanding and memorization of six-functor formalisms. Additionally, the poster concludes with various applications of six-functor formalism, demonstrating its versatility and utility in different contexts.
+%
+%For further details and supplementary materials, please visit my GitHub repository: https://github.com/ramified/personal_handwritten_collection/tree/main/applied_six_functor_formalism
+
+
+\title{Subvarieties in Complex Abelian Varieties}
+
+\author{Xiaoxiang Zhou \\ Advisor: Prof. Dr. Thomas Krämer}
+
+\institute[shortinst]{Humboldt-Universität zu Berlin}
+
+% ====================
+% Footer (optional)
+% ====================
+
+\footercontent{
+  \href{https://ramified.github.io/}{https://ramified.github.io/} \hfill
+  Topology of Algebraic Varieties \hfill
+  \href{mailto:xiaoxiang.zhou@student.hu-berlin.de}{xiaoxiang.zhou@student.hu-berlin.de}}
+% (can be left out to remove footer)
+
+% ====================
+% Logo (optional)
+% ====================
+
+% use this to include logos on the left and/or right side of the header:
+% \logoleft{\includegraphics[height=5cm]{BMS_logo.png}}
+% \logoleft{\includegraphics[height=7cm]{logo2.pdf}}
+
+% ====================
+% Body
+% ====================
+
+
+%%%%%%%newcommand
+
+\definecolor{BrickRed}{rgb}{0.65, 0.12, 0.21}
+\definecolor{BrickBlue}{rgb}{0, 0.1, 0.3}
+\DeclareMathOperator{\sky}{\operatorname{sky}}
+\DeclareMathOperator{\Hcohom}{\operatorname{H}}
+\DeclareMathOperator{\BM}{\operatorname{BM}}
+\DeclareMathOperator{\cpt}{\operatorname{c}}
+\DeclareMathOperator{\Or}{\operatorname{Or}}
+\DeclareMathOperator{\pt}{\operatorname{pt}}
+\DeclareMathOperator{\constructable}{\operatorname{cons}}
+\DeclareMathOperator{\IC}{\operatorname{IC}}
+\DeclareMathOperator{\Perv}{\operatorname{Perv}}
+\DeclareMathOperator{\cone}{\operatorname{cone}}
+\DeclareMathOperator{\CC}{\operatorname{CC}}
+\DeclareMathOperator{\NMD}{\operatorname{NMD}}
+\DeclareMathOperator{\sm}{\operatorname{sm}}
+\DeclareMathOperator{\Gr}{\operatorname{Gr}}
+\DeclareMathOperator{\Hom}{\operatorname{Hom}}
+\DeclareMathOperator{\End}{\operatorname{End}}
+\DeclareMathOperator{\Aut}{\operatorname{Aut}}
+\DeclareMathOperator{\Img}{\operatorname{Im}}
+\DeclareMathOperator{\Ob}{\operatorname{Ob}}
+\DeclareMathOperator{\Mor}{\operatorname{Mor}}
+\DeclareMathOperator{\Pic}{\operatorname{Pic}}
+\DeclareMathOperator{\Jac}{\operatorname{Jac}}
+\DeclareMathOperator{\Gal}{\operatorname{Gal}}
+\DeclareMathOperator{\Mon}{\operatorname{Mon}}
+\DeclareMathOperator{\AJ}{\operatorname{AJ}}
+\DeclareMathOperator{\AP}{\operatorname{AP}}
+\newcommand{\covermap}{h}
+\DeclareMathOperator{\Prym}{\operatorname{Prym}}
+\DeclareMathOperator{\Nm}{\operatorname{Nm}}
+\DeclareMathOperator{\gon}{\operatorname{gon}}
+\DeclareMathOperator{\univ}{\operatorname{univ}}
+\DeclareMathOperator{\Abel}{\operatorname{Abel}}
+\DeclareMathOperator{\pr}{\operatorname{pr}}
+\DeclareMathOperator{\aff}{\operatorname{aff}}
+\DeclareMathOperator{\charcycle}{\operatorname{cc}}
+\DeclareMathOperator{\twist}{\operatorname{tw}}
+\DeclareMathOperator{\Hnm}{\operatorname{H}}
+
+\begin{document}
+
+\begin{frame}[t]
+\begin{columns}[t]
+\separatorcolumn
+
+\begin{column}{\colwidth}
+
+
+
+  \begin{block}{Tangent Gauss Map}
+Let $A/\mathbb{C}$ be an abelian variety of dimension $n$, and let $Z \subset A$ be a non-degenerate closed subvariety of dimension $r$.\\[15mm]
+ 
+  To understand the geometry of $Z$, we encode the variation of its tangent spaces via the tangent Gauss map
+ $$\phi_Z: Z^{\sm}\longrightarrow \Gr(r,T_0A) \qquad p \longrightarrow T_pZ \subset T_pA \cong T_0A.$$
+Its differential
+$$d_p\phi_Z: T_pZ \longrightarrow \Hom_{\mathbb{C}}(T_pZ, N_pZ)$$
+is the second fundamental form, from which curvature invariants can be extracted.\\[15mm]
+
+Besides the obvious examples (illustrated below), when can the Gauss map $\phi_Z$ fail to be generically injective?
+$\;$\\[-30mm] $\,$
+  \begin{figure}[th]
+  \begin{minipage}[t]{.45\textwidth}
+    \vspace{0pt}
+  	\centering
+  	\includegraphics[width=.7\textwidth]{figures/translation_invariant.png}
+  \end{minipage}
+  \begin{minipage}[t]{.45\textwidth}
+    \vspace{0pt}
+  	\centering
+  	\includegraphics[width=.7\textwidth]{figures/reflection_invariant.png}
+  \end{minipage}
+  \end{figure}
+
+We specialize to the case where $Z=C$ is a curve. When $n=2$, $\phi_C\!\!: C^{\sm} \longrightarrow \mathbb{P}^1$ typically fails to be generically injective.
+
+  
+\begin{tcolorbox}[
+  colback=gray!15,
+  colframe=gray!60,
+  boxrule=0.5pt,
+  arc=4pt,
+  left=12pt,right=12pt,top=12pt,bottom=12pt
+]
+\textbf{Conjecture 1.}
+Let $C \subset A$ be a non-degenerate curve, $n>2$. If $C$ is not invariant under any non-trivial translation or reflection, then $\phi_C$ is generically injective.
+\end{tcolorbox}
+  \end{block}
+  \begin{block}{A Counterexample for Conjecture 1}
+  $\;$\\[-45mm] $\,$
+    \begin{figure}[th]
+    \begin{minipage}[t]{.45\textwidth}
+      \vspace{0pt}
+    	\centering
+    	\includegraphics[width=.7\textwidth]{figures/rotation_invariant.png}
+    \end{minipage}
+    \end{figure}
+\begin{tcolorbox}[
+  colback=blue!5,
+  colframe=gray!60,
+  boxrule=0.5pt,
+  arc=4pt,
+  left=12pt,right=12pt,top=12pt,bottom=12pt
+]
+\textbf{Example 1.}
+For $A = E_{\rho}^{\oplus n}$, $\zeta_3$ acts on $A$ (and hence on $T_0A$) by scalar multiplication.
+Computer experiments yield a non-degenerate $\zeta_3$-invariant curve $C \subset A$, for which $\phi_C$ is not generically injective.
+\end{tcolorbox}
+We have found no counterexample to Conjecture 1 when $A$ is not isogenous to $E_{\mathfrak{i}}^{\oplus n}$ or $E_{\rho}^{\oplus n}$. This suggests the following refinement:
+\begin{tcolorbox}[
+  colback=gray!15,
+  colframe=gray!60,
+  boxrule=0.5pt,
+  arc=4pt,
+  left=12pt,right=12pt,top=12pt,bottom=12pt
+]
+\textbf{Conjecture 2.}
+Let $C \subset A$ be a non-degenerate curve, $n>2$. If no non-trivial $\tau \in \Aut(A)$ preserves $C$ and acts by scalar multiplication on $T_0A$, then $\phi_C$ is generically injective.
+\end{tcolorbox}
+One may restate the conjecture using Gauss curvature, yielding a slightly stronger statement:
+\begin{tcolorbox}[
+  colback=gray!15,
+  colframe=gray!60,
+  boxrule=0.5pt,
+  arc=4pt,
+  left=12pt,right=12pt,top=12pt,bottom=12pt
+]
+\textbf{Conjecture 3.}
+Let $C \subset A$ be a non-degenerate curve, $n>2$. For a general point $p \in \Img \phi_C$, all points in $\phi_C^{-1}(p)$ exhibit the same Gauss curvature.
+\end{tcolorbox}
+
+  \end{block}
+  \begin{block}{Known Cases}
+  \begin{enumerate}
+  \item
+  If $A=\Jac(C)$ and $C$ is embedded via the Abel-–Jacobi map, then $\phi_C=|\omega_C|$ is the canonical map:
+%  $\;$\\[-25mm] $\,$
+  \begin{itemize}
+  \item When $C$ is hyperelliptic, $C$ is invariant under the hyperelliptic involution, and $\deg \phi_C=2$;
+  \item When $C$ is non-hyperelliptic, $\phi_C$ is an embedding.
+  \end{itemize}
+  
+  \item Let $h:C \longrightarrow C'$ be a cyclic $k$-fold cover defined by $\eta \in \Pic(C')$ with $\eta^{\otimes k} \cong \mathcal{O}_{C'}(B)$. If $A = \Prym(C/C')$ and $C \to A$ is the Abel--Prym map, then
+  $$T_0A \cong \Hnm^0(\omega_C)/\Hnm^0(\omega_{C'}) \cong \bigoplus_{i=1}^{k-1} \Hnm^0(\omega_{C'} \otimes \eta^i)$$
+  $$\phi_C: C \longrightarrow \mathbb{P} T_0A \cong \mathbb{P} \left( \bigoplus_{i=1}^{k-1} \Hnm^0(\omega_{C'} \otimes \eta^i)  \right)$$
+  $\;$\\[-25mm] $\,$
+  \begin{itemize}
+  \item $k=2$: $C$ is invariant under the Prym involution, and $\phi_C=|\omega_{C'} \otimes \eta| \circ h$.\\
+  If $C'$ is non-hyperelliptic with $g(C') \geq 4$, then $\deg \phi_C = 2$ or $4$, and
+  $$\deg \phi_C=4 \Longleftrightarrow B=\varnothing, C' \text{ is bielliptic and $\eta$ pulled back from EC.}$$
+  \item $k>2$: if $g(C') \geq 1$ and $|\omega_{C'} \otimes \eta|$ is generically injective, then $\phi_C$ is generically injective.
+  \end{itemize}
+  
+\item If $C \subset A$ is smooth and either $\deg \phi_C = 2$ or $\phi_C$ is unramified, Conjecture 3 also holds.
+  \end{enumerate}
+  \end{block}
+
+
+
+\end{column}
+
+\separatorcolumn
+
+\begin{column}{\colwidth}
+
+\begin{block}{Perverse Sheaf}
+
+We will mix the usage of sheaves and complexes. For simplicity, let us fix a Whitney stratification $\mathcal{S}$:
+\newcommand\largesubset{\mathrel{\scalebox{1.5}[1]{\(\subset\)}}}
+$$\varnothing \overset{\;\,U_0}{\largesubset} Z_0 \overset{\;\,U_1}{\largesubset}\cdots  \overset{\;\,U_n}{\largesubset} Z_n = X$$
+Denote $D_{\constructable,\mathcal{S}}^{b}(X)$ as the category of constructible sheaves over $X$ with respect to $\mathcal{S}$.
+
+\heading{Definition}
+
+Roughly speaking, a perverse sheaf is a type of sheaf that lies between $\pi^* \mathbb{Q}$ and $\pi^! \mathbb{Q}$. More rigorously, a perverse sheaf is a complex that belongs to the heart of the perverse $t$-structure. 
+
+We say that $\mathcal{F} \in D_{\constructable,\mathcal{S}}^{b}(X)$ is perverse if 
+$$
+\begin{cases}
+\mathcal{H}^i\left(\iota_{U_j}^* \mathcal{F}\right) = 0, & \text{for any } i > -j\\
+\mathcal{H}^i\left(\iota_{U_j}^! \mathcal{F}\right) = 0, & \text{for any } i < -j\\
+\end{cases}
+$$
+
+
+
+
+\heading{Deligne's construction}
+Any local system $\mathcal{L}$ supported on $U_i$ can be converted into a perverse sheaf through truncations. This process is known as \textbf{Deligne's construction}, and the resulting perverse sheaf is called the intersection cohomology complex, or the IC sheaf, denoted by $\IC(\mathcal{L})$. IC sheaves are the simple objects in the category $\Perv_{\mathcal{S}}(X)$.
+
+To determine whether a complex $\mathcal{F}$ is {\color{BrickRed}perverse} or an {\color{BrickBlue}IC sheaf}, one simply needs to complete {\color{BrickRed}Table 2}.
+
+  \end{block}
+  
+  \begin{block}{Nearby Cycle}
+A perverse sheaf may not be so ``perverse", but a nearby cycle is definitely ``nearby".
+
+% https://q.uiver.app/#q=WzAsOSxbMCwxLCJcXHswXFx9Il0sWzEsMSwiXFxtYXRoYmJ7Q30iXSxbMiwxLCJcXG1hdGhiYntDfV57XFx0aW1lc30iXSxbMywxLCJcXHdpZGV0aWxkZXtcXG1hdGhiYntDfX1ee1xcdGltZXN9Il0sWzgsMCwiXFxtYXRoY2Fse0Z9Il0sWzQsMSwiXFxtYXRoYmJ7Q30iXSxbNSwwLCJpXipcXG1hdGhjYWx7Rn0iXSxbNiwwLCJcXHBzaSBcXG1hdGhjYWx7Rn0iXSxbNywwLCJcXHZhcnBoaSBcXG1hdGhjYWx7Rn0iXSxbMCwxLCJpIiwwLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbMiwxLCJqIiwyLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJib3R0b20ifX19XSxbMywyLCJwIiwyXSxbMSw0LCIiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzMsNSwiXFxjb25nIiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzYsMCwiIiwwLHsic3R5bGUiOnsiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dLFs3LDAsIiIsMCx7InN0eWxlIjp7ImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbOCwwLCIiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d
+\[\begin{tikzcd}[ampersand replacement=\&]
+	\&\&\&\&[-30mm]\&[-270mm] {\color{BrickRed}i^*\mathcal{F}} \&[-35mm] {\color{BrickRed}\psi \mathcal{F}} \&[-35mm] {\color{BrickRed}\varphi \mathcal{F}} \& {\mathcal{F}} \\[-15mm]
+	{\{0\}} \& {\mathbb{C}} \& {\mathbb{C}^{\times}} \& {\widetilde{\mathbb{C}}^{\times}} \& {\mathbb{C}}
+	\arrow[no head,color=BrickRed, from=1-6, to=2-1]
+	\arrow[no head,color=BrickRed, from=1-7, to=2-1]
+	\arrow[no head,color=BrickRed, from=1-8, to=2-1]
+	\arrow["i", hook, from=2-1, to=2-2]
+	\arrow[no head, from=2-2, to=1-9]
+	\arrow["j"', hook', from=2-3, to=2-2]
+	\arrow["p"', from=2-4, to=2-3]
+	\arrow["\cong"{description}, draw=none, from=2-4, to=2-5]
+\end{tikzcd}\]
+Given $\mathcal{F} \in D^b(\mathbb{C})$, one can construct the \textbf{nearby cycle} 
+$${\color{BrickRed}\psi \mathcal{F}}:= i^* Rj_* p_* p^* j^* \mathcal{F} \in D^b(\{0\}),$$
+ which can be roughly viewed as the fiber $\mathcal{F}_x$ for $x$ sufficiently close to $0$. By quotienting out the \textbf{non-vanishing cycle} {\color{BrickRed}$i^*\mathcal{F}$}, one obtains the \textbf{vanishing cycle} $${\color{BrickRed}\varphi \mathcal{F}}:= \cone \left[ i^*\mathcal{F} \overset{sp}{\longrightarrow} \psi \mathcal{F} \right] \in D^b(\{0\}).$$
+ 
+ 
+% https://q.uiver.app/#q=WzAsOSxbMCwyLCJcXHswXFx9Il0sWzEsMiwiRCJdLFsyLDIsIkReKiJdLFszLDIsIlxcd2lkZXRpbGRle0R9XioiXSxbMCwxLCJYXzAiXSxbMSwxLCJYIl0sWzIsMSwiWF4qIl0sWzMsMSwiXFx3aWRldGlsZGV7WH1eKiJdLFs0LDAsIlxcbWF0aGNhbHtGfSJdLFs3LDNdLFs2LDJdLFs1LDFdLFs0LDBdLFs0LDUsImkiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs2LDUsImoiLDIseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6ImJvdHRvbSJ9fX1dLFsyLDEsIiIsMSx7InN0eWxlIjp7InRhaWwiOnsibmFtZSI6Imhvb2siLCJzaWRlIjoiYm90dG9tIn19fV0sWzAsMSwiIiwxLHsic3R5bGUiOnsidGFpbCI6eyJuYW1lIjoiaG9vayIsInNpZGUiOiJ0b3AifX19XSxbNyw2LCJwIiwyXSxbMywyXSxbNSw4LCIiLDIseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJub25lIn19fV1d
+\[\begin{tikzcd}[ampersand replacement=\&]
+	\&\&\&\&[-150mm] {\mathcal{F}} \\[-15mm]
+	{X_0} \& X \& {X^*} \& {\widetilde{X}^*} \\
+	{\{0\}} \& D \& {D^*} \& {\widetilde{D}^*}
+	\arrow["i", hook, from=2-1, to=2-2]
+	\arrow[from=2-1, to=3-1]
+	\arrow[no head, from=2-2, to=1-5]
+	\arrow[from=2-2, to=3-2]
+	\arrow["j"', hook', from=2-3, to=2-2]
+	\arrow[from=2-3, to=3-3]
+	\arrow["p"', from=2-4, to=2-3]
+	\arrow[from=2-4, to=3-4]
+	\arrow[hook, from=3-1, to=3-2]
+	\arrow[hook', from=3-3, to=3-2]
+	\arrow[from=3-4, to=3-3]
+\end{tikzcd}\]
+  In general, $\mathcal{C}$ can be replaced by any disk $\mathcal{D}$, as the problem is local, and $\mathcal{F}$ can be a sheaf over any space $X$ over $\mathcal{D}$.
+  
+ The same construction yields a distinguished triangle in $D^b(X_0)$:
+ % https://q.uiver.app/#q=WzAsNCxbMCwwLCJpXiogXFxtYXRoY2Fse0Z9Il0sWzEsMCwiXFxwc2lfZiBcXG1hdGhjYWx7Rn0iXSxbMiwwLCJcXHZhcnBoaV9mIFxcbWF0aGNhbHtGfSJdLFszLDBdLFswLDFdLFsxLDJdLFsyLDMsIisxIl1d
+ \[\begin{tikzcd}[ampersand replacement=\&]
+ 	{i^* \mathcal{F}} \& {\psi_f \mathcal{F}} \& {\varphi_f \mathcal{F}} \& {}
+ 	\arrow[from=1-1, to=1-2]
+ 	\arrow[from=1-2, to=1-3]
+ 	\arrow["{+1}", from=1-3, to=1-4]
+ \end{tikzcd}\]
+  \end{block}
+
+
+
+
+\end{column}
+
+\separatorcolumn
+
+\end{columns}
+\end{frame}
+
+\end{document}

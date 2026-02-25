@@ -1,7 +1,7 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  24 FEB 2026 23:37
+This is XeTeX, Version 3.14159265-2.6-0.99999 (MiKTeX 2.9.6930 64-bit) (preloaded format=xelatex 2019.1.15)  5 SEP 2024 22:14
 entering extended mode
-**./re_subvarieties_in_abelian_variety.tex
-(re_subvarieties_in_abelian_variety.tex
+**./LaTeX_template.tex
+(LaTeX_template.tex
 LaTeX2e <2018-12-01>
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amscls\ams
@@ -164,6 +164,149 @@ LaTeX Info: Redefining \bm on input line 207.
 extarrows.sty"
 Package: extarrows 2008/05/15 v1.0b Some extensible arrows
 )
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/stackengin
+e\stackengine.sty"
+Package: stackengine 2017/02/13 v4.01\ Stacking text and objects in convenient 
+ways
+
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\e
+toolbox.sty"
+Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count102
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listofitem
+s\listofitems.sty"
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/listofit
+ems\listofitems.tex"
+Invalid UTF-8 byte or sequence at line 50 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 50 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 52 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 52 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 52 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 96 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 96 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 104 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 105 replaced by U+FFFD.
+\loi_cnt_foreach_nest=\count103
+Invalid UTF-8 byte or sequence at line 139 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 146 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 192 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 209 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 209 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 222 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 222 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 223 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 223 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 224 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 226 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 226 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 238 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 243 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 243 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 260 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 284 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 310 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 310 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 324 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 337 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 337 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 339 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 350 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 350 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 350 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 354 replaced by U+FFFD.
+\loi_nestcnt=\count104
+Invalid UTF-8 byte or sequence at line 367 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 367 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 367 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 367 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 375 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 375 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 375 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 375 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 377 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 378 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 398 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 398 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 399 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 399 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 399 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 399 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 399 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 399 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 409 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 411 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 411 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 411 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 411 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 411 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 411 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 414 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 422 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 422 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 426 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 428 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 433 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 433 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 441 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 441 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 442 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 443 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 443 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 443 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 446 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 446 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 446 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 448 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 448 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 451 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 455 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 455 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 458 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 458 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 472 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 475 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 492 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 508 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 508 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 509 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 509 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 519 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 541 replaced by U+FFFD.
+Invalid UTF-8 byte or sequence at line 541 replaced by U+FFFD.
+)
+Package: listofitems 2019/08/21 v1.63 Grab items in lists using user-specified 
+sep char (CT)
+)
+("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\calc
+.sty"
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count105
+\calc@Bcount=\count106
+\calc@Adimen=\dimen115
+\calc@Bdimen=\dimen116
+\calc@Askip=\skip52
+\calc@Bskip=\skip53
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count107
+\calc@Cskip=\skip54
+)
+\c@@stackindex=\count108
+\@boxshift=\skip55
+\stack@tmplength=\skip56
+\temp@stkl=\skip57
+\@stackedboxwidth=\skip58
+\@addedbox=\box31
+\@anchorbox=\box32
+\stackedbox=\box33
+\@centerbox=\box34
+\c@ROWcellindex@=\count109
+)
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\h
 yperref.sty"
 Package: hyperref 2018/11/30 v6.88e Hypertext links for LaTeX
@@ -251,9 +394,9 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 voptions.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 )
-\@linkdim=\dimen115
-\Hy@linkcounter=\count102
-\Hy@pagecounter=\count103
+\@linkdim=\dimen117
+\Hy@linkcounter=\count110
+\Hy@pagecounter=\count111
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\p
 d1enc.def"
@@ -267,7 +410,7 @@ Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
 \etexcmds.sty"
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count104
+\Hy@SavedSpaceFactor=\count112
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/00miktex\h
 yperref.cfg"
@@ -281,7 +424,7 @@ Package hyperref Info: Plain pages OFF on input line 4534.
 Package hyperref Info: Backreferencing OFF on input line 4539.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4772.
-\c@Hy@tempcnt=\count105
+\c@Hy@tempcnt=\count113
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.st
 y"
@@ -289,7 +432,7 @@ y"
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5125.
-\XeTeXLinkMargin=\dimen116
+\XeTeXLinkMargin=\dimen118
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek
 \bitset.sty"
@@ -300,9 +443,9 @@ Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
 Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count106
-\Field@Width=\dimen117
-\Fld@charsize=\dimen118
+\Fld@menulength=\count114
+\Field@Width=\dimen119
+\Fld@charsize=\dimen120
 Package hyperref Info: Hyper figures OFF on input line 6380.
 Package hyperref Info: Link nesting OFF on input line 6385.
 Package hyperref Info: Hyper index ON on input line 6388.
@@ -317,9 +460,9 @@ LaTeX Info: Redefining \pageref on input line 6454.
 \atbegshi.sty"
 Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
 )
-\Hy@abspage=\count107
-\c@Item=\count108
-\c@Hfootnote=\count109
+\Hy@abspage=\count115
+\c@Item=\count116
+\c@Hfootnote=\count117
 )
 Package hyperref Info: Driver (autodetected): hxetex.
 
@@ -336,11 +479,11 @@ File: puenc.def 2018/11/30 v6.88e Hyperref: PDF Unicode definition (HO)
 Package: stringenc 2016/05/16 v1.11 Convert strings between diff. encodings (HO
 )
 )
-\pdfm@box=\box31
-\c@Hy@AnnotLevel=\count110
-\HyField@AnnotCount=\count111
-\Fld@listcount=\count112
-\c@bookmark@seq@number=\count113
+\pdfm@box=\box35
+\c@Hy@AnnotLevel=\count118
+\HyField@AnnotCount=\count119
+\Fld@listcount=\count120
+\c@bookmark@seq@number=\count121
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\r
 erunfilecheck.sty"
@@ -349,7 +492,6 @@ Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\a
 tveryend.sty"
 Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
-Package atveryend Info: \enddocument detected (standard20110627).
 )
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek
 \uniquecounter.sty"
@@ -358,7 +500,7 @@ Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip52
+\Hy@SectionHShift=\skip59
 )
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/xcolor\xco
 lor.sty"
@@ -381,18 +523,18 @@ Package: colortbl 2018/12/12 v1.0d Color table columns (DPC)
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\arra
 y.sty"
 Package: array 2018/11/13 v2.4j Tabular extension package (FMi)
-\col@sep=\dimen119
-\ar@mcellbox=\box32
-\extrarowheight=\dimen120
+\col@sep=\dimen121
+\ar@mcellbox=\box36
+\extrarowheight=\dimen122
 \NC@list=\toks28
-\extratabsurround=\skip53
-\backup@length=\skip54
-\ar@cellbox=\box33
+\extratabsurround=\skip60
+\backup@length=\skip61
+\ar@cellbox=\box37
 )
 \everycr=\toks29
-\minrowclearance=\skip55
+\minrowclearance=\skip62
 )
-\rownum=\count114
+\rownum=\count122
 Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
 Package xcolor Info: Model `RGB' extended on input line 1364.
 Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
@@ -405,11 +547,11 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/float\floa
 t.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count115
+\c@float@type=\count123
 \float@exts=\toks30
-\float@box=\box34
+\float@box=\box38
 \@float@everytoks=\toks31
-\@floatcapt=\box35
+\@floatcapt=\box39
 )
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\ca
 ption.sty"
@@ -419,26 +561,26 @@ Package: caption 2020/01/03 v3.4h Customizing captions (AR)
 ption3.sty"
 Package: caption3 2020/01/03 v1.8h caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 61.
-\captionmargin=\dimen121
-\captionmargin@=\dimen122
-\captionwidth=\dimen123
-\caption@tempdima=\dimen124
-\caption@indent=\dimen125
-\caption@parindent=\dimen126
-\caption@hangindent=\dimen127
+\captionmargin=\dimen123
+\captionmargin@=\dimen124
+\captionwidth=\dimen125
+\caption@tempdima=\dimen126
+\caption@indent=\dimen127
+\caption@parindent=\dimen128
+\caption@hangindent=\dimen129
 Package caption Info: AMS or SMF document class detected.
 )
 Package caption Info: AMS or SMF document class.
-\c@caption@flags=\count116
-\c@continuedfloat=\count117
+\c@caption@flags=\count124
+\c@continuedfloat=\count125
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 )
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\su
 bcaption.sty"
 Package: subcaption 2020/01/22 v1.3d Sub-captions (AR)
-\c@subfigure=\count118
-\c@subtable=\count119
+\c@subfigure=\count126
+\c@subtable=\count127
 )
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/adjustbox\
 adjustbox.sty"
@@ -455,7 +597,7 @@ xkvutils.tex"
 \XKV@toks=\toks32
 \XKV@tempa@toks=\toks33
 )
-\XKV@depth=\count120
+\XKV@depth=\count128
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/adjustbox\
@@ -485,189 +627,46 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: xetex.def on input line 99.
 )
-\Gin@req@height=\dimen128
-\Gin@req@width=\dimen129
+\Gin@req@height=\dimen130
+\Gin@req@width=\dimen131
 )
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/collectbox
 \collectbox.sty"
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
-\collectedbox=\box36
+\collectedbox=\box40
 )
-\tc@llx=\dimen130
-\tc@lly=\dimen131
-\tc@urx=\dimen132
-\tc@ury=\dimen133
+\tc@llx=\dimen132
+\tc@lly=\dimen133
+\tc@urx=\dimen134
+\tc@ury=\dimen135
 Package trimclip Info: Using driver 'tc-xetex.def'.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/adjustbox\
 tc-xetex.def"
 File: tc-xetex.def 2019/01/04 v2.2 Clipping driver for xetex
 ))
-\adjbox@Width=\dimen134
-\adjbox@Height=\dimen135
-\adjbox@Depth=\dimen136
-\adjbox@Totalheight=\dimen137
-\adjbox@pwidth=\dimen138
-\adjbox@pheight=\dimen139
-\adjbox@pdepth=\dimen140
-\adjbox@ptotalheight=\dimen141
+\adjbox@Width=\dimen136
+\adjbox@Height=\dimen137
+\adjbox@Depth=\dimen138
+\adjbox@Totalheight=\dimen139
+\adjbox@pwidth=\dimen140
+\adjbox@pheight=\dimen141
+\adjbox@pdepth=\dimen142
+\adjbox@ptotalheight=\dimen143
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/ifoddpage\
 ifoddpage.sty"
 Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
-\c@checkoddpage=\count121
+\c@checkoddpage=\count129
 )
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/varwidth\v
 arwidth.sty"
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box37
-\sift@deathcycles=\count122
-\@vwid@loff=\dimen142
-\@vwid@roff=\dimen143
+\@vwid@box=\box41
+\sift@deathcycles=\count130
+\@vwid@loff=\dimen144
+\@vwid@roff=\dimen145
 ))
-("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/stackengin
-e\stackengine.sty"
-Package: stackengine 2017/02/13 v4.01\ Stacking text and objects in convenient 
-ways
-
-("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\e
-toolbox.sty"
-Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count123
-)
-("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/listofitem
-s\listofitems.sty"
-("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/listofit
-ems\listofitems.tex"
-Invalid UTF-8 byte or sequence at line 50 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 50 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 52 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 52 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 52 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 96 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 96 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 104 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 105 replaced by U+FFFD.
-\loi_cnt_foreach_nest=\count124
-Invalid UTF-8 byte or sequence at line 139 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 146 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 192 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 209 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 209 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 222 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 222 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 223 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 223 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 224 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 226 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 226 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 238 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 243 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 243 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 260 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 284 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 310 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 310 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 324 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 337 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 337 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 339 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 350 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 350 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 350 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 354 replaced by U+FFFD.
-\loi_nestcnt=\count125
-Invalid UTF-8 byte or sequence at line 367 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 367 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 367 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 367 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 375 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 375 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 375 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 375 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 377 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 378 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 398 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 398 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 399 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 399 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 399 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 399 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 399 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 399 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 409 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 410 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 411 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 411 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 411 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 411 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 411 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 411 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 414 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 422 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 422 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 426 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 428 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 433 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 433 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 441 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 441 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 442 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 443 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 443 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 443 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 446 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 446 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 446 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 448 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 448 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 451 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 455 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 455 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 458 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 458 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 472 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 475 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 492 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 508 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 508 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 509 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 509 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 519 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 541 replaced by U+FFFD.
-Invalid UTF-8 byte or sequence at line 541 replaced by U+FFFD.
-)
-Package: listofitems 2019/08/21 v1.63 Grab items in lists using user-specified 
-sep char (CT)
-)
-("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\calc
-.sty"
-Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count126
-\calc@Bcount=\count127
-\calc@Adimen=\dimen144
-\calc@Bdimen=\dimen145
-\calc@Askip=\skip56
-\calc@Bskip=\skip57
-LaTeX Info: Redefining \setlength on input line 80.
-LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count128
-\calc@Cskip=\skip58
-)
-\c@@stackindex=\count129
-\@boxshift=\skip59
-\stack@tmplength=\skip60
-\temp@stkl=\skip61
-\@stackedboxwidth=\skip62
-\@addedbox=\box38
-\@anchorbox=\box39
-\stackedbox=\box40
-\@centerbox=\box41
-\c@ROWcellindex@=\count130
-)
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tikz-cd\ti
 kz-cd.sty"
 Package: tikz-cd 2018/11/19 v0.9f Commutative diagrams with TikZ
@@ -1497,10 +1496,6 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LT@p@ftn=\toks49
 )
 \c@theorem=\count332
-\c@theoremA=\count333
-\c@theoremB=\count334
-LaTeX Info: Redefining \E6 on input line 262.
-LaTeX Info: Redefining \-mod on input line 265.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/todonotes\
 todonotes.sty"
@@ -1523,14 +1518,14 @@ File: tikzlibraryfadings.code.tex 2019/01/05 v3.1 (3.1)
 aries\pgflibraryfadings.code.tex"
 File: pgflibraryfadings.code.tex 2019/01/05 v3.1 (3.1)
 )))
-\c@@todonotes@numberoftodonotes=\count335
+\c@@todonotes@numberoftodonotes=\count333
 )
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\g
 eometry.sty"
 Package: geometry 2018/04/16 v5.8 Page Geometry
-\Gm@cnth=\count336
-\Gm@cntv=\count337
-\c@Gm@tempcnt=\count338
+\Gm@cnth=\count334
+\Gm@cntv=\count335
+\c@Gm@tempcnt=\count336
 \Gm@bindingoffset=\dimen313
 \Gm@wd@mp=\dimen314
 \Gm@odd@mp=\dimen315
@@ -1551,40 +1546,40 @@ Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 LaTeX Warning: Unused global option(s):
     [UTF8].
 
-(re_subvarieties_in_abelian_variety.aux)
-\openout1 = `re_subvarieties_in_abelian_variety.aux'.
+(LaTeX_template.aux (chapters/chapter9.aux))
+\openout1 = `LaTeX_template.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 335.
-LaTeX Font Info:    ... okay on input line 335.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 335.
-LaTeX Font Info:    ... okay on input line 335.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 335.
-LaTeX Font Info:    ... okay on input line 335.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 335.
-LaTeX Font Info:    ... okay on input line 335.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 335.
-LaTeX Font Info:    ... okay on input line 335.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 335.
-LaTeX Font Info:    ... okay on input line 335.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 335.
-LaTeX Font Info:    ... okay on input line 335.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 335.
-LaTeX Font Info:    ... okay on input line 335.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 335.
-LaTeX Font Info:    ... okay on input line 335.
-LaTeX Font Info:    Try loading font information for U+msa on input line 335.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 311.
+LaTeX Font Info:    ... okay on input line 311.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 311.
+LaTeX Font Info:    ... okay on input line 311.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 311.
+LaTeX Font Info:    ... okay on input line 311.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 311.
+LaTeX Font Info:    ... okay on input line 311.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 311.
+LaTeX Font Info:    ... okay on input line 311.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 311.
+LaTeX Font Info:    ... okay on input line 311.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 311.
+LaTeX Font Info:    ... okay on input line 311.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 311.
+LaTeX Font Info:    ... okay on input line 311.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 311.
+LaTeX Font Info:    ... okay on input line 311.
+LaTeX Font Info:    Try loading font information for U+msa on input line 311.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 msa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 335.
+LaTeX Font Info:    Try loading font information for U+msb on input line 311.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
 msb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+wasy on input line 335.
+LaTeX Font Info:    Try loading font information for U+wasy on input line 311.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/wasysym\uw
 asy.fd"
@@ -1592,18 +1587,18 @@ File: uwasy.fd 2003/10/30 v2.0 Wasy-2 symbol font definitions
 )
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <8> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 335.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 311.
 
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <6> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 335.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 311.
 
 
 LaTeX Font Warning: Font shape `U/wasy/b/n' in size <5> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 335.
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 311.
 
 \AtBeginShipoutBox=\box102
-Package hyperref Info: Link coloring ON on input line 335.
+Package hyperref Info: Link coloring ON on input line 311.
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/hyperref\n
 ameref.sty"
@@ -1617,15 +1612,14 @@ Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
 \gettitlestring.sty"
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count339
+\c@section@level=\count337
 )
-LaTeX Info: Redefining \ref on input line 335.
-LaTeX Info: Redefining \pageref on input line 335.
-LaTeX Info: Redefining \nameref on input line 335.
- (re_subvarieties_in_abelian_variety.out)
-(re_subvarieties_in_abelian_variety.out)
+LaTeX Info: Redefining \ref on input line 311.
+LaTeX Info: Redefining \pageref on input line 311.
+LaTeX Info: Redefining \nameref on input line 311.
+ (LaTeX_template.out) (LaTeX_template.out)
 \@outlinefile=\write4
-\openout4 = `re_subvarieties_in_abelian_variety.out'.
+\openout4 = `LaTeX_template.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: longtable package is loaded.
@@ -1669,9 +1663,13 @@ Package caption Info: End \AtBeginDocument code.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-(re_subvarieties_in_abelian_variety.toc)
+
+LaTeX Font Warning: Font shape `U/wasy/b/n' in size <7> not available
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 327.
+
+(LaTeX_template.toc)
 \tf@toc=\write5
-\openout5 = `re_subvarieties_in_abelian_variety.toc'.
+\openout5 = `LaTeX_template.toc'.
 
 
 ("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek
@@ -1680,62 +1678,35 @@ File: se-ascii-print.def 2016/05/16 v1.11 stringenc: Printable ASCII characters
 
 )
 
-LaTeX Font Warning: Font shape `U/wasy/b/n' in size <7> not available
-(Font)              Font shape `U/wasy/m/n' tried instead on input line 354.
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 342.
 
-[1]
+[1] [2] [3]
+\openout2 = `chapters/chapter9.aux'.
 
-LaTeX Warning: Reference `subsec:small_mon' on page 2 undefined on input line 4
-21.
+ (chapters/chapter9.tex) (LaTeX_template.bbl
 
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-LaTeX Warning: Reference `lem:small_mon_but_translation_invariant' on page 2 un
-defined on input line 421.
-
-[2] [3] [4] [5] [6] [7] [8]
-Overfull \hbox (2.46861pt too wide) in paragraph at lines 860--861
-[]\TU/lmr/m/n/10 If $\OML/cmm/m/it/10 ^^^[]$ \TU/lmr/m/n/10 is generically inje
-ctive,
- []
-
-[9] [10] [11] [12] [13]
-LaTeX Font Info:    Try loading font information for U+euf on input line 1457.
-
-("C:\Users\Administrator\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsfonts\u
-euf.fd"
-File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [14] [15] [16] [17] [18] [19]
-Overfull \vbox (1.62273pt too high) has occurred while \output is active []
+) [4
 
 
-[20] [21] [22] [23] [24]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [25]
-[26] (re_subvarieties_in_abelian_variety.bbl [27]) [28]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 2176.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 2176.
-
-(re_subvarieties_in_abelian_variety.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 2176.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2176.
-
-Package rerunfilecheck Info: File `re_subvarieties_in_abelian_variety.out' has 
-not changed.
-(rerunfilecheck)             Checksum: C472DC337DEF58E5FA7C670CFB69495B.
-
-
-LaTeX Warning: There were undefined references.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2176.
+]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 523.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 523.
+ (LaTeX_template.aux (chapters/chapter9.aux))
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 523.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 523.
+Package rerunfilecheck Info: File `LaTeX_template.out' has not changed.
+(rerunfilecheck)             Checksum: 8F1C94816620F6BD9551D949E2E9E85F.
  ) 
 Here is how much of TeX's memory you used:
- 38513 strings out of 427748
- 724678 string characters out of 3150981
- 814794 words of memory out of 3000000
- 41838 multiletter control sequences out of 15000+200000
- 545393 words of font info for 86 fonts, out of 3000000 for 9000
+ 37100 strings out of 427748
+ 690267 string characters out of 3150981
+ 746735 words of memory out of 3000000
+ 40428 multiletter control sequences out of 15000+200000
+ 544189 words of font info for 78 fonts, out of 3000000 for 9000
  1489 hyphenation exceptions out of 8191
- 61i,20n,82p,1336b,1078s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 61i,15n,82p,856b,965s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on re_subvarieties_in_abelian_variety.pdf (28 pages).
+Output written on LaTeX_template.pdf (4 pages).
