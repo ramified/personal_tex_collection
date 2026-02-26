@@ -1,0 +1,48 @@
+
+
+\documentclass[tikz,border=5pt]{standalone}
+\usepackage{tikz}
+\usepackage{graphicx} % to include images
+\usetikzlibrary{calc}
+
+\begin{document}
+
+\begin{tikzpicture}[>=stealth, node distance=2cm]
+
+% --------------------
+% Nodes (replace \includegraphics[...]{} with your images)
+% --------------------
+\node (A) at (0,0) {\includegraphics[width=4cm]{test_before_zbuffer.pdf}}; % top-left
+\node (Bpos) at (4,0){};
+\node (B) at (5,0) {\includegraphics[width=0.8cm]{Z_in_A_2.pdf}}; % top-right
+\node (Cmiddle) at (0,-2.5) {}; % bottom-left
+\node (C) at (-2,-2.8) {}; % empty node as reference
+\node[font=\fontsize{6}{1}\selectfont] (pi) at (-0.135,0.02) {$\textstyle p_{\scriptstyle \hspace{-0.45mm}\raisebox{-0.5mm}{$\scriptscriptstyle i$}}$};
+\node[red] (Lamb) at (1.65,1.2) {$\Lambda_Z$};
+\node[black] (abelian) at (5.6,1.2) {$A$};
+\node[blue, font=\fontsize{6}{9}\selectfont] (abelianZ) at (5.2,1) {$Z$};
+\draw[thick] (C) -- ++(4cm,0) coordinate (lineEnd); % 4cm line
+\node (occupy) at (6,0) {$\;$};
+
+% -------------------
+% Label at the right end
+% -------------------
+\node[above right,xshift=-8mm] at (lineEnd) {$T_0^*A$};
+
+% -------------------
+% Draw a point in the middle
+% -------------------
+\coordinate (midpoint) at ($(C)!0.5!(lineEnd)$); % midpoint of the line
+\filldraw[black] (midpoint) circle (1pt); % point
+\node[below, font=\fontsize{9}{9}\selectfont] at (midpoint) {$\xi_{\raisebox{-0.5mm}{$\scriptscriptstyle 0$}}$}; % label above the point
+
+
+% --------------------
+% Arrows
+% --------------------
+\draw[->] (A) -- (Bpos); % top horizontal arrow
+\draw[->] (A) -- node[right]{\(\gamma_Z\)} (Cmiddle) ; % left vertical arrow with label
+
+\end{tikzpicture}
+
+\end{document}
