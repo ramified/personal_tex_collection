@@ -56,31 +56,7 @@
 %};
 %
 
-\foreach \k in {0,1,2}
-{
 
-
-\addplot3%
-[ samples=100
-, samples y=0
-, thick
-, red
-, domain=-30:30
-, variable=\t
-] 
-({cos (t-90+120*\k)-sqrt(3)*sin(120*\k)},{3*s(-t)^2+s(-t)-2},{sin (t-90+120*\k)+sqrt(3)*cos(120*\k)});
-
-\addplot3%
-[ samples=100
-, samples y=0
-, thick
-, red
-, domain=-30:30
-, variable=\t
-] 
-({cos (t-90+120*\k)-sqrt(3)*sin(120*\k)},{3*s(t)^2+s(t)-2},{sin (t-90+120*\k)+sqrt(3)*cos(120*\k)});
-
-}
 
 \draw [black, thick]  {
 (-2,0,-2) -- (2, 0, -2) -- (2,0,2) -- (-2,0,2) -- cycle
@@ -127,35 +103,6 @@
 , variable=\t
 ] 
 ({cos (t-90+120*\k)-sqrt(3)*sin(120*\k)},{0},{sin (t-90+120*\k)+sqrt(3)*cos(120*\k)});
-
-\addplot3%
-[ samples=100
-, samples y=0
-, thick
-, red
-, domain=30:60
-, variable=\t
-] 
-({cos (t-90+120*\k)-sqrt(3)*sin(120*\k)},{3*s(t)^2+s(t)-2},{sin (t-90+120*\k)+sqrt(3)*cos(120*\k)});
-
-\addplot3%
-[ samples=100
-, samples y=0
-, thick
-, red
-, domain=-60:-30
-, variable=\t
-] 
-({cos (t-90+120*\k)-sqrt(3)*sin(120*\k)},{3*s(-t)^2+s(-t)-2},{sin (t-90+120*\k)+sqrt(3)*cos(120*\k)});
-
-\addplot3[
-    only marks,      
-    mark=*,
-    mark size=0.3mm,
-    color=black,
-] coordinates {({cos(120*\k)},0,{sin(120*\k)})
- ({cos(120*\k+60)},0,{sin(120*\k+60)})};
-
 
 
 
