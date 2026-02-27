@@ -396,17 +396,17 @@ Consider a non-degenerate subvariety $Z \subset A$ and a tuple $(m) = (m_1, \ldo
 \item When $\Gal(\gamma_{Z})=S_d$, the Chern--Mather classes of $Z^{(m)}$ can be written as
 \begin{equation*}
 \begin{aligned}
-  c_{M,l}\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{c_Z^{(m)}} \sum_{\lambda \dashv l} \;\mu_d^{\lambda} \left( \bigast_{i=1}^{k'} c_{\lambda_i}\right) \\ 
+  c_{M,l}\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{d_Z^{(m)}} \sum_{\lambda \dashv l} \;\mu_d^{\lambda} \left( \bigast_{i=1}^{k'} c_{\lambda_i}\right) \\ 
 \end{aligned}
 \end{equation*}
-for certain explicit coefficients $c_Z^{(m)} \in \mathbb{N}_{>0}$ and $\mu_d^{\lambda} \in \mathbb{Z}$.
+for certain explicit coefficients $d_Z^{(m)} \in \mathbb{N}_{>0}$ and $\mu_d^{\lambda} \in \mathbb{Z}$.
 \item When $Z=-Z$ and $\Gal(\gamma_{Z})=W(C_{d/2})$, the Chern--Mather classes of $Z^{(m)}$ can be written as
 \begin{equation*}
 \begin{aligned}
-  c_{M,l}\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{c_Z^{(m)}} \sum_{\lambda \dashv l} \;\widetilde{\mu}_{\widetilde{d}}^{\lambda} \left( \bigast_{i=1}^{k'} c_{\lambda_i}\right) \\
+  c_{M,l}\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{d_Z^{(m)}} \sum_{\lambda \dashv l} \;\widetilde{\mu}_{\widetilde{d}}^{\lambda} \left( \bigast_{i=1}^{k'} c_{\lambda_i}\right) \\
 \end{aligned}
 \end{equation*}
-for certain explicit coefficients $c_Z^{(m)} \in \mathbb{N}_{>0}$ and $\widetilde{\mu}_{\widetilde{d}}^{\lambda} \in \mathbb{Z}$.
+for certain explicit coefficients $d_Z^{(m)} \in \mathbb{N}_{>0}$ and $\widetilde{\mu}_{\widetilde{d}}^{\lambda} \in \mathbb{Z}$.
 \end{enumerate}
 \endgroup
 \end{theoremB}
@@ -1750,8 +1750,8 @@ $$a^{(m)}: A^d \longrightarrow A \qquad (p_1,\ldots,p_d) \longmapsto \sum_{i=1}^
 We also define 
 $$\mathbb{P}\Lambda_{Z}^{(m)}: = \left( a^{(m)},\Id_{\mathbb{P}^{\vee}}  \right)_* \mathbb{P}\Lambda_{Z}^{\univ}.$$
 as the (projectivized) weighted Lagrangian cycle in $\mathbb{P}T^*A$. The projective cycle $\mathbb{P}\Lambda_{Z}^{(m)}$ is irreducible but may appear with multiplicities. We can therefore write
-$$\mathbb{P}\Lambda_{Z}^{(m)} = c_Z^{(m)}  \mathbb{P}\Lambda_{Z^{(m)}}$$
-where $c_Z^{(m)} \in \mathbb{Z}_{>0}$ and $Z^{(m)} \subset A$ are uniquely determined. This gives rise to a family of subvarieties parametrized by $\mathbb{Z}^d$.
+$$\mathbb{P}\Lambda_{Z}^{(m)} = d_Z^{(m)}  \mathbb{P}\Lambda_{Z^{(m)}}$$
+where $d_Z^{(m)} \in \mathbb{Z}_{>0}$ and $Z^{(m)} \subset A$ are uniquely determined. This gives rise to a family of subvarieties parametrized by $\mathbb{Z}^d$.
 \end{definition}
 
 The next lemma gathers some basic properties of $Z^{(m)}$. Observe that $S_d=\Aut\left(\gamma_{Z}^{-1}(\xi_0)\right)$ acts naturally on $\mathbb{Z}^d$ via
@@ -1763,7 +1763,7 @@ $$g(m)=\left(m_{g(1)},\ldots , m_{g(d)}\right) \in \mathbb{Z}^d.$$
 %\setlist{itemsep=-0.4em}
 \renewcommand\labelenumi{(\theenumi)}
 \begin{enumerate}[(1)]
-\item For all $g\in \Gal(\gamma_{Z})$, we have $ Z^{g(m)}=Z^{(m)}$, $c_Z^{g(m)}=c_Z^{(m)}$;
+\item For all $g\in \Gal(\gamma_{Z})$, we have $ Z^{g(m)}=Z^{(m)}$, $c_Z^{g(m)}=d_Z^{(m)}$;
 \item For $(m)=(1,0,\ldots,0)\in \mathbb{Z}^d$, $Z^{(m)}=Z$;
 \item For all $(m), (m') \in \mathbb{Z}^d$, we have  $\mathbb{P}\Lambda_{Z}^{(m)} \circ \mathbb{P}\Lambda_{Z}^{(m')} \supseteq \mathbb{P}\Lambda_{Z}^{(m+m')}$;
 \item The group $\left< \mathbb{P}\Lambda_{Z^{(m)}} \right>_{\Abel}$ is closed under the convolution product.
@@ -1843,7 +1843,7 @@ For a subvariety $Z \subset A$, both its dimension $\dim Z$ and its cohomology c
 \end{remark}
 
 \subsection{The homology class of $\mathbb{P}\Lambda_{Z}^{\times d}$}
-By Remark \ref{rem:CMclass_know_dim}, it suffices to consider the homology class of $\mathbb{P}\Lambda_{Z^{(m)}}$. If we are not concerned with the scalar factor $c_Z^{(m)}$, we may equivalently compute $[\mathbb{P}\Lambda_{Z}^{(m)}]$, which by definition is the pushforward of $[\mathbb{P}\Lambda_{Z}^{\univ}]$. Consequently, the problem reduces to determining $[\mathbb{P}\Lambda_{Z}^{\univ}] \in \Hnm^{2dn}(A^d \times \mathbb{P}^{\vee})$.
+By Remark \ref{rem:CMclass_know_dim}, it suffices to consider the homology class of $\mathbb{P}\Lambda_{Z^{(m)}}$. If we are not concerned with the scalar factor $d_Z^{(m)}$, we may equivalently compute $[\mathbb{P}\Lambda_{Z}^{(m)}]$, which by definition is the pushforward of $[\mathbb{P}\Lambda_{Z}^{\univ}]$. Consequently, the problem reduces to determining $[\mathbb{P}\Lambda_{Z}^{\univ}] \in \Hnm^{2dn}(A^d \times \mathbb{P}^{\vee})$.
 
 Typically, for an initial subvariety $Z \subset A$, the Chern–Mather classes are known. Our ultimate goal is to express $[\mathbb{P}\Lambda_{Z}^{\univ}]$ in terms of these classes; as a preparatory step, we first examine $[\mathbb{P}\Lambda_{Z}^{\times d}]$.
 
@@ -1964,7 +1964,7 @@ We can now determine $[\mathbb{P}\Lambda_{Z}^{(m)}]$ in the case where the monod
 \end{equation*}
 Therefore,
 \begin{equation}\label{eq:CMclass_sym}
-c_l\left(\Lambda_{Z^{(m)}}\right)=\frac{1}{c_Z^{(m)}}\sum_{\alpha} \sum_{\sum l_i=l}  \left(\mu(\hat{0},\alpha)    \alpha(m)^{2\boldsymbol{l}} \bigast_{i=1}^k c_{l_i}\right)
+c_l\left(\Lambda_{Z^{(m)}}\right)=\frac{1}{d_Z^{(m)}}\sum_{\alpha} \sum_{\sum l_i=l}  \left(\mu(\hat{0},\alpha)    \alpha(m)^{2\boldsymbol{l}} \bigast_{i=1}^k c_{l_i}\right)
 \end{equation}
 The following corollary collects some quantitative implications of \eqref{eq:CMclass_sym}.
 \begin{corollary}
@@ -2086,7 +2086,7 @@ We can now determine $[\mathbb{P}\Lambda_{Z}^{(m)}]$ in the case where $Z=-Z$ an
 
 Therefore,
 \begin{equation}\label{eq:CMclass_signsym}
-c_l\left(\Lambda_{Z^{(m)}}\right)=\frac{1}{c_Z^{(m)}}\sum_{\beta} \sum_{\sum l_i=l}  \left( 2^{d/2-k}\, \mu(\hat{0},\beta)    \beta(\widetilde{m}^2)^{\boldsymbol{l}} \bigast_{i=1}^k c_{l_i}\right)
+c_l\left(\Lambda_{Z^{(m)}}\right)=\frac{1}{d_Z^{(m)}}\sum_{\beta} \sum_{\sum l_i=l}  \left( 2^{d/2-k}\, \mu(\hat{0},\beta)    \beta(\widetilde{m}^2)^{\boldsymbol{l}} \bigast_{i=1}^k c_{l_i}\right)
 \end{equation}
 The following corollary collects some quantitative implications of \eqref{eq:CMclass_signsym}.
 \begin{corollary}
@@ -2130,8 +2130,8 @@ In this definition:
 Now, the formulas \eqref{eq:CMclass_sym} and \eqref{eq:CMclass_signsym} can be written as
 \begin{equation*}
 \begin{aligned}
-  c_l\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{c_Z^{(m)}} \sum_{\lambda \dashv l} \;\mu_d^{\lambda} \left( \bigast_{i=1}^{k'} c_{\lambda_i}\right)\qquad && \text{type $A$ case} \\ 
-  c_l\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{c_Z^{(m)}} \sum_{\lambda \dashv l} \;\widetilde{\mu}_{\widetilde{d}}^{\lambda} \left( \bigast_{i=1}^{k'} c_{\lambda_i}\right)\qquad && \text{type $C$ case} \\
+  c_l\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{d_Z^{(m)}} \sum_{\lambda \dashv l} \;\mu_d^{\lambda} \left( \bigast_{i=1}^{k'} c_{\lambda_i}\right)\qquad && \text{type $A$ case} \\ 
+  c_l\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{d_Z^{(m)}} \sum_{\lambda \dashv l} \;\widetilde{\mu}_{\widetilde{d}}^{\lambda} \left( \bigast_{i=1}^{k'} c_{\lambda_i}\right)\qquad && \text{type $C$ case} \\
 \end{aligned}
 \end{equation*}
 
@@ -2154,14 +2154,14 @@ $$\bigast_{i=1}^{l} c_{1} = \frac{l!}{(g-l)!} \cdot \Theta^{g-l}.$$
 When $C$ is non-hyperelliptic, we get
 \begin{equation*}
 \begin{aligned}
-  c_l\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{c_Z^{(m)}} \frac{1}{2^{l}(g-l)!} \sum_{\sigma \in S_{2g-2}} \prod_{i=1}^{l} \left( m_{\sigma(2i-1)}-m_{\sigma(2i)} \right)^2 \cdot \Theta^{g-l} \\ 
+  c_l\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{d_Z^{(m)}} \frac{1}{2^{l}(g-l)!} \sum_{\sigma \in S_{2g-2}} \prod_{i=1}^{l} \left( m_{\sigma(2i-1)}-m_{\sigma(2i)} \right)^2 \cdot \Theta^{g-l} \\ 
   \dim Z^{(m)} =\;& \min_{k \in \mathbb{Z}} \left\{ \rule{0mm}{3mm} g-1, \# \left\{ i \in [2g-2] \;\middle|\; m_i \neq k \right\} \right\} \\
 \end{aligned}
 \end{equation*}
 When $C$ is hyperelliptic, with $(m)=\left( m_1,\ldots,m_{g-1},0,\ldots,0 \right)$, we get
 \begin{equation*}
 \begin{aligned}
-  c_l\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{c_Z^{(m)}}  \frac{2^{g-1-l} l!}{g-l}  \sum_{1 \leqslant i_1 < \cdots i_{l} \leqslant g-1} m_{i_1}^2\cdots m_{i_{l}}^2 \cdot \Theta^{g-l} \\ 
+  c_l\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{d_Z^{(m)}}  \frac{2^{g-1-l} l!}{g-l}  \sum_{1 \leqslant i_1 < \cdots i_{l} \leqslant g-1} m_{i_1}^2\cdots m_{i_{l}}^2 \cdot \Theta^{g-l} \\ 
   \dim Z^{(m)} =\;&  \# \left\{ i \in [g-1] \;\middle|\; m_i \neq 0 \right\} \\
 \end{aligned}
 \end{equation*}

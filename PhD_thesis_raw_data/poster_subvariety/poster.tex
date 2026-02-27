@@ -131,6 +131,12 @@
 \DeclareMathOperator{\Hnm}{\operatorname{H}}
 \newcommand{\bigast}{\mathop{\scalebox{1.5}{\raisebox{-0.2ex}{$\ast$}}}}%
 
+%https://stackoverflow.com/questions/57382286/bibliography-style-and-line-breaks-in-beamer-poster
+\setbeamertemplate{bibliography entry article}{}
+\setbeamertemplate{bibliography entry title}{}
+\setbeamertemplate{bibliography entry location}{}
+\setbeamertemplate{bibliography entry note}{}
+
 \begin{document}
 \begin{frame}[t]
 \begin{columns}[t]
@@ -147,9 +153,12 @@ Let $A/\mathbb{C}$ be an abelian variety of dimension $n$, and let $Z \subset A$
  $$\phi_Z: Z^{\sm}\longrightarrow \Gr(r,T_0A) \qquad p \longrightarrow T_pZ \subset T_pA \cong T_0A.$$
 Its differential
 $$d_p\phi_Z: T_pZ \longrightarrow \Hom_{\mathbb{C}}(T_pZ, N_pZ)$$
-is the second fundamental form, from which curvature invariants can be extracted.\\[15mm]
+is the second fundamental form, which captures information about the curvature of $Z$.
 
-Besides the obvious examples (illustrated below), when can the Gauss map $\phi_Z$ fail to be generically injective?
+\end{block}
+\begin{block}{Generic Injectivity of the Tangent Gauss Map}
+
+Clearly the Gauss map has degree $> 1$ whenever the subvariety $Z \subset A$ is stable under a nontrivial translation or symmetric up to a translation, as shown below:
 $\;$\\[-30mm] $\,$
   \begin{figure}[th]
   \begin{minipage}[t]{.45\textwidth}
@@ -163,6 +172,7 @@ $\;$\\[-30mm] $\,$
   	\includegraphics[width=.7\textwidth]{figures/reflection_invariant.png}
   \end{minipage}
   \end{figure}
+Are these the only cases where the Gauss map fails to be generically injective?
 
 We specialize to the case where $Z=C$ is a curve. When $n=2$, $\phi_C\!\!: C^{\sm} \longrightarrow \mathbb{P}^1$ typically fails to be generically injective.
 
@@ -174,11 +184,10 @@ We specialize to the case where $Z=C$ is a curve. When $n=2$, $\phi_C\!\!: C^{\s
   arc=4pt,
   left=12pt,right=12pt,top=12pt,bottom=12pt
 ]
-\textbf{Conjecture 1.}
-Let $C \subset A$ be a non-degenerate curve, $n>2$. If $C$ is not invariant under any non-trivial translation or reflection, then $\phi_C$ is generically injective.
+\textbf{Question 1.}
+Let $C$ be a non-degenerate curve on an abelian variety $A$ of dimension $n > 2$. If $C$ is not invariant under any non-trivial translation or reflection, then $\phi_C$ is generically injective.
 \end{tcolorbox}
-  \end{block}
-  \begin{block}{A Counterexample for Conjecture 1}
+
   $\;$\\[-45mm] $\,$
     \begin{figure}[th]
     \begin{minipage}[t]{.45\textwidth}
@@ -195,10 +204,10 @@ Let $C \subset A$ be a non-degenerate curve, $n>2$. If $C$ is not invariant unde
   left=12pt,right=12pt,top=12pt,bottom=12pt
 ]
 \textbf{Example 1.}
-For $A = E_{\rho}^{\oplus n}$, $\zeta_3$ acts on $A$ (and hence on $T_0A$) by scalar multiplication.
-Computer experiments yield a non-degenerate $\zeta_3$-invariant curve $C \subset A$, for which $\phi_C$ is not generically injective.
+For any $n$ the power $A = E_{\rho}^{\oplus n}$ comes with a natural diagonal action of $\mathbb{\mu}_3 \cong \mathbb{Z}/3\mathbb{Z}$.
+Computer experiments yield a non-degenerate $\mathbb{\mu}_3$-invariant curve $C \subset A$, for which $\phi_C$ is not generically injective.
 \end{tcolorbox}
-We have found no counterexample to Conjecture 1 when $A$ is not isogenous to $E_{\mathfrak{i}}^{\oplus n}$ or $E_{\rho}^{\oplus n}$. This suggests the following refinement:
+We have found no counterexample to Question 1 when $A$ is not isogenous to $E_{\mathfrak{i}}^{\oplus n}$ or $E_{\rho}^{\oplus n}$. This suggests the following refinement:
 \begin{tcolorbox}[
   colback=gray!15,
   colframe=gray!60,
@@ -207,7 +216,7 @@ We have found no counterexample to Conjecture 1 when $A$ is not isogenous to $E_
   left=12pt,right=12pt,top=12pt,bottom=12pt
 ]
 \textbf{Conjecture 2.}
-Let $C \subset A$ be a non-degenerate curve, $n>2$. If no non-trivial $\tau \in \Aut(A)$ preserves $C$ and acts by scalar multiplication on $T_0A$, then $\phi_C$ is generically injective.
+Let $C$ be a non-degenerate curve on an abelian variety $A$ of dimension $n>2$. Then $\phi_C$ is generically injective unless there exists a non-trivial automorphism $\tau \in \Aut(A)$ which preserves $C$ and acts via a scalar on $T_0A$.
 \end{tcolorbox}
 One may restate the conjecture using Gauss curvature, yielding a slightly stronger statement:
 \begin{tcolorbox}[
@@ -218,24 +227,24 @@ One may restate the conjecture using Gauss curvature, yielding a slightly strong
   left=12pt,right=12pt,top=12pt,bottom=12pt
 ]
 \textbf{Conjecture 3.}
-Let $C \subset A$ be a non-degenerate curve, $n>2$. For a general point $p \in \Img \phi_C$, all points in $\phi_C^{-1}(p)$ exhibit the same Gauss curvature.
+Let $C$ be a non-degenerate curve on an abelian variety $A$ of dimension $n > 2$. Then for general $p \in \Img \phi_C$, the Gauss curvature of $C \subset A$ is the same at all points of the fiber $\phi_C^{-1}(p)$.
 \end{tcolorbox}
 
   \end{block}
   \begin{block}{Known Cases}
   \begin{enumerate}
   \item
-  If $A=\Jac(C)$ and $C$ is embedded via the Abel-–Jacobi map, then $\phi_C=|\omega_C|$ is the canonical map:
+  If $A=\Jac(C)$ and $C$ is embedded via the Abel-–Jacobi map, then $\phi_C=|\omega_C|$ is the canonical map, and one may check Conjectures 2 and 3 by direct inspection.
 %  $\;$\\[-25mm] $\,$
-  \begin{itemize}
-  \item When $C$ is hyperelliptic, $C$ is invariant under the hyperelliptic involution, and $\deg \phi_C=2$;
-  \item When $C$ is non-hyperelliptic, $\phi_C$ is an embedding.
-  \end{itemize}
+%  \begin{itemize}
+%  \item When $C$ is hyperelliptic, $C$ is invariant under the hyperelliptic involution, and $\deg \phi_C=2$;
+%  \item When $C$ is non-hyperelliptic, $\phi_C$ is an embedding.
+%  \end{itemize}
   
   \item Let $h:C \longrightarrow C'$ be a cyclic $k$-fold cover defined by $\eta \in \Pic(C')$ with $\eta^{\otimes k} \cong \mathcal{O}_{C'}(B)$. If $A = \Prym(C/C')$ and $C \to A$ is the Abel--Prym map, then
-  $$T_0A \cong \Hnm^0(\omega_C)/\Hnm^0(\omega_{C'}) \cong \bigoplus_{i=1}^{k-1} \Hnm^0(\omega_{C'} \otimes \eta^i)$$
+%  $$T_0A \cong \Hnm^0(\omega_C)/\Hnm^0(\omega_{C'}) \cong \bigoplus_{i=1}^{k-1} \Hnm^0(\omega_{C'} \otimes \eta^i)$$
   $$\phi_C: C \longrightarrow \mathbb{P} T_0A \cong \mathbb{P} \left( \bigoplus_{i=1}^{k-1} \Hnm^0(\omega_{C'} \otimes \eta^i)  \right)$$
-  $\;$\\[-25mm] $\,$
+  $\;$\\[-20mm] $\,$
   \begin{itemize}
   \item $k=2$: $C$ is invariant under the Prym involution, and $\phi_C=|\omega_{C'} \otimes \eta| \circ h$.\\
   If $C'$ is non-hyperelliptic with $g(C') \geq 4$, then $\deg \phi_C = 2$ or $4$, and
@@ -261,10 +270,10 @@ $\gamma_Z^{(\aff)}: \Lambda_{Z} \longrightarrow T^{*}_{0}A,$ which is genericall
 
   $\;$\\[-48mm] $\,$
     \begin{figure}[th]
-    \begin{minipage}[t]{.9\textwidth}
+    \begin{minipage}[t]{.97\textwidth}
       \vspace{-1cm}
     	\centering
-    	\includegraphics[height=20cm]{figures/3dTikZ/combi_of_conormal_tangent_map.pdf}
+    	\includegraphics[height=23.7cm]{figures/3dTikZ/combi_of_conormal_tangent_map.pdf}
     \end{minipage}
     \end{figure}
 $\;$\\[-35mm] $\,$
@@ -279,22 +288,21 @@ $\;$\\[-35mm] $\,$
 
 
 \textbf{Conjecture 4.}
-Suppose $A$ is not isogenous to $E_{\mathfrak{i}}^{\oplus n}$ or $E_{\rho}^{\oplus n}$.
-For any non-degenerate curve $C \subset A$ that is invariant under no non-trivial translation or reflection, the monodromy group $\Gal(\gamma_C)$ is big — namely, a Weyl group of type $A$, $C$, or $D$.
+Suppose $A$ is not isogenous to $E_{\mathfrak{i}}^{\oplus n}$ or $E_{\rho}^{\oplus n}$, and let $C \subset A$ be a non-degenerate curve which is not stable under any non-trivial translation or reflection. Then the monodromy group $\Gal(\gamma_C)$ is big — namely, a Weyl group of type $A$, $C$, or $D$.
 \end{tcolorbox}
 
 When $n>2$, Conjecture 4 follows from Conjecture 3.
 
-The monodromy group $\Gal(\gamma_C)$ helps us to determine controls the Tannaka group of the perverse sheaf category generated by the IC sheaf on $C$; see \cite[Thm 2.1]{Kr22GaussI}.
+The monodromy group $\Gal(\gamma_C)$ helps us to determine controls the Tannaka group of the tensor category generated by the IC sheaf on $C$; see \cite[Theorem 2.1]{Kr22GaussI}.
 
   \end{block}
-  $\;$\\[-35mm] $\,$
+%  $\;$\\[-35mm] $\,$
   \begin{block}{The Subvariety $Z^{(m)}$}
   
   The convolution structure on perverse sheaves gives rise to numerous cycles in $A$. They admit a simple geometric description: by fiberwise summing points in $\gamma_Z^{-1}(\xi_0)$ and projecting, one obtains new subvarieties of varying dimensions.
   
   Fix a general point $\xi_0 \in T_0^*A$ and choose an ordering
-  $\gamma_Z^{-1}(\xi_0)= \left\{ p_1,\ldots,p_d \right\} \subset Z$. For $(m)=(m_1,\ldots,m_d)\in\mathbb{Z}^d$, let $Z^{(m)}$ denote the irreducible component of the resulting subvariety containing $\sum_i m_i p_i$.
+  $\gamma_Z^{-1}(\xi_0)= \left\{ p_1,\ldots,p_d \right\} \subset Z$. For $(m)=(m_1,\ldots,m_d)\in\mathbb{Z}^d$, let $Z^{(m)}$ denote the irreducible component of the subvariety obtained by this construction that contains the point $\sum_i m_i p_i$.
   
   \begin{tcolorbox}[
     colback=red!10,
@@ -304,18 +312,18 @@ The monodromy group $\Gal(\gamma_C)$ helps us to determine controls the Tannaka 
     left=12pt,right=12pt,top=12pt,bottom=12pt
   ]
   \textbf{Theorem 1.}
-  Let $c_i := c_{M,i}(\Lambda_Z)$ be the Chern--Mather class of $Z$, $*$ be the Pontryagin product, and we write $\lambda \dashv l$ to indicate that $\lambda=[\lambda_1,\ldots,\lambda_{k'}]$ is a partition of $l$.
+  Let $c_i := c_{M,i}(\Lambda_Z)$ be the Segre class of the cone $\Lambda_Z$, and let $*$ denote the Pontryagin product.
   
-  When $\Gal(\gamma_{Z})=S_d$, the Chern--Mather classes of $Z^{(m)}$ can be written as
+  When $\Gal(\gamma_{Z})=S_d$, the Segre classes of $\Lambda_{Z^{(m)}}$ can be written as
   \begin{equation*}
   \begin{aligned}
-    c_{M,l}\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{c_Z^{(m)}} \sum_{\lambda \dashv l} \;\mu_d^{\lambda} \left( \bigast_{i=1}^{k'} c_{\lambda_i}\right) \\ 
+    c_{M,l}\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{d_Z^{(m)}} \sum_{\lambda \dashv l} \;\mu_d^{\lambda} \left( \bigast_{i=1}^{k'} c_{\lambda_i}\right) \\ 
   \end{aligned}
   \end{equation*}
-  where
+  where $\lambda= [\lambda_1,\ldots,\lambda_{k'}]$ ranges over all partitions of $l$ and where
   \begin{itemize}
-  \item $c_Z^{(m)} \in \mathbb{N}_{>0}$ is the degree of a certain addition map;
-  \item $\mu_d^{\lambda}= \sum_{\alpha \in \mathcal{P}(d)}; \sum_{\substack{\boldsymbol{l} \dashv \lambda\\\boldsymbol{l}:\text{ length }k}}  \mu(\hat{0},\alpha)    \alpha(m)^{2\boldsymbol{l}} d^{k-k'} \in \mathbb{Z}[m_1,\ldots, m_d]^{S_d}$
+  \item $d_Z^{(m)} \in \mathbb{N}_{>0}$ is the degree of a certain addition map;
+  \item $\mu_d^{\lambda}= \sum_{\alpha \in \mathcal{P}(d)} \sum_{\substack{\boldsymbol{l} \dashv \lambda\\\boldsymbol{l}:\text{ length }k}}  \mu(\hat{0},\alpha)    \alpha(m)^{2\boldsymbol{l}} d^{k-k'} \in \mathbb{Z}[m_1,\ldots, m_d]^{S_d}$
   \item $\alpha=\{A_1,\ldots,A_k\} \in \mathcal{P}(d)$, $\boldsymbol{l}=(l_1,\ldots,l_k) \in \mathbb{Z}^k$;
   \item $\mu(\hat{0}, \alpha) = (-1)^{d-k} \prod_{i=1}^{k}\, \left(\rule{0mm}{3mm}|A_i|-1\right)$;
   \item $\alpha(m)^{2\boldsymbol{l}}=  \left( \sum_{i \in A_1}m_i \right)^{2l_1} \cdots \left( \sum_{i \in A_k}m_i \right)^{2l_k}$.
@@ -331,11 +339,11 @@ The monodromy group $\Gal(\gamma_C)$ helps us to determine controls the Tannaka 
   ]
   \textbf{Remarks.}
   \begin{enumerate}
-  \item One can recover both $\dim Z$ and $[Z] \in \Hnm^{2(n - \dim Z)}(A)$ from the Chern--Mather class of $\Lambda_{Z}$: 
+  \item One can recover both $\dim Z$ and $[Z] \in \Hnm^{2(n - \dim Z)}(A)$ from the Segre classes of $\Lambda_{Z}$: 
     $$\dim Z=\; \max \left\{ i \in \mathbb{Z} \;\middle|\; c_i \neq 0 \right\}, \qquad
    [Z]=\; c_{\dim Z}. $$
-   \item A similar formula holds when $Z=-Z$ and $\Gal(\gamma_Z)=W(C_{d/2})$,\\ but the method does not extend to the case $Z=-Z$ and $\Gal(\gamma_Z)=W(D_{d/2})$.
-   \item The formula simplifies significantly in the Jacobian case.\\
+   \item If $Z = -Z$, then a similar formula also holds for $\Gal(\gamma_Z)=W(C_{d/2})$,\\ but the method does not extend to the case where $\Gal(\gamma_Z)=W(D_{d/2})$.
+   \item The formula simplifies a lot for curves inside their Jacobian.\\
    For example, if $C$ is non-hyperelliptic, we obtain:
    \begin{equation*}
    \begin{aligned}
@@ -347,11 +355,17 @@ The monodromy group $\Gal(\gamma_C)$ helps us to determine controls the Tannaka 
   \end{tcolorbox}
 
   \end{block}
-  $\;$\\[-35mm] $\,$
+%  $\;$\\[-35mm] $\,$
   \begin{block}{References}
   $\;$\\[-30mm] $\,$
     \nocite{Kr20,Kr22GaussI,sub_AV26}
-    \footnotesize{\bibliographystyle{alpha}\bibliography{reference}}
+    \footnotesize{
+    
+%    \setbeamertemplate{bibliography item}{}
+%    \setlength{\itemsep}{0pt}
+%    \setlength{\parskip}{0pt}
+%    \renewcommand{\newblock}{\hskip .11em}
+    \bibliographystyle{alpha}\bibliography{reference}}
   \end{block}
 
 
