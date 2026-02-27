@@ -147,34 +147,32 @@
 
 
   \begin{block}{Tangent Gauss Map}
-Let $A/\mathbb{C}$ be an abelian variety of dimension $n$, and let $Z \subset A$ be a non-degenerate closed subvariety of dimension $r$.\\[15mm]
+Let $A/\mathbb{C}$ be an abelian variety of dimension $n$,\\ and let $Z \subset A$ be a non-degenerate closed subvariety of dimension $r$.\\[15mm]
  
   To understand the geometry of $Z$, we encode the variation of its tangent spaces via the tangent Gauss map
  $$\phi_Z: Z^{\sm}\longrightarrow \Gr(r,T_0A) \qquad p \longrightarrow T_pZ \subset T_pA \cong T_0A.$$
 Its differential
 $$d_p\phi_Z: T_pZ \longrightarrow \Hom_{\mathbb{C}}(T_pZ, N_pZ)$$
-is the second fundamental form, which captures information about the curvature of $Z$.
+is second fundamental form, which captures information about the curvature of $Z$.
 
 \end{block}
 \begin{block}{Generic Injectivity of the Tangent Gauss Map}
 
-Clearly the Gauss map has degree $> 1$ whenever the subvariety $Z \subset A$ is stable under a nontrivial translation or symmetric up to a translation, as shown below:
+Clearly the tangent Gauss map has degree $> 1$ whenever the subvariety $Z \subset A$ is stable under a nontrivial translation or symmetric up to a translation, as shown below:
 $\;$\\[-30mm] $\,$
   \begin{figure}[th]
   \begin{minipage}[t]{.45\textwidth}
     \vspace{0pt}
   	\centering
-  	\includegraphics[width=.7\textwidth]{figures/translation_invariant.png}
+  	\includegraphics[width=.74\textwidth]{figures/translation_invariant.png}
   \end{minipage}
   \begin{minipage}[t]{.45\textwidth}
     \vspace{0pt}
   	\centering
-  	\includegraphics[width=.7\textwidth]{figures/reflection_invariant.png}
+  	\includegraphics[width=.74\textwidth]{figures/reflection_invariant.png}
   \end{minipage}
   \end{figure}
-Are these the only cases where the Gauss map fails to be generically injective?
-
-We specialize to the case where $Z=C$ is a curve. When $n=2$, $\phi_C\!\!: C^{\sm} \longrightarrow \mathbb{P}^1$ typically fails to be generically injective.
+Are these the only cases where $\gamma_Z$ fails to be generically injective, when $Z=C$ is a curve? When $n=2$, $\phi_C\!\!: C^{\sm} \longrightarrow \mathbb{P}^1$ typically fails to be generically injective.
 
   
 \begin{tcolorbox}[
@@ -185,15 +183,15 @@ We specialize to the case where $Z=C$ is a curve. When $n=2$, $\phi_C\!\!: C^{\s
   left=12pt,right=12pt,top=12pt,bottom=12pt
 ]
 \textbf{Question 1.}
-Let $C$ be a non-degenerate curve on an abelian variety $A$ of dimension $n > 2$. If $C$ is not invariant under any non-trivial translation or reflection, then $\phi_C$ is generically injective.
+Let $C$ be a non-degenerate curve on an abelian variety $A$ of dimension $n > 2$, and assume that $C$ is not invariant under any non-trivial translation or reflection. Does it follow that $\phi_C$ is generically injective?
 \end{tcolorbox}
 
-  $\;$\\[-45mm] $\,$
+  $\;$\\[-40mm] $\,$
     \begin{figure}[th]
     \begin{minipage}[t]{.45\textwidth}
       \vspace{0pt}
     	\centering
-    	\includegraphics[width=.7\textwidth]{figures/rotation_invariant.png}
+    	\includegraphics[width=.74\textwidth]{figures/rotation_invariant.png}
     \end{minipage}
     \end{figure}
 \begin{tcolorbox}[
@@ -215,10 +213,10 @@ We have found no counterexample to Question 1 when $A$ is not isogenous to $E_{\
   arc=4pt,
   left=12pt,right=12pt,top=12pt,bottom=12pt
 ]
-\textbf{Conjecture 2.}
+\textbf{Conjecture 1.}
 Let $C$ be a non-degenerate curve on an abelian variety $A$ of dimension $n>2$. Then $\phi_C$ is generically injective unless there exists a non-trivial automorphism $\tau \in \Aut(A)$ which preserves $C$ and acts via a scalar on $T_0A$.
 \end{tcolorbox}
-One may restate the conjecture using Gauss curvature, yielding a slightly stronger statement:
+One may restate Conjecture 1 using Gauss curvature, yielding a slightly stronger statement:
 \begin{tcolorbox}[
   colback=gray!15,
   colframe=gray!60,
@@ -226,7 +224,7 @@ One may restate the conjecture using Gauss curvature, yielding a slightly strong
   arc=4pt,
   left=12pt,right=12pt,top=12pt,bottom=12pt
 ]
-\textbf{Conjecture 3.}
+\textbf{Conjecture 2.}
 Let $C$ be a non-degenerate curve on an abelian variety $A$ of dimension $n > 2$. Then for general $p \in \Img \phi_C$, the Gauss curvature of $C \subset A$ is the same at all points of the fiber $\phi_C^{-1}(p)$.
 \end{tcolorbox}
 
@@ -234,7 +232,7 @@ Let $C$ be a non-degenerate curve on an abelian variety $A$ of dimension $n > 2$
   \begin{block}{Known Cases}
   \begin{enumerate}
   \item
-  If $A=\Jac(C)$ and $C$ is embedded via the Abel-–Jacobi map, then $\phi_C=|\omega_C|$ is the canonical map, and one may check Conjectures 2 and 3 by direct inspection.
+  If $A=\Jac(C)$ and $C$ is embedded via the Abel--Jacobi map, then $\phi_C=|\omega_C|$ is the canonical map, and one may check Conjectures 1 and 2 by direct inspection.
 %  $\;$\\[-25mm] $\,$
 %  \begin{itemize}
 %  \item When $C$ is hyperelliptic, $C$ is invariant under the hyperelliptic involution, and $\deg \phi_C=2$;
@@ -252,7 +250,7 @@ Let $C$ be a non-degenerate curve on an abelian variety $A$ of dimension $n > 2$
   \item $k>2$: if $g(C') \geq 1$ and $|\omega_{C'} \otimes \eta|$ is generically injective, then $\phi_C$ is generically injective.
   \end{itemize}
   
-\item If $C \subset A$ is smooth and either $\deg \phi_C = 2$ or $\phi_C$ is unramified, Conjecture 3 also holds.
+\item If $C \subset A$ is smooth and either $\deg \phi_C = 2$ or $\phi_C$ is unramified, Conjecture 2 also holds.
   \end{enumerate}
   \end{block}
 
@@ -265,7 +263,7 @@ Let $C$ be a non-degenerate curve on an abelian variety $A$ of dimension $n > 2$
 \begin{column}{\colwidth}
 
 \begin{block}{Conormal Gauss Map}
-Consider the conormal variety $\Lambda_{Z} \subset T^*A \;\cong\; A \times T^{*}_{0}A$. The natural projection is the conormal Gauss map 
+Passing to the cotangent perspective, one is naturally led to the conormal variety and the associated conormal Gauss map. Consider the conormal variety $\Lambda_{Z} \subset T^*A \;\cong\; A \times T^{*}_{0}A$. The natural projection is the conormal Gauss map 
 $\gamma_Z^{(\aff)}: \Lambda_{Z} \longrightarrow T^{*}_{0}A,$ which is generically finite whenever $Z$ is of general type.
 
   $\;$\\[-48mm] $\,$
@@ -273,7 +271,7 @@ $\gamma_Z^{(\aff)}: \Lambda_{Z} \longrightarrow T^{*}_{0}A,$ which is genericall
     \begin{minipage}[t]{.97\textwidth}
       \vspace{-1cm}
     	\centering
-    	\includegraphics[height=23.7cm]{figures/3dTikZ/combi_of_conormal_tangent_map.pdf}
+    	\includegraphics[height=22.2cm]{figures/3dTikZ/combi_of_conormal_tangent_map.pdf}
     \end{minipage}
     \end{figure}
 $\;$\\[-35mm] $\,$
@@ -287,13 +285,13 @@ $\;$\\[-35mm] $\,$
 
 
 
-\textbf{Conjecture 4.}
+\textbf{Conjecture 3.}
 Suppose $A$ is not isogenous to $E_{\mathfrak{i}}^{\oplus n}$ or $E_{\rho}^{\oplus n}$, and let $C \subset A$ be a non-degenerate curve which is not stable under any non-trivial translation or reflection. Then the monodromy group $\Gal(\gamma_C)$ is big — namely, a Weyl group of type $A$, $C$, or $D$.
 \end{tcolorbox}
 
-When $n>2$, Conjecture 4 follows from Conjecture 3.
+When $n>2$, Conjecture 3 follows from Conjecture 2.
 
-The monodromy group $\Gal(\gamma_C)$ helps us to determine controls the Tannaka group of the tensor category generated by the IC sheaf on $C$; see \cite[Theorem 2.1]{Kr22GaussI}.
+The monodromy group $\Gal(\gamma_C)$ helps us to control the Tannaka group of the tensor category generated by the IC sheaf on $C$; see \cite[Theorem 2.1]{Kr22GaussI}.
 
   \end{block}
 %  $\;$\\[-35mm] $\,$
@@ -323,7 +321,7 @@ The monodromy group $\Gal(\gamma_C)$ helps us to determine controls the Tannaka 
   where $\lambda= [\lambda_1,\ldots,\lambda_{k'}]$ ranges over all partitions of $l$ and where
   \begin{itemize}
   \item $d_Z^{(m)} \in \mathbb{N}_{>0}$ is the degree of a certain addition map;
-  \item $\mu_d^{\lambda}= \sum_{\alpha \in \mathcal{P}(d)} \sum_{\substack{\boldsymbol{l} \dashv \lambda\\\boldsymbol{l}:\text{ length }k}}  \mu(\hat{0},\alpha)    \alpha(m)^{2\boldsymbol{l}} d^{k-k'} \in \mathbb{Z}[m_1,\ldots, m_d]^{S_d}$
+  \item $\mu_d^{\lambda}= \sum_{\alpha \in \mathcal{P}(d)} \sum_{\substack{\boldsymbol{l} \dashv \lambda\\\boldsymbol{l}:\text{ length }k}}  \mu(\hat{0},\alpha)    \alpha(m)^{2\boldsymbol{l}} d^{k-k'} \in \mathbb{Z}[m_1,\ldots, m_d]^{S_d}$;
   \item $\alpha=\{A_1,\ldots,A_k\} \in \mathcal{P}(d)$, $\boldsymbol{l}=(l_1,\ldots,l_k) \in \mathbb{Z}^k$;
   \item $\mu(\hat{0}, \alpha) = (-1)^{d-k} \prod_{i=1}^{k}\, \left(\rule{0mm}{3mm}|A_i|-1\right)$;
   \item $\alpha(m)^{2\boldsymbol{l}}=  \left( \sum_{i \in A_1}m_i \right)^{2l_1} \cdots \left( \sum_{i \in A_k}m_i \right)^{2l_k}$.
