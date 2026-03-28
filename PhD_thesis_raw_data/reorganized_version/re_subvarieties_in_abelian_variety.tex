@@ -357,7 +357,7 @@ In \cite[Remark 2.9]{Kr20}, Krämer establishes a correspondence between Weyl gr
 
 $\,$
 
-To present our results, we begin by recalling several fundamental notions, which will be discussed in detail in Section \ref{sec:Gauss_map}. On a complex abelian variety $A$, the \textit{translations} and \textit{reflections} are special automorphisms of $A$ of the form $x \mapsto x + p$ and $x \mapsto -x + p$, respectively. For $\sigma \in \Aut(A)$ and a closed subvariety $Z \subset A$, we say that $Z$ is \textit{invariant} under $\sigma$ if $\sigma(Z) = Z$. Given a subvariety $Z \subset A$, the \textit{tangent Gauss map} $\phi_Z$ assigns to $p \in Z^{\mathrm{sm}}$ the embedded tangent space to $Z$ at $p$ (cf. Definition \ref{def:tangent_Gauss_map}), while the \textit{conormal Gauss map} $\gamma_Z : \mathbb{P}\Lambda_Z \subset A \times \mathbb{P}T^{}_{0}A \longrightarrow \mathbb{P}T^{}_{0}A$ (cf. Definition \ref{def:conormal_Gauss_map}) arises from the projectivized conormal variety of $Z$ and is typically generically finite. The \textit{monodromy group} $\Gal(\gamma_Z)$ encodes the permutation of the sheets of the covering $\gamma_Z$ around its branch locus, while $W_Z$ denotes the \textit{Weyl group} of the reductive group $G_Z$.
+To present our results, we begin by recalling several fundamental notions, which will be discussed in detail in Section \ref{sec:Gauss_map}. On a complex abelian variety $A$, the \textit{translations} and \textit{reflections} are special automorphisms of $A$ of the form $x \mapsto x + p$ and $x \mapsto -x + p$, respectively. For $\sigma \in \Aut(A)$ and a closed subvariety $Z \subset A$, we say that $Z$ is \textit{invariant} under $\sigma$ if $\sigma(Z) = Z$. Given a subvariety $Z \subset A$, the \textit{tangent Gauss map} $\phi_Z$ assigns to $p \in Z^{\mathrm{sm}}$ the embedded tangent space to $Z$ at $p$ (cf. Definition \ref{def:tangent_Gauss_map}), while the \textit{conormal Gauss map} $\gamma_Z : \mathbb{P}\Lambda_Z \subset A \times \mathbb{P}T^{*}_{0}A \longrightarrow \mathbb{P}T^{*}_{0}A$ (cf. Definition \ref{def:conormal_Gauss_map}) arises from the projectivized conormal variety of $Z$ and is typically generically finite. The \textit{monodromy group} $\Gal(\gamma_Z)$ encodes the permutation of the sheets of the covering $\gamma_Z$ around its branch locus, while $W_Z$ denotes the \textit{Weyl group} of the reductive group $G_Z$.
 
 $\,$
 
@@ -387,7 +387,7 @@ $\,$
 For the dimension and homology class of a subvariety $Z$, both invariants can be recovered from the homology class of $\mathbb{P}\Lambda_{Z} \subset \mathbb{P}T^*A$ — that is, from the total Chern--Mather class of $Z$. Standard computational techniques are available when the monodromy group $\Gal(\gamma_{Z})$ is a full or signed symmetric group. The notions of the Chern–Mather class and the Pontryagin product will be recalled in Definition \ref{def:CM_class} and Definition \ref{def:Pontryagin_product}, respectively.
 
 \begin{theoremB}\label{thm:B}
-Consider a non-degenerate subvariety $Z \subset A$ and a tuple $(m) = (m_1, \ldots, m_d) \in \mathbb{Z}^d$. Let $Z^{(m)} \subset A$ be as in Definition \ref{def:subvar_Z^{(m)}}. Let $d = \deg \gamma_Z$, $\widetilde{d} = d/2$, and let $c_i := c_{M,i}(\Lambda_Z)$ be the Chern--Mather class of $Z$. Let $*$ be the Pontryagin product. We write $\lambda \dashv l$ to indicate that $\lambda=[\lambda_1,\ldots,\lambda_{k'}]$ is a partition of $l$.
+Consider a non-degenerate subvariety $Z \subset A$ and a tuple $(m) = (m_1, \ldots, m_d) \in \mathbb{Z}^d$. Let $Z^{(m)} \subset A$ be as in Definition \ref{def:subvar_Z^{(m)}}. Let $d = \deg \gamma_Z$, $\widetilde{d} = d/2$, and let $c_i := c_{M,i}(\Lambda_Z)$ be the Chern--Mather class of $Z$. Let $*$ be the Pontryagin product. We write $\lambda \vdash l$ to indicate that $\lambda=[\lambda_1,\ldots,\lambda_{k'}]$ is a partition of $l$.
 \begingroup
 \upshape
 %\setlist{itemsep=-0.4em}
@@ -396,21 +396,21 @@ Consider a non-degenerate subvariety $Z \subset A$ and a tuple $(m) = (m_1, \ldo
 \item When $\Gal(\gamma_{Z})=S_d$, the Chern--Mather classes of $Z^{(m)}$ can be written as
 \begin{equation*}
 \begin{aligned}
-  c_{M,l}\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{d_Z^{(m)}} \sum_{\lambda \dashv l} \;\mu_d^{\lambda} \left( \bigast_{i=1}^{k'} c_{\lambda_i}\right) \\ 
+  c_{M,l}\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{d_Z^{(m)}} \sum_{\lambda \vdash l} \;\mu_d^{\lambda} \left( \bigast_{i=1}^{k'} c_{\lambda_i}\right) \\ 
 \end{aligned}
 \end{equation*}
 for certain explicit coefficients $d_Z^{(m)} \in \mathbb{N}_{>0}$ and $\mu_d^{\lambda} \in \mathbb{Z}$.
 \item When $Z=-Z$ and $\Gal(\gamma_{Z})=W(C_{d/2})$, the Chern--Mather classes of $Z^{(m)}$ can be written as
 \begin{equation*}
 \begin{aligned}
-  c_{M,l}\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{d_Z^{(m)}} \sum_{\lambda \dashv l} \;\widetilde{\mu}_{\widetilde{d}}^{\lambda} \left( \bigast_{i=1}^{k'} c_{\lambda_i}\right) \\
+  c_{M,l}\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{d_Z^{(m)}} \sum_{\lambda \vdash l} \;\widetilde{\mu}_{\widetilde{d}}^{\lambda} \left( \bigast_{i=1}^{k'} c_{\lambda_i}\right) \\
 \end{aligned}
 \end{equation*}
 for certain explicit coefficients $d_Z^{(m)} \in \mathbb{N}_{>0}$ and $\widetilde{\mu}_{\widetilde{d}}^{\lambda} \in \mathbb{Z}$.
 \end{enumerate}
 \endgroup
 \end{theoremB}
-The proof of theorem \ref{thm:B} will occupy Section \ref{sec:CM_class}. In fact, we will show (1) in \eqref{eq:CMclass_sym}, and (2) in \eqref{eq:CMclass_signsym}. The combinatorial coefficients $\mu_d^{\lambda}$ and $\widetilde{\mu}_{\widetilde{d}}^{\lambda}$ appearing in the formulas are defined in Definition \ref{def:Moebius_block-sum}, while the case of Jacobian varieties is discussed in detail in Example \ref{eg:dim_in_Jac_case}.
+The proof of Theorem \ref{thm:B} will occupy Section \ref{sec:CM_class}. In fact, we will show (1) in \eqref{eq:CMclass_sym}, and (2) in \eqref{eq:CMclass_signsym}. The combinatorial coefficients $\mu_d^{\lambda}$ and $\widetilde{\mu}_{\widetilde{d}}^{\lambda}$ appearing in the formulas are defined in Definition \ref{def:Moebius_block-sum}, while the case of Jacobian varieties is discussed in detail in Example \ref{eg:dim_in_Jac_case}.
 
 $\,$
 
@@ -418,21 +418,21 @@ The structure of the article is as follows.
 
 In Section \ref{sec:Gauss_map}, we fix notation and describe the Gauss map from three different perspectives. We also define the monodromy group and highlight its connection to the degree of the tangent Gauss map.
 
-Section \ref{sec:mon_examples} is devoted to the explicit computation of the monodromy group in selected cases, with a particular focus on the Prym curve situation. Proposition \ref{prop:Prym_unramified_double_cover} presents an example in which the monodromy group is small; however, this does not constitute a counterexample to Conjecture \ref{conj:big_mon_for_curve}, as the curve remains invariant under a non-trivial translation. In Subsection \ref{subsec:criteria_big_mon}, we collect several sufficient conditions for the monodromy group to be large, which we then employ in Subsection \ref{subsec:big_mon_case} to show that, for all remaining Prym curve cases with $g(C')>9$, the monodromy group is necessarily large.
+Section \ref{sec:mon_examples} is devoted to the explicit computation of the monodromy group in selected cases, with a particular focus on the Prym curve situation. Proposition \ref{prop:Prym_unramified_double_cover} presents an example in which the monodromy group is small; however, this does not constitute a counterexample to Conjecture \ref{conj:big_mon_for_curve}, as the curve remains invariant under a non-trivial translation. In Subsection \ref{subsec:criteria_big_mon}, we collect several sufficient conditions for the monodromy group to be large, which we then employ in Subsection \ref{subsec:big_mon_case} to show that, for all remaining Prym curve cases with $g(C') \geqslant 4$, the monodromy group is necessarily large.
 
 In Section \ref{sec:subvarieties}, we define the subvarieties $Z^{(m)}$, which serve as the central objects of this study. In Subsection \ref{subsec:relation_with_perverse_sheaf}, we briefly discuss how these varieties naturally arise as the characteristic cycles of certain perverse sheaves.
 
 
-In Section \ref{sec:CM_class}, we focus on the computation of the dimension and the homology class of $Z^{(m)}$. After recalling the definition of the Chern-Mather class in Subsection \ref{subsec:CM_class}, the task reduces to computing $[\mathbb{P} \Lambda_{Z^{(m)}}]$. Subsections \ref{subsec:CMclass_typeA} and \ref{subsec:CMclass_typeC} treat the type $A$ case, where $\Gal(\gamma_Z)=S_d$, and the type $C$ case, where $\Gal(\gamma_Z)=W(C_{d/2})$, respectively. The derivation of the formulas involves certain coefficients that are purely combinatorial in nature. These combinatorial contributions are treated separately in Subsection \ref{subsec:Moebius_block-sum}.
+In Section \ref{sec:CM_class}, we focus on the computation of the dimension and the homology class of $Z^{(m)}$. After recalling the definition of the Chern--Mather class in Subsection \ref{subsec:CM_class}, the task reduces to computing $[\mathbb{P} \Lambda_{Z^{(m)}}]$. Subsections \ref{subsec:CMclass_typeA} and \ref{subsec:CMclass_typeC} treat the type $A$ case, where $\Gal(\gamma_Z)=S_d$, and the type $C$ case, where $\Gal(\gamma_Z)=W(C_{d/2})$, respectively. The derivation of the formulas involves certain coefficients that are purely combinatorial in nature. These combinatorial contributions are treated separately in Subsection \ref{subsec:Moebius_block-sum}.
 
 
 \section*{Acknowledgement}
 %\addcontentsline{toc}{section}{Acknowledgement}
 
-I would like to express my sincere gratitude to my supervisor, Thomas Krämer, without whose support this work would not have been possible. He proposed the problem, guided me throughout the project, and generously spent many hours discussing drafts and explaining important ideas. I am also thankful to Haohao Liu, Chenji Fu, Zhixing Chen, Vincent Ariksoy, Aaron Beumer, Roben de Preter, Andreas Kretschmer, Andrés Rojas, Søren Gammelgaard, Paweł Borówka, and Gavril Farkas for their insightful discussions and valuable comments. Funding is provided by the DFG (German Research Foundation) under Germany´s Excellence Strategy – The Berlin Mathematics Research Center MATH+ (EXC-2046/1, project ID: 390685689).
+I would like to express my sincere gratitude to my supervisor, Thomas Krämer, without whose support this work would not have been possible. He proposed the problem, guided me throughout the project, and generously spent many hours discussing drafts and explaining important ideas. I am also thankful to Haohao Liu, Chenji Fu, Zhixing Chen, Vincent Ariksoy, Aaron Beumer, Roben de Preter, Andreas Kretschmer, Andrés Rojas, Søren Gammelgaard, Paweł Borówka, and Gavril Farkas for their insightful discussions and valuable comments. Funding is provided by the DFG (German Research Foundation) under Germany's Excellence Strategy – The Berlin Mathematics Research Center MATH+ (EXC-2046/1, project ID: 390685689).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Tangent Gauss map and conormal Gauss map}\label{sec:Gauss_map}
-We work over the base field $\kappa = \mathbb{C}$, and by a variety we mean a integral separated scheme of finite type over $\mathbb{C}$. Let $A/\mathbb{C}$ be an abelian variety of dimension $n$, and let $Z \subseteq A$ be an irreducible closed subvariety of dimension $r$. We denote by $\iota_Z: Z \hookrightarrow A$ the inclusion morphism.
+We work over the base field $\kappa = \mathbb{C}$, and by a variety we mean an integral separated scheme of finite type over $\mathbb{C}$. Let $A/\mathbb{C}$ be an abelian variety of dimension $n$, and let $Z \subseteq A$ be an irreducible closed subvariety of dimension $r$. We denote by $\iota_Z: Z \hookrightarrow A$ the inclusion morphism.
 
 \subsection{Gauss map and monodromy group}
 \begin{definition}\label{def:tangent_Gauss_map}
@@ -464,9 +464,9 @@ The definition of the conormal Gauss map requires a brief recollection of the co
 \end{tikzcd}\]
 We write $\Lambda_{\Zsm}$ for the total space of $\mathcal{N}_{\Zsm/A}^*$.
 The conormal variety $\Lambda_{Z}$ is the closure of $\Lambda_{\Zsm}$ viewed as a subvariety in $T^*A$:
-$$\Lambda_{Z}:=\;\; \overline{\Lambda_{\Zsm}} \;\; \subset T^*A \;\cong\; A \times T^{*}_{0}A$$
+$$\Lambda_{Z}:=\;\; \overline{\Lambda_{\Zsm}} \;\; \subset T^*A \;\cong\; A \times T^{*}_{0}A.$$
 It is a conical Lagrangian subvariety of $T^*A$. The (affine) conormal Gauss map is defined as
-$$\gamma_Z^{\aff}: \Lambda_{Z} \subset A \times T^{*}_{0}A \longrightarrow T^{*}_{0}A$$
+$$\gamma_Z^{\aff}: \Lambda_{Z} \subset A \times T^{*}_{0}A \longrightarrow T^{*}_{0}A.$$
 
 For intersection-theoretic purposes it is more natural to work with projectivized conormal spaces. We therefore pass from the affine conormal Gauss map to its projectivized version:
 \begin{definition}\label{def:conormal_Gauss_map}
@@ -496,9 +496,9 @@ When $U$ is smooth, the isomorphism class of $\Gal(f)$ doesn't depend on the cho
 
 
 \subsection{Interpolation via hyperplanes}
-In this subsection, we reinterpret $\gamma_Z$ using a functorial and more transparent framework. This permits to define the conormal Gauss map and its monodromy group for any morphism $\phi_Z: Z \longrightarrow \Gr(r,n)$ with $\dim Z = r$, and clarifies the relation between the monodromy group and $\deg \phi_Z$.
+In this subsection, we reinterpret $\gamma_Z$ using a functorial and more transparent framework. This permits us to define the conormal Gauss map and its monodromy group for any morphism $\phi_Z: Z \longrightarrow \Gr(r,n)$ with $\dim Z = r$, and clarifies the relation between the monodromy group and $\deg \phi_Z$.
 
-To simplify notation, we abbreviate $T^{*}_{0}A$ by $W$. Since each non-zero conormal vector $\xi  \in T^{*}_{0}A$ determines a hyperplane $H_{\xi} \in \Gr(n-1, T_0A)$, we have the isomorphisms 
+To simplify notation, we abbreviate $T_{0}A$ by $W$. Since each non-zero conormal vector $\xi  \in T^{*}_{0}A$ determines a hyperplane $H_{\xi} \in \Gr(n-1, T_0A)$, we have the isomorphisms 
 \begin{equation*}
 \begin{aligned}
    \mathbb{P}T^{*}_{0}A \cong\;& \Gr(n-1, T_0A), \\ 
@@ -518,7 +518,7 @@ is the incidence variety relating $\Gr(r,W)$ and $\Gr(n-1, W)$. In these terms,
 \end{equation*}
 is the collection of points whose tangent spaces lie entirely within $H$.
 
-Geometrically, the monodromy can be described as follows: Given a general hyperplane $H \in \mathbb{P}T^{*}_{0}A$, its preimage under $\gamma_{Z}$ consists of $d$ points ${ p_1, \ldots, p_d }$. Moving $H$ continuously along a closed loop we obtain a permutation of these points, and the monodromy group $\Gal(\gamma_Z)$ consists of all permutations obtained this way. With this formulation, it suffices to consider the Gauss map $\phi_Z$ alone; the inclusion $\iota_Z: Z \hookrightarrow A$ is no longer required for computing the monodromy group.
+Geometrically, the monodromy can be described as follows: Given a general hyperplane $H \in \mathbb{P}T^{*}_{0}A$, its preimage under $\gamma_{Z}$ consists of $d$ points $\{ p_1, \ldots, p_d \}$. Moving $H$ continuously along a closed loop, we obtain a permutation of these points, and the monodromy group $\Gal(\gamma_Z)$ consists of all permutations obtained this way. With this formulation, it suffices to consider the Gauss map $\phi_Z$ alone; the inclusion $\iota_Z: Z \hookrightarrow A$ is no longer required for computing the monodromy group.
 
 \begin{definition}\label{def:general_monodromy}
 Let $Z$ be an $r$-dimensional variety and $\phi: Z \longrightarrow \Gr(r,n)$ a morphism. Suppose that $\phi_*[Z] \cup [\Gr(r,H)]=d \neq 0$ in $\Hnm^{2r(n-r)} \left( \Gr(r,n);\mathbb{Q} \right)$. The monodromy group $\Mon(\phi)$ is defined as $\Gal(f_{\phi})$, where
@@ -534,7 +534,7 @@ $$S_k \wr S_{d/k}:= \left( S_k^{\oplus d/k} \right) \rtimes S_{d/k}. $$
 For a general hyperplane $H$, consider the Cartesian diagram below:  
 % https://q.uiver.app/#q=WzAsNyxbMCwwLCJcXHBoaToiXSxbMiwwLCJcXEltZyBaIl0sWzEsMCwiWiJdLFszLDAsIlxcR3IocixuKSJdLFszLDEsIlxcR3IocixIKSJdLFsyLDEsIlxce3FfMSxcXGxkb3RzLHFfe2Qva31cXH0iXSxbMSwxLCJcXHtwXzEsXFxsZG90cyxwX2RcXH0iXSxbMiwxLCJrOjEiLDAseyJzdHlsZSI6eyJoZWFkIjp7Im5hbWUiOiJlcGkifX19XSxbMSwzLCIiLDAseyJzdHlsZSI6eyJ0YWlsIjp7Im5hbWUiOiJob29rIiwic2lkZSI6InRvcCJ9fX1dLFs2LDVdLFs1LDRdLFs2LDIsIlxccm90YXRlYm94W29yaWdpbj1jXXs5MH17JFxcc3Vic2V0JH0iLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbNSwxLCJcXHJvdGF0ZWJveFtvcmlnaW49Y117OTB9eyRcXHN1YnNldCR9IiwxLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoibm9uZSJ9LCJoZWFkIjp7Im5hbWUiOiJub25lIn19fV0sWzQsMywiXFxyb3RhdGVib3hbb3JpZ2luPWNdezkwfXskXFxzdWJzZXQkfSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
 \[\begin{tikzcd}[ampersand replacement=\&,row sep=small]
-	{\phi:} \&[-10mm] Z \& {\Img Z} \& {\Gr(r,n)} \\
+	{\phi:} \&[-10mm] Z \& {\Img \phi} \& {\Gr(r,n)} \\
 	\& {\{p_1,\ldots,p_d\}} \& {\{q_1,\ldots,q_{d/k}\}} \& {\Gr(r,H)}
 	\arrow["{k:1}", two heads, from=1-2, to=1-3]
 	\arrow[hook, from=1-3, to=1-4]
@@ -559,8 +559,8 @@ and the Albanese map is given by (for some fixed base point $p_0 \in X$)
 $$\alpha: X \longrightarrow \Alb(X) \qquad 
 \qquad p \longmapsto \left[ \;\;\omega \mapsto \int_{\gamma: p_0 \sim p} \omega \;\;\right].$$
 
-One classical question is the dimension of $\alpha(X)$. Before proceeding, we fix the following notation: For any closed subscheme $S \subset X$, let $\mathcal{I}_S \subset \mathcal{O}_X$ be its ideal sheaf. Given a point $p \in X$ with inclusion $i_p : {p} \hookrightarrow X$, we denote by $i_{p,*} \mathcal{O}_p$ the skyscraper sheaf at $p$. We set $\Omega_X(-p):= \Omega_X \otimes \mathcal{I}_p$, and denote by $\Omega_X|_p:= \Omega_X \otimes i_{p,*} \mathcal{O}_p = i_{p,*}i_{p}^* \Omega_X$ the fiber of $\Omega_X$ at $p$. With this notation, the cotangent map of $\alpha$ at $p \in X$ is
-$$T_p^* \alpha: T_{\alpha(p)}^* \Alb(X)= H^0(X,\Omega_X) \longrightarrow T_p^*X=H^0(X,\Omega_X|_p).$$
+One classical question is the dimension of $\alpha(X)$. Before proceeding, we fix the following notation: For any closed subscheme $S \subset X$, let $\mathcal{I}_S \subset \mathcal{O}_X$ be its ideal sheaf. Given a point $p \in X$ with inclusion $i_p : \{p\} \hookrightarrow X$, we denote by $i_{p,*} \mathcal{O}_p$ the skyscraper sheaf at $p$. We set $\Omega_X(-p):= \Omega_X \otimes \mathcal{I}_p$, and denote by $\Omega_X|_p:= \Omega_X \otimes i_{p,*} \mathcal{O}_p = i_{p,*}i_{p}^* \Omega_X$ the fiber of $\Omega_X$ at $p$. With this notation, the cotangent map of $\alpha$ at $p \in X$ is
+$$T_p^* \alpha: T_{\alpha(p)}^* \Alb(X)= \Hnm^0(X,\Omega_X) \longrightarrow T_p^*X=\Hnm^0(X,\Omega_X|_p).$$
 Consider the short exact sequence of coherent sheaves on $X$ 
 % https://q.uiver.app/#q=WzAsNSxbMSwwLCJcXE9tZWdhX1goLXApIl0sWzIsMCwiXFxPbWVnYV9YIl0sWzMsMCwiXFxPbWVnYV9YfF9wIl0sWzAsMCwiMCJdLFs0LDAsIjAiXSxbMywwXSxbMCwxXSxbMSwyXSxbMiw0XV0=
 \[\begin{tikzcd}[column sep={18mm}]
@@ -656,7 +656,7 @@ is the incidence variety relating $\Gr(n-r,n)$ and $\Gr(1, n)$. In that case,
     \gamma_Z^{-1}([\omega])=\;& \left\{\, p  \in X  \;\middle|\; \omega(p)=0 \,\right\}  \\  
 \end{aligned}
 \end{equation*}
-is the zero set of the section $\omega \in \Hnm^0(X,\Omega_X)$. The number $(-1)^r \deg \gamma_Z$ is the index (of the vector field) in the Poincaré--Hopf index formula (see \cite[p35]{Mil65}), and the monodromy group $\Gal(\gamma_Z)$ serves as a more refined invariant.
+is the zero set of the section $\omega \in \Hnm^0(X,\Omega_X)$. The number $(-1)^r \deg \gamma_Z$ is the index (of the vector field) in the Poincaré--Hopf index formula (see \cite[p.~35]{Mil65}), and the monodromy group $\Gal(\gamma_Z)$ serves as a more refined invariant.
 
 The next proposition shows when the Gauss map $\phi_Z$ is not generically injective. We denote by $X^{[m]}$ the Hilbert scheme of $m$-points on $X$.
 \begin{proposition}
@@ -672,11 +672,11 @@ When $\alpha$ is generically finite onto its image,
 \end{proposition}
 
 \begin{proof}
-When $n = r$, the map $\varphi_Z$ has a point as its target, so the equivalence is trivial. We shall thus restrict to the case $n > r$ in the subsequent discussion.
+When $n = r$, the map $\phi_Z$ has a point as its target, so the equivalence is trivial. We shall thus restrict to the case $n > r$ in the subsequent discussion.
 
 $(1)$: The implication ``$\Rightarrow$" is immediate. For the converse ``$\Leftarrow$", it suffices to show that the image of 
 $$\left\{ S \in X^{[2]} \;\middle|\; h^0(X,\Omega_X \otimes \mathcal{I}_S)=n-r   \right\}$$
- under the map $\pi_X:X^{[2]} \longrightarrow X^{(2)} $ does not include the diagonal. Indeed, we can choose a section $s \in \Hnm^0(X,\Omega_X)$ that cuts out finitely many reduced points $p_1,\ldots,p_d$ in $X$. (Well this maybe not so true, since $\phi_Z$ is not always regular, such a section $s$ may vanish along some indeterminacy locus. However, for a general $s$, there will always be at least one isolated zero $p_1$, which is sufficient for our purposes.)
+ under the map $\pi_X:X^{[2]} \longrightarrow X^{(2)} $ does not include the diagonal. Indeed, we can choose a section $s \in \Hnm^0(X,\Omega_X)$ that cuts out finitely many reduced points $p_1,\ldots,p_d$ in $X$. (Well, this may not be so true, since $\phi_Z$ is not always regular, such a section $s$ may vanish along some indeterminacy locus. However, for a general $s$, there will always be at least one isolated zero $p_1$, which is sufficient for our purposes.)
 Then for any $S \in \pi_X^{-1}(2p_1)$, we have 
 $$\Hnm^0(X,\Omega_X \otimes \mathcal{I}_S)  \subsetneqq \Hnm^0(X,\Omega_X(-p_1)).$$
 
@@ -687,7 +687,7 @@ is closed in $X \times X^{[2]}$. Consequently, its image
 $$\pr_1(I^{n-r})=\left\{ p \in X  \;\middle|\; \text{there exists $S \in X^{[2]}$ such that $p\in S$ and $h^0(X,\Omega_X \otimes \mathcal{I}_S)=n-r$}   \right\}$$
 is closed in $X$. Since the hypothesis ensures that $\pr_1(I^{n-r})$ contains a nonempty open subset of $X$, we obtain $\pr_1(I^{n-r}) = X$.
 
-For “$\Leftarrow$”: as $\alpha$ is generically injective, one has $h^0(X, \Omega_X(-p)) = n-r$ for a general point $p \in X$. Therefore, for any subscheme $S$ containing such a general point, $h^0(X, \Omega_X \otimes \mathcal{I}_S) \leqslant n-r$.
+For “$\Leftarrow$”: as $\alpha$ is generically injective, one has $h^0(X, \Omega_X(-p)) = n-r$ for a general point $p \in X$. Therefore, for any subscheme $S$ containing such a general point, $h^0(X, \Omega_X \otimes \mathcal{I}_S) \geqslant n-r$.
 \end{proof}
 
 \begin{lemma}\label{lem:Hilb_semicont}
@@ -698,12 +698,12 @@ is Zariski upper semicontinuous.
 \begin{proof}
 Consider the coherent sheaf $\mathcal{F} \in \Coh(X^{[m]} \times X)$ characterized by the property
 $$\mathcal{F}|_{\{S\} \times X} \cong \Omega_X \otimes \mathcal{I}_S,$$
-The proposition then follows directly from the semicontinuity theorem \cite[28.1.1]{vakil2017rising}.
+The lemma then follows directly from the semicontinuity theorem \cite[28.1.1]{vakil2017rising}.
 \end{proof}
 
 The stratification of $X^{[m]}$ by $h^{\Omega}$ offers a natural generalization of Brill--Noether theory beyond the setting of curves.
 
-$\,$
+\bigskip\bigskip
 
 At the end of this subsection, let us turn to the setting of a general abelian variety $A$ and a smooth subvariety $\iota_Z: Z \hookrightarrow A$, where $n = \dim_{\mathbb{C}} A$ and $r = \dim_{\mathbb{C}} Z$. Observe that $\iota_Z$ factors through the Albanese variety of $Z$:
 % https://q.uiver.app/#q=WzAsMyxbMCwwLCJcXGlvdGFfWjogWiAgIl0sWzEsMCwiXFxBbGIoWikiXSxbMiwwLCJBIl0sWzAsMSwiXFxhbHBoYV9aIl0sWzEsMiwiXFxwaSJdXQ==
@@ -736,8 +736,8 @@ It follows that the Gauss map is a regular morphism
 \begin{equation*}
 \begin{aligned}
   \;&  \phi_Z \text{ is not generically injective} \\ 
-  \Longleftrightarrow\;\;& \text{For general $p \in Z$, there exists $q \neq p$ such that $h^0(Z,\Omega_Z(-p-q)) \cap V =n-r$} \\ 
-  \Longleftrightarrow\;\;& \text{For all $p \in Z$, there exists $S \in Z^{[2]}$ such that $p\in S$ and $h^0(Z,\Omega_Z \otimes \mathcal{I}_S) \cap V=n-r$.} \\ 
+  \Longleftrightarrow\;\;& \text{For general $p \in Z$, there exists $q \neq p$ such that $\dim_{\mathbb{C}}\,\Hnm^0(Z,\Omega_Z(-p-q)) \cap V =n-r$} \\ 
+  \Longleftrightarrow\;\;& \text{For all $p \in Z$, there exists $S \in Z^{[2]}$ such that $p\in S$ and $\dim_{\mathbb{C}}\,\Hnm^0(Z,\Omega_Z \otimes \mathcal{I}_S) \cap V=n-r$.} \\ 
 \end{aligned}
 \end{equation*}
 \end{proposition}
@@ -759,14 +759,14 @@ It follows that the Gauss map is a regular morphism
 
 
 \begin{definition}[big monodromy group]\label{def:big_mono}
-We refer to the big monodromy group as any group of the following types:
+A big monodromy group is any group of the following types:
 {
 \def\arraystretch{1.2}
 \begin{table}[ht]
 \begin{tabular}{l|r|r}
 \hline
 \multicolumn{1}{c|}{notation}               & \multicolumn{1}{c|}{name}   & \multicolumn{1}{c}{alias}                     \\ \hline
-$W(A_{m+1})=S_m$                            & full symmetric group        &                           \\ \hline
+$W(A_{m-1})=S_m$                            & full symmetric group        &                           \\ \hline
 $\hspace{4mm}W(C_{m})=S_2^{\oplus m} \rtimes S_m$       & signed symmetric group      & hyperoctahedral group     \\ \hline
 $\hspace{4mm}W(D_{m})=(S_2^{\oplus m})_{0} \rtimes S_m$ & even-signed symmetric group & demihyperoctahedral group \\ \hline
 \end{tabular}
@@ -809,20 +809,20 @@ Let $\iota_{C'} : C' \hookrightarrow \mathbb{P}^{n-1}$ be an irreducible nondege
 
 \begin{proofsketch}
 By Lemma \ref{lem:wreath_product} we know that $\Mon(\iota_{C'} \circ \covermap) \subseteq W(C_{d/2})$.
-By Lemma \ref{lem: type_C_Weyl_group2}, we are reduced to verifying that:
+By Lemma \ref{lem:type_C_Weyl_group2}, we are reduced to verifying that:
 \begin{itemize}
 \item The quotient map $\Mon(\iota_{C'} \circ \covermap) \longrightarrow \Mon(\iota_{C'}) \cong S_{d/2}$ is surjective;
 \item (signed doubly transitive) $\Mon(\iota_{C'} \circ \covermap)$ acts transitively on pairs $(x,y)$ with $x\neq \pm y$. 
 \end{itemize}
 \end{proofsketch}
 
-\begin{lemma}\label{lem: type_C_Weyl_group2}
-Let $G$ be a subgroup of $W(C_{m})$, acting naturally on the set ${\pm 1, \ldots, \pm m}$. If the projection $G \longrightarrow S_m$ is surjective  then 
+\begin{lemma}\label{lem:type_C_Weyl_group2}
+Let $G$ be a subgroup of $W(C_{m})$, acting naturally on the set $\{\pm 1, \ldots, \pm m\}$. If the projection $G \longrightarrow S_m$ is surjective  then 
 $$G \cong  W(C_{m}) \text{ or } W(D_{m}) \text{ or } S_2 \times S_m \text{ or } S_{m}.$$
 \end{lemma}
 
 \begin{proofsketch}
-Let $H$ denote the kernel of the natural quotient map $G \longrightarrow S_m$. Then $H \subseteq (S_2)^{\oplus m}$ is stable under the action of $S_n$. There are only four possible forms that $H$ can take:\footnote{Here is a brief argument showing that $H$ must be one of $0$, $S_2$, $(S_2^{\oplus m})_0$, or $S_2^{\oplus m}$. If $H$ contains an element $h = (a_1, \ldots, a_m)$ with $a_i \neq a_j$ for some $i \neq j$, then $$(ij)h + h = (1,\ldots,\underset{\underset{i\text{-th}}{\uparrow}}{-1},\ldots,\underset{\underset{j\text{-th}}{\uparrow}}{-1},\ldots,1) \in H,$$ 
+Let $H$ denote the kernel of the natural quotient map $G \longrightarrow S_m$. Then $H \subseteq (S_2)^{\oplus m}$ is stable under the action of $S_m$. There are only four possible forms that $H$ can take:\footnote{Here is a brief argument showing that $H$ must be one of $0$, $S_2$, $(S_2^{\oplus m})_0$, or $S_2^{\oplus m}$. If $H$ contains an element $h = (a_1, \ldots, a_m)$ with $a_i \neq a_j$ for some $i \neq j$, then $$(ij)h + h = (1,\ldots,\underset{\underset{i\text{-th}}{\uparrow}}{-1},\ldots,\underset{\underset{j\text{-th}}{\uparrow}}{-1},\ldots,1) \in H,$$ 
 implying $(S_2^{\oplus m})_0 \subseteq H$. Hence, $H$ must be either $(S_2^{\oplus m})_0$ or $S_2^{\oplus m}$. Otherwise, if all $h \in H$ have identical coordinates, then $H$ is either $0$ or $S_2$.}
 \begin{itemize}
 \item $H=0$. Then $G\cong S_m$.
@@ -848,7 +848,7 @@ By Lemma \ref{lem: type_C_Weyl_group}, we are reduced to verifying that:
 \end{proofsketch}
 
 \begin{lemma}\label{lem: type_C_Weyl_group}
-Let $G$ be a subgroup of $W(C_{m})$, acting naturally on the set ${\pm 1, \ldots, \pm m}$. If the projection $G \longrightarrow S_m$ is surjective and the transposition $\sigma_0$ of $\pm 1$ lies in $G$, then $G = W(C_{m})$.
+Let $G$ be a subgroup of $W(C_{m})$, acting naturally on the set $\{\pm 1, \ldots, \pm m\}$. If the projection $G \longrightarrow S_m$ is surjective and the transposition $\sigma_0$ of $\pm 1$ lies in $G$, then $G = W(C_{m})$.
 \end{lemma}
 
 \begin{proofsketch}
@@ -874,7 +874,7 @@ Let $C$ be a smooth curve of genus $g$ embedded in its Jacobian $A := \Jac(C)$ v
 
 When $C$ is non-hyperelliptic, the corresponding Gauss map 
 $$|\omega_C|: C\longrightarrow \mathbb{P}^{g-1}$$
-makes $C$ as an irreducible nondegenerate curve of degree $2g-2$, by Proposition \ref{prop:mon_of_embedded_curve} we get
+makes $C$ an irreducible nondegenerate curve of degree $2g-2$. By Proposition \ref{prop:mon_of_embedded_curve} we get
 $$\Gal(\gamma_C) \cong S_{2g-2}.$$
 
 When $C$ is hyperelliptic, the corresponding Gauss map is $2:1$ onto a rational normal curve $R \subset \mathbb{P}^{g-1}$:
@@ -885,7 +885,7 @@ When $C$ is hyperelliptic, the corresponding Gauss map is $2:1$ onto a rational 
 	\arrow[hook, from=1-2, to=1-3]
 \end{tikzcd}\]
 By Proposition \ref{prop:mon_of_nonembedded_curve} we get
-$$\Gal(\gamma_C) \cong S_2^{\oplus g-1} \rtimes S_{g-1}.$$
+$$\Gal(\gamma_C) \cong S_2^{\oplus (g-1)} \rtimes S_{g-1}.$$
 \end{eg}
 
 
@@ -963,7 +963,7 @@ In Setting \ref{set:Prym}, assume further that $k = 2$, $B \neq \varnothing$, an
 
 
 \subsection{Extend automorphism from curve to abelian variety}
-In the process of persuing proving Conjecture \ref{conj:big_mon_for_curve_2}, we propose the following lemma which will roll out a lot of trivial cases.
+In the process of pursuing proving Conjecture \ref{conj:big_mon_for_curve_2}, we propose the following lemma which will rule out numerous trivial cases.
 
 \begin{setting}\label{set:curve_map_to_abelian}
 Let $A$ be a complex abelian variety of dimension $n \geqslant 2$, and let $\tilde{C}$ be a smooth projective curve of genus $g_{\nu}$. Consider a morphism $\nu: \tilde{C} \longrightarrow A$ whose image $C = \nu(\tilde{C})$ is non-degenerate, and let $\phi_{\nu} = \phi_C \circ \nu$ denote the tangent Gauss map of $\tilde{C}$. Fix an automorphism $\tau \in \Aut(\tilde{C})$ of order $k$, inducing automorphisms
@@ -972,7 +972,7 @@ Denote $J = \Jac(\tilde{C})$, $\tilde{W} = \Hnm^0(\omega_{\tilde{C}}) = T_0^*J$,
 \end{setting}
 
 \begin{lemma}\label{lem:triv_twist_works}
- In Setting \ref{set:curve_map_to_abelian}, suppose that for there exists a uniform number $c \in \mathbb{C}^*$ such that the following diagram commutes for every $p \in \tilde{C}$:
+ In Setting \ref{set:curve_map_to_abelian}, suppose that there exists a uniform number $c \in \mathbb{C}^*$ such that the following diagram commutes for every $p \in \tilde{C}$:
 \begin{equation}\label{eq:uniform_scalar_condition}
  % https://q.uiver.app/#q=WzAsNixbMCwwLCJUX3AgXFx0aWxkZXtDfSAgIl0sWzEsMCwiVF97XFxudShwKX0gQSJdLFsyLDAsIldeKiJdLFsyLDEsIldeKiJdLFsxLDEsIlRfe1xcbnUoe1xcdGF1KHApfSl9IEEiXSxbMCwxLCJUX3tcXHRhdShwKX0gXFx0aWxkZXtDfSAgIl0sWzAsMSwiVF9wXFxudSJdLFswLDUsIlRfcFxcdGF1IiwyXSxbNSw0LCJUX3tcXHRhdShwKX1cXG51IiwyXSxbMSwyLCJcXGNvbmciLDEseyJzdHlsZSI6eyJib2R5Ijp7Im5hbWUiOiJub25lIn0sImhlYWQiOnsibmFtZSI6Im5vbmUifX19XSxbMiwzLCIgYyJdLFs0LDMsIlxcY29uZyIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6Im5vbmUifSwiaGVhZCI6eyJuYW1lIjoibm9uZSJ9fX1dXQ==
  \begin{tikzcd}[ampersand replacement=\&,column sep=13mm,row sep=7mm]
@@ -1114,7 +1114,7 @@ $$E_1 \times \ldots \times E_n \longrightarrow A \qquad (z_1,\ldots,z_n) \longri
 
 We can now provide a counterexample for Conjecture \ref{conj:big_mon_for_curve_2}.
 \begin{eg}\label{eg:rotation_counterexample}
-Consider the elliptic curve $E = \mathbb{C} / \mathbb{Z}[\zeta_3]$ and the abelian threefold $A = E^3$. Let $\sigma \in \Aut(E)$ be an automorphism of order $3$, and define $\tau = (\sigma, \sigma, \sigma) \in \Aut(A)$. If a curve $C \subset A$ is invariant under $\tau$, then its Gauss map $\phi_C : C \longrightarrow \mathbb{P}^2$ factors through the quotient morphism $C \longrightarrow C / \tau$. Applying a Bertini argument yields the existence of a smooth curve $C \subset A$ invariant under $\tau$ and under no nontrivial translation or reflection. For instance, with $\mathcal{L} = \mathcal{O}_E(6 \cdot[0])^{\boxtimes 3} \in \Pic(A)$, two general sections $s_1, s_2 \in H^0(A, \mathcal{L})^{\tau}$ cut out such a smooth $\tau$-invariant curve $C$.
+Consider the elliptic curve $E = \mathbb{C} / \mathbb{Z}[\zeta_3]$ and the abelian threefold $A = E^3$. Let $\sigma \in \Aut(E)$ be an automorphism of order $3$, and define $\tau = (\sigma, \sigma, \sigma) \in \Aut(A)$. If a curve $C \subset A$ is invariant under $\tau$, then its Gauss map $\phi_C : C \longrightarrow \mathbb{P}^2$ factors through the quotient morphism $C \longrightarrow C / \tau$. Applying a Bertini argument yields the existence of a smooth curve $C \subset A$ invariant under $\tau$ and under no nontrivial translation or reflection. For instance, with $\mathcal{L} = \mathcal{O}_E(6 \cdot[0])^{\boxtimes 3} \in \Pic(A)$, two general sections $s_1, s_2 \in \Hnm^0(A, \mathcal{L})^{\tau}$ cut out such a smooth $\tau$-invariant curve $C$.
 \end{eg}
 
 \begin{eg}
@@ -1552,7 +1552,7 @@ Writing $\partial_{z} = \frac{1}{2} (\partial_{x}-i\partial_{y}) \in T_pC$, with
 \begin{aligned}
   \kappa_{\operatorname{mean}}(p)=\;&\frac{1}{2} \left(  \rule{0mm}{3.3mm} \mathrm{I\!I}(\partial_{x},\partial_{x}) + \mathrm{I\!I}(\partial_{y},\partial_{y}) \right)  \\ 
   =\;&\frac{1}{2} \left(  \rule{0mm}{3.3mm} \mathrm{I\!I}(\partial_{x},\partial_{x}) + \mathrm{I\!I}(J\partial_{x},J\partial_{x}) \right)  \\
-  =\;&\frac{1}{2} \left(  \rule{0mm}{3.3mm} \mathrm{I\!I}(\partial_{x},\partial_{x}) + \mathrm{I\!I}(\partial_{x},\partial_{x}) \right)  \\ 
+  =\;&\frac{1}{2} \left(  \rule{0mm}{3.3mm} \mathrm{I\!I}(\partial_{x},\partial_{x}) - \mathrm{I\!I}(\partial_{x},\partial_{x}) \right)  \\ 
   =\;& 0
 \end{aligned}
 \end{equation*}
@@ -1664,10 +1664,10 @@ We now consider the projective versions of all objects involved, so that we may 
 %\setlist{itemsep=-0.4em}
 \renewcommand\labelenumi{(\theenumi)}
 \begin{enumerate}[(1)]
-\item Suppose that $\mathbb{P}\Lambda_{Z_1}, \mathbb{P}\Lambda_{Z_1} \subset \mathbb{P}T^*A$ admit monodromy representations $$\rho_{\gamma_{Z_i}}: \pi_1(U,\xi_0) \longrightarrow \Aut\left(\gamma_{Z_i}^{-1}(\xi_0)\right),$$ 
+\item Suppose that $\mathbb{P}\Lambda_{Z_1}, \mathbb{P}\Lambda_{Z_2} \subset \mathbb{P}T^*A$ admit monodromy representations $$\rho_{\gamma_{Z_i}}: \pi_1(U,\xi_0) \longrightarrow \Aut\left(\gamma_{Z_i}^{-1}(\xi_0)\right),$$ 
 then $\mathbb{P}\Lambda_{Z_1} \times_{\mathbb{P}^{\vee}} \mathbb{P}\Lambda_{Z_2} \subset A\times A \times \mathbb{P}^{\vee}$ admits monodromy representation given by
 $$(\rho_{\gamma_{Z_1}},\rho_{\gamma_{Z_2}}): \pi_1(U,\xi_0) \longrightarrow \Aut\left(\gamma_{Z_1}^{-1}(\xi_0) \times \gamma_{Z_2}^{-1}(\xi_0)\right),$$ 
-\item When $Z_1=Z_2=Z$, we obtain an one-to-one correspondence:
+\item When $Z_1=Z_2=Z$, we obtain a one-to-one correspondence:
 $$\left\{ 
 \begin{aligned}
   &\text{ irr components of } \mathbb{P}\Lambda_{Z} \times_{\mathbb{P}^{\vee}} \mathbb{P}\Lambda_{Z}  \\ 
@@ -1696,7 +1696,7 @@ $$\left\{ \rule{0mm}{3.1mm}\text{ connected components of }E \times_B E \;\right
 Generalizing the argument of Lemma \ref{lem:mon_of_prod}, we arrive at the following lemma.
 
 \begin{lemma}
-For $d=\deg \gamma_{Z}$, $\xi_0 \in T_0^* A$ a general point, write
+For $d=\deg \gamma_{Z}$, $\xi_0 \in \mathbb{P}T_0^* A$ a general point, write
 \begin{equation*}
 \begin{aligned}
   \mathbb{P}\Lambda_{Z}^{\times d} :=\;&\;\; \mathbb{P}\Lambda_{Z} \times_{\mathbb{P}^{\vee}}\mathbb{P}\Lambda_{Z} \times_{\mathbb{P}^{\vee}} \cdots \times_{\mathbb{P}^{\vee}} \mathbb{P}\Lambda_{Z} && \subset A^d \times \mathbb{P}^{\vee}\\ 
@@ -1708,7 +1708,7 @@ For $d=\deg \gamma_{Z}$, $\xi_0 \in T_0^* A$ a general point, write
 %\setlist{itemsep=-0.4em}
 \renewcommand\labelenumi{(\theenumi)}
 \begin{enumerate}[(1)]
-\item we obtain an one-to-one correspondence:
+\item we obtain a one-to-one correspondence:
 $$\left\{ 
 \begin{aligned}
   &\text{ irr components of } \mathbb{P}\Lambda_{Z}^{\times d}  \\ 
@@ -1737,7 +1737,7 @@ $$\left\{
 \Gal(\gamma_{Z})\text{-orbits of }  S_d
  \;\right\} 
  $$
- In reference, $\Delta_d$ is usually called the big diagonal.
+ In the literature, $\Delta_d$ is usually called the big diagonal.
 \end{enumerate}
 \endgroup
 \end{lemma}
@@ -1748,7 +1748,7 @@ From this point on, we fix an irreducible component of $\mathbb{P}\Lambda_{Z}^{[
 For any tuple $(m) = (m_1, \ldots, m_d) \in \mathbb{Z}^d$, we define the weighted sum map
 $$a^{(m)}: A^d \longrightarrow A \qquad (p_1,\ldots,p_d) \longmapsto \sum_{i=1}^{d} m_ip_i.$$
 We also define 
-$$\mathbb{P}\Lambda_{Z}^{(m)}: = \left( a^{(m)},\Id_{\mathbb{P}^{\vee}}  \right)_* \mathbb{P}\Lambda_{Z}^{\univ}.$$
+$$\mathbb{P}\Lambda_{Z}^{(m)}:= \left( a^{(m)},\Id_{\mathbb{P}^{\vee}}  \right)_* \mathbb{P}\Lambda_{Z}^{\univ}.$$
 as the (projectivized) weighted Lagrangian cycle in $\mathbb{P}T^*A$. The projective cycle $\mathbb{P}\Lambda_{Z}^{(m)}$ is irreducible but may appear with multiplicities. We can therefore write
 $$\mathbb{P}\Lambda_{Z}^{(m)} = d_Z^{(m)}  \mathbb{P}\Lambda_{Z^{(m)}}$$
 where $d_Z^{(m)} \in \mathbb{Z}_{>0}$ and $Z^{(m)} \subset A$ are uniquely determined. This gives rise to a family of subvarieties parametrized by $\mathbb{Z}^d$.
@@ -1763,7 +1763,7 @@ $$g(m)=\left(m_{g(1)},\ldots , m_{g(d)}\right) \in \mathbb{Z}^d.$$
 %\setlist{itemsep=-0.4em}
 \renewcommand\labelenumi{(\theenumi)}
 \begin{enumerate}[(1)]
-\item For all $g\in \Gal(\gamma_{Z})$, we have $ Z^{g(m)}=Z^{(m)}$, $c_Z^{g(m)}=d_Z^{(m)}$;
+\item For all $g\in \Gal(\gamma_{Z})$, we have $ Z^{g(m)}=Z^{(m)}$, $d_Z^{g(m)}=d_Z^{(m)}$;
 \item For $(m)=(1,0,\ldots,0)\in \mathbb{Z}^d$, $Z^{(m)}=Z$;
 \item For all $(m), (m') \in \mathbb{Z}^d$, we have  $\mathbb{P}\Lambda_{Z}^{(m)} \circ \mathbb{P}\Lambda_{Z}^{(m')} \supseteq \mathbb{P}\Lambda_{Z}^{(m+m')}$;
 \item The group $\left< \mathbb{P}\Lambda_{Z^{(m)}} \right>_{\Abel}$ is closed under the convolution product.
@@ -1785,11 +1785,11 @@ In fact, the Lagrangian cycles $\mathbb{P}\Lambda_{Z^{(m)}}$ coincide with the i
 	\arrow["\supset"{description}, draw=none, from=2-2, to=2-1]
 	\arrow["{\stackrel{\footnotemark}{\cong}}"{description}, shift left, draw=none, from=2-2, to=2-3]
 \end{tikzcd}\]
-\footnotetext{I believe that this isomorphism should be already known, so I should probably cite it somewhere(rather than making it up all by myself).}
+\footnotetext{I believe that this isomorphism should be already known, so I should probably cite it somewhere (rather than making it up all by myself).}
 Here, $\delta_Z$ denotes the perverse intersection complex associated with the subvariety $Z$ (in particular, $\delta_Z = \iota_{Z,*}\underline{\mathbb{Q}}_Z[-\dim Z]$ when $Z$ is smooth), and $\mathcal{L}(A)$ stands for the $\lambda$-ring of clean conic Lagrangian cycles on $T^*A$ \cite[p5]{Kr21GaussII}.
 
 \begin{remark}
-Suppose that $Z \subset A$ is smooth of general type. Then the characteristic cycle $\charcycle(\delta_Z)$ is irreducible and equals $\mathbb{P}\Lambda_Z$. In this situation, let ${\lambda_1, \ldots, \lambda_d} \subset X^*(T_u)$ denote the weights corresponding to the points $p_1, \ldots, p_d \in \gamma_Z^{-1}(\xi_0)$.
+Suppose that $Z \subset A$ is smooth of general type. Then the characteristic cycle $\charcycle(\delta_Z)$ is irreducible and equals $\mathbb{P}\Lambda_Z$. In this situation, let $\lambda_1, \ldots, \lambda_d \in X^*(T_u)$ denote the weights corresponding to the points $p_1, \ldots, p_d \in \gamma_Z^{-1}(\xi_0)$.
 For each tuple $(m) \in \mathbb{Z}^d$, define $\lambda^{(m)} = \sum m_i \lambda_i \in X^*(T_u)$, and consider the ``highest weight representation"
 $$V_{\lambda^{(m)}}=\bigoplus_{\lambda \in \Gal(\gamma_{Z}) \cdot \lambda^{(m)}} \mathbb{C}_{\lambda} \in \Rep
 \left(\rule{0mm}{3mm}T_u \rtimes \Gal(\gamma_Z)\right)$$
@@ -1797,7 +1797,7 @@ where $\mathbb{C}_\lambda$ is the one-dimensional representation of $T_u$ with w
 $$\left< \mathbb{P}\Lambda_{Z} \right> \cong \Rep
 \left(\rule{0mm}{3mm}T_u \rtimes \Gal(\gamma_Z)\right) \qquad \mathbb{P}\Lambda_{Z^{(m)}} \longleftrightarrow V_{\lambda^{(m)}}.$$
 
-Moreover, the Weyl group $W_Z$ acts naturally on $X^(T)$. For the orbit $W_Z \cdot \chi_0 \subset X^(T)$, the associated Lagrangian cycle is given by
+Moreover, the Weyl group $W_Z$ acts naturally on $X^*(T)$. For the orbit $W_Z \cdot \chi_0 \subset X^*(T)$, the associated Lagrangian cycle is given by
 $$\sum_{\sigma \in W_Z/\Gal(\gamma_Z)} \mathbb{P}\Lambda_{Z^{\sigma (\chi_0)}}.$$
 
 
@@ -1897,7 +1897,7 @@ By definition,
 $$[\mathbb{P}\Lambda_{Z}^{\geqslant \alpha}]= \sum_{\alpha'\geqslant \alpha} [\mathbb{P}\Lambda_{Z}^{\alpha'}].$$
 Applying Möbius inversion on the partition lattice yields
 $$[\mathbb{P}\Lambda_{Z}^{\alpha}]= \sum_{\alpha'\geqslant \alpha} \mu(\alpha,\alpha')\; [\mathbb{P}\Lambda_{Z}^{\geqslant\alpha'}],$$
-where $\mu(\alpha, \alpha')$ denotes the Möbius function as defined in \cite[p141]{Ai12}.
+where $\mu(\alpha, \alpha')$ denotes the Möbius function as defined in \cite[p.~141]{Ai12}.
 \begin{fact}[{See \cite[IV.3]{Ai12}}]\label{fact:moebius_explicit}
 Let $\alpha' \geqslant \alpha$ be two partitions of $[d]$, where $\alpha' = \{A_1, \ldots, A_k\}$. For each $i$, denote by $r_i$ the number of blocks of $\alpha$ that are contained in $A_i$. Then
 $$\mu(\alpha, \alpha') = (-1)^{|\alpha|-k} \prod_{i=1}^{k}\; (r_i-1)!$$
@@ -1909,7 +1909,7 @@ With Fact \ref{fact:moebius_explicit}, one can compute $[\mathbb{P}\Lambda_{Z}^{
 \begin{equation*}
 \begin{aligned}
   [][\mathbb{P}\Lambda_{Z}^{[d]}]=\;& \sum_{\alpha'}\; \mu(\hat{0},\alpha')\; [\mathbb{P}\Lambda_{Z}^{\geqslant\alpha'}] \\ 
-  =\;& \sum_{k=1}^{d}\sum_{\alpha'=\{A_1, \ldots, A_k\}} (-1)^{d-k} \prod_{i=1}^{k}\, \left(\rule{0mm}{3mm}|A_i|-1\right)!\; \cdot \Delta_{\alpha,*}\! \left[ \mathbb{P}\Lambda_{Z}^{\times k} \right] \\ 
+  =\;& \sum_{k=1}^{d}\sum_{\alpha'=\{A_1, \ldots, A_k\}} (-1)^{d-k} \prod_{i=1}^{k}\, \left(\rule{0mm}{3mm}|A_i|-1\right)!\; \cdot \Delta_{\alpha',*}\! \left[ \mathbb{P}\Lambda_{Z}^{\times k} \right] \\ 
 \end{aligned}
 \end{equation*}
 
@@ -1947,7 +1947,7 @@ For any tuple $(m)=(m_1,\ldots,m_d) \in \mathbb{Z}^d$ and any partition $\alpha 
 $$\alpha(m):= \left( \sum_{i \in A_1}m_i, \ldots, \sum_{i \in A_k}m_i  \right) \in \mathbb{Z}^k.$$
 Moreover, for $\boldsymbol{l}=(l_1,\ldots,l_k) \in \mathbb{N}_{\geqslant 0}^k$ with $\sum l_i=l$, we set
 $$\alpha(m)^{2\boldsymbol{l}}:=  \left( \sum_{i \in A_1}m_i \right)^{2l_1} \cdots \left( \sum_{i \in A_k}m_i \right)^{2l_k}$$
-which defines a homogeneous polynomial of degree $2l$ in $\mathbb{Z}[m_1,\ldots,m_k]$. 
+which defines a homogeneous polynomial of degree $2l$ in $\mathbb{Z}[m_1,\ldots,m_d]$. 
 \end{definition}
 
 We can now determine $[\mathbb{P}\Lambda_{Z}^{(m)}]$ in the case where the monodromy group is $S_d$:
@@ -1964,7 +1964,7 @@ We can now determine $[\mathbb{P}\Lambda_{Z}^{(m)}]$ in the case where the monod
 \end{equation*}
 Therefore,
 \begin{equation}\label{eq:CMclass_sym}
-c_l\left(\Lambda_{Z^{(m)}}\right)=\frac{1}{d_Z^{(m)}}\sum_{\alpha} \sum_{\sum l_i=l}  \left(\mu(\hat{0},\alpha)    \alpha(m)^{2\boldsymbol{l}} \bigast_{i=1}^k c_{l_i}\right)
+c_l\left(\Lambda_{Z^{(m)}}\right)=\frac{1}{d_Z^{(m)}}\sum_{\alpha} \sum_{\sum l_i=l}  \left(\mu(\hat{0},\alpha)    \alpha(m)^{2\boldsymbol{l}} \bigast_{i=1}^k c_{l_i}\right).
 \end{equation}
 The following corollary collects some quantitative implications of \eqref{eq:CMclass_sym}.
 \begin{corollary}
@@ -1978,7 +1978,7 @@ Assume that $\Gal(\gamma_{Z})=S_d$.
 $$c_l\left(\Lambda_{Z^{(m)}}\right) \in \Hnm^{2(n-l)}(A)[m_1,\ldots,m_d]^{S_d}$$
 are polynomials of degree $2l$ with exponent at most $2r$, when expressed in the variables $m_1,\ldots,m_d$.
 \item If $Z \subset A$ is a smooth curve, there exists a homogeneous symmetric polynomial $f_{Z,l} \in \mathbb{Q}[m_1, \ldots, m_{d}]^{S_{d}}$ of degree $2l$ and exponent at most $2$, such that
-$$c_l\left(\Lambda_{Z^{(m)}}\right)=f_{Z,l}(m_1,\ldots,m_d)  \left(\bigast_{i=1}^k c_{1}\right).$$
+$$c_l\left(\Lambda_{Z^{(m)}}\right)=f_{Z,l}(m_1,\ldots,m_d)  \left(\bigast_{i=1}^l c_{1}\right).$$
 In this case, 
 $$Z^{(m)} \subset A \text{ is a divisor } \quad\Longleftrightarrow\quad f_{Z,n-1}(m_1,\ldots,m_d) \neq 0.$$
 \end{enumerate}
@@ -2012,7 +2012,7 @@ With these conventions, we can now express the following decomposition:
 
 Evidently, determining $[\mathbb{P}\Lambda_{Z}^{\widetilde{[\alpha]}}]$ amounts to determining $[\mathbb{P}\Lambda_{Z}^{\widetilde{[d/2]}}]$, and the latter computation reduces again to combinatorics.
 
-For $\beta \in \mathbb{P}(d/2)$, define
+For $\beta \in \mathcal{P}(d/2)$, define
 \begin{equation*}
 \begin{aligned}
 \mathbb{P}\Lambda_{Z}^{\widetilde{\geqslant \beta}}:=\;&\left\{ \left(\rule{0mm}{3mm}(p_i),\xi\right) \in \mathbb{P}\Lambda_{Z}^{\times d/2} \;\middle|\; p_i = \pm p_j \text{ if } i \sim_{\beta} j  \right\}\\ 
@@ -2086,7 +2086,7 @@ We can now determine $[\mathbb{P}\Lambda_{Z}^{(m)}]$ in the case where $Z=-Z$ an
 
 Therefore,
 \begin{equation}\label{eq:CMclass_signsym}
-c_l\left(\Lambda_{Z^{(m)}}\right)=\frac{1}{d_Z^{(m)}}\sum_{\beta} \sum_{\sum l_i=l}  \left( 2^{d/2-k}\, \mu(\hat{0},\beta)    \beta(\widetilde{m}^2)^{\boldsymbol{l}} \bigast_{i=1}^k c_{l_i}\right)
+c_l\left(\Lambda_{Z^{(m)}}\right)=\frac{1}{d_Z^{(m)}}\sum_{\beta} \sum_{\sum l_i=l}  \left( 2^{d/2-k}\, \mu(\hat{0},\beta)    \beta(\widetilde{m}^2)^{\boldsymbol{l}} \bigast_{i=1}^k c_{l_i}\right).
 \end{equation}
 The following corollary collects some quantitative implications of \eqref{eq:CMclass_signsym}.
 \begin{corollary}
@@ -2100,7 +2100,7 @@ Suppose that $Z=-Z$ and $\Gal(\gamma_{Z}) \cong W(C_{d/2})$, and assume that $(m
 $$c_l\left(\Lambda_{Z^{(m)}}\right) \in \Hnm^{2(n-l)}(A)[m_1^2,\ldots,m_{d/2}^2]^{S_{d/2}}$$
 are polynomials of degree $l$ with exponent at most $2r$, when expressed in the variables $m_1^2,\ldots,m_{d/2}^2$.
 \item If $Z \subset A$ is a smooth curve, there exists a homogeneous symmetric polynomial $\widetilde{f}_{Z,l} \in \mathbb{Q}[m_1^2, \ldots, m_{d/2}^2]^{S_{d/2}}$ of degree $l$ and exponent at most $2$, such that
-$$c_l\left(\Lambda_{Z^{(m)}}\right)=\widetilde{f}_{Z,l}(m_1^2,\ldots,m_{d/2}^2)  \left(\bigast_{i=1}^k c_{1}\right).$$
+$$c_l\left(\Lambda_{Z^{(m)}}\right)=\widetilde{f}_{Z,l}(m_1^2,\ldots,m_{d/2}^2)  \left(\bigast_{i=1}^l c_{1}\right).$$
 In this case, 
 $$Z^{(m)} \subset A \text{ is a divisor } \quad\Longleftrightarrow\quad \widetilde{f}_{Z,n-1}(m_1^2,\ldots,m_{d/2}^2) \neq 0.$$
 \end{enumerate}
@@ -2123,33 +2123,33 @@ In this definition:
 \begin{itemize}
 \item $\alpha=\{A_1,\ldots,A_k\} \in \mathcal{P}(d)$ is a set partition of $[d]$ with $k = \#\alpha$ blocks (analogously for $\beta$);
 \item $\boldsymbol{l}=(l_1,\ldots,l_k) \in \mathbb{Z}^k$, and $\boldsymbol{l} \dashv \lambda$ indicates that $\boldsymbol{l}$ is of type $\lambda$, meaning that its nonzero components, counted with multiplicities, form the partition $\lambda$;
-\item $\mu(\hat{0}, \alpha) = (-1)^{d-k} \prod_{i=1}^{k}\, \left(\rule{0mm}{3mm}|A_i|-1\right)$ is the Möbius function;
+\item $\mu(\hat{0}, \alpha) = (-1)^{d-k} \prod_{i=1}^{k}\, \left(\rule{0mm}{3mm}|A_i|-1\right)!$ is the Möbius function;
 \item $\alpha(m)^{2\boldsymbol{l}}=  \left( \sum_{i \in A_1}m_i \right)^{2l_1} \cdots \left( \sum_{i \in A_k}m_i \right)^{2l_k}$ and $ \beta(\widetilde{m}^2)^{\boldsymbol{l}}=  \left(\sum_{i \in A_1} m_i^2\right)^{l_1} \cdots \left(\sum_{i \in A_k} m_i^2\right)^{l_k}$.
 \end{itemize}
 \end{definition}
 Now, the formulas \eqref{eq:CMclass_sym} and \eqref{eq:CMclass_signsym} can be written as
 \begin{equation*}
 \begin{aligned}
-  c_l\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{d_Z^{(m)}} \sum_{\lambda \dashv l} \;\mu_d^{\lambda} \left( \bigast_{i=1}^{k'} c_{\lambda_i}\right)\qquad && \text{type $A$ case} \\ 
-  c_l\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{d_Z^{(m)}} \sum_{\lambda \dashv l} \;\widetilde{\mu}_{\widetilde{d}}^{\lambda} \left( \bigast_{i=1}^{k'} c_{\lambda_i}\right)\qquad && \text{type $C$ case} \\
+  c_l\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{d_Z^{(m)}} \sum_{\lambda \vdash l} \;\mu_d^{\lambda} \left( \bigast_{i=1}^{k'} c_{\lambda_i}\right)\qquad && \text{type $A$ case} \\ 
+  c_l\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{d_Z^{(m)}} \sum_{\lambda \vdash l} \;\widetilde{\mu}_{\widetilde{d}}^{\lambda} \left( \bigast_{i=1}^{k'} c_{\lambda_i}\right)\qquad && \text{type $C$ case} \\
 \end{aligned}
 \end{equation*}
 
 The following identities have been verified in low-degree cases using SageMath, though a purely combinatorial explanation, as well as a general formulation for the remaining types, is still lacking.
 \begin{fact}
-Let $1^{l} := [1, \ldots, 1] \dashv l$. When $l < \widetilde{d}$, we have
+Let $1^{l} := [1, \ldots, 1] \vdash l$. When $l < \widetilde{d}$, we have
 \begin{equation*}
 \begin{aligned}
   \mu_d^{1^{l}}=\;& \phantom{2^{\widetilde{d}}}\frac{1}{2^{l}l!} \sum_{\sigma \in S_{d}} \prod_{i=1}^{l} \left( m_{\sigma(2i-1)}-m_{\sigma(2i)} \right)^2 \\
   \widetilde{\mu}_{\widetilde{d}}^{1^{l}}=\;& 2^{\widetilde{d}}\frac{1}{2^{l}l!} \sum_{\sigma \in S_{\widetilde{d}}} \prod_{i=1}^{l} m_{\sigma(i)}^2 \\
-  =\;& 2^{\widetilde{d}-l}(\tilde{d}-l)! \sum_{1 \leqslant i_1 < \cdots i_{l} \leqslant d} m_{i_1}^2\cdots m_{i_{l}}^2 \\
+  =\;& 2^{\widetilde{d}-l}(\tilde{d}-l)! \sum_{1 \leqslant i_1 < \cdots < i_{l} \leqslant \widetilde{d}} m_{i_1}^2\cdots m_{i_{l}}^2 \\
 \end{aligned}
 \end{equation*}
 
 \end{fact}
 
 \begin{eg}[Continuation of Example \ref{eg:mon_of_Jac}]\label{eg:dim_in_Jac_case}
-Let $C$ be a smooth curve of genus $g$ embedded in its Jacobian $A := \Jac(C)$ via the Abel–Jacobi map $\AJ_C: C \hookrightarrow A$. In this case, write $\Theta$ as the theta divisor of $A$, we have formula \cite[p323]{BL04}
+Let $C$ be a smooth curve of genus $g$ embedded in its Jacobian $A := \Jac(C)$ via the Abel–Jacobi map $\AJ_C: C \hookrightarrow A$. In this case, writing $\Theta$ for the theta divisor of $A$, we have the formula \cite[p.~323]{BL04}
 $$\bigast_{i=1}^{l} c_{1} = \frac{l!}{(g-l)!} \cdot \Theta^{g-l}.$$
 When $C$ is non-hyperelliptic, we get
 \begin{equation*}
@@ -2161,7 +2161,7 @@ When $C$ is non-hyperelliptic, we get
 When $C$ is hyperelliptic, with $(m)=\left( m_1,\ldots,m_{g-1},0,\ldots,0 \right)$, we get
 \begin{equation*}
 \begin{aligned}
-  c_l\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{d_Z^{(m)}}  \frac{2^{g-1-l} l!}{g-l}  \sum_{1 \leqslant i_1 < \cdots i_{l} \leqslant g-1} m_{i_1}^2\cdots m_{i_{l}}^2 \cdot \Theta^{g-l} \\ 
+  c_l\left(\Lambda_{Z^{(m)}}\right)=\;& \frac{1}{d_Z^{(m)}}  \frac{2^{g-1-l} l!}{g-l}  \sum_{1 \leqslant i_1 < \cdots < i_{l} \leqslant g-1} m_{i_1}^2\cdots m_{i_{l}}^2 \cdot \Theta^{g-l} \\ 
   \dim Z^{(m)} =\;&  \# \left\{ i \in [g-1] \;\middle|\; m_i \neq 0 \right\} \\
 \end{aligned}
 \end{equation*}
