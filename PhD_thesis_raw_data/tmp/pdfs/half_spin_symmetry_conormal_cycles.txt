@@ -1,0 +1,715 @@
+--- PAGE 1 ---
+HALF-SPIN SYMMETRY FOR CONORMAL CYCLES
+Lemma 1. There is a one-parameter semistable family of surfacesS⊂A→ T, in
+a smooth family of abelian fourfolds, with the following properties.
+(1) For t ̸= 0 general, St ⊂ At is a smooth irreducible Schoen surface and its
+inclusion is its Albanese embedding. After a ﬁnite base change and translation
+by a relative section which is zero att = 0 , the whole embedded family is
+invariant under relative inversion:[−1]A(S) =S.
+(2) The central ﬁbre is
+S0 = ∆J∪ (C×C)⊂J×J, ∆J\ (C×C) = ∆C,
+where C is a smooth genus-two curve, embedded as a symmetric theta divisor
+in its JacobianJ.
+(3) The projectivized conormal Gauss map of a generalSt has degree eight. Its
+quotient by inversion has degree four and is the incidence cover obtained by
+intersecting a line on a smooth quadric threefold with a quartic divisor on that
+quadric.
+Proof. We use the following results from the literature, stated completely in the
+form needed below.
+• Schoen smoothing theorem.The reducible surface obtained by gluingJ and
+C×C along C⊂ J and ∆C⊂ C×C deforms to a smooth surface of general
+type with
+c2
+1 = 16 = 2c2, q = 4, p g = 5.
+Its deformation space is locally smooth and irreducible of dimension four. This
+is Rito–Roulleau–Sarti, paper_id=Rito_Roulleau_Sarti_Explicit_Schoen_
+surfaces, theorem_id=Theorem1, arXiv=1609.02235; the smoothing and four-
+dimensional deformation assertions are also Theorem 2.2 of Ciliberto–Mendes
+Lopes–Roulleau, paper_id=Ciliberto_MendesLopes_Roulleau_On_Schoen_
+surfaces, theorem_id=Theorem2.2, arXiv=1303.1750.
+• Canonical-map theorem. For a general Schoen surfaceS, the canonical map
+is a ﬁnite morphism of degree two onto a surfaceY ⊂ P4 with forty nodes;
+Y is the complete intersection of a quadric and a quartic, and the canonical
+double cover is ramiﬁed exactly over the forty nodes. This is Ciliberto–Mendes
+Lopes–Roulleau, paper_id=Ciliberto_MendesLopes_Roulleau_On_Schoen_
+surfaces, theorem_id=Theorem3.1, arXiv=1303.1750.
+• Explicit-family theorem. If I4 ⊂ P4 is the Igusa quartic, there is a four-
+parameter family of quadricsQa,b,c,d such that a generalI4\ Qa,b,c,d has ex-
+actly forty nodes, those nodes are two-divisible, and the double cover rami-
+ﬁed at them is a Schoen surface. This is Rito–Roulleau–Sarti,paper_id=Rito_
+Roulleau_Sarti_Explicit_Schoen_surfaces, theorem_id=Theorem3, arXiv=
+1609.02235.
+• Albanese assertion. A Schoen surface has irregularity four, hence
+a four-dimensional Albanese variety, and its Albanese map embeds it
+in that variety. This is the assertion recalled in the introduction of
+1
+
+--- PAGE 2 ---
+2 HALF-SPIN SYMMETRY FOR CONORMAL CYCLES
+paper_id=Rito_Roulleau_Sarti_Explicit_Schoen_surfaces, theorem_
+id=Introduction,Albanese-embeddingassertion, arXiv=1609.02235.
+• Limit Hodge-class theorem. For a general genus-two JacobianJ, putS0 =
+∆J + (C×C). Its class lies in the unique three-dimensional Weil-Hodge space
+B2
+K for K = Q(√−3), with
+−1 +√−3
+2 ↦−→
+(−1 −1
+1 0
+)
+,
+andS0 deformsinthecorrespondingfamilyofabelianfourfoldsofWeiltype. This
+is van Geemen, paper_id=van_Geemen_Weil_Classes_and_Decomposable_
+Abelian_Fourfolds, theorem_id=Section6.2,TheclassoftheSchoensurface,
+arXiv=2108.02087.
+These statements give the family and its central ﬁbre. The canonical deck in-
+volution has no invariant holomorphic one-forms: its quotient is the complete-
+intersection surfaceY, which has irregularity zero. It therefore acts as−1 on the
+four-dimensional space of holomorphic one-forms ofSt.
+We also make this translation coherently in the family. In Schoen’s construction
+the canonical double covers, including their deck involutions, form a relative double
+cover; after shrinking and a ﬁnite base change, write the relative involution asι.
+On the relative Albanese scheme its linear part is−1, so with respect to the given
+central Albanese embedding it acts as
+x↦−→−x +c(t)
+for a sectionc :T→A . The central involution is inversion on∆J∪ (C×C), hence
+c(0) = 0. Moreintrinsically, evenifoneonlytakestheclosureoftheinvolutionsfrom
+the punctured family, specialization gives−S0 +c(0) = S0 =−S0, so translation
+by c(0) stabilizes S0. It must preserve the unique abelian-surface component∆J,
+forcingc(0) = (u,u ); it must then preserveC×C, soC +u =C. A theta curve in
+a general genus-two Jacobian has trivial translation stabilizer, henceu = 0. Thus
+in either descriptionc(0) = 0. Since multiplication by two on an abelian scheme
+is ﬁnite etale, after a further ﬁnite etale base change there is a sectionb through
+the origin with2b =c. Translating the relative Albanese embedding by−b changes
+the displayed aﬃne involution tox↦→−x. Since b(0) = 0, it leaves the embedded
+central ﬁbre unchanged. This supplies the relative inversion pairing used below,
+not merely unrelated translations on individual ﬁbres.
+Let V =H0(St, Ω1
+St)∗. The wedge map
+2⋀
+H0(St, Ω1
+St)−→H0(St,KSt)
+is onto and has a one-dimensional kernel generated by a rank-four alternating form.
+Thus the tangent planes of the Albanese embedding are Lagrangian for a symplectic
+form onV, and their tangent-plane Gauss map is the canonical map
+St−→Yt⊂ LG(2,V ) =Q3⊂ P4.
+For [v]∈ P(V ), the Lagrangian planes containingv form a lineLv⊂ Q3. Since
+Yt is a quartic divisor onQ3, a generalLv meets Yt in four points. Each has two
+inverse lifts inSt, so the conormal Gauss degree is eight. Equivalently,
+deg(γSt) =
+∫
+P(N ∗
+St/At
+)
+h3 =
+∫
+St
+c2(Ω1
+St) =c2(St) = 8.
+
+--- PAGE 3 ---
+HALF-SPIN SYMMETRY FOR CONORMAL CYCLES 3
+□
+Lemma 2. For a general member of the Schoen family in Lemma1, the natural
+monodromy of the degree-eight conormal Gauss map is exactly
+W (D4) = (Z/2Z)3 ⋊ S4
+on the four inverse pairs.
+Proof. First we certify that the quotient incidence cover has fullS4-monodromy.
+Use the ﬁve-symmetric forty-nodal member of Rito–Roulleau–Sarti, paper_id=
+Rito_Roulleau_Sarti_Explicit_Schoen_surfaces, theorem_id=Section4,
+thefive-symmetricmember, arXiv=1609.02235. The complete result used from
+that section is that its canonical image is the intersection of the displayed smooth
+quadric and Igusa quartic, has exactly forty nodes, and its double cover ramiﬁed
+at those nodes is a Schoen surface.
+Fourier coordinates put the quadric in the forma1a4 +a2a3− 3a2
+0 = 0. Restrict
+the Igusa quartic to the pencil
+(a0,...,a 4) = (1, 1, 0, 0, 3) +s(t, 0, 3,t 2, 6t).
+The restricted Igusa equation is80f(s,t ), where the full polynomial is
+(6)
+f(s,t ) = 18s4t6 + 216s4t5 + 9s4t4 + 324s4t3 + 162s4t
++s3t6 + 27s3t5 + 324s3t4 + 90s3t3 + 648s3t2 + 27s3t + 81s3
++ 9s2t4 + 165s2t3 + 81s2t2 + 405s2t + 27s2
++ 30st2 + 36st + 84s + 9.
+It has specialization
+f(s, 1) = 729s4 + 1198s3 + 687s2 + 150s + 9,
+which is irreducible modulo 29. Its cubic resolvent specializes to z3− 687z2 +
+153456z− 11289708, whose reductionz3− 2z2 +z + 2 has no root modulo5. Its
+discriminant is a nonzero exactly−27D(t), where:
+(7)
+D(t) = 733t24 + 38952t23 + 514710t22− 1970352t21 + 9891645t20− 48716532t19
++ 219511216t18− 950504112t17 + 3112479432t16− 8675155404t15 + 18869978862t14
+− 36772101360t13 + 60600367404t12− 99990794736t11 + 146694965598t10
+− 216718347636t9 + 272773942416t8− 328440510720t7 + 347712162264t6
+− 335107405260t5 + 320719506237t4− 262644440760t3 + 247999068414t2− 152128174896t + 41841944253.
+For a reproducible squarefreeness certiﬁcate, reduction modulo17 factors as
+(8)
+D(t) = 2(t + 7)(t3 + 4t2− 8t− 1)(t6− 6t4− 8t3− 7t2 + 6t + 6)
+· (t7 + 8t6 + 8t5 + 7t4− 8t3 + 6t2− 4t− 4)
+· (t7− 8t6− 4t4− 8t3− 3t2− 2t− 6) (mod 17) .
+The ﬁve displayed factors are pairwise coprime and each is coprime to its derivative
+(ordinary Euclidean division in F17[t]); equivalently gcd(D,D′) = 1 modulo 17.
+This is an exact, directly reproducible certiﬁcate, not a numerical root computation.
+Hence the generic quartic and its cubic resolvent are irreducible and its discriminant
+is not a square. The quartic Galois criterion gives arithmetic groupS4. A simple
+
+--- PAGE 4 ---
+4 HALF-SPIN SYMMETRY FOR CONORMAL CYCLES
+The Euclidean algorithm also givesgcd(D, lcs(f)) = 1 in Q[t]. Hence every simple
+zero ofD is away from the leading-coeﬃcient degeneration and gives a quartic with
+exactly one ordinary double root, so its local geometric inertia is a transposition.
+The geometric group is normal in the arithmetic group, so it too is S4. The
+restricted pencil already has full group, hence so does the global incidence cover of
+this explicit Schoen member.
+LetG⊂W(B4) be the monodromy on the eight lifts. We showG⊂W (D4). On
+PΛSt, inversion can have ﬁxed points only aboveSt\ At[2]. Each corresponding
+projective conormal ﬁbre has dimension one, so this ﬁxed locus has codimension
+two in the threefoldPΛSt.
+We spell out the local-inertia implication needed here. LetD be a branch divisor
+in the Gauss base, and letg∈W (B4) generate the tame inertia at its generic point.
+Write the signed permutationg as signed cycles on the four inverse pairs. A cycle
+is *negative* when going once around it carries a chosen sheet to the inverse sheet.
+The product-sign character satisﬁes
+(0) χ(g) = (−1)#{negative signed cycles of g}.
+Ifχ(g) =−1, choose a sheet in one negative cycle, of lengthm on the inverse pairs.
+In the normalization over a transverse disk toD, the corresponding 2m signed
+sheets form one inertia orbit and coalesce at one codimension-one point; the inverse
+of the chosen sheet lies in that same orbit. The limiting point is therefore ﬁxed by
+inversion. As the generic point ofD varies, these points form a ﬁxed divisor in the
+normalization ofP3 in the Gauss function ﬁeld. The proper generically ﬁnite Gauss
+map factors through that normalization; since the source is smooth, the resulting
+proper birational morphism is an isomorphism at the generic point of every divisor
+on the normalization. The strict transform is therefore a ﬁxed divisor inPΛSt.
+Thus odd product-sign inertia forces a divisorial inversion-ﬁxed locus. Since the
+actual ﬁxed locus has codimension two,χ(g) = 1 for every divisorial inertia group.
+Consequently the quadratic extension deﬁned by χ is unramiﬁed at every
+codimension-one point of P3. Purity of the branch locus extends it to an etale
+double cover of P3, which is trivial because P3(C) is simply connected. Thus
+every monodromy element changes an even number of signs.
+We ﬁnally compute the actual incidence map at a node; the abstractA1-cover
+alone would not suﬃce. In the explicit ﬁve-symmetric member, use aﬃne coordi-
+nates x0,...,x 4, putS =∑xi, and write its quadric and quartic as
+(1) Q = 5
+∑
+x2
+i− 7S2, F = 4
+(∑
+x4
+i +S4
+)
+−
+(∑
+x2
+i +S2
+)2
+.
+The point
+y = (3/5, 3/5, 3/5,−2/5,−2/5)
+satisﬁes Q(y) =F (y) = 0, and direct diﬀerentiation gives
+dQy = (−8,−8,−8,−18,−18), dF y = (512/125, 512/125, 512/125, 1152/125, 1152/125) =− 64
+125dQy.
+Thus the quadratic tangent cone ofY = (Q =F = 0) inside the smooth quadric at
+y is induced by the Hessian ofF + (64/125)Q. OnTyQ/Cy, take the images of
+(−1, 1, 0, 0, 0), (−1, 0, 1, 0, 0), (−9/4, 0, 0, 1, 0).
+
+--- PAGE 5 ---
+HALF-SPIN SYMMETRY FOR CONORMAL CYCLES 5
+In this basis, the quadratic formq0 whose zero conic parametrizes the directions of
+lines onQ3 through y, and the quadratic tangent coneqY, have matrices
+(2) [q0] =
+
+
+10 5 45 /4
+5 10 45 /4
+45/4 45 /4 155 /8
+(
+, [qY ] =
+
+
+64/5 32 /5 72 /5
+32/5 64 /5 72 /5
+72/5 72 /5 112 /5
+(
+.
+Their determinants are 375/2 and 12288/125, respectively, so this is an ordinary
+node. More importantly,
+(3) [qY ]− 32
+25[q0] = diag(0, 0,−12/5),
+so the two conics are not equal. Therefore some line directionk through y has
+q0(k) = 0 but qY (k)̸= 0.
+Here is why this is exactly the required transversality for the conormal incidence
+map. Identify the smooth quadric withLG(2,V ). Around the plane represented
+by y, choose a Lagrangian splittingV = E⊕E∗. Nearby planes are graphs of
+symmetric matrices
+M =
+(x z
+z y ′
+)
+.
+In the chart[u] = [1 :t]∈ P(E), the universal incidence map is
+(4) (M,t )↦−→[1 :t :x +zt :z +y′t].
+At ﬁxedt, its transverse linear projection has kernel(x,y′,z ) = (t2, 1,−t). As t
+varies, these kernels trace precisely the rank-one conicxy′−z2 = 0, which is the
+conic q0 = 0 in (2). Choose t = t0 corresponding to the directionk found above.
+Then the kernel of the actual incidence projection is nonisotropic forqY.
+The holomorphic Morse lemma, applied after splitting oﬀ this nonisotropic kernel
+and witht as a parameter, now puts the quotient incidence map in the form
+(t,w,A,B ), w 2 =AB, (t,w,A,B )↦−→(t,A,B ).
+The canonical double cover of theA1-germ therefore makes theactual signed conor-
+mal incidence mapanalytically
+(5) (t,a,b )↦−→(t,A,B ) = (t,a 2,b 2), (a,b )∼ (−a,−b)
+on the quotient. A meridian around A = 0 reverses a, and one aroundB = 0
+reversesb. Their product ﬁxes the two quotient sheets but applies inversion on both
+signed pairs. Henceker(G→ S4) containsei +ej. Conjugating by the established
+S4-quotient gives all double sign changes, which generate(Z/2)3. Therefore G =
+W (D4).
+We ﬁnish with a ﬁbrewise generic-monodromy argument, including the signed
+kernel. LetM be the irreducible four-dimensional Schoen parameter space, shrunk
+so the surfaces and their conormal cycles form families, and letD⊂ P3×M be
+the relative Gauss discriminant. Over
+UM = (P3×M)\ D
+form the oriented principal labeling coverPM→UM exactly as in the next lemma
+(after a ﬁnite etale base change onM, if necessary). Its degree is|W (D4)| = 192.
+The inertia argument above applies ﬁbrewise, so every ﬁbre group is contained in
+W (D4).
+
+--- PAGE 6 ---
+6 HALF-SPIN SYMMETRY FOR CONORMAL CYCLES
+At the explicit ﬁve-symmetric pointm0, equations (5)–(8) show that the ﬁbre
+group is all ofW (D4). Choose a base pointξ0∈Um0 and ﬁnitely many based loops
+γ1,...,γ N⊂ Um0 whose signed permutations generateW (D4). Their unionK is
+compact andK×{m0} is disjoint from the closed setD. Hence, after shrinking
+to a small Euclidean ballV ⊂M(C) about m0, one hasK×V ⊂UM. The ﬁnite
+coveringPM|K×V →K×V is topologically locally trivial. After labeling its ﬁbre
+over (ξ0,m 0), the monodromy permutations of each ﬁxed loopγi×{m} are locally
+constant inm. They are therefore the same generators for everym∈ V. Thus
+every ﬁbre overV has monodromyW (D4).
+It remains only to pass from this Euclidean neighbourhood to an algebraic
+generic statement. A ﬁbre (PM)m is geometrically connected exactly when the
+ﬁbre monodromy equalsW (D4): a subgroup H ⊂ W (D4) acts on the principal
+label setW (D4) by left multiplication, and this action is transitive precisely when
+H =W (D4). For the ﬁnite-type morphismPM→M, the locus where the geomet-
+ric ﬁbre is connected is constructible (the constructibility theorem for the number
+of geometric connected components of ﬁbres). Denote it byMfull. It contains the
+nonempty Euclidean openV, which is Zariski dense becauseM is irreducible. A
+dense constructible subset of an irreducible variety contains a nonempty Zariski-
+open subset; that open is automatically dense. After replacingMfull by this open,
+every member in it has exactW (D4) ﬁbre monodromy.
+If o∈M is the ﬁxed Schoen boundary point, density giveso∈Mfull. A general
+algebraic curve through o is not contained in its proper closed complement; its
+normalization therefore supplies a one-parameter smoothing whose general ﬁbre
+has the required full signed monodromy.
+□
+Lemma 3. Choose a one-parameter Schoen smoothing as in Lemma1 whose very
+general member has the monodromy of Lemma2, and make a ﬁnite base change
+which labels the two parity cycles. OnA0 =J×J, put
+Y+ ={(x +y,y ) :x,y∈C}, Y − ={(x,x +y) :x,y∈C}.
+Then the specializations of the middle Segre classes are
+(1)
+sps2(Λ+) = 16
+(
+[Y+] + [{0}× J]
+)
+,
+sps2(Λ−) = 16
+(
+[Y−] + [J×{ 0}]
+)
+.
+Proof. We separate the part determined by the normalized labeled cover from the
+possible excess part and determine the latter without assuming that an unlabeled
+characteristic-cycle limit remembers a labeling.
+The relative normalization on the ﬁnite locus
+We use the following specialization theorem. Its complete statement is: ifW→
+T is a smooth morphism to a smooth curve over a ﬁeld of characteristic zero and
+X⊂W is ﬂat overT, then the scheme-theoretic ﬁbre of the relative conormal cycle
+is an eﬀective conic Lagrangian cycle; specialization is the Gysin map on Chow
+groups, sends eﬀective cycles to eﬀective cycles, and preserves the total conormal
+degree. This is Codogni–Kramer, paper_id=Codogni_Kramer_Semicontinuity_
+of_Gauss_maps, theorem_id=Lemma2.3andProposition2.4, arXiv=2010.00053.
+For a simple-normal-crossing smoothing X1∪D X2, the nearby constructible
+function is 1X1 + 1X2− 21D. With CC (1M) = (−1)dimMΛM, this gives in the
+
+--- PAGE 7 ---
+HALF-SPIN SYMMETRY FOR CONORMAL CYCLES 7
+present family
+(2) sp(ΛSt) = ΛC×C + 2Λ∆C + Λ∆J.
+Only (2) as an unlabeled Lagrangian cycle is used here.
+Write a cotangent direction onJ×J as [α,β ], and set
+(3) L1 ={β = 0}, L 2 ={α = 0}, L 3 ={α +β = 0}⊂ P3.
+OnB◦ = P3\(L1∪L2∪L3), every component in (2) has ﬁnite Gauss ﬁbre;Λ∆J has
+no point there. We now construct proper relative labeled covers over the *whole*
+projective cotangent base rather than infer them from (2). PutB = P3×T, and
+let
+Γ⊂A× TB
+be the scheme-theoretic closure of the projectivized conormal over the punctured
+parameter curve. It is proper overB and carries the relative inversion constructed
+in Lemma1. Over a dense openU∗⊂B\{ t̸= 0}, it is the etale degree-eight cover
+with ﬁxed-point-free inversion.
+OverU∗, form insideΓ4
+U ∗ the conﬁguration cover of ordered tuples(p1,p 2,p 3,p 4)
+containing one representative of each inversion pair. It has two monodromy orbits,
+distinguished by the orientation (the product of the four sign changes). Choose one
+orbit P∗. ExactW(D4)-monodromy says that
+P∗−→U∗
+is the connected principalG = W (D4)-labeling cover, of degree|G| = 192. After
+the ﬁnite base change already allowed in the statement, this choice persists around
+the puncture.
+Take the schematic closure of P∗ in the proper space Γ4
+B, and let P be its
+normalization. Then P →B is proper. It is integral and dominates T, so the
+parameterisanonzerodivisor; overtheparameterDVRthisisequivalenttoﬂatness.
+Every deck transformation ofP∗/U∗ extends uniquely toP, because the latter is
+the normalization in its function ﬁeld.
+For a sign vectorε, letGε⊂G be its stabilizer, of order24, and put
+Hε =P/Gε.
+This quotient is integral, proper overB, and ﬂat overT; onU∗ it is the associated
+degree-eight sign-choice cover. The four coordinate mapspj : P → Γ→A are
+regular. The group-law map
+4∑
+j=1
+εjpj :P−→A
+is Gε-invariant and descends toqε : Hε→A . Choose ε+ = (1, 1, 1, 1) and ε− =
+(−1, 1, 1, 1), and deﬁne global relative cycles by
+(4a) L± = (qε±,γ )∗[Hε±] onA×TB.
+On U∗, (4a) is exactly the deﬁnition in the problem: every parity sign choice oc-
+curs once, and if its summation map has generic degreee onto an image component,
+proper pushforward gives coeﬃciente. Thus (4a) proves retention of the generic
+summation multiplicities. Since the sources are ﬂat over the smooth parameter
+curve, reﬁned Gysin specialization commutes with these proper pushforwards. It
+also commutes with intersection by the relative hyperplane classh; therefore (4a)
+
+--- PAGE 8 ---
+8 HALF-SPIN SYMMETRY FOR CONORMAL CYCLES
+specializes both the global cycles and all their Segre classes. In particular, inter-
+section withh3 shows that their total Gauss degree remains eight.
+We also verify here that these special cycles are conic Lagrangian; this does not
+follow merely from conormal specialization. Work ﬁrst over the smooth ﬁnite-etale
+locus and lift the projective covector to a local nonzero covectorξ. The four labeled
+conormal branches are mapspj =pj(ξ) satisfying
+dξ∧dpj = 0,
+because the graph(pj(ξ),ξ )⊂T∗A is Lagrangian. For the signed sumqε =∑εjpj,
+the addition map gives
+(4b) dξ∧dqε =
+4∑
+j=1
+εj(dξ∧dpj) = 0.
+Thus every generic parity-sum image is isotropic; it is conic and has the projec-
+tive dimension three, hence its conic lift has dimension four and is Lagrangian.
+Equation (4b) is algebraic (vanishing of the pullback of the relative cotangent sym-
+plectic form), so it persists on the closure. Flatness overT makes every component
+of the special projective source three-dimensional. A component whose image has
+smaller dimension contributes zero to the proper pushforward cycle; every com-
+ponent which survives has three-dimensional projective image, and (4b) makes its
+four-dimensional conic lift isotropic, hence Lagrangian. Therefore the special ﬁbres
+ofL±, and every eﬀective residual cycle obtained from them, are pure conic La-
+grangian cycles. In particular each irreducible residual component is the conormal
+cycle of its support, so the conormal classiﬁcation used below is legitimate.
+We next restrict this global construction to the ﬁnite locus. Properness and
+upper semicontinuity of ﬁbre dimension give an open neighbourhoodN⊂B ofB◦×
+{0} on whichΓN→N is ﬁnite. The closure ofP∗ inside (ΓN)4, its normalization,
+and both stabilizer quotients are then ﬁnite overN; by uniqueness of normalization
+these are precisely the restrictions ofP andHε±. Every component of their special
+ﬁbres has dimension three and maps onto the three-dimensionalN0. Hence no
+component supported over a proper subset ofB◦ is introduced there.
+It remains to determine the two coincident pairs contributed by2Λ∆C. This is
+exactly where the previous unlabeled argument was insuﬃcient, so we normalize
+locally. At a general point of ∆C, an analytic change of coordinates puts the
+embedded smoothing in the form
+(4) w = 0, uv =t
+inside coordinates(z,u,v,w )on the abelian fourfold, withz along ∆C. Its conormal
+is spanned bydw and vdu +udv. For a ﬁxed general cotangent direction whose
+du,dv coeﬃcients are both nonzero, the conormal equations giveu/v = κ2 for a
+unit κ. After the normalizationt =s2, the two branches are
+(5) (u,v ) = (sκ,sκ−1), (u,v ) = (−sκ,−sκ−1).
+Thus they are two correlated labeled sheets, not two formal copies of an unlabeled
+cycle. Both approach the same point of∆C, and inversion pairs the two branches
+near that point with the corresponding branches near its inverse. SinceP is pre-
+cisely the normalization of the ordered conﬁguration closure, the two branches in
+(5) are distinct labeled sections there; call their inverse pairsc,d. The four branches
+fromC×C are unramiﬁed at a general direction and give the two pairsa,b. Thus
+
+--- PAGE 9 ---
+HALF-SPIN SYMMETRY FOR CONORMAL CYCLES 9
+this is a statement about the special ﬁbre of the relative labeling cover constructed
+above, not only about the support of (2). It proves that representatives of the four
+inverse pairs may be chosen so that, ass→ 0,
+(6) a→ (p,q ), b → (p,−q), c → (r,r ), d → (r,r ),
+where{±p},{±q},{±r} are the zero divisors on C of α,β,α +β, respectively.
+Formula (5) is the required normalization control of the multiplicity-two diagonal
+sheet.
+For four signed pairs, representatives of the four inverse pairs of even half-spin
+sums are
+(7) a +b +c +d, a +b−c−d,
+a−b +c−d, a −b−c +d,
+and for odd parity they are
+(8) a +b +c−d, a +b−c +d,
+a−b +c +d, −a +b +c +d.
+Substitution of (6) into (7) gives the four points in the conormal ﬁbre of[2]Y+,
+together with the two points in the conormal ﬁbre of{0}× [2]C, each of the lat-
+ter occurring twice. Substitution into (8) gives [2]Y− and twice the conormal of
+[2]C×{ 0}. Hence the special parity cycles contain, with the displayed generic
+multiplicities,
+(9)
+D+ = [2]∗ΛY+ + 2[2]∗Λ{0}×C,
+D− = [2]∗ΛY− + 2[2]∗ΛC×{0}.
+These really are conormal, rather than only pointwise, limits: at(p +r,r )∈ Y+,
+the covector(α,β ) kills the tangent becauseα(TpC) = 0 and (α +β)(TrC) = 0; at
+(r,q +r)∈Y−, it kills the tangent because(α +β)(TrC) = 0 andβ(TqC) = 0. The
+coordinate-curve terms are checked in the same way. The ﬁrst summand in either
+line has Gauss degree four and the second has Gauss degree2· 2 = 4. Since each
+parity cycle has Gauss degree eight and degree is preserved by specialization, (9)
+exhausts every component which dominatesP3.
+Conﬁnement of every excess contribution
+LetR± be the eﬀective residual cycle after subtracting the components (9). The
+ﬁniteness argument overB◦, together with degree exhaustion, shows
+(10) γ(SuppR±)⊂L1∪L2∪L3.
+Thus (10) excludes both additional dominant surfaces and components over ordi-
+nary branch divisors; only the three genuinely non-ﬁnite cotangent lines remain.
+We now classify everything in (10) that can contribute tos2. Let L be one of
+the three lines and letBL⊂J×J be the abelian surface with tangent space
+T0BL =
+⋂
+[ξ]∈L
+ker(ξ).
+If a conormal component overL has surface support, its projective conormal ﬁbre is
+itself a line, hence equalsL at a general point; its tangent space is constantlyT0BL,
+so the support is a translate ofBL. If it has divisor support, every general tangent
+hyperplane still containsT0BL; the divisor is invariant underBL, and cutting its
+Gauss line by one hyperplane produces a nonnegative integral sum of translates of
+BL. Components with smaller support do not contribute tos2. It follows that the
+
+--- PAGE 10 ---
+10 HALF-SPIN SYMMETRY FOR CONORMAL CYCLES
+entire residual contribution tos2 is a nonnegative integral combination of the three
+classes [BLi].
+For (3), these surfaces are
+(11) BL1 ={0}× J, B L2 =J×{ 0}, B L3 = ∆J.
+This also controls the possible excess over the Gauss line of∆J: it can only con-
+tribute an integral multiple of[∆J]; no unlisted surface class can occur.
+Determination of the three multiplicities
+It remains to determine the coeﬃcients in (11). This is not an inference from
+(2); it uses the ﬁxed Hodge structure of the smoothing.
+We use the following complete results of van Geemen. For a general abelian
+fourfold of Weil type (A,K ), the rational codimension-two Hodge classes form
+the three-dimensional ﬁxed space B2
+K = Qω2
+K⊕ WK, and this space is con-
+stant in the Weil family under the natural identiﬁcation of cohomology. For a
+general abelian surface J, one has B2(J×J) = Sym 2B1(J×J), of dimension
+six; for the embedding of K = Q(√−3) displayed in Lemma 1, the two Weil
+eigenclasses and the Weil polarization are the explicit forms below. These are
+paper_id=van_Geemen_Weil_Classes_and_Decomposable_Abelian_Fourfolds,
+theorem_id=Definition2.1andSection2.3;Proposition3.1;Lemma3.3;
+Section6.2, arXiv=2108.02087.
+Put
+a =θ1, b =θ2, c =m∗θ−a−b,
+where m :J×J→J is addition, and letζ = (−1 +√−3)/2. Then
+(12) ω+ =ζ2a +ζc +b, ω − =ζa +ζ2c +b, ω K = 2a−c + 2b.
+Writing
+Ws =ω2
++ +ω2
+−, W d = ω2
++−ω2
+−
+ζ−ζ2 ,
+the three formsω2
+K,Ws,Wd are a basis ofB2
+K.
+We justify that a Hodge-generic choice is available in the Schoen smoothing,
+rather than assuming it. The local moduli space of Schoen surfaces is smooth and
+irreducible of dimension four by the smoothing theorem quoted in Lemma1, and its
+Albanese varieties lie in the four-dimensional Weil family identiﬁed by van Geemen.
+The map to that Weil family is dominant. Indeed, for a smooth Schoen surface the
+rank-four alternating form making the Albanese embedding Lagrangian identiﬁes
+NS/A≃ Ω1
+S.
+Hence h0(NS/A) = q(S) = 4. Since a surface of general type has no global vector
+ﬁelds, the normal sequence gives an injection
+H0(A,TA)≃ C4 ,→H0(S,NS/A),
+which is therefore an isomorphism. Thus all ﬁrst-order embedded deformations
+with the ambient abelian fourfold ﬁxed are translations.
+Here is the deformation-functor comparison. Add a full level structure and the
+polarization of type (1, 1, 3, 3), so that locally the abelian moduli problem is ﬁne,
+and letS be the local moduli space of Albanese-embedded Schoen surfaces modulo
+translation. The Albanese universal property identiﬁes the local abstract Schoen
+deformation functor with this embedded-pair functor: an abstract deformation has
+
+--- PAGE 11 ---
+HALF-SPIN SYMMETRY FOR CONORMAL CYCLES 11
+its relative Albanese embedding, unique up to a relative translation. There is
+therefore a morphism
+Φ : S−→WK
+to the marked polarized Weil domain. For a ﬁxed marked abelian fourfold, the tan-
+gent space of the Hilbert functor isH0(NS/A), while the tangent to the translation
+orbit is the image ofH0(TA). Consequently the kernel ofdΦ is exactly
+(15a) H0(NS/A)/H0(TA) = 0.
+(The remaining automorphisms of a general marked polarized abelian variety are
+ﬁnite and have no tangent directions.) ThusΦ is generically quasi-ﬁnite. BothS
+and the irreducible Weil domainWK have dimension four, so the image ofΦ has
+dimension four and is dense. This proves dominance with markings, polarization,
+and translation normalization all included.
+The full-monodromy locusMfull constructed in Lemma 2 is nonempty Zariski
+open, whilethepointswheretherationalmiddleHodgespaceislargerthan B2
+K form
+a countable union of proper Hodge loci in the Weil domain. By dominance their
+inverse images are still proper. Over the uncountable ﬁeldC, choose a complete-
+intersection curve through the Schoen boundary which is contained neither in the
+closed complement ofMfull nor in any of those countably many proper loci. Its
+normalization gives a one-parameter smoothing whose very general point lies simul-
+taneously in the full-monodromy locus and outside all extra Hodge loci. For this
+arc, the classess2(Λ±) are algebraic Hodge classes on every nonzero ﬁbre; after the
+ﬁnite base change labeling them, their locally constant classes therefore lie in the
+ﬁxed spaceB2
+K. Their specializations do as well.
+The relevant surface classes are
+(13)
+[Y+] =b(a +b−c), [Y−] =a(a +b−c),
+[{0}× J] = a2
+2 , [J×{ 0}] = b2
+2, [∆J] = (a +b−c)2
+2 .
+Multiplication by two acts on surface homology by24 = 16. Hence (9)–(11) give,
+for nonnegative integersui,vi,
+(14)
+sps2(Λ+) = 16[Y+] +u1[{0}× J] +u2[J×{ 0}] +u3[∆J],
+sps2(Λ−) = 16[Y−] +v1[{0}× J] +v2[J×{ 0}] +v3[∆J].
+For transparency, the coeﬃcient comparison is included. Usingζ2 +ζ + 1 = 0,
+expansion of (12) gives
+(15)
+Ws =−a2− 2ab + 4ac + 2b2− 2bc−c2,
+Wd =a2− 2ab + 2bc−c2.
+The six monomials a2,b 2,c 2,ab,ac,bc are a basis of B2(J×J). Requiring the
+ﬁrst line of (14) to belong to the span ofω2
+K,Ws,Wd, and comparing these six
+coeﬃcients, has the unique solution
+(16) (u1,u 2,u 3) = (16, 0, 0), 16([Y+] + [{0}× J]) = 8
+3(ω2
+K +Ws).
+The second line similarly has the unique solution
+(17) (v1,v 2,v 3) = (0, 16, 0), 16([Y−] + [J×{ 0}]) = 8
+3ω2
+K− 4
+3Ws + 4Wd.
+
+--- PAGE 12 ---
+12 HALF-SPIN SYMMETRY FOR CONORMAL CYCLES
+Thus the possible∆J-excess has multiplicity zero, while the two coordinate excess
+terms have exactly the multiplicities shown in (1). Equations (16)–(17) prove (1).
+□
+Lemma 4. For the smoothing in Lemma3,
+(18) sp
+(
+s2(Λ+)−s2(Λ−)
+)
+= 8(b−a)(a +b− 2c)̸= 0.
+Proof. Subtracting the two identities in (1) and using (13) gives
+16
+(
+b(a +b−c) +a2
+2 −a(a +b−c)− b2
+2
+)
+= 8(b−a)(a +b− 2c).
+This class is nonzero. Indeed, on{0}× J one hasa = 0, c = 0, andb =θ, so the
+restriction of the unscaled class1
+2(b−a)(a +b− 2c) is θ2/2, whose integral is one
+for a principal polarization on an abelian surface. Equivalently,∫
+J×J
+8(b−a)(a +b− 2c)a2 = 32̸= 0.
+□
+Theorem 5. Conjecture: half-spin symmetry for conormal cycles
+Prove or disprove the following conjecture.
+Let A be a complex abelian variety of dimensionn, and letZ⊂ A be an irre-
+ducible, non-degenerate subvariety of dimensionr. After translatingZ if necessary,
+assume thatZ is symmetric, namely−Z =Z.
+Let ΛZ ⊂ T∗A be the conormal variety of Z, and let PΛZ ⊂ PT∗A be its
+projectivization. Consider the projectivized conormal Gauss map
+γZ : PΛZ−→ P(T∗
+0A).
+Assume thatγZ is generically ﬁnite of degreed = 2ℓ, where ℓ≥ 4. Let U ⊂
+P(T∗
+0A) be a dense open subset over whichγZ is ﬁnite etale. Assume that the
+monodromy group ofγZ|U is the even signed symmetric group
+W (Dℓ) ={±1}ℓ
++ ⋊ Sℓ
+in its natural action on the signed set{±1,..., ±ℓ}.
+SinceZ is symmetric, a general ﬁber may be written as
+γ−1
+Z ([ξ]) ={±p1,..., ±pℓ}.
+For a sign vectorε = (ε1,...,ε ℓ)∈{± 1}ℓ, deﬁne
+pε =
+ℓ∑
+j=1
+εjpj.
+Let ˜U+ and ˜U− be the two ﬁnite etale covers ofU parametrizing the sign vectors
+satisfying, respectively,
+ε1··· εℓ = +1
+and
+ε1··· εℓ =−1.
+Equivalently, ˜U+ parametrizes sign choices with an even number of minus signs,
+while ˜U− parametrizes those with an odd number.
+
+--- PAGE 13 ---
+HALF-SPIN SYMMETRY FOR CONORMAL CYCLES 13
+Apply the summation map
+(ε, [ξ])↦−→(pε, [ξ])∈A× P(T∗
+0A) = PT∗A.
+Let PΛ+ and PΛ− be the cycle-theoretic closures of the two images, with the generic
+degrees of the summation maps retained as multiplicities. LetΛ+ and Λ− denote
+the corresponding conic cycles inT∗A.
+Then Λ+ and Λ− are eﬀective irreducible conic Lagrangian cycles, each having
+Gauss degree2ℓ−1. They correspond to the two Weyl-group orbits of weights of the
+half-spin representations S+ and S− of Spin(2ℓ). The unordered pair{Λ+, Λ−} is
+independent of the signed labeling of the general Gauss ﬁber.
+LetπA : PT∗A→A be the natural projection, and put
+X± =πA(Supp PΛ±).
+The conjecture is that:
+(1) The two projected supports have the same dimension:
+dimX+ = dimX−.
+(2) The two projectivized Lagrangian cycles have the same integral homology class:
+[PΛ+] = [PΛ−]
+in H2n−2(PT∗A, Z).
+Equivalently, ifh =c1(OPT ∗A(1)) and
+si(Λ±) = (πA)∗(hn−1−i\ [PΛ±])∈H2i(A, Z),
+then the second assertion states that
+si(Λ+) =si(Λ−)
+for every 0≤i≤n− 1.
+Remark. When ℓ is odd, both assertions hold because inversion exchanges the
+two half-spin cycles: PΛ− = (−1)∗PΛ+. When ℓ = 2k is even, it is known that
+si(Λ+) = si(Λ−) for 0≤ i≤ k− 1, and that dimX+ = dim X− whenever k−
+1 > min{dimX+, dimX−}. Thus, the genuinely conjectural case isℓ = 2k with
+min{dimX+, dimX−}≥ k− 1; the ﬁrst possible diﬀerence between the homology
+classes occurs in the componentsk. No elementary counterexample satisfying all
+the hypotheses is presently apparent.
+Proof. The conjecture is false. Take a very general Schoen surface Z = St ⊂
+At from Lemma 1, on an arc chosen as in Lemma3. It is smooth, irreducible,
+symmetric after translation, and Albanese embedded in an abelian fourfold. Its
+conormal Gauss map has degree eight, henceℓ = 4, and is ﬁnite over a dense open
+set; ﬁniteness of its Gauss map also implies non-degeneracy. By Lemma2, its exact
+natural monodromy isW (D4). Thus every hypothesis in the question is satisﬁed.
+After the harmless ﬁnite base change labeling the two parity cycles, intersection
+with the relative classh, proper pushforward to the abelian scheme, and special-
+ization commute. If the two projectivized half-spin cycles on the general ﬁbre had
+the same integral homology class, then in particular theirs2-classes would agree,
+and their diﬀerence would specialize to zero. Lemma4 instead gives
+sp
+(
+s2(Λ+)−s2(Λ−)
+)
+= 8(b−a)(a +b− 2c)̸= 0.
+
+--- PAGE 14 ---
+14 HALF-SPIN SYMMETRY FOR CONORMAL CYCLES
+Therefore [PΛ+]̸= [PΛ−] already in rational, and hence also in integral, homology.
+This Schoen surface is a counterexample to assertion 2, so the stated conjunction
+is disproved. □
+References
+[1] Ciliberto, Mendes Lopes, and Roulleau, On Schoen surfaces, arXiv:1303.1750. https://arxiv.
+org/abs/1303.1750
+[2] Codogni and Kramer, Semicontinuity of Gauss maps and the Schottky problem ,
+arXiv:2010.00053. https://arxiv.org/abs/2010.00053
+[3] Rito, Roulleau, and Sarti, Explicit Schoen surfaces , arXiv:1609.02235. https://arxiv.org/
+abs/1609.02235
+[4] van Geemen, Weil Classes and Decomposable Abelian Fourfolds , arXiv:2108.02087. https:
+//arxiv.org/abs/2108.02087

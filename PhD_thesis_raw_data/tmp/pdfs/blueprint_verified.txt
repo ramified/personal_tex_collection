@@ -1,0 +1,276 @@
+--- PAGE 1 ---
+Lemma 1. There is a smooth hyperelliptic curve Γ0/Q of genus 4, a marked Weier-
+strass point p0∈ Γ0, and a tangential cover
+π0 : (Γ0,p 0)−→(E0, 0)
+to an elliptic curve such that the complementary three-dimensional abelian quotient
+A0 =J(Γ0)/π∗
+0E0
+is absolutely simple over C. Moreover, if
+PQ =H1(A0, Q)↪→H1(Γ0, Q),
+then
+F 1(PC) =H0(
+Γ0,K Γ0(−p0)
+)
+.
+Proof. We use four external results, stated here in the precise forms needed.
+(1) Robert S. Maier, Lam´ e polynomials, hyperelliptic reductions and Lam´ e band
+structure, paper id=Maier2003, arXiv id=math-ph/0309005, theorem id=deﬁnition
+(3.5), Table 3 (ℓ = 4), Theorem L, and Section 6, proves this specialized
+complete statement. For the nonsingular curveEg2,g3 :y2 = 4x3−g2x−g3,
+with 4e3
+i−g2ei−g3 = 0, put
+L4 = (B3− 52g2B + 560g3)
+3∏
+i=1
+(B2 + 10eiB− 35e2
+i− 7g2).
+If L4 is square-free, then Γ 4 : ν2 = L4 is a smooth genus-four curve, and
+the rational functions in Theorem L deﬁne a degree-4 · 5/2 = 10 algebraic
+spectral cover Γ 4→ Eg2,g3, sending the spectral point at inﬁnity to the
+origin.
+(2) J. C. Eilbeck, V. Z. Enolskii, and E. Previato, Varieties of elliptic soli-
+tons, paper id=EilbeckEnolskiiPreviato2001, arXiv id=none located, the-
+orem id=Proposition 3.1 and the paragraph after equation (17), prove:
+commuting coprime-order ordinary diﬀerential operators whose lower co-
+eﬃcients are meromorphic doubly-periodic functions have a Burchnall–
+Chaundy spectral curve covering the elliptic curve of periods, and this cover
+is tangential in the Treibich–Verdier sense. The integer Lam´ e operator is
+ﬁnite-gap and its commuting odd-order operator has Maier’s spectral curve,
+so Maier’s cover is tangential at inﬁnity.
+(3) E. Colombo, G. P. Pirola, and E. Previato, Density of elliptic solitons , pa-
+per id=ColomboPirolaPreviato1994, arXiv id=none, theorem id=Theorem
+1.3, prove the complete cotangent criterion: for a ﬁnite cover π : (Γ,p )→
+(E, 0), if WE =π∗H0(E,K E) and orthogonality is for the intersection po-
+larization, then
+π is tangential at p ⇐⇒ W⊥
+E =H0(Γ,K Γ(−p)).
+(4) Sara Arias-de-Reyna, C´ ecile Armana, Valentijn Karemaker, Marusia Re-
+bolledo, Lara Thomas, and N´ uria Vila, Large Galois images for Jacobian
+varieties of genus 3 curves, paper id=AriasEtAl2016, arXiv id=1507.05913,
+theorem id=Deﬁnition 3.2 and Proposition 3.4, prove: a simple ordinary
+abelian threefold over an odd ﬁnite ﬁeld Fq is absolutely simple unless its
+Frobenius polynomial is T 6 +cT 3 +q3, with (c,q ) = 1; in the exceptional
+case it splits over Fq3. For a Weil polynomial T 6 +aT 5 +bT 4 +cT 3 +
+qbT 2 +q2aT +q3, ordinarity is equivalent to q ∤c.
+1
+
+--- PAGE 2 ---
+2
+We now specialize the Lam´ e construction to
+g2 = 4, g 3 = 1, E 0 :y2 = 4x3− 4x− 1.
+Its discriminant is 37̸= 0, and
+L4 = (B3− 208B + 560)
+∏
+4e3−4e−1=0
+(B2 + 10eB− 35e2− 28).
+The product and Maier’s symmetric cover formulas are rational; clearing the square
+denominator by Y = 4ν gives an integral model. Modulo 11, its monic branch
+polynomial is
+¯L(B) =B9 +B4 + 6B3 + 9B2 + 7B + 5
+and has the factorization
+¯L = (B + 2)(B2 + 9B + 5)(B3 + 5B2 + 6B + 1)(B3 + 6B2 + 7B + 6).
+Thus gcd( ¯L, ¯L′) = 1, so Γ 0 is smooth of genus 4 in characteristics 0 and 11. The
+ﬁrst two cited results give a degree-ten tangential cover
+π0 : (Γ0,p 0)−→(E0, 0),
+where p0 is the unique point over B =∞.
+For an exact ﬁnite-ﬁeld certiﬁcate, evaluate
+Nr = 11r + 1 +
+∑
+b∈F11r
+χr
+(¯L(b)
+)
+,
+where χr(0) = 0 and χr(z) =z(11r−1)/2 otherwise. Direct enumeration gives
+(N1,N 2,N 3,N 4) = (10, 120, 1312, 15312).
+For reproducibility, the ﬁelds for r = 2, 3, 4 are deﬁned respectively by z2 + 1,
+z3 + 4z2 + 1, andz4 + 4z3 + 1, each irreducible by the Frobenius-gcd test; the cor-
+responding character sums are −2,−20, 670 (and−2 for r = 1). Newton identities
+and the functional equation give
+PΓ0,11(T ) =T 8− 2T 7 +T 6− 6T 5 + 180T 4− 66T 3 + 121T 2− 2662T + 14641.
+Also #E0(F11) = 7, hence
+PE0,11(T ) =T 2− 5T + 11.
+Good reduction and π0,∗π∗
+0 = [10] extend the elliptic factor to the special ﬁber; it
+cannot collapse since 11 ∤ 10. The complementary threefold therefore has polyno-
+mial
+h(T ) =PΓ0,11(T )/PE0,11(T )
+=T 6 + 3T 5 + 5T 4− 14T 3 + 55T 2 + 363T + 1331.
+Modulo 3,
+¯h =T 6−T 4 +T 3 +T 2− 1.
+Modular exponentiation gives
+T 9−T≡ 2 +T 2 +T 3 +T 4, T 27−T≡T + 2T 2 +T 3 + 2T 5 (mod ¯h),
+the ﬁrst two remainders have gcd 1 with ¯h, and T 729−T ≡ 0 (mod ¯h). The
+degree-six Frobenius test makes h irreducible, hence A0,11 simple. It is ordinary
+since 11 ∤−14, and its polynomial is notT 6+cT 3+113; Arias et al. therefore make it
+absolutely simple. Absolute simplicity lifts: after ﬁnite base extension, the closure
+
+--- PAGE 3 ---
+3
+of any proper positive-dimensional geometric abelian subvariety in characteristic
+zero would give such an abelian subvariety in this good special ﬁber.
+Finally, tangentiality and Theorem 1.3 give
+(
+π∗
+0H0(E0,K E0)
+)⊥
+=H0(Γ0,K Γ0(−p0)).
+The left side is precisely the cotangent space of the complementary quotient A0,
+proving the last assertion. □
+Lemma 2. There is a smooth nonhyperelliptic genus-four curve X/C, an even
+theta characteristic L with
+L2≃KX, h 0(X,L ) = 2,
+and a simple abelian threefold quotient q :JX ↠A such that
+q∗H0(A, Ω1
+A) = im
+(
+Sym2H0(X,L )−→H0(X,K X)
+)
+.
+Proof. For the seed put L0 = OΓ0(3p0). The hyperelliptic gap sequence gives
+KΓ0 =O(6p0) and h0(L0) = 2. Thus L0 is an even theta characteristic, and
+Sym2H0(L0) =H0(KΓ0(−p0));
+both spaces have dimension three, and in the odd-degree model the three products
+are 1,B,B 2, vanishing at p0 to orders 6, 4, 2 as canonical forms.
+Take a small marked spin-deformation space. It has dimension 9. Its theta-null
+locusS ={h0(L)≥ 2} is one theta-constant equation, so every component has
+dimension at least 8. Near the seed, upper semicontinuity and even parity give
+h0(L) = 2 onS; henceW = Sym2H0(L) is a holomorphic rank-three subbundle of
+the Hodge bundle.
+The marking makes PQ = H1(A0, Q) a ﬁxed rational six-plane in rank-eight
+cohomology. The aligned locus Z ={W⊂ PC} is the zero locus of W→H C/PC,
+a map of ranks 3→ 2. Krull’s height bound gives dim Z≥ 8− 6 = 2 for every com-
+ponent Z through the seed. On Z, reality of P givesW⊂ PC; type considerations
+and dimensions then give
+PC =W⊕ W.
+ThusPQ remains a Hodge substructure with F 1P =W.
+We use one more external result. Armando Treibich,Hyperelliptic tangential cov-
+ers and even elliptic ﬁnite-gap potentials, back and forth , paper id=Treibich2025,
+arXiv id=2501.16483, theorem id=Propositions 2.3(3)–(4) and 2.5(3), proves this
+complete statement. For ﬁxed elliptic E, type µ, and d≥ 0, set n = (∑
+iµ2
+i− 1 +
+4d)/2. The cover–Severi correspondence identiﬁes degree- n hyperelliptic tangen-
+tial covers of type ( µ,d ) with the rational irreducible members of |γE(µ,d )|, and
+Proposition 2.5(3) says that this Severi set is ﬁnite (possibly empty).
+On the local hyperelliptic branch, theta-characteristic classiﬁcation gives L =
+OX(3p) for a marked Weierstrass point, hence W = H0(KX(−p)). Put Q = P⊥.
+The ﬁxed rational projector eQ is Hodge along Z; after one ﬁxed integer clears its
+denominators, it is induced by an abelian homomorphism with elliptic image Ez.
+Composing with Abel–Jacobi givesXz→Ez, of locally constant degree because the
+marked integral homology map is ﬁxed. By the Colombo–Pirola–Previato criterion
+in Lemma 1, this is a hyperelliptic tangential cover at p. For ﬁxed degree, the
+
+--- PAGE 4 ---
+4
+relation 2n + 1 =∑
+iµ2
+i + 4d permits only ﬁnitely many ( µ,d ); Treibich therefore
+gives ﬁnite ﬁbers over each Ez. Elliptic curves have one modulus, so
+dimC(Z∩H 4)≤ 1.
+Since dimZ≥ 2, the component Z contains nonhyperelliptic points.
+For every nonzero proper rational R ⊂ PQ, the condition that R be Hodge
+is closed analytic and proper on Z, since it fails at the simple seed. There are
+countably many R. Baire therefore supplies a point of
+Z\
+
+H4∪
+⋃
+0̸=R⊊PQ
+{R is Hodge}
+
+.
+The resulting (X,L ) is nonhyperelliptic and P is simple. The equivalence between
+polarizable weight-one rational Hodge structures and complex abelian varieties up
+to isogeny turns P ⊂ H1(X) into a simple threefold quotient q : JX ↠ A, with
+pulled-back cotangent space Sym 2H0(L). □
+Lemma 3. Let A be a simple complex abelian variety of dimension greater than
+one. If u∈ Autgp(A) satisﬁes
+du0 =λ idT0A,
+then λ = 1 and u = id, or λ =−1 and u = [−1].
+Proof. On H1(A, C) = H1,0⊕H0,1, the only eigenvalues of the rational operator
+u∗ areλ and ¯λ. Thus the minimal polynomial of λ over Q has degree at most two.
+Suppose ﬁrst thatλ /∈ R. Then K = Q(λ) is imaginary quadratic, andH1(A, Q)
+is a K-vector space of dimension dim A> 1. Write λ =a +ib, with b̸= 0. On the
+underlying real Hodge structure the complex structure is
+J = u∗−a id
+b .
+Consequently the realiﬁcation of every one-dimensional K-subspace of H1(A, Q) is
+J-stable. It is a two-dimensional rational Hodge substructure and, by the polariza-
+tion, yields an elliptic factor of A. This contradicts simplicity.
+Thus λ∈ R. The rational operator u∗ then has the sole eigenvalue λ, so its
+trace showsλ∈ Q. Since both u∗ and its inverse preserve the integral lattice,λ is a
+rational algebraic unit, henceλ =±1. Finally a homomorphism of complex abelian
+varieties is determined by its diﬀerential: a homomorphism with zero diﬀerential
+has connected image of dimension zero and is therefore zero. Hence u = [λ]. □
+Lemma 4. For the pair (X,L ) and quotient q :JX ↠A supplied by Lemma 2, let
+f :X→A be an Abel–Jacobi map followed by q, and put C =f(X). Then:
+(1) A is a simple abelian threefold and C is an irreducible generating curve;
+(2) f :X→C is the normalization map and is immersive;
+(3) the tangent Gauss map of C has generic degree 3;
+(4) no aﬃne automorphismta◦u satisfyingdu0 =λ id preservesC nontrivially.
+
+--- PAGE 5 ---
+5
+Proof. WriteH0(X,L ) =⟨s,t⟩. Since deg L = 3, h0(L) = 2, and X is nonhyperel-
+liptic, L is base-point-free: a base point would leave a degree-two pencil and make
+X hyperelliptic. Therefore
+ϕL = [s :t] :X−→ P1
+has degree three. The pullbacks of invariant one-forms on A are
+W = Sym2H0(L) =⟨s2,st,t 2⟩.
+They have no common zero, so f is immersive. Since the Abel curve generates JX
+and q is surjective, C generates A.
+Identifying P(T0A) = P(W∨), evaluation of these three forms shows that the
+tangent Gauss map pulled back to X is
+γ = [s2 :st :t2] =ν2◦ϕL,
+where ν2 : P1 ↪→ P2 is the quadratic Veronese map. Hence deg γ = 3.
+Let Y be the normalization of C, and suppose the induced map r :X→Y has
+degreee> 1. Every form in W comes fromY , soγ factors throughr; consequently
+e| 3. Thus e = 3, and the induced map Y →ν2(P1) has degree one. This makes
+Y ≃ P1, impossible because an abelian variety contains no nonconstant rational
+curve. Therefore e = 1, so X is the normalization of C. In particular the generic
+degree of γC is three.
+It remains to exclude the exceptional symmetry. Suppose τ =ta◦u preservesC
+and acts nontrivially on it. It lifts uniquely to an automorphism σ of the normal-
+ization X. Since dτ is scalar, it preserves every tangent line, and hence
+γ◦σ =γ.
+By Lemma 3, u = [1] or [−1].
+Ifu = [−1], thenta◦[−1] is an involution. Its nontrivial liftσ would be an order-
+two automorphism over the degree-three map γ. The map would factor through
+X/⟨σ⟩, forcing 2| 3, a contradiction.
+If u = [1], then τ = ta. Here a̸= 0, and the lift σ has ﬁnite order because
+g(X) = 4. Since σ acts on each generic three-point ﬁber of γ, its order divides
+three; nontriviality forces order three, and γ is the quotient map followed by an
+isomorphism
+X/⟨σ⟩≃ P1.
+Indeed, the cyclic group generated by σ acts freely on the generic ﬁber, so its order
+divides the cardinality three. Also, if m is the order ofσ, thentma ﬁxes every point
+ofC, whence ma = 0. A nonzero translation has no ﬁxed point, so σ acts freely on
+X. Riemann–Hurwitz for a free order-three action would give
+2g(X)− 2 = 3
+(
+2g(X/⟨σ⟩)− 2
+)
+,
+which reads 6 = −6 when the quotient is P1. This is impossible. Thus no such
+aﬃne symmetry exists. □
+Theorem 5. Let A be a simple abelian variety of dimension n >2 over an alge-
+braically closed ﬁeld of characteristic 0, and let C⊂A be an irreducible curve not
+contained in a translate of any proper abelian subvariety of A. Deﬁne
+γC :Csm−→ P(T0A), p ↦−→d(t−p)(TpC).
+
+--- PAGE 6 ---
+6
+Is γC generically injective unless there exists an automorphism
+τ =ta◦u∈ Aut(A)
+such that τ(C) =C, τ|C is nontrivial on a dense open subset, and
+du0 =λ idT0A
+for some scalar λ?
+Proof. No. It is enough to give a counterexample over the algebraically closed
+characteristic-zero ﬁeld C. Lemma 2 supplies a simple abelian threefold A, a genus-
+four spin curve (X,L ), and a quotient JX ↠ A. For its image C⊂ A, Lemma 4
+proves thatC is irreducible and generates A, so it is not contained in a translate of
+a proper abelian subvariety. Its tangent Gauss map has generic degree 3, and hence
+is not generically injective. The same lemma proves that no aﬃne automorphism
+with scalar linear diﬀerential preserves C nontrivially. Thus ( A,C ) violates the
+proposed alternative. □
