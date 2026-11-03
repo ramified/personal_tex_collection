@@ -1,0 +1,335 @@
+\documentclass{amsart}
+\usepackage[a4paper,left=3cm,right=3cm,top=3cm,bottom=4cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{remark}{Remark}[section]
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\Hnm}{H}
+\DeclareMathOperator{\Jac}{Jac}
+\DeclareMathOperator{\rk}{rk}
+\setlength{\parindent}{15pt}
+\setlength{\parskip}{0pt plus 1pt}
+\allowdisplaybreaks[1]
+
+\title[The tangent Gauss map]{A counterexample to generic injectivity of the tangent Gauss map}
+\author{Xiaoxiang Zhou}
+\address{Institut f\"ur Mathematik, Universität Hamburg,
+20146 Hamburg, Germany}
+\email{xiaoxiang.zhou@uni-hamburg.de}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+We work over $\mathbb{C}$. For a curve $C\subset A$ in an abelian variety,
+the tangent Gauss map sends a smooth point to its tangent line, translated
+to the origin:
+\[
+\phi_C:C^{\mathrm{sm}}\longrightarrow\mathbb{P}(T_0A),\qquad
+p\longmapsto d(t_{-p})_p(T_pC).
+\]
+We call $C$ nondegenerate if it is not contained in a translate of a
+proper abelian subvariety.
+
+\begin{theorem}\label{thm:weak}
+There exists a nondegenerate curve in an abelian threefold whose tangent
+Gauss map has generic degree $3$.
+\end{theorem}
+
+\section{Strategy}
+
+Let $C$ be a smooth non-hyperelliptic curve of genus $4$, and let
+$\mathcal{L}$ be a line bundle of degree $3$ with $h^0(\mathcal{L})=2$.
+It is base-point-free, since a base point would give a degree-two map to
+$\mathbb{P}^1$.
+Thus $|\mathcal{L}|:C\longrightarrow\mathbb{P}^1$ has degree $3$.
+The linear system
+$\left(\mathcal{L}^{\otimes2},\Sym^2\Hnm^0(\mathcal{L})\right)$
+defines the map
+\[
+\phi:C\overset{|\mathcal{L}|}{\longrightarrow}\mathbb{P}^1
+\overset{\nu_2}{\longrightarrow}\mathbb{P}^2,
+\]
+where $\nu_2$ is the quadratic Veronese embedding. In particular, $\phi$
+has generic degree $3$ onto its image and is not generically injective.
+
+To obtain a counterexample by this construction, we seek a pair
+$(C,\mathcal{L})$ for which this map is a tangent Gauss map. It suffices
+to impose two further conditions:
+\begin{enumerate}
+\item\label{cond:spin} $\mathcal{L}^{\otimes2}\cong\omega_C$;
+\item\label{cond:hodge} $\Sym^2\Hnm^0(\mathcal{L})\subset\Hnm^0(\omega_C)$ is the
+$(1,0)$-part of a rational Hodge substructure of
+$\Hnm^1(C;\mathbb{Q})$.
+\end{enumerate}
+The second condition allows these three canonical forms to be pulled
+back from invariant forms on an abelian threefold; we make this passage
+in Section~\ref{subsec:image}.
+
+If we temporarily drop nonhyperellipticity, both conditions can be met.
+Take a smooth hyperelliptic curve $C_0$ of genus $4$ admitting a
+tangential cover $\pi_0:(C_0,p_0)\longrightarrow(E_0,0)$ at a Weierstrass
+point $p_0$. Such examples are supplied by the Lam\'e spectral curves
+\cite[Table~3 and Theorem~L]{maier} and \cite[Proposition~3.1]{eilbeck}.
+Tangentiality means that $\pi_0^*E_0\subset\Jac(C_0)$ is tangent to the
+Abel--Jacobi image at $p_0$. Put
+$\mathcal{L}_0=\mathcal{O}_{C_0}(3p_0)$. Then
+\[
+\mathcal{L}_0^{\otimes2}\cong\omega_{C_0},\qquad
+\Sym^2\Hnm^0(\mathcal{L}_0)
+=\Hnm^0\left(\omega_{C_0}(-2p_0)\right).
+\]
+Indeed, a hyperelliptic coordinate $x$ with a double pole at $p_0$ gives
+the basis $1,x$ of $\Hnm^0(\mathcal{L}_0)$, with products $1,x,x^2$.
+Tangentiality gives the Hodge condition, as explained in
+Lemma~\ref{lem:hyperelliptic}. This seed satisfies the two conditions,
+but $\mathcal{L}_0$ has a base point at $p_0$. We therefore deform the
+pair while preserving both conditions and leaving the hyperelliptic
+locus.
+
+\section{A dimension count for deformations}
+
+We first preserve the spin condition and the two sections, then impose
+compatibility of two different deformations of the cohomology subspaces.
+A dimension comparison will allow us to remove the hyperelliptic locus.
+
+\subsection{The deformation space and the spin condition}\label{subsec:spin}
+
+Let $B$ be a small simply connected marked deformation space of the spin
+curve $(C_0,\mathcal{L}_0)$. Thus
+$\mathcal{L}_t^{\otimes2}\cong\omega_{C_t}$ throughout $B$, and
+$\dim B=3g-3=9$. To retain two sections, restrict to the theta-null locus
+\[
+S=\left\{t\in B\;\middle|\;h^0(\mathcal{L}_t)\geqslant2\right\}
+\]
+locally defined by one theta constant. Hence $\dim S\geqslant8$.
+After shrinking $B$, upper semicontinuity gives
+$h^0(\mathcal{L}_t)=2$ on $S$.
+
+\subsection{Compatibility of the two deformations}\label{subsec:compatibility}
+
+At the seed, set
+\[
+\begin{aligned}
+V_0&:=\left(\pi_0^*\Hnm^1(E_0;\mathbb{Q})\right)^\perp
+\subset\Hnm^1(C_0;\mathbb{Q}),\\
+W_0&:=\Sym^2\Hnm^0(\mathcal{L}_0)\subset\Hnm^0(\omega_{C_0}),
+\end{aligned}
+\]
+where $\perp$ is taken with respect to the cup-product pairing.
+Tangentiality gives $V_{0,\mathbb{C}}=W_0\oplus\overline{W}_0$.
+Over $S$, we deform these subspaces in two different ways:
+\[
+\begin{aligned}
+V_0&\longmapsto V_t\subset\Hnm^1(C_t;\mathbb{Q})
+&&\text{by Gauss--Manin parallel transport},\\
+W_0&\longmapsto W_t:=\Sym^2\Hnm^0(\mathcal{L}_t)
+&&\text{by deforming the line bundle}.
+\end{aligned}
+\]
+Thus $V_t$ is a flat rational subspace of dimension $6$, whereas
+$W_t\subset\Hnm^0(\omega_{C_t})$ is a holomorphic subbundle of rank $3$.
+These constructions need not remain compatible: $V_t$ may cease to be
+a Hodge substructure, and $W_t$ need not lie in its complexification.
+Their compatibility is precisely the condition we impose:
+\[
+\begin{aligned}
+&\begin{cases}
+V_t\text{ remains a Hodge substructure},\\
+V_{t,\mathbb{C}}\cap\Hnm^0(\omega_{C_t})=W_t
+\end{cases}\\
+\Longleftrightarrow\;& V_{t,\mathbb{C}}=W_t\oplus\overline{W}_t\\
+\Longleftrightarrow\;& W_t\subseteq V_{t,\mathbb{C}}\\
+\Longleftrightarrow\;&
+\rk\left[W_t\longrightarrow\Hnm^1(C_t;\mathbb{C})/V_{t,\mathbb{C}}\right]=0.
+\end{aligned}
+\]
+The middle equivalence follows from rationality of $V_t$ and Hodge type,
+since $\dim W_t=3$ and $\dim V_t=6$. The last condition is the vanishing
+of a bundle map of ranks $3$ and $2$, so it imposes at most six equations
+on $S$. Consequently, every irreducible component $Z$ of its zero locus
+through the seed satisfies
+\[
+\dim Z\geqslant9-1-6=2.
+\]
+Fix one such component $Z$.
+
+\subsection{Removing the hyperelliptic locus}\label{subsec:hyperelliptic}
+
+To find a nonhyperelliptic point, it remains to bound
+$\dim\left(Z\cap\mathcal{H}_4\right)$, where $\mathcal{H}_4\subset B$
+is the hyperelliptic locus. The following lemma reduces this to counting
+tangential covers.
+
+\begin{lemma}\label{lem:hyperelliptic}
+Let $C$ be a smooth hyperelliptic curve of genus $4$, and let
+$\mathcal{L}^{\otimes2}\cong\omega_C$ with $h^0(\mathcal{L})=2$.
+\begin{enumerate}
+\item There is a Weierstrass point $p$ such that $\mathcal{L}\cong\mathcal{O}_C(3p)$.
+\item For this point $p$, the subspace
+$\Sym^2\Hnm^0(\mathcal{L})=\Hnm^0\left(\omega_C(-2p)\right)$ is the $(1,0)$-part of a rational
+Hodge substructure if and only if $C$ admits a tangential cover at $p$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}\
+\begin{enumerate}
+\item Fix a Weierstrass point $w$. If $\mathcal{L}$ were base-point-free, its
+degree-three map and the degree-two map $|\mathcal{O}_C(2w)|$ would give
+a birational map to a curve of bidegree $(2,3)$ in
+$\mathbb{P}^1\times\mathbb{P}^1$, of arithmetic genus $2$. Thus
+$\mathcal{L}$ has a base point $p$, and uniqueness of the degree-two
+linear system gives $\mathcal{L}(-p)\cong\mathcal{O}_C(2w)$.
+Using $\omega_C\cong\mathcal{O}_C(6w)$, the spin condition gives
+$\mathcal{O}_C(2p)\cong\mathcal{O}_C(2w)$. Hence $p$ is Weierstrass and
+$\mathcal{L}\cong\mathcal{O}_C(3p)$. 
+
+\item Under $T_0^*\Jac(C)=\Hnm^0(\omega_C)$, the space
+$\Hnm^0\left(\omega_C(-2p)\right)=\Hnm^0\left(\omega_C(-p)\right)$
+is the annihilator of the tangent line at $p$. Its being the $(1,0)$-part
+of a rational Hodge substructure is therefore equivalent to this line
+being the tangent space of an elliptic subvariety of $\Jac(C)$.
+Dualizing the inclusion and composing with the Abel--Jacobi map gives
+a tangential cover; the converse follows from the same annihilator
+description.
+\end{enumerate}
+\end{proof}
+
+Consequently, the hyperelliptic points of $Z$ give tangential covers
+$\pi_t:(C_t,p_t)\longrightarrow(E_t,0)$. The complementary Hodge
+substructure $V_t^\perp$ has rank $2$ and determines $E_t$ up to isogeny.
+Choosing its saturated integral lattice fixes the pullback map on
+integral cohomology under local markings. The cup-product pairing then
+shows that $\deg\pi_t$ is locally constant.
+
+\begin{remark}
+For a fixed elliptic curve and degree there are only finitely many
+hyperelliptic tangential covers
+\cite[Proposition~2.5, 3.; Section~2, Remark~1, 3.--4.]{treibich2025}.
+Indeed, the relation $2n+1=\sum_{i=0}^3\mu_i^2+4d$ leaves finitely many
+types for a fixed degree $n$, and each corresponding Severi set is
+finite. 
+\end{remark}
+
+Since elliptic curves have one modulus and the choices of Weierstrass points
+$p_t$ are finite,
+\[
+\dim\left(Z\cap\mathcal{H}_4\right)\leqslant1<2\leqslant\dim Z.
+\]
+We can therefore choose a nonhyperelliptic point of $Z$.
+
+\subsection{Passing to a curve in an abelian threefold}\label{subsec:image}
+
+\begin{proof}[Conclusion of the proof of Theorem~\ref{thm:weak}]\
+\begin{enumerate}
+\item \emph{Constructing the map.}
+For the chosen point, the rational Hodge substructure $V$ gives a quotient
+$q:\Jac(C)\longrightarrow A$ with connected kernel and
+$q^*\Hnm^0(\Omega_A^1)=\Sym^2\Hnm^0(\mathcal{L})$.
+Compose the Abel--Jacobi map based at $b\in C$ with $q$:
+$f=q\circ j_b:C\longrightarrow A$. The pulled-back invariant forms
+are the products of sections of $\mathcal{L}$, so $f$ is immersive and
+its tangent map is $\phi$. Its image contains the origin and generates
+$A$, hence is nondegenerate.
+
+\item \emph{The normalization and the Gauss map.}
+If $f$ had degree $e>1$ onto the
+normalization of its image, then $e\mid3$, since $\phi$ factors through
+that normalization. Thus $e=3$, and the normalization would map with
+degree $1$ to the conic $\nu_2(\mathbb{P}^1)$. This is impossible in an
+abelian variety. Therefore $C$ is the normalization of $f(C)$ and the
+tangent Gauss map of $f(C)$ has generic degree $3$.
+\end{enumerate}
+\end{proof}
+
+\section{Simplicity and symmetries}
+
+\begin{theorem}\label{thm:strong}\
+\begin{enumerate}
+\item\label{thm:strong-simple} The abelian threefold in
+Theorem~\ref{thm:weak} can be chosen simple.
+\item\label{thm:strong-symmetries} For this choice, the resulting curve is
+preserved by no nonidentity automorphism of $A$ with scalar differential.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}\
+\begin{enumerate}
+\item \textbf{A seed with simple quotient.}
+Take $E_0:y^2=4x^3-4x-1$, let $e_1,e_2,e_3$ be the roots of
+$4e^3-4e-1$, and take the smooth projective model of
+\[
+C_0:\quad \nu^2=(B^3-208B+560)
+\prod_{i=1}^3\left(B^2+10e_iB-35e_i^2-28\right).
+\]
+This is the genus-four Lam\'e spectral curve, with a degree-ten cover
+of $E_0$ tangential at infinity
+\cite[Table~3 and Theorem~L]{maier} and \cite[Proposition~3.1 and the discussion
+after (17)]{eilbeck}.
+The cover is defined over $\mathbb{Q}$, and $E_0$ has discriminant $37$.
+Modulo $11$, the polynomial on the right is the square-free polynomial
+$B^9+B^4+6B^3+9B^2+7B+5$; hence $C_0$ has genus $4$ and good reduction.
+Direct counting gives
+\[
+\left(\#C_0(\mathbb{F}_{11^r})\right)_{r=1}^4
+=(10,120,1312,15312),\qquad \#E_0(\mathbb{F}_{11})=7.
+\]
+Newton's identities and division by the elliptic factor $T^2-5T+11$
+give the Frobenius polynomial of $A_0=\Jac(C_0)/\pi_0^*E_0$:
+\[
+h(T)=T^6+3T^5+5T^4-14T^3+55T^2+363T+1331.
+\]
+It is irreducible modulo $3$, and $11\nmid14$, so this reduction is
+simple and ordinary. An ordinary simple abelian threefold over a
+finite field of odd cardinality is absolutely simple unless its
+Frobenius polynomial has the form $T^6+cT^3+q^3$
+\cite[Proposition~3.4]{arias}. Thus this reduction is absolutely simple,
+and so is $A_0$ in characteristic zero, since a proper abelian
+subvariety would specialize to one after a finite extension.\\
+% The existing verify_tangent_seed.py reproduces the reduction, point
+% counts, Frobenius factorization, and irreducibility checks.
+
+\noindent\textbf{Preserving simplicity under deformation.}
+Choose this seed in the construction of $Z$. For every nonzero proper
+rational subspace $R\subset V_0$ on which the polarization is
+nondegenerate, let $e_R$ be the orthogonal projector. The condition
+\[
+e_R(W_t)\subset W_t
+\]
+defines a closed analytic subset of $Z$. It is proper because it misses
+the seed, and it holds precisely when $R$ is a Hodge substructure.
+There are only countably many $R$, so Baire's theorem allows us to choose
+a point outside these subsets and $\mathcal{H}_4$. Its Hodge structure
+$V_t$ is simple, hence the corresponding abelian threefold $A$ is simple.\\
+
+
+\item \textbf{Reducing to an automorphism of order three.}
+Suppose $\tau\in\Aut(A)$ preserves $f(C)$ and has scalar differential,
+using translations to identify tangent spaces. It lifts to an
+automorphism $\sigma$ of $C$ with $\phi\circ\sigma=\phi$.
+If $\sigma$ is the identity, then $\tau$ fixes a generating curve
+pointwise and is the identity. Otherwise, the order of $\sigma$ divides
+$\deg\phi=3$, so it is $3$ and
+$C/\langle\sigma\rangle\cong\mathbb{P}^1$. Riemann--Hurwitz gives a
+fixed point of $\sigma$.\\
+
+\noindent\textbf{Contradicting simplicity.}
+Taking the image of this fixed point as the origin makes $\tau$ a group
+automorphism $u$ of order $3$. Its scalar differential is a primitive
+cube root of unity $\lambda$. Then $\mathbb{Q}(\lambda)$ acts on
+$\Hnm_1(A;\mathbb{Q})$, and the complex structure on real homology is
+$\left(u_*-\operatorname{Re}(\lambda)\right)/\operatorname{Im}(\lambda)$.
+Every one-dimensional $\mathbb{Q}(\lambda)$-subspace therefore has a
+complex-invariant realification and defines an elliptic subvariety of
+$A$, contradicting simplicity.
+\end{enumerate}
+\end{proof}
+
+\bibliographystyle{plain}
+\bibliography{reference}
+\end{document}

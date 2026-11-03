@@ -1,0 +1,6 @@
+interface:
+  display_name: "Zhou's mathematical LaTeX style"
+  short_description: "Preserve Zhou's notation, proofs, and LaTeX setup"
+  default_prompt: "Use $zhou-math-latex to revise this mathematical manuscript while preserving my notation, preamble, bibliography workflow, and proof structure."
+policy:
+  allow_implicit_invocation: true
