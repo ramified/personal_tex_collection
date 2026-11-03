@@ -1,0 +1,558 @@
+\documentclass[11pt]{amsart}
+\usepackage[a4paper,margin=3cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}[lemma]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[lemma]{Remark}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\rk}{rk}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\LL}{\mathcal L}
+\numberwithin{equation}{section}
+\allowdisplaybreaks[1]
+\setlength{\parindent}{15pt}
+\setlength{\parskip}{0pt plus 1pt}
+
+\title[The tangent Gauss map]{A counterexample to generic injectivity of the tangent Gauss map}
+\author{Xiaoxiang Zhou}
+\address{Institut f\"ur Mathematik, Humboldt-Universit\"at zu Berlin,
+12489 Berlin, Germany}
+\email{xiaoxiang.zhou@hu-berlin.de}
+\date{November 3, 2026}
+
+\begin{document}
+\maketitle
+
+We work over $\CC$. For an irreducible curve $C$ in an abelian variety $A$,
+its \emph{tangent Gauss map} is
+\[
+\phi_C:C^{\mathrm{sm}}\longrightarrow\PP(T_0A),\qquad
+p\longmapsto d(t_{-p})_p(T_pC),
+\]
+where $t_a$ denotes translation by $a$. We call $C$ \emph{nondegenerate}
+if it is not contained in a translate of a proper abelian subvariety.
+Every automorphism of $A$ has the form $t_a\circ u$, with
+$u\in\Aut_{\mathrm{gp}}(A)$; its differential is called scalar if
+$du_0=\lambda\,\mathrm{id}_{T_0A}$ for some $\lambda\in\CC^\times$.
+
+\begin{theorem}\label{thm:main}
+There exist a simple abelian threefold $A$ and a nondegenerate irreducible
+curve $C\subset A$ whose tangent Gauss map has generic degree $3$, but no
+nonidentity automorphism of $A$ with scalar differential preserves $C$.
+\end{theorem}
+
+\section{Strategy}
+
+\subsection{A pencil whose square gives the Gauss map}
+Let $X$ be a smooth nonhyperelliptic curve of genus $4$, and let $\LL$ be
+a line bundle of degree $3$ with $h^0(X,\LL)=2$. It is base-point-free:
+otherwise, removing a base point would give a degree-two pencil, making
+$X$ hyperelliptic. Thus $\LL$ defines a degree-three map
+\[
+\psi_{\LL}:X\longrightarrow\PP^1.
+\]
+The products of its sections define a map to $\PP^2$ that factors through
+$\psi_{\LL}$. In a basis $H^0(X,\LL)=\langle s_0,s_1\rangle$, this map is
+\begin{equation}\label{eq:veronese}
+\gamma=[s_0^2:s_0s_1:s_1^2]=\nu_2\circ\psi_{\LL},
+\end{equation}
+where $\nu_2:\PP^1\hookrightarrow\PP^2$ is the quadratic Veronese
+embedding. In particular, $\gamma$ has degree $3$ onto its image.
+
+Our aim is to realize this map as a tangent Gauss map. For this, we seek
+the following data:
+\begin{enumerate}[label=\arabic*.,leftmargin=*]
+\item a theta characteristic $\LL$, that is,
+$\LL^{\otimes2}\cong\omega_X$, with $h^0(X,\LL)=2$;
+\item a quotient $q:J(X)\twoheadrightarrow A$ onto a simple abelian
+threefold such that
+\begin{equation}\label{eq:quotient}
+q^*H^0(A,\Omega_A^1)=W(X,\LL),\qquad
+W(X,\LL):=\im\!\left(
+\Sym^2H^0(X,\LL)\longrightarrow H^0(X,\omega_X)\right).
+\end{equation}
+\end{enumerate}
+Here we identify invariant differentials on $J(X)$ with canonical forms
+on $X$. We say that $W(X,\LL)$ \emph{comes from an abelian quotient}
+when the equality in \eqref{eq:quotient} holds, without requiring the
+quotient to be simple.
+
+For any two independent sections of a line bundle, their three quadratic
+products are linearly independent: a relation would give a constant
+quadratic equation for their nonconstant ratio. Thus $W(X,\LL)$ has
+dimension $3$ whenever $h^0(X,\LL)=2$.
+
+If \eqref{eq:quotient} holds, composing an Abel--Jacobi map with $q$ gives
+$f:X\to A$. The pullbacks of invariant forms are $s_0^2,s_0s_1,s_1^2$,
+so its tangent map is precisely \eqref{eq:veronese}. In Section~\ref{sec:completion}
+we show that $X$ is the normalization of $C=f(X)$ and exclude the
+automorphisms in Theorem~\ref{thm:main}.
+
+\subsection{Starting from a hyperelliptic curve}
+The two requirements above are easier to arrange on a hyperelliptic
+curve. Recall that a finite map $\pi:(X,p)\to(E,0)$ to an elliptic curve
+is \emph{tangential at $p$} if the elliptic subvariety
+$\pi^*E\subset J(X)$ is tangent to the Abel--Jacobi image of $X$ at the
+origin. We identify $E$ with its dual by its canonical principal
+polarization.
+
+\begin{lemma}\label{lem:tangency}
+Let $X$ be a smooth hyperelliptic curve of genus at least $2$, and let
+$p\in X$ be a Weierstrass point. The subspace
+$H^0(X,\omega_X(-2p))$ comes from an abelian quotient if and only if
+there is a tangential cover $\pi:(X,p)\to(E,0)$.
+\end{lemma}
+
+\begin{proof}
+At a Weierstrass point,
+\[
+H^0(X,\omega_X(-p))=H^0(X,\omega_X(-2p)).
+\]
+Indeed, both spaces have dimension $g(X)-1$, by Riemann--Roch and
+$h^0(X,\mathcal O_X(2p))=2$. Under the identification
+$T_0^*J(X)=H^0(X,\omega_X)$, this space is the annihilator of the tangent
+line to the Abel--Jacobi image at $p$.
+
+If $\pi$ is tangential, take the quotient
+$q:J(X)\to J(X)/\pi^*E$. Its pulled-back cotangent space is exactly this
+annihilator. Conversely, suppose a quotient has this pulled-back
+cotangent space. Its connected kernel $K$ is an elliptic subvariety
+whose tangent line agrees with that of $X$ at $p$. Dualizing the
+inclusion $K\hookrightarrow J(X)$, using the principal polarization of
+$J(X)$, and composing with the Abel--Jacobi map based at $p$, gives a
+nonconstant map $X\to K^\vee$. Its dual elliptic image is $K$, so the
+map is tangential at $p$.
+\end{proof}
+
+\begin{lemma}[The seed]\label{lem:seed}
+There exist a smooth hyperelliptic curve $X_0$ of genus $4$, a
+Weierstrass point $p_0\in X_0$, and a tangential cover
+$\pi_0:(X_0,p_0)\to(E_0,0)$ such that
+\[
+A_0=J(X_0)/\pi_0^*E_0
+\]
+is a simple abelian threefold.
+\end{lemma}
+
+The construction and the arithmetic check of simplicity are given in
+Appendix~\ref{app:seed}. Fix such a seed and put
+\[
+\LL_0=\mathcal O_{X_0}(3p_0),\qquad
+q_0:J(X_0)\twoheadrightarrow A_0.
+\]
+The hyperelliptic gap sequence gives
+$\omega_{X_0}\cong\mathcal O_{X_0}(6p_0)$ and $h^0(X_0,\LL_0)=2$.
+If $x$ is a hyperelliptic coordinate with a double pole at $p_0$, the
+sections of $\LL_0$ are spanned by $1,x$, and their products by
+$1,x,x^2$. Therefore
+\begin{equation}\label{eq:seed-W}
+\begin{split}
+W_0:=W(X_0,\LL_0)
+&=H^0(X_0,\omega_{X_0}(-2p_0))\\
+&=q_0^*H^0(A_0,\Omega_{A_0}^1).
+\end{split}
+\end{equation}
+Thus the seed has the required theta characteristic and quotient.
+We now deform it while preserving these properties and leaving the
+hyperelliptic locus.
+
+\section{A dimension count for deformations}\label{sec:deformation}
+
+Let $B$ be a sufficiently small, simply connected, marked local
+deformation space of the spin curve $(X_0,\LL_0)$. Write
+$(X_t,\LL_t)$ for the corresponding family. Since theta characteristics
+deform discretely with the curve,
+\[
+\dim B=h^1(X_0,\mathcal T_{X_0})=3g-3=9.
+\]
+We impose the two requirements in Section~1 and then estimate the
+dimension of the hyperelliptic part.
+
+\subsection{The theta-null condition}
+Let
+\[
+S=\{t\in B:h^0(X_t,\LL_t)\geq2\}.
+\]
+The spin structure is even. Locally, $S$ is the zero locus of its theta
+constant, so every component through the seed has dimension at least
+$8$. After shrinking $B$, upper semicontinuity and parity imply
+$h^0(X_t,\LL_t)=2$ on $S$. Cohomology and base change, together with the
+injectivity of multiplication noted above, then show that
+\[
+W_t=W(X_t,\LL_t)
+\]
+forms a holomorphic rank-three subbundle of the Hodge bundle over $S$.
+We use the reduced analytic structures on these loci.
+
+\subsection{Preserving the abelian quotient}
+Define the rational six-dimensional subspace
+\[
+V_0=q_0^*H^1(A_0,\Q)\subset H^1(X_0,\Q).
+\]
+Parallel transport under the Gauss--Manin connection gives
+$V_t\subset H^1(X_t,\Q)$. The marking identifies these spaces with a
+fixed rational vector space. By \eqref{eq:seed-W},
+\[
+V_{0,\CC}=W_0\oplus\overline{W_0}.
+\]
+
+For $t\in S$, we have the equivalences
+\begin{equation}\label{eq:hodge}
+\begin{aligned}
+&\left\{\begin{array}{l}
+V_t\text{ is a Hodge substructure},\\
+V_{t,\CC}\cap H^0(X_t,\omega_{X_t})=W_t
+\end{array}\right.\\
+&\hspace{1cm}\Longleftrightarrow\quad
+V_{t,\CC}=W_t\oplus\overline{W_t}\\
+&\hspace{1cm}\Longleftrightarrow\quad W_t\subset V_{t,\CC}\\
+&\hspace{1cm}\Longleftrightarrow\quad
+\rk\!\left(W_t\longrightarrow H^1(X_t,\CC)/V_{t,\CC}\right)=0.
+\end{aligned}
+\end{equation}
+For the middle equivalence, rationality makes $V_{t,\CC}$ stable under
+complex conjugation. The two spaces $W_t$ and $\overline{W_t}$ have
+dimension $3$ and intersect trivially by Hodge type, so their direct
+sum has the full dimension $6$ of $V_{t,\CC}$.
+
+Let
+\[
+Z=\{t\in S:W_t\subset V_{t,\CC}\}.
+\]
+It is the zero locus of a holomorphic bundle map of ranks $3$ and $2$,
+hence is locally defined in $S$ by at most six equations. Every
+irreducible component of $Z$ through the seed therefore satisfies
+\begin{equation}\label{eq:lower-bound}
+\dim Z\geq 9-1-6=2.
+\end{equation}
+From now on, fix one such irreducible component and denote it again by
+$Z$.
+
+On $Z$, the space $V_t$ is a polarizable rational Hodge substructure.
+The correspondence between such weight-one Hodge structures and
+abelian varieties up to isogeny gives a quotient
+\[
+q_t:J(X_t)\twoheadrightarrow A_t,\qquad
+q_t^*H^0(A_t,\Omega_{A_t}^1)=W_t.
+\]
+We may take $q_t$ to have connected kernel by choosing the corresponding
+quotient of $J(X_t)$. Thus $W_t$ continues to come from an abelian
+quotient.
+
+\subsection{Leaving the hyperelliptic locus}
+Write $\mathcal H_4\subset B$ for the hyperelliptic locus. If
+$t\in S\cap\mathcal H_4$, let $H_t$ be the hyperelliptic pencil on
+$X_t$. A degree-three line bundle with two sections on such a curve
+has the form $H_t(p_t)$. Indeed, a base-point-free degree-three pencil,
+together with the degree-two pencil, would give a birational map to
+a curve of bidegree $(2,3)$ in $\PP^1\times\PP^1$, whose arithmetic
+genus is $2$, contradicting $g(X_t)=4$. Removing the base point leaves
+the hyperelliptic pencil.
+
+Now use the theta-characteristic condition. Since
+$\omega_{X_t}\cong H_t^{\otimes3}$, the equality
+$\LL_t^{\otimes2}\cong\omega_{X_t}$ gives
+$\mathcal O_{X_t}(2p_t)\cong H_t$. Thus $p_t$ is a Weierstrass point and
+\begin{equation}\label{eq:hyperelliptic-W}
+\LL_t\cong\mathcal O_{X_t}(3p_t),\qquad
+W_t=H^0(X_t,\omega_{X_t}(-2p_t)).
+\end{equation}
+There are only finitely many choices of the marked Weierstrass point;
+locally we can work on each marked branch separately.
+
+\begin{lemma}[Finiteness of tangential covers]\label{lem:finiteness}
+Fix an elliptic curve $E$ and a positive integer $n$. Up to isomorphism,
+there are only finitely many smooth hyperelliptic tangential covers
+$\pi:(X,p)\to(E,0)$ of degree $n$.
+\end{lemma}
+
+\begin{proof}
+By Treibich's correspondence, these covers are represented by rational
+irreducible curves in linear systems indexed by
+$\mu\in\mathbb Z_{\geq0}^4$ and $d\geq0$, with
+\[
+2n+1=\sum_{i=0}^3\mu_i^2+4d.
+\]
+For fixed $n$, only finitely many such indices occur. Each corresponding
+Severi set is finite by \cite[Proposition~2.5, 3.]{treibich2025}.
+The correspondence is described in \cite[Section~2, Remark~1, 3.--4.]{treibich2025}.
+\end{proof}
+
+To apply this lemma, we must keep the degree fixed. On $Z$, let
+$K_t=(\ker q_t)^0$, an elliptic subvariety of $J(X_t)$. Its integral
+homology lattice is the annihilator of $V_t$ in $H_1(X_t,\mathbb Z)$,
+so it is fixed under the marking. Locally these kernels form a family
+of elliptic curves. Dualizing their inclusions using the principal
+polarizations of the Jacobians gives maps
+\[
+\pi_t:(X_t,p_t)\longrightarrow(E_t,0),\qquad E_t=K_t^\vee.
+\]
+The induced integral cohomology maps are fixed under local markings.
+Their cup-product pairings therefore show that $\deg\pi_t=n$ is
+locally constant. By Lemma~\ref{lem:tangency} and
+\eqref{eq:hyperelliptic-W}, these maps are tangential on the
+hyperelliptic branch.
+
+Lemma~\ref{lem:finiteness} gives finite fibers over each elliptic
+isomorphism class. Working in a local deformation chart introduces
+only finite choices of spin structure and marked Weierstrass point.
+Since elliptic curves have a one-dimensional moduli space, it follows
+that
+\begin{equation}\label{eq:upper-bound}
+\dim(Z\cap\mathcal H_4)\leq1.
+\end{equation}
+Together, \eqref{eq:lower-bound} and \eqref{eq:upper-bound} show that
+$Z$ contains nonhyperelliptic points.
+
+\subsection{Choosing a simple quotient}
+It remains to ensure that the quotient at a chosen nonhyperelliptic
+point is simple. The cup-product polarization restricts to a fixed
+nondegenerate rational form on $V_0$. For each proper nonzero rational
+subspace $R\subset V_0$ on which this form is nondegenerate, let $e_R$
+be the orthogonal projector onto $R$. The locus
+\[
+Z_R=\{t\in Z:e_R(W_t)\subset W_t\}
+\]
+is closed analytic. It is exactly the locus where the transported
+subspace $R$ is a Hodge substructure. It is proper, since the seed
+quotient $A_0$ is simple. Any Hodge substructure is nondegenerate for
+the polarization, so these are all the subspaces that need to be
+excluded.
+
+There are only countably many rational subspaces $R$. By the Baire
+category theorem, an irreducible complex analytic space cannot be
+covered by countably many proper closed analytic subsets. We may
+therefore choose
+\[
+t\in Z\setminus\left(\mathcal H_4\cup\bigcup_R Z_R\right).
+\]
+For this point, $X=X_t$ is nonhyperelliptic and $A=A_t$ is simple.
+With $\LL=\LL_t$ and $q=q_t$, we have obtained both requirements of
+Section~1.
+
+\section{Completing the proof}\label{sec:completion}
+
+\subsection{Passing to the image curve}
+Choose a base point $b\in X$ and set
+\[
+f=q\circ j_b:X\longrightarrow A,\qquad C=f(X),
+\]
+where $j_b$ is the Abel--Jacobi map. The forms $s_0^2,s_0s_1,s_1^2$
+have no common zero, so $f$ is immersive. Moreover, $C$ contains the
+origin and generates $A$, because $j_b(X)$ generates $J(X)$ and $q$ is
+surjective. In particular, $C$ is nondegenerate.
+
+Let $Y$ be the normalization of $C$, and factor $f$ through a finite map
+$r:X\to Y$ of degree $e$. The tangent map $\gamma$ in
+\eqref{eq:veronese} factors through $r$, since it is the pullback of
+the Gauss map on the smooth locus of $C$. Thus $e$ divides $3$. If
+$e>1$, then $e=3$ and the induced map from $Y$ to the conic
+$\nu_2(\PP^1)$ has degree $1$. This would make $Y\cong\PP^1$, which
+is impossible: an abelian variety contains no nonconstant rational
+curve. Hence $e=1$, and $X$ is the normalization of $C$. Consequently,
+$\phi_C$ has generic degree $3$.
+
+\subsection{Excluding scalar symmetries}
+\begin{lemma}\label{lem:scalar}
+Let $A$ be a simple complex abelian variety of dimension greater than
+$1$. If $u\in\Aut_{\mathrm{gp}}(A)$ has scalar differential, then
+$u=[1]$ or $u=[-1]$.
+\end{lemma}
+
+\begin{proof}
+Write $du_0=\lambda\,\mathrm{id}$. On $H_1(A,\CC)$, the operator $u_*$
+is diagonalizable with eigenvalues among $\lambda,\overline\lambda$.
+Since it is rational, the minimal polynomial of $\lambda$ over $\Q$
+has degree at most $2$.
+
+If $\lambda\notin\mathbb R$, then $K=\Q(\lambda)$ is imaginary
+quadratic. Write $\lambda=a+ib$, with $b\neq0$. On $H_1(A,\mathbb R)$,
+the complex structure is
+\[
+J=\frac{u_*-a\,\mathrm{id}}{b}.
+\]
+Thus every one-dimensional $K$-subspace of $H_1(A,\Q)$ has a
+$J$-invariant realification. Its intersection with the integral lattice
+defines an elliptic subvariety of $A$, contradicting simplicity.
+
+Hence $\lambda\in\mathbb R$. Taking the trace gives $\lambda\in\Q$.
+Both $u_*$ and its inverse preserve the integral lattice, so $\lambda$
+is a rational algebraic unit and therefore equals $1$ or $-1$. A
+homomorphism of complex abelian varieties is determined by its
+differential, proving the assertion.
+\end{proof}
+
+\begin{proof}[Conclusion of the proof of Theorem~\ref{thm:main}]
+Suppose that $\tau=t_a\circ u$ preserves $C$ and has scalar
+differential. It lifts to an automorphism $\sigma$ of the normalization
+$X$. If $\sigma$ is the identity, then $\tau$ fixes $C$ pointwise.
+Since $0\in C$ and $C$ generates $A$, this forces $a=0$ and $u=[1]$.
+We may therefore assume that $\sigma$ is nontrivial.
+
+A scalar differential preserves every tangent line, so
+\[
+\gamma\circ\sigma=\gamma.
+\]
+Lemma~\ref{lem:scalar} gives $u=[1]$ or $u=[-1]$. If $u=[-1]$, then
+$\tau$ is an involution, and its nontrivial lift $\sigma$ has order
+$2$. The degree-three map $\gamma$ would factor through
+$X/\langle\sigma\rangle$, forcing $2\mid3$, a contradiction.
+
+If $u=[1]$, then $\tau=t_a$ with $a\neq0$. Since $g(X)=4$, the
+automorphism $\sigma$ has finite order $m$. Its cyclic group acts
+freely on a generic fiber of $\gamma$, so $m\mid3$ and hence $m=3$.
+The induced map $X/\langle\sigma\rangle\to\nu_2(\PP^1)$ has degree
+$1$, giving $X/\langle\sigma\rangle\cong\PP^1$. On the other hand,
+$\sigma$ has no fixed point, because
+$f(\sigma(x))=f(x)+a$ and a nonzero translation has none.
+Riemann--Hurwitz for this unramified degree-three quotient would give
+\[
+6=2g(X)-2=3\bigl(2g(\PP^1)-2\bigr)=-6,
+\]
+again a contradiction. Thus $\tau$ is the identity.
+\end{proof}
+
+\begin{remark}
+The construction gives an immersive normalization $X\to C$. It does
+not require the image curve $C$ to be smooth or the map $X\to A$ to be
+an embedding.
+\end{remark}
+
+\appendix
+\section{A seed with a simple complementary quotient}\label{app:seed}
+
+We construct the seed of Lemma~\ref{lem:seed} from a genus-four
+Lam\'e curve. Reduction modulo $11$ will verify smoothness and
+simplicity.
+
+\subsection{The tangential cover}
+Set
+\[
+E_0:y^2=4x^3-4x-1,
+\]
+and let $e_1,e_2,e_3$ be the roots of $4e^3-4e-1$. Define
+\[
+L(B)=(B^3-208B+560)
+\prod_{i=1}^3(B^2+10e_iB-35e_i^2-28).
+\]
+This is the genus-four Lam\'e spectral polynomial for $g_2=4$, $g_3=1$;
+see \cite[Table~3 and Theorem~L]{maier}. The associated formulas give
+a degree-ten cover from the smooth projective model of
+$\nu^2=L(B)$ to $E_0$, sending the point at infinity to the origin.
+The cover is tangential at infinity: the Lam\'e operator has an
+odd-order commuting operator with elliptic coefficients, and its
+spectral cover is tangential by \cite[Proposition~3.1 and the paragraph
+after equation~(17)]{eilbeck}.
+
+The polynomial and cover are defined over $\Q$. The change of variable
+$Y=4\nu$ gives the integral model $Y^2=16L(B)$. The Weierstrass
+discriminant of $E_0$ is $37$, and reduction of $L$ modulo $11$ gives
+\[
+\overline L=B^9+B^4+6B^3+9B^2+7B+5
+\]
+with factorization
+\[
+\overline L=(B+2)(B^2+9B+5)
+(B^3+5B^2+6B+1)(B^3+6B^2+7B+6).
+\]
+These are distinct irreducible factors over $\mathbb F_{11}$. Thus
+the curve $X_0$ is smooth of genus $4$ and has good reduction at $11$.
+Its unique point at infinity, denoted $p_0$, is a Weierstrass point.
+This supplies the required tangential cover $\pi_0$.
+
+\subsection{Checking simplicity}
+Let $N_r=\#X_0(\mathbb F_{11^r})$. Direct point counting gives
+\[
+(N_1,N_2,N_3,N_4)=(10,120,1312,15312).
+\]
+These numbers can be reproduced from
+\[
+N_r=11^r+1+\sum_{b\in\mathbb F_{11^r}}\chi_r(\overline L(b)),
+\]
+where $\chi_r$ is the quadratic character extended by $\chi_r(0)=0$.
+For $r=2,3,4$, one may use the respective irreducible defining
+polynomials
+\[
+z^2+1,\qquad z^3+4z^2+1,\qquad z^4+4z^3+1.
+\]
+The four character sums are $-2,-2,-20,670$. Newton's identities and
+the functional equation give the Frobenius polynomial
+\[
+\begin{split}
+P_{X_0,11}(T)={}&T^8-2T^7+T^6-6T^5+180T^4\\
+&-66T^3+121T^2-2662T+14641.
+\end{split}
+\]
+Also, $\#E_0(\mathbb F_{11})=7$, so
+$P_{E_0,11}(T)=T^2-5T+11$.
+
+The maps on Jacobians extend across good reduction. Since
+$\pi_{0,*}\pi_0^*=[10]$ and $11\nmid10$, the elliptic factor remains
+an elliptic factor in the special fiber. The quotient
+$A_0=J(X_0)/\pi_0^*E_0$ has good reduction, with Frobenius polynomial
+\[
+\begin{split}
+h(T)&=P_{X_0,11}(T)/P_{E_0,11}(T)\\
+&=T^6+3T^5+5T^4-14T^3+55T^2+363T+1331.
+\end{split}
+\]
+Modulo $3$, this becomes
+$\overline h=T^6-T^4+T^3+T^2-1$. The finite-field irreducibility test
+gives
+\[
+\gcd(\overline h,T^9-T)=\gcd(\overline h,T^{27}-T)=1,
+\qquad T^{729}\equiv T\pmod{\overline h}.
+\]
+Hence $h$ is irreducible over $\Q$, and the special fiber of $A_0$ is
+simple. It is ordinary because $11\nmid14$. By
+\cite[Proposition~3.4]{arias}, an ordinary simple abelian threefold
+over a finite field of odd cardinality is absolutely simple unless
+its Frobenius polynomial has the form $T^6+cT^3+q^3$. Our polynomial
+does not have this form, so the special fiber is absolutely simple.
+
+Absolute simplicity then holds in characteristic zero: a proper
+positive-dimensional geometric abelian subvariety would, after a
+finite base extension, specialize to such a subvariety in the good
+special fiber. Thus $A_0$ is simple over $\CC$, proving
+Lemma~\ref{lem:seed}.
+
+The accompanying script \texttt{verify\_tangent\_seed.py} reproduces
+the polynomial reduction, point counts, Frobenius factorization, and
+irreducibility checks using only the Python standard library.
+
+\begin{thebibliography}{9}
+\bibitem{arias}
+S.~Arias-de-Reyna, C.~Armana, V.~Karemaker, M.~Rebolledo,
+L.~Thomas, and N.~Vila,
+\emph{Large Galois images for Jacobian varieties of genus 3 curves},
+2016, \href{https://arxiv.org/abs/1507.05913}{arXiv:1507.05913}.
+
+\bibitem{eilbeck}
+J.~C.~Eilbeck, V.~Z.~Enolskii, and E.~Previato,
+\emph{Varieties of elliptic solitons},
+J.\ Phys.\ A: Math.\ Gen.\ \textbf{34} (2001), 2215--2227,
+\href{https://doi.org/10.1088/0305-4470/34/11/314}{doi:10.1088/0305-4470/34/11/314}.
+
+\bibitem{maier}
+R.~S.~Maier,
+\emph{Lam\'e polynomials, hyperelliptic reductions and Lam\'e band structure},
+\href{https://arxiv.org/abs/math-ph/0309005}{arXiv:math-ph/0309005},
+version~4, 2004.
+
+\bibitem{treibich2025}
+A.~Treibich,
+\emph{Hyperelliptic tangential covers and even elliptic finite-gap
+potentials, back and forth},
+\href{https://arxiv.org/abs/2501.16483v1}{arXiv:2501.16483v1}, 2025.
+\end{thebibliography}
+\end{document}
