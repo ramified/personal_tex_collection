@@ -7,11 +7,13 @@ description: Revise Xiaoxiang Zhou's mathematical LaTeX manuscripts using his no
 
 Read [the style requirements](references/style-requirements.md) before editing. They record the author's explicit preferences, including distinctions clarified through revision. Apply them to the requested scope; a new user instruction takes precedence.
 
+For a language-only request, correct the English while preserving the mathematical claims, formulas, proof structure, and references. Put mathematical errors, gaps, and ambiguous mathematical wording in the requested separate notes; do not repair the argument in the manuscript. Apply explicitly requested typography changes, such as using `$$...$$` for ordinary unnumbered displays.
+
 ## Editing workflow
 
 1. Read the current source and any current selection. User edits on disk take precedence over previous assistant drafts. Inspect the actual preamble and bibliography setup before proposing changes.
 2. Keep everything before `\begin{document}` intact by default, including unused macros, theorem environments, packages, metadata, comments, and layout. Add only a definition genuinely needed for the requested change; do not replace the preamble with a minimal one. If the request concerns only the body, compare the preamble before and after editing.
-3. Preserve notation. Ask before a substantive notation change unless the user has already authorized that change. This requirement concerns changing the author's notation, not routine wording, numbering, or implementation choices.
+3. Preserve notation and use existing symbols directly: prefer `\deg f` to introducing `e=\deg f`, and retain concise symbolic statements rather than expanding them into prose. Ask before a substantive notation change unless the user has already authorized that change. This requirement concerns changing the author's notation, not routine wording, numbering, or implementation choices.
 4. Preserve the order of mathematical motivation. Explain the construction before adding conditions needed for a later application. Keep useful symbolic displays and organize long arguments into meaningful parts. For a multipart statement, make the proof parts correspond directly to its claims; use unnumbered headings for internal stages when another numbered list would compete with the claim numbering. Any numbered structure must use an environment and automatic references.
 5. Use `\bibliographystyle{plain}` and `\bibliography{reference}` with an editable `reference.bib`. Keep citation keys and verified locators. Do not substitute an embedded bibliography or a different bibliography system.
 6. Follow the requested version workflow. For a named new revision, copy the latest user-edited source and modify only the new revision. Otherwise edit the active file in place. Retain earlier versions for comparison.

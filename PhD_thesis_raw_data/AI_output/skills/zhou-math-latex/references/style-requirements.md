@@ -13,7 +13,10 @@ These are personal preferences collected from the author's revision requests. Th
 
 ## 2. Preserve notation and minimize the reader's memory burden
 
+- Respect the author's transition from provisional notation to the established geometric notation. In the tangent-counterexample manuscript, $\phi$ is only the temporary name of the constructed map. Once it is identified with the tangent Gauss map $\phi_C$, use $\phi_C$ thereafter. Do not recommend reverting to $\phi$, or treat this deliberate identification as a mathematical defect merely because the Gauss map is being used on the smooth model.
 - Do not rename established mathematical objects without asking first, unless the current request already authorizes that particular change.
+- Prefer direct use of existing symbols to either verbal expansion or a new abbreviation. Write `\deg f` rather than introducing `e=\deg f` when the degree needs no separate name. Preserve concise expressions such as `\ord(\sigma)`, `\sigma=\id`, and the author's existing image notation.
+- Correct the English connecting formulas without turning a short symbolic argument into a paragraph of paraphrase. New symbols should earn their place through a real need, not merely reduce the assistant's typing.
 - In the tangent-counterexample manuscript, the curve is `C`, with `C_t` for its deformations. Do not introduce `X` to replace it.
 - Use `|\mathcal{L}|` for the map associated with the complete linear system, rather than introducing `\psi_{\mathcal{L}}`.
 - Use short sheaf-cohomology notation such as `\Hnm^0(\mathcal{L})` and `\Hnm^0(\omega_C)`. Do not routinely expand it to `\Hnm^0(C,\mathcal{L})`. Retain `h^0(\mathcal{L})` for dimensions.
@@ -38,6 +41,7 @@ Use the author's forms:
 - Use `\left` and `\right` when delimiters need enlargement. Preserve or use `\rule{0mm}{...mm}` inside delimiters if a height adjustment is genuinely needed. Do not mechanically enlarge every ordinary parenthesis.
 - Prefer long arrows whenever there is a choice. For labeled arrows, retain readable spacing and the existing map notation.
 - Set-builder notation uses `\left\{ ... \;\middle|\; ... \right\}` with a visible condition separator.
+- Prefer `$$...$$` to `\[...\]` for ordinary unnumbered displays in the author's manuscripts. Keep structured environments such as `equation` or `align` when their numbering or alignment is needed. If the actual document has a concrete compatibility or layout problem with `$$...$$`, explain that specific reason before proposing a different convention; do not replace the preference merely to enforce a general LaTeX convention.
 
 ## 4. Let the reader see the reason for each construction
 
@@ -97,7 +101,7 @@ Give only the short justification needed for the equivalences. Preserve the requ
 - Complete the weaker construction before discussing simplicity. Keep simplicity and its auxiliary verification at the end.
 - Separate routine technical verification from the main idea, but retain steps necessary for correctness, including dimension bounds and the normalization argument.
 - Do not claim that a proposed moduli or monodromy argument proves the existence of a simple seed until its missing input has actually been established. The preference for a conceptual proof is not permission to remove a verified argument and leave an unacknowledged gap.
-- Explain a genuine mathematical correction candidly. Do not preserve a false statement just to match notation, and do not silently change the theorem being proved.
+- Explain a mathematical concern candidly, and do not silently change the theorem being proved. When mathematical revision is authorized, correct the argument explicitly; when the request is language-only, preserve the source's mathematical content and record the concern separately as described below.
 
 ## 8. Keep references editable with BibTeX
 
@@ -121,3 +125,14 @@ Use the following at the end of the document:
 - Keep the existing editor open. Do not open another tab or generate a separate PDF unless requested.
 - Use the built-in `compile_latex_document` tool when available and confirm successful compilation of the actual requested target, including its bibliography. Otherwise follow the project's established build process.
 - Check that changes preserve the preamble, notation, automatic numbering, proof logic, and earlier versions. A successful compile alone does not establish mathematical correctness.
+
+## 10. Language-only editing and separate mathematical notes
+
+- A request to correct only the language is a strict scope limit. Fix grammar, articles, idiom, spelling, punctuation, and sentence flow while keeping the author's argument, order, claims, notation, and divisions. Do not restore longer arguments from an earlier assistant version.
+- Use the user's current manuscript to learn what makes the proof readable to him: concise symbolic implications, direct expressions such as `\deg f`, short purposeful steps, and references to existing results instead of repeatedly reproducing their proofs. Preserve these choices unless they create a mathematical issue; then flag the issue separately.
+- Do not add hypotheses, fill proof gaps, replace formulas, change maps or domains, introduce definitions, or strengthen claims under the label of language correction. For example, replacing “the automorphism is unramified” with “its action is free” changes the mathematical assertion and belongs in the notes.
+- Put mathematical concerns in a separate Markdown document with a precise location and enough explanation to assess each point. Distinguish an actual error, a missing justification, ambiguous notation, and an unresolved reference. Suggested repairs may appear there, clearly marked as unapplied.
+- Do not treat a valid compressed argument as a gap merely because it omits routine intermediate calculations. If a familiar one-line justification or an existing citation suffices, say so rather than demanding a long expansion.
+- When the author explicitly wants a standard fact stated without its proof, retain a concise, accurate statement and keep any supporting explanation in the separate notes. For example, stating that the nonsimple locus is a countable union of proper irreducible analytic subsets does not require inserting the rational-projector or Baire argument into the manuscript. Distinguish a harmless convention about a map on a normalization from an actual proof gap.
+- Preserve citation keys and check whether they resolve. Report a missing or unverifiable reference separately; do not invent bibliographic data or silently replace the cited result.
+- For this scope, compare mathematical expressions and structural commands before and after editing, allowing only the user's explicitly requested formatting changes. Report any unresolved mathematical or citation issue separately from compilation success.
